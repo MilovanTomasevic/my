@@ -1,0 +1,8 @@
+template = "template.html"
+
+author = "[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)"
+affiliation = ".medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](fis.png) .small[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]"
+
+
+"fis/PhDfis.md"
+	title = "[Adaptivni model za upravljanje lancima snabdevanja u malim i srednjim preduzećima](http://nardus.mpn.gov.rs/handle/123456789/9234)"

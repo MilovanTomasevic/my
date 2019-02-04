@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../remarkslides.css">
+    {% block additional_header %}{% endblock %}
+
+
+    <!-- MathJax™ -->
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127734928-1');
+    </script>
+
+
+    <!-- google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-127734928-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <textarea id="source">
+
+{{content}}
+
+    </textarea>
+    <script src="../remark-latest.min.js"></script>
+    <script>
+        // https://github.com/gnab/remark/issues/72
+        remark.macros.scale = function (percentage) {
+            var url = this;
+            return '<div class="center"><img src="'
+                 + url + '" style="width: ' + percentage + '" /></div>';
+        };
+        var slideshow = remark.create({
+                    highlightLanguage: 'python',
+                    // highlightStyle: 'obsidian',
+                    highlightStyle: 'github',
+                    highlightLines: true
+                });
+    </script>
+    {% block additional_footer %}{% endblock %}
+  </body>
+</html>
+

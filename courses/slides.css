@@ -1,0 +1,58 @@
+.reveal {
+        font-family: "Liberation Sans", sans-serif;
+}
+.reveal h2 { font-size: 1.50em; }
+.reveal h3 { font-size: 1.10em; }
+.reveal h4 { font-size: 0.5em; }
+.reveal p {text-align:justify;}
+.reveal p.center {text-align: center;}
+.reveal img.center { display: block; margin-left: auto; margin-right: auto }
+.reveal pre code { max-height: 600px; }
+
+/* Centrirane tabele */
+table.centered td, table.centered th { text-align:center; }
+
+/* Kontakt ikonice */
+.reveal img.contact { margin: 0px; border: 0px; width: 30px; }
+
+/* Uklanjanje bordera za slike */
+.reveal section img {
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Prvi slajd */
+.first-slide h1 { font-size: 200%; }
+.first-slide h2 { font-size: 130% }
+.first-slide p { margin: 0px; font-size: 80%; }
+.first-slide small { font-size: 80%; }
+
+.reveal em { color:red; }
+.reveal figcaption { font-size: 80%; }
+.reveal footer, .reveal sup { font-size: 60%; line-height: 90%; }
+.reveal footer {margin-top: 1em; text-align: left;}
+
+.reveal pre { font-size:50% }
+.reveal li { font-size: 90%; }
+
+
+div.side-left {text-align: center; position: left: 0%; width: 65%;}
+div.side-left-code  {text-align: center; position: left: 0%; width: 50%;}
+div.side-right h2, div.attention h2 {text-align: center; font-size:120%; font-style: bold;}
+div.side-right, div.side-right-img {text-align: left; position: absolute; left: 70%; top: 15%; width: 30%;}
+div.side-right-code {text-align: left; position: absolute; left: 50%; top: 15%; width: 50%;}
+
+div.attention, div.side-right {
+    border: 2px solid;
+    border-radius: 25px;
+    line-height: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 70%;
+    background-color: #FFFF99;
+}
+
+div.side-right, div.attention {background-color: #FFFF99;}
+
+
+

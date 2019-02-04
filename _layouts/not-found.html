@@ -1,0 +1,80 @@
+---
+# Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+layout: base
+---
+
+{% assign strings = site.data.strings %}
+
+<div class="page">
+  <h1 class="page-title">{{ page.title | default:strings.not_found.title | default: "404: Page Not Found" }}</h1>
+  <div class="hr pb0"></div>
+
+  {% assign test = page.content | strip_newlines %}
+  {% if test != "" %}
+    {{ content }}
+  {% else %}
+    {% capture home_link %}<a href="{{ '/' | relative_url }}">{{ strings.not_found.home_link | default:"Head back home" }}</a>{% endcapture %}
+    {% assign text = strings.not_found.message
+      | default:"Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <!--home_link--> to try finding it again or you can use this form to send me an e-mail." %}
+    <p class="lead">
+      {{ text | replace:"<!--home_link-->", home_link }}
+    </p>
+  {% endif %}
+<form action="mailto:{{ site.author.email }}?Subject=Request%20for%20a%20Question" method="post" enctype="text/plain">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter name</label>
+    <input type="text" name="Name" class="form-control" placeholder="Full Name" required>
+  </div>
+  <label for="exampleInputEmail1">Enter City & State</label>
+  <div class="form-row">
+    <div class="col-7">
+      <input type="text" name="City" class="form-control" placeholder="City" required>
+    </div>
+    <div class="col">
+      <input type="text" name="State" class="form-control" placeholder="State" required>
+    </div>
+    <div class="col">
+      <input type="text" name="Zip" class="form-control" placeholder="Zip" required>
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Enter age</label>
+    <input type="number" name="Age" class="form-control"  placeholder="Age" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter email</label>
+    <input type="email" name="Mail" class="form-control"  placeholder="name@example.com">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Enter message</label>
+    <textarea class="form-control" type="text" name="Message"  rows="3" placeholder="Your message" required ></textarea>
+  </div>
+  <div class="form-group">
+      <label for="exampleFormControlSelect1">Urgent (between 1 and 5)</label>
+      <select class="form-control" type="text" name="Urgent" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+</form>
+</div>

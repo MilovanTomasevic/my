@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="121.78785"
+   height="121.78785"
+   id="svg4644"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="commit.svg">
+  <defs
+     id="defs4646" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="-20.70785"
+     inkscape:cy="-59.471666"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1881"
+     inkscape:window-height="1163"
+     inkscape:window-x="39"
+     inkscape:window-y="12"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata4649">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-321.96321,-197.18254)">
+    <g
+       style="display:inline"
+       id="g4596"
+       transform="matrix(0.91538893,0,0,0.91538893,191.91021,194.93414)"
+       inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Commit.png"
+       inkscape:export-xdpi="119.98172"
+       inkscape:export-ydpi="119.98172">
+      <circle
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ff6600;stroke-width:3.93275452;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.61842107;marker:none;enable-background:accumulate"
+         id="path4598"
+         transform="translate(34.345187,-24.243661)"
+         cx="174.25131"
+         cy="93.222343"
+         r="59.093925" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:26.98079872px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="159.06311"
+         y="77.836014"
+         id="text4600"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4602"
+           x="159.06311"
+           y="77.836014">commit</tspan></text>
+    </g>
+  </g>
+</svg>

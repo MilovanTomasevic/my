@@ -1,0 +1,67 @@
+
+template = "template.html"
+
+author = "[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)"
+affiliation = ".medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]"
+
+
+"high-performance-computing/uvod.md" 
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "Uvod"
+
+"high-performance-computing/arhitektura.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "Arhitektura"
+
+"high-performance-computing/upravljanje.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "Upravljanje"
+
+"high-performance-computing/tehnologije.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "Tehnologije"
+
+"high-performance-computing/problemi.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "Problemi"
+
+"high-performance-computing/biblioteke.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "Biblioteke" 
+
+"high-performance-computing/algoritmi.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "Algoritmi" 
+
+
+
+
+"high-performance-computing/V1-openMP.md" 
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "V1-openMP"
+
+"high-performance-computing/V2-openMP.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "V2-openMP"
+
+"high-performance-computing/V3-openMPI.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "V3-openMPI"
+
+"high-performance-computing/V4-openMPI.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "V4-openMPI"
+
+"high-performance-computing/V5-openMPI.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "V5-openMPI"
+
+"high-performance-computing/V6-openACC.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "V6-openACC" 
+
+"high-performance-computing/V7-openACC.md"
+    title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
+    subtitle = "V7-openACC" 
+
+

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="412.25296"
+   height="653.02814"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="prvi-commit.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         id="path3898"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="-118.6751"
+     inkscape:cy="402.48291"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1881"
+     inkscape:window-height="1163"
+     inkscape:window-x="39"
+     inkscape:window-y="12"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Drugi commit"
+     style="display:inline"
+     transform="translate(-17.392172,-8.084757)" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(-17.392172,-8.084757)">
+    <g
+       id="g4226"
+       transform="matrix(0.93608302,0,0,0.93616009,14.268317,21.374947)">
+      <g
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         transform="matrix(0.54239069,0,0,0.54239069,28.291692,146.25813)"
+         id="g3832">
+        <rect
+           rx="32.048439"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#c2f3fb;fill-opacity:1;stroke:#000000;stroke-width:5.66165829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+           id="rect2985"
+           width="225.71428"
+           height="165.71428"
+           x="222.85715"
+           y="138.07646"
+           ry="32.045799" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:76.49350739px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="259.70633"
+           y="247.24692"
+           id="text3755"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3757"
+             x="259.70633"
+             y="247.24692">tree</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         transform="matrix(0.51147114,0,0,0.51147114,-60.993879,221.50963)"
+         id="g3862">
+        <rect
+           rx="32.048439"
+           ry="32.045799"
+           y="356.64789"
+           x="222.85715"
+           height="165.71428"
+           width="225.71428"
+           id="rect3759"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffcccc;fill-opacity:1;stroke:#000000;stroke-width:5.66165829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+        <text
+           sodipodi:linespacing="125%"
+           id="text3761"
+           y="468.022"
+           x="251.78806"
+           style="font-style:normal;font-weight:normal;font-size:76.49350739px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             y="468.022"
+             x="251.78806"
+             id="tspan3763"
+             sodipodi:role="line">blob</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         id="g4591">
+        <circle
+           r="59.093925"
+           cy="93.222343"
+           cx="174.25131"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ff6600;stroke-width:3.84565425;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.61842107;marker:none;enable-background:accumulate"
+           id="path4584"
+           transform="translate(34.345187,-24.243661)" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:26.98079872px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="159.06311"
+           y="77.836014"
+           id="text3837"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3839"
+             x="159.06311"
+             y="77.836014">commit</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         id="g3867"
+         transform="matrix(0.54239069,0,0,0.54239069,127.91169,325.40687)">
+        <rect
+           rx="32.048439"
+           ry="32.045799"
+           y="138.07646"
+           x="222.85715"
+           height="165.71428"
+           width="225.71428"
+           id="rect3869"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#c2f3fb;fill-opacity:1;stroke:#000000;stroke-width:5.66165829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+        <text
+           sodipodi:linespacing="125%"
+           id="text3871"
+           y="247.24692"
+           x="259.70633"
+           style="font-style:normal;font-weight:normal;font-size:76.49350739px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             y="247.24692"
+             x="259.70633"
+             id="tspan3873"
+             sodipodi:role="line">tree</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         id="g3875"
+         transform="matrix(0.51147114,0,0,0.51147114,138.29182,392.58435)">
+        <rect
+           rx="32.048439"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffcccc;fill-opacity:1;stroke:#000000;stroke-width:5.66165829;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+           id="rect3877"
+           width="225.71428"
+           height="165.71428"
+           x="222.85715"
+           y="356.64789"
+           ry="32.045799" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:76.49350739px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="251.78806"
+           y="468.022"
+           id="text3879"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3881"
+             x="251.78806"
+             y="468.022">blob</tspan></text>
+      </g>
+      <path
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         inkscape:connector-curvature="0"
+         id="path3883"
+         d="M 178.57143,315.21933 112.85714,396.6479"
+         style="fill:none;stroke:#000000;stroke-width:3.84565425;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         sodipodi:nodetypes="cc"
+         style="fill:none;stroke:#000000;stroke-width:3.84565425;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         d="m 237.14286,319.50504 67.14285,74.28572"
+         id="path4329"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         inkscape:connector-curvature="0"
+         id="path4331"
+         d="m 210.38,130.93361 -1e-5,80.00001"
+         style="fill:none;stroke:#000000;stroke-width:3.84565425;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         sodipodi:nodetypes="cc" />
+      <path
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         inkscape:connector-curvature="0"
+         id="path4333"
+         d="m 310,494.50504 -10e-6,72.14286"
+         style="fill:none;stroke:#000000;stroke-width:3.84565425;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         sodipodi:nodetypes="cc" />
+      <g
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         id="g4418">
+        <rect
+           rx="18.313393"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;stroke:#000000;stroke-width:1.22569489px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+           id="rect4386"
+           width="221.92857"
+           height="34.285713"
+           x="207.14285"
+           y="505.21933"
+           ry="18.311886" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:25.19261932px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="221.76665"
+           y="530.63062"
+           id="text4378"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4380"
+             x="221.76665"
+             y="530.63062">HelloWorld.java</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         transform="matrix(0.71777811,0,0,0.71777811,46.876174,96.898293)"
+         id="g4390">
+        <rect
+           rx="18.313393"
+           ry="18.311886"
+           y="333.79077"
+           x="29.999996"
+           height="34.285713"
+           width="221.92857"
+           id="rect4388"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;stroke:#000000;stroke-width:1.22569489px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:30.48624992px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           x="72.275101"
+           y="360.93362"
+           id="text4374"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan4376"
+             x="72.275101"
+             y="360.93362">README</tspan></text>
+      </g>
+      <rect
+         rx="17.776714"
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;stroke:#000000;stroke-width:0.77295804px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         id="rect4403"
+         width="90.92382"
+         height="33.28096"
+         x="234.07381"
+         y="336.436"
+         ry="17.775249" />
+      <text
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         sodipodi:linespacing="125%"
+         id="text4382"
+         y="363.41495"
+         x="252.84727"
+         style="font-style:normal;font-weight:normal;font-size:36.53949738px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="363.41495"
+           x="252.84727"
+           id="tspan4384"
+           sodipodi:role="line">src</tspan></text>
+      <text
+         inkscape:export-ydpi="119.98172"
+         inkscape:export-xdpi="119.98172"
+         inkscape:export-filename="/home/igor/Dropbox/Nastava/Pripreme/Tehnologije/Git/Slike/Git-objekti-1.png"
+         sodipodi:linespacing="125%"
+         id="text4433"
+         y="46.221901"
+         x="16.334822"
+         style="font-style:normal;font-weight:normal;font-size:19.163311px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="46.221901"
+           x="16.334822"
+           id="tspan4435"
+           sodipodi:role="line">author: ...</tspan><tspan
+           id="tspan4437"
+           y="70.176041"
+           x="16.334822"
+           sodipodi:role="line">commiter: ....</tspan><tspan
+           id="tspan4439"
+           y="94.13018"
+           x="16.334822"
+           sodipodi:role="line">date: ...</tspan><tspan
+           id="tspan4441"
+           y="118.08432"
+           x="16.334822"
+           sodipodi:role="line" /></text>
+    </g>
+  </g>
+</svg>

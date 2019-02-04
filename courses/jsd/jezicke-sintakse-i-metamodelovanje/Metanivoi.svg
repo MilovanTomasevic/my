@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="685.43353"
+   height="306.0087"
+   id="svg5959"
+   sodipodi:version="0.32"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Metanivoi.svg"
+   inkscape:export-filename="/home/igor/1st/Postdiplomske studije/Konferencije/JUG-2007/Metanivoi.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   version="1.1">
+  <defs
+     id="defs5961">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         id="path4161"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="scale(-0.4,-0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="112.59775"
+     inkscape:cy="97.36669"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1881"
+     inkscape:window-height="1163"
+     inkscape:window-x="39"
+     inkscape:window-y="12"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5964">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-33.555748,-74.896731)">
+    <g
+       id="g4214"
+       transform="matrix(0.96074771,0,0,0.96070162,14.789552,8.9546662)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text6842"
+         y="123.36218"
+         x="252"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan6846"
+           y="123.36218"
+           x="252"
+           sodipodi:role="line">MOF</tspan><tspan
+           id="tspan6850"
+           y="138.36218"
+           x="252"
+           sodipodi:role="line">meta-meta model</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6852"
+         y="119.36218"
+         x="390"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="119.36218"
+           x="390"
+           id="tspan6854"
+           sodipodi:role="line">ECore</tspan><tspan
+           id="tspan6856"
+           y="134.36218"
+           x="390"
+           sodipodi:role="line">meta-meta model</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6858"
+         y="204.36218"
+         x="312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="204.36218"
+           x="312"
+           id="tspan6860"
+           sodipodi:role="line">UML 2.0 meta-model</tspan><tspan
+           id="tspan6862"
+           y="219.36218"
+           x="312"
+           sodipodi:role="line">MOF varijanta</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text6864"
+         y="206.36218"
+         x="485"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="206.36218"
+           x="485"
+           id="tspan6866"
+           sodipodi:role="line">UML 2.0 meta-model</tspan><tspan
+           id="tspan6868"
+           y="221.36218"
+           x="485"
+           sodipodi:role="line">ECore varijanta</tspan></text>
+      <text
+         id="text6870"
+         y="212.36218"
+         x="119"
+         style="font-style:normal;font-weight:normal;font-size:12px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="212.36218"
+           x="119"
+           id="tspan6872"
+           sodipodi:role="line">CWM meta-model</tspan></text>
+      <text
+         id="text6874"
+         y="291.36218"
+         x="259"
+         style="font-style:normal;font-weight:normal;font-size:12px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="291.36218"
+           x="259"
+           id="tspan6876"
+           sodipodi:role="line">UML 2.0 model1</tspan></text>
+      <text
+         id="text6878"
+         y="292.36218"
+         x="438"
+         style="font-style:normal;font-weight:normal;font-size:12px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="292.36218"
+           x="438"
+           id="tspan6880"
+           sodipodi:role="line">UML 2.0 model2</tspan></text>
+      <text
+         id="text6882"
+         y="293.36218"
+         x="125"
+         style="font-style:normal;font-weight:normal;font-size:12px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="293.36218"
+           x="125"
+           id="tspan6884"
+           sodipodi:role="line">CWM model 1</tspan></text>
+      <rect
+         y="102.36218"
+         x="328"
+         height="48"
+         width="127"
+         id="rect6892"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="188.36218"
+         x="108"
+         height="42"
+         width="126"
+         id="rect6894"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="185.36218"
+         x="246"
+         height="47"
+         width="133"
+         id="rect6896"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="187.36218"
+         x="417"
+         height="46"
+         width="137"
+         id="rect6898"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="272.36218"
+         x="107"
+         height="34"
+         width="123"
+         id="rect6900"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="269.36218"
+         x="249"
+         height="38"
+         width="115"
+         id="rect6902"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="271.36218"
+         x="414"
+         height="38"
+         width="137"
+         id="rect6904"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="102.36218"
+         x="189.5"
+         height="48"
+         width="127"
+         id="rect6906"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path6934"
+         d="m 166.03222,188.32081 c 60.67285,-35.73065 60.67285,-35.73065 60.67285,-35.73065"
+         style="fill:none;stroke:#000000;stroke-width:1.11744022;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.46976084, 1.11744021;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path7811"
+         d="m 305,185.36218 c -34,-34 -34,-34 -34,-34"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path7813"
+         d="m 481,187.36218 -88,-37"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <text
+         transform="scale(0.991342,1.008734)"
+         sodipodi:linespacing="125%"
+         id="text8730"
+         y="348.92029"
+         x="125.13028"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.10480595px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="348.92029"
+           x="125.13028"
+           id="tspan8732"
+           sodipodi:role="line">upotreba UML modela 1</tspan><tspan
+           id="tspan8736"
+           y="364.0513"
+           x="125.13028"
+           sodipodi:role="line">(konkretizacija)</tspan></text>
+      <rect
+         y="335.25793"
+         x="34"
+         height="44.208595"
+         width="172"
+         id="rect8758"
+         style="fill:none;stroke:#000000;stroke-width:0.9248268;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text6916"
+         y="353.36218"
+         x="307"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan8750"
+           y="353.36218"
+           x="307"
+           sodipodi:role="line">druga upotreba UML</tspan><tspan
+           id="tspan8728"
+           y="368.36218"
+           x="307"
+           sodipodi:role="line">modela 1 (konkretizacija)</tspan></text>
+      <rect
+         y="334.26569"
+         x="215"
+         height="45.192982"
+         width="172"
+         id="rect8760"
+         style="fill:none;stroke:#000000;stroke-width:0.93506658;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text8738"
+         y="352.67273"
+         x="499.04688"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="352.67273"
+           x="499.04688"
+           id="tspan8740"
+           sodipodi:role="line">upotreba UML modela 2</tspan><tspan
+           id="tspan8744"
+           y="367.67273"
+           x="499.04688"
+           sodipodi:role="line">(konkretizacija)</tspan></text>
+      <rect
+         y="335.26807"
+         x="410"
+         height="45.188229"
+         width="172"
+         id="rect8762"
+         style="fill:none;stroke:#000000;stroke-width:0.93501747;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path8785"
+         d="m 168,273.36218 0,-44"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path8787"
+         d="m 307,270.36218 0,-38"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path8789"
+         d="m 482,272.36218 0,-41"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path8791"
+         d="m 128,333.36218 115,-26"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path8797"
+         d="m 328,335.36218 0,-28"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path8799"
+         d="m 469,336.36218 0,-29"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path9674"
+         d="m 50,165.36218 c 621,0 621,0 621,0"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path9676"
+         d="m 46.5,325.36218 c 621,0 621,0 621,0"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path9678"
+         d="m 51.5,252.36218 c 621,0 621,0 621,0"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path9680"
+         d="m 282,101.36218 c -17,-52.999997 -44,0 -44,0"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path9682"
+         d="m 421,101.36218 c -38,-58.999997 -64,1 -64,1"
+         style="fill:none;stroke:#000000;stroke-width:1.04088092;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.1635238, 1.04088095;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <text
+         transform="scale(0.957602,1.044276)"
+         id="text10557"
+         y="330.5972"
+         x="665.28516"
+         style="font-style:normal;font-weight:normal;font-size:20.35402298px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="330.5972"
+           x="665.28516"
+           id="tspan10559"
+           sodipodi:role="line">M0</tspan></text>
+      <text
+         transform="scale(0.957602,1.044276)"
+         id="text10561"
+         y="264.39355"
+         x="665.54865"
+         style="font-style:normal;font-weight:normal;font-size:20.35386276px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="264.39355"
+           x="665.54865"
+           id="tspan10563"
+           sodipodi:role="line">M1</tspan></text>
+      <text
+         transform="scale(0.957602,1.044276)"
+         id="text10565"
+         y="184.91248"
+         x="665.62817"
+         style="font-style:normal;font-weight:normal;font-size:20.35385513px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="184.91248"
+           x="665.62817"
+           id="tspan10567"
+           sodipodi:role="line">M2</tspan></text>
+      <text
+         transform="scale(0.957602,1.044276)"
+         id="text10569"
+         y="115.96542"
+         x="665.42438"
+         style="font-style:normal;font-weight:normal;font-size:20.35390854px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="115.96542"
+           x="665.42438"
+           id="tspan10571"
+           sodipodi:role="line">M3</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text10573"
+         y="144.36218"
+         x="652.89844"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="144.36218"
+           x="652.89844"
+           id="tspan10575"
+           sodipodi:role="line">EBNF</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text10577"
+         y="214.36218"
+         x="653.13574"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="214.36218"
+           x="653.13574"
+           id="tspan10579"
+           sodipodi:role="line">Gramatika Java</tspan><tspan
+           id="tspan10581"
+           y="229.36218"
+           x="653.13574"
+           sodipodi:role="line">programskog jezika</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text10583"
+         y="294.36218"
+         x="653.05957"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="294.36218"
+           x="653.05957"
+           id="tspan10585"
+           sodipodi:role="line">Program napisan</tspan><tspan
+           id="tspan10587"
+           y="309.36218"
+           x="653.05957"
+           sodipodi:role="line">u javi</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text10589"
+         y="361.36218"
+         x="652.54395"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Bitstream Vera Sans';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="361.36218"
+           x="654.4541"
+           id="tspan10591"
+           sodipodi:role="line">Konkretno izvršavanje </tspan><tspan
+           id="tspan10593"
+           y="376.36218"
+           x="652.54395"
+           sodipodi:role="line">programa</tspan></text>
+    </g>
+  </g>
+</svg>

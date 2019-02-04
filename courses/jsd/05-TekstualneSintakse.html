@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>JSD - Tekstualne sintakse</title>
+
+    <meta name="description" content="JSD - Tekstualne sintakse">
+    <meta name="author" content="Igor Dejanović">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../../reveal/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal/css/theme/beige.css" id="theme">
+    <link rel="stylesheet" href="../slides.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../reveal/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal/css/print/pdf.css' : '../../reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!-- google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-68681917-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Tekstualne sintakse</h1>
+          <h3>Jezici specifični za domen</h3>
+          <p class="center">
+            <small>
+              <a href="http://igordejanovic.net/">dr Igor Dejanović</a> <br/>
+              <a href="https://github.com/igordejanovic/"><img class="contact" src="../../img/github.png"/></a>
+              <a href="https://twitter.com/dejanovicigor"><img class="contact" src="../../img/twitter.png"/></a>
+              <a href="mailto:igord@uns.ac.rs"><img class="contact" src="../../img/mail.png"/></a>
+            </small>
+            <p class="center"><small>Fakultet tehničkih nauka u Novom Sadu</small></p>
+            <p class="center"><small>Katedra za informatiku</small></p>
+          </p>
+        </section>
+
+        <section>
+            <h2>Sadržaj</h2>
+            <ul>
+              <li>Parsiranje</li>
+              <li>Formalne gramatike</li>
+              <li>Strategije parsiranja</li>
+            </ul>
+        </section>
+
+
+        <section>
+
+          <section>
+            <h1>Parsiranje</h1>
+          </section>
+
+
+          <section>
+            <h2>Parsiranje - sintaksna analiza</h2>
+            <ul>
+              <li>Analiza linearnog zapisa niza simbola na osnovu pravila
+                  neke formalne gramatike jezika.</li>
+              <li>Transformacija ulaznog stringa u stablo parsiranja.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Leksička analiza</h2>
+            <ul style="font-size:90%;">
+              <li>Svaki jezik poseduje <em>alfabet mogućih karaktera</em> koji se mogu pojaviti
+                  u sklopu validnih rečenica. Kod računarskih jezika određene
+                kombinacije simbola se tretiraju kao jedinstveni entitet - <em>token</em> <sup>1</sup>.</li>
+              <li><em>Proces grupisanja</em> niza uzastopnih karaktera ulaznog stringa u
+                  tokene. Tekstualni blok koji odgovara tokenu naziva se još i <em>leksema</em>.</li>
+              <li>Program koji vrši leksičku analizu naziva se <em>lekser</em>, <em>skener</em> ili
+                  <em>tokenizator</em>.</li>
+              <li>Leksička analiza <em>prethodi procesu parsiranja</em> tako što se karakteri sa
+                  ulaza prvo grupišu u tokene a zatim parser vrši sintaksnu analizu i
+                  kreira stablo parsiranja.</li>
+              <li>Skeneri mogu biti posebni alati a mogu biti integrisani u parser
+                  (<em>scannerless parsing</em>).</li>
+              <li>Poznatiji skeneri: flex i lex, JLex...</li>
+            </ul>
+            <footer>1. A. Aho and J. Ullman, The theory of parsing,
+              translation, and compiling, vol. 1 of Series in
+              Automatic Computation. Prentice-Hall, 1972</footer>
+          </section>
+
+
+          <section>
+            <h2>Stablo parsiranja</h2>
+            <ul>
+              <li>Nastaje iz niske simbola (ulaznog stringa) procesom <em>skeniranja</em>
+                  (tokenizacije ili leksičke analize) i <em>parsiranja</em>.</li>
+              <li>Listovi stabla su tokeni prepoznati od strane skenera
+                  (<em>terminali</em>) dok su čvorovi grananja (<em>neterminali</em>) definisani
+                  gramatikom jezika.</li>
+              <li>Stablo parsiranja reflektuje sintaksnu strukturu ulaznog stringa
+                  na bazi unapred definisane formalne gramatike.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Stablo parsiranja - primer</h2>
+            <img src="tekstualne-sintakse/calc_parse_tree.svg" />
+            <p class="center">Stablo parsiranja za ulazni string <b>-(4-1)*5/(2+4.67)</b></p>
+          </section>
+
+
+          <section>
+            <h2>Stablo apstraktne sintakse</h2>
+            <ul>
+              <li>Svaki iskaz na datom jeziku se može na apstraktan način
+                  opisati stablom apstraktne sintakse (<em>Abstract Syntax Tree</em>).</li>
+              <li>AST je usmereno labelirano stablo gde čvorovi stabla
+                  predstavljaju instance koncepata apstraktne sintakse.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Primer stabla apstraktne sintakse</h2>
+            <img src="tekstualne-sintakse/AST.svg" />
+            <p class="center"><b>-(4-1)*5/(2+4.67)</b></p>
+          </section>
+
+
+          <section>
+            <h2>Razlike između stabla apstraktne i konkretne sintakse</h2>
+            <ul>
+              <li>Stablo konkretne sintakse je bazirano na formalnoj gramatici
+                  koja opisuje <em>detalje zapisa</em> u tekstualnom obliku.</li>
+              <li>Stablo apstraktne sintakse sadrži <em>suštinu jezičkog iskaza</em>.</li>
+              <li>Možemo imati više gramatika za isti jezik odnosno jedno
+                  stablo apstraktne sintakse možemo zapisati na više različitih
+                  načina što rezultuje različitim stablima konkretne sintakse.</li>
+              <li>Primer: Izraz -(4-1)*5/(2+4.67) možemo u postfiksnoj
+                  notaciji zapisati kao 4 1 - 5 * 2 4.67 + / -. Ovo će
+                  rezultovati različitim stablima parsiranja ali je suština izraza
+                  ista i može rezultovati istim stablom apstraktne sintakse.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Graf apstraktne semantike</h2>
+            <ul>
+              <li>Često ulazi fajl opisuje strukturu koja je u opštem slučaju tipa grafa.</li>
+              <li>Ovakvu strukturu nazivamo grafom apstraktne semantike
+                  (ASG - <em>Abstract Semantic Graph</em>)</li>
+            </ul>
+          </section>
+
+
+        </section>
+
+
+        <section>
+
+          <section>
+            <h1 id="formalne_gramatike">Formalne gramatike</h1>
+          </section>
+
+
+          <section>
+            <h2>Formalna gramatika</h2>
+            <ul>
+              <li>predstavlja skup pravila (<em>produkcije</em>) pomoću
+                kojih je moguće generisati sve <em>validne rečenice</em> nekog jezika
+                (<em>formalni jezik</em>) polazeći od <em>startnog simbola</em>.</li>
+              <li>Definiše koji od svih mogućih nizova simbola u jeziku predstavljaju
+                validne rečenice tog jezika (ali bez validnosti njihovih značenja).</li>
+              <li>Generisanje ispravnih rečenica jezika
+                (<em>generativne gramatike</em>) - često se
+                koriste kao osnova za prepoznavanje validnih rečenica.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Formalna gramatika - definicija</h2>
+            <p>Formalna gramatika je G = (N, Σ, P, S) gde je:</p>
+            <ul>
+              <li>N - konačni skup <em>neterminalnih simbola</em>,</li>
+              <li>Σ - konačni skup <em>terminalnih simbola</em>,</li>
+              <li>P - konačni skup <em>produkcionih pravila</em> (produkcija) oblika:
+                  <p>(Σ ∪ N)∗ N(Σ ∪ N)∗ → (Σ ∪ N)∗</p>
+              <li>S - neterminal iz skupa N (S ∈ N) koga nazivamo <em>početnim
+                simbolom</em>.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Klasifikacija formalnih gramatika po Čomskom</h2>
+            <p>Formalne gramatike se mogu klasifikovati prema hijerarhijskoj
+              klasifikaciji Noama Čomskog<sup>1</sup>. Prema ovoj klasifikaciji gramatike
+              mogu biti:</p>
+            <ul>
+              <li>tipa 3 - rekurzivno prebrojive - bez ograničenja na oblik
+                  produkcija.</li>
+              <li>tipa 2 - kontekstno zavisne - produkcije oblika: αAβ → αγβ</li>
+              <li><em>tipa 1 - kontekstno slobodne</em> - produkcije oblika: A → γ</li>
+              <li><em>tipa 0 - regularne</em> - produkcije oblika: A → a, A → aB</li>
+            </ul>
+
+            <footer>
+              1. <a href="http://en.wikipedia.org/wiki/Chomsky_hierarchy">
+                  http://en.wikipedia.org/wiki/Chomsky_hierarchy</a>
+            </footer>
+          </section>
+
+
+          <section>
+            <h2 style="font-size:120%">Konteksno slobodne gramatike (<i>Context-Free Grammars - CFGs</i>)</h2>
+            <ul>
+              <li>Produkcije oblika: A → γ</li>
+              <li>Popularne u domenu računarskih jezika. Dovoljno jednostavne
+                za konstrukciju <em>efikasnih algoritama za parsiranje</em>.</li>
+              <li>Generišu jezike koje nazivamo kontekstno slobodnim jezicima.</li>
+              <li>Earley parser - algoritam za parsiranje koji prihvata ceo skup
+                  CFG. U praksi se češće koriste jednostavniji algoritmi koji
+                  prihvataju samo podskup CFG.</li>
+              <li>Jezik za definisanje CFG - (Extended) Backus-Naur Form (EBNF).</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Primer kontekstno slobodne gramatike</h2>
+            G = ({S}, {a, b}, P, S)
+            <pre><code data-trim>
+S → aSa
+S → bSb
+S → ε
+            </code></pre>
+            <footer>
+              <p><a href="https://en.wikipedia.org/wiki/Context-free_grammar">https://en.wikipedia.org/wiki/Context-free_grammar</a></p>
+            </footer>
+          </section>
+
+
+          <section>
+            <h2>Izvođenje - derivacija (<i>Derivation</i>)</h2>
+            <ul>
+              <li>Generisanje ispravne rečenice, počevši od startnog
+                simbola/neterminala, sukcesivnom primenom produkcija dok ne
+                dobijemo rečenicu koja se sastoji samo od terminala.</li>
+            </ul>
+            <pre><code data-trim>
+S → aSa    (1)
+S → bSb    (2)
+S → ε      (3)
+
+S (1)→ aSa (1)→ aaSaa (2)→ aabSbaa  (3)→ aabbaa
+            </code></pre>
+            <footer>
+              <p><a href="https://en.wikipedia.org/wiki/Context-free_grammar">https://en.wikipedia.org/wiki/Context-free_grammar</a></p>
+            </footer>
+          </section>
+
+
+          <section>
+            <h2>Primer izvođenja - alebarski izrazi</h2>
+            <div>
+              <p class="center"><b>Cilj: </b>( x + y ) * x - z * y / ( x + x )</p>
+              <div style="float: left; width: 20%">
+                <pre><code data-trim>
+1. S → x
+2. S → y
+3. S → z
+4. S → S + S
+5. S → S - S
+6. S → S * S
+7. S → S / S
+8. S → ( S )
+                </code></pre>
+
+              </div>
+              <div style="float: left; width: 80%">
+                <pre><code data-trim>
+S (startni simbol)
+→ S - S (pravilo 5)
+→ S * S - S (pravilo 6, primenjeno na levi neterminal S)
+→ S * S - S / S (pravilo 7, primenjeno na desni neterminal S)
+→ ( S ) * S - S / S (pravilo 8, primenjeno na levi S)
+→ ( S ) * S - S / ( S ) (pravilo 8, primenjeno na desni S)
+→ ( S + S ) * S - S / ( S ) (itd.)
+→ ( S + S ) * S - S * S / ( S )
+→ ( S + S ) * S - S * S / ( S + S )
+→ ( x + S ) * S - S * S / ( S + S )
+→ ( x + y ) * S - S * S / ( S + S )
+→ ( x + y ) * x - S * y / ( S + S )
+→ ( x + y ) * x - S * y / ( x + S )
+→ ( x + y ) * x - z * y / ( x + S )
+→ ( x + y ) * x - z * y / ( x + x )
+                </code></pre>
+              </div>
+            </div>
+            <footer>
+              <p class="center"><a href="https://en.wikipedia.org/wiki/Context-free_grammar">https://en.wikipedia.org/wiki/Context-free_grammar</a></p>
+            </footer>
+          </section>
+
+
+          <section>
+            <h2>Rečenična forma i rečenica</h2>
+            <ul>
+              <li>Bilo koja niska terminala i neterminala koja se može dobiti
+                primenom produkcionih pravila počevši od početnog simbola naziva se
+              rečeničnom formom (<em>Sentential Form</em>).</li>
+            </ul>
+            <pre><code data-trim>
+( x + S ) * S - S * S / ( S + S )
+            </code></pre>
+            <ul>
+              <li>Ukoliko se rečenična forma sastoji samo od terminala onda je to rečenica (<em>Sentence</em>).</li>
+            </ul>
+            <pre><code data-trim>
+( x + y ) * x - z * y / ( x + x )
+            </code></pre>
+          </section>
+
+
+          <section>
+            <h2>Odluke pri izvođenju</h2>
+            <ul>
+              <li>U svakom koraku izvođenja parser donosi dve odluke:</li>
+              <ol>
+                <li><b>koji neterminal da zameni</b></li>
+                <li><b>sa kojim pravilom da ga zameni</b> ukoliko imamo više mogućnosti</li>
+              </ol>
+              <li>Prva odluka je najčešće fiksna (npr. uvek se zamenjuje prvi sleva ili prvi sdesna)</li>
+              <li>Za drugu odluku koriste se tehnike kao što su <em>lookahead</em> (videti u nastavku)</li>
+              <li>Strategija pri donošenju druge odluke utiče na izgled stabla parsiranja.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Strategije izvođenja sa stanovišta izbora neterminala za zamenu</h2>
+            <ul>
+              <li><b>Levo izvođenje</b> - uvek se prvo razrešava levi neterminal</li>
+              <li><b>Desno izvođenje</b> - uvek se prvo razrešava desni neterminal</li>
+              <li>Strategija izvođenja je bitna kod parsera koji izvšavaju određene akcije kod
+                  svake primene produkcije jer se redosled primene razlikuje iako mogu
+                  rezultovati istim stablima parsiranja.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Levo izvođenje - primer</h2>
+            <img src="tekstualne-sintakse/LeftDerivation.png" width="1000"/>
+          </section>
+
+
+          <section>
+            <h2>Višeznačne gramatike - primer - <em>dangling else</em></h2>
+            <ul style="font-size:80%;line-height:120%">
+              <li>Stablo parsiranja za određeni ulaz nije jednoznačno određeno CFG gramatikom</li>
+              <li>Višeznačna gramatika je gramatika kod koje postoji ulazni
+                  string sa više različitih levih izvođenja.</li>
+              <li>Ili jednostavnije: ukoliko postoji ulazni string koji može da rezultuje sa više
+                  različitih stabala parsiranja.</li>
+              <li>Klasičan primer je "viseći else" <sup>1</sup>:</li>
+              <pre><code data-trim>
+if a then if b then s else s2
+Može da se parsira kao:
+if a then (if b then s) else s2
+ili kao:
+if a then (if b then s else s2)
+                </code></pre>
+              <li>Rešavaju se dodavanjem pravila prioriteta ili dodavanjem
+                  konteksta kojim se izbegava višeznačnost.<br/> Na primer, za kod
+                  <b>if-else</b> klauzule može se dodati <b>endif</b>.</li>
+            </ul>
+            <footer>
+              1. <a href="http://en.wikipedia.org/wiki/Unambiguous_grammar#Dangling_else">
+                http://en.wikipedia.org/wiki/Unambiguous_grammar#Dangling_else</a>
+            </footer>
+          </section>
+
+
+          <section>
+            <h2>Višeznačna gramatika - primer</h2>
+            <img src="tekstualne-sintakse/Ambiguous.png" width="900"/>
+          </section>
+
+
+          <section>
+            <h2>A u ovom slučaju želimo</h2>
+            <p style="text-align:center;">Stablo koje oslikava prioritet i asocijativnost operacija</p>
+            <img src="tekstualne-sintakse/Ambiguous2.png" height="500"/>
+          </section>
+
+
+          <section>
+            <h2>Razrešavanje višeznačnosti</h2>
+            <ul>
+              <li>Višeznačnost je uglavnom <em>osobina gramatike a ne jezika</em>.</li>
+              <li>Često se gramatika može refaktorisati da ne bude višeznačna.</li>
+              <li>Određeni parseri omogućavaju dodatna pravila (npr. <em>pravilo prioriteta</em>) koje
+                  pomaže u izboru produkcije koju treba primeniti.</li>
+              <li>Parseri će najčešće detektovati višeznačnost i prijaviti grešku.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Leva rekurzija</h2>
+            <ul>
+              <li>Određene vrste parsera ne smeju da imaju <em>levo rekurzivne produkcije</em> jer
+                  to dovodi do beskonačne rekurzije gde parser primenjuje stalno
+                  iste produkcije bez konzumiranja tokena sa ulaza.</li>
+              <li>Mogu biti direktne i indirektne.</li>
+              <li>Direktna leva rekurzija je produkcija oblika A → Aγ.</li>
+              <li>Leve rekurzije se <em>mogu refaktorisati</em> da koriste desno rekurzivne
+                  produkcije ali gramatika tada često gubi na intuitivnosti.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Eliminacija leve rekurzije u opštem slučaju</h2>
+            <p>Pravilo <em>A -&gt; Aa | B</em> postaje <em>A -> Ba*</em></p>
+            <p>Primer:</p>
+            <pre><code data-trim>
+expr -&gt; expr '+' term | number
+
+postaje:
+
+expr -&gt; number ('+' term)*
+            </code></pre>
+          </section>
+
+
+
+          <section>
+            <h2><i>Extended Backus–Naur Form</i> - EBNF</h2>
+            <ul>
+              <li><em>Meta-sintaksa</em> za zapis kontekstno slobodnih gramatika.</li>
+              <li>ISO/IEC 14977</li>
+              <li>Produkcije dodeljuju sekvencu simbola (terminala i
+                  neterminala) neterminalima.</li>
+              <li>U širokoj upotrebi kod parser generatora i interpretera za opis
+                  gramatike jezika.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Primer - EBNF u EBNF-u</h2>
+            <pre><code data-trim style="line-height:90%; font-size:90%;">
+letter = "A" | "B" | "C" | "D" | "E" | "F" | "G"
+       | "H" | "I" | "J" | "K" | "L" | "M" | "N"
+       | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
+       | "V" | "W" | "X" | "Y" | "Z" ;
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+symbol = "[" | "]" | "{" | "}" | "(" | ")" | "<" | ">"
+       | "'" | '"' | "=" | "|" | "." | "," | ";" ;
+character = letter | digit | symbol | "_" ;
+
+identifier = letter , { letter | digit | "_" } ;
+terminal = "'" , character , { character } , "'"
+         | '"' , character , { character } , '"' ;
+
+lhs = identifier ;
+rhs = identifier
+     | terminal
+     | "[" , rhs , "]"
+     | "{" , rhs , "}"
+     | "(" , rhs , ")"
+     | rhs , "|" , rhs
+     | rhs , "," , rhs ;
+
+rule = lhs , "=" , rhs , ";" ;
+grammar = { rule } ;
+            </code></pre>
+            <a style="font-size:small;"
+              href="http://en.wikipedia.org/wiki/Extended_Backus-Naur_Form">
+              http://en.wikipedia.org/wiki/Extended_Backus-Naur_Form</a>
+          </section>
+
+
+
+
+        </section>
+
+
+
+        <section>
+
+
+          <section>
+            <h1 id="strategije_parsiranja">Strategije parsiranja</h1>
+          </section>
+
+
+          <section>
+            <h2>Strategije parsiranja</h2>
+            <ul style="font-size:80%">
+              <li><b>Top-down (Silazna)</b></li>
+              <ul>
+                <li>Kreće od polaznog neterminala gramatike i pokušava da
+                  generiše(izvede) ulazni string primenom produkcija <em>s leva na desno (lhs -&gt; rhs)</em>.</li>
+                <li>Od opšteg ka pojedinačnom.</li>
+                <li>Ukoliko se izabere pogrešna alternativa radi se vraćanje - <em>backtrack</em></li>
+                <li>Ukoliko ne koriste vraćanje zovu se <em>prediktivni parseri</em>.</li>
+                <li>LL parseri i rekurzivni silazni parseri (<em>recursive descent</em>) koriste
+                    ovu strategiju.</li>
+                <li>LL parseri prirodno primenjuju levo izvođenje stabla parsiranja.</li>
+              </ul>
+              <li><b>Bottom-up (Uzlazna)</b></li>
+              <ul>
+                <li>Kreće od terminala i primenom produkcija <em>s desna na levo (lhs &lt;- rhs)</em>
+                    pokušava da redukuje ulaz na polazni neterminal gramatike.</li>
+                <li>Od pojedinačnog ka opštem.</li>
+                <li><em>Shift-Reduce</em> - efikasan metod uzlaznog parsiranja.</li>
+                <li>LR parseri koriste ovu strategiju.</li>
+                <li>LR parseri prirodno primenjuju desno izvođenje stabala parsiranja</li>
+              </ul>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Lookahead</h2>
+            <ul>
+              <li>Strategija kod koje se koristi određeni broj nekonzumiranih
+                  tokena sa ulaza da bi se odlučilo o sledećim koracima kod
+                  parsiranja.</li>
+              <li>Manji <em>lookahead</em> znači jednostavniji parser ali takođe i manji
+                  skup gramatika koje prihvata.</li>
+              <li>Koliko tokena unapred koristimo najčešće piše u oznaci parsera
+                  - primer LL(1), LR(k).</li>
+              <li>Za većinu programskih jezika potreban je samo jedan token
+                  <em>lookahead</em>-a - LL(1), LR(1)...</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Vraćanje (<i>backtracking</i>)</h2>
+            <ul>
+              <li>Strategija kod koje se u slučaju alternativnih derivacija
+                  pokušava redom sa svakom i u slučaju da parsiranje ne uspe
+                  <em>vrši vraćanje unazad</em> (na stanje izbora alternative) i pokušava
+                  se sa sledećom alternativom.</li>
+              <li>Parseri koji implementiraju vraćanje često prihvataju veći skup
+                  gramatika tj. manja su ograničenja gramatika koje se
+                  prihvataju.</li>
+              <li>Mana je što u praksi možemo imati veliki broj alternativa što
+                  često dovodi do <em>eksponencijalnog vremena parsiranja</em>.</li>
+              <li>Ukoliko ne koriste vraćanje (prediktivni parseri) prihvataju manji skup
+                  gramatika.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>LL parser</h2>
+            <ul style="font-size:95%">
+              <li>Top-down parser koji podržava podskup kontekstno slobodnih
+                  gramatika.</li>
+              <li>Konzumira tokene s leva na desno i kreira levo izvođenje.</li>
+              <li>Klasa gramatika koju podžava LL parser nazivamo LL
+                  gramatikama.</li>
+              <li>LL(k) parser koristi k tokena unapred (<em>lookahead</em>) za odluku
+                  koju sledeću produkciju da primeni. Ako takav parser
+                  postoji za neku gramatiku, a da ne koristi vraćanje
+                  (<em>backtracking</em>) tada kažemo da je gramatika LL(k). Jezik za
+                  koji postoji LL(k) gramatika naziva se LL(k) jezik.</li>
+              <li>LL(*) parseri nisu ograničeni na broj tokena koje mogu
+                  preuzeti sa ulaza da bi odlučili o sledećoj produkciji -
+                  dinamički se prilagođavaju.</li>
+              <li>Veće k - moćniji ali i složeniji parser. LL(1) su naročito
+                  popularni kod računarskih jezika.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Primer LL parsiranja</h2>
+            <pre><code data-trim style="line-height:110%">
+Gramatika: S → E    E → T + E    E → T    T → int
+Ulaz: int + int + int
+
+Production       Input              Action
+---------------------------------------------------------
+S                int + int + int    Predict S -&gt; E
+E                int + int + int    Predict E -&gt; T + E
+T + E            int + int + int    Predict T -&gt; int
+int + E          int + int + int    Match int
++ E              + int + int        Match +
+E                int + int          Predict E -&gt; T + E
+T + E            int + int          Predict T -&gt; int
+int + E          int + int          Match int
++ E              + int              Match +
+E                int                Predict E -&gt; T
+T                int                Predict T -&gt; int
+int              int                Match int
+                                    Accept
+          </code></pre>
+          <footer>
+            <a href="http://stackoverflow.com/questions/5975741/what-is-the-difference-between-ll-and-lr-parsing">
+              http://stackoverflow.com/questions/5975741/what-is-the-difference-between-ll-and-lr-parsing</a>
+          </footer>
+          </section>
+
+
+          <section>
+            <h2>LR parser</h2>
+            <ul>
+              <li>Bottom-up parser koji podržava podskup kontekstno slobodnih
+                  gramatika.</li>
+              <li>Implementiraju <em>Shift-Reduce</em> strategiju i koriste tablice
+                  stanja-prelaza. Skup gramatika koje prihvata je nadskup skupa
+                  koje prihvata prediktivni LL parser.</li>
+              <li>1965. Donald Knuth.</li>
+              <li>Gramatika uglavnom ne mora da se prilagođava kao kod LL
+                  parsera. Mogu se navoditi rekurzivne produkcije.</li>
+              <li>Podvarijante: LALR (<i>Look-Ahead</i>), SLR (<i>Simple</i>),
+                  GLR (<i>Generalized LR</i>).</li>
+              <li>Generatori: yacc, bison</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>LR parsiranje - primer</h2>
+            <img src="tekstualne-sintakse/LR-Primer.png"/>
+            <a style="font-size:small;" href="http://www.dabeaz.com/ply/ply.html#ply_nn22">http://www.dabeaz.com/ply/ply.html#ply_nn22</a>
+            <p></p>
+          </section>
+
+
+          <section>
+            <h2>LL - LR napomene</h2>
+            <ul>
+              <li>Kod LL parsera problem je određivanje produkcije koju treba primeniti nad neterminalom.</li>
+              <li>Kod LR parsera problem je kada uraditi REDUCE operaciju i na koji neterminal, odnosno kada uraditi SHIFT.</li>
+              <li>I kod jednog i kod drugog algoritma generiše se tablica koja pomaže parseru
+                  da donese odluku u toku parsiranja.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>GLR</h2>
+            <ul>
+              <li><b>G</b>eneralized <b>LR</b> parser.</li>
+              <li>Parsiranje nederminističkih i višeznačnih gramatika.</li>
+              <li>Efektivno radi kao LR parser ali u svakom stanju dozvoljava dozvoljava
+                  više prelaza čime simulira neterministički algoritam.</li>
+              <li>Kod višeznačnih stringova vraća skup stabala parsiranja (šumu
+                  parsiranja - <em>Parse Forest</em>).</li>
+              <li>Na korisniku da odredi ispravno stablo - najčešće dodatnim
+                  pravilima (npr. prioritet, asicijativnost).</li>
+              <li>Bison u novijim verzijama može da generiše GLR parser.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Rekurzivni silazni parser - Recursive descent parser</h2>
+            <ul>
+              <li>Silazni parser izgrađen na bazi međusobno rekurzivnih
+                  procedura.</li>
+              <li>Svaka procedura implementira jednu produkciju odnosno
+                  prepoznvanje jednog (ne)terminala.</li>
+              <li>Kod prediktivnih parsera ne zahteva se vraćanje
+                  (<em>backtracking</em>).</li>
+              <li>Ukoliko se koristi vraćanje vreme parsiranja <em>može
+                  eksponencijalno da poraste</em> kod složenijih gramatika.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2><i>Top-Down Parsing Language</i></h2>
+            <ul style="line-height:105%">
+              <li>Šematski opis rekurzivnog silaznog parsera sa vraćanjem (<em>recursive
+                  descent parser with backtracking</em>). Orijentisan je ka prepoznavanju
+                  ulaznog teksta.</li>
+              <li>Ideje datiraju unazad u ’70 godine prošlog veka<sup>1,2</sup>.</li>
+              <li>Rekurzivni silazni parseri nisu imali veću popularnost u 20. veku jer
+                  vreme parsiranja može biti eksponencijalno ukoliko se ne koristi
+                  tehnika memoizacije u kom slučaju je linearno ali je potreban
+                  značajan memorijski prostor koji direktno zavisi od veličine ulaza.</li>
+                  <li>Bryan Ford je obnovio interesovanje za TDPL (<em>Top-Down Parsing
+                    Language</em>) fomalizam za opis gramatika u <sup>3</sup>.</li>
+              <li>Gramatike koje opisuju TDPL Ford naziva gramatikama izraza za
+                  parsiranje (<em>Parsing Expression Grammars - PEG</em>).</li>
+            </ul>
+            <footer>
+              <ol>
+                <li>A. Birman, The tmg recognition schema. PhD thesis, 1970</li>
+                <li>A. Aho and J. Ullman, The theory of parsing, translation, and compiling, vol. 1 of Series in
+                    Automatic Computation. Prentice-Hall, 1972</li>
+                <li>B. Ford, Packrat parsing: a practical linear-time algorithm
+                    with backtracking. PhD thesis, Massachusetts Institute of Technology, 2002</li>
+              </ol>
+            </footer>
+          </section>
+
+
+          <section>
+            <h2>PEG - <i>Parsing Expression Grammars</i></h2>
+            <ul>
+              <li>Formalizam za opis TDPL.</li>
+              <li>Osnovna prednost PEG gramatika u odnosu na CFG jeste
+                  upotreba operatora uređenog izbora (eng. <i>ordered choice</i>) koji
+                  omogućava nedvosmislenost u parsiranju.</li>
+              <li>Ako ulazni tekst pripada jeziku koji opisuje dati PEG tada
+                  postoji samo jedno validno stablo koje ga opisuje.</li>
+              <li>Odnosno, gramatike <em>ne mogu biti višeznačne</em>.</li>
+              <li>Kod CFG postoji neodređenost jer je redosled izbora
+                  alternativa neodređen i u praktičnim primenama zavisi od
+                  korišćenog algoritma u implementaciji parsera.</li>
+              <li>Vrsta parsera koja koristi PEG i implementirana je kao
+                  rekurzivni silazni parser sa bektrekingom i memoizacijom
+                  naziva se <b>pakrat parser</b>.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Packrat parser</h2>
+            <ul>
+              <li>Rekurzivni silazni parser sa vraćanjem koji koristi tehniku
+                  <em>memoizacije</em> (pamćenje derivacija podstabala) da bi obezbedio
+                  <em>linearno vreme izvršavanja</em>.</li>
+              <li>Prepoznaje bilo koji LL(k)/LR(k) jezik kao i mnoge jezike koji
+                  zahtevaju neograničen lookahead.</li>
+              <li>Bolje kompozitne osobine od LL/LR parsera što ga čini
+                  pogodnim za opis proširivih dinamičkih jezika.</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>Refaktorisanje gramatike za PEG parsere</h2>
+            <img src="tekstualne-sintakse/PEGPrioritet.svg"/>
+            <p class="center" style="font-size: 80%; align: left">
+              Kako enkodovati pravila prioriteta i eliminisati levu rekurziju.</p>
+          </section>
+
+
+
+          <section>
+            <h2>Determinističko parsiranje</h2>
+            <ul>
+              <li>Algoritam parsiranja kod koga se ne koristi vraćanje unazad
+                  (<em>backtracking</em>).</li>
+              <li>Analogno determinističkom potisnom automatu.</li>
+              <li>Parseri prihvataju klasu determinističkih kontekstno slobodnih
+                  jezika (podskup svih kontekstno slobodnih jezika).</li>
+              <li>Linearno vreme parsiranja - popularni u praksi.</li>
+            </ul>
+          </section>
+
+
+
+          <section>
+            <h2>Pristupi u izradi parsera</h2>
+            <ul>
+              <li>Parser generatori</li>
+              <li>Interpreteri gramatika</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Parser generatori</h2>
+            <ul>
+              <li>Na osnovu formalne gramatike <em>generišu programski kod</em>
+                  parsera koji će prepoznavati rečenice na datom jeziku i
+                  pretvarati ulazne stringove u stabla parsiranja.</li>
+              <li>Često implementiraju mehanizam za obilazak stabla parsiranja
+                  i njegovu transformaciju.</li>
+              <li>Mogu generisati i <em>lexer (scanner)</em> a mogu biti i <em>scannerless</em>.</li>
+              <li>Neki od poznatijih parser generatora: ANTLR, JavaCC, yacc, bison.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>ANTLR</h2>
+            <ul>
+              <li>ANTLR (<i>ANother Tool for Language Recognition</i>) je LL(*)
+                  parser generator implementiran na programskom jeziku Java.</li>
+              <li>Iz opisa gramatike kreira parser kao i infrastrukturu za analizu
+                  stabla (vizitori, akcije koje se izvršavaju kada se prepozna
+                  određena konstrukcija).</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Interpreteri</h2>
+            <ul>
+              <li>Konfigurišu se gramatikom u vreme izvršavanja (<em>run-time</em>) tj.
+                  <em>interpretiraju gramatiku</em>.</li>
+              <li>Brz round-trip. Nema generisanja parsera. Moguća izmena
+                  gramatike "u letu".</li>
+              <li>Arpeggio radi kao interpreter.</li>
+            </ul>
+          </section>
+
+
+        </section>
+
+
+        <section>
+          <h1>KRAJ</h1>
+        </section>
+
+
+
+      </div>
+    </div>
+
+
+    <script src="../../reveal/lib/js/head.min.js"></script>
+    <script src="../../reveal/js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        slideNumber: true,
+        history: true,
+        center: true,
+
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+     { src: '../../reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../../reveal/plugin/zoom-js/zoom.js', async: true },
+          { src: '../../reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,276 @@
+# If you have a `resume.json` file, copy it into `_data` and delete this file.
+# If you don't have a JSON Resume you can just edit this YAML file instead.
+# See also: <https://jsonresume.org/>.
+basics:
+  name: "Milovan Tomašević"
+  label: "Researcher"
+  picture: "/assets/icons/milovantomasevic.png"
+  email: ""
+  phone: "(+386) 40/611-065"
+  website: "https://fis.unm.si/en/"
+  summary: >
+    Everything about me can be said in one sentence, I get moved by an idea, which I really desire and
+    work diligently to accomplish it. It’s completely irrelevant what it takes. I get inspired by the vision
+    I follow, everything else can be disregarded. I’m only taking care of what is more to be done and
+    how far I’m from my goal accomplishment, and that’s it. All of that makes me really happy and
+    alive. I refused to live with It cannot be, point. Because it can be, the thing needed is to leave your
+    common frames, use other resources, meet new people, acquire new knowledge and skills. It
+    needs to overcome obstacles and work diligently. And `all will be okay`, if not at the very instant,
+    tomorrow, but it will.
+  location:
+    address: "Ljubljanska cesta 31a"
+    postalCode: "8000"
+    city: "Novo mesto"
+    countryCode: "SI"
+    region: ""
+  profiles:
+    - network: "LinkedIn"
+      username: "Milovan Tomašević"
+      url: "https://www.linkedin.com/in/PhDMilovanTomasevic/"
+work:
+  - company: "Faculty of information studies"
+    position: "Researcher"
+    website: "https://fis.unm.si/en/"
+    startDate: "21-08-2018"
+    endDate: ""
+    summary: >
+      Milovan works as a researcher on the project “SUPERVISION OF NATIONAL RESEARCH INFRASTRUCTURES - HPC RIVER”.
+    highlights:
+      - "Build an algorithm for HPC"
+  
+  - company: "Faculty of Technical Sciences, University of Novi Sad"
+    position: "Researcher"
+    website: "http://www.ftn.uns.ac.rs/1417837973/milovan-tomasevic"
+    startDate: "01-01-2012"
+    endDate: "01-01-2018"
+    summary: >
+      Milovan works as a researcher on the project “Development of software for managing the installation and repair of braking systems for rail vehicles” (_**You can see the PhD presentation [here](../projects/PhD-MT/index.html){:target="_blank"}**_), the Ministry of Science, Republic of Serbia, no. 035 050 for the period 2011-2017th years.
+      <br>Responsibilities:<br>
+      In the phase of application software development data was collected and research was conducted on the process management software modeling.
+      After research and representation of the system model specification for management,
+      implementation and testing of the system was made as well as training of the users in the company.<br>
+    highlights:
+      - "Performing exercises with an accredited degree program (Department: Electrical engineering, Department of Software and Information Technology) in the Project Management.
+         <br>He informed the students:<br>
+         ♣ Needs, objectives and applications of the concept of Project Management."
+  
+  - company: "OBLO Living LLC (member of RT-RK group - www.rt-rk.com), Serbia"
+    position: "iOS Developer"
+    website: "http://www.obloliving.com/company-info/"
+    startDate: "01-03-2017"
+    endDate: "01-08-2017"
+    summary: >
+      IoT Home Automation, Internet of Things, and Smart Home
+    highlights:
+      - "iOS application development"
+      - "Programming in Objective C language"
+      - "Working with xCode software"
+      - "Working with Cocoa Touch frameworks (Foundation, UIKit, CoreData, iOS SDK, Foscam SDK etc.)"
+      - "Designing & Development of Appium test automation scripts for iOS & Android Mobile applications"
+      - "Selenium-WebDriver JS with Automation Framework built-TypeScript"
+
+  - company: "DDOR Novi Sad a.d.o."
+    position: "Researcher, Business Analyst/Consultant"
+    website: "https://www.ddor.rs/en/"
+    startDate: "01-03-2012"
+    endDate: "01-01-2013"
+    summary: >
+      Scientific research in order to improve IT processes. During the research were written research papers.
+    highlights:
+      - "ITIL"
+      - "PMP"
+      - "PMI"
+
+education:
+  - institution: "Faculty of information studies, University of Novo mesto"
+    area: "Computer Science"
+    studyType: "PhD student"
+    startDate: "2018-10-01"
+    endDate: ""
+    gpa: "XX,xx"
+    courses:
+      - "HPC"
+      - "Pyhton"
+  - institution: "Faculty of Technical Sciences, University of Novi Sad"
+    area: "Engineering/Industrial Management"
+    studyType: "PhD"
+    startDate: "2011-10-01"
+    endDate: "2018-03-09"
+    gpa: "9.86"
+    courses:
+      - "Supply Chain & Information Systems and Management"
+  - institution: "Faculty of Technical Sciences, University of Novi Sad"
+    area: "Engineering/Industrial Management"
+    studyType: "MSc"
+    startDate: "2010-10-01"
+    endDate: "2013-04-17"
+    gpa: "9.38"
+    courses:
+      - "ITIL"
+  - institution: "Faculty of Technical Sciences, University of Novi Sad"
+    area: "Information Technology"
+    studyType: "MSc"
+    startDate: "2010-10-01"
+    endDate: "2011-10-28"
+    gpa: "10.00"
+    courses:
+      - "Computer programming"
+  - institution: "Faculty of Technical Sciences, University of Novi Sad"
+    area: "Computer Science"
+    studyType: "BSc"
+    startDate: "2006-10-01"
+    endDate: "2010-09-27"
+    gpa: "8.11"
+    courses:
+      - "Computer programming"
+
+awards:
+  - title: "PRACE Autumn School 2018"
+    date: "2018-09-24"
+    awarder: "CERTIFICATE OF ATTENDENCE"
+    summary: "HPC for Engineering and Chemistry"
+
+  - title: "Training & Research for Academic Newcomers"
+    date: "2017-10-01"
+    awarder: "CERTIFICATE OF ATTENDENCE"
+    summary: "Research Methodology, Preparing Funding Applications & Project Management and Communication & Presentation Skills"
+
+  - title: "Certificate of Training in Responsible Research and Innovation"
+    date: "2016-12-01"
+    awarder: "CERTIFICATE OF ATTENDENCE"
+    summary: "RRI Tools"
+
+  - title: "Training & Research for Academic Newcomers"
+    date: "2016-11-01"
+    awarder: "CERTIFICATE OF ATTENDENCE"
+    summary: "TRAIN program"
+
+  - title: "SAP Introduction Training"
+    date: "2012-06-01"
+    awarder: "CERTIFICATE OF ATTENDENCE"
+    summary: "Heino Schrader University Alliances EMEA SAP AG"
+
+publications:
+  - name: "ADAPTIVE FUZZY MODEL FOR DETERMINATION OF QUALITY ASSESSMENT SERVICES IN SUPPLY CHAIN"
+    publisher: "Technical Gazette"
+    releaseDate: "2018-12-01"
+    website: "https://www.researchgate.net/publication/322266423_Adaptive_fuzzy_model_for_determination_of_quality_assessment_services_in_supply_chain"
+    summary: "The problem that is being addressed in this paper is to improve the services provided by company and achieve better communication among companies in the supply chain. Therefore, a qualitative assessment of the service has been required. This service is characterized by a group of parameters, which are often inaccurately estimated values as well as its importance for the evaluation system. This is often the result of assessor ́s uncertainty, variability of conditions, etc. Therefore, in the context of AM4SCM (Adaptive Model for Supply Chain Management) a mathematical model for evaluating the quality of services has been developed (FAM4QS - Fuzzy Aggregation Method for Quality Service) which is based on the fuzzy arithmetic. By selecting different values for the degrees of fuzzy power mean, which are used for evaluation of parameters or groups of parameters of the system and the service also, contribute to a better assessment and it is due to the varying nature of the parameters. The observed model was simulated on 17 supply chains on the territory of the Republic of Serbia. Service quality assessment is carried out on the basis of data from the user requirements - participants of supply chains binding the so-called fuzzy aggregation function."
+
+  - name: "Contribution to the User Requests Management Based on ITIL Implementation"
+    publisher: "International Scientific and Expert Conference (TEAM)"
+    releaseDate: "2012-10-01"
+    website: "http://team2012.sfsb.hr/documents/TEAM_2012_Proceedings.pdf"
+    summary: "Implementing the best practice in IT services organization could be done with support of the of the third party solutions (i.e. CA tools). However, these tools do require significant investments and continuous specialized support. In cost / benefit analysis for small to medium sized companies it might be hard to justify these expenses. In this paper the emphases is given to the modeling of the Services desk solution that could be implemented using existing tools that company already posses (i.e. e-mail system, office tools, document management system, etc.)."
+
+skills:
+  - name: "Development"
+    level: "Master"
+    keywords:
+      - "HPC"
+      - "Business"
+      - "Supply Chain"
+      - "Data Mining"
+      - "Training"
+      - "iOS"
+      - "Pyhton"
+      - "Java"
+      - "DataBase"
+languages:
+  - language: "Serbian"
+    fluency: "Native speaker"
+  - language: "English"
+    fluency: "Native speaker"
+  - language: "Slovenian"
+    fluency: "Native speaker"
+interests:
+  - name: "Areas"
+    keywords:
+      - "High Performance Computing"
+      - "Supply Chain & Information Systems and Management"
+      - "Business Process Management"
+      - "IT Service Management"
+      - "Project Management"
+references:
+  - name: "Professor Ilija Cosic, PhD"
+    reference: >
+      It's my honor to recommend Milovan Tornasevic, PhD student at our Faculty and one of the best students of Faculty of Technical Sciences on master level. He was obtaining the master degree in Industrial Management and master degree in Computer Sciences.
+      As a professor I have followed his work for four years, during which time he finished five years faculty program with the maximum score and constant involvement in numerous national and international student competitions, presenting faculty on the best way.
+      He showed efficient in reaching all goals, willingness, and motivation for learning, working and professional improvement, great leadership skills, and managerial ethics.
+      I consider Milovan to be an excellent choice for your program, as one of the most successful, studious and responsible students at the faculty.
+      I feel confident that he will continue to achieve above-average performance in her career, contribute to the management profession, society improvement and your goals.
+
+  - name: "Professor Vidan Markovic, PhD, PMP"
+    reference: >
+      Dear Sir or Madame,<br>
+      With this letter I would like to give the recommendation for Milovan Tomasevic to any potential employer, or international studies scholarship sponsor/fond. 
+      Milovan is highly motivated, enthusiastic, energetic, and smart young man, that I had an opportunity to work with the last few years. He was my Teaching Assistant on Project Management courses conducted with Software and Information Technology students. Everything that was needed to support students' practical assignments and practical and written exams preparations Milovan was able to achieve with a high level of quality and a minimum level of direct supervision. 
+      I was his Mentor on his Master thesis, "Modelling Systems for Users' Requests Management Based on ITIL", where he successfully designed (at a conceptual level) a model of the ITIL based Users' Requests management system regardless of implementation tool specifics. We have also published a paper related to results from this thesis. 
+      Milovan has successfully passed exams conducted by myself at Doctoral studies related to IT Services and Resources Management. 
+      Finally, I would also stress out that giving support for Milovan's knowledge grow in the IT field here and abroad would be a secure investment that would be paid back very fast. 
+      For any further information or details regarding Milovan please do not hesitate to contact me. 
+
+  - name: "Jelena J. Rvovic, Postdoctoral researcher"
+    reference: >
+      If someone selflessly help you to achieve your business goal, at the same time not to personally benefit, then you must admit that envy people who have the opportunity to collaborate with such a person on a daily basis. Milovan Tomasevic is one of the few people that I can tell about exactly that, and I emphasize it because I find that’s extremely rare in today's business environment.
+
+  - name: "Professor Milovan Lazarevic, PhD"
+    reference: >
+      I have known Milovan, both on the personal level and professionally. He is the same on both levels. He has integrity and is dedicated with all aspects of his life. Both were great experiences. I have had the pleasure of gaining knowledge from him, and continue to know I can count on him to support me on the professional or personal level.
+      He is a very passionate and resourceful guy with deep industry knowledge and connections. I enjoyed working with him as he is not only easy to work with but a great teacher as well.
+      Creative Mind with fast execution skills. Thinks outside the box and makes things happen. Outstanding performance.
+      Milovan is an exceptional person with a most pleasant personality and strong drive to achive success. His technical knowledge is second to none and beautifully complemented by his direct experience with people. I have never worked with a more talented or enjoyable researcher and I hope to have the pleasure of working with him again in the future.​
+
+  - name: "Professor Nemanja Tasic, PhD"
+    reference: >
+      It was a honor to work with Milovan. He is incredibly smart and detail oriented, all while maintaining a high level of professionalism. I would love the opportunity to work with him again based on his personable nature and outstanding work ethics.
+      I can highlight two characteristics from him: he has a very high technical and organizational skills; and his vision about the solutions to take in every moment is always imaginative and precise. This combination makes him a special value and a reference when building a team. I've always found Milovan a pleasure to work with and enjoyed his enthusiasm for everything he does.
+      Put all that aside, he's a fantastic person to know and do business with.​  
+
+  - name: "Professor Gordana Dozet, PhD"
+    reference: >
+      Expeditious and reliable. It is an honor and pleasure to have correspondence with such business partner.
+
+
+  - name: "Igor Kesic, Quality Manager at Bosch"
+    reference: >
+      This is to provide the highest recommendation for Milovan Tomasevic. He is an intelligent, enthusiastic, results driven individual who has established a solid rapport with wide variety of people with whom he works with on a day-to-day basis. He is highly competent; taking charge of projects in an effective manner. Milovan’s success with his daily duties cannot be overshadowed by his ability to manage adversity. His ability to identify solutions and predict competitive tactics has truly made him an asset in our organization. Milovan is an invaluable part of our team.
+
+
+  - name: "Milan Radosevic, Project Manager at Wood Land Forge"
+    reference: >
+      Milovan has integrity and is dedicated with all aspects of his life. Creative Mind with fast execution skills. Thinks outside the box and makes things happen. Outstanding performance.
+      Milovan is an exceptional person with a most pleasant personality and strong drive to achieve success. His technical knowledge is second to none and beautifully complemented by his direct experience with people.
+
+  - name: "Marin Radak, Program Development Professional"
+    reference: >
+      Milovan is a rare talent. His passion, integrity, and work ethic are why he is the absolute best at what he does.
+      Milovan is really someone who love his job !!! He is very smart and sociable. We can count on him !
+      He thoughtlessly offered us his time and his experience giving us the opportunity to build a real business, I doubt we would have been able to achieve so much in so little time if it was not for his input.
+      I really admired his dedication to it: he always responded to my correspondence with minimum amount of time, but you could still clearly see that he had gone deep into the subject.
+      I would recommend Milovan to anyone who is looking for a selfless and experienced business contact.
+      It was an honor to work for Milovan, and I look forward to crossing paths again.
+
+  - name: "Ivan Trbojevic, Java Developer"
+    reference: >
+      We worked together on several students projects. Milovan has some great qualities that will serve him and his team well in his new venture. Highly presentable, intelligent, and plenty of vision, he will no doubt succeed in whatever he does. I would have no hesitating in recommending Milovan to any organisation, he is a team player and will never let you down.
+
+
+  - name: "Szabolcs Gleszer, Software Developer at IBM Client Innovation Center Austria"
+    reference: >
+      We were together in a team for several student projects.
+      He was willing to learn new technologies and to share his knowledge. He showed especially his organizational abilites and soft skills in our team work.
+
+  - name: "Sanja Jovanovic Zivkov, Direct Material Buyer at Aptiv"
+    reference: >
+      I will be brief in the absence of time, but I want to share all my experience in contact with Milovan.
+      Milovan is a very ambitious young man, with a clear goal and he has a great will. He is very persistent, and in the future I see him as a successful and satisfied man.
+
+  - name: "Maja Božović, Environmental Specialist"
+    reference: >
+      Milovan is a valuable, well-organized, versatile and communicative person, willing to cooperate.
+      I recommend Milovan for any job that requires teamwork, and a positive and encouraging atmosphere at work.
+
+  - name: "Nikola Breka, Delivery Manager at Levi9 IT Services"
+    reference: >
+      I am privileged to write in support of my dear friend and student, Milovan Tomašević. Milovan studied in my classroom for close to two years, during which time I witnessed his tremendous growth and development. This development came not only in the area of English language, but in maturity and character as well. In our work outside the classroom he has shown great knowledge in IT and project management which makes him a valuable asset for companies that deal with these topics.

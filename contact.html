@@ -1,0 +1,62 @@
+---
+title: Contact
+description: >
+  You can contact us 24 hours a day, seven days a week. Also, can reach me on through any social network from the cover page... by Milovan Tomašević
+hide_description: true
+menu: true
+layout: page
+order: 7
+permalink: /contacts/
+---
+
+<p>You can contact us 24 hours a day, seven days a week. Also, can reach me on through any social network from the cover page or use this form to send me an e-mail.</p>
+
+
+<form action="//formspree.io/tomas.ftn.e2@gmail.com?Subject=Zahtev%20za%20upis%20na%20FIŠ"
+      method="POST">
+    <input type="hidden" name="MTfis" value="Kontakt mt.fis" />
+      <div class="form-group">
+    <label for="exampleInputEmail1">Enter name</label>
+    <input type="text" name="Name" class="form-control" placeholder="Full Name" required>
+  </div>
+  <label for="exampleInputEmail1">Enter City & State</label>
+  <div class="form-row">
+    <div class="col-7">
+      <input type="text" name="City" class="form-control" placeholder="City" required>
+    </div>
+    <div class="col">
+      <input type="text" name="State" class="form-control" placeholder="State" required>
+    </div>
+    <div class="col">
+      <input type="text" name="Zip" class="form-control" placeholder="Zip" required>
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Enter age</label>
+    <input type="number" name="Age" class="form-control"  placeholder="Age" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter email</label>
+    <input type="email" name="Mail" class="form-control"  placeholder="name@example.com">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Enter message</label>
+    <textarea class="form-control" type="text" name="Message"  rows="3" placeholder="Your message" required></textarea>
+  </div>
+  <div class="form-group">
+      <label for="exampleFormControlSelect1">Urgent (between 1 and 5)</label>
+      <select class="form-control" type="text" name="Urgent" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <input type="hidden" name="_next" value="{{ site.baseurl }}/thanks" />
+    <input type="hidden" name="_subject" value="New submission from {{ site.url }}{{ site.baseurl }}" />
+    <input type="text" name="_gotcha" style="display:none" />
+    <button type="submit" class="btn btn-primary">Send</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+</form>

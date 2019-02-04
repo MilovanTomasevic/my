@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="637.04791"
+   height="365.43973"
+   id="svg5670"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Arhitektura-interpreter.svg">
+  <defs
+     id="defs5672">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3903"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5590"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5592"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5594"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5596"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5598"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5600"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5602"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5604"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="345.19462"
+     inkscape:cy="223.09812"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1881"
+     inkscape:window-height="1163"
+     inkscape:window-x="39"
+     inkscape:window-y="12"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5675">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-24.398712,-79.92244)">
+    <g
+       id="g4211"
+       transform="matrix(0.96477824,0,0,0.96474913,12.087156,9.258372)">
+      <rect
+         y="80.42244"
+         x="24.898712"
+         height="97.14286"
+         width="157.18045"
+         id="rect2993-4-6"
+         style="fill:none;stroke:#000000;stroke-width:1.03652322px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         y="87.776871"
+         x="32.614777"
+         height="97.14286"
+         width="157.18045"
+         id="rect2993-4-1-86"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03652322px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         y="95.131424"
+         x="40.330841"
+         height="97.14286"
+         width="157.18045"
+         id="rect2993-4-1-8-9"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03652322px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         y="102.48598"
+         x="48.046844"
+         height="97.14286"
+         width="157.18045"
+         id="rect2993-4-1-8-1-9"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03652322px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3067-2"
+         y="159.70815"
+         x="49.679413"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#d40000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="159.70815"
+           x="49.679413"
+           id="tspan3069-4"
+           sodipodi:role="line">DSL-ovi</tspan></text>
+      <rect
+         ry="19.990395"
+         y="167.56532"
+         x="233.25089"
+         height="118.5714"
+         width="187.85712"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03652322;stroke-opacity:1"
+         id="rect5366"
+         rx="19.98979" />
+      <rect
+         ry="19.990395"
+         y="175.4225"
+         x="241.28659"
+         height="118.5714"
+         width="187.85712"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03652322;stroke-opacity:1"
+         id="rect3087-5"
+         rx="19.98979" />
+      <path
+         sodipodi:nodetypes="cccssssssssc"
+         inkscape:connector-curvature="0"
+         id="rect3087-4-2"
+         d="m 393.07561,301.85102 -103.79317,0 m -13.13199,-0.25254 -7.54244,0.25254 c -10.6783,0.35753 -19.28571,-8.60143 -19.28571,-19.28571 l 0,-79.99998 c 0,-10.68428 8.60143,-19.28571 19.28571,-19.28571 l 149.28569,0 c 10.68428,0 19.28571,8.60143 19.28571,19.28571 l 0,79.99998 c 0,10.68428 -8.60428,19.53254 -19.28571,19.28571 l -10.9285,-0.25254"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03652322;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3114-5"
+         y="236.02167"
+         x="343.2554"
+         style="font-style:normal;font-weight:normal;font-size:18.74316025px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#d40000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="236.02167"
+           x="343.2554"
+           id="tspan3116-0"
+           sodipodi:role="line">DSL iskazi</tspan><tspan
+           id="tspan3118-5"
+           y="259.45062"
+           x="343.2554"
+           sodipodi:role="line">(programi/modeli)</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3120-8"
+         d="m 228.96513,243.99387 -104.99999,0 0,-37.14286"
+         style="fill:none;stroke:#000000;stroke-width:3.52417922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4520-6"
+         y="264.3075"
+         x="114.46177"
+         style="font-style:normal;font-weight:normal;font-size:17.84948158px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="264.3075"
+           x="114.46177"
+           id="tspan4522-0"
+           sodipodi:role="line">Usklađenost</tspan></text>
+      <path
+         id="rect4891-96"
+         d="m 173.05773,301.89582 0,59.3125 336.47765,0 0,-59.3125 -102.96667,0 -0.16038,7.5937 -11.86474,0.062 0.12826,-7.6562 -106.91093,0 0.0961,7.6875 -11.86474,-0.062 0,-7.625 -102.93464,0 z"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:0.99381721px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         inkscape:connector-curvature="0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4906-6"
+         y="230.24886"
+         x="569.90845"
+         style="font-style:normal;font-weight:normal;font-size:23.85420036px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#d40000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan4910-4"
+           y="230.24886"
+           x="569.90845"
+           sodipodi:role="line">Rešenje</tspan><tspan
+           id="tspan6050"
+           y="260.06662"
+           x="569.90845"
+           sodipodi:role="line">(varijabilni deo)</tspan></text>
+      <text
+         transform="scale(0.62176638,1.6083211)"
+         sodipodi:linespacing="125%"
+         id="text4936-0-1"
+         y="168.23557"
+         x="736.07892"
+         style="font-style:normal;font-weight:normal;font-size:64.3328476px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="168.23557"
+           x="736.07892"
+           id="tspan4938-2-7"
+           sodipodi:role="line">}</tspan></text>
+      <text
+         sodipodi:linespacing="94.999999%"
+         id="text4961-6"
+         y="332.14801"
+         x="341.21497"
+         style="font-style:normal;font-weight:normal;font-size:21.26136208px;line-height:94.99999881%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#d40000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan4965-7"
+           y="332.14801"
+           x="341.21497"
+           sodipodi:role="line">Interpreter</tspan><tspan
+           id="tspan6048"
+           y="352.34631"
+           x="341.21497"
+           sodipodi:role="line">(semantika)</tspan></text>
+      <rect
+         ry="19.990395"
+         rx="19.98979"
+         y="361.64789"
+         x="173.21428"
+         height="41.42857"
+         width="336.25"
+         id="rect6000"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:1.03652322px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text6002"
+         y="386.43201"
+         x="275.01273"
+         style="font-style:normal;font-weight:normal;font-size:14.33207226px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="386.43201"
+           x="275.01273"
+           id="tspan6004"
+           sodipodi:role="line">Operativni sistem</tspan></text>
+      <rect
+         ry="19.990395"
+         rx="19.98979"
+         y="403.43359"
+         x="173.16199"
+         height="41.42857"
+         width="336.28061"
+         id="rect6000-4"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:1.03652322px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text6024"
+         y="430.80515"
+         x="286.94232"
+         style="font-style:normal;font-weight:normal;font-size:23.84858131px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="430.80515"
+           x="286.94232"
+           id="tspan6026"
+           sodipodi:role="line">Hardver</tspan></text>
+      <rect
+         rx="0"
+         y="361.69281"
+         x="173.55505"
+         height="41.740799"
+         width="91.104164"
+         id="rect6028"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;stroke:#000000;stroke-width:1.0365231px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4967-1-8"
+         y="376.50687"
+         x="217.7399"
+         style="font-style:normal;font-weight:normal;font-size:14.92308331px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#d40000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="376.50687"
+           x="217.7399"
+           id="tspan4969-9-4"
+           sodipodi:role="line">Domenski</tspan><tspan
+           id="tspan4971-8-7"
+           y="395.16071"
+           x="217.7399"
+           sodipodi:role="line">servisi</tspan></text>
+      <rect
+         rx="0"
+         y="361.59637"
+         x="418.73361"
+         height="41.740799"
+         width="90.568443"
+         id="rect6028-3"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;stroke:#000000;stroke-width:1.0365231px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4967-1-3-8"
+         y="378.06964"
+         x="463.10162"
+         style="font-style:normal;font-weight:normal;font-size:14.92308331px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="378.06964"
+           x="463.10162"
+           id="tspan4969-9-6-8"
+           sodipodi:role="line">Opšti</tspan><tspan
+           id="tspan4971-8-4-8"
+           y="396.72348"
+           x="463.10162"
+           sodipodi:role="line">servisi</tspan></text>
+    </g>
+  </g>
+</svg>

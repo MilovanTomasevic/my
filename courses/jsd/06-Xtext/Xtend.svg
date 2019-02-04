@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="565.00977"
+   height="281.93839"
+   id="svg3896"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 7">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="160.29329"
+     inkscape:cy="-124.96199"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1144"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs3898">
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path5548"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3922">
+      <path
+         d="M 0,0 612,0 612,792 0,792 0,0 z"
+         clip-rule="evenodd"
+         id="path3924"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3918">
+      <path
+         d="M 0,0 612,0 612,792 0,792 0,0 z"
+         id="path3920"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4389">
+      <path
+         d="M 0,0 612,0 612,792 0,792 0,0 z"
+         clip-rule="evenodd"
+         id="path4391"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4385">
+      <path
+         d="M 0,0 612,0 612,792 0,792 0,0 z"
+         id="path4387"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4601">
+      <path
+         d="M 0,0 612,0 612,792 0,792 0,0 z"
+         clip-rule="evenodd"
+         id="path4603"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4597">
+      <path
+         d="M 0,0 612,0 612,792 0,792 0,0 z"
+         id="path4599"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lendw"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lendw">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#ff2a2a;fill-rule:evenodd;stroke:#ff2a2a;stroke-width:0.625;stroke-linejoin:round"
+         id="path5984"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2LendZ"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2LendZ">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#ff2a2a;fill-rule:evenodd;stroke:#ff2a2a;stroke-width:0.625;stroke-linejoin:round"
+         id="path5987"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2LendZ-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2LendZ">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#ff2a2a;fill-rule:evenodd;stroke:#ff2a2a;stroke-width:0.625;stroke-linejoin:round"
+         id="path5987-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2LendZ-08"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2LendZ">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#ff2a2a;fill-rule:evenodd;stroke:#ff2a2a;stroke-width:0.625;stroke-linejoin:round"
+         id="path5987-9" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata3901">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     transform="translate(-40.765005,-51.676642)">
+    <g
+       id="g3912"
+       inkscape:label="greeter"
+       transform="matrix(1.25,0,0,-1.25,38.979483,262.65943)">
+      <g
+         id="g3914"
+         transform="translate(-56,-565)">
+        <g
+           id="g3916" />
+        <g
+           id="g3926">
+          <g
+             clip-path="url(#clipPath3918)"
+             id="g3928">
+            <g
+               id="g3930">
+              <g
+                 clip-path="url(#clipPath3922)"
+                 id="g3932">
+                <g
+                   id="g3934">
+                  <text
+                     transform="matrix(1,0,0,-1,56.8,726.9)"
+                     id="text3936">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono-Bold"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.400002"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan3938">package</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3940">
+                  <text
+                     transform="matrix(1,0,0,-1,100.1,726.9)"
+                     id="text3942">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan3944">sample</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3946" />
+                <g
+                   id="g3948">
+                  <text
+                     transform="matrix(1,0,0,-1,56.8,704.8)"
+                     id="text3950">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono-Bold"
+                       x="0 5.4000001 10.8 16.200001 21.6 27"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan3952">import</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3954">
+                  <text
+                     transform="matrix(1,0,0,-1,94.7,704.8)"
+                     id="text3956">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.490002 37.889999 43.290001 48.689999 54.09 59.490002 64.980003 70.379997"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan3958">java.util.List</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3960" />
+                <g
+                   id="g3962">
+                  <text
+                     transform="matrix(1,0,0,-1,56.8,682.6)"
+                     id="text3964">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono-Bold"
+                       x="0 5.4000001 10.8 16.200001 21.6"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan3966">class</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3968">
+                  <text
+                     transform="matrix(1,0,0,-1,89.3,682.6)"
+                     id="text3970">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.490002 37.889999"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan3972">Greeter</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3974">
+                  <text
+                     transform="matrix(1,0,0,-1,132.7,682.6)"
+                     id="text3976">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan3978">{</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3980" />
+                <g
+                   id="g3982">
+                  <text
+                     transform="matrix(1,0,0,-1,68.9,671.2)"
+                     id="text3984">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono-Bold"
+                       x="0 5.4000001 10.8"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan3986">def</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3988">
+                  <text
+                     transform="matrix(1,0,0,-1,90.5,671.2)"
+                     id="text3990">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.490002 37.889999 43.290001"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan3992">greetThem</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g3994">
+                  <text
+                     transform="matrix(1,0,0,-1,139.3,671.2)"
+                     id="text3996">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan3998">(</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4000">
+                  <text
+                     transform="matrix(1,0,0,-1,144.7,671.2)"
+                     id="text4002">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4004">List</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4006">
+                  <text
+                     transform="matrix(1,0,0,-1,166.3,671.2)"
+                     id="text4008">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4010">&lt;</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4012">
+                  <text
+                     transform="matrix(1,0,0,-1,171.7,671.2)"
+                     id="text4014">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4016">String</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4018">
+                  <text
+                     transform="matrix(1,0,0,-1,204.2,671.2)"
+                     id="text4020">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4022">&gt;</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4024">
+                  <text
+                     transform="matrix(1,0,0,-1,215,671.2)"
+                     id="text4026">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4028">names</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4030">
+                  <text
+                     transform="matrix(1,0,0,-1,242.1,671.2)"
+                     id="text4032">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4034">)</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4036" />
+                <g
+                   id="g4038">
+                  <text
+                     transform="matrix(1,0,0,-1,252.9,671.2)"
+                     id="text4040">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4042">{</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4044" />
+                <g
+                   id="g4046">
+                  <text
+                     transform="matrix(1,0,0,-1,80.9,659.5)"
+                     id="text4048">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono-Bold"
+                       x="0 5.4000001 10.8"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4050">for</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4052">
+                  <text
+                     transform="matrix(1,0,0,-1,97.1,659.5)"
+                     id="text4054">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4056">(</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4058">
+                  <text
+                     transform="matrix(1,0,0,-1,102.5,659.5)"
+                     id="text4060">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4062">name</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4064">
+                  <text
+                     transform="matrix(1,0,0,-1,124.2,659.5)"
+                     id="text4066">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4068">:</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4070">
+                  <text
+                     transform="matrix(1,0,0,-1,135,659.5)"
+                     id="text4072">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.290001 21.690001"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4074">names</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4076">
+                  <text
+                     transform="matrix(1,0,0,-1,162.1,659.5)"
+                     id="text4078">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4080">)</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4082" />
+                <g
+                   id="g4084">
+                  <text
+                     transform="matrix(1,0,0,-1,172.9,659.5)"
+                     id="text4086">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4088">{</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4090" />
+                <g
+                   id="g4092">
+                  <text
+                     transform="matrix(1,0,0,-1,92.9,647.9)"
+                     id="text4094">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.400002"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4096">println</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4098">
+                  <text
+                     transform="matrix(1,0,0,-1,130.8,647.9)"
+                     id="text4100">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4102">(</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4104">
+                  <text
+                     transform="matrix(1,0,0,-1,136.2,647.9)"
+                     id="text4106">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.400002 37.889999 43.290001 48.689999 54.09 59.490002 64.889999"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4108">name.sayHello</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4110">
+                  <text
+                     transform="matrix(1,0,0,-1,206.6,647.9)"
+                     id="text4112">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4114">)</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4116" />
+                <g
+                   id="g4118">
+                  <text
+                     transform="matrix(1,0,0,-1,80.9,636.2)"
+                     id="text4120">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4122">}</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4124" />
+                <g
+                   id="g4126">
+                  <text
+                     transform="matrix(1,0,0,-1,68.9,624.6)"
+                     id="text4128">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4130">}</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4132" />
+                <g
+                   id="g4134" />
+                <g
+                   id="g4136" />
+                <g
+                   id="g4138">
+                  <text
+                     transform="matrix(1,0,0,-1,68.9,601.3)"
+                     id="text4140">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono-Bold"
+                       x="0 5.4000001 10.8"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4142">def</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4144">
+                  <text
+                     transform="matrix(1,0,0,-1,90.5,601.3)"
+                     id="text4146">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.490002 37.889999"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4148">sayHello</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4150">
+                  <text
+                     transform="matrix(1,0,0,-1,133.9,601.3)"
+                     id="text4152">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4154">(</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4156">
+                  <text
+                     transform="matrix(1,0,0,-1,139.3,601.3)"
+                     id="text4158">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.690001 27.09 32.490002 37.889999 43.290001 48.689999 54.18"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4160">String name</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4162">
+                  <text
+                     transform="matrix(1,0,0,-1,198.9,601.3)"
+                     id="text4164">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4166">)</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4168" />
+                <g
+                   id="g4170">
+                  <text
+                     transform="matrix(1,0,0,-1,209.7,601.3)"
+                     id="text4172">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4174">{</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4176" />
+                <g
+                   id="g4178">
+                  <text
+                     transform="matrix(1,0,0,-1,80.9,589.6)"
+                     id="text4180">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#cc66ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.690001 27.09"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4182">'Hello</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4184" />
+                <g
+                   id="g4186">
+                  <text
+                     transform="matrix(1,0,0,-1,118.8,589.6)"
+                     id="text4188">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#6666ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.89 16.290001 21.690001 27.09 32.490002 37.889999 43.380001 48.779999 54.18 59.580002"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4190">' + name + '</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4192">
+                  <text
+                     transform="matrix(1,0,0,-1,183.8,589.6)"
+                     id="text4194">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4196">!</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4198">
+                  <text
+                     transform="matrix(1,0,0,-1,189.2,589.6)"
+                     id="text4200">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#6666ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4202">'</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4204" />
+                <g
+                   id="g4206">
+                  <text
+                     transform="matrix(1,0,0,-1,68.9,578)"
+                     id="text4208">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#6666ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4210">}</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4212">
+                  <text
+                     transform="matrix(1,0,0,-1,56.8,567.3)"
+                     id="text4214">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#6666ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4216">}</tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g4379"
+       inkscape:label="greetthem"
+       transform="matrix(1.25,0,0,-1.25,333.29865,160.35244)">
+      <g
+         id="g4381"
+         transform="translate(-56,-703)">
+        <g
+           id="g4383" />
+        <g
+           id="g4393">
+          <g
+             clip-path="url(#clipPath4385)"
+             id="g4395">
+            <g
+               id="g4397">
+              <g
+                 clip-path="url(#clipPath4389)"
+                 id="g4399">
+                <g
+                   id="g4401">
+                  <text
+                     transform="matrix(1,0,0,-1,56.8,726.9)"
+                     id="text4403">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono-Bold"
+                       x="0 5.4000001 10.8"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4405">def</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4407">
+                  <text
+                     transform="matrix(1,0,0,-1,78.5,726.9)"
+                     id="text4409">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.290001 21.690001 27.09 32.490002 37.889999 43.290001"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4411">greetThem</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4413">
+                  <text
+                     transform="matrix(1,0,0,-1,127.2,726.9)"
+                     id="text4415">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4417">(</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4419">
+                  <text
+                     transform="matrix(1,0,0,-1,132.6,726.9)"
+                     id="text4421">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4423">List</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4425">
+                  <text
+                     transform="matrix(1,0,0,-1,154.3,726.9)"
+                     id="text4427">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4429">&lt;</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4431">
+                  <text
+                     transform="matrix(1,0,0,-1,159.7,726.9)"
+                     id="text4433">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.690001 27.09"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4435">String</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4437">
+                  <text
+                     transform="matrix(1,0,0,-1,192.2,726.9)"
+                     id="text4439">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4441">&gt;</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4443">
+                  <text
+                     transform="matrix(1,0,0,-1,203,726.9)"
+                     id="text4445">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.290001 21.690001"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4447">names</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4449">
+                  <text
+                     transform="matrix(1,0,0,-1,230.1,726.9)"
+                     id="text4451">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4453">)</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4455" />
+                <g
+                   id="g4457">
+                  <text
+                     transform="matrix(1,0,0,-1,240.9,726.9)"
+                     id="text4459">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4461">{</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4463" />
+                <g
+                   id="g4465">
+                  <text
+                     transform="matrix(1,0,0,-1,68.9,715.5)"
+                     id="text4467">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.690001 27.09 32.490002 37.889999 43.290001 48.689999 54.18 59.580002 64.980003 70.379997"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4469">names.forEach</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4471">
+                  <text
+                     transform="matrix(1,0,0,-1,144.7,715.5)"
+                     id="text4473">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4475">[</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4477">
+                  <text
+                     transform="matrix(1,0,0,-1,155.5,715.5)"
+                     id="text4479">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.490002"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4481">println</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4483">
+                  <text
+                     transform="matrix(1,0,0,-1,193.5,715.5)"
+                     id="text4485">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4487">(</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4489">
+                  <text
+                     transform="matrix(1,0,0,-1,198.9,715.5)"
+                     id="text4491">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.690001 27.09 32.490002 37.889999"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4493">sayHello</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4495">
+                  <text
+                     transform="matrix(1,0,0,-1,242.2,715.5)"
+                     id="text4497">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4499">)</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4501" />
+                <g
+                   id="g4503">
+                  <text
+                     transform="matrix(1,0,0,-1,253,715.5)"
+                     id="text4505">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4507">]</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4509">
+                  <text
+                     transform="matrix(1,0,0,-1,56.8,704.8)"
+                     id="text4511">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4513">}</tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g4591"
+       inkscape:label="templateExpressions"
+       transform="matrix(1.25,0,0,-1.25,47.788988,313.34058)">
+      <g
+         id="g4593"
+         transform="translate(-56,-708)">
+        <g
+           id="g4595" />
+        <g
+           id="g4605">
+          <g
+             clip-path="url(#clipPath4597)"
+             id="g4607">
+            <g
+               id="g4609">
+              <g
+                 clip-path="url(#clipPath4601)"
+                 id="g4611">
+                <g
+                   id="g4613">
+                  <text
+                     transform="matrix(1,0,0,-1,56.8,726.9)"
+                     id="text4615">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:bold;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono-Bold"
+                       x="0 5.4000001 10.8"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4617">def</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4619">
+                  <text
+                     transform="matrix(1,0,0,-1,78.5,726.9)"
+                     id="text4621">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.290001 21.690001 27.09 32.490002 37.889999"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4623">sayHello</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4625">
+                  <text
+                     transform="matrix(1,0,0,-1,121.8,726.9)"
+                     id="text4627">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4629">(</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4631">
+                  <text
+                     transform="matrix(1,0,0,-1,127.2,726.9)"
+                     id="text4633">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.6 27 32.490002 37.889999 43.290001 48.689999 54.09"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4635">String name</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4637">
+                  <text
+                     transform="matrix(1,0,0,-1,186.8,726.9)"
+                     id="text4639">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#f78811;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0"
+                       y="0"
+                       id="tspan4641">)</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4643" />
+                <g
+                   id="g4645">
+                  <text
+                     transform="matrix(1,0,0,-1,197.6,726.9)"
+                     id="text4647">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#6666ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4649">'''</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4651" />
+                <g
+                   id="g4653">
+                  <text
+                     transform="matrix(1,0,0,-1,80.9,715.5)"
+                     id="text4655">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#6666ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8 16.200001 21.690001 27.09 32.490002 37.889999 43.290001 48.689999 54.18 59.580002 64.980003"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4657">Hello «name»!</tspan>
+                  </text>
+                </g>
+                <g
+                   id="g4659">
+                  <text
+                     transform="matrix(1,0,0,-1,56.8,704.8)"
+                     id="text4661">
+                    <tspan
+                       style="font-size:9px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#6666ff;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVuSansMono"
+                       x="0 5.4000001 10.8"
+                       y="0"
+                       sodipodi:role="line"
+                       id="tspan4663">'''</tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4702"
+       y="184.72575"
+       x="440.91531"
+       style="font-size:20.16798401px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff2a2a;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="184.72575"
+         x="440.91531"
+         id="tspan4704"
+         sodipodi:role="line">Lambda funkcija</tspan></text>
+    <text
+       transform="matrix(0,0.50632504,-1.9750159,0,0,0)"
+       sodipodi:linespacing="125%"
+       id="text4706"
+       y="-238.09505"
+       x="284.04779"
+       style="font-size:79.00063324px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff2a2a;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="-238.09505"
+         x="284.04779"
+         id="tspan4708"
+         sodipodi:role="line">}</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4710"
+       y="221.34433"
+       x="311.17249"
+       style="font-size:18.95124054px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff2a2a;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="221.34433"
+         x="311.17249"
+         id="tspan4712"
+         sodipodi:role="line">Funkcija višeg reda</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4714"
+       d="m 388.90873,202.82389 19.19291,-52.52793"
+       style="opacity:0.44583333;fill:#ff2a2a;fill-opacity:1;stroke:#ff2a2a;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2LendZ)"
+       sodipodi:nodetypes="cc" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4710-0"
+       y="89.233536"
+       x="348.18573"
+       style="font-size:18.95124054px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff2a2a;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="89.233536"
+         x="348.18573"
+         id="tspan4712-9"
+         sodipodi:role="line">Implicitni &quot;it&quot; parametar</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4714-9"
+       d="m 466.1854,96.75788 43.43656,45.45685"
+       style="opacity:0.44583333;fill:#ff2a2a;fill-opacity:1;stroke:#ff2a2a;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lendw)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4710-0-1"
+       y="284.82373"
+       x="289.48062"
+       style="font-size:18.95124054px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff2a2a;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="284.82373"
+         x="289.48062"
+         id="tspan4712-9-1"
+         sodipodi:role="line">Šablon</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4710-0-1-6"
+       y="329.67303"
+       x="235.60379"
+       style="font-size:18.95124054px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff2a2a;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="329.67303"
+         x="235.60379"
+         id="tspan4712-9-1-1"
+         sodipodi:role="line">Interpolacija parametra</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4714-8"
+       d="m 287.2337,282.16436 -63.6396,11.11168"
+       style="opacity:0.44583333;fill:#ff2a2a;fill-opacity:1;stroke:#ff2a2a;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2LendZ)"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4714-8-7"
+       d="m 230.89182,324.24426 -86.87311,-21.2132"
+       style="opacity:0.44583333;fill:#ff2a2a;fill-opacity:1;stroke:#ff2a2a;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2LendZ)"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>
