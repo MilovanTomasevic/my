@@ -45,5 +45,6 @@ vendor/bundle
 *.gem
 _zip
 .jekyll-cache/
+.bash_profile
 
 #<removed>
