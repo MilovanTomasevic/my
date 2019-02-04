@@ -47,7 +47,7 @@ I obtained a [*Ph.D.*](courses/fis/PhDfis.html#1){:target="_blank"} in *Industri
 
 My main areas of interest are:
 
-*   **_Domain Specific Languages (DSLs) for High Performance Computing (HPC)_**,
+*   **_[Domain Specific Languages (DSLs) for High Performance Computing (HPC)](/courses/#table-of-contents)_**,
 *   Supply Chain Management Systems with HPC,
 *   Business Process Management,
 *   IT Service Management, and Project Management.
