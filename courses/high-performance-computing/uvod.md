@@ -5,989 +5,817 @@ name: sadrzaj
 
 # Sadržaj
 
-- [Problem i motivacija](#motivacija)
-- [Primeri](#primeri)
-- [Prednosti](#prednosti)
-- [Arhitekture](#arhitekture)
-- [Gradivni elementi](#gradivni)
-- [Klasifikacija](#klasifikacija)
-- [Jezičke radionice](#radionice)
+- [O predmetu](#opredmetu)
+- [Problem performansi](#problemperformansi)
+- [HPC uvod](#hpcuvod)
+- [Kratka istorija](#kratkaistorija)
+
 
 ---
-name: motivacija
+name: opredmetu 
 class: center, middle
 
-# Problem i motivacija
+# O predmetu
+### motivacija i organizacija
 
 ---
 layout: true
 
-.section[[Motivacija](#sadrzaj)]
+.section[[O predmetu](#sadrzaj)]
 
 ---
 
-## Šta je jezik?
+## Predavač
             
-- Komunikacija misli i osećanja sistemom znakova kao što su zvuci, gestovi ili
-  pisani simboli .ref[1].
-- Sistem znakova, simbola, gestova i pravila koji se koriste u komunikaciji
-  .ref[2].
+- [Milovan Tomašević](/resume/)
+- Termin konsultacija je uvek su dostupan kroz poseban dogovor.
+- Poseban dogovor kroz javljanje elektronskom poštom je uvek, uvek preporučeni metod za konsultacije.
+- Dogovor je baš to—dogovor. 
+- Ne mogu da vam obećam bilo koji termin, ali mogu da vam obećam da ću vam izaći u susret ako ikako mogu.
   
-.footer[
-1. http://www.thefreedictionary.com/language
-2. http://oxforddictionaries.com/definition/english/language
-]
+
             
 ---
 
-## Šta je softverski jezik?
+## Kako me kontaktirati?
             
-- Jezik korišćen u komunikaciji čovek-računar ili računar-računar.
-- U varijanti čovek-računar težimo da jezik bude lak za razumevanje od strane
-  čoveka ali ipak da može da se procesira na efikasan način od strane računara.
-- U kontekstu razvoj softvera dve su uloge jezika:
-  - *preskriptivna* - za opis budućih sistema
-  - *deskriptivna* - za opis postojećih sistema
+- [milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)
+- [milovan.tomasevic.fis.unm.si](milovan.tomasevic.fis.unm.si)
+- Dešava se da me stigne poplava elektronske pošte, te stoga ne odgovaram onoliko brzo koliko bi voleo.
+- Još češće se dešava da nešto između vas i mene pojede poruku elektronske pošte.
+- Stoga:
+  - Ako brinete da nisam pročitao, pošaljite opet.
+  - Ako vam treba hitan odgovor, samo stavite reč *HITNO* u subject i ja ću odgovoriti na takav mail čim ga dobijem.
   
 ---
 
-## Šta domen?
+## Računarstvo visokih performansi
 
-- Sfera delovanja, interesa ili funkcije .ref[1].
-- Oblast znanja, uticaja, ili delovanja .ref[2].
-- Da bi se domensko znanje moglo procesirati i da bi mogli komunicirati u
-  određenom domenu korisno je definisati ontologiju domena koja opisuje koncepte
-  domena i njihove međusobne veze.
-- Primer domena: osiguranje, zdravstvo, finansije, saobraćaj...
-- Domeni mogu sadržati poddomene. Na primer, ako je posmatrani domen problema
-  osiguranje, poddomeni mogu biti životno osiguranje, osiguranje vozila,
-  osiguranje nekretnina i sl.
-
-.footer[
-1. http://www.thefreedictionary.com/domain
-2. http://www.merriam-webster.com/dictionary/domain
-]
+- U pitanju je prevod—tehnički kalk—engleskog termina 'High Performance Computing' čiju ću skraćenicu (HPC) ja koristiti kao ime kursa u budućnosti.
+- Opšte govoreći, videćete neobično puno engleskih termina u ovim predavanjima.
+- Što?
+  - Nekad nema prevoda
+  - Nekad prevod odudara zbog naše nenaviknutosti
+  - Uvek je neophodno znati engleski termin ako želite da koristite Internet pretragu.
 
 ---
 
-## Jezici specifični za domen - JSD (*Domain-Specific Languages - DSL*)
+## Šta je svrha predmeta?
 
-- Jezici specifični za domen (JSD, eng. *Domain-Specific Languages - DSL*)
-  su jezici prilagođeni i ograničeni na određeni domen problema.
-- Za razliku od jezika opšte namene (JON, eng. *General Purpose Language -
-  GPL*), nude povećanje ekspresivnosti kroz upotrebu koncepata i notacija
-  prilagođenih domenu problema i domenskim ekspertima.
-- Nazivaju se još i *mali jezici* (eng. *little languages*).
-- Uspešan JSD je fokusiran na uzak, dobro definisan domen i pokriva ga na
-  odgovarajući način.
-- Domen često ima svoj jezik korišćen od strane domenskih eksperata iako ne
-  postoji njegova implementacija na računaru.
+- Uvod u programiranje, ali za super-računare.
+- Formalnije rečeno, namena predmeta jeste da se steknu veštine iz:
+  - Arhitekture sistema visokih performansi.
+  - Alata, biblioteka, i tehnologija za opšte visoko-paralelno programiranje.
+  - Alata, biblioteka i tehnologija za domenski-specifično visoko-paralelno programiranje.
+  - Alata, biblioteka, i tehnologija za merenje performansi algoritama.
+  - Alata, biblioteka, i tehnologija za vizualizaciju velikih skupova podataka.
+- Neformalnije rečeno, namena predmeta jeste da se nateraju programi da idu *jako jako brzo*.
 
   
 ---
-name: primeri
-layout: false
-class: center, middle
 
-# Primeri
+## Cilj i ishod
 
----
-layout: true
-
-.section[[Primeri](#sadrzaj)]
+- Razumevanje arhitektura savremenih računara visokih performansi i odgovarajućih modela izračunavanja. 
+- Ovladavanje tehnikama programiranja nad arhitekturama visokih performansi i upoznavanje sa mogućnostima njihove praktične primene u nauci i inženjerstvu.
+  
+- Studenti stiču napredna znanja o modelima izračunavanja i arhitekturama računara visokih performansi i ovladavaju odgovarajućim tehnikama programiranja. 
+- Stečena znanja se koriste u praksi i stručnim predmetima Računarstvo visokih performansi u naučnim izračunavanjima i Računarstvo visokih performansi u informacionom inženjeringu.
 
 ---
 
-## SQL
+## Da li ima udžbenik?
 
-```sql
-SELECT player, stadium
-    FROM game JOIN goal ON (id=matchid)
-```
-
----
-
-## JPA mapiranje
-
-```java
-@Entity
-@Table(name="COURSES")
-public class Course {
-
-  private long courseId;
-  private String courseName;
-
-  public Course() {
-  }
-
-  public Course(String courseName) {
-    this.courseName = courseName;
-  }
-
-  @Id
-  @GeneratedValue
-  @Column(name="COURSE_ID")
-  public long getCourseId() {
-    return this.courseId;
-  }
-}
-```
+- Dokumentacija, ovi slajdovi, i beleške sa predavanja bi trebali da budu sasvim dovoljni.
+- Predavanja su bazirana u velikoj meri na izvrsnoj knjizi "High Performance Computing: Modern System and Practices" čiji su autori T. Sterling, M. Anderson, i M. Brodowicz.
+- Takođe se preporučuje: "[Introduction to High Performance Scientific Computing](http://pages.tacc.utexas.edu/~eijkhout/Articles/EijkhoutIntroToHPC.pdf)" Victor Eijkhout koja je dostupna kroz CreativeCommons licencu.
+- High Performance Computing: Modern Systems and Practices
 
 ---
 
-## Build jezici (Ant/Maven/Gradle)
+## Da li je teško?
 
-![](uvod/Ant-Maven-Gradle.png)
-
----
-
-## Poslovni procesi - BPMN
-
-![](uvod/BPMN.png)
+- Loše vesti!
+- *Niko nikada nije položio ovaj predmet u istoriji čovečanstva*.
 
 ---
 
-## Mobilne aplikacije
+## Ne, ozbiljno. Da li je teško?
 
-![:scale 70%](uvod/MobilneAplikacije.png)
+- Da. Ali ne nerazumno.
+- Moj cilj jeste da vi ovo naučite bez suvišne muke. 
+- Ništa više, ništa manje. Ako imate problem, javite što ranije i oko svega se možemo dogovoriti.
 
-.footer[
-  Kelly, S. & Tolvanen, J.-P. *Domain-Specific Modeling: Enabling Full Code
-    Generation*, Wiley-IEEE Computer Society Pr, 2008
-]
-            
+  
 ---
 
-## Ali i...
+## Baš svega?
 
-![:scale 70%](uvod/MusicNotation-External.png)
-
----
-
-## ili...
-
-![:scale 70%](uvod/ChessNotation.png)
-
-
----
-
-## pa čak i...
-
-![:scale 50%](uvod/saobracajni-znaci.jpg)
-
-
----
-
-## Kada jezik smatramo JSD-om?
-
-- Zavisi od toga šta nam je domen.
-- Jezik može biti više ili manje prilagođen nekom domenu.
-- U ekstremnom slučaju i opšti jezik kao što je Java možemo smatrati JSD-om ako
-  nam je domen "razvoj softvera". Naravno, iako tačno u teorijskom smislu, u
-  praktičnom gubimo sve prednosti JSD.
-- Dobar JSD pokriva uzak, dobro definisan domen (domen problema). Koristi samo
-  koncepte ciljnog domena, ograničen je na dati domen i samim tim je iskazivanje
-  rešenja jezgrovitije i jasnije domenskim ekspertima.
-- Čest je slučaj da jezik nastane kao JSD ali se vremenom proširi do te mere da
-  ga možemo smatrati JON.
-
-
----
-name: prednosti
-layout: false
-class: center, middle
-
-# Prednosti
-
----
-layout: true
-
-.section[[Prednosti](#sadrzaj)]
-
----
-
-
-## Uticaj na produktivnost
-
-- Pojedine studije pokazuju da povećanje produktivnosti ide i do 1000% .ref[1].
-- Šta je osnovni razlog za povećanje produktivnosti?
+- ...ok, uhvatili ste me. Ne baš svega.
+- Evo stvari koje nisu podložne pregovorima na ovom kursu:
+  - Morate da budete samostalni i posvećeni poslu.
+  - Ne zbog mene, ovo su fundamentalni uslovi uspeha.
+  - Prepisivanje se neće nikako, ikako, nikada tolerisati.
  
-.footer[
-MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
-]
+
+
+---
+
+## Infrastruktura
+
+- Deo toga što je predmet nov jeste to što se laboratorije još podešavaju i što se infrastruktura predmeta još sređuje.
+- No, neke stvari su naravno poznate:
+  - Trebaće vam Linux, idealno Ubuntu 18.04, bilo direktno instaliran, bilo u virtuelnoj mašini.
+  - Dosta posla će se raditi iz komandne linije.
+  - Naš primarni jezik je C/C++, mada će biti i malo Python-a i R-a kasnije. 
+  - Sav naš alat će biti Open Source.
+
+---
+
+## Linux?
+
+- Da, Linux.
+- Ispostavilo se, avaj, da nijedna godina nije godina Linux-a na desktop-u, ali kao utešna nagrada, svaka godina je godina Linux-a u HPC primenama.
+- Upotreba bilo čega drugog nije ni opcija za nas.
+- Ako vam rad sa Linux-om nije udoban, krajnje je vreme da se naviknete.
+- Embrace the penguin.
+
+---
+
+## Komandna linija?
+
+- Osim nekih očiglednih prednosti komandne linije, ima i vrlo praktičan razlog.
+- Imamo HPC na raspolaganju i da bi ga kontrolisali sve što možemo da uradimo jeste da se na njega prikačimo preko SSH protokola.
+- Sve što SSH praktično dozvoljava jeste komandna linija
+- Ako znate za X Forwarding, svaka čast, ali je suviše nezgodno za nas.
+- Generalno govoreći, uvek radite sa komandnom linijom kada radite HPC.
+
   
+---
+
+## C/C++?
+
+- Nemamo izbora.
+- Ovo, baš ovo, je mesto gde C i C++ briljiraju.
+- Ima modernih jezika koji su interesantni: Go, pre svega, i Rust, ali za sada ovakav način programiranja se radi blizu metalu.
+- C/C++ je tehnički... pipav termin. Ono što ja ovde mislim jeste C i, gde možemo, moderan C++.
+- Budite srećni, mogli smo da koristimo FORTRAN.
+---
+
+## Python i R?
+
+- Biće malo ova dva jezika kada budemo pričali o vizuelizaciji. 
+- HPC rad je retko rad sam za sebe—tipično rešavamo nekakav problem.
+- Stoga, heterogenost jezika je česta.
+- Neretko postoji prototip u nečemu udobnom kao što je Python, a vaš posao je da uzmete to i učinite ga mnogo bržim
   
 ---
-
-## Problem mentalnog mapiranja
-
-![](uvod/MentalnoMapiranje-1.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-## Rešenje upotrebom JSD
-
-![](uvod/MentalnoMapiranje-2.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-
-## Zašto JSD?
-
-- JSD su koncizniji od jezika opšte namene što omogućava korisnicima da jasnije
-  iskažu svoju nameru.
-- JSD sintaksa, bilo tekstualna ili grafička, može se prilagoditi i
-  približiti domenskim ekspertima.
-- Koncepti korišćeni u JSD su koncepti problemskog (poslovnog) domena što
-  pod određenim uslovima omogućava da domenski eksperti direktno koriste JSD bez
-  posredovanja programera.
-- Upotrebom koncepata problemskog domena izbegava se ručno mapiranje na koncepte
-  ciljne implementacione platforme. Taj posao se obavlja automatski upotrebom
-  JSD prevodioca (kompajlera ili generatora koda).
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Samodokumentujući jezički iskazi.
-
----
-
-## Uticaj na kvalitet softvera
-
-- Korišćenje koncepata domena problema dovodi do smanjenja broja linija koda (u
-  terminologiji tekstualnih notacija), što ima pozitivan uticaj na brzinu
-  razvoja i jednostavnost odžavanja.
-- Smanjenje broja linija koda ide i do **50 puta** u pojedinim domenima primene.
-  Gustina softverskih grešaka (broj softverskih grešaka na hiljadu linija koda)
-  ne zavisi značajno od jezika koji se koristi.
-- Iz toga se može zaključiti da JSD kroz smanjenje broja linija koda posredno
-  utiču na smanjenje apsolutnog broja softverskih grešaka što povećava kvalitet
-  softverskog proizvoda i smanjuje cenu održavanja.
-- Prevođenje koda na ciljnu platformu (kompajliranje) će rezultovati
-  konzistentnim kodom.
-
-
----
-
-## Uticaj na evoluciju aplikacije
-
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Nije potrebno menjati jezičke iskaze (programe/modele) kada dođe do promene
-  tehnologije. Potrebno je promenu uneti u generator koda.
-  
-
----
-name: arhitekture
+name: problemperformansi
 layout: false
 class: center, middle
 
-# Arhitekture
+# Problem performansi
+### brzo o brzini i optimizaciji
 
 ---
 layout: true
 
-.section[[Arhitekture](#sadrzaj)]
+.section[[Problem performansi](#sadrzaj)]
 
 ---
 
-## Arhitektura bazirana na prevodiocima
+## Šta su performanse?
 
-![:scale 60%](uvod/Arhitektura-kompajler.svg)
+- Imamo dve moguće definicije: 
+  - Teoretske performanse.
+  - Praktične performanse.
+- Teoretske performanse su apsolutni maksimum koji neki hardverski sistem može da izvuče i meri se u broju nekakvih operacija u sekundi. Najčešće, jedinica je *FLOPS*—*FL*oating point *OP*eration per *S*econd.
+- Računari kakve vi, realistično, imate imaju performanse koje se mere u desetinama gigaFLOPSa, ne računajući GPU.
+- Najbrži računar? 
+  - IBM Summit. 200 *petaflops*. 
+  - Čudo šta 13MW može da uradi.
+
 
 ---
 
+## Šta su performanse?
 
-## Arhitektura bazirana na interpreterima
-
-![](uvod/Arhitektura-interpreter.svg)
+- To je lepo, ali nama ne treba računar da troši struju i zvuči impresivno.
+- Nama treba rešenje, i to dovodi do praktičnih performansi.
+- Praktične performanse su, efektivno, koliko vremena treba da se dođe do rešenja.
+- Mnogo su realističnije (pošto nas baš to zanima) ali dobiti ih je jako jako teško.
+- Tipično se procenjuju na osnovu kalibracionog programa— Benchmark-a.
 
 
 ---
-name: gradivni
-layout: false
-class: center, middle
 
-# Gradivni elementi
+## Kako programer zamišlja računar ?
 
----
-layout: true
+- Moj program ima nekakve podatke i sam kod.
+- I jedno i drugo živi u memoriji.
+- Kod se sastoji od atomskih operacija, instrukcija koje traju neku jedinicu vremena ti.
+- Procesor izvršava moje instrukcije, jednu po jednu.
+- Ako hoću brži program, opcije su mi:
+  - Manje instrukcija. 
+  - Kraće vreme izvrsavanja.
 
-.section[[Gradivni elementi](#sadrzaj)]
-
----
-
-## Gradivni elementi JSD
-
-Kao i svaki softverski jezik i JSD se sastoji od:
-- Apstraktne sintakse
-- Jedne ili više konkretnih sintaksi
-- Semantike
 
 ---
 
+## Oh, sweet child of summer...
 
-## Apstraktna sintaksa
+- ...svi vi, znate nadam se da ovo nije tačno.
+- Ali možda ne znate koliko nije tačno.
+- Ipak, iako nije tačno ovo nije potpuno beskorisno.
+- Minimizacija broja instrukcija je, generalno govoreći, dobar način da se program ubrza.
+- Možete misliti o ovome kao o kontroli vremenske kompleksnosti algoritma.
+- Da li ste vi ovo radili?
+- To je dobra ideja, ali ne svrha ovog kursa.
 
-- Određuje pravila validnosti iskaza sa stanovišta njegove strukture.
-- Definiše koncepte domena, njihove osobine i međusobne relacije
-- Jezici za definisanje apstraktnih sintaksi jezika se u domenu modelovanja
-  nazivaju meta-meta-modelima.ref[1].
+---
 
-.footer[
-1. Preciznije, meta-metamodel je apstraktna sintaksa takvog jezika. Jezik još
-    čine i konkretne sintakse i semantika.
+## Dobro, šta ne valja sa ovom pričom?
+
+- Vaš procesor ima u sebi, efektivno, više procesora.
+- Ali svaki od tih procesora izvršava više stvari istovremeno.
+- Takođe, ta istovremenost je kompleksna zahvaljujući pipelining-u.
+- Takođe takođe, mehanizmi u računaru operišu na kompletno različitim vremenskim skalama.
+- Takođe takođe...
+     
+
+
+---
+
+## Ovo je komplikovanije nego što izgleda.
+
+- Računar se jako trudi da vam predstavi sliku da je samo instancirana Fon Nojmanova arhitektura i da je memorija lako i proizvoljno adresabilna.
+- Lakše je tako programirati i većinu vremena želite tu iluziju, ali ne i kada hoćete da iscedite svaki poslednji dram performansi iz sistema.
+ 
+
+---
+
+## Block diagram of the Intel Sandy Bridge core
+
+.lcol[
+
+![](img/intel.png)
+
+]
+
+.rcol[
+
+<br><br><br>
+ - Ovo je komplikovanije nego što izgleda.
+
+]
+
+
+---
+
+## Šta su glavne komplikacije na jednom računaru?
+
+- Ne zaboravite, ovde još pričamo o prostom računaru koji vam stoji na radnom stolu.
+- Prvo, ima više jezgara.
+- Drugo, instrukcije mogu da traju različiti broj ciklusa.
+- Dalje ima paralelizam na nivou instrukcija (eng. Instruction Level Paralelism)
+- Memorija ima striktnu hijerarhiju
+
+
+---
+
+## ILP
+
+- Nezavisne instrukcije mogu da krenu da se izvršavaju u isto vreme, koristeći paralelne strukture u samom silikonu.
+- Zahvaljujući sekvenci izvršavanja, više funkcija može da ide jedno za drugim u protočnom režimu (eng. "pipelining")
+- Da ne bi bilo praznog hoda, procesor izvršava grane u vašem kodu pre nego što se zna u koju će se ući. Ako je pogodio kako treba, odlično, ako ne rezultat se baca i program se vraća u prethodno stanje.
+- Da bi pipelining radio što bolje, instrukcije za koje je to moguće će biti izvršene u najoptimalnijem redosledu ne vašem redosledu.
+- Podaci se dostavljaju iz nivoa memorije u nivo memorije spekulativno, tj. ako se misli da će možda trebati.
+
+---
+
+## Pipeline
+
+.lcol[
+
+![](img/pipeline.jpg)
+
+]
+
+.rcol.medium[
+
+- Princip pipeline-a uvodi paralelizam na nivou instrukcija
+- Operacije izvrsavaju paralelno ili konkurentno.
+- Broj stepena na koji se razlaze instrukcija moze da bude nekoliko desetina. 
+- Vreme potrebno da instrukcija prodje ceo pipeline zove se latentno vreme. 
+- Latentno vreme se povecava za *X* pipelinea zbog uvodjenja dodatnih hardverskih komponenti za svaki stepen. 
+- Brzina obrade je povecana usloznjavanjem procesora na hardverskom nivou.
+
+]
+
+
+---
+
+## Pipeline ubrzanje
+
+.lcol[
+
+- n — broj proruačna koje hoćemo
+- l — broj koraka u procesnom toku
+- τ — vreme za jedan ciklus sistemskog sata
+- t(n) — vreme za n operacija
+- s — vreme neophodno da se namesti da pipelining radi
+
+]
+
+.rcol[
+
+- Brzina serijskog izvršavanja 
+  - 𝑡(𝑛) =𝑛𝑙𝜏
+- Brzina ILP izvršavanja
+  - 𝑡(𝑛) = [𝑠+𝑙+𝑛−1]𝜏
 ]
 
 ---
 
-## Primer - apstraktna sintaksa jezika za opis konačnih automata
+## Hijerarhija memorije
 
-![:scale 90%](uvod/StateMachine.svg)
+.center-table.medium[
 
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
+|   Tip memorije  | Red veličine |       Brzina učitavanja       |
+|:---------------:|:------------:|:-----------------------------:|
+|     Registar    |  128 bajtova |       Koliko i procesor       |
+|      L1 Keš     |    ~16 KB    |         Pola procesora        |
+|      L2 Keš     |    ~256 KB   |     Oko šestina procesora     |
+|      L3 Keš     |     ~8MB     |      Oko 12-ina procesora     |
+| Glavna memorija |     ~16GB    | 100 ciklusa sa oko 5% protoka |
+|     SSD disk    |    ~512GB    |           Jako dugo           |
+|     HDD disk    |     ~2TB     |            Večnost            |
+
 ]
 
 ---
 
-## Stablo apstraktne sintakse
+## Keš
 
-- Svaki iskaz na datom jeziku se može na apstraktan način opisati stablom
-  apstraktne sintakse (*Abstract Syntax Tree*).
-- Konkretna sintaksa nije važna u tom slučaju (na primer, ako posmatramo program
-  na Javi tada ključne reči nisu deo stabla apstraktne sintakse).
-
----
-
-## Primer stabla apstraktne sintakse
-
-![:scale 60%](uvod/AbstractSyntaxTree.svg)
-
-.footer[
-http://en.wikipedia.org/wiki/Abstract_syntax_tree
-]
+- Nikad nema dovoljno.
+- Ko se seća Celerona, Durona, i sl.?
+- U praksi, automatski mehanizmi pokušavaju da u kešu drže podatke koje nama trebaju.
+- Ako, kada program zatraži podatak, on stoji u kešu odlično. Imamo ubrzanje.
+- Ako ne, imamo omašaj, ond. `cache miss`.
 
 ---
 
-## Konkretna sintaksa
+## Katalog omašaja
 
-- Da bi mogli da prikažemo iskaz na konkretan način potrebna nam je konkretna
-  sintaksa.
-- Konkretna sintaksa definiše *izgled* iskaza na nekom jeziku, odnosno u
-  širem smislu definiše i načine interakcije korisnika sa jezičkim iskazima tj.
-  predstavlja interfejs jezik-korisnik.
-- Iako nam je dovoljna jedna konkretna sintaksa za jedan jezik, možemo ih imati
-  više.
+- Neizbežan
+  - Kada prvi put tražimo podatke.
+- Kapacitetski
+  - Kada nema više mesta.
+- Konflikt
+  - Kada mapiramo (keš menja memoriju, tj. lokacije u kešu su ubrzane memorijske lokacije sa tačke gledišta adresiranja), mapirali smo dve stvari na isto mesto.
+- Invalidacija
+  - Više jezgara se posvađalo oko toga šta je najsvežija verzija nekog podatka.
   
 ---
 
-## Konkretna sintaksa
+## Keš blok
 
-Primer istog iskaza upotrebom dve različite konkretne sintakse
-
-![:scale 70%](uvod/RazliciteSintakse.png)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
+- Instrukcije ne mogu da direktno adresiraju keš
+- I dalje misle da pričaju sa glavnom memorijom
+- Ovo je česta apstrakcija odgovorna i za, npr. memory-mapped I/O
+- Iza kulisa, mikrokontroler procesora uzima podatke iz memorije i smešta ih u keš u jedinicama fiksne veličine (blokovima).
+- Tipično, 128 bajtova. To znači da dobijamo ceo taj komad memorije hteli mi to ili ne.
+- Zatim se beleži koji deo memorije je mapiran na koji deo keša i, kada ponestane prostora, menja se najdavnije korišćeni deo. LRU
+  - Ovo je laž. Više o tome kasnije.
 
 ---
 
-## Semantika
+## Koja je praktična primena znanja o keš blokovima?
 
-- Definiše smisao jezičkih iskaza.
-- Iako postoje i druge tehnike u praksi se najčešće semantika definiše
-  prevođenjem (kompajliranjem tj. generisanjem koda) na jezik koji već ima
-  definisanu semantiku putem prevodioca na niže jezike ili interpretera (npr.
-  virtualne mašine).
-- Najčešće su ciljni jezici na koje se JSD prevodi jezici opšte namene.
-- *Primer:* generisanje Java programskog koda iz JSD jezičkog iskaza.
-- Jezici se prevode na sve "niže" i "niže". Gde je kraj prevođenju? Mašinski
-  jezik. Definisan u hardveru računara (procesoru).
+- Pakovanje podataka.
+- Ako prolazimo kroz niz element po element, kada učitamo prvi element, uz njega dolazi N sledećih džabe.
+- Ako procesiramo svaki element, onda to je to.
+- Ali šta ako je ovo niz tačaka u 3D prostoru a nas samo zanima X vrednost.
+- Imamo jako puno bačenih učitavanja.
+- Ako znamo kako će neki podaci biti procesirani, isplati se da se upakuju tako da podaci koji se zajedno koriste budu blizu.
+
+---
+
+## Array stride
+
+- Recimo da hoćemo da saberemo dva niza kompleksnih brojeva.
+- To znači (ako koristimo double preciznost) da nam treba 16 bajtova po broju.
+- Keš linija je, recimo, 128.
+- To znači da bi trebalo da je brže da se brojevi sa sabiranje prepletu u jedan niz.
+  - Re(A0) 
+  - Im(A0)
+  - Re(B0)
+  - Im(B0)
+  - Re(A1)
+  - ...
   
 
-
 ---
-name: klasifikacija
-layout: false
-class: center, middle
 
-# Klasifikacija
+## Address alignment
 
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
+- Lukaviji možda mogu da primete da ja mogu da adresiram bilo koju adresu u glavnoj memoriji na bajt nivou, čak i ako radim na nivou reči.
+- Da li to znači da nekako, magično, ima poravnanje između keša i memorije?
+- Ne. Multi-bajt vrednost može vrlo lako da bude u dva keš bloka.
+- Ovo je spektakularno loše po performanse.
+- Ponekad, kompajler je dovoljno pametan da to otkloni.
+- A ako nije?
 
 ---
 
-## Podela JSD prema vrsti konkretne sintakse
-
-- Tekstualni
-- Grafički
-- Tabelarni
-- Baziran na ekranskim formama
-- ...
-- Hibridni - kombinacija više osnovnih
-
----
-
-
-## Tekstualne sintakse - prednosti i mane
-
-- Programeri se osećaju "kod kuće".
-- Mogu se koristiti regularni tekst editori.
-- Serijalizovana forma je identična sa prezentacionom. se koristiti standardni
-  sistemi za kontrolu verzija (Git, Mercurial, Subversion ...).
-- Podrška u alatima: bojenje koda, dopuna koda, pretraga, navigacija...
-- Mana: Nije pogodna za opis i razumevanje strukture koja nije linearne prirode
-  (grafovi, tabele itd.).
-  
----
-
-
-## Grafičke sintakse - prednosti
-
-- Razumevanje strukture. Podržano operacijama *zoom*, *pan* i sl.
-- Često razumljivije domenskim ekspertima (najčešće je domenski jezik grafičke
-  prirode).
-- Intuitivniji i lakši za učenje - učenje kroz isprobavanje (paleta sa alatima i
-  konceptima, onemogućavanje kreiranje nevalidnih konstrukcija itd.).
-
----
-
-## Grafičke sintakse - mane
-
-- Još uvek složeniji za implementaciju i održavanje.
-- Za serijalizaciju se koristi format koji se razlikuje od prezentacionog.
-- Otežano ili potpuno nemoguće korišćenje standardnih alata za kontrolu verzija.
-  Potrebno je razviti poseban VCS alat.
-- Zahteva namenske editore.
-
----
-
-## Podela prema vrsti domena
-
-![:scale 90%](uvod/HorizontalniVertikalniDSL.svg)
-
----
-
-## Podela JSD prema načinu implementacije
-
-- **Interni** - Nastali su na bazi već postojećih programskih jezika (najčešće
-  JON).
-- **Eksterni** - Izrađeni "on nule" definisanjem sintakse i implementacijom
-  kompajlera koji prevodi programe pisane na ovom jeziku na neki drugi jezik
-  (najčešće JON) ili se program direktno interpretira.
-  
-.footer[
-  M. Fowler, *Domain-Specific Languages*. Addison-Wesley Professional, 1 ed., Oct. 2010
-]
-
----
-
-## Interni JSD
-
-- Bazirani na postojećem jeziku i alatima. Najčešće tekstualni.
-- Koriste svu infrastrukturu jezika domaćina (editore, debagere,
-  kompajlere/interpretere...).
-- Brzi za implementaciju i laki za održavanje. Popularni u pojedinim zajednicama
-  (Ruby, Groovy, Scala...).
-- Dobri kao ulaznica u svet DSL/DSM/MDE pristupa.
-- Najčešće na pametan način koriste mogućnosti jezika (anonimne funkcije,
-  meta-programiranje itd.).
-- Ograničenja konkretne sintakse.
-- Svaka namenska biblioteka može se smatrati internim JSD (API bazirani)...
-- ... ali konkretna sintaksa takvog jezika nije prilagođena domenu.
-
-
----
-
-## Eksterni JSD
-
-- Izrađeni "on nule" - skuplji razvoj i održavanje.
-- Puna kontrola konkretne sintakse - bolje prilagođavanje domenskim ekspertima.
-- Editori i svi propratni alati takođe moraju da se prave "od nule"...
-- ...mada danas postoje alati koji nam taj posao olakšavaju.
-
----
-
-## Neki od poznatijih eksternih JSD
-
-- **SQL**: tekstualni, domen - rad sa relacionim bazama podataka
-- **HTML**: tekstualni, domen - definisanje sadržaja na vebu
-- **CSS**: tekstualni, domen - stilizovanje sadržaja
-- **make**: tekstualni, domen - izgradnja aplikacije (build)
-- **LaTeX**: tekstualni, domen: kreiranje štampanih materijala (*typesetting*)
-- **Window Builder**: GUI baziran, domen - izgradnja interfejsa
-- **R**: tekstualni, domen - statistička obrada podataka
-
-
----
-
-
-## Primer: Interni JSD za definisanje email-a (*JavaMail API*)
-
-```java
-MimeMessage message = new MimeMessage(session);
-
-message.setFrom(new InternetAddress(from));
-
-message.addRecipient(Message.RecipientType.TO,
-          new InternetAddress(to));
-
-message.setSubject("Greetings from Novi Sad");
-message.setText("Enjoying my stay in Novi Sad! See you soon!");
-
-Transport.send(message);
-```
-
----
-
-
-## Primer: Hipotetički eksterni JSD za definisanje email-a
-
-```
-BEGIN myMail
-  FROM me@myself.com
-  TO myfriend@somewhere.org
-  SUBJECT Greetings  from  Novi Sad
-
-Enjoying my stay in Novi Sad! See you soon!
-
-END
-SEND myMail
-```
-
----
-
-
-## Primer
-
-Interni JSD za definisanje grafički korisničkih interfejsa (*Swing*)
-
-```java
-public DSLKurs() {
-    setBounds(100, 100, 450, 300);
-    getContentPane().setLayout(new BorderLayout());
-    contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-    getContentPane().add(contentPanel, BorderLayout.CENTER);
-    contentPanel.setLayout(new FormLayout(new ColumnSpec[ {
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            FormFactory.DEFAULT_COLSPEC,
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            ColumnSpec.decode("default:grow"),},
-                  new RowSpec[] {
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,}));
-    ....
-    
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
-
-![:scale 70%](uvod/GUIDSL-External.png)
-
----
-
-
-## Primer
-
-Interni JSD za definisanje gramatike jezika (*Arpeggio Python*)
-
-```python
-def number():     return _(r'\d*\.\d*|\d+')
-def factor():     return Optional(["+","-"]), [number,
-                          ("(", expression, ")")]
-def term():       return factor, ZeroOrMore(["*","/"], factor)
-def expression(): return term, ZeroOrMore(["+", "-"], term)
-def calc():       return OneOrMore(expression), EOF
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje gramatike jezika (*Arpeggio PEG*)
-
-```
-number = r'\d*\.\d*|\d+'
-factor = ("+" / "-")?
-        (number / "(" expression ")")
-term = factor (( "*" / "/") factor)*
-expression = term (("+" / "-") term)*
-calc = expression+ EOF
-```
-
----
-layout: false
-class: center, middle
-
-# Konkretna sintaksa je važna!!!
-
-## Neki jezici su pogodniji za kreiranje internih JSD
-
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Jezici pogodni za kreiranje internih JSD
-
-- Ruby
-- Groovy
-- Scala
-- Lisp
-- ...
-
----
-
-
-## Primer internog JSD (*Ruby Sinatra*)
-
-```ruby
-get '/dogs' do
-    # get a listing of all the dogs
-end
-get '/dog/:id' do
-    # just get one dog, you might find him like this:
-    @dog = Dog.find(params[:id])
-    # using the params convention, you specified in your route
-end
-post '/dog' do
-    # create a new dog listing
-end
-put '/dog/:id' do
-    # HTTP PUT request method to update an existing dog
-end
-delete '/dog/:id' do
-    # HTTP DELETE request method to remove a dog who's been sold!
-end
-```
-
----
-
-
-## Primer internog JSD (Groovy Gradle)
-
-```groovy
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    groovy fileTree(dir: new File(gradle.gradleHomeDir, 'lib'),
-                    includes: ['**/groovy­all­*.jar'])
-    compile gradleApi()
-    compile 'eu.appsatori:gradle­fatjar­plugin:0.1.3',
-    {
-        ext.optional = true
+## Do try this at home...
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    double* a;
+    a = malloc(1024*8 +8); // niz 1024 double vrednosti
+    printf("%p\n", a);
+    if((size_t)a %8 != 0){ // detektovano neporavnanje
+        a = (double*)((((size_t)a >>3) << 3));
     }
-    testCompile 'org.spockframework:spock­core:0.6­groovy­1.8'
+    printf("%p\n", a);
+    free(a);
 }
+
 ```
 
+
 ---
+
+## Rezultat eksperimenta
+
+```sh
+
+[Running] cd "/hpc/" && gcc test.c -o test && "/hpc/"test
+0x7fca44001000
+0x7fca44001000
+
+[Done] exited with code=0 in 0.21 seconds
+
+```
+- Na mom GCC, ovo je beskorisno. 
+- Već dobijam poravnanu memoriju.
+- Mnogo zavisi od kompajlera, i često morate kod da tetošite predprocesorskim direktivama da dobijete ono što želite.
+ 
+
+---
+
+## Malo sam lagao o kešu...
+
+- Rekao sam ranije da se beleži region memorije i lokacija u kešu
+- To... baš i nije tačno.
+- To bi zahtevalo tkzv. asocijativan keš. Ovi su spori.
+- Ono što se koristi u praksi je k-struki asocijativan keš.
+- To znači da postoji transformaciona funkcija koja mapira lokaciju u memorji na lokaciju u kešu na više mogućih načina. 
+  - Tipično od 2 do 8.
+- Onda, u slučaju konflikta u mapiranju, koristi se jedna od dodatnih lokacija oslobođena po LRU principu.
+
+---
+
+## Šta je sve ovo trebalo da me nauči?
+
+- Osim malo o arhitekturi računara ima još i ovo:
+- Kako se nešto implementira interaguje jako komplikovano sa hardverom procesora i računara uopšte da proizvede performanse.
+- Stoga, programiranje performantnog koda može biti jako izazovno.
+- A sve ovo je na samo jednom računaru...
+
+  
+---
+name: hpcuvod
 layout: false
 class: center, middle
 
-# Eksterni JSD omogućavaju potpuno prilagođavanje domenu.
-
+# HPC uvod
+### šta kada procesor jednostavno nije dovoljno brz
 
 ---
 layout: true
 
-.section[[Klasifikacija](#sadrzaj)]
+.section[[HPC uvod](#sadrzaj)]
 
 ---
 
-## Interni JSD za muzičku notaciju
+## Paralelizam
 
-```java
-Score k = new Score(Tonality.G_major);
-Bar bar = new Bar(BarType.4_4);
-t.addPause(Duration.1_4);
-t.addNote(NoteType.A3, Duration.1_4);
-t.addNote(NoteType.C2, Duration.1_4);
-k.addBar(bar);
-```
+- Prethodna sekcija je pokazala da su performanse teške, ali je sva bila opsednuta time da se iz jednog procesora izvuče maksimum.
+- Budući da se naš kod, na kraju dana, izvršava na nekom procesoru, negde, to nije loša ideja i uvek će biti relevantno, ali šta kada 100% nekog procesora nije dovoljno brzo?
+- Postoje praktične granice gigahercaži koju možemo da dobijemo iz čipa
+  - Bakar
+  - Brzina svetlosti
+  
+---
+
+## Paralelizam
+
+- Zbog ovoga superračunari danas nisu (i verovatno nikad više neće biti) jedan jako moćan procesor.
+- Ono što čini superračunar super jeste broj procesorskih elemenata.
+- Da bi se broj procesorskih elemenata iskoristio kako treba, potrebno je pisati kod koji je paralelan, tj. izvršava više stvari istovremeno.
+- Ovo nije paralelizam na nivou instrukcije, koliko je paralelizam na nivou algoritma.
+- Priroda algoritma dramatično utiče na to koliko je lako odn. teško izvršiti paralelizaciju.
 
 ---
 
-## Eksterni JSD za muzičku notaciju
+## Šta je naš posao?
 
-U eksternoj varijanti možemo u potpunosti prilagoditi konkretnu sintaksu
-domenskim ekspertima.
+- Da dobijemo odgovor jako jako brzo.
+- Da, ali kako?
+- Napadamo problem sa dve strane:
+  - Arhitektura
+  - Algoritam
+- Dakle, treba da napravimo mašinu koja ima jako efektan dijapazon procesora koji brzo komuniciraju i imaju šta im treba da ostvare blizu svom teoretskom maksimumu.
+- Sa druge strane treba da upravljamo tom mašinom i podelimo algoritme na takav način da se adekvatni delovi algoritma izvršavaju na pravom mestu radi brzine.
 
-.center[
-![:scale 80%](uvod/MusicNotation-External.png)
+
+---
+
+## Anatomija jednog superračunara
+
+- Superračunar tipično ima neki broj čvorova.
+- Čvor se može zamisliti kao jedan računar.
+- IBM Summit, ima specifično 4608 računara/čvora.
+- Svaki čvor je jako moćan i sadrži više procesora (2) sa više jezgara (21) gde svako jezgro podržava 4 nezavisna izvršavanja i više izuzetno moćnih GPU-ova (6).
+- Takođe ima oko 1600GB memorije po čvoru.
+
+
+---
+
+## Jedno jezgro
+
+![:scale 70%](img/IBMSummit.png)
+
+
+---
+
+## Mnogo paralelizama
+
+- Ovde ima jako puno stvari koje podržavaju paralelizam
+- Izazov jeste napraviti kod koji ima odgovarajući posao za svaki paralelizam koji hardver nudi
+- Neke stvari su taman za rad na jednom jezgru ili jednom procesoru
+- A neki poslovi se najbolje dele između individualnih čvorova gde je komunikacija između njih izuzetno retka.
+- Različite tehnologije su dobre za različite nivoe paralelizma. Gledano iz ptičije perspektive
+
+---
+
+## Mnogo paralelizama
+
+.center-table[
+
+| Harverski nivo paralelizma |   Tehnologija   |
+|:--------------------------:|:---------------:|
+|   Unutar jednog procesora  | OpenMP/pThreads |
+|       Između čvorova       |     OpenMPI     |
+|      Na GPU uređajima      |     OpenACC     |
+
 ]
 
 ---
 
-## Lilypond note script
+## Skaliranje
 
-Ali se dešava da i u eksternoj varijanti JSD nije prilagođen domenskim
-ekspertima.
-
-![](uvod/Lilypond.png)
-
----
-
-## Kritike JDS
-
-- Skup razvoj i održavanje jezika.
-- Potreba za ekspertima u domenu razvoja jezika koji su istovremeno sposobni da
-  analiziraju domen primene.
-- Jezička "kakofonija" (*Language Cacophony* .ref[1])i potreba da programeri
-  poznaju veliki broj jezika (poseban jezik za svaki tehnički i/ili poslovni
-  domen).
-
-.footer[
-    M. Fowler, *Language workbenches: The killer-app for domain specific
-        languages*, Online
-        http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
-]
-
-
----
-name: radionice
-layout: false
-class: center, middle
-
-# Jezičke radionice
-
----
-layout: true
-
-.section[[Jezičke radionice](#sadrzaj)]
+- Skaliranje je kako ukupne ostvarne performanse zavise od veličine sistema.
+- Tj. ako povećamo računar dva puta koliko dodatnih performansi dobijemo od toga?
+- Idealno dva, da, ali...
+- Skaliranje ima dva tipa
+  - Slabo
+      - Uniformni rast veličine sistema, memorije i problema.
+  - Jako
+      - Veličina problema ostaje ista, skalira se veličina sistema za povećanje brzine.
 
 ---
 
-
-## Jezičke radionice (*Language Workbenches*)
-
-- Integrisana okruženja za razvoj, testiranje i evoluciju jezika i alata za
-  njihovo efikasno korišćenje (editori, interpreteri, kompajleri i sl.). Koriste
-  se kod paradigme razvoja orijentisane ka jezicima (*Language Oriented
-  Programming - LOP*).ref[*]
-- Rešavaju problem brzine razvoja i lakoće održavanja JSD.
-- Primeri jezičkih radionica:
-  - Meta Programming System (MPS)
-  - Xtext
-  - Spoofax
-
-.footer[
-\* M. Fowler, *Language workbenches: The killer-app for domain specific
-   languages*, Online
-   http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
-]
-
-
----
-
-## Pristupi
+## Šta smeta skaliranju?
 
 .medium[
-- Projekcione radionice - direktna izmena apstraktne reprezentacije kroz
-  projekciju.
+- Koristi se mnemonik SLOW za faktore koji sprečavaju da sistem dostigne svoj teoretski maksimum. 
+- SLOW su:
+  - Starvation
+      - Nema dovoljno posla da se uposle svi resursi sistema.
+      - Možda sistem može da radi 600 svari istovremeno, ali ako trenutno postoji samo 6 nezavisnih zadataka, sistem radi na 1% svojih performansi.
+  - Latency
+      - Sistem može da bude veliki, i ako informacija sa jednog kraja sistema bude neophodna na drugom, čekanje na nju proizvodi značajno usporenje. Setite se dijagram od ranije i različitih protoka podataka.
+  - Overhead
+      - Sav taj kod koji deli podatke i vodi računa ko radi kada šta i integriše rezultate itd. itd. itd. oduzima neko vreme i neke resurse da se izvrši.
+  - Waiting
+      - Čim ima više niti izvršavanja može doći do problema nadmetanja ("contention") oko deljenih resursa. Ovo se rešava čekanjem. In a stunning turn of events, waiting turns out to be bad for performance. Who knew?
+]
+
+
+---
+name: kratkaistorija
+layout: false
+class: center, middle
+
+# Kratka istorija
+
+---
+layout: true
+
+.section[[Kratka istorija](#sadrzaj)]
+
+---
+
+## Mehaničko računanje
+
+- Želja za mašinom koja računa umesto nas, ili barem proces čini lakšim je verovatno samo par minuta mlađa od samog koncepta računanja.
+- Rano računanje je, u stvari, bilo samo po sebi fundamentalno vezano za nekakvo pomoćno ustrojstvo.
+- Drevni Rimljani su imali brojeve koji su bili prilično teški za mehaničku manipulaciju
+- Mislim, koliko je LXVII puta XI? A da ne prebacite prvo u arapske brojeve?
+- Rimljani su imali metod koji je uključivao pažljivo napravljenu tablicu i kamenčiće.
+- Deminutivska množina reči za ’kamen’ na latinskom je ’calculi’
+- Odatle kalkulator, kalkulisanje, itd. itd.
+
+---
+
+## Mehaničko računanje
+
+- Ovo je nastalo, toliko da su ljudi koji su radili sa novcem (te mnogo računali) u kasnosrednjevekovnoj Italiji uvek imali pri ruci klupu sa ucrtanom šemom za račun.
+- Termin za klupa je bio ’banca’
+- Kasnije su prešli na novi, divni metod za računanje koji ne zahteva klupu no upotrebljava čudne strane cifre. Taj metod su zvali po iskvarenom imenu kreatora ’algorisam’
+- Mušterije nisu verovale ovakom algorismičnom bankarstvu i hteli su klupe nazad. Naročito omrznuta je bio potpuno novi simbol—nula. Toliko je bila omrznuta da je arapsko ime za nju—al sifr—ušlo u skoro sve evropske jezike.
+- Kao ’šifra.’
+
+---
+
+## Mehaničko računanje
+
+- Ne možemo, očigledno da se oslobodimo mehaničkih računala.
+- Prva mehanička računala su bila fundamentalno samo računaljke.
  
-  ![:scale 45%](uvod/projekcija.svg)
-  
-- Bazirane na parserima - izmena se vrši posredno kroz tekst koji se parsira da
-  bi se dobila apstraktna reprezentacija.
+---
 
-  ![:scale 80%](uvod/parseri.svg)
+## Analogni računar
+
+- Mislite o tome kao o kompleksnoj fizičkoj inkarnaciji matematičke funkcije
+- Možemo da menjamo parametre, ali priroda funkcije je ista
+- Jeste računar ali nije programabilan.
+
+---
+
+## Prvi pravi računar
+
+- ...ali samo na papiru.
+- Memorija, programi, opšta namena.
+- Nikada nije napravljen, ali moderne studije ukazuju da je mogao biti uz ogromnu investiciju.
+
+---
+
+## Da se uozbiljimo
+
+- Šta je sa istorijom elektronskih super-računara?
+- Tradicionalno, deli se u ’epohe’ koje karakteriše dominacija određenih tehnologija.
+
+---
+
+## Epoha I—elektromehanička era
+
+.lcol.medium[
+
+- Zuse Z1 (1938)
+- Harvard Mk1(1944)
+
+- Brzine od čak jedne instrukcije u sekundi!
+- Bušene kartice za I/O
+- Još nema programskih jezika kao takvih
+- Čerč i Tjuring postavljaju teoretske osnove računara
 
 ]
 
-.footer[
-.small[Eye icon designed by Freepik. Hand icon by Yannick Lung.]
-]
+.rcol[
 
----
+![:scale 70%](img/e1.png)
 
-## Projekcione radionice
-
-- Prednosti:
-  - Moguće višestruke konkretne sintakse (tekstualne, grafičke, tabelarne...) -
-    bolje prilagođavanje konkretnom domenu.
-  - Sintakse se mogu "u letu" menjati.
-  - Kontrola validnosti izraza u vreme izmene modela.
-
-- Mane:
-  - Složenost alata.
-  - Format za perzistenciju nije u vezi sa konkretnim sintaksama koje korisnik
-    koristi. Nemoguće je koristiti standardne sisteme za kontrolu verzija
-    bazirane na tekstu.
-  - Moraju se razviti namenski generički editori za svaku klasu konkretnih sintaksi.
-  
----
-
-## Radionice bazirane na parserima
-
-- Prednosti:
-  - Jednostavnije za izradu i održavanje.
-  - Teorija parsiranja dobro ustanovljena. Veliki broj biblioteka za parsiranje.
-  - Moguće koristiti obične tekstualne editore.
-  - Moguće koristiti standardne sisteme za kontrolu verzija (npr. git,
-    subversion).
-  - Jednostavno kopiranje i lepljenje (eng. *copy/paste*).
-
-- Mane:
-  - Moguća samo tekstualna sintaksa -> ograničeno prilagođavanje domenu.
-  - Provera validnosti se odlaže do faze parsiranja.
-  
----
-
-## *Meta Programming System (MPS)*
-
-- JetBrains - http://www.jetbrains.com/mps/
-- Projekciona jezička radionica - editori manipulišu direktno apstraktnom
-  reprezentacijom (stablom apstraktne sintakse). Čak i u slučaju tekstualnih
-  notacija.
-- Podrška za različite konkretne sintakse (notacije): tabelarne, tekstualne,
-  bazirani na ćelijama, grafičke.
-- Podrška za kontrolu verzija.
-
----
-
-## *Meta Programming System* - karakterističan izgled
-
-![:scale 70%](uvod/MPS.png)
-
-.footer[
-http://www.jetbrains.com/mps/docs/tutorial.html
 ]
 
 ---
 
-## Xtext
+## Epoha II—Fon Nojmanova Arhitektura i Vakumske cevi
 
-- Nastao kao deo projekta slobodnog softvera - *openArchitectureWare*.
-- Iza razvoja u najvećoj meri stoji nemačka
-  firma [Itemis](https://www.itemis.com/en/).
-- Postao deo Eclipse projekta.
-- Tekstualne sintakse. EBNF-like gramatika.
-- Upotreba ECore meta-metamodela.ref[1]. Meta-model se generiše iz gramatike a
-  može da koristi i već postojeći meta-model.
-- Generisanje Eclipse editora sa podrškom za bojenje sintakse, navigaciju,
-  *outline* pogled itd.
-- Xtext bazirani JSD se duboko integriše u Eclipse okruženje i teško je uočiti
-  razliku sa podrškom za bilo koji drugi jezik sa Eclipse podrškom (npr. Java).
+.lcol[
 
-.footer[
-http://www.eclipse.org/modeling/emf/
+- ENIAC
+- EDSAC (1949)
+- Colossus
+- IBM 704
+- UNIVAC (1951)
+
+]
+
+.rcol[
+
+![:scale 70%](img/e2.png)
+
 ]
 
 ---
 
-## Xtext - *Little tortoise* jezik
+## ## Epoha II—Fon Nojmanova Arhitektura i Vakumske cevi
 
-.center[
-![:scale 70%](uvod/xText-tortoise.png)
+- Vrhunske mašine ere postižu do 10 KIPS
+- 4KB memorije
+- U ranom dobu koriste se živina kola za memoriju
+- Kasnije magnetna jezgra
+  - Ovo je ostavilo traga do danas—ako vam je ikada pukao program u Linux-u i ostavio `core dump`, sada znate odakle ime.
+- U ovom periodu:
+  - Fon Nojman postavlja osnove moderne arhitekture računara.
+  - Klod Šanon postavlja osnove informatike.
+
+---
+
+## Epoha III—Paralelizam na nivou instrukcije i uspon tranzistora
+
+.lcol.medium[
+
+- Era počinje sa TX-0 računarom i vodi preko DEC PDP-1 i IBM 7090 do vrhunca treće epohe
+- CDC 6600 (1965)
+
+- CDC6600 je imao  1 MFLOPS!
+  - 10 MHz takt!
+  - 10 logičkih jedinica!
+  - Prvi ILP!
+  - Jedan od prvih uređaja koji se zvao „superkompjuter“
+
 ]
 
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
-]
+.rcol[
 
----
+![:scale 70%](img/e3.png)
 
-
-## Xtext - *Little tortoise* gramatika
-
-.center[
-![:scale 75%](uvod/xText-grammar.png)
-]
-
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
-]
-
----
-
-## Xtext - primeri
-
-Za dokumentaciju sa primerom izgradnje 7 različitih jezika pogledati http://www.eclipse.org/Xtext/7languagesDoc.html
-
----
-
-## Spoofax
-
-- Kao i Xtext baziran na parsiranju i tekstualnim sintaksama. Kreira punu
-  podršku za jezik u vidu Eclipse priključaka.
-- Istraživački projekat na TU Delft u Holandiji.
-- Gramatika jezika se definiše meta-jezikom SDF (*Syntax Definition Formalism*).
-- Parser koristi SGLR algoritam (*Scanerless GLR*) i omogućava parsiranje punog
-  skupa kontekstno slobodnih gramatika. U slučaju neodređenosti parser vraća
-  šumu parsiranja (*parse forest*) dok u slučaju determinističke gramatike vraća
-  uvek stablo parsiranja (*parse tree*).
-- Za tranformaciju programa i prepisivanje stabala koristi se JSD *Stratego*.
-
----
-
-## Spoofax - karakterističan izgled
-
-![:scale 80%](uvod/Spoofax-prikaz.png)
-
----
-
-## Inženjerstvo softverskih jezika
-
-- *Software Language Engineering - SLE*.
-- Pravac i pogled na razvoj softverskih jezika koji pokušava da ujedini sve
-  druge pravce koji u osnovi imaju razvoj i upotrebu softverskih jezika
-  (*MDE/MDA/DSM*.., ontologije, *grammarware*, *Language Oriented
-  Programming*...).
-- Jedna od ideja je izjednačavanje modela i programa - kao jedinstven naziv
-  predložen je *mogram*.ref[*].
-
-.footer[
-  `*` A. Kleppe, *Software language engineering: creating domain-specific
-  languages using metamodels*. Addison-Wesley, 2009
 ]
 
 ---
 
-## Literatura
+## Epoha IV—Vektorski procesori i integrisana kola
 
-- M. Völter, [DSL Engineering: Designing, Implementing and Using
-  Domain-Specific Languages](http://dslbook.org/). 2013
-- S. Kelly and J.-P. Tolvanen, *Domain-Specific Modeling: Enabling Full Code
-  Generation*. Wiley-IEEE Computer Society Pr, March 2008
-- Federico Tomassetti, [*The complete guide to (external) Domain Specific
-  Languages*](https://tomassetti.me/domain-specific-languages/), published
-  on [the author's blog](https://tomassetti.me/), February 2017.
-- I.
-  Dejanović,
-  [Prilog metodama brzog razvoja softvera na bazi proširivih jezičkih specifikacija](http://doiserbia.nb.rs/phd/fulltext/NS20110103DEJANOVIC.pdf).
-  PhD thesis, Faculty of Technical Sciences, University of Novi Sad, January
-  2012
+.lcol.medium[
+
+- Računar koji je obeležio ovu epohu je legendarni Krej-1 (1976)
+- Karakteriše ga izuzetno dugačak pipeline.
+
+- Krej-1 je mogao:
+  - 80 MHz!
+  - 160 MFLOPS!
+  - 8.39MB memorije!
+  - 303MB diska!
+
+]
+
+.rcol[
+
+![:scale 70%](img/e4.png)
+
+]
+
+---
+
+## Epoha V—SIMD i spor uspon mikroprocesora
+
+- SIMD je jedna od fundamentalnih HPC arhitektura po Flinovoj taksonomiji (vidi kasnije)
+- Podelimo podatke na blokove, a onda radimo istu stvar svakom bloku podataka.
+- SIMD — Single Instruction Multiple Data
+- Problem sa SIMD-om jeste što su algoritmi bili fantastični za neke stvari i potpuno beskorisni za sve ostalo.
+- SIMD (kasnije, kasnije) i dalje živi—postoji način na koji je svaki GPU u stvari široka SIMD implementacija.
+- NEC SX-2
+  - Prvi računar da probije GFLOPS barijeru
+
+---
+
+## Epoha VI—Mnogo Procesora
+
+- Touchstone Paragon (1994)
+- IBM SP-2
+- Thinking Machines Corporation CM-5 (1992)
+- Prvi moderni superkompjuteri
+- Prosleđivanje poruka i odvojena memorija, po prvi put.
+- Takođe, prvi put se pojavio potrošački klaster (commodity cluster)
+  - UC Berkley NOW
+  - Beowulf
+      - PC + Linux + Ethernet + MPI = Supercomputing For Everyone
+
+---
+
+## Epoha VII?
+
+- Mi smo ovde.
+- I dalje su dominantne tehnologije iz šeste epohe ali uz dodatak ekstremne heterogenosti.
+- U jednom čvoru imamo i SIMD i shared-memory i message-passing.
+- Moglo bi se reći da ovo predstavlja odrastanje HPCa.
+---
+
+## Dalje?
+
+- Masivne online mreže.
+- 3D čipovi i sintetički dijamant
+- Neuroprocesori i domain specific arhitekture
+- Kvantni računari
+
+
 
 {% endblock %}
