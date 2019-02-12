@@ -53,6 +53,8 @@ I wish you a lot of success during your learning.
 
 ### High-performance computing (HPC)
 
+- [Step by step to HPC Rudolf connection](/courses/step-by-step-to-hpc-rudolf-connection){:target="_blank"}
+
 #### HPC Complete Courses (C)
 
 
