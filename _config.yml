@@ -270,6 +270,7 @@ exclude:
   - courses/fis/*.md
   - courses/jsd/*.md
   - courses/high-performance-computing/*.md
+  - courses/hpc-short-courses/*.md
 include:
   - LICENSE.md
 
