@@ -52,7 +52,7 @@ apt-get install openmpi-bin
 ```
 
 
-### Compilation & Running openMP
+### Compilation & Running OpenMP
 ```consile
 gcc -o name name.c -fopenmp
 ./name
@@ -65,6 +65,12 @@ mpicc filename.c -o filename
 mpirun -np 1 ./filename # -lm
 ```
 
+### Compilation & Running OpenACC
+
+```consile
+gcc -o izvrsna_dat izvorna_dat.c -fopenacc
+./izvrsna_dat
+```
 
 ## Zadaci
 
