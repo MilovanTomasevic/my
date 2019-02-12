@@ -40,6 +40,32 @@ int main() {
 hello_world.c
 {:.figure}
 
+
+
+## Setup
+
+### Installation
+
+```consile
+apt-get install libopenmpi-dev 
+apt-get install openmpi-bin 
+```
+
+
+### Compilation & Running openMP
+```consile
+gcc -o name name.c -fopenmp
+./name
+```
+
+### Compilation & Running MPI
+
+```consile
+mpicc filename.c -o filename 
+mpirun -np 1 ./filename # -lm
+```
+
+
 ## Zadaci
 
 ### Pi.c
