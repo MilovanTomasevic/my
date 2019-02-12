@@ -60,7 +60,7 @@ layout: true
 
 ---
 
-## Šta je svrha predmeta?
+## Šta je svrha predmeta?
 
 - Uvod u programiranje, ali za super-računare.
 - Formalnije rečeno, namena predmeta jeste da se steknu veštine iz:
@@ -272,7 +272,7 @@ layout: true
 
 ---
 
-## Šta su glavne komplikacije na jednom računaru?
+## Šta su glavne komplikacije na jednom računaru?
 
 - Ne zaboravite, ovde još pričamo o prostom računaru koji vam stoji na radnom stolu.
 - Prvo, ima više jezgara.
@@ -480,7 +480,7 @@ int main(){
 
 ---
 
-## Šta je sve ovo trebalo da me nauči?
+## Šta je sve ovo trebalo da me nauči?
 
 - Osim malo o arhitekturi računara ima još i ovo:
 - Kako se nešto implementira interaguje jako komplikovano sa hardverom procesora i računara uopšte da proizvede performanse.
@@ -523,7 +523,7 @@ layout: true
 
 ---
 
-## Šta je naš posao?
+## Šta je naš posao?
 
 - Da dobijemo odgovor jako jako brzo.
 - Da, ali kako?
@@ -591,7 +591,7 @@ layout: true
 
 ---
 
-## Šta smeta skaliranju?
+## Šta smeta skaliranju?
 
 .medium[
 - Koristi se mnemonik SLOW za faktore koji sprečavaju da sistem dostigne svoj teoretski maksimum. 
@@ -669,7 +669,7 @@ layout: true
 
 ## Da se uozbiljimo
 
-- Šta je sa istorijom elektronskih super-računara?
+- Šta je sa istorijom elektronskih super-računara?
 - Tradicionalno, deli se u ’epohe’ koje karakteriše dominacija određenih tehnologija.
 
 ---
@@ -695,7 +695,6 @@ layout: true
 ]
 
 ---
-
 ## Epoha II—Fon Nojmanova Arhitektura i Vakumske cevi
 
 .lcol[
@@ -716,7 +715,7 @@ layout: true
 
 ---
 
-## ## Epoha II—Fon Nojmanova Arhitektura i Vakumske cevi
+## Epoha II—Fon Nojmanova Arhitektura i Vakumske cevi
 
 - Vrhunske mašine ere postižu do 10 KIPS
 - 4KB memorije

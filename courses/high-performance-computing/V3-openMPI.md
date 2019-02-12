@@ -5,989 +5,738 @@ name: sadrzaj
 
 # Sadržaj
 
-- [Problem i motivacija](#motivacija)
-- [Primeri](#primeri)
-- [Prednosti](#prednosti)
-- [Arhitekture](#arhitekture)
-- [Gradivni elementi](#gradivni)
-- [Klasifikacija](#klasifikacija)
-- [Jezičke radionice](#radionice)
+- [MPI](#mpi)
+- [Kominikatori](#kominikatori)
+- [Point to Point komunikacija](#p2p)
+- [Kolektivna komunikacija](#kk)
+
 
 ---
-name: motivacija
+name: mpi
 class: center, middle
 
-# Problem i motivacija
+# MPI
 
 ---
 layout: true
 
-.section[[Motivacija](#sadrzaj)]
+.section[[MPI](#sadrzaj)]
+
+---
+## Message Passing Interface (MPI)
+
+- Standard koji propisuje komunikaciju razmenom poruka na različitim paralelnim arhitekturama.
+- **MPI 1.x** (1994.) podrška za C, C++, Fortran
+- **MPI 2.x** (1997.) podrška za C, C++, Fortran
+- **MPI 3.x** (2012.) podrška za C, Fortran
+- Od formulisanja standarda razvijene su različite implementacije MPI (komercijalne i otvorenog koda).
 
 ---
 
-## Šta je jezik?
-            
-- Komunikacija misli i osećanja sistemom znakova kao što su zvuci, gestovi ili
-  pisani simboli .ref[1].
-- Sistem znakova, simbola, gestova i pravila koji se koriste u komunikaciji
-  .ref[2].
-  
-.footer[
-1. http://www.thefreedictionary.com/language
-2. http://oxforddictionaries.com/definition/english/language
-]
-            
----
+## MPI ciljna arhitektura
 
-## Šta je softverski jezik?
-            
-- Jezik korišćen u komunikaciji čovek-računar ili računar-računar.
-- U varijanti čovek-računar težimo da jezik bude lak za razumevanje od strane
-  čoveka ali ipak da može da se procesira na efikasan način od strane računara.
-- U kontekstu razvoj softvera dve su uloge jezika:
-  - *preskriptivna* - za opis budućih sistema
-  - *deskriptivna* - za opis postojećih sistema
-  
----
-
-## Šta domen?
-
-- Sfera delovanja, interesa ili funkcije .ref[1].
-- Oblast znanja, uticaja, ili delovanja .ref[2].
-- Da bi se domensko znanje moglo procesirati i da bi mogli komunicirati u
-  određenom domenu korisno je definisati ontologiju domena koja opisuje koncepte
-  domena i njihove međusobne veze.
-- Primer domena: osiguranje, zdravstvo, finansije, saobraćaj...
-- Domeni mogu sadržati poddomene. Na primer, ako je posmatrani domen problema
-  osiguranje, poddomeni mogu biti životno osiguranje, osiguranje vozila,
-  osiguranje nekretnina i sl.
-
-.footer[
-1. http://www.thefreedictionary.com/domain
-2. http://www.merriam-webster.com/dictionary/domain
-]
+![:scale 80%](img/mpi.png)
 
 ---
 
-## Jezici specifični za domen - JSD (*Domain-Specific Languages - DSL*)
 
-- Jezici specifični za domen (JSD, eng. *Domain-Specific Languages - DSL*)
-  su jezici prilagođeni i ograničeni na određeni domen problema.
-- Za razliku od jezika opšte namene (JON, eng. *General Purpose Language -
-  GPL*), nude povećanje ekspresivnosti kroz upotrebu koncepata i notacija
-  prilagođenih domenu problema i domenskim ekspertima.
-- Nazivaju se još i *mali jezici* (eng. *little languages*).
-- Uspešan JSD je fokusiran na uzak, dobro definisan domen i pokriva ga na
-  odgovarajući način.
-- Domen često ima svoj jezik korišćen od strane domenskih eksperata iako ne
-  postoji njegova implementacija na računaru.
+## Format OpenMPI programa
 
-  
----
-name: primeri
-layout: false
-class: center, middle
+```c
+#include "mpi.h"
 
-# Primeri
+	int main(int argc, char *argv[]) {
+	MPI_Init(&argc, &argv);
 
----
-layout: true
+	// MPI code	
 
-.section[[Primeri](#sadrzaj)]
+	MPI_Finalize();
 
----
-
-## SQL
-
-```sql
-SELECT player, stadium
-    FROM game JOIN goal ON (id=matchid)
-```
-
----
-
-## JPA mapiranje
-
-```java
-@Entity
-@Table(name="COURSES")
-public class Course {
-
-  private long courseId;
-  private String courseName;
-
-  public Course() {
-  }
-
-  public Course(String courseName) {
-    this.courseName = courseName;
-  }
-
-  @Id
-  @GeneratedValue
-  @Column(name="COURSE_ID")
-  public long getCourseId() {
-    return this.courseId;
-  }
+	return 0;
 }
 ```
 
 ---
 
-## Build jezici (Ant/Maven/Gradle)
-
-![](uvod/Ant-Maven-Gradle.png)
-
----
-
-## Poslovni procesi - BPMN
-
-![](uvod/BPMN.png)
-
----
-
-## Mobilne aplikacije
-
-![:scale 70%](uvod/MobilneAplikacije.png)
-
-.footer[
-  Kelly, S. & Tolvanen, J.-P. *Domain-Specific Modeling: Enabling Full Code
-    Generation*, Wiley-IEEE Computer Society Pr, 2008
-]
-            
----
-
-## Ali i...
-
-![:scale 70%](uvod/MusicNotation-External.png)
-
----
-
-## ili...
-
-![:scale 70%](uvod/ChessNotation.png)
-
-
----
-
-## pa čak i...
-
-![:scale 50%](uvod/saobracajni-znaci.jpg)
-
-
----
-
-## Kada jezik smatramo JSD-om?
-
-- Zavisi od toga šta nam je domen.
-- Jezik može biti više ili manje prilagođen nekom domenu.
-- U ekstremnom slučaju i opšti jezik kao što je Java možemo smatrati JSD-om ako
-  nam je domen "razvoj softvera". Naravno, iako tačno u teorijskom smislu, u
-  praktičnom gubimo sve prednosti JSD.
-- Dobar JSD pokriva uzak, dobro definisan domen (domen problema). Koristi samo
-  koncepte ciljnog domena, ograničen je na dati domen i samim tim je iskazivanje
-  rešenja jezgrovitije i jasnije domenskim ekspertima.
-- Čest je slučaj da jezik nastane kao JSD ali se vremenom proširi do te mere da
-  ga možemo smatrati JON.
-
-
----
-name: prednosti
-layout: false
-class: center, middle
-
-# Prednosti
-
----
-layout: true
-
-.section[[Prednosti](#sadrzaj)]
-
----
-
-
-## Uticaj na produktivnost
-
-- Pojedine studije pokazuju da povećanje produktivnosti ide i do 1000% .ref[1].
-- Šta je osnovni razlog za povećanje produktivnosti?
- 
-.footer[
-MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
-]
-  
-  
----
-
-## Problem mentalnog mapiranja
-
-![](uvod/MentalnoMapiranje-1.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-## Rešenje upotrebom JSD
-
-![](uvod/MentalnoMapiranje-2.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-
-## Zašto JSD?
-
-- JSD su koncizniji od jezika opšte namene što omogućava korisnicima da jasnije
-  iskažu svoju nameru.
-- JSD sintaksa, bilo tekstualna ili grafička, može se prilagoditi i
-  približiti domenskim ekspertima.
-- Koncepti korišćeni u JSD su koncepti problemskog (poslovnog) domena što
-  pod određenim uslovima omogućava da domenski eksperti direktno koriste JSD bez
-  posredovanja programera.
-- Upotrebom koncepata problemskog domena izbegava se ručno mapiranje na koncepte
-  ciljne implementacione platforme. Taj posao se obavlja automatski upotrebom
-  JSD prevodioca (kompajlera ili generatora koda).
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Samodokumentujući jezički iskazi.
-
----
-
-## Uticaj na kvalitet softvera
-
-- Korišćenje koncepata domena problema dovodi do smanjenja broja linija koda (u
-  terminologiji tekstualnih notacija), što ima pozitivan uticaj na brzinu
-  razvoja i jednostavnost odžavanja.
-- Smanjenje broja linija koda ide i do **50 puta** u pojedinim domenima primene.
-  Gustina softverskih grešaka (broj softverskih grešaka na hiljadu linija koda)
-  ne zavisi značajno od jezika koji se koristi.
-- Iz toga se može zaključiti da JSD kroz smanjenje broja linija koda posredno
-  utiču na smanjenje apsolutnog broja softverskih grešaka što povećava kvalitet
-  softverskog proizvoda i smanjuje cenu održavanja.
-- Prevođenje koda na ciljnu platformu (kompajliranje) će rezultovati
-  konzistentnim kodom.
-
-
----
-
-## Uticaj na evoluciju aplikacije
-
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Nije potrebno menjati jezičke iskaze (programe/modele) kada dođe do promene
-  tehnologije. Potrebno je promenu uneti u generator koda.
-  
-
----
-name: arhitekture
-layout: false
-class: center, middle
-
-# Arhitekture
-
----
-layout: true
-
-.section[[Arhitekture](#sadrzaj)]
-
----
-
-## Arhitektura bazirana na prevodiocima
-
-![:scale 60%](uvod/Arhitektura-kompajler.svg)
-
----
-
-
-## Arhitektura bazirana na interpreterima
-
-![](uvod/Arhitektura-interpreter.svg)
-
-
----
-name: gradivni
-layout: false
-class: center, middle
-
-# Gradivni elementi
-
----
-layout: true
-
-.section[[Gradivni elementi](#sadrzaj)]
-
----
-
-## Gradivni elementi JSD
-
-Kao i svaki softverski jezik i JSD se sastoji od:
-- Apstraktne sintakse
-- Jedne ili više konkretnih sintaksi
-- Semantike
-
----
-
-
-## Apstraktna sintaksa
-
-- Određuje pravila validnosti iskaza sa stanovišta njegove strukture.
-- Definiše koncepte domena, njihove osobine i međusobne relacije
-- Jezici za definisanje apstraktnih sintaksi jezika se u domenu modelovanja
-  nazivaju meta-meta-modelima.ref[1].
-
-.footer[
-1. Preciznije, meta-metamodel je apstraktna sintaksa takvog jezika. Jezik još
-    čine i konkretne sintakse i semantika.
-]
-
----
-
-## Primer - apstraktna sintaksa jezika za opis konačnih automata
-
-![:scale 90%](uvod/StateMachine.svg)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
-
----
-
-## Stablo apstraktne sintakse
-
-- Svaki iskaz na datom jeziku se može na apstraktan način opisati stablom
-  apstraktne sintakse (*Abstract Syntax Tree*).
-- Konkretna sintaksa nije važna u tom slučaju (na primer, ako posmatramo program
-  na Javi tada ključne reči nisu deo stabla apstraktne sintakse).
-
----
-
-## Primer stabla apstraktne sintakse
-
-![:scale 60%](uvod/AbstractSyntaxTree.svg)
-
-.footer[
-http://en.wikipedia.org/wiki/Abstract_syntax_tree
-]
-
----
-
-## Konkretna sintaksa
-
-- Da bi mogli da prikažemo iskaz na konkretan način potrebna nam je konkretna
-  sintaksa.
-- Konkretna sintaksa definiše *izgled* iskaza na nekom jeziku, odnosno u
-  širem smislu definiše i načine interakcije korisnika sa jezičkim iskazima tj.
-  predstavlja interfejs jezik-korisnik.
-- Iako nam je dovoljna jedna konkretna sintaksa za jedan jezik, možemo ih imati
-  više.
-  
----
-
-## Konkretna sintaksa
-
-Primer istog iskaza upotrebom dve različite konkretne sintakse
-
-![:scale 70%](uvod/RazliciteSintakse.png)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
-
----
-
-## Semantika
-
-- Definiše smisao jezičkih iskaza.
-- Iako postoje i druge tehnike u praksi se najčešće semantika definiše
-  prevođenjem (kompajliranjem tj. generisanjem koda) na jezik koji već ima
-  definisanu semantiku putem prevodioca na niže jezike ili interpretera (npr.
-  virtualne mašine).
-- Najčešće su ciljni jezici na koje se JSD prevodi jezici opšte namene.
-- *Primer:* generisanje Java programskog koda iz JSD jezičkog iskaza.
-- Jezici se prevode na sve "niže" i "niže". Gde je kraj prevođenju? Mašinski
-  jezik. Definisan u hardveru računara (procesoru).
-  
-
-
----
-name: klasifikacija
-layout: false
-class: center, middle
-
-# Klasifikacija
-
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Podela JSD prema vrsti konkretne sintakse
-
-- Tekstualni
-- Grafički
-- Tabelarni
-- Baziran na ekranskim formama
-- ...
-- Hibridni - kombinacija više osnovnih
-
----
-
-
-## Tekstualne sintakse - prednosti i mane
-
-- Programeri se osećaju "kod kuće".
-- Mogu se koristiti regularni tekst editori.
-- Serijalizovana forma je identična sa prezentacionom. se koristiti standardni
-  sistemi za kontrolu verzija (Git, Mercurial, Subversion ...).
-- Podrška u alatima: bojenje koda, dopuna koda, pretraga, navigacija...
-- Mana: Nije pogodna za opis i razumevanje strukture koja nije linearne prirode
-  (grafovi, tabele itd.).
-  
----
-
-
-## Grafičke sintakse - prednosti
-
-- Razumevanje strukture. Podržano operacijama *zoom*, *pan* i sl.
-- Često razumljivije domenskim ekspertima (najčešće je domenski jezik grafičke
-  prirode).
-- Intuitivniji i lakši za učenje - učenje kroz isprobavanje (paleta sa alatima i
-  konceptima, onemogućavanje kreiranje nevalidnih konstrukcija itd.).
-
----
-
-## Grafičke sintakse - mane
-
-- Još uvek složeniji za implementaciju i održavanje.
-- Za serijalizaciju se koristi format koji se razlikuje od prezentacionog.
-- Otežano ili potpuno nemoguće korišćenje standardnih alata za kontrolu verzija.
-  Potrebno je razviti poseban VCS alat.
-- Zahteva namenske editore.
-
----
-
-## Podela prema vrsti domena
-
-![:scale 90%](uvod/HorizontalniVertikalniDSL.svg)
-
----
-
-## Podela JSD prema načinu implementacije
-
-- **Interni** - Nastali su na bazi već postojećih programskih jezika (najčešće
-  JON).
-- **Eksterni** - Izrađeni "on nule" definisanjem sintakse i implementacijom
-  kompajlera koji prevodi programe pisane na ovom jeziku na neki drugi jezik
-  (najčešće JON) ili se program direktno interpretira.
-  
-.footer[
-  M. Fowler, *Domain-Specific Languages*. Addison-Wesley Professional, 1 ed., Oct. 2010
-]
-
----
-
-## Interni JSD
-
-- Bazirani na postojećem jeziku i alatima. Najčešće tekstualni.
-- Koriste svu infrastrukturu jezika domaćina (editore, debagere,
-  kompajlere/interpretere...).
-- Brzi za implementaciju i laki za održavanje. Popularni u pojedinim zajednicama
-  (Ruby, Groovy, Scala...).
-- Dobri kao ulaznica u svet DSL/DSM/MDE pristupa.
-- Najčešće na pametan način koriste mogućnosti jezika (anonimne funkcije,
-  meta-programiranje itd.).
-- Ograničenja konkretne sintakse.
-- Svaka namenska biblioteka može se smatrati internim JSD (API bazirani)...
-- ... ali konkretna sintaksa takvog jezika nije prilagođena domenu.
-
-
----
-
-## Eksterni JSD
-
-- Izrađeni "on nule" - skuplji razvoj i održavanje.
-- Puna kontrola konkretne sintakse - bolje prilagođavanje domenskim ekspertima.
-- Editori i svi propratni alati takođe moraju da se prave "od nule"...
-- ...mada danas postoje alati koji nam taj posao olakšavaju.
-
----
-
-## Neki od poznatijih eksternih JSD
-
-- **SQL**: tekstualni, domen - rad sa relacionim bazama podataka
-- **HTML**: tekstualni, domen - definisanje sadržaja na vebu
-- **CSS**: tekstualni, domen - stilizovanje sadržaja
-- **make**: tekstualni, domen - izgradnja aplikacije (build)
-- **LaTeX**: tekstualni, domen: kreiranje štampanih materijala (*typesetting*)
-- **Window Builder**: GUI baziran, domen - izgradnja interfejsa
-- **R**: tekstualni, domen - statistička obrada podataka
-
-
----
-
-
-## Primer: Interni JSD za definisanje email-a (*JavaMail API*)
-
-```java
-MimeMessage message = new MimeMessage(session);
-
-message.setFrom(new InternetAddress(from));
-
-message.addRecipient(Message.RecipientType.TO,
-          new InternetAddress(to));
-
-message.setSubject("Greetings from Novi Sad");
-message.setText("Enjoying my stay in Novi Sad! See you soon!");
-
-Transport.send(message);
+## Kompajliranje MPI programa
+- Pozicionirati se u direktorijum u kojem se nalazi izvorni kod MPI programa i uneti:
+```console
+mpicc <izvorna_datoteka>
 ```
+- `mpicc` je omotačka skripta za `gcc`, pa se pri kompajliranju mogu navesti opcije gcc kompajlera.
 
----
-
-
-## Primer: Hipotetički eksterni JSD za definisanje email-a
-
+- Pokretanje:
+```console
+mpiexec [-np <N>] <izvrsna_datoteka>
 ```
-BEGIN myMail
-  FROM me@myself.com
-  TO myfriend@somewhere.org
-  SUBJECT Greetings  from  Novi Sad
-
-Enjoying my stay in Novi Sad! See you soon!
-
-END
-SEND myMail
-```
+- `-np <N>` - opcija za zadavanje broja procesa koji će biti kreirani pri pokretanju programa.
 
 ---
 
+## Primer 1: Hello World!
+```c
+#include <stdio.h>
+#include "mpi.h"
 
-## Primer
+int main(int argc, char *argv[]) {
+	int size, rank;
 
-Interni JSD za definisanje grafički korisničkih interfejsa (*Swing*)
+	MPI_Init(&argc, &argv);
+	MPI_Comm_size(MPI_COMM_WORLD, &size);
+	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-```java
-public DSLKurs() {
-    setBounds(100, 100, 450, 300);
-    getContentPane().setLayout(new BorderLayout());
-    contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-    getContentPane().add(contentPanel, BorderLayout.CENTER);
-    contentPanel.setLayout(new FormLayout(new ColumnSpec[ {
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            FormFactory.DEFAULT_COLSPEC,
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            ColumnSpec.decode("default:grow"),},
-                  new RowSpec[] {
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,}));
-    ....
-    
-```
+	printf("Hello World iz %d/%d.\n", rank, size);
+	
+	MPI_Finalize();
 
----
-
-
-## Primer
-
-Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
-
-![:scale 70%](uvod/GUIDSL-External.png)
-
----
-
-
-## Primer
-
-Interni JSD za definisanje gramatike jezika (*Arpeggio Python*)
-
-```python
-def number():     return _(r'\d*\.\d*|\d+')
-def factor():     return Optional(["+","-"]), [number,
-                          ("(", expression, ")")]
-def term():       return factor, ZeroOrMore(["*","/"], factor)
-def expression(): return term, ZeroOrMore(["+", "-"], term)
-def calc():       return OneOrMore(expression), EOF
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje gramatike jezika (*Arpeggio PEG*)
-
-```
-number = r'\d*\.\d*|\d+'
-factor = ("+" / "-")?
-        (number / "(" expression ")")
-term = factor (( "*" / "/") factor)*
-expression = term (("+" / "-") term)*
-calc = expression+ EOF
-```
-
----
-layout: false
-class: center, middle
-
-# Konkretna sintaksa je važna!!!
-
-## Neki jezici su pogodniji za kreiranje internih JSD
-
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Jezici pogodni za kreiranje internih JSD
-
-- Ruby
-- Groovy
-- Scala
-- Lisp
-- ...
-
----
-
-
-## Primer internog JSD (*Ruby Sinatra*)
-
-```ruby
-get '/dogs' do
-    # get a listing of all the dogs
-end
-get '/dog/:id' do
-    # just get one dog, you might find him like this:
-    @dog = Dog.find(params[:id])
-    # using the params convention, you specified in your route
-end
-post '/dog' do
-    # create a new dog listing
-end
-put '/dog/:id' do
-    # HTTP PUT request method to update an existing dog
-end
-delete '/dog/:id' do
-    # HTTP DELETE request method to remove a dog who's been sold!
-end
-```
-
----
-
-
-## Primer internog JSD (Groovy Gradle)
-
-```groovy
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    groovy fileTree(dir: new File(gradle.gradleHomeDir, 'lib'),
-                    includes: ['**/groovy­all­*.jar'])
-    compile gradleApi()
-    compile 'eu.appsatori:gradle­fatjar­plugin:0.1.3',
-    {
-        ext.optional = true
-    }
-    testCompile 'org.spockframework:spock­core:0.6­groovy­1.8'
+	return 0;
 }
 ```
 
 ---
+
+## MPI osnovni koncepti
+
+- Komunikator (eng. *communicator* )
+- `Point to Point` komunikacija (eng. *Point-to-Point communication*)
+- Kolektivna komunikacija (eng. *Collective communication*)
+
+---
 layout: false
+name: komunikatori
 class: center, middle
 
-# Eksterni JSD omogućavaju potpuno prilagođavanje domenu.
-
+# Komunikatori
 
 ---
 layout: true
 
-.section[[Klasifikacija](#sadrzaj)]
+.section[[Komunikatori](#sadrzaj)]
 
 ---
 
-## Interni JSD za muzičku notaciju
 
-```java
-Score k = new Score(Tonality.G_major);
-Bar bar = new Bar(BarType.4_4);
-t.addPause(Duration.1_4);
-t.addNote(NoteType.A3, Duration.1_4);
-t.addNote(NoteType.C2, Duration.1_4);
-k.addBar(bar);
+## Komunikatori
+
+- Logički gledano, **komunikator** predstavlja grupu procesa unutar koje
+svaki proces ima svoj **rank** (odnosno identifikator).
+
+![:scale 80%](img/komunikator.png)
+
+- `MPI_COMM_SELF, MPI_COMM_NULL`
+
+---
+
+
+## Komunikatori
+- Tokom izvršavanja MPI istovremeno može da postoji više komunikatora.
+
+- `MPI_Comm` tip podatka.
+
+- Funkcije za pravljenje komunikatora:
+
+```c
+# kreiranje novog komunikatora deljenjem postojećeg
+MPI_Comm_split(MPI_Comm comm, int color, int key, MPI_Comm* newcomm);
+
+# novi komunikator je kopija postojećeg
+int MPI_Comm_dup(MPI_Comm comm, MPI_Comm *newcomm)
+
+# i druge
 ```
 
 ---
 
-## Eksterni JSD za muzičku notaciju
+## Zadatak 1: Komunikatori
 
-U eksternoj varijanti možemo u potpunosti prilagoditi konkretnu sintaksu
-domenskim ekspertima.
+- Napraviti OpenMPI C program koji korišćenjem funkcije `MPI_Comm_split` na osnovu podrazumevanog pravi dva nova komunikatora. Procese podeliti u dva komunikatora na osnovu parnosti ranka unutar `MPI_COMM_WORLD` komunikatora. Pri tom relativni poredak procesa unutar komunikatora treba da bude isti kao i u podrazumevanom komunikatoru. Svaki proces na standardni izlaz treba da ispiše svoj rank unutar `MPI_COMM_WORLD` i novoformiranog komunikatora.
 
-.center[
-![:scale 80%](uvod/MusicNotation-External.png)
+- Primer ispisa za jedan proces:
+```console
+MPI_COMM_WORLD rank: 0/4 - ncomm rank: 0/2
+```
+
+.attention[
+**Rešenje**: datoteka `communicators.c`, direktorijum resenja.
 ]
 
 ---
 
-## Lilypond note script
+## MPI tipovi podataka
+- Zarad portabilnosti MPI standard definiše tipove podataka.
 
-Ali se dešava da i u eksternoj varijanti JSD nije prilagođen domenskim
-ekspertima.
+.center-table.small[
 
-![](uvod/Lilypond.png)
+|   MPI tip podatka  |    C tip podatka   |
+|:------------------:|:------------------:|
+|      MPI_CHAR      |     signed char    |
+|      MPI_SHORT     |  signed short int  |
+|       MPI_INT      |     signed int     |
+|      MPI_LONG      |   signed long int  |
+|  MPI_UNSIGNED_CHAR |    unsigned char   |
+| MPI_UNSIGNED_SHORT | unsigned short int |
+|    MPI_UNSIGNED    |    unsigned int    |
+|  MPI_UNSIGNED_LONG |  unsigned long int |
+|      MPI_FLOAT     |        float       |
+|     MPI_DOUBLE     |       double       |
+|   MPI_LONG_DOUBLE  |     long double    |
+|      MPI_BYTE      |         /          |
+|     MPI_PACKED     |         /          |
 
----
-
-## Kritike JDS
-
-- Skup razvoj i održavanje jezika.
-- Potreba za ekspertima u domenu razvoja jezika koji su istovremeno sposobni da
-  analiziraju domen primene.
-- Jezička "kakofonija" (*Language Cacophony* .ref[1])i potreba da programeri
-  poznaju veliki broj jezika (poseban jezik za svaki tehnički i/ili poslovni
-  domen).
-
-.footer[
-    M. Fowler, *Language workbenches: The killer-app for domain specific
-        languages*, Online
-        http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
 ]
 
-
 ---
-name: radionice
 layout: false
+name: p2p
 class: center, middle
 
-# Jezičke radionice
+# Point to Point komunikacija
 
 ---
 layout: true
 
-.section[[Jezičke radionice](#sadrzaj)]
+.section[[Point to Point komunikacija](#sadrzaj)]
 
 ---
 
+## Point to Point komunikacija
+- Komunikacija dva procesa. Jedan proces šalje poruku, drugi proces prima poruku.
+- Funkcije za razmenu poruka.ref[1,2]:
 
-## Jezičke radionice (*Language Workbenches*)
+.lcol.medium[
 
-- Integrisana okruženja za razvoj, testiranje i evoluciju jezika i alata za
-  njihovo efikasno korišćenje (editori, interpreteri, kompajleri i sl.). Koriste
-  se kod paradigme razvoja orijentisane ka jezicima (*Language Oriented
-  Programming - LOP*).ref[*]
-- Rešavaju problem brzine razvoja i lakoće održavanja JSD.
-- Primeri jezičkih radionica:
-  - Meta Programming System (MPS)
-  - Xtext
-  - Spoofax
-
-.footer[
-\* M. Fowler, *Language workbenches: The killer-app for domain specific
-   languages*, Online
-   http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
+```c
+int MPI_Recv(
+	void *buf,
+	int count,
+	MPI_Datatype datatype,
+	int source,
+	int tag,
+	MPI_Comm comm,
+	MPI_Status *status);
+```
 ]
 
-
----
-
-## Pristupi
-
-.medium[
-- Projekcione radionice - direktna izmena apstraktne reprezentacije kroz
-  projekciju.
- 
-  ![:scale 45%](uvod/projekcija.svg)
-  
-- Bazirane na parserima - izmena se vrši posredno kroz tekst koji se parsira da
-  bi se dobila apstraktna reprezentacija.
-
-  ![:scale 80%](uvod/parseri.svg)
-
+.rcol.medium[
+```c
+int MPI_Send(
+	const void *buf,
+	int count,
+	MPI_Datatype datatype,
+	int dest,
+	int tag,
+	MPI_Comm comm);
+```
 ]
+![:scale 45%](img/p2p.gif)
 
-.footer[
-.small[Eye icon designed by Freepik. Hand icon by Yannick Lung.]
-]
 
----
 
-## Projekcione radionice
+.footer.medium[
+   <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Recv.3.php">1. OpenMPI 2.0 MPI_Recv docs</a><br>
+   <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Send.3.php">2. OpenMPI 2.0 MPI_Send docs</a>
 
-- Prednosti:
-  - Moguće višestruke konkretne sintakse (tekstualne, grafičke, tabelarne...) -
-    bolje prilagođavanje konkretnom domenu.
-  - Sintakse se mogu "u letu" menjati.
-  - Kontrola validnosti izraza u vreme izmene modela.
+] 
 
-- Mane:
-  - Složenost alata.
-  - Format za perzistenciju nije u vezi sa konkretnim sintaksama koje korisnik
-    koristi. Nemoguće je koristiti standardne sisteme za kontrolu verzija
-    bazirane na tekstu.
-  - Moraju se razviti namenski generički editori za svaku klasu konkretnih sintaksi.
-  
----
-
-## Radionice bazirane na parserima
-
-- Prednosti:
-  - Jednostavnije za izradu i održavanje.
-  - Teorija parsiranja dobro ustanovljena. Veliki broj biblioteka za parsiranje.
-  - Moguće koristiti obične tekstualne editore.
-  - Moguće koristiti standardne sisteme za kontrolu verzija (npr. git,
-    subversion).
-  - Jednostavno kopiranje i lepljenje (eng. *copy/paste*).
-
-- Mane:
-  - Moguća samo tekstualna sintaksa -> ograničeno prilagođavanje domenu.
-  - Provera validnosti se odlaže do faze parsiranja.
-  
----
-
-## *Meta Programming System (MPS)*
-
-- JetBrains - http://www.jetbrains.com/mps/
-- Projekciona jezička radionica - editori manipulišu direktno apstraktnom
-  reprezentacijom (stablom apstraktne sintakse). Čak i u slučaju tekstualnih
-  notacija.
-- Podrška za različite konkretne sintakse (notacije): tabelarne, tekstualne,
-  bazirani na ćelijama, grafičke.
-- Podrška za kontrolu verzija.
 
 ---
 
-## *Meta Programming System* - karakterističan izgled
+## Primer 2: Point to Point komunikacija
 
-![:scale 70%](uvod/MPS.png)
+```c
+// ...
+if (rank == 0) {
 
-.footer[
-http://www.jetbrains.com/mps/docs/tutorial.html
-]
+	int message = 1;
 
----
+	printf("Proces %d salje poruku procesu %d.\n", rank, 1);
 
-## Xtext
+	MPI_Send(&message, 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
 
-- Nastao kao deo projekta slobodnog softvera - *openArchitectureWare*.
-- Iza razvoja u najvećoj meri stoji nemačka
-  firma [Itemis](https://www.itemis.com/en/).
-- Postao deo Eclipse projekta.
-- Tekstualne sintakse. EBNF-like gramatika.
-- Upotreba ECore meta-metamodela.ref[1]. Meta-model se generiše iz gramatike a
-  može da koristi i već postojeći meta-model.
-- Generisanje Eclipse editora sa podrškom za bojenje sintakse, navigaciju,
-  *outline* pogled itd.
-- Xtext bazirani JSD se duboko integriše u Eclipse okruženje i teško je uočiti
-  razliku sa podrškom za bilo koji drugi jezik sa Eclipse podrškom (npr. Java).
+} else if (rank == 1) {
 
-.footer[
-http://www.eclipse.org/modeling/emf/
-]
+	int message;
+
+	printf("Proces %d treba da primi poruku od procesa %d.\n",rank, 0);
+
+	MPI_Recv(&message, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, NULL);
+
+	printf("Proces %d primio poruku %d od procesa %d.\n", rank, message, 0);
+}
+
+// ...
+```
 
 ---
 
-## Xtext - *Little tortoise* jezik
+
+## Režimi Point-to-Point komunikacije
+
+- P2P komunikacioni režimi slanja poruke:
+	- `Synchronous` (MPI_Ssend)- pošiljalac šalje zahtev za slanje poruke, nakon što primalac odgovori poruka se šalje (*handshake protokol*)
+	- `Buffered` (MPI_Bsend) - po iniciranju slanja poruka se šalje u bafer odakle je primalac može preuzeti
+	- `Standard` (MPI_Send) - može imati karakteristike buffered ili `synchronous` režima (podrazumevano)
+	- `Ready` (MPI_Rsend) - pretpostavlja se da je proces koji prima poruku već čeka na poruku u trenutku iniciranja slanja
+- Za prijem poruke postoji samo jedan režim i poruka se smatra primljenom kada je preuzeta i može dalje da se koristi.
+
+---
+
+## Tipovi Point-to-Point komunikacije
+- Slanje i prijem poruke mogu biti:
+	- blokirajući - Ako `MPI_Send` blokirajuća, kontrola toka se neće vratiti pozivaocu funkcije sve dok uslov slanja ne bude ispunjen. Nakon izlaska iz funkcije bafer poruke može biti bezbedno prepisan. Ako je `MPI_Recv` blokirajuća kontrola se ne vraća pozivaocu funkcije sve dok poruka ne bude preuzeta (`podrazumevano`).
+	- neblokirajući - Iz `MPI_Send`, tj. `MPI_Recv` se izlazi nakon inicijacije slanja, tj. primanja poruke. Kada se pojavi potreba za korišćenjem izvornog odnosno odredišnog bafera, potrebno je prethodno proveriti da li je podatak poslat tj. da li je stigao.
 
 .center[
-![:scale 70%](uvod/xText-tortoise.png)
-]
-
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
-]
-
----
-
-
-## Xtext - *Little tortoise* gramatika
-
-.center[
-![:scale 75%](uvod/xText-grammar.png)
-]
-
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
+```c
+MPI_{I}[S, B, R]Send(...), MPI_{I}Recv(...)
+```
 ]
 
 ---
 
-## Xtext - primeri
+## Zadatak 2: Ping pong
+- Napraviti OpenMPI program implementiran u C programskom jeziku koji simulira igranje ping ponga između dva procesa. Lopticu simulirati promenljivom tipa int. Uvećati ovu promenljivu svaki put kada neki od procesa udari lopticu, odnosno, pre nego što neki od procesa pošalje promenljivu drugom procesu i ispisati odgovarajuću poruku.
 
-Za dokumentaciju sa primerom izgradnje 7 različitih jezika pogledati http://www.eclipse.org/Xtext/7languagesDoc.html
+Format očekivanog ispisa:
+```console
+p0 sent ping_pong_count to p1 and incremented it to 1.
+p1 received ping_pong_count 1 from p0.
+p1 sent ping_pong_count to p0 and incremented it to 2.
+```
 
----
-
-## Spoofax
-
-- Kao i Xtext baziran na parsiranju i tekstualnim sintaksama. Kreira punu
-  podršku za jezik u vidu Eclipse priključaka.
-- Istraživački projekat na TU Delft u Holandiji.
-- Gramatika jezika se definiše meta-jezikom SDF (*Syntax Definition Formalism*).
-- Parser koristi SGLR algoritam (*Scanerless GLR*) i omogućava parsiranje punog
-  skupa kontekstno slobodnih gramatika. U slučaju neodređenosti parser vraća
-  šumu parsiranja (*parse forest*) dok u slučaju determinističke gramatike vraća
-  uvek stablo parsiranja (*parse tree*).
-- Za tranformaciju programa i prepisivanje stabala koristi se JSD *Stratego*.
-
----
-
-## Spoofax - karakterističan izgled
-
-![:scale 80%](uvod/Spoofax-prikaz.png)
-
----
-
-## Inženjerstvo softverskih jezika
-
-- *Software Language Engineering - SLE*.
-- Pravac i pogled na razvoj softverskih jezika koji pokušava da ujedini sve
-  druge pravce koji u osnovi imaju razvoj i upotrebu softverskih jezika
-  (*MDE/MDA/DSM*.., ontologije, *grammarware*, *Language Oriented
-  Programming*...).
-- Jedna od ideja je izjednačavanje modela i programa - kao jedinstven naziv
-  predložen je *mogram*.ref[*].
-
-.footer[
-  `*` A. Kleppe, *Software language engineering: creating domain-specific
-  languages using metamodels*. Addison-Wesley, 2009
+.attention[
+**Napomene**: 
+Pretpostavka je da će program biti pozvan opcijom -np 2 i od ovoga se ne mora štititi.
+Ne znači da program nije ispravan ukoliko ispis na ekranu nije u očekivanom redosledu.
 ]
 
 ---
 
-## Literatura
 
-- M. Völter, [DSL Engineering: Designing, Implementing and Using
-  Domain-Specific Languages](http://dslbook.org/). 2013
-- S. Kelly and J.-P. Tolvanen, *Domain-Specific Modeling: Enabling Full Code
-  Generation*. Wiley-IEEE Computer Society Pr, March 2008
-- Federico Tomassetti, [*The complete guide to (external) Domain Specific
-  Languages*](https://tomassetti.me/domain-specific-languages/), published
-  on [the author's blog](https://tomassetti.me/), February 2017.
-- I.
-  Dejanović,
-  [Prilog metodama brzog razvoja softvera na bazi proširivih jezičkih specifikacija](http://doiserbia.nb.rs/phd/fulltext/NS20110103DEJANOVIC.pdf).
-  PhD thesis, Faculty of Technical Sciences, University of Novi Sad, January
-  2012
+## Zadatak 3: Prsten
+- Napisati OpenMPI C program koji prosleđuje žeton između procesa po principu prstena. Žeton je predstavljen brojem -1 i poseduje ga proces ranga 0. Svi procesi osim poslednjeg šalju žeton procesu sa rangom za jedan veći od svog. Poslednji proces (proces sa najvećim rangom u komunikatoru) žeton prosleđuje nazad procesu ranga 0. Nakon što proces ranga 0 primi žeton, program se završava. Ispisati poruku na standardni izlaz svaki put kada neki od procesa primi žeton.
+
+Format očekivanog ispisa:
+```console
+Process 1 received token -1 from process 0
+Process 2 received token -1 from process 1
+Process 3 received token -1 from process 2
+Process 0 received token -1 from process 3
+```
+
+---
+
+layout: false
+name: kk
+class: center, middle
+
+# Kolektivna komunikacija
+
+---
+layout: true
+
+.section[[Kolektivna komunikacija](#sadrzaj)]
+
+---
+## Kolektivna komunikacija
+- (eng. *collective communication*)
+- Komunikacija **svih** procesa unutar jednog komunikatora.
+- Vrste kolektivne komunikacije:
+	- Broadcast
+	- Scatter
+	- Gather
+	- AllGather
+	- Reduction
+	- AllReduction
+	- ...
+
+---
+
+## Kolektivna komunikacija: Broadcast
+
+.lcol[
+```c
+int MPI_Bcast(
+	void *buffer,
+	int count,
+	MPI_Datatype datatype,
+	int root,
+	MPI_Comm comm);
+```
+]
+
+.rcol[
+![:scale 75%](img/broadcast.png)
+]
+<br><br><br><br><br><br><br>
+
+- Proces čiji je rank jednak vrednosti root parametra šalje poruku svim ostalim procesima iz komunikatora, uključujući i sebe.
+
+---
+
+## Primer 3: bcast.c
+```c
+int main(int argc, char *argv[]) {
+	int rank, root = 0;
+
+	MPI_Init(&argc, &argv);
+
+	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+	int token;
+	if (rank == root) token = 123;
+	MPI_Bcast(&token, 1, MPI_INT, root, MPI_COMM_WORLD);
+	printf("Proces %d primio token %d.\n", rank, token);
+
+	MPI_Finalize();
+	
+	return 0;
+}
+```
+
+---
+
+## Zadatak 4: Broadcast
+- Napisati OpenMPI C implementaciju `MPI_Bcast` funkcije korišćenjem `MPI_Send` i `MPI_Recv` funkcija. Rank procesa koji emituje vrednost žetona se unosi kao argument poziva programa. Vrednost žetona koji se emituje je -1. Nakon što root proces (proces koji emituje vrednost žetona) pošalje žeton ispisati poruku o tome.
+- Nakon što svaki od preostalih procesa primi žeton, ispisati poruku i vrednost primljenog žetona.
+
+Format očekivanog ispisa:
+```console
+Proces 0 poslao zeton -1
+Proces 1 primio zeton -1
+Proces 2 primio zeton -1
+Proces 3 primio zeton -1
+```
+
+---
+
+
+## Zadatak 5: Kolektivna komunikacija nad podskupom komunikatora
+
+- U kolektivnoj komunikaciji učestvuju svi procesi unutar komunikatora. Međutim, pri prešavanju kompleksnijih problema može se pojaviti potreba da se neki podatak pošalje samo delu procesa komunikatora. Ustanovili smo da korišćenje metoda kolektivne komunikacije može biti efikasnije u odnosu na pojedinačno pozivanje `MPI_Send` i `MPI_Recv` za svaki od procesa u komunikatoru kojima treba proslediti podatak. 
+- Kako biste podatak poslali samo delu procesa u nekom komunikatoru korišćenjem kolektivne komunikacije?
+
+---
+
+
+## Zadatak 6: Kolektivna komunikacija nad podskupom komunikatora
+
+- U kolektivnoj komunikaciji učestvuju svi procesi unutar komunikatora. Međutim, pri prešavanju kompleksnijih problema može se pojaviti potreba da se neki podatak pošalje samo delu procesa komunikatora. Ustanovili smo da korišćenje metoda kolektivne komunikacije može biti efikasnije u odnosu na pojedinačno pozivanje `MPI_Send` i `MPI_Recv` za svaki od procesa u komunikatoru kojima treba proslediti podatak.
+- Kako biste podatak poslali samo delu procesa u nekom komunikatoru korišćenjem kolektivne komunikacije?
+
+.attention[
+**Odgovor**: Napraviti novi komunikator za procese kojima treba poslati podataka i koristiti kolektivnu komunikaciju na nivou novonapravljenog komunikatora.
+]
+
+---
+
+## Kolektivna komunikacija: Scatter
+
+.lcol[
+
+```c
+int MPI_Scatter(
+	const void *sendbuf,
+	int sendcount,
+	MPI_Datatype sendtype,
+	void *recvbuf,
+	int recvcount,
+	MPI_Datatype recvtype,
+	int root,
+	MPI_Comm comm);
+```
+
+]
+
+.rcol[
+
+![:scale 85%](img/scatter.png)
+
+]
+<br><br><br><br><br><br><br><br>
+
+- Korenski proces šalje delove podataka procesima iz komunikatora..ref[1]
+- Svaki proces dobija "parče" podatka iste veličine.
+
+.footer.medium[
+    1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Scatter.3.php">MPI_Scatter docs</a>
+] 
+
+---
+
+
+## Primer 4: scatter.c
+
+```c
+int main(int argc, char *argv[]) {
+
+	/* ... */
+
+	int *data = NULL, *partial_data = NULL;
+	int piecelen = datalen / size;
+
+	if (rank == root) {
+		/* inicijalizacija data niza */
+
+	}
+	partial_data = (int *) malloc(sizeof(int) * piecelen);
+
+	MPI_Scatter(data, piecelen, MPI_INT, partial_data, piecelen, MPI_INT, root, MPI_COMM_WORLD);
+
+	/* ... */
+
+	return 0;
+}
+```
+
+---
+
+## Kolektivna komunikacija: Gather
+
+.lcol[
+
+```c
+int MPI_Gather(
+	const void *sendbuf,
+	int sendcount,
+	MPI_Datatype sendtype,
+	void *recvbuf,
+	int recvcount,
+	MPI_Datatype recvtype,
+	int root,
+	MPI_Comm comm);
+```
+
+]
+
+.rcol[
+
+![:scale 85%](img/gather.png)
+
+]
+
+<br><br><br><br><br><br><br><br>
+- Korenski proces prima podatke od procesa iz komunikatora..ref[1] 
+- Svaki proces šalje "parče" podatka iste veličine.
+
+.footer.medium[
+    1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Gather.3.php">MPI_Gather docs</a>
+] 
+
+---
+
+## Primer 5: gather.c
+```c
+int main(int argc, char *argv[]) {
+
+	int *data = NULL, *partial_data = NULL;
+	int piecelen = datalen / size;
+	partial_data = (int *) malloc(sizeof(int) * piecelen);
+
+	/* ... */
+
+	if (rank == root)
+	data = (int *) malloc(sizeof(int) * datalen);
+	
+	MPI_Gather(partial_data, piecelen, MPI_INT, data, piecelen, MPI_INT, root, MPI_COMM_WORLD);
+	
+	/* ... */
+	
+	return 0;
+}
+```
+
+---
+
+## Zadatak 7: Računanje srednje vrednosti
+- Napraviti OpenMPI C program koji računa srednju vrednost elemenata niza u više procesa korišćenjem funkcija `MPI_Scatter` i `MPI_Gather`. Program napisati tako da:
+	- Korenski proces inicijalizuje niz dužine n nasumično izgenerisanim celim brojevima. Dužina niza mora biti deljiva brojem pokrenutih procesa.
+	- Razdeliti izgenerisani niz na jednake delove između svih procesa.
+	- Svaki proces treba da izračuna sumu elemenata niza koji su mu prosleđeni.
+	- Nakon što su sve parcijalne sume sračunate, prebacuju se nazad korenskom procesu koji od parcijalnih suma pravi konačnu sumu koju deli ukupnim brojem elemenata i ispisuje srednju vrednost niza.
+
+---
+
+## Kolektivna komunikacija: AllGather
+
+.lcol[
+
+```c
+int MPI_Allgather(
+	const void *sendbuf,
+	int sendcount,
+	MPI_Datatype sendtype,
+	void *recvbuf,
+	int recvcount,
+	MPI_Datatype recvtype,
+	MPI_Comm comm);
+```
+
+]
+
+.rcol[
+
+![:scale 60%](img/allGather.png)
+
+]
+
+<br><br><br><br><br><br><br><br><br>
+
+- Efektivno poziv `MPI_Gather` praćen `MPI_Bcast` pozivom..ref[1]
+
+.footer.medium[
+    1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Allgather.3.php">MPI_Allgather docs</a>
+] 
+
+
+---
+
+## Primer 6: allgather.c
+```c
+int main(int argc, char *argv[]) {
+
+	/* ... */
+
+	int *data = (int *) malloc(sizeof(int) * size);
+
+	int token = rank;
+	MPI_Allgather(&token, 1, MPI_INT, data, 1, MPI_INT, MPI_COMM_WORLD);
+
+	free(data);
+	
+	/* ... */
+	
+	return 0;
+}
+```
+
+---
+
+## Kolektivna komunikacija: Reduce
+
+.lcol[
+
+```c
+int MPI_Reduce(
+	const void *sendbuf,
+	void *recvbuf,
+	int count,
+	MPI_Datatype datatype,
+	MPI_Op op,
+	int root,
+	MPI_Comm comm);
+```
+
+]
+
+.rcol[
+
+![:scale 90%](img/reduce.png)
+
+]
+
+<br><br><br><br><br><br><br><br><br>
+
+- Procesi unutar komunikatora šalju podatke korenskom procesu koji vrši redukciju nad podacima zadatom funkcijom (npr. `MPI_SUM`, `MPI_AND`...)..ref[1]
+
+.footer.medium[
+    1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Reduce.3.php">MPI_Reduce docs</a>
+] 
+
+
+---
+
+## Primer 7: reduce.c
+
+```c
+int main(int argc, char *argv[]) {
+	/* ... */
+
+	int token = rank, result;
+	MPI_Reduce(&token, &result, 1, MPI_INT, MPI_SUM, root, MPI_COMM_WORLD);
+
+	printf("Proces %d: result = %d.\n", rank, result);
+
+	MPI_Finalize();
+	
+	return 0;
+}
+```
+
+---
+
+## Zadatak 8: Računanje srednje vrednosti 2
+
+- Modifikovati zadatak koji računa srednju vrednost elemenata niza tako da se u odgovarajućem koraku koristi funkcija `MPI_Reduce`.
+
+---
+
+
+## Kolektivna komunikacija: AllReduce
+
+.lcol[
+
+```c
+int MPI_Allreduce(
+	const void *sendbuf,
+	void *recvbuf,
+	int count,
+	MPI_Datatype datatype,
+	MPI_Op op,
+	MPI_Comm comm);
+```
+
+]
+
+.rcol[
+
+![:scale 90%](img/allreduce.png)
+
+]
+
+<br><br><br><br><br><br><br><br><br>
+
+- Efektivno poziv `MPI_Reduce` praćen `MPI_Bcast` pozivom.
+
+.footer.medium[
+    1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Allreduce.3.php">MPI_Allreduce docs</a>
+] 
+
+---
+
+## Primer 8: allreduce.c
+
+```c
+int main(int argc, char *argv[]) {
+	/* ... */
+
+	int token = rank, result;
+	MPI_Allreduce(&token, &result, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
+
+	printf("Proces %d: result = %d.\n", rank, result);
+
+	/* ... */
+	
+	return 0;
+}
+```
+
+---
+
+## Zadatak 9: Množenje matrice i vektora - domaći
+- Napisati OpenMPI C program za množenje kvadratne matrice i vektora. Ulazna matrica i vektor sadrže razlomljene brojeve u jednostrukoj preciznosti i podrazumeva se da će dimenzije matrice i vektora biti odgovarajuće. Ulazni podaci za zadatak su izgenerisani i dati u h5 formatu. Takođe, dat je kostur rešenja sa primerima kako učitati matricu/vektor iz h5 datoteke i ispisati ih na standardni izlaz (direktorijum MatrixVectorMultiplication). Za detalje oko kompajliranja i pokretanja rešenja pogledati README.md datoteku.
+- Implementirati:
+  - Sekvencijalni algoritam za množenje matrice i vektora. Meriti vreme izvršavanja i ispisati ga na standardni izlaz.
+  - OpenMPI C algoritam za množenje matrice i vektora. Meriti vreme izvršavanja i ispisati ga na standardni izlaz. Ostaviti mogućnost da se na standardni izlaz ispiše i rezultat računanja.
+
+---
+
+## Korisni materijali
+
+- [MPI standard dokumentacija](https://www.mpi-forum.org/docs/)
+- [OpenMPI dokumentacija](https://www.open-mpi.org/doc/)
+- Peter S. Pacheco "Parallel Programming with MPI"
+- Victor Eijkhout "Parallel Computing" (besplatna onlajn verzija knjige)
+- [MPI tutorijal](http://mpitutorial.com/)
 
 {% endblock %}

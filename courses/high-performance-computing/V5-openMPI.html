@@ -48,7 +48,7 @@ class: center, middle
 
 
 
-.created[04.02.2019 u 19:09]
+.created[11.02.2019 u 18:20]
 
 
 ---
@@ -58,990 +58,262 @@ name: sadrzaj
 
 # Sadržaj
 
-- [Problem i motivacija](#motivacija)
-- [Primeri](#primeri)
+- [Hibridno programiranje](#hp)
+- [Primer](#primer)
 - [Prednosti](#prednosti)
 - [Arhitekture](#arhitekture)
 - [Gradivni elementi](#gradivni)
 - [Klasifikacija](#klasifikacija)
-- [Jezičke radionice](#radionice)
+- [Zadaci](#zadaci)
 
 ---
-name: motivacija
+name: hp
 class: center, middle
 
-# Problem i motivacija
+# Hibridno programiranje
 
 ---
 layout: true
 
-.section[[Motivacija](#sadrzaj)]
+.section[[Hibridno programiranje](#sadrzaj)]
+
+---
+## Hibridno programiranje
+
+- Podrazumeva kombinovano korišćenje više različitih programskih modela.
+- U ovom slučaju to su OpenMP i OpenMPI kako bi se iskoristila dva različita nivoa paralelizma.
 
 ---
 
-## Šta je jezik?
-            
-- Komunikacija misli i osećanja sistemom znakova kao što su zvuci, gestovi ili
-  pisani simboli .ref[1].
-- Sistem znakova, simbola, gestova i pravila koji se koriste u komunikaciji
-  .ref[2].
-  
-.footer[
-1. http://www.thefreedictionary.com/language
-2. http://oxforddictionaries.com/definition/english/language
-]
-            
----
+## Ciljna arhitektura
 
-## Šta je softverski jezik?
-            
-- Jezik korišćen u komunikaciji čovek-računar ili računar-računar.
-- U varijanti čovek-računar težimo da jezik bude lak za razumevanje od strane
-  čoveka ali ipak da može da se procesira na efikasan način od strane računara.
-- U kontekstu razvoj softvera dve su uloge jezika:
-  - *preskriptivna* - za opis budućih sistema
-  - *deskriptivna* - za opis postojećih sistema
-  
----
+![](img/hibrid.png)
 
-## Šta domen?
+.footer.medium[
+  [Detaljnije](http://pages.tacc.utexas.edu/~eijkhout/pcse/html/mpi-functional.html)
 
-- Sfera delovanja, interesa ili funkcije .ref[1].
-- Oblast znanja, uticaja, ili delovanja .ref[2].
-- Da bi se domensko znanje moglo procesirati i da bi mogli komunicirati u
-  određenom domenu korisno je definisati ontologiju domena koja opisuje koncepte
-  domena i njihove međusobne veze.
-- Primer domena: osiguranje, zdravstvo, finansije, saobraćaj...
-- Domeni mogu sadržati poddomene. Na primer, ako je posmatrani domen problema
-  osiguranje, poddomeni mogu biti životno osiguranje, osiguranje vozila,
-  osiguranje nekretnina i sl.
-
-.footer[
-1. http://www.thefreedictionary.com/domain
-2. http://www.merriam-webster.com/dictionary/domain
-]
+] 
 
 ---
 
-## Jezici specifični za domen - JSD (*Domain-Specific Languages - DSL*)
 
-- Jezici specifični za domen (JSD, eng. *Domain-Specific Languages - DSL*)
-  su jezici prilagođeni i ograničeni na određeni domen problema.
-- Za razliku od jezika opšte namene (JON, eng. *General Purpose Language -
-  GPL*), nude povećanje ekspresivnosti kroz upotrebu koncepata i notacija
-  prilagođenih domenu problema i domenskim ekspertima.
-- Nazivaju se još i *mali jezici* (eng. *little languages*).
-- Uspešan JSD je fokusiran na uzak, dobro definisan domen i pokriva ga na
-  odgovarajući način.
-- Domen često ima svoj jezik korišćen od strane domenskih eksperata iako ne
-  postoji njegova implementacija na računaru.
+## Kompajliranje hibridnih OpenMP-OpenMPI programa
 
-  
----
-name: primeri
-layout: false
-class: center, middle
+- Pozicionirati se u direktorijum u kojem se nalazi izvorni kod hibridnog programa i pokrenuti:
 
-# Primeri
-
----
-layout: true
-
-.section[[Primeri](#sadrzaj)]
-
----
-
-## SQL
-
-```sql
-SELECT player, stadium
-    FROM game JOIN goal ON (id=matchid)
+```console
+mpicc <izvorna_datoteka> -fopenmp
 ```
 
----
+- Pokretanje:
 
-## JPA mapiranje
-
-```java
-@Entity
-@Table(name="COURSES")
-public class Course {
-
-  private long courseId;
-  private String courseName;
-
-  public Course() {
-  }
-
-  public Course(String courseName) {
-    this.courseName = courseName;
-  }
-
-  @Id
-  @GeneratedValue
-  @Column(name="COURSE_ID")
-  public long getCourseId() {
-    return this.courseId;
-  }
-}
+```console
+OMP_NUM_THREADS=<Nmp> \ mpiexec [-np <Nmpi>] <izvrsna_datoteka>
 ```
 
----
-
-## Build jezici (Ant/Maven/Gradle)
-
-![](uvod/Ant-Maven-Gradle.png)
-
----
-
-## Poslovni procesi - BPMN
-
-![](uvod/BPMN.png)
-
----
-
-## Mobilne aplikacije
-
-![:scale 70%](uvod/MobilneAplikacije.png)
-
-.footer[
-  Kelly, S. & Tolvanen, J.-P. *Domain-Specific Modeling: Enabling Full Code
-    Generation*, Wiley-IEEE Computer Society Pr, 2008
-]
-            
----
-
-## Ali i...
-
-![:scale 70%](uvod/MusicNotation-External.png)
-
----
-
-## ili...
-
-![:scale 70%](uvod/ChessNotation.png)
-
-
----
-
-## pa čak i...
-
-![:scale 50%](uvod/saobracajni-znaci.jpg)
-
-
----
-
-## Kada jezik smatramo JSD-om?
-
-- Zavisi od toga šta nam je domen.
-- Jezik može biti više ili manje prilagođen nekom domenu.
-- U ekstremnom slučaju i opšti jezik kao što je Java možemo smatrati JSD-om ako
-  nam je domen "razvoj softvera". Naravno, iako tačno u teorijskom smislu, u
-  praktičnom gubimo sve prednosti JSD.
-- Dobar JSD pokriva uzak, dobro definisan domen (domen problema). Koristi samo
-  koncepte ciljnog domena, ograničen je na dati domen i samim tim je iskazivanje
-  rešenja jezgrovitije i jasnije domenskim ekspertima.
-- Čest je slučaj da jezik nastane kao JSD ali se vremenom proširi do te mere da
-  ga možemo smatrati JON.
-
-
----
-name: prednosti
-layout: false
-class: center, middle
-
-# Prednosti
-
----
-layout: true
-
-.section[[Prednosti](#sadrzaj)]
-
----
-
-
-## Uticaj na produktivnost
-
-- Pojedine studije pokazuju da povećanje produktivnosti ide i do 1000% .ref[1].
-- Šta je osnovni razlog za povećanje produktivnosti?
- 
-.footer[
-MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
-]
-  
-  
----
-
-## Problem mentalnog mapiranja
-
-![](uvod/MentalnoMapiranje-1.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-## Rešenje upotrebom JSD
-
-![](uvod/MentalnoMapiranje-2.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-
-## Zašto JSD?
-
-- JSD su koncizniji od jezika opšte namene što omogućava korisnicima da jasnije
-  iskažu svoju nameru.
-- JSD sintaksa, bilo tekstualna ili grafička, može se prilagoditi i
-  približiti domenskim ekspertima.
-- Koncepti korišćeni u JSD su koncepti problemskog (poslovnog) domena što
-  pod određenim uslovima omogućava da domenski eksperti direktno koriste JSD bez
-  posredovanja programera.
-- Upotrebom koncepata problemskog domena izbegava se ručno mapiranje na koncepte
-  ciljne implementacione platforme. Taj posao se obavlja automatski upotrebom
-  JSD prevodioca (kompajlera ili generatora koda).
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Samodokumentujući jezički iskazi.
-
----
-
-## Uticaj na kvalitet softvera
-
-- Korišćenje koncepata domena problema dovodi do smanjenja broja linija koda (u
-  terminologiji tekstualnih notacija), što ima pozitivan uticaj na brzinu
-  razvoja i jednostavnost odžavanja.
-- Smanjenje broja linija koda ide i do **50 puta** u pojedinim domenima primene.
-  Gustina softverskih grešaka (broj softverskih grešaka na hiljadu linija koda)
-  ne zavisi značajno od jezika koji se koristi.
-- Iz toga se može zaključiti da JSD kroz smanjenje broja linija koda posredno
-  utiču na smanjenje apsolutnog broja softverskih grešaka što povećava kvalitet
-  softverskog proizvoda i smanjuje cenu održavanja.
-- Prevođenje koda na ciljnu platformu (kompajliranje) će rezultovati
-  konzistentnim kodom.
-
-
----
-
-## Uticaj na evoluciju aplikacije
-
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Nije potrebno menjati jezičke iskaze (programe/modele) kada dođe do promene
-  tehnologije. Potrebno je promenu uneti u generator koda.
-  
-
----
-name: arhitekture
-layout: false
-class: center, middle
-
-# Arhitekture
-
----
-layout: true
-
-.section[[Arhitekture](#sadrzaj)]
-
----
-
-## Arhitektura bazirana na prevodiocima
-
-![:scale 60%](uvod/Arhitektura-kompajler.svg)
-
----
-
-
-## Arhitektura bazirana na interpreterima
-
-![](uvod/Arhitektura-interpreter.svg)
-
-
----
-name: gradivni
-layout: false
-class: center, middle
-
-# Gradivni elementi
-
----
-layout: true
-
-.section[[Gradivni elementi](#sadrzaj)]
-
----
-
-## Gradivni elementi JSD
-
-Kao i svaki softverski jezik i JSD se sastoji od:
-- Apstraktne sintakse
-- Jedne ili više konkretnih sintaksi
-- Semantike
-
----
-
-
-## Apstraktna sintaksa
-
-- Određuje pravila validnosti iskaza sa stanovišta njegove strukture.
-- Definiše koncepte domena, njihove osobine i međusobne relacije
-- Jezici za definisanje apstraktnih sintaksi jezika se u domenu modelovanja
-  nazivaju meta-meta-modelima.ref[1].
-
-.footer[
-1. Preciznije, meta-metamodel je apstraktna sintaksa takvog jezika. Jezik još
-    čine i konkretne sintakse i semantika.
-]
-
----
-
-## Primer - apstraktna sintaksa jezika za opis konačnih automata
-
-![:scale 90%](uvod/StateMachine.svg)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
-
----
-
-## Stablo apstraktne sintakse
-
-- Svaki iskaz na datom jeziku se može na apstraktan način opisati stablom
-  apstraktne sintakse (*Abstract Syntax Tree*).
-- Konkretna sintaksa nije važna u tom slučaju (na primer, ako posmatramo program
-  na Javi tada ključne reči nisu deo stabla apstraktne sintakse).
-
----
-
-## Primer stabla apstraktne sintakse
-
-![:scale 60%](uvod/AbstractSyntaxTree.svg)
-
-.footer[
-http://en.wikipedia.org/wiki/Abstract_syntax_tree
-]
-
----
-
-## Konkretna sintaksa
-
-- Da bi mogli da prikažemo iskaz na konkretan način potrebna nam je konkretna
-  sintaksa.
-- Konkretna sintaksa definiše *izgled* iskaza na nekom jeziku, odnosno u
-  širem smislu definiše i načine interakcije korisnika sa jezičkim iskazima tj.
-  predstavlja interfejs jezik-korisnik.
-- Iako nam je dovoljna jedna konkretna sintaksa za jedan jezik, možemo ih imati
-  više.
-  
----
-
-## Konkretna sintaksa
-
-Primer istog iskaza upotrebom dve različite konkretne sintakse
-
-![:scale 70%](uvod/RazliciteSintakse.png)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
-
----
-
-## Semantika
-
-- Definiše smisao jezičkih iskaza.
-- Iako postoje i druge tehnike u praksi se najčešće semantika definiše
-  prevođenjem (kompajliranjem tj. generisanjem koda) na jezik koji već ima
-  definisanu semantiku putem prevodioca na niže jezike ili interpretera (npr.
-  virtualne mašine).
-- Najčešće su ciljni jezici na koje se JSD prevodi jezici opšte namene.
-- *Primer:* generisanje Java programskog koda iz JSD jezičkog iskaza.
-- Jezici se prevode na sve "niže" i "niže". Gde je kraj prevođenju? Mašinski
-  jezik. Definisan u hardveru računara (procesoru).
-  
-
-
----
-name: klasifikacija
-layout: false
-class: center, middle
-
-# Klasifikacija
-
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Podela JSD prema vrsti konkretne sintakse
-
-- Tekstualni
-- Grafički
-- Tabelarni
-- Baziran na ekranskim formama
-- ...
-- Hibridni - kombinacija više osnovnih
-
----
-
-
-## Tekstualne sintakse - prednosti i mane
-
-- Programeri se osećaju "kod kuće".
-- Mogu se koristiti regularni tekst editori.
-- Serijalizovana forma je identična sa prezentacionom. se koristiti standardni
-  sistemi za kontrolu verzija (Git, Mercurial, Subversion ...).
-- Podrška u alatima: bojenje koda, dopuna koda, pretraga, navigacija...
-- Mana: Nije pogodna za opis i razumevanje strukture koja nije linearne prirode
-  (grafovi, tabele itd.).
-  
----
-
-
-## Grafičke sintakse - prednosti
-
-- Razumevanje strukture. Podržano operacijama *zoom*, *pan* i sl.
-- Često razumljivije domenskim ekspertima (najčešće je domenski jezik grafičke
-  prirode).
-- Intuitivniji i lakši za učenje - učenje kroz isprobavanje (paleta sa alatima i
-  konceptima, onemogućavanje kreiranje nevalidnih konstrukcija itd.).
-
----
-
-## Grafičke sintakse - mane
-
-- Još uvek složeniji za implementaciju i održavanje.
-- Za serijalizaciju se koristi format koji se razlikuje od prezentacionog.
-- Otežano ili potpuno nemoguće korišćenje standardnih alata za kontrolu verzija.
-  Potrebno je razviti poseban VCS alat.
-- Zahteva namenske editore.
-
----
-
-## Podela prema vrsti domena
-
-![:scale 90%](uvod/HorizontalniVertikalniDSL.svg)
-
----
-
-## Podela JSD prema načinu implementacije
-
-- **Interni** - Nastali su na bazi već postojećih programskih jezika (najčešće
-  JON).
-- **Eksterni** - Izrađeni "on nule" definisanjem sintakse i implementacijom
-  kompajlera koji prevodi programe pisane na ovom jeziku na neki drugi jezik
-  (najčešće JON) ili se program direktno interpretira.
-  
-.footer[
-  M. Fowler, *Domain-Specific Languages*. Addison-Wesley Professional, 1 ed., Oct. 2010
-]
-
----
-
-## Interni JSD
-
-- Bazirani na postojećem jeziku i alatima. Najčešće tekstualni.
-- Koriste svu infrastrukturu jezika domaćina (editore, debagere,
-  kompajlere/interpretere...).
-- Brzi za implementaciju i laki za održavanje. Popularni u pojedinim zajednicama
-  (Ruby, Groovy, Scala...).
-- Dobri kao ulaznica u svet DSL/DSM/MDE pristupa.
-- Najčešće na pametan način koriste mogućnosti jezika (anonimne funkcije,
-  meta-programiranje itd.).
-- Ograničenja konkretne sintakse.
-- Svaka namenska biblioteka može se smatrati internim JSD (API bazirani)...
-- ... ali konkretna sintaksa takvog jezika nije prilagođena domenu.
-
-
----
-
-## Eksterni JSD
-
-- Izrađeni "on nule" - skuplji razvoj i održavanje.
-- Puna kontrola konkretne sintakse - bolje prilagođavanje domenskim ekspertima.
-- Editori i svi propratni alati takođe moraju da se prave "od nule"...
-- ...mada danas postoje alati koji nam taj posao olakšavaju.
-
----
-
-## Neki od poznatijih eksternih JSD
-
-- **SQL**: tekstualni, domen - rad sa relacionim bazama podataka
-- **HTML**: tekstualni, domen - definisanje sadržaja na vebu
-- **CSS**: tekstualni, domen - stilizovanje sadržaja
-- **make**: tekstualni, domen - izgradnja aplikacije (build)
-- **LaTeX**: tekstualni, domen: kreiranje štampanih materijala (*typesetting*)
-- **Window Builder**: GUI baziran, domen - izgradnja interfejsa
-- **R**: tekstualni, domen - statistička obrada podataka
-
-
----
-
-
-## Primer: Interni JSD za definisanje email-a (*JavaMail API*)
-
-```java
-MimeMessage message = new MimeMessage(session);
-
-message.setFrom(new InternetAddress(from));
-
-message.addRecipient(Message.RecipientType.TO,
-          new InternetAddress(to));
-
-message.setSubject("Greetings from Novi Sad");
-message.setText("Enjoying my stay in Novi Sad! See you soon!");
-
-Transport.send(message);
-```
-
----
-
-
-## Primer: Hipotetički eksterni JSD za definisanje email-a
-
-```
-BEGIN myMail
-  FROM me@myself.com
-  TO myfriend@somewhere.org
-  SUBJECT Greetings  from  Novi Sad
-
-Enjoying my stay in Novi Sad! See you soon!
-
-END
-SEND myMail
-```
-
----
-
-
-## Primer
-
-Interni JSD za definisanje grafički korisničkih interfejsa (*Swing*)
-
-```java
-public DSLKurs() {
-    setBounds(100, 100, 450, 300);
-    getContentPane().setLayout(new BorderLayout());
-    contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-    getContentPane().add(contentPanel, BorderLayout.CENTER);
-    contentPanel.setLayout(new FormLayout(new ColumnSpec[ {
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            FormFactory.DEFAULT_COLSPEC,
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            ColumnSpec.decode("default:grow"),},
-                  new RowSpec[] {
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,}));
-    ....
-    
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
-
-![:scale 70%](uvod/GUIDSL-External.png)
-
----
-
-
-## Primer
-
-Interni JSD za definisanje gramatike jezika (*Arpeggio Python*)
-
-```python
-def number():     return _(r'\d*\.\d*|\d+')
-def factor():     return Optional(["+","-"]), [number,
-                          ("(", expression, ")")]
-def term():       return factor, ZeroOrMore(["*","/"], factor)
-def expression(): return term, ZeroOrMore(["+", "-"], term)
-def calc():       return OneOrMore(expression), EOF
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje gramatike jezika (*Arpeggio PEG*)
-
-```
-number = r'\d*\.\d*|\d+'
-factor = ("+" / "-")?
-        (number / "(" expression ")")
-term = factor (( "*" / "/") factor)*
-expression = term (("+" / "-") term)*
-calc = expression+ EOF
-```
+- `-np <Nmpi>` - opcija za zadavanje broja procesa OpenMPI procesa.
+- `OMP_NUM_THREADS = <Nmp>` - maksimalan broj OpenMP niti po MPI procesu
 
 ---
 layout: false
+name: primer
 class: center, middle
 
-# Konkretna sintaksa je važna!!!
-
-## Neki jezici su pogodniji za kreiranje internih JSD
+# Primer
 
 ---
 layout: true
 
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Jezici pogodni za kreiranje internih JSD
-
-- Ruby
-- Groovy
-- Scala
-- Lisp
-- ...
+.section[[Primer](#sadrzaj)]
 
 ---
 
 
-## Primer internog JSD (*Ruby Sinatra*)
+## Primer 1: Hello World!
 
-```ruby
-get '/dogs' do
-    # get a listing of all the dogs
-end
-get '/dog/:id' do
-    # just get one dog, you might find him like this:
-    @dog = Dog.find(params[:id])
-    # using the params convention, you specified in your route
-end
-post '/dog' do
-    # create a new dog listing
-end
-put '/dog/:id' do
-    # HTTP PUT request method to update an existing dog
-end
-delete '/dog/:id' do
-    # HTTP DELETE request method to remove a dog who's been sold!
-end
-```
+```c
+  int main(int argc, char *argv[]) {
+    int rank;
 
----
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-
-## Primer internog JSD (Groovy Gradle)
-
-```groovy
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    groovy fileTree(dir: new File(gradle.gradleHomeDir, 'lib'),
-                    includes: ['**/groovy­all­*.jar'])
-    compile gradleApi()
-    compile 'eu.appsatori:gradle­fatjar­plugin:0.1.3',
+  #pragma omp parallel
     {
-        ext.optional = true
+    printf("Hello World iz procesa %d i niti %d.\n", rank, omp_get_thread_num());
     }
-    testCompile 'org.spockframework:spock­core:0.6­groovy­1.8'
-}
-```
 
----
-layout: false
-class: center, middle
+    MPI_Finalize();
 
-# Eksterni JSD omogućavaju potpuno prilagođavanje domenu.
-
-
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Interni JSD za muzičku notaciju
-
-```java
-Score k = new Score(Tonality.G_major);
-Bar bar = new Bar(BarType.4_4);
-t.addPause(Duration.1_4);
-t.addNote(NoteType.A3, Duration.1_4);
-t.addNote(NoteType.C2, Duration.1_4);
-k.addBar(bar);
+    return 0;
+  }
 ```
 
 ---
 
-## Eksterni JSD za muzičku notaciju
+## MPI taksonimija interoperabilnosti niti
+- Nivoi interoperabilnosti po standardu MPI 3.1:
+	- `MPI_THREAD_SINGLE` - Samo jedna nit u MPI procesu.
+	- `MPI_THREAD_FUNNELED` - MPI proces može imati više niti, ali MPI pozive može izvršavati samo glavna nit.
+	- `MPI_THREAD_SERIALIZED` - MPI proces može imati više niti i sve niti mogu izvršavati MPI pozive, ali pozivi ne mogu biti izvršavani konkurentno iz dve različite niti, nego se serijalizuju.
+	- `MPI_THREAD_MULTIPLE` - MPI proces može imati više niti, niti mogu izvršavati MPI pozive bez ograničenja.
 
-U eksternoj varijanti možemo u potpunosti prilagoditi konkretnu sintaksu
-domenskim ekspertima.
-
-.center[
-![:scale 80%](uvod/MusicNotation-External.png)
-]
-
----
-
-## Lilypond note script
-
-Ali se dešava da i u eksternoj varijanti JSD nije prilagođen domenskim
-ekspertima.
-
-![](uvod/Lilypond.png)
+- **Direktna razmena poruka podržana samo između procesa - ne može se eksplicitno adresirati nit.**
 
 ---
 
-## Kritike JDS
+## MPI taksonimija interoperabilnosti niti
 
-- Skup razvoj i održavanje jezika.
-- Potreba za ekspertima u domenu razvoja jezika koji su istovremeno sposobni da
-  analiziraju domen primene.
-- Jezička "kakofonija" (*Language Cacophony* .ref[1])i potreba da programeri
-  poznaju veliki broj jezika (poseban jezik za svaki tehnički i/ili poslovni
-  domen).
+![](img/hibrid2.png)
 
+---
+
+
+## MPI taksonimija interoperabilnosti niti
+
+Nemaju sve MPI implementacije isti nivo podrške za rad sa više niti. `MPI_init_thread`.ref[2] umesto `MPI_Init`..ref[1]
+```c
+int MPI_Init_thread(int *argc, char ***argv, int required, int *provided)
+```
+- (ulazni parametar)
+```c
+required := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MPI_THREAD_MULTIPLE
+```
+- (izlazni parametar)
+```c
+provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MPI_THREAD_MULTIPLE
+```
+
+.footer.medium[
+<a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v3.1/man3/MPI_Init.3.php">1. MPI_Init</a><br>
+<a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v3.1/man3/MPI_Init_thread.3.php">2. MPI_Init_thread</a>
+] 
+
+---
+
+## Performanse hibridnog rešenja
+
+<br><br><br><br>
+> "Consider going hybrid only if pure MPI scalability is not satisfactory." .ref[*]
+
+
+  
 .footer[
-    M. Fowler, *Language workbenches: The killer-app for domain specific
-        languages*, Online
-        http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
+\* Preuzeto iz knjige "Introduction to High Performance Computing for Scientists and Engineers" 
+]
+
+---
+
+## Performanse hibridnog rešenja
+
+<br><br><br>
+- ... veoma zavise od broja procesa, broja niti u okviru procesa, MPI i MP implementacije, arhitekture na kojoj se hibridni program pokreće, same implementacije rešenja, itd. ...
+
+---
+
+## Prednosti i mane hibridnih rešenja
+
+
+.lcol[
+
+- Bolje iskorišćenje keša.
+- Eksploatisanje dodatnih nivoa paralelizma u odnosu na čisto MPI rešenje.
+- Smanjenje vremena izvršavanja preklapanjem komunikacije i računanja.
+- ...
+]
+
+.rcol[
+
+- MNOGO zahtevnije za pisanje više posla oko osmišljavanja rešenja, pisanja koda bez štetnog preplitanja, mnogo više potencijalnih mesta za pravljenje neefikasnog rešenja usled korišćenja dva različita programska modela.
+- Često je nemoguće inkrementalno napraviti hibridno rešenje od nehibridnog rešenja - zahteva pisanje rešenja od početka.
+- ...
 ]
 
 
 ---
-name: radionice
+
+## Alternativne tehnologije
+
+- MPI za komunikaciju između čvorova, MPI 3.0 model za deljenu memoriju
+- MPI za komunikaciju između čvorova, pthreads model za deljenu memoriju
+- ...
+
+---
+
 layout: false
+name: zadaci
 class: center, middle
 
-# Jezičke radionice
+# Zadaci
 
 ---
 layout: true
 
-.section[[Jezičke radionice](#sadrzaj)]
+.section[[Zadaci](#sadrzaj)]
 
 ---
 
+## Zadatak 1: Računanje broja π
 
-## Jezičke radionice (*Language Workbenches*)
+- Implementirati čisto OpenMPI i hibridno OpenMP-OpenMPI rešenje za računanje broja π računanjem vrednosti integrala
 
-- Integrisana okruženja za razvoj, testiranje i evoluciju jezika i alata za
-  njihovo efikasno korišćenje (editori, interpreteri, kompajleri i sl.). Koriste
-  se kod paradigme razvoja orijentisane ka jezicima (*Language Oriented
-  Programming - LOP*).ref[*]
-- Rešavaju problem brzine razvoja i lakoće održavanja JSD.
-- Primeri jezičkih radionica:
-  - Meta Programming System (MPS)
-  - Xtext
-  - Spoofax
+![:scale 15%](img/integral.png)
 
-.footer[
-\* M. Fowler, *Language workbenches: The killer-app for domain specific
-   languages*, Online
-   http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
+- Sekvencijalna i OpenMP verzija programa su date u direktorijumu resenja.
+	- Porediti vreme izvršavanja hibridnog rešenja sa vremenom izvršavanja OpenMP ubrzanog rešenja.
+	- Meriti vreme izvršavanja hibridnog rešenja za različite kombinacije broja OpenMPI procesa i OpenMP niti.
+
+.attention[
+**Preporuka**: Implementirati OpenMPI verziju programa na osnovu sekvencijalnog rešenja, pa je proširiti OpenMP direktivama.
 ]
 
 
 ---
 
-## Pristupi
+## Zadatak 2: Pretraga niza brojeva
 
-.medium[
-- Projekcione radionice - direktna izmena apstraktne reprezentacije kroz
-  projekciju.
- 
-  ![:scale 45%](uvod/projekcija.svg)
-  
-- Bazirane na parserima - izmena se vrši posredno kroz tekst koji se parsira da
-  bi se dobila apstraktna reprezentacija.
+- Implementirati sekvencijalno i hibridno OpenMPI-OpenMP rešenje za pretragu niza celih brojeva minimalne dužine milion elemenata.
+- Elemente niza generisati nasumično iz intervala [-100, 100].
+	- Meriti vreme izvršavanja hibridnog rešenja za različite kombinacije broja OpenMPI procesa i OpenMP niti.
+	- Opciono implementirati čisto OpenMPI i čisto OpenMP rešenje i porediti performanse ovih rešenja porediti sa performnsama hibridnog rešenja
 
-  ![:scale 80%](uvod/parseri.svg)
-
-]
-
-.footer[
-.small[Eye icon designed by Freepik. Hand icon by Yannick Lung.]
+.attention[
+**Preporuka**: Implementirati OpenMPI verziju programa na osnovu sekvencijalnog rešenja, pa je proširiti OpenMP direktivama.
 ]
 
 ---
 
-## Projekcione radionice
+## Zadatak 3: Množenje matrica - domaći
 
-- Prednosti:
-  - Moguće višestruke konkretne sintakse (tekstualne, grafičke, tabelarne...) -
-    bolje prilagođavanje konkretnom domenu.
-  - Sintakse se mogu "u letu" menjati.
-  - Kontrola validnosti izraza u vreme izmene modela.
-
-- Mane:
-  - Složenost alata.
-  - Format za perzistenciju nije u vezi sa konkretnim sintaksama koje korisnik
-    koristi. Nemoguće je koristiti standardne sisteme za kontrolu verzija
-    bazirane na tekstu.
-  - Moraju se razviti namenski generički editori za svaku klasu konkretnih sintaksi.
-  
----
-
-## Radionice bazirane na parserima
-
-- Prednosti:
-  - Jednostavnije za izradu i održavanje.
-  - Teorija parsiranja dobro ustanovljena. Veliki broj biblioteka za parsiranje.
-  - Moguće koristiti obične tekstualne editore.
-  - Moguće koristiti standardne sisteme za kontrolu verzija (npr. git,
-    subversion).
-  - Jednostavno kopiranje i lepljenje (eng. *copy/paste*).
-
-- Mane:
-  - Moguća samo tekstualna sintaksa -> ograničeno prilagođavanje domenu.
-  - Provera validnosti se odlaže do faze parsiranja.
-  
----
-
-## *Meta Programming System (MPS)*
-
-- JetBrains - http://www.jetbrains.com/mps/
-- Projekciona jezička radionica - editori manipulišu direktno apstraktnom
-  reprezentacijom (stablom apstraktne sintakse). Čak i u slučaju tekstualnih
-  notacija.
-- Podrška za različite konkretne sintakse (notacije): tabelarne, tekstualne,
-  bazirani na ćelijama, grafičke.
-- Podrška za kontrolu verzija.
+- Implementirati hibridno OpenMP-OpenMPI rešenje u C programskom jeziku za množenje dve kvadratne matrice na osnovu OpenMPI i OpenMP rešenja zadataka sa prethodnih vežbi.
+- Pretpostaviti da jedan MPI proces distribuira delove matrice preostalim procesima. Kostur rešenja koji je potrebno popuniti se nalazi u direktrijumu MatrixMultiplicationHybrid.
+	- Rezultujuću matricu sačuvati u h5 formatu u datoteci pod nazivom result<nxn>.h5, gde se <nxn> menja dimenzijama matrice koja predstavlja rešenje.
+	- Meriti vreme izvršavanja hibridnog, OpenMP i OpenMPI rešenja i zabeležiti ih u priloženu datoteku statistika.csv.
 
 ---
 
-## *Meta Programming System* - karakterističan izgled
+## Zadatak 3: Množenje matrica - domaći
 
-![:scale 70%](uvod/MPS.png)
+- Meriti vreme izvršavanja hibridnog rešenja za različite kombinacije broja MPI procesa i OpenMP niti. U slučaju da se rešenje isprobava na računaru sa soketom i više jezgara, probati sledeće kombinacije:
+	- Po jedan MPI proces za svako logičko jezgro
+	- Po jedan MPI proces za svako fizičko jezgro i po jedna nit za svako logičko jezgro.
+	- Jedan MPI proces i po jedna nit za svako logičko jezgro.
 
-.footer[
-http://www.jetbrains.com/mps/docs/tutorial.html
-]
+- Po želji dodati još različitih konfiguracija i rezultate upisati u statistika.csv. Analizirati dobijene rezultate.
+- Pri analizi performansi rešenja može pomoći poglavlje 11 knjige "Introduction to high performance computing for Scientists and Engineers."
+
 
 ---
 
-## Xtext
+layout: false
 
-- Nastao kao deo projekta slobodnog softvera - *openArchitectureWare*.
-- Iza razvoja u najvećoj meri stoji nemačka
-  firma [Itemis](https://www.itemis.com/en/).
-- Postao deo Eclipse projekta.
-- Tekstualne sintakse. EBNF-like gramatika.
-- Upotreba ECore meta-metamodela.ref[1]. Meta-model se generiše iz gramatike a
-  može da koristi i već postojeći meta-model.
-- Generisanje Eclipse editora sa podrškom za bojenje sintakse, navigaciju,
-  *outline* pogled itd.
-- Xtext bazirani JSD se duboko integriše u Eclipse okruženje i teško je uočiti
-  razliku sa podrškom za bilo koji drugi jezik sa Eclipse podrškom (npr. Java).
+## Materijali
 
-.footer[
-http://www.eclipse.org/modeling/emf/
-]
+Georg Hager, Gerhard Wellein, "Introduction to High Performance Computing for Scientists and Engineers"
+[MPI 3.1 standard, poglavlje 12.4](https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)
+[OpenMP dokumentacija](https://www.open-mpi.org/doc/)
+[OpenMP SC13 Tutorial: Hybrid MPI and OpenMP Parallel Programming](https://www.openmp.org/press-release/sc13-tutorial-hybrid-mpi-openmp-parallel-programming/)
 
----
-
-## Xtext - *Little tortoise* jezik
-
-.center[
-![:scale 70%](uvod/xText-tortoise.png)
-]
-
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
-]
-
----
-
-
-## Xtext - *Little tortoise* gramatika
-
-.center[
-![:scale 75%](uvod/xText-grammar.png)
-]
-
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
-]
-
----
-
-## Xtext - primeri
-
-Za dokumentaciju sa primerom izgradnje 7 različitih jezika pogledati http://www.eclipse.org/Xtext/7languagesDoc.html
-
----
-
-## Spoofax
-
-- Kao i Xtext baziran na parsiranju i tekstualnim sintaksama. Kreira punu
-  podršku za jezik u vidu Eclipse priključaka.
-- Istraživački projekat na TU Delft u Holandiji.
-- Gramatika jezika se definiše meta-jezikom SDF (*Syntax Definition Formalism*).
-- Parser koristi SGLR algoritam (*Scanerless GLR*) i omogućava parsiranje punog
-  skupa kontekstno slobodnih gramatika. U slučaju neodređenosti parser vraća
-  šumu parsiranja (*parse forest*) dok u slučaju determinističke gramatike vraća
-  uvek stablo parsiranja (*parse tree*).
-- Za tranformaciju programa i prepisivanje stabala koristi se JSD *Stratego*.
-
----
-
-## Spoofax - karakterističan izgled
-
-![:scale 80%](uvod/Spoofax-prikaz.png)
-
----
-
-## Inženjerstvo softverskih jezika
-
-- *Software Language Engineering - SLE*.
-- Pravac i pogled na razvoj softverskih jezika koji pokušava da ujedini sve
-  druge pravce koji u osnovi imaju razvoj i upotrebu softverskih jezika
-  (*MDE/MDA/DSM*.., ontologije, *grammarware*, *Language Oriented
-  Programming*...).
-- Jedna od ideja je izjednačavanje modela i programa - kao jedinstven naziv
-  predložen je *mogram*.ref[*].
-
-.footer[
-  `*` A. Kleppe, *Software language engineering: creating domain-specific
-  languages using metamodels*. Addison-Wesley, 2009
-]
-
----
-
-## Literatura
-
-- M. Völter, [DSL Engineering: Designing, Implementing and Using
-  Domain-Specific Languages](http://dslbook.org/). 2013
-- S. Kelly and J.-P. Tolvanen, *Domain-Specific Modeling: Enabling Full Code
-  Generation*. Wiley-IEEE Computer Society Pr, March 2008
-- Federico Tomassetti, [*The complete guide to (external) Domain Specific
-  Languages*](https://tomassetti.me/domain-specific-languages/), published
-  on [the author's blog](https://tomassetti.me/), February 2017.
-- I.
-  Dejanović,
-  [Prilog metodama brzog razvoja softvera na bazi proširivih jezičkih specifikacija](http://doiserbia.nb.rs/phd/fulltext/NS20110103DEJANOVIC.pdf).
-  PhD thesis, Faculty of Technical Sciences, University of Novi Sad, January
-  2012
 
 
 

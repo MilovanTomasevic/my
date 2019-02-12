@@ -48,7 +48,7 @@ class: center, middle
 
 
 
-.created[04.02.2019 u 19:09]
+.created[11.02.2019 u 20:21]
 
 
 ---
@@ -58,990 +58,530 @@ name: sadrzaj
 
 # Sadržaj
 
-- [Problem i motivacija](#motivacija)
-- [Primeri](#primeri)
-- [Prednosti](#prednosti)
-- [Arhitekture](#arhitekture)
-- [Gradivni elementi](#gradivni)
-- [Klasifikacija](#klasifikacija)
-- [Jezičke radionice](#radionice)
+- [OpenACC](#acc)
+- [kernels direktiva](#kd)
+- [parallel direktiva](#pd)
+- [loop direktiva](#ld)
+- [Model](#model)
+- [data direktiva](#dd)
+- [Zadaci](#zad)
+
 
 ---
-name: motivacija
+name: acc
 class: center, middle
 
-# Problem i motivacija
+# OpenACC
 
 ---
 layout: true
 
-.section[[Motivacija](#sadrzaj)]
+.section[[OpenACC](#sadrzaj)]
+
+---
+## Šta je OpenACC
+
+- API za prebacivanje izvršavanja delova koda na **akcelerator**.
+- Obuhvata:
+	- direktive (`pragma acc <direktiva>`)
+	- promenljive okruženja (eng. *runtime environment variables*)
+	- bibliotečke rutine (eng. *library routines*)
+- Podrška za C, C++ i Fortran.
+- Konceptualno veoma sličan OpenMP.
 
 ---
 
-## Šta je jezik?
-            
-- Komunikacija misli i osećanja sistemom znakova kao što su zvuci, gestovi ili
-  pisani simboli .ref[1].
-- Sistem znakova, simbola, gestova i pravila koji se koriste u komunikaciji
-  .ref[2].
-  
-.footer[
-1. http://www.thefreedictionary.com/language
-2. http://oxforddictionaries.com/definition/english/language
-]
-            
----
+## Ciljna arhitektura
 
-## Šta je softverski jezik?
-            
-- Jezik korišćen u komunikaciji čovek-računar ili računar-računar.
-- U varijanti čovek-računar težimo da jezik bude lak za razumevanje od strane
-  čoveka ali ipak da može da se procesira na efikasan način od strane računara.
-- U kontekstu razvoj softvera dve su uloge jezika:
-  - *preskriptivna* - za opis budućih sistema
-  - *deskriptivna* - za opis postojećih sistema
-  
----
+- Akceleratori.
 
-## Šta domen?
+.lcol[
 
-- Sfera delovanja, interesa ili funkcije .ref[1].
-- Oblast znanja, uticaja, ili delovanja .ref[2].
-- Da bi se domensko znanje moglo procesirati i da bi mogli komunicirati u
-  određenom domenu korisno je definisati ontologiju domena koja opisuje koncepte
-  domena i njihove međusobne veze.
-- Primer domena: osiguranje, zdravstvo, finansije, saobraćaj...
-- Domeni mogu sadržati poddomene. Na primer, ako je posmatrani domen problema
-  osiguranje, poddomeni mogu biti životno osiguranje, osiguranje vozila,
-  osiguranje nekretnina i sl.
-
-.footer[
-1. http://www.thefreedictionary.com/domain
-2. http://www.merriam-webster.com/dictionary/domain
+![:scale 75%](img/acc2.png)
 ]
 
----
+.rcol[
 
-## Jezici specifični za domen - JSD (*Domain-Specific Languages - DSL*)
+![:scale 110%](img/acc.jpg)
 
-- Jezici specifični za domen (JSD, eng. *Domain-Specific Languages - DSL*)
-  su jezici prilagođeni i ograničeni na određeni domen problema.
-- Za razliku od jezika opšte namene (JON, eng. *General Purpose Language -
-  GPL*), nude povećanje ekspresivnosti kroz upotrebu koncepata i notacija
-  prilagođenih domenu problema i domenskim ekspertima.
-- Nazivaju se još i *mali jezici* (eng. *little languages*).
-- Uspešan JSD je fokusiran na uzak, dobro definisan domen i pokriva ga na
-  odgovarajući način.
-- Domen često ima svoj jezik korišćen od strane domenskih eksperata iako ne
-  postoji njegova implementacija na računaru.
+]
 
-  
----
-name: primeri
-layout: false
-class: center, middle
-
-# Primeri
-
----
-layout: true
-
-.section[[Primeri](#sadrzaj)]
+<br><br><br><br><br><br><br><br><br>
+- U laboratoriji ćemo kao akcelerator koristiti **Nvidia Quadro** grafičke kartice.
 
 ---
 
-## SQL
+## OpenACC kompajleri
 
-```sql
-SELECT player, stadium
-    FROM game JOIN goal ON (id=matchid)
+![:scale 90%](img/compile.png)
+
+- Na vežbama ćemo koristiti GNU GCC kompajler.
+
+.footer.medium[
+[Izvor - OpenACC](https://www.openacc.org/tools)
+] 
+
+---
+
+## Kompajliranje OpenACC programa
+
+- Pozicionirati se u direktorijum u kojem se nalazi datoteka sa OpenACC kodom i u terminalu uneti:
+```console
+gcc -o izvrsna_dat izvorna_dat.c -fopenacc
+```
+
+- Za pokretanje programa, pozicionirati se u direktorijum u kojem je izvršna datoteka i uneti `./izvrsna_dat`.
+- Ukoliko program poziva neku od OpenACC funkcija (naziv počinje sa acc_), u izvornu datoteku je potrebno dodati i
+```c
+#include <openacc.h>
 ```
 
 ---
 
-## JPA mapiranje
+## Terminologija
 
-```java
-@Entity
-@Table(name="COURSES")
-public class Course {
+- **Domaćin** (eng. *Host*) - centralna procesna jedinica sa svojom hijerarhijom memorije.
+- **Akselerator** (eng. *Accelerator* ili *Device*) - akseleratorski uređaj, npr. grafička kartica.
+- **Paralelni region** - Deo koda obeležen za izvršavanje na akceleratorskom uređaju sa pridruženim strukturama podataka. Obuhvata regione koda obeležene `parallel` i `kernels` direktivama (drugačije će se zvati i računski regioni).
 
-  private long courseId;
-  private String courseName;
+---
 
-  public Course() {
-  }
+## OpenACC model izvršavanja
 
-  public Course(String courseName) {
-    this.courseName = courseName;
-  }
+![:scale 50%](img/accModel.jpg)
 
-  @Id
-  @GeneratedValue
-  @Column(name="COURSE_ID")
-  public long getCourseId() {
-    return this.courseId;
-  }
-}
+.center[
+`Figure`: Konceptualna arhitektura akseleratora.ref[*]
+]
+
+OpenACC podržava tri nivoa paralelizma: `gang, worker, vector`
+
+.footer.medium[
+  [* Link](https://www.sciencedirect.com/topics/computer-science/target-machine)
+]
+
+---
+
+## OpenACC model izvršavanja
+
+Opšti format OpenACC direktive:
+
+```c
+#pragma acc <directive> [clause-list] new-line
+structured block
 ```
+- Direktive za obeležavanje paralelnog koda:
+	- `kernels`
+	- `parallel`
 
 ---
-
-## Build jezici (Ant/Maven/Gradle)
-
-![](uvod/Ant-Maven-Gradle.png)
-
----
-
-## Poslovni procesi - BPMN
-
-![](uvod/BPMN.png)
-
----
-
-## Mobilne aplikacije
-
-![:scale 70%](uvod/MobilneAplikacije.png)
-
-.footer[
-  Kelly, S. & Tolvanen, J.-P. *Domain-Specific Modeling: Enabling Full Code
-    Generation*, Wiley-IEEE Computer Society Pr, 2008
-]
-            
----
-
-## Ali i...
-
-![:scale 70%](uvod/MusicNotation-External.png)
-
----
-
-## ili...
-
-![:scale 70%](uvod/ChessNotation.png)
-
-
----
-
-## pa čak i...
-
-![:scale 50%](uvod/saobracajni-znaci.jpg)
-
-
----
-
-## Kada jezik smatramo JSD-om?
-
-- Zavisi od toga šta nam je domen.
-- Jezik može biti više ili manje prilagođen nekom domenu.
-- U ekstremnom slučaju i opšti jezik kao što je Java možemo smatrati JSD-om ako
-  nam je domen "razvoj softvera". Naravno, iako tačno u teorijskom smislu, u
-  praktičnom gubimo sve prednosti JSD.
-- Dobar JSD pokriva uzak, dobro definisan domen (domen problema). Koristi samo
-  koncepte ciljnog domena, ograničen je na dati domen i samim tim je iskazivanje
-  rešenja jezgrovitije i jasnije domenskim ekspertima.
-- Čest je slučaj da jezik nastane kao JSD ali se vremenom proširi do te mere da
-  ga možemo smatrati JON.
-
-
----
-name: prednosti
 layout: false
+name: kd
 class: center, middle
 
-# Prednosti
+# kernels direktiva
 
 ---
 layout: true
-
-.section[[Prednosti](#sadrzaj)]
+.section[[kernels direktiva](#sadrzaj)]
 
 ---
 
+## kernels direktiva
 
-## Uticaj na produktivnost
+- Označava deo koda koji može biti preveden za izvršavanje na akceleratoru pravljenjem jednog ili više kernela. 
+- Kompajler odlučuje `šta` će i `kako` će paralelizovati.
+```c
+#pragma acc kernels [clause-list] new-line
+structured block
+```
+- Neke od klauzula (parametri nisu navedeni):
 
-- Pojedine studije pokazuju da povećanje produktivnosti ide i do 1000% .ref[1].
-- Šta je osnovni razlog za povećanje produktivnosti?
- 
-.footer[
-MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
-]
-  
-  
----
+.lcol[
 
-## Problem mentalnog mapiranja
-
-![](uvod/MentalnoMapiranje-1.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
+- async
+- copyin
+- wait
 ]
 
----
-
-## Rešenje upotrebom JSD
-
-![](uvod/MentalnoMapiranje-2.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-
-## Zašto JSD?
-
-- JSD su koncizniji od jezika opšte namene što omogućava korisnicima da jasnije
-  iskažu svoju nameru.
-- JSD sintaksa, bilo tekstualna ili grafička, može se prilagoditi i
-  približiti domenskim ekspertima.
-- Koncepti korišćeni u JSD su koncepti problemskog (poslovnog) domena što
-  pod određenim uslovima omogućava da domenski eksperti direktno koriste JSD bez
-  posredovanja programera.
-- Upotrebom koncepata problemskog domena izbegava se ručno mapiranje na koncepte
-  ciljne implementacione platforme. Taj posao se obavlja automatski upotrebom
-  JSD prevodioca (kompajlera ili generatora koda).
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Samodokumentujući jezički iskazi.
-
----
-
-## Uticaj na kvalitet softvera
-
-- Korišćenje koncepata domena problema dovodi do smanjenja broja linija koda (u
-  terminologiji tekstualnih notacija), što ima pozitivan uticaj na brzinu
-  razvoja i jednostavnost odžavanja.
-- Smanjenje broja linija koda ide i do **50 puta** u pojedinim domenima primene.
-  Gustina softverskih grešaka (broj softverskih grešaka na hiljadu linija koda)
-  ne zavisi značajno od jezika koji se koristi.
-- Iz toga se može zaključiti da JSD kroz smanjenje broja linija koda posredno
-  utiču na smanjenje apsolutnog broja softverskih grešaka što povećava kvalitet
-  softverskog proizvoda i smanjuje cenu održavanja.
-- Prevođenje koda na ciljnu platformu (kompajliranje) će rezultovati
-  konzistentnim kodom.
-
-
----
-
-## Uticaj na evoluciju aplikacije
-
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Nije potrebno menjati jezičke iskaze (programe/modele) kada dođe do promene
-  tehnologije. Potrebno je promenu uneti u generator koda.
-  
-
----
-name: arhitekture
-layout: false
-class: center, middle
-
-# Arhitekture
-
----
-layout: true
-
-.section[[Arhitekture](#sadrzaj)]
-
----
-
-## Arhitektura bazirana na prevodiocima
-
-![:scale 60%](uvod/Arhitektura-kompajler.svg)
-
----
-
-
-## Arhitektura bazirana na interpreterima
-
-![](uvod/Arhitektura-interpreter.svg)
-
-
----
-name: gradivni
-layout: false
-class: center, middle
-
-# Gradivni elementi
-
----
-layout: true
-
-.section[[Gradivni elementi](#sadrzaj)]
-
----
-
-## Gradivni elementi JSD
-
-Kao i svaki softverski jezik i JSD se sastoji od:
-- Apstraktne sintakse
-- Jedne ili više konkretnih sintaksi
-- Semantike
-
----
-
-
-## Apstraktna sintaksa
-
-- Određuje pravila validnosti iskaza sa stanovišta njegove strukture.
-- Definiše koncepte domena, njihove osobine i međusobne relacije
-- Jezici za definisanje apstraktnih sintaksi jezika se u domenu modelovanja
-  nazivaju meta-meta-modelima.ref[1].
-
-.footer[
-1. Preciznije, meta-metamodel je apstraktna sintaksa takvog jezika. Jezik još
-    čine i konkretne sintakse i semantika.
-]
-
----
-
-## Primer - apstraktna sintaksa jezika za opis konačnih automata
-
-![:scale 90%](uvod/StateMachine.svg)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
-
----
-
-## Stablo apstraktne sintakse
-
-- Svaki iskaz na datom jeziku se može na apstraktan način opisati stablom
-  apstraktne sintakse (*Abstract Syntax Tree*).
-- Konkretna sintaksa nije važna u tom slučaju (na primer, ako posmatramo program
-  na Javi tada ključne reči nisu deo stabla apstraktne sintakse).
-
----
-
-## Primer stabla apstraktne sintakse
-
-![:scale 60%](uvod/AbstractSyntaxTree.svg)
-
-.footer[
-http://en.wikipedia.org/wiki/Abstract_syntax_tree
-]
-
----
-
-## Konkretna sintaksa
-
-- Da bi mogli da prikažemo iskaz na konkretan način potrebna nam je konkretna
-  sintaksa.
-- Konkretna sintaksa definiše *izgled* iskaza na nekom jeziku, odnosno u
-  širem smislu definiše i načine interakcije korisnika sa jezičkim iskazima tj.
-  predstavlja interfejs jezik-korisnik.
-- Iako nam je dovoljna jedna konkretna sintaksa za jedan jezik, možemo ih imati
-  više.
-  
----
-
-## Konkretna sintaksa
-
-Primer istog iskaza upotrebom dve različite konkretne sintakse
-
-![:scale 70%](uvod/RazliciteSintakse.png)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
-
----
-
-## Semantika
-
-- Definiše smisao jezičkih iskaza.
-- Iako postoje i druge tehnike u praksi se najčešće semantika definiše
-  prevođenjem (kompajliranjem tj. generisanjem koda) na jezik koji već ima
-  definisanu semantiku putem prevodioca na niže jezike ili interpretera (npr.
-  virtualne mašine).
-- Najčešće su ciljni jezici na koje se JSD prevodi jezici opšte namene.
-- *Primer:* generisanje Java programskog koda iz JSD jezičkog iskaza.
-- Jezici se prevode na sve "niže" i "niže". Gde je kraj prevođenju? Mašinski
-  jezik. Definisan u hardveru računara (procesoru).
-  
-
-
----
-name: klasifikacija
-layout: false
-class: center, middle
-
-# Klasifikacija
-
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Podela JSD prema vrsti konkretne sintakse
-
-- Tekstualni
-- Grafički
-- Tabelarni
-- Baziran na ekranskim formama
+.rcol[
+- copyout
+- copy
 - ...
-- Hibridni - kombinacija više osnovnih
+]
+
 
 ---
 
 
-## Tekstualne sintakse - prednosti i mane
+## Primer 1: kernel.c
 
-- Programeri se osećaju "kod kuće".
-- Mogu se koristiti regularni tekst editori.
-- Serijalizovana forma je identična sa prezentacionom. se koristiti standardni
-  sistemi za kontrolu verzija (Git, Mercurial, Subversion ...).
-- Podrška u alatima: bojenje koda, dopuna koda, pretraga, navigacija...
-- Mana: Nije pogodna za opis i razumevanje strukture koja nije linearne prirode
-  (grafovi, tabele itd.).
-  
----
+```c
+int main() {
 
+	/* ... */
+	#pragma acc kernels
+	{
+		for(i = 0; i < MATRIX_SIZE; i++)
+			for(j = 0; j < MATRIX_SIZE; j++)
+				randomMatrix[i * MATRIX_SIZE + j] =
+				randomMatrix[i * MATRIX_SIZE + j] * 2;
+	}
 
-## Grafičke sintakse - prednosti
+	return 0;
+}
 
-- Razumevanje strukture. Podržano operacijama *zoom*, *pan* i sl.
-- Često razumljivije domenskim ekspertima (najčešće je domenski jezik grafičke
-  prirode).
-- Intuitivniji i lakši za učenje - učenje kroz isprobavanje (paleta sa alatima i
-  konceptima, onemogućavanje kreiranje nevalidnih konstrukcija itd.).
+```
 
 ---
 
-## Grafičke sintakse - mane
+## Primer 2: ptraliasing.c
 
-- Još uvek složeniji za implementaciju i održavanje.
-- Za serijalizaciju se koristi format koji se razlikuje od prezentacionog.
-- Otežano ili potpuno nemoguće korišćenje standardnih alata za kontrolu verzija.
-  Potrebno je razviti poseban VCS alat.
-- Zahteva namenske editore.
+```c
+void assign(int *a, int *b, int size) {
+	#pragma acc kernels
+	{
+		for (int i = 0; i < size - 1; i++)
+			a[i] = b[i + 1];
+	}
+}
+``` 
 
----
-
-## Podela prema vrsti domena
-
-![:scale 90%](uvod/HorizontalniVertikalniDSL.svg)
-
----
-
-## Podela JSD prema načinu implementacije
-
-- **Interni** - Nastali su na bazi već postojećih programskih jezika (najčešće
-  JON).
-- **Eksterni** - Izrađeni "on nule" definisanjem sintakse i implementacijom
-  kompajlera koji prevodi programe pisane na ovom jeziku na neki drugi jezik
-  (najčešće JON) ili se program direktno interpretira.
-  
-.footer[
-  M. Fowler, *Domain-Specific Languages*. Addison-Wesley Professional, 1 ed., Oct. 2010
+.attention[
+**Pitanje**: Kada se koristi kernels direktiva, kompajler pronalazi delove koda koji su bezbedni za paralelizaciju, odnosno, u kojima nema zavisnosti među podacima. Šta mislite, da li bi OpenACC kompajler preveo ovo u kod za paralelno izvršavanje?
 ]
 
 ---
 
-## Interni JSD
-
-- Bazirani na postojećem jeziku i alatima. Najčešće tekstualni.
-- Koriste svu infrastrukturu jezika domaćina (editore, debagere,
-  kompajlere/interpretere...).
-- Brzi za implementaciju i laki za održavanje. Popularni u pojedinim zajednicama
-  (Ruby, Groovy, Scala...).
-- Dobri kao ulaznica u svet DSL/DSM/MDE pristupa.
-- Najčešće na pametan način koriste mogućnosti jezika (anonimne funkcije,
-  meta-programiranje itd.).
-- Ograničenja konkretne sintakse.
-- Svaka namenska biblioteka može se smatrati internim JSD (API bazirani)...
-- ... ali konkretna sintaksa takvog jezika nije prilagođena domenu.
-
-
----
-
-## Eksterni JSD
-
-- Izrađeni "on nule" - skuplji razvoj i održavanje.
-- Puna kontrola konkretne sintakse - bolje prilagođavanje domenskim ekspertima.
-- Editori i svi propratni alati takođe moraju da se prave "od nule"...
-- ...mada danas postoje alati koji nam taj posao olakšavaju.
-
----
-
-## Neki od poznatijih eksternih JSD
-
-- **SQL**: tekstualni, domen - rad sa relacionim bazama podataka
-- **HTML**: tekstualni, domen - definisanje sadržaja na vebu
-- **CSS**: tekstualni, domen - stilizovanje sadržaja
-- **make**: tekstualni, domen - izgradnja aplikacije (build)
-- **LaTeX**: tekstualni, domen: kreiranje štampanih materijala (*typesetting*)
-- **Window Builder**: GUI baziran, domen - izgradnja interfejsa
-- **R**: tekstualni, domen - statistička obrada podataka
-
-
----
-
-
-## Primer: Interni JSD za definisanje email-a (*JavaMail API*)
-
-```java
-MimeMessage message = new MimeMessage(session);
-
-message.setFrom(new InternetAddress(from));
-
-message.addRecipient(Message.RecipientType.TO,
-          new InternetAddress(to));
-
-message.setSubject("Greetings from Novi Sad");
-message.setText("Enjoying my stay in Novi Sad! See you soon!");
-
-Transport.send(message);
-```
-
----
-
-
-## Primer: Hipotetički eksterni JSD za definisanje email-a
-
-```
-BEGIN myMail
-  FROM me@myself.com
-  TO myfriend@somewhere.org
-  SUBJECT Greetings  from  Novi Sad
-
-Enjoying my stay in Novi Sad! See you soon!
-
-END
-SEND myMail
-```
-
----
-
-
-## Primer
-
-Interni JSD za definisanje grafički korisničkih interfejsa (*Swing*)
-
-```java
-public DSLKurs() {
-    setBounds(100, 100, 450, 300);
-    getContentPane().setLayout(new BorderLayout());
-    contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-    getContentPane().add(contentPanel, BorderLayout.CENTER);
-    contentPanel.setLayout(new FormLayout(new ColumnSpec[ {
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            FormFactory.DEFAULT_COLSPEC,
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            ColumnSpec.decode("default:grow"),},
-                  new RowSpec[] {
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,}));
-    ....
-    
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
-
-![:scale 70%](uvod/GUIDSL-External.png)
-
----
-
-
-## Primer
-
-Interni JSD za definisanje gramatike jezika (*Arpeggio Python*)
-
-```python
-def number():     return _(r'\d*\.\d*|\d+')
-def factor():     return Optional(["+","-"]), [number,
-                          ("(", expression, ")")]
-def term():       return factor, ZeroOrMore(["*","/"], factor)
-def expression(): return term, ZeroOrMore(["+", "-"], term)
-def calc():       return OneOrMore(expression), EOF
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje gramatike jezika (*Arpeggio PEG*)
-
-```
-number = r'\d*\.\d*|\d+'
-factor = ("+" / "-")?
-        (number / "(" expression ")")
-term = factor (( "*" / "/") factor)*
-expression = term (("+" / "-") term)*
-calc = expression+ EOF
-```
-
----
 layout: false
+name: pd
 class: center, middle
 
-# Konkretna sintaksa je važna!!!
-
-## Neki jezici su pogodniji za kreiranje internih JSD
+# parallel direktiva
 
 ---
 layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
+.section[[parallel direktiva](#sadrzaj)]
 
 ---
 
-## Jezici pogodni za kreiranje internih JSD
+## parallel direktiva
 
-- Ruby
-- Groovy
-- Scala
-- Lisp
+- Označava deo koda koji će biti preveden za izvršavanje na akceleratoru. 
+Kompajler određuje **kako** će segment koda biti paralelizovan. 
+Podrazumevano izvršavanje kreće u `gang-redundant` režimu.
+```C
+#pragma acc parallel [clause-list] new-line
+structured block
+```
+Neke od klauzula (parametri nisu navedeni):
+
+.lcol[
+
+- async
+- wait
+- num_gangs
+- num_workers
+- vector_length
+]
+
+.rcol[
+- reduction
+- copy
+- copyin
+- copyout
 - ...
+]
+
+
 
 ---
 
+## Primer 3: parallel.c
 
-## Primer internog JSD (*Ruby Sinatra*)
+```c
+#include <openacc.h>
 
-```ruby
-get '/dogs' do
-    # get a listing of all the dogs
-end
-get '/dog/:id' do
-    # just get one dog, you might find him like this:
-    @dog = Dog.find(params[:id])
-    # using the params convention, you specified in your route
-end
-post '/dog' do
-    # create a new dog listing
-end
-put '/dog/:id' do
-    # HTTP PUT request method to update an existing dog
-end
-delete '/dog/:id' do
-    # HTTP DELETE request method to remove a dog who's been sold!
-end
+int main() {
+	float *values = (float *) malloc(sizeof(float) * size);
+
+	#pragma acc parallel
+	for (int i = 0; i < 1024; i++)
+		values[i] = 1.f;
+	free(values);
+
+	return 0;
+}
+```
+
+.attention[
+**Pitanje**: Koliko puta će svakom polju value niza biti dodeljena vrednost?
+]
+
+---
+
+## parallel klauzule
+
+- `async` - Nit koja je naišla na parallel ili kernels direktivu (lokalna nit) može da nastavi izvršavanje koda koji sledi iza paralelnog regiona bez čekanja da uređaj završi svoj posao.
+- `wait` - Kada naiđe na ovu klauzulu, lokalna nit čeka.
+- `num_gangs(int-exp)` - Broj `gang`-ova koji izvršavaju paralelni region.
+- `num_workers(int-exp)` - Broj radnika unutar `gang`-a.
+- `vector_length(int-exp)` - Dužina vektora koja se koristi za SIMD operacije.
+- `reduction(op:var-list)` - Pravi lokalnu kopiju promenljive i inicijalizuje je. Na kraju paralelnog regiona se lokalne kopije redukuju.
+- `copy, copyin, copyout`
+
+---
+
+layout: false
+name: ld
+class: center, middle
+
+# loop direktiva
+
+---
+layout: true
+.section[[loop direktiva](#sadrzaj)]
+
+---
+
+## loop direktiva
+
+- Daje kompajleru dodatne informacije o tome kako da paralelizuje petlju na koju se odnosi direktiva. Može biti unutar `parallel` ili `kernels` direktiva.
+
+```c
+  #pragma acc loop [clause-list] new-line
+    for loop
+```
+- Kombinovane konstrukcije:
+
+```c
+  #pragma acc parallel loop [clause-list] new-line
+    for loop
+```
+
+```c
+  #pragma acc kernels loop [clause-list] new-line
+    for loop
 ```
 
 ---
 
+## loop klauzule
+- Klauzule za optimizaciju izvršavanja:
+	- `gang` - Particioniše iteracije između `gang`-ova. Prevodi izvršavanje iz `gang-redundant` u `gang-partitioned` režim. U slučaju ugnježdenih petlji, spoljna mora biti `gang` petlja.
+	- `worker` - Patricioniše iteracije između `worker`-a. Prevodi izvršavanje iz `worker-single` u `worker-partitioned` režim. U slučaju ugnježdenih petlji, bilo koja unutrašnja petlja, osim one najugnježdenije, može biti `worker` petlja.
+	- `vector` - Vektorizacija petlje (SIMD ili SIMT ). U slučaju ugnježdenih petlji, najugnježdenija je vector petlja.
+	- `seq` - Petlja će se izvršiti sekvencijalno bez obzira na potencijalne optimizacije koje je kompajler pronašao. U sučaju ugnježdenih petlji, može biti na bilo kom nivou. 
+- *Optimizacijom petlji se gubi na portabilnosti programa.*
 
-## Primer internog JSD (Groovy Gradle)
+---
 
-```groovy
-repositories {
-    mavenCentral()
-}
+##loop klauzule
 
-dependencies {
-    groovy fileTree(dir: new File(gradle.gradleHomeDir, 'lib'),
-                    includes: ['**/groovy­all­*.jar'])
-    compile gradleApi()
-    compile 'eu.appsatori:gradle­fatjar­plugin:0.1.3',
-    {
-        ext.optional = true
-    }
-    testCompile 'org.spockframework:spock­core:0.6­groovy­1.8'
+- Ostale klauzule:
+	- private
+	- reduction
+	- independent - Signalizira kompajleru da nema zavisnosti podataka između iteracija petlje.
+	- ...
+
+
+---
+
+## Primer 4: parallelloop.c
+
+```c
+int main() {
+
+	/* ... */
+
+	#pragma acc parallel loop gang
+	for (int i=0; i<N; i++)
+		#pragma acc loop vector
+		for (int j=0; j<M; j++)
+			A[i * N + j] = 1.f;
+
+	return 0;
 }
 ```
 
 ---
 layout: false
+name: model
 class: center, middle
 
-# Eksterni JSD omogućavaju potpuno prilagođavanje domenu.
-
+# Model
 
 ---
 layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
+.section[[Model](#sadrzaj)]
 
 ---
 
-## Interni JSD za muzičku notaciju
+## Model podataka i utican na na performanse
 
-```java
-Score k = new Score(Tonality.G_major);
-Bar bar = new Bar(BarType.4_4);
-t.addPause(Duration.1_4);
-t.addNote(NoteType.A3, Duration.1_4);
-t.addNote(NoteType.C2, Duration.1_4);
-k.addBar(bar);
+.lcol[
+
+![:scale 95%](img/modelAcc.png)
+]
+
+.rcol[
+
+![](img/modelAcc2.png)
+
+]
+<br><br><br><br><br><br><br><br><br><br><br>
+
+- Optimizacija kernela bez optimizacije prenosa podataka obično ne vodi poboljšanju performansi izvršavanja programa!
+
+.footer.medium[
+	Izvor: [OpenACC Programming and Best Practices Guide](https://www.openacc.org/sites/default/files/inline-files/OpenACC_Programming_Guide_0.pdf)
+] 
+
+
+---
+
+## Upravljanje podacima
+
+- Prenos podataka između domaćina i uređaja je moguće kontrolisati na više načina:
+	- Bez bilo kakvog specificiranja ponašanja, kompajler će sam odrediti kada i koje podatke treba preneti sa domaćina na uređaj ili obrnuto.
+	- Modifikovanjem ponašanja `parallel` i `kernels` odgovarajućim klauzulama za rad sa podacima (npr. `copy, copyin, copyout`...). Modifikacije važe za paralelni region nad kojim su primenjene klauzule za modfikaciju.
+	- Korišćenjem `data` direktive.
+	- Korišćenjem `data enter` i `data exit` direktiva (uglavnom za objektno programiranje).
+
+---
+
+layout: false
+name: dd
+class: center, middle
+
+# data direktiva
+
+---
+layout: true
+.section[[data direktiva](#sadrzaj)]
+
+---
+
+## data direktiva
+
+- Definiše blok koda u kojem se klauzulama kontroliše prenos podataka na relaciji domaćin uređaj.
+```c
+#pragma acc data [clause-list] new-line
+structured block
+```
+	- copy
+	- copyin
+	- copyout
+	- create
+	- present
+
+---
+
+## Primer 5: data.c
+
+```c
+int main() {
+	/* ... */
+	#pragma acc data
+	{
+		#pragma acc parallel loop
+		for (int i=0; i<N; i++) {
+			y[i] = 0.0f;
+			x[i] = (float)(i+1);
+		}
+		#pragma acc parallel loop
+		for (int i=0; i<N; i++) {
+			y[i] = 2.0f * x[i] + y[i];
+		}
+	}
+	/* ... */
+}
 ```
 
 ---
 
-## Eksterni JSD za muzičku notaciju
-
-U eksternoj varijanti možemo u potpunosti prilagoditi konkretnu sintaksu
-domenskim ekspertima.
-
-.center[
-![:scale 80%](uvod/MusicNotation-External.png)
-]
+## Klauzule
+- `copy(var-list)` - Alocira prostor za promenljive na uređaju, kopira vrednosti sa domaćina na uređaj i sa uređaja nazad na domaćina kada se završi blok podataka (ili `parallel` i `kernels` blok ako klauzula stoji uz njih)
+- `copyin(var-list)` - Alocira prostor za promenljive na uređaju i kopira vrednosti sa domaćina na uređaj. Po završetku bloka ne prenosi vrednosti nazad na domaćina.
+- `copyout(var-list)` - Alocira prostor za promenljive na uređaju bez inicijalizacije podacima sa domaćina. Po završetku bloka, podaci se prenose sa uređaja na domaćina.
+- `create(var-list)` - Alocira prostor za promenljive na uređaju bez inicijalizacije. Vrednosti promenljivih se na kraju bloka ne prebacuju na domaćina.
+- `present(var-list)` - Označava da su promenljive prisutne u memoriji uređaja.
 
 ---
 
-## Lilypond note script
+## OpenACC promenljive okruženja
 
-Ali se dešava da i u eksternoj varijanti JSD nije prilagođen domenskim
-ekspertima.
-
-![](uvod/Lilypond.png)
-
----
-
-## Kritike JDS
-
-- Skup razvoj i održavanje jezika.
-- Potreba za ekspertima u domenu razvoja jezika koji su istovremeno sposobni da
-  analiziraju domen primene.
-- Jezička "kakofonija" (*Language Cacophony* .ref[1])i potreba da programeri
-  poznaju veliki broj jezika (poseban jezik za svaki tehnički i/ili poslovni
-  domen).
-
-.footer[
-    M. Fowler, *Language workbenches: The killer-app for domain specific
-        languages*, Online
-        http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
-]
+- GNU GCC kompajler:
+	- `ACC_DEVICE_TYPE` (standard)
+	- `ACC_DEVICE_NUM` (standard)
+	- `ACC_PROF` (standard)
+	- `GOPMP_OPENACC_DIM` (gcc)
+	- `GOMP_DEBUG` (gcc)
 
 
 ---
-name: radionice
+
 layout: false
+name: zad
 class: center, middle
 
-# Jezičke radionice
+# Zadaci
 
 ---
 layout: true
-
-.section[[Jezičke radionice](#sadrzaj)]
-
----
-
-
-## Jezičke radionice (*Language Workbenches*)
-
-- Integrisana okruženja za razvoj, testiranje i evoluciju jezika i alata za
-  njihovo efikasno korišćenje (editori, interpreteri, kompajleri i sl.). Koriste
-  se kod paradigme razvoja orijentisane ka jezicima (*Language Oriented
-  Programming - LOP*).ref[*]
-- Rešavaju problem brzine razvoja i lakoće održavanja JSD.
-- Primeri jezičkih radionica:
-  - Meta Programming System (MPS)
-  - Xtext
-  - Spoofax
-
-.footer[
-\* M. Fowler, *Language workbenches: The killer-app for domain specific
-   languages*, Online
-   http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
-]
-
+.section[[Zadaci](#sadrzaj)]
 
 ---
 
-## Pristupi
+## Zadatak 1: Računanje broja π
 
-.medium[
-- Projekcione radionice - direktna izmena apstraktne reprezentacije kroz
-  projekciju.
- 
-  ![:scale 45%](uvod/projekcija.svg)
-  
-- Bazirane na parserima - izmena se vrši posredno kroz tekst koji se parsira da
-  bi se dobila apstraktna reprezentacija.
+- Modifikovati dati sekvencijalni program za računanje vrednosti broja π korišćenjem OpenACC direktiva. Koristiti NVIDIA grafičku karticu kao akcelerator (GNU GCC trenutno ne podržava Radeon kartice). 
+- Meriti izvršavanje sekvencijalnog i implementiranog ubrzanog programa.
 
-  ![:scale 80%](uvod/parseri.svg)
-
-]
-
-.footer[
-.small[Eye icon designed by Freepik. Hand icon by Yannick Lung.]
+.attention[
+**Napomena**: Zadatak svakako implementirati i u slučaju da na računaru nemate dostupnu NVIDIA grafičku karticu.
 ]
 
 ---
 
-## Projekcione radionice
+## Zadatak 2: Računanje Jakobijana
 
-- Prednosti:
-  - Moguće višestruke konkretne sintakse (tekstualne, grafičke, tabelarne...) -
-    bolje prilagođavanje konkretnom domenu.
-  - Sintakse se mogu "u letu" menjati.
-  - Kontrola validnosti izraza u vreme izmene modela.
+- Modifikovati dati sekvencijalni program za računanje Jakobijana.
+- Osnovnu verziju programa u C++ programskom jeziku skinuti sa
+- Githab naloga OpenACCUserGroup.Koristiti NVIDIA grafičku karticu kao akcelerator (GNU GCC trenutno ne podržava Radeon kartice). 
+- Meriti izvršavanje sekvencijalnog i implementiranog ubrzanog programa.
 
-- Mane:
-  - Složenost alata.
-  - Format za perzistenciju nije u vezi sa konkretnim sintaksama koje korisnik
-    koristi. Nemoguće je koristiti standardne sisteme za kontrolu verzija
-    bazirane na tekstu.
-  - Moraju se razviti namenski generički editori za svaku klasu konkretnih sintaksi.
-  
----
-
-## Radionice bazirane na parserima
-
-- Prednosti:
-  - Jednostavnije za izradu i održavanje.
-  - Teorija parsiranja dobro ustanovljena. Veliki broj biblioteka za parsiranje.
-  - Moguće koristiti obične tekstualne editore.
-  - Moguće koristiti standardne sisteme za kontrolu verzija (npr. git,
-    subversion).
-  - Jednostavno kopiranje i lepljenje (eng. *copy/paste*).
-
-- Mane:
-  - Moguća samo tekstualna sintaksa -> ograničeno prilagođavanje domenu.
-  - Provera validnosti se odlaže do faze parsiranja.
-  
----
-
-## *Meta Programming System (MPS)*
-
-- JetBrains - http://www.jetbrains.com/mps/
-- Projekciona jezička radionica - editori manipulišu direktno apstraktnom
-  reprezentacijom (stablom apstraktne sintakse). Čak i u slučaju tekstualnih
-  notacija.
-- Podrška za različite konkretne sintakse (notacije): tabelarne, tekstualne,
-  bazirani na ćelijama, grafičke.
-- Podrška za kontrolu verzija.
-
----
-
-## *Meta Programming System* - karakterističan izgled
-
-![:scale 70%](uvod/MPS.png)
-
-.footer[
-http://www.jetbrains.com/mps/docs/tutorial.html
+.attention[
+**Napomena**: Zadatak svakako implementirati i u slučaju da na računaru nemate dostupnu NVIDIA grafičku karticu.
 ]
 
 ---
 
-## Xtext
+## Saveti za inkrementalno portovanje sekvencijalnog u OpenACC kod
 
-- Nastao kao deo projekta slobodnog softvera - *openArchitectureWare*.
-- Iza razvoja u najvećoj meri stoji nemačka
-  firma [Itemis](https://www.itemis.com/en/).
-- Postao deo Eclipse projekta.
-- Tekstualne sintakse. EBNF-like gramatika.
-- Upotreba ECore meta-metamodela.ref[1]. Meta-model se generiše iz gramatike a
-  može da koristi i već postojeći meta-model.
-- Generisanje Eclipse editora sa podrškom za bojenje sintakse, navigaciju,
-  *outline* pogled itd.
-- Xtext bazirani JSD se duboko integriše u Eclipse okruženje i teško je uočiti
-  razliku sa podrškom za bilo koji drugi jezik sa Eclipse podrškom (npr. Java).
+1. Identifikovati paralelizam petlji. Paralelizovati deo po deo sekvencijalnog koda pri tom kontrolišući korektnost izvršavanja programa. Nastaviti sa ovim tipom optimizacije bez obzira na to da li se vreme izvršavanja povećava.
 
-.footer[
-http://www.eclipse.org/modeling/emf/
+2. Optimizovati prenos podataka. Preklopiti prenos podataka sa računanjem, ukloniti nepotrebna kopiranja, ažuriranja promenljivih, itd...
+
+3. Paralelizovane petlje optimizovati za ciljnu arhitekturu korišćenjem klauzula.
+
+.footer.medium[
+Izvor: [OpenACC Programming and Best Practices Guide](https://www.openacc.org/sites/default/files/inline-files/OpenACC_Programming_Guide_0.pdf)
 ]
 
 ---
-
-## Xtext - *Little tortoise* jezik
-
-.center[
-![:scale 70%](uvod/xText-tortoise.png)
-]
-
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
-]
-
----
-
-
-## Xtext - *Little tortoise* gramatika
-
-.center[
-![:scale 75%](uvod/xText-grammar.png)
-]
-
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
-]
-
----
-
-## Xtext - primeri
-
-Za dokumentaciju sa primerom izgradnje 7 različitih jezika pogledati http://www.eclipse.org/Xtext/7languagesDoc.html
-
----
-
-## Spoofax
-
-- Kao i Xtext baziran na parsiranju i tekstualnim sintaksama. Kreira punu
-  podršku za jezik u vidu Eclipse priključaka.
-- Istraživački projekat na TU Delft u Holandiji.
-- Gramatika jezika se definiše meta-jezikom SDF (*Syntax Definition Formalism*).
-- Parser koristi SGLR algoritam (*Scanerless GLR*) i omogućava parsiranje punog
-  skupa kontekstno slobodnih gramatika. U slučaju neodređenosti parser vraća
-  šumu parsiranja (*parse forest*) dok u slučaju determinističke gramatike vraća
-  uvek stablo parsiranja (*parse tree*).
-- Za tranformaciju programa i prepisivanje stabala koristi se JSD *Stratego*.
-
----
-
-## Spoofax - karakterističan izgled
-
-![:scale 80%](uvod/Spoofax-prikaz.png)
-
----
-
-## Inženjerstvo softverskih jezika
-
-- *Software Language Engineering - SLE*.
-- Pravac i pogled na razvoj softverskih jezika koji pokušava da ujedini sve
-  druge pravce koji u osnovi imaju razvoj i upotrebu softverskih jezika
-  (*MDE/MDA/DSM*.., ontologije, *grammarware*, *Language Oriented
-  Programming*...).
-- Jedna od ideja je izjednačavanje modela i programa - kao jedinstven naziv
-  predložen je *mogram*.ref[*].
-
-.footer[
-  `*` A. Kleppe, *Software language engineering: creating domain-specific
-  languages using metamodels*. Addison-Wesley, 2009
-]
-
----
-
+layout: false
 ## Literatura
 
-- M. Völter, [DSL Engineering: Designing, Implementing and Using
-  Domain-Specific Languages](http://dslbook.org/). 2013
-- S. Kelly and J.-P. Tolvanen, *Domain-Specific Modeling: Enabling Full Code
-  Generation*. Wiley-IEEE Computer Society Pr, March 2008
-- Federico Tomassetti, [*The complete guide to (external) Domain Specific
-  Languages*](https://tomassetti.me/domain-specific-languages/), published
-  on [the author's blog](https://tomassetti.me/), February 2017.
-- I.
-  Dejanović,
-  [Prilog metodama brzog razvoja softvera na bazi proširivih jezičkih specifikacija](http://doiserbia.nb.rs/phd/fulltext/NS20110103DEJANOVIC.pdf).
-  PhD thesis, Faculty of Technical Sciences, University of Novi Sad, January
-  2012
+- Tekstualni materijali:
+	- [OpenACC Programming and Best Practices Guide](https://www.openacc.org/sites/default/files/inline-files/OpenACC_Programming_Guide_0.pdf)
+	- [OpenACC Specification 2.5](https://www.openacc.org/sites/default/files/inline-files/OpenACC_2pt5.pdf)
+	- [GNU GCC OpenACC Wiki](https://gcc.gnu.org/wiki/OpenACC)
+	- David B. Kirk, Wen-mei W. Hwu, Programming Massively Parallel Processors, A Hands on Approach, 2nd edition, 2012
+	- [Advanced OpenACC](http://videolectures.net/site/normal_dl/tag=1058329/ihpcss2016_urbanic_advanced_openACC_01.pdf)
+- Video tutorijali:
+	- [Introduction to Parallel Programming with OpenACC](https://www.youtube.com/playlist?list=PLx_s9Cz7_T429SF7gBGJ51iiZoEWYVvkq)
+	- [Advanced OpenACC](http://videolectures.net/ihpcss2016_urbanic_advanced_openACC/)
 
 
 

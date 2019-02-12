@@ -53,6 +53,10 @@ I wish you a lot of success during your learning.
 
 ### High-performance computing (HPC)
 
+#### HPC Complete Courses (C)
+
+
+
 | HPC |                                 Teroija                                 |                                 Vežbe                                 |                     Zadaci                     |
 |:---:|:-----------------------------------------------------------------------:|:---------------------------------------------------------------------:|:----------------------------------------------:|
 |  1. |        [Uvod](high-performance-computing/uvod){:target="_blank"}        |  [V1-openMP](high-performance-computing/V1-openMP){:target="_blank"}  |  [Z1-openMP](hpc-z1-openMP){:target="_blank"}  |
@@ -65,6 +69,14 @@ I wish you a lot of success during your learning.
 {:.scroll-table}
 
 - [Literatura](hpc-literatura){:target="_blank"}
+
+#### HPC Short Courses (C)
+
+
+
+|--------------------------------------------------------------------------------|------------------------------------------------------|
+| [OpenMP presentation](hpc-short-courses/openmp-presentation){:target="_blank"} | [OpenMP training](openmp-training){:target="_blank"} |
+| [MPI presentation](hpc-short-courses/mpi-presentation){:target="_blank"}       | [MPI training](mpi-training){:target="_blank"}       |
 
 
 

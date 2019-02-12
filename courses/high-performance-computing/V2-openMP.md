@@ -5,989 +5,1130 @@ name: sadrzaj
 
 # Sadržaj
 
-- [Problem i motivacija](#motivacija)
-- [Primeri](#primeri)
-- [Prednosti](#prednosti)
-- [Arhitekture](#arhitekture)
-- [Gradivni elementi](#gradivni)
-- [Klasifikacija](#klasifikacija)
-- [Jezičke radionice](#radionice)
+- [Uvod](#uvod)
+- [OpenMP](#openmp)
+- [loop konstrukcija](#loop)
+- [Redukcije](#redukcije)
+- [Implicitna vs. eksplicitna barijera](#vs)
+- [sections/section konstrukcija](#ss)
+- [sections/section konstrukcija](#ss)
+
+
+
 
 ---
-name: motivacija
+name: uvod 
 class: center, middle
 
-# Problem i motivacija
+# Uvod
 
 ---
 layout: true
 
-.section[[Motivacija](#sadrzaj)]
+.section[[Uvod](#sadrzaj)]
 
 ---
 
-## Šta je jezik?
+## Tematske celine
             
-- Komunikacija misli i osećanja sistemom znakova kao što su zvuci, gestovi ili
-  pisani simboli .ref[1].
-- Sistem znakova, simbola, gestova i pravila koji se koriste u komunikaciji
-  .ref[2].
-  
-.footer[
-1. http://www.thefreedictionary.com/language
-2. http://oxforddictionaries.com/definition/english/language
-]
-            
----
-
-## Šta je softverski jezik?
-            
-- Jezik korišćen u komunikaciji čovek-računar ili računar-računar.
-- U varijanti čovek-računar težimo da jezik bude lak za razumevanje od strane
-  čoveka ali ipak da može da se procesira na efikasan način od strane računara.
-- U kontekstu razvoj softvera dve su uloge jezika:
-  - *preskriptivna* - za opis budućih sistema
-  - *deskriptivna* - za opis postojećih sistema
-  
----
-
-## Šta domen?
-
-- Sfera delovanja, interesa ili funkcije .ref[1].
-- Oblast znanja, uticaja, ili delovanja .ref[2].
-- Da bi se domensko znanje moglo procesirati i da bi mogli komunicirati u
-  određenom domenu korisno je definisati ontologiju domena koja opisuje koncepte
-  domena i njihove međusobne veze.
-- Primer domena: osiguranje, zdravstvo, finansije, saobraćaj...
-- Domeni mogu sadržati poddomene. Na primer, ako je posmatrani domen problema
-  osiguranje, poddomeni mogu biti životno osiguranje, osiguranje vozila,
-  osiguranje nekretnina i sl.
-
-.footer[
-1. http://www.thefreedictionary.com/domain
-2. http://www.merriam-webster.com/dictionary/domain
-]
-
----
-
-## Jezici specifični za domen - JSD (*Domain-Specific Languages - DSL*)
-
-- Jezici specifični za domen (JSD, eng. *Domain-Specific Languages - DSL*)
-  su jezici prilagođeni i ograničeni na određeni domen problema.
-- Za razliku od jezika opšte namene (JON, eng. *General Purpose Language -
-  GPL*), nude povećanje ekspresivnosti kroz upotrebu koncepata i notacija
-  prilagođenih domenu problema i domenskim ekspertima.
-- Nazivaju se još i *mali jezici* (eng. *little languages*).
-- Uspešan JSD je fokusiran na uzak, dobro definisan domen i pokriva ga na
-  odgovarajući način.
-- Domen često ima svoj jezik korišćen od strane domenskih eksperata iako ne
-  postoji njegova implementacija na računaru.
-
-  
----
-name: primeri
-layout: false
-class: center, middle
-
-# Primeri
-
----
-layout: true
-
-.section[[Primeri](#sadrzaj)]
-
----
-
-## SQL
-
-```sql
-SELECT player, stadium
-    FROM game JOIN goal ON (id=matchid)
-```
-
----
-
-## JPA mapiranje
-
-```java
-@Entity
-@Table(name="COURSES")
-public class Course {
-
-  private long courseId;
-  private String courseName;
-
-  public Course() {
-  }
-
-  public Course(String courseName) {
-    this.courseName = courseName;
-  }
-
-  @Id
-  @GeneratedValue
-  @Column(name="COURSE_ID")
-  public long getCourseId() {
-    return this.courseId;
-  }
-}
-```
-
----
-
-## Build jezici (Ant/Maven/Gradle)
-
-![](uvod/Ant-Maven-Gradle.png)
-
----
-
-## Poslovni procesi - BPMN
-
-![](uvod/BPMN.png)
-
----
-
-## Mobilne aplikacije
-
-![:scale 70%](uvod/MobilneAplikacije.png)
-
-.footer[
-  Kelly, S. & Tolvanen, J.-P. *Domain-Specific Modeling: Enabling Full Code
-    Generation*, Wiley-IEEE Computer Society Pr, 2008
-]
-            
----
-
-## Ali i...
-
-![:scale 70%](uvod/MusicNotation-External.png)
-
----
-
-## ili...
-
-![:scale 70%](uvod/ChessNotation.png)
-
-
----
-
-## pa čak i...
-
-![:scale 50%](uvod/saobracajni-znaci.jpg)
-
-
----
-
-## Kada jezik smatramo JSD-om?
-
-- Zavisi od toga šta nam je domen.
-- Jezik može biti više ili manje prilagođen nekom domenu.
-- U ekstremnom slučaju i opšti jezik kao što je Java možemo smatrati JSD-om ako
-  nam je domen "razvoj softvera". Naravno, iako tačno u teorijskom smislu, u
-  praktičnom gubimo sve prednosti JSD.
-- Dobar JSD pokriva uzak, dobro definisan domen (domen problema). Koristi samo
-  koncepte ciljnog domena, ograničen je na dati domen i samim tim je iskazivanje
-  rešenja jezgrovitije i jasnije domenskim ekspertima.
-- Čest je slučaj da jezik nastane kao JSD ali se vremenom proširi do te mere da
-  ga možemo smatrati JON.
-
-
----
-name: prednosti
-layout: false
-class: center, middle
-
-# Prednosti
-
----
-layout: true
-
-.section[[Prednosti](#sadrzaj)]
-
----
-
-
-## Uticaj na produktivnost
-
-- Pojedine studije pokazuju da povećanje produktivnosti ide i do 1000% .ref[1].
-- Šta je osnovni razlog za povećanje produktivnosti?
+- OpenMP 
+- OpenMPI 
+- OpenACC
  
-.footer[
-MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
-]
   
-  
+
+            
 ---
 
-## Problem mentalnog mapiranja
-
-![](uvod/MentalnoMapiranje-1.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-## Rešenje upotrebom JSD
-
-![](uvod/MentalnoMapiranje-2.svg)
-
-.footer[
-  Dmitriev, S. *Language oriented programming: The next programming
-    paradigm *, JetBrains onBoard, 2004.
-]
-
----
-
-
-## Zašto JSD?
-
-- JSD su koncizniji od jezika opšte namene što omogućava korisnicima da jasnije
-  iskažu svoju nameru.
-- JSD sintaksa, bilo tekstualna ili grafička, može se prilagoditi i
-  približiti domenskim ekspertima.
-- Koncepti korišćeni u JSD su koncepti problemskog (poslovnog) domena što
-  pod određenim uslovima omogućava da domenski eksperti direktno koriste JSD bez
-  posredovanja programera.
-- Upotrebom koncepata problemskog domena izbegava se ručno mapiranje na koncepte
-  ciljne implementacione platforme. Taj posao se obavlja automatski upotrebom
-  JSD prevodioca (kompajlera ili generatora koda).
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Samodokumentujući jezički iskazi.
-
----
-
-## Uticaj na kvalitet softvera
-
-- Korišćenje koncepata domena problema dovodi do smanjenja broja linija koda (u
-  terminologiji tekstualnih notacija), što ima pozitivan uticaj na brzinu
-  razvoja i jednostavnost odžavanja.
-- Smanjenje broja linija koda ide i do **50 puta** u pojedinim domenima primene.
-  Gustina softverskih grešaka (broj softverskih grešaka na hiljadu linija koda)
-  ne zavisi značajno od jezika koji se koristi.
-- Iz toga se može zaključiti da JSD kroz smanjenje broja linija koda posredno
-  utiču na smanjenje apsolutnog broja softverskih grešaka što povećava kvalitet
-  softverskog proizvoda i smanjuje cenu održavanja.
-- Prevođenje koda na ciljnu platformu (kompajliranje) će rezultovati
-  konzistentnim kodom.
-
-
----
-
-## Uticaj na evoluciju aplikacije
-
-- Iskazivanje rešenja konceptima nezavisnim od korišćene tehnologije rezultuje
-  dužim životnim vekom aplikacije.
-- Nije potrebno menjati jezičke iskaze (programe/modele) kada dođe do promene
-  tehnologije. Potrebno je promenu uneti u generator koda.
+## Softver
+            
+- Vežbe se izvode na računarima sa instaliranim Ubuntu 18.04 operativnim sistemom.
+- Dodatni softverski paketi potrebni za rad: 
+  - `gcc`, `g++` (obavezno), `cmake`, `make` (opciono)
+  - `libhdf5-dev` za rad sa izgenerisanim podacima za testiranje rešenja (vrlo poželjno)
+  - `libopenmpi-dev`, `openmpi-common` i `openmpi-bin` za rad sa OpenMPI programima.
+- Odgovarajuće verzije navedenih paketa su dostupne u zvaničnom Ubuntu repozitorijumu. 
+- Paketi se mogu instalirati komandom:
+    -  `sudo apt install <naziv-paketa>`
   
 
 ---
-name: arhitekture
-layout: false
+name: openmp 
 class: center, middle
+layout: false
 
-# Arhitekture
+# OpenMP
 
 ---
 layout: true
 
-.section[[Arhitekture](#sadrzaj)]
-
----
-
-## Arhitektura bazirana na prevodiocima
-
-![:scale 60%](uvod/Arhitektura-kompajler.svg)
-
----
-
-
-## Arhitektura bazirana na interpreterima
-
-![](uvod/Arhitektura-interpreter.svg)
+.section[[OpenMP](#sadrzaj)]
 
 
 ---
-name: gradivni
-layout: false
-class: center, middle
 
-# Gradivni elementi
+## OpenMP
 
----
-layout: true
-
-.section[[Gradivni elementi](#sadrzaj)]
-
----
-
-## Gradivni elementi JSD
-
-Kao i svaki softverski jezik i JSD se sastoji od:
-- Apstraktne sintakse
-- Jedne ili više konkretnih sintaksi
-- Semantike
-
----
-
-
-## Apstraktna sintaksa
-
-- Određuje pravila validnosti iskaza sa stanovišta njegove strukture.
-- Definiše koncepte domena, njihove osobine i međusobne relacije
-- Jezici za definisanje apstraktnih sintaksi jezika se u domenu modelovanja
-  nazivaju meta-meta-modelima.ref[1].
-
-.footer[
-1. Preciznije, meta-metamodel je apstraktna sintaksa takvog jezika. Jezik još
-    čine i konkretne sintakse i semantika.
-]
-
----
-
-## Primer - apstraktna sintaksa jezika za opis konačnih automata
-
-![:scale 90%](uvod/StateMachine.svg)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
-
----
-
-## Stablo apstraktne sintakse
-
-- Svaki iskaz na datom jeziku se može na apstraktan način opisati stablom
-  apstraktne sintakse (*Abstract Syntax Tree*).
-- Konkretna sintaksa nije važna u tom slučaju (na primer, ako posmatramo program
-  na Javi tada ključne reči nisu deo stabla apstraktne sintakse).
-
----
-
-## Primer stabla apstraktne sintakse
-
-![:scale 60%](uvod/AbstractSyntaxTree.svg)
-
-.footer[
-http://en.wikipedia.org/wiki/Abstract_syntax_tree
-]
-
----
-
-## Konkretna sintaksa
-
-- Da bi mogli da prikažemo iskaz na konkretan način potrebna nam je konkretna
-  sintaksa.
-- Konkretna sintaksa definiše *izgled* iskaza na nekom jeziku, odnosno u
-  širem smislu definiše i načine interakcije korisnika sa jezičkim iskazima tj.
-  predstavlja interfejs jezik-korisnik.
-- Iako nam je dovoljna jedna konkretna sintaksa za jedan jezik, možemo ih imati
-  više.
+- API za programiranje paralelnih aplikacija na višeprocesnim (eng. *multiprocessing*) mašinama, zasnovan na konceptu deljenja memorije.
+- Obuhvata skup kompajlerskih direktiva (eng. *compiler directives*), bibliotečkih rutina (eng. *library routines*) i promenljivih okruženja (eng. *environment variables*).
+- Postoji podrška za programske jezike C, C++ i Fortran.
   
 ---
 
-## Konkretna sintaksa
-
-Primer istog iskaza upotrebom dve različite konkretne sintakse
-
-![:scale 70%](uvod/RazliciteSintakse.png)
-
-.footer.small[
-  I. Dejanović, *Prilog metodama brzog razvoja softvera na bazi proširivih
-  jezičkih specifikacija*. PhD thesis, Faculty of Technical Sciences, University of
-  Novi Sad, January 2012
-]
-
----
-
-## Semantika
-
-- Definiše smisao jezičkih iskaza.
-- Iako postoje i druge tehnike u praksi se najčešće semantika definiše
-  prevođenjem (kompajliranjem tj. generisanjem koda) na jezik koji već ima
-  definisanu semantiku putem prevodioca na niže jezike ili interpretera (npr.
-  virtualne mašine).
-- Najčešće su ciljni jezici na koje se JSD prevodi jezici opšte namene.
-- *Primer:* generisanje Java programskog koda iz JSD jezičkog iskaza.
-- Jezici se prevode na sve "niže" i "niže". Gde je kraj prevođenju? Mašinski
-  jezik. Definisan u hardveru računara (procesoru).
-  
+## Fork-join model
 
 
----
-name: klasifikacija
-layout: false
-class: center, middle
-
-# Klasifikacija
-
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Podela JSD prema vrsti konkretne sintakse
-
-- Tekstualni
-- Grafički
-- Tabelarni
-- Baziran na ekranskim formama
-- ...
-- Hibridni - kombinacija više osnovnih
+  ![:scale 70%](img/Fork_join.png)
+  .medium[
+- Paralelni region (eng. *Parallel region*) - deo programa koji izvršava tim niti
+- `Master nit`
+- `Novokreirane niti` - identifikatori od 1 do N − 1, ne postoje nakon paralelnog regiona u kojem su kreirane
+- Sve niti u paralelnom regionu čine `tim niti`.
+  ]
 
 ---
 
 
-## Tekstualne sintakse - prednosti i mane
 
-- Programeri se osećaju "kod kuće".
-- Mogu se koristiti regularni tekst editori.
-- Serijalizovana forma je identična sa prezentacionom. se koristiti standardni
-  sistemi za kontrolu verzija (Git, Mercurial, Subversion ...).
-- Podrška u alatima: bojenje koda, dopuna koda, pretraga, navigacija...
-- Mana: Nije pogodna za opis i razumevanje strukture koja nije linearne prirode
-  (grafovi, tabele itd.).
+## Fork-join model
+
+- U OpenMP se tim niti kreira korišćenjem parallel konstrukcije 
+  - (eng. *parallel construct*)
+  .center[
+```c
+#pragma omp parallel[clause[ [,] clause] ... ]
+strukturirani-blok
+```
+  ]
+- Svaka izvršava isti segment koda 
+  - (*Single Process Multiple Data* (SPMD)).
   
 ---
 
 
-## Grafičke sintakse - prednosti
-
-- Razumevanje strukture. Podržano operacijama *zoom*, *pan* i sl.
-- Često razumljivije domenskim ekspertima (najčešće je domenski jezik grafičke
-  prirode).
-- Intuitivniji i lakši za učenje - učenje kroz isprobavanje (paleta sa alatima i
-  konceptima, onemogućavanje kreiranje nevalidnih konstrukcija itd.).
-
----
-
-## Grafičke sintakse - mane
-
-- Još uvek složeniji za implementaciju i održavanje.
-- Za serijalizaciju se koristi format koji se razlikuje od prezentacionog.
-- Otežano ili potpuno nemoguće korišćenje standardnih alata za kontrolu verzija.
-  Potrebno je razviti poseban VCS alat.
-- Zahteva namenske editore.
-
----
-
-## Podela prema vrsti domena
-
-![:scale 90%](uvod/HorizontalniVertikalniDSL.svg)
-
----
-
-## Podela JSD prema načinu implementacije
-
-- **Interni** - Nastali su na bazi već postojećih programskih jezika (najčešće
-  JON).
-- **Eksterni** - Izrađeni "on nule" definisanjem sintakse i implementacijom
-  kompajlera koji prevodi programe pisane na ovom jeziku na neki drugi jezik
-  (najčešće JON) ili se program direktno interpretira.
-  
-.footer[
-  M. Fowler, *Domain-Specific Languages*. Addison-Wesley Professional, 1 ed., Oct. 2010
-]
-
----
-
-## Interni JSD
-
-- Bazirani na postojećem jeziku i alatima. Najčešće tekstualni.
-- Koriste svu infrastrukturu jezika domaćina (editore, debagere,
-  kompajlere/interpretere...).
-- Brzi za implementaciju i laki za održavanje. Popularni u pojedinim zajednicama
-  (Ruby, Groovy, Scala...).
-- Dobri kao ulaznica u svet DSL/DSM/MDE pristupa.
-- Najčešće na pametan način koriste mogućnosti jezika (anonimne funkcije,
-  meta-programiranje itd.).
-- Ograničenja konkretne sintakse.
-- Svaka namenska biblioteka može se smatrati internim JSD (API bazirani)...
-- ... ali konkretna sintaksa takvog jezika nije prilagođena domenu.
-
-
----
-
-## Eksterni JSD
-
-- Izrađeni "on nule" - skuplji razvoj i održavanje.
-- Puna kontrola konkretne sintakse - bolje prilagođavanje domenskim ekspertima.
-- Editori i svi propratni alati takođe moraju da se prave "od nule"...
-- ...mada danas postoje alati koji nam taj posao olakšavaju.
-
----
-
-## Neki od poznatijih eksternih JSD
-
-- **SQL**: tekstualni, domen - rad sa relacionim bazama podataka
-- **HTML**: tekstualni, domen - definisanje sadržaja na vebu
-- **CSS**: tekstualni, domen - stilizovanje sadržaja
-- **make**: tekstualni, domen - izgradnja aplikacije (build)
-- **LaTeX**: tekstualni, domen: kreiranje štampanih materijala (*typesetting*)
-- **Window Builder**: GUI baziran, domen - izgradnja interfejsa
-- **R**: tekstualni, domen - statistička obrada podataka
-
-
----
-
-
-## Primer: Interni JSD za definisanje email-a (*JavaMail API*)
-
-```java
-MimeMessage message = new MimeMessage(session);
-
-message.setFrom(new InternetAddress(from));
-
-message.addRecipient(Message.RecipientType.TO,
-          new InternetAddress(to));
-
-message.setSubject("Greetings from Novi Sad");
-message.setText("Enjoying my stay in Novi Sad! See you soon!");
-
-Transport.send(message);
-```
-
----
-
-
-## Primer: Hipotetički eksterni JSD za definisanje email-a
-
-```
-BEGIN myMail
-  FROM me@myself.com
-  TO myfriend@somewhere.org
-  SUBJECT Greetings  from  Novi Sad
-
-Enjoying my stay in Novi Sad! See you soon!
-
-END
-SEND myMail
-```
-
----
-
-
-## Primer
-
-Interni JSD za definisanje grafički korisničkih interfejsa (*Swing*)
-
-```java
-public DSLKurs() {
-    setBounds(100, 100, 450, 300);
-    getContentPane().setLayout(new BorderLayout());
-    contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-    getContentPane().add(contentPanel, BorderLayout.CENTER);
-    contentPanel.setLayout(new FormLayout(new ColumnSpec[ {
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            FormFactory.DEFAULT_COLSPEC,
-                            FormFactory.RELATED_GAP_COLSPEC,
-                            ColumnSpec.decode("default:grow"),},
-                  new RowSpec[] {
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,
-                  FormFactory.RELATED_GAP_ROWSPEC,
-                  FormFactory.DEFAULT_ROWSPEC,}));
-    ....
-    
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
-
-![:scale 70%](uvod/GUIDSL-External.png)
-
----
-
-
-## Primer
-
-Interni JSD za definisanje gramatike jezika (*Arpeggio Python*)
-
-```python
-def number():     return _(r'\d*\.\d*|\d+')
-def factor():     return Optional(["+","-"]), [number,
-                          ("(", expression, ")")]
-def term():       return factor, ZeroOrMore(["*","/"], factor)
-def expression(): return term, ZeroOrMore(["+", "-"], term)
-def calc():       return OneOrMore(expression), EOF
-```
-
----
-
-
-## Primer
-
-Eksterni JSD za definisanje gramatike jezika (*Arpeggio PEG*)
-
-```
-number = r'\d*\.\d*|\d+'
-factor = ("+" / "-")?
-        (number / "(" expression ")")
-term = factor (( "*" / "/") factor)*
-expression = term (("+" / "-") term)*
-calc = expression+ EOF
-```
-
----
-layout: false
-class: center, middle
-
-# Konkretna sintaksa je važna!!!
-
-## Neki jezici su pogodniji za kreiranje internih JSD
-
----
-layout: true
-
-.section[[Klasifikacija](#sadrzaj)]
-
----
-
-## Jezici pogodni za kreiranje internih JSD
-
-- Ruby
-- Groovy
-- Scala
-- Lisp
-- ...
-
----
-
-
-## Primer internog JSD (*Ruby Sinatra*)
-
-```ruby
-get '/dogs' do
-    # get a listing of all the dogs
-end
-get '/dog/:id' do
-    # just get one dog, you might find him like this:
-    @dog = Dog.find(params[:id])
-    # using the params convention, you specified in your route
-end
-post '/dog' do
-    # create a new dog listing
-end
-put '/dog/:id' do
-    # HTTP PUT request method to update an existing dog
-end
-delete '/dog/:id' do
-    # HTTP DELETE request method to remove a dog who's been sold!
-end
-```
-
----
-
-
-## Primer internog JSD (Groovy Gradle)
-
-```groovy
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    groovy fileTree(dir: new File(gradle.gradleHomeDir, 'lib'),
-                    includes: ['**/groovy­all­*.jar'])
-    compile gradleApi()
-    compile 'eu.appsatori:gradle­fatjar­plugin:0.1.3',
-    {
-        ext.optional = true
+## Hello World!
+
+```c
+    #include <stdio.h> 
+    #include <omp.h>
+
+    int main() {
+
+        #pragma omp parallel
+        {
+            int id = omp_get_thread_num();
+            printf("Hello(%d)", id);
+            printf(" world!(%d)\n", id);
+        }
+        return 0; 
     }
-    testCompile 'org.spockframework:spock­core:0.6­groovy­1.8'
+```
+
+```console
+    mt@mt:~/courses/high-performance-computing$ gcc -o hello hello.c -fopenmp
+    mt@mt:~/courses/high-performance-computing$ ./hello
+    Hello(7) world!(7)
+    Hello(2) world!(2)
+    Hello(4) world!(4)
+    Hello(3) world!(3)
+    Hello(1) world!(1)
+    Hello(0) world!(0)
+    Hello(5) world!(5)
+    Hello(6) world!(6)
+```
+
+---
+
+## Hello World!
+
+- Jedan primer izvršavanja:
+  
+
+
+- Iako nigde u primeru broj niti nije zadat, OpenMP radno okruženje (eng. *execution environment*) je odlučilo da napravi 8 niti.
+- Tipično, OpenMP radno okruženje pravi onoliko niti koliko ima jezgara (fizičkih ili logičkih). 
+- Npr. ovaj ispis je dobijen izvršavanjem na Intelovom procesoru Intel® Core™ i7-8550U (8 logičkih jezgara).
+
+---
+
+
+## Hello World!
+
+- Da li bi se program brže izvršio ako bismo eksplicitno zatražili, na primer, 8 niti?
+  - `omp_set_num_threads() OMP_NUM_THREADS`
+- Moguće je i da radno okruženje *ne napravi* onoliko niti koliko ste od njega zatražili usled postojećih ograničenja!
+- Druge interesantne funkcije: 
+  - `omp_get_num_threads, omp_get_thread_num, omp_get_max_threads`
+
+---
+
+## Kompajliranje i pokretanje
+
+- Kako kompajlirati? 
+  - Otvoriti terminal, pozicionirati se u direktorijum u kojem se nalazi izvorna datoteka (izvornad.c) i uneti:
+  .center[
+    ```console
+    gcc [-g] [-o izvrsnad] izvornad.c -fopenmp [-O2]
+    ```
+  ]
+- U slučaju da postoji više izvornih datoteka, potrebno ih je sve navesti. Delovi u uglatim zagradama nisu obavezni.
+- Opcije:
+    - `-g` - omogućava prikupljanje podataka za debagovanje
+    - `-o` - specificira naziv izlazne datoteke, u ovom slučaju to je izvršna datoteka
+    - `-O2` | `-O3` - indikator kompajleru da primeni određene skupove optimizacija (O3 veći skup optimizacija od O2). 
+    - Upotreba ovih opcija se *ne preporučuje* u kombinaciji sa `-g` opcijom!
+
+  
+---
+
+## Kompajliranje i pokretanje
+
+
+- Kako pokrenuti iskompajlirano rešenje? 
+  - Otvoriti terminal, pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka (izvrsnad) i uneti:
+  .center[
+    ```console
+    ./izvrsnad <lista-argumenata>
+    ```
+  ]
+- U slučaju da pri kompajliranju nije navedeno ime izvršne datoteke, ona će se podrazumevano zvati a.out.
+ 
+
+
+---
+
+## Zadatak 1: Računanje vrednosti broja π
+
+- Korišćenjem samo parallel konstrukcije, paralelizovati program koji računa vrednost integrala
+
+![:scale 15%](img/integral.png)
+
+
+- Sekvencijalna implementacija programa u C programskom jeziku je data u direktorijumu zadaci. Rezultat integraljenja bi trebalo da bude jednak broju π. Potrebno je dodati parallel konstrukciju bez daljih modifikacija sekvencijalnog programa.
+
+- Šta se dešava sa rezultatom?
+
+.attention[
+**Primer rešenja**: funkcija parallel_code_incorrect, datoteka pi.c, direktorijum resenja.
+]
+
+---
+
+## Tipovi promenljivih
+- **Deljene**, odnosno **globalne** - Prostor za ove promenljive se
+zauzima na hipu, kome pristupaju sve niti. 
+- *Potencijalni kandidati za štetno preplitanje*! 
+- U deljene promenljive se ubrajaju:
+	- statičke promenljive i
+	- promenljive alocirane izvan paralelnog regiona (na primer promenljiva sum iz zadatka 1)
+
+- **Privatne**, odnosno **lokalne** - Vidljive samo u okviru niti u kojoj su deklarisane. Prostor za ove promenljive se zauzima na `steku niti`. 
+- U privatne promenljive se ubrajaju:
+	- promenljive deklarisane unutar paralelnog regiona (x)
+	- promenljive promenljive deklarisane unutar funkcije koja je pozvana iz paralelnog regiona i
+	- brojačke promenljive u `for` petlji prvog nivoa
+
+- `OMP_STACKSIZE` za upravljanje veličinom steka niti
+
+---
+
+
+## Zadatak 2: Računanje vrednosti broja π
+
+- Modifikovati rešenje prethodnog zadatka tako da se ukloni štetno preplitanje.
+- 
+.attention[
+**Primer rešenja**: Funkcija `parallel_code`, datoteka pi.c, direktorijum resenja.
+]
+
+
+---
+
+## Zadatak 3*: Računanje vrednosti broja π
+
+
+- Paralelno rešenje zadatka 2 eliminiše problem štetnog preplitanja, ali uvodi problem lažnog deljenja (eng. *false sharing*) pri pristupu nizovnoj promenljivoj `sum`.
+- Izmeniti rešenje tako se otkloni lažno deljenje.
+.attention[
+**Napomena**: Razmisliti o tome koliko se elemenata niza prenosi u keš procesora kada se pristupa jednom elementu.
+]
+.attention[
+**Primer rešenja**: Funkcija `parallel_code_no_false_sharing`, datoteka, pi.c, direktorijum resenja.
+]
+
+---
+
+## Sinhronizacioni konstrukti
+- Sinhronizacija visokog nivoa apstrakcije:
+    - barrier construct - definiše tačku u kodu do koje sve aktivne niti moraju da se zaustave dok do te tačke ne stigne i poslednja nit, nakon čega sve niti mogu nastaviti dalje izvršavanje.
+```c
+#pragma omp barrier
+```
+
+- `critical construct` - samo jedna nit može u jednom trenutku biti u kritičnoj sekciji.
+```c
+	#pragma omp critical
+		strukturirani-blok
+```
+
+- `atomic construct` - hardverski podržan isključiv pristup ažuriranju vrednosti proste promenljive. Ukoliko nema hardverske podrške, ova konstrukcija se ponaša kao i `critical`.
+```c
+#pragma omp atomic
+```
+
+---
+
+## Zadatak 4: Računanje vrednosti broja pi
+
+- Doraditi rešenje zadatka 2 tako da se štetno preplitanje ukloni odgovarajućim sinhronizacionim mehanizmom.
+
+.attention[
+  **Primer rešenja**: Funkcija  `parallel_code_synchronization`, datoteka pi.c, direktorijum resenja.
+]
+
+---
+
+## Konstrukcije za podelu posla
+
+- eng. *worksharing constructs*
+
+	- `loop` konstrukcija (eng. *loop construct*)
+	- `sections/section` konstrukcija (eng. *sections/section construct*)
+	- `single` konstrukcija (eng. *single construct*)
+
+- Na kraju bloka koda koji se izvršava u sklopu neke od konstrukcija za podelu posla podrazumevano postoji `implicitna barijerna sinhronizacija`.
+- Podrazumevano ponašanje se može promeniti navođenjem `nowait` klauze u okviru direktiva za podelu posla (primer kasnije).
+
+---
+
+## Implicitna barijerna sinhronizacija
+
+- Implicitna barijerna sinhronizacija se takođe podrazumevano  nalazi i na kraju paralelnog regiona, ali je za razliku od konstrukcija za podelu posla, nije moguće odatle ukloniti.
+
+- Zašto?
+
+---
+
+name: loop 
+class: center, middle
+layout: false
+
+# loop konstrukcija
+
+---
+layout: true
+
+.section[[loop konstrukcija](#sadrzaj)]
+
+
+---
+
+## loop konstrukcija
+
+- Sintaksa:
+ ```c
+ #pragma omp for [clause[ [,] clause] ... ]
+    for-petlje
+```
+
+- Problemi u računarstvu visokih performansi se često svode na rad sa velikim nizovima! To znači da često postoji iteriranje kroz nizove...
+- Taj posao može da se podeli na više niti! Svaka nit u paraleli može obraditi parče niza.
+
+- Ovaj način raspodele podataka ste već implementirali u zadatku 2, ali ste sami morali da specificirate granice niza nad kojima radi svaka pojedinačna nit.
+
+---
+
+## Primer 2: `loop` konstrukcija
+
+- Primer upotrebe `for` direktive
+```c
+#pragma omp parallel
+    {
+        int sum = 0;
+        #pragma omp for
+        for (int i = 0; i < N; i++)
+            sum += A[i];
+    }
+```
+
+- Korišćenjem kombinovane konstrukcije:
+```c
+    #pragma omp parallel for
+    {
+        int sum = 0;
+        for (int i = 0; i < N; i++)
+            sum += A[i];
+    }
+```
+---
+
+## loop konstrukcija: raspoređivanje
+
+- **Kako će iteracije petlje biti dodeljene nitima?**
+- OpenMP podržava više strategija raspoređivanja koje se mogu specificirati schedule klauzom.
+
+```c
+#pragma omp for schedule(tip [,velicina_bloka])
+```
+
+---
+
+## loop konstrukcija: raspoređivanje
+
+- **Kako će iteracije petlje biti dodeljene nitima?**
+	- `static` - blokovi iteracija se dodeljuju nitima u vreme kompajliranja po `round-robin` principu
+
+	- `dynamic` - blokovi iteracija se dodeljuju nitima u vreme izvršavanja tako da opterećenje niti bude optimalno
+
+	- `guided` - modifikacija dinamičkog raspoređivanja gde je svaki naredni blok dodeljen niti manji od prethodnog
+
+	- `auto`  - kompajler određuje tip raspoređivanja koji misli da je najbolji za problem 
+	- `runtime` - moguće je "spolja" uticati na tip raspoređivanja preko `OMP_SCHEDULE` promenljive okruženja
+
+---
+
+
+name: redukcije 
+class: center, middle
+layout: false
+
+# Redukcije
+
+---
+layout: true
+
+.section[[Redukcije](#sadrzaj)]
+
+
+---
+
+## Redukcije
+
+- Prisetimo se nepotpunog paralelnog sabiranja elemenata niza iz primera 2
+```c
+    #pragma omp parallel for
+    {
+        int sum = 0;
+        for (int i = 0; i < N; i++) {
+            sum += A[i];
+        } 
+    }
+    /* saberi parcijalne sume */
+```
+
+- Da bi program bio potpuno funkcionalan, potrebno je posabirati parcijalne sume koje sračunaju niti.
+
+---
+
+## Redukcije
+
+- Može da se uradi ovako:
+```C
+	int sum = 0;
+	#pragma omp parallel for
+{
+		for (int i = 0; i < N; i++) {
+				#pragma omp critical
+				sum += A[i];
+		}
+}
+``` 
+- I u deljenoj promenljivoj sum će biti konačan rezultat. 
+- Ali ovo je **MNOGO** neefikasno!
+
+---
+
+## Redukcije
+
+- A može i ovako:
+```c
+	int sum = 0;
+	#pragma omp parallel for reduction(+:sum)
+{
+		for (int i = 0; i < N; i++) {
+				sum += A[i];
+		}
 }
 ```
+- Šta zapravo znači `reduction(+:sum)?`
+
+---
+## Redukcije
+
+1. Za svaku nit u paralelnom regionu napravi po jednu privatnu
+instancu promenljive `sum` i inicijalizuj je na vrednost neutralnu
+za navedeni redukcioni operator (u slučaju sabiranja je to 0).
+
+2. Svaka nit menja svoju kopiju promenljive `sum.`
+
+3. Na kraju petlje, rezultati se kombinuju upotrebom redukcionog
+operatora u deljenu promenljivu `sum.`
 
 ---
-layout: false
+
+## Redukcije
+- Opšti format redukcije:
+```c
+reduction(redukcioni_operator : lista_promenljivih)
+``` 
+- Ugrađeni redukcioni operatori za C/C++:
+  
+.center-table.small[
+
+| **Operacija** |      **Vrednost**      |
+|:-------------:|:----------------------:|
+|       +       |            0           |
+|       *       |            1           |
+|       -       |            0           |
+|      min      | najveći pozitivan broj |
+|      max      | najveći negativan broj |
+|       &       |           ~0           |
+|      I        |            0           |
+|       ˆ       |            0           |
+|       &&      |            1           |
+|     II        |            0           |
+
+]
+
+---
+## Zadatak 5: Računanje vrednosti broja pi
+
+- Implementirati paralelno rešenje računanja vrednosti broja pi uz korišćenje `for`  direktive i reduction klauze.
+
+.attention[
+**Primer rešenja**: Funkcija `parallel_code_for_construct`,  datoteka pi.c, direktorijum resenja.
+]
+
+---
+
+name: vs 
 class: center, middle
+layout: false
 
-# Eksterni JSD omogućavaju potpuno prilagođavanje domenu.
-
+# Implicitna vs. eksplicitna barijera
 
 ---
 layout: true
 
-.section[[Klasifikacija](#sadrzaj)]
+.section[[Implicitna vs. eksplicitna barijera](#sadrzaj)]
+
 
 ---
+## Implicitna vs. eksplicitna barijera 
 
-## Interni JSD za muzičku notaciju
+- Eksplicitna barijera je zadata `#pragma omp barrier direktivom`.
+- Implicitna barijera je barijera već uključena u neku konstrukciju (npr. `for`  konstrukciju).
 
-```java
-Score k = new Score(Tonality.G_major);
-Bar bar = new Bar(BarType.4_4);
-t.addPause(Duration.1_4);
-t.addNote(NoteType.A3, Duration.1_4);
-t.addNote(NoteType.C2, Duration.1_4);
-k.addBar(bar);
+---
+## Implicitna vs. eksplicitna barijera 
+
+- U kojem delu koda će se niti sinhronizovati?
+```c
+	#pragma omp parallel
+	{
+			/* prvi blok naredbi */
+			#pragma omp barrier
+			/* drugi blok naredbi */
+    }
 ```
 
 ---
 
-## Eksterni JSD za muzičku notaciju
+## Implicitna vs. eksplicitna barijera 
 
-U eksternoj varijanti možemo u potpunosti prilagoditi konkretnu sintaksu
-domenskim ekspertima.
-
-.center[
-![:scale 80%](uvod/MusicNotation-External.png)
+- U kojem delu koda će se niti sinhronizovati?
+```c
+	#pragma omp parallel
+    {
+			/* prvi blok naredbi */
+			#pragma omp barrier
+			/* drugi blok naredbi */
+    }
+```
+.attention[
+**Odgovor**: Na barrier direktivi (eksplicitna barijerna sinhronizacija).
 ]
 
 ---
+## Implicitna vs. eksplicitna barijera
 
-## Lilypond note script
+- U kojem delu koda će se niti sinhronizovati?
 
-Ali se dešava da i u eksternoj varijanti JSD nije prilagođen domenskim
-ekspertima.
-
-![](uvod/Lilypond.png)
+```c
+	#pragma omp parallel for
+	for (i = 0; i < N; i++)
+		/* prvi blok naredbi */
+    /* drugi blok naredbi */
+``` 
 
 ---
+## Implicitna vs. eksplicitna barijera 
 
-## Kritike JDS
-
-- Skup razvoj i održavanje jezika.
-- Potreba za ekspertima u domenu razvoja jezika koji su istovremeno sposobni da
-  analiziraju domen primene.
-- Jezička "kakofonija" (*Language Cacophony* .ref[1])i potreba da programeri
-  poznaju veliki broj jezika (poseban jezik za svaki tehnički i/ili poslovni
-  domen).
-
-.footer[
-    M. Fowler, *Language workbenches: The killer-app for domain specific
-        languages*, Online
-        http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
+- U kojem delu koda će se niti sinhronizovati?
+```c
+	#pragma omp parallel for
+	for (i = 0; i < N; i++)
+		/* prvi blok naredbi */
+	/* drugi blok naredbi */
+```
+.attention[
+**Odgovor**:  Na kraju prvog bloka naredbi. Sve niti moraju da završe svoje iteracije petlje da bi mogle da nastave sa drugim blokom naredbi, jer podrazumevano `loop` konstrukcija ima ugrađenu implicitnu barijeru.
 ]
 
+---
+## Implicitna vs. eksplicitna barijera 
+
+- U kojem delu koda će se niti sinhronizovati?
+```c 
+	#pragma omp parallel for nowait
+	for (i = 0; i < N; i++)
+		/* prvi blok naredbi */
+	/* drugi blok naredbi */
+```
 
 ---
-name: radionice
-layout: false
+## Implicitna vs. eksplicitna barijera 
+
+- U kojem delu koda će se niti sinhronizovati?
+```c
+	#pragma omp parallel for nowait
+	for (i = 0; i < N; i++)
+		/* prvi blok naredbi */
+    /* drugi blok naredbi */
+``` 
+.attention[
+**Odgovor**: Na kraju paralelnog regiona. Implicitna barijera loop konstrukcije je onemogućena upotrebom `nowait` klauze.
+]
+
+---
+name: ss 
 class: center, middle
+layout: false
 
-# Jezičke radionice
+# sections/section konstrukcija
 
 ---
 layout: true
 
-.section[[Jezičke radionice](#sadrzaj)]
+.section[[sections/section konstrukcija](#sadrzaj)]
 
 ---
+## sections/section konstrukcija
 
+- Svaka nit unutar sections konstrukcije izvršava jedan blok koda koji pripada sekciji.
 
-## Jezičke radionice (*Language Workbenches*)
-
-- Integrisana okruženja za razvoj, testiranje i evoluciju jezika i alata za
-  njihovo efikasno korišćenje (editori, interpreteri, kompajleri i sl.). Koriste
-  se kod paradigme razvoja orijentisane ka jezicima (*Language Oriented
-  Programming - LOP*).ref[*]
-- Rešavaju problem brzine razvoja i lakoće održavanja JSD.
-- Primeri jezičkih radionica:
-  - Meta Programming System (MPS)
-  - Xtext
-  - Spoofax
-
-.footer[
-\* M. Fowler, *Language workbenches: The killer-app for domain specific
-   languages*, Online
-   http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
-]
-
+- Sintaksa:
+```c
+	#pragma omp sections [clause[ [,] clause] ... ]
+	{
+		[ #pragma omp section ]
+				strukturirani-blok
+		[ #pragma omp section
+				strukturirani-blok ]
+	...
+} 
+``` 
 
 ---
+## Primer 3: sections/section konstrukcija
 
-## Pristupi
-
-.medium[
-- Projekcione radionice - direktna izmena apstraktne reprezentacije kroz
-  projekciju.
- 
-  ![:scale 45%](uvod/projekcija.svg)
-  
-- Bazirane na parserima - izmena se vrši posredno kroz tekst koji se parsira da
-  bi se dobila apstraktna reprezentacija.
-
-  ![:scale 80%](uvod/parseri.svg)
-
-]
-
-.footer[
-.small[Eye icon designed by Freepik. Hand icon by Yannick Lung.]
-]
+```c
+	#pragma omp parallel
+	{
+		#pragma omp sections
+		{
+		#pragma omp section
+			x_calculation();
+		#pragma omp section
+			y_calculation();
+		#pragma omp section
+			z_calculation();
+		}
+	}
+```
 
 ---
+## single konstrukcija
 
-## Projekcione radionice
+- Sintaksa:
+```c
+#pragma omp single [clause[ [,] clause] ... ]
+    strukturirani-blok
+``` 
 
-- Prednosti:
-  - Moguće višestruke konkretne sintakse (tekstualne, grafičke, tabelarne...) -
-    bolje prilagođavanje konkretnom domenu.
-  - Sintakse se mogu "u letu" menjati.
-  - Kontrola validnosti izraza u vreme izmene modela.
-
-- Mane:
-  - Složenost alata.
-  - Format za perzistenciju nije u vezi sa konkretnim sintaksama koje korisnik
-    koristi. Nemoguće je koristiti standardne sisteme za kontrolu verzija
-    bazirane na tekstu.
-  - Moraju se razviti namenski generički editori za svaku klasu konkretnih sintaksi.
-  
+- Blok naredbi izvršava samo nit koja prva uđe u strukturirani blok.
+```c
+	#pragma omp parallel
+	{
+		do_many_things();
+		#pragma omp single
+			{ exchange_boundaries(); }
+		#pragma omp barrier
+			do_many_other_things();
+	}
+```
 ---
+## master konstrukcija
 
-## Radionice bazirane na parserima
+- Sintaksa:
+```c
+#pragma omp master
+strukturirani-blok
+```
 
-- Prednosti:
-  - Jednostavnije za izradu i održavanje.
-  - Teorija parsiranja dobro ustanovljena. Veliki broj biblioteka za parsiranje.
-  - Moguće koristiti obične tekstualne editore.
-  - Moguće koristiti standardne sisteme za kontrolu verzija (npr. git,
-    subversion).
-  - Jednostavno kopiranje i lepljenje (eng. *copy/paste*).
-
-- Mane:
-  - Moguća samo tekstualna sintaksa -> ograničeno prilagođavanje domenu.
-  - Provera validnosti se odlaže do faze parsiranja.
-  
----
-
-## *Meta Programming System (MPS)*
-
-- JetBrains - http://www.jetbrains.com/mps/
-- Projekciona jezička radionica - editori manipulišu direktno apstraktnom
-  reprezentacijom (stablom apstraktne sintakse). Čak i u slučaju tekstualnih
-  notacija.
-- Podrška za različite konkretne sintakse (notacije): tabelarne, tekstualne,
-  bazirani na ćelijama, grafičke.
-- Podrška za kontrolu verzija.
+- Blok naredbi izvršava samo master nit.
+```c
+	#pragma omp parallel
+	{
+		do_many_things();
+		#pragma omp master
+			{ exchange_boundaries(); }
+		#pragma omp barrier
+				do_many_other_things();
+	}
+```
+- Nema implicitne sinhronizacije.
 
 ---
+## Sihnronizacioni mehanizmi: lock
 
-## *Meta Programming System* - karakterističan izgled
+- Pripada mehanizmima niskog nivoa sinhronizacije.
 
-![:scale 70%](uvod/MPS.png)
+- Analogni pojam propusnici iz C++11 višenitnog okruženja.
 
-.footer[
-http://www.jetbrains.com/mps/docs/tutorial.html
-]
+- `critical` direktiva u pozadini koristi `lock`.  
+- Zašto biste onda ikada želeli da direktno koristite ovu direktivu?
 
----
-
-## Xtext
-
-- Nastao kao deo projekta slobodnog softvera - *openArchitectureWare*.
-- Iza razvoja u najvećoj meri stoji nemačka
-  firma [Itemis](https://www.itemis.com/en/).
-- Postao deo Eclipse projekta.
-- Tekstualne sintakse. EBNF-like gramatika.
-- Upotreba ECore meta-metamodela.ref[1]. Meta-model se generiše iz gramatike a
-  može da koristi i već postojeći meta-model.
-- Generisanje Eclipse editora sa podrškom za bojenje sintakse, navigaciju,
-  *outline* pogled itd.
-- Xtext bazirani JSD se duboko integriše u Eclipse okruženje i teško je uočiti
-  razliku sa podrškom za bilo koji drugi jezik sa Eclipse podrškom (npr. Java).
-
-.footer[
-http://www.eclipse.org/modeling/emf/
-]
+- Nema problema, ako na primer, ograničavate pristup jednoj celobrojnoj promenljivoj kroz kritičnu sekciju.  
+- Ali šta će se desiti ako kroz kritičnu sekciju ograničite pristup elementima nekog niza?
 
 ---
+## Primer 3: histogram
 
-## Xtext - *Little tortoise* jezik
+![:scale 65%](img/histogram.png)
 
 .center[
-![:scale 70%](uvod/xText-tortoise.png)
-]
-
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
+    `int` histogram[255];
 ]
 
 ---
+## Primer 4: histogram
+
+```C
+	#pragma omp parallel for
+	for (i = 0; i < NBUCKETS; i+) {
+		omp_init_lock(&hist_locks[i]);
+		hist[i] = 0;
+    }
+
+	#pragma omp parallel for
+	for (i = 0; i < NVALS; i++) {
+		ival = (int) sample(arr[i]);
+		omp_set_lock(&hist_locks[ival]);
+			hist[ival]++;
+		omp_unset_lock(&hist_locks[ival]);
+    }
+
+    for (i = 0; i < NBUCKETS; i++) {
+		omp_destroy_lock(&hist_locks[i]);
+    }
+``` 
+
+---
+## Klauze za rad sa podacima
+
+- `shared`(<lista-promenljivih>)
+- `private`(<lista-promenljivih>)
+- `firstprivate`(<lista-promenljivih>)
+- `lastprivate`(<lista-promenljivih>)
+- `default( private | shared | none )` - Ako se ništa ne navede za ovu klauzu, podrazumevana vrednost u C i C++ programskim jezicima je `shared.`
+
+---
+## Primer 5: Klauze za rad sa podacima
+
+```c
+	void dummy() {
+		int tmp = 0;
+		#pragma omp parallel for private(tmp)
+		for (int j = 0; j < 5; j++)
+			tmp += j;
+		printf("%d\n", tmp);
+}
+```
+- Koja vrednost će biti ispisana na standardni izlaz?
 
 
-## Xtext - *Little tortoise* gramatika
+---
+## Primer 5: Klauze za rad sa podacima
 
-.center[
-![:scale 75%](uvod/xText-grammar.png)
+```c
+	void dummy() {
+		int tmp = 0;
+	#pragma omp parallel for private(tmp)
+	for (int j = 0; j < 5; j++)
+		tmp += j;
+	printf("%d\n", tmp);
+	}
+```
+- Koja vrednost će biti ispisana na standardni izlaz?
+
+.attention[
+**Odgovor**: Na standardni izlaz će biti ispisana vrednost 0.
 ]
 
-.footer[
-http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
+.attention[
+**Objašnjenje**:  Kako je promenljiva tmp proglašena privatnom, svaka nit će imati svoju instancu ove promenljive. Po završetku petlje, lokalne promenljive će biti uništene, a deljena promenljiva `tmp` će zadržati svoj u inicijalnu vrednost.
+]
+
+
+---
+## Primer 5: Klauze za rad sa podacima
+
+```c
+	void dummy() {
+		int tmp = 0;
+		#pragma omp parallel for private(tmp)
+		for (int j = 0; j < 5; j++)
+			tmp += j;
+		printf("%d\n", tmp);
+	}
+```
+- Koja je inicijalna vrednost privatnih verzija promenljive tmp?
+
+---
+## Primer 5: Klauze za rad sa podacima
+
+```c
+	void dummy() {
+		int tmp = 0;
+		#pragma omp parallel for private(tmp)
+		for (int j = 0; j < 5; j++)
+				tmp += j;
+			printf("%d\n", tmp);
+}
+```
+- Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
+
+.attention[
+**Odgovor**: Inicijalna vrednost privatnih promenljivih tmp je nepoznata.
+]
+
+.attention[
+**Objašnjenje**:  Klauza private`(tmp)` kaže kompajleru da treba da alocira prostor za promenljivu tmp na steku. Kompajler ne mora inicijalizovati zauzetu lokaciju.
+]
+
+---
+## Primer 5: Klauze za rad sa podacima
+
+```c
+	void dummy() {
+		int tmp = 0;
+		#pragma omp parallel for private(tmp)
+		for (int j = 0; j < 5; j++)
+				tmp += j;
+		printf("%d\n", tmp);
+	}
+```
+- Kojom klauzom je potrebno zameniti private klauzu da bi lokalne  instance promenljive `tmp` dobile inicijalnu vrednost globalne promenljive `tmp`?
+
+---
+
+## Primer 5: Klauze za rad sa podacima
+
+```c
+	void dummy() {
+		int tmp = 0;
+		#pragma omp parallel for private(tmp)
+		for (int j = 0; j < 5; j++)
+			tmp += j;
+		printf("%d\n", tmp);
+	}
+```
+- Kojom klauzom je potrebno zameniti private klauzu da bi lokalne
+instance promenljive tmp dobile inicijalnu vrednost globalne
+promenljive `tmp`?
+
+.attention[
+**Odgovor**: `firstprivate`
 ]
 
 ---
 
-## Xtext - primeri
+## Zadatak 6: Mandelbrotov set
 
-Za dokumentaciju sa primerom izgradnje 7 različitih jezika pogledati http://www.eclipse.org/Xtext/7languagesDoc.html
+- Data je datoteka `mandelbrot.c.` Datoteka sadrži paralelno OpenMP
+rešenje koje određuje Mandelbrotov set. 
+- Rešenje ima par problema
+vezanih za korišćenje klauza za rad sa podacima i poneko štetno
+preplitanje. Pronađite i ispravite greške.
 
----
-
-## Spoofax
-
-- Kao i Xtext baziran na parsiranju i tekstualnim sintaksama. Kreira punu
-  podršku za jezik u vidu Eclipse priključaka.
-- Istraživački projekat na TU Delft u Holandiji.
-- Gramatika jezika se definiše meta-jezikom SDF (*Syntax Definition Formalism*).
-- Parser koristi SGLR algoritam (*Scanerless GLR*) i omogućava parsiranje punog
-  skupa kontekstno slobodnih gramatika. U slučaju neodređenosti parser vraća
-  šumu parsiranja (*parse forest*) dok u slučaju determinističke gramatike vraća
-  uvek stablo parsiranja (*parse tree*).
-- Za tranformaciju programa i prepisivanje stabala koristi se JSD *Stratego*.
-
----
-
-## Spoofax - karakterističan izgled
-
-![:scale 80%](uvod/Spoofax-prikaz.png)
-
----
-
-## Inženjerstvo softverskih jezika
-
-- *Software Language Engineering - SLE*.
-- Pravac i pogled na razvoj softverskih jezika koji pokušava da ujedini sve
-  druge pravce koji u osnovi imaju razvoj i upotrebu softverskih jezika
-  (*MDE/MDA/DSM*.., ontologije, *grammarware*, *Language Oriented
-  Programming*...).
-- Jedna od ideja je izjednačavanje modela i programa - kao jedinstven naziv
-  predložen je *mogram*.ref[*].
-
-.footer[
-  `*` A. Kleppe, *Software language engineering: creating domain-specific
-  languages using metamodels*. Addison-Wesley, 2009
+.attention[
+**Rešenje**: datoteka `mandelbrot.c`, direktorijum resenja
 ]
 
 ---
 
-## Literatura
+## Kako paralelizovati `while` i rekurziju?
 
-- M. Völter, [DSL Engineering: Designing, Implementing and Using
-  Domain-Specific Languages](http://dslbook.org/). 2013
-- S. Kelly and J.-P. Tolvanen, *Domain-Specific Modeling: Enabling Full Code
-  Generation*. Wiley-IEEE Computer Society Pr, March 2008
-- Federico Tomassetti, [*The complete guide to (external) Domain Specific
-  Languages*](https://tomassetti.me/domain-specific-languages/), published
-  on [the author's blog](https://tomassetti.me/), February 2017.
-- I.
-  Dejanović,
-  [Prilog metodama brzog razvoja softvera na bazi proširivih jezičkih specifikacija](http://doiserbia.nb.rs/phd/fulltext/NS20110103DEJANOVIC.pdf).
-  PhD thesis, Faculty of Technical Sciences, University of Novi Sad, January
-  2012
+- Inicijalno, OpenMP je zamišljen tako da je moguće paralelizovati
+probleme za koje se unapred zna broj potrebnih iteracija za njihovo
+rešavanje!
+
+.attention[
+**Problem!**  
+Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj iteracija? Ili u slučaju rekurzije?
+]
+
+---
+## Kako paralelizovati `while` i rekurziju?
+
+- Inicijalno, OpenMP je zamišljen tako da je moguće paralelizovati
+probleme za koje se unapred zna broj potrebnih iteracija za njihovo
+rešavanje!
+
+.attention[
+**Problem!**  
+Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj iteracija? Ili u slučaju rekurzije?
+]
+
+- Opcije:
+	- Problem transformisati u formu `for` petlje ako je to moguće
+	- Koristiti `task` konstrukciju (od OpenMP 3.0)
+
+---
+## Primer 6: Paralelizacija obrade čvorova liste
+
+
+.lcol[
+```c
+// petlja koju
+// treba paralelizovati
+while (p != NULL) {
+	processwork(p);
+	p = p->next;
+}
+```
+]
+
+.rcol[
+```c
+// 1. odrediti broj cvorova
+while (p != NULL) {
+	nelems++; p = p->next;
+}
+...
+
+// 2. zapamtiti adrese cvorova
+p = head;
+for (i = 0; i < nelems; i++) {
+	ptrs[i] = p;
+	p = p->next;
+}
+...
+
+// 3. pokrenuti paralelnu obradu
+#pragma omp parallel for
+for (i = 0; i < nelems; i++)
+	processwork(ptrs[i]);
+```
+]
+
+---
+## task konstrukcija
+
+- Sintaksa:
+```c 
+#pragma omp task[clause[ [,] clause] ... ]
+strukturirani-blok
+```
+
+- Može se posmatrati kao nezavisna jedinica posla.
+- Čine ga:
+	- Kod koji zadatak izvršava
+	- Podaci (privatne i deljene promenljive)
+	- `Internal Control Variables (ICV)` (npr. indikator da li zadatak može da bude dodeljen različitim nitima, vrsta raspoređivanja, broj niti u paralelnom regionu itd.)
+
+---
+## Primer 7: Kreiranje zadataka
+
+- `task i single` konstrukcije se često koriste zajedno:
+	- jedna nit pravi zadatke koji se uvezuju u red zadataka odakle sve niti mogu da uzimaju zadatke.
+
+```c
+	#pragma omp parallel
+	{
+		#pragma omp single
+		{
+				#pragma omp task
+				y = f(x)
+				#pragma omp task
+				z = g(x)
+		}
+	}
+```
+
+---
+## Zadatak 7: Modifikacija liste
+
+- Data je sekvencijalna implementacija liste `(linked.c)` u kojoj svaki element sadrži po jedan Fibonačijev broj dobijen funkcijom `processwork`. 
+- Napraviti OpenMP paralelni program korišćenjem `task` konstrukcije.
+
+.attention[
+**Rešenje**: datoteka `linkedlist.c`, direktorijum resenja.
+]
+
+---
+## Konstrukti za sinhronizaciju izvršavanja zadataka
+
+- `taskwait` - sinhronizacija samo zadataka istog nivoa
+    ```c 
+    #pragma omp taskwait
+    ```
+
+- `taskgroup` - sinhronizuje i podzadatke
+
+    ```c
+    #pragma omp taskgroup
+        strukturirani-block
+    ``` 
+
+- `depend` - task klauza
+
+    ```c 
+    depend(in | out | inout : lista)
+    ```
+
+---
+## Primer 8: Sinhronizacija zavisnih zadataka
+
+```c 
+	int y, z;
+	#pragma omp parallel
+	{
+		#pragma omp single
+		{
+				#pragma omp task
+				y = f(x)
+				#pragma omp taskwait
+				#pragma omp task
+				z = g(y)
+		}
+	}
+```
+---
+
+## Primer 8: Sinhronizacija zavisnih zadataka
+
+```c
+	#pragma omp parallel
+	{
+		int y, z;
+		#pragma omp single
+		{
+				#pragma omp task depend(out:y)
+				y = f(x)
+				#pragma omp task depend(in:y)
+				z = g(y)
+		}
+	}
+```
+
+---
+
+## Zadatak 8*: Množenje matrice i vektora
+
+- Implementirati sekvencijalni program za množenje nekvadratne matrice i vektora u C programskom jeziku.
+
+- Nakon što se uverite da program daje očekivane rezultate, implementirani OpenMP paralelni algoritam na osnovu sekvencijalnog programa.
+
+.attention[
+    **Napomene**: Svaka od dimenzija matrice treba da bude makar 1000. Za potrebe testiranja programa dimenzije matrice mogu da budu i manje.
+    Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
+]
+
+---
+
+
+## Zadatak 9*: Množenje matrica - domaći
+
+- Implementirati sekvencijalni program za množenje dve nekvadratne
+matrice u C programskom jeziku.
+
+- Nakon što se uverite da program daje očekivane rezultate,
+implementirati OpenMP paralelni program na osnovu
+sekvencijalnog programa.
+
+.attention[
+    **Napomene**: Korektan sekvencijalni program testirati na velikim matricama (oko 1000 po dimenziji, modifikovati zavisno od karakteristika računara na kojem radite zadatak). 
+    Za potrebe testiranja, dimenzije matrica mogu da budu i manje.
+    Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
+]
+
+---
+
+## Zadatak 10*: Akumuliranje vrednosti čvorova stabla
+
+- Napraviti sekvencijalnu implementaciju stabla u C programskom jeziku. 
+- Svaki čvor stabla sadrži jedan razlomljeni broj u jednostrukoj preciznosti. 
+- Potrebno je implementirati minimalni skup funkcionalnosti (kreiranje stabla, sabiranje vrednosti čvorova stabla i uništavanje stabla).
+
+ - Nakon što se uverite da program daje očekivane rezultate implementirati OpenMP paralelni program na osnovu sekvencijalnog programa.
+
+.attention[
+    **Napomene**:
+Paralelni program implementirati korišćenjem task konstrukcije.
+Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
+]
+
+
+---
+
+## Zadatak 11: Transponovanje matrice
+
+- Data je sekvencijalna implementacija transponovanja matrice
+(direktorijum zadaci/`matrix_transpose`). Napraviti OpenMP
+paralelnu verziju algoritma.
+
+.attention[
+    **Napomene**:
+  Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
+]
+
+---
+
+## Zadatak 12: Jednostavni genetski algoritam
+
+- Data je sekvencijalna implementacija jednostavnog genetskog algoritma implementiranog u C programskom jeziku (direktorijum zadaci/`genetic_algorithm`).  
+- Pokrenuti sekvencijalni algoritam nad svim datim primerima prema uputstvu u README.md datoteci i analizirati vremena izvršavanja delova genetskog algoritma.
+- Odrediti kritične delove koda i paralelizovati ih korišćenjem OpenMP.
+
+.attention[
+    **Napomene**:
+Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
+]
+
+---
+## Zadatak 13*: Traženje korena funkcije nad intervalom - domaći
+
+- Data je sekvencijalna implementacija metode za određivanje korena funkcije nad zadatim intervalom metodom bisekcije (direktorijum zadaci/`bisection`).  
+- Pokrenuti sekvencijalni algoritam nad svim datim primerima prema uputstvu u `README.md` datoteci i pogledati rešenja sva tri zadata primera.
+- Zatim implementirati OpenMP paralelno rešenje.
+
+.attention[
+    **Napomene**:
+Algoritam isprobati na još primera. Pri proveri tačnosti dobijenog rešenja moguće je koristiti neki od alata za određivanje korena funkcije (Volfram, na primer).
+Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
+]
+
+---
+## Korišćeni materijali
+
+- Dokumentacija sa OpenMP sajta, videti `www.openmp.org`
+- `"Introduction to OpenMP", Tim Mattson`, dostupno na [ovom linku](https://www.youtube.com/playlist?list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG)
+- [`"Introduction to OpenMP"`, prateća prezentacija](https://www.openmp.org/wp-content/uploads/Intro_To_OpenMP_Mattson.pdf)
+- `"Parallel Computing Book"`, Victor Eijkhout, elektronska verzija knjige je dostupna na [ovom linku](http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-basics.html)
+
+
+
 
 {% endblock %}
