@@ -73,7 +73,7 @@ mpiexec [-np <N>] <izvrsna_datoteka>
 
 ---
 
-## Primer 1: Hello World!
+## Primer 1: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`hello_world.c`</a>
 ```c
 #include <stdio.h>
 #include "mpi.h"
@@ -157,7 +157,7 @@ MPI_COMM_WORLD rank: 0/4 - ncomm rank: 0/2
 ```
 
 .attention[
-**Rešenje**: datoteka `communicators.c`, direktorijum resenja.
+**Rešenje**: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Rešenja/`communicators.c`</a>
 ]
 
 ---
@@ -241,7 +241,7 @@ int MPI_Send(
 
 ---
 
-## Primer 2: Point to Point komunikacija
+## Primer 2: Point to Point komunikacija <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`send_recv.c`</a>
 
 ```c
 // ...
@@ -374,7 +374,7 @@ int MPI_Bcast(
 
 ---
 
-## Primer 3: bcast.c
+## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`bcast.c`</a>
 ```c
 int main(int argc, char *argv[]) {
 	int rank, root = 0;
@@ -465,7 +465,7 @@ int MPI_Scatter(
 ---
 
 
-## Primer 4: scatter.c
+## Primer 4: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`scatter.c`</a>
 
 ```c
 int main(int argc, char *argv[]) {
@@ -525,7 +525,7 @@ int MPI_Gather(
 
 ---
 
-## Primer 5: gather.c
+## Primer 5: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`gather.c`</a>
 ```c
 int main(int argc, char *argv[]) {
 
@@ -576,7 +576,7 @@ int MPI_Allgather(
 
 .rcol[
 
-![:scale 60%](img/allGather.png)
+![:scale 60%](img/allgather.png)
 
 ]
 
@@ -591,7 +591,7 @@ int MPI_Allgather(
 
 ---
 
-## Primer 6: allgather.c
+## Primer 6: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`allgather.c`</a>
 ```c
 int main(int argc, char *argv[]) {
 
@@ -646,7 +646,7 @@ int MPI_Reduce(
 
 ---
 
-## Primer 7: reduce.c
+## Primer 7: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`reduce.c`</a>
 
 ```c
 int main(int argc, char *argv[]) {
@@ -704,7 +704,7 @@ int MPI_Allreduce(
 
 ---
 
-## Primer 8: allreduce.c
+## Primer 8: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`allreduce.c`</a>
 
 ```c
 int main(int argc, char *argv[]) {
