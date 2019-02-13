@@ -666,10 +666,6 @@ h5_matrix_utils.h - zadatak
 ##### h5_matrix_utils.c
 
 ~~~c
-//
-// Created by gorana on 18.10.18..
-//
-
 #include <time.h>
 #include "h5_matrix_utils.h"
 
