@@ -76,7 +76,7 @@ layout: true
 ---
 
 
-## Primer 1: Hello World!
+## Primer 1: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ Primeri/`hello-world.c`</a>
 
 ```c
   int main(int argc, char *argv[]) {
@@ -233,9 +233,9 @@ layout: true
 ## Zadatak 3: Množenje matrica - domaći
 
 - Implementirati hibridno OpenMP-OpenMPI rešenje u C programskom jeziku za množenje dve kvadratne matrice na osnovu OpenMPI i OpenMP rešenja zadataka sa prethodnih vežbi.
-- Pretpostaviti da jedan MPI proces distribuira delove matrice preostalim procesima. Kostur rešenja koji je potrebno popuniti se nalazi u direktrijumu MatrixMultiplicationHybrid.
+- Pretpostaviti da jedan MPI proces distribuira delove matrice preostalim procesima. Kostur rešenja koji je potrebno popuniti se nalazi <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ Zadaci/`MatrixMultiplicationHybrid`</a> .
 	- Rezultujuću matricu sačuvati u h5 formatu u datoteci pod nazivom result<nxn>.h5, gde se <nxn> menja dimenzijama matrice koja predstavlja rešenje.
-	- Meriti vreme izvršavanja hibridnog, OpenMP i OpenMPI rešenja i zabeležiti ih u priloženu datoteku statistika.csv.
+	- Meriti vreme izvršavanja hibridnog, OpenMP i OpenMPI rešenja i zabeležiti ih u priloženu datoteku <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ input_data/`statistika.csv`</a>.
 
 ---
 
