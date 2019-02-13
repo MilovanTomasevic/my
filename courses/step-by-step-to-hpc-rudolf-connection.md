@@ -7,7 +7,7 @@ hide_description: true
 
 ---
 
-```consile
+```sh
 # First create a source file in /etc/apt/sources.list.d/nordugrid.list
 # apend 
 # Base channel - must be enabled
@@ -21,13 +21,13 @@ deb-src http://download.nordugrid.org/repos/15.03/ubuntu/ zesty-updates main
 
 ```
 
-```consile
+```sh
 # Scheduled package updates - optional
 #deb http://download.nordugrid.org/repos/15.03/ubuntu/ zesty-experimental main
 #deb-src http://download.nordugrid.org/repos/15.03/ubuntu/ zesty-experimental main
 ```
 
-```consile
+```sh
 # Import the apt-key:
 wget -q -O - http://download.nordugrid.org/DEB-GPG-KEY-nordugrid.asc \
  | sudo apt-key add -
@@ -38,14 +38,14 @@ wget -q -O - http://download.nordugrid.org/DEB-GPG-KEY-nordugrid.asc \
  | sudo apt-key add -
 ```
 
-```consile
+```sh
 # Install ARC client:
 
 sudo apt-get update
 sudo apt-get install nordugrid-arc-client nordugrid-arc-plugins-globus
 ```
 
-```consile
+```sh
 # Add EGI-trustanchors and install CA-s /etc/apt/sources.list.d/EGI-trustanchors.list *** 0
 
 #append these lines
@@ -54,7 +54,7 @@ sudo apt-get install nordugrid-arc-client nordugrid-arc-plugins-globus
 deb http://repository.egi.eu/sw/production/cas/1/current egi-igtf core 
 ```
 
-```consile
+```sh
 # Import key
 
 wget -q -O - \ 
@@ -62,7 +62,7 @@ https://dist.eugridpma.info/distribution/igtf/current/GPG-KEY-EUGridPMA-RPM-3\
  | sudo apt-key add -
 ```
 
-```consile
+```sh
 #tale je OK  *** 1
 
 wget -q -O - \
@@ -70,7 +70,7 @@ wget -q -O - \
      | sudo apt-key add -
 ```
 
-```consile
+```sh
 # Install CA-s: *** 2
 
 sudo apt-get update
@@ -78,7 +78,7 @@ sudo apt-get install ca-policy-egi-core fetch-crl
 ```
 
 
-```consile
+```sh
 # Now you need to transform the certiciate and key in .pem format, make sure the key is only readable # by you and move both files in your ~/.arc  directory:
 
 ~/.arc/
@@ -92,25 +92,25 @@ chmod 400 userkey.pem
 chmod 644 usercert.pem
 ```
 
-```consile
+```sh
 # create .arc/vomses/hpc.fis.unm.si file and insert:
 
 "hpc.fis.unm.si" "voms.sling.si" "15005" "/C=SI/O=SiGNET/O=SLING/CN=voms.sling.si" "hpc.fis.unm.si"
 ```
 
-```consile
+```sh
 # create .arc/vomsdir/hpc.fis.unm.si file and insert:
 
 /C=SI/O=SiGNET/O=SLING/CN=voms.sling.si
 /C=SI/O=SiGNET/CN=SiGNET CA
 ```
 
-```consile
+```sh
 arcproxy -C .arc/cert.pem -K .arc/key.pem -s .arc/vomsdir -V .arc/vomses
 arcproxy -C ~/.arc/usercert.pem -K ~/.arc/userkey.pem -s ~/.arc/vomsdir -V ~/.arc/vomses
 ```
 
-```consile
+```sh
 # HPC connect 
 
 arcproxy -S hpc.fis.unm.si
@@ -122,7 +122,7 @@ arcproxy -C ~/.arc/usercert.pem -K ~/.arc/userkey.pem -s ~/.arc/vomsdir -V ~/.ar
 
 ```
 
-```consile
+```sh
 # Connected
 mt@mt:~/hpc$ arcproxy -S hpc.fis.unm.si
 Enter pass phrase for private key:
@@ -132,7 +132,7 @@ Proxy generation succeeded
 Your proxy is valid until: 2019-02-13 12:03:53
 ```
 
-```consile
+```sh
 
 # arc
 
@@ -164,9 +164,9 @@ Jobs processed: 1, successfully retrieved: 1, successfully cleaned: 1
 
 $ ls SAVLDmDkUAonmmR0Xox1SiGmABFKDmABFKDmuZFKDmABFKDmPIfaUm/
 log  test.log
+```
 
-
-```console
+```sh
 # Example of a task in C:
 
 # example.c and example.sh must be in the directory from which you will send the task.
@@ -237,7 +237,7 @@ date
 ```
 
 
-```console
+```sh
 
 # Example of a task in Python:
 
@@ -285,7 +285,7 @@ python vsota.py
 
 # MPI
 
-```console
+```sh
 
 # hellompi.xrsl
 
@@ -330,7 +330,7 @@ int main (argc, argv)
 
 ```
 
-```console
+```sh
 
 # hellompi.sh:
 
