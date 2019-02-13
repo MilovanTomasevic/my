@@ -11,7 +11,6 @@ name: sadrzaj
 - [Redukcije](#redukcije)
 - [Implicitna vs. eksplicitna barijera](#vs)
 - [sections/section konstrukcija](#ss)
-- [sections/section konstrukcija](#ss)
 
 
 
@@ -209,7 +208,7 @@ strukturirani-blok
 - Šta se dešava sa rezultatom?
 
 .attention[
-**Primer rešenja**: funkcija parallel_code_incorrect, datoteka pi.c, direktorijum resenja.
+**Primer rešenja**: <br>Funkcija `parallel_code_incorrect`  <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a> 
 ]
 
 ---
@@ -238,7 +237,7 @@ zauzima na hipu, kome pristupaju sve niti.
 - Modifikovati rešenje prethodnog zadatka tako da se ukloni štetno preplitanje.
 - 
 .attention[
-**Primer rešenja**: Funkcija `parallel_code`, datoteka pi.c, direktorijum resenja.
+**Primer rešenja**: <br>Funkcija `parallel_code`  <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a> 
 ]
 
 
@@ -253,7 +252,7 @@ zauzima na hipu, kome pristupaju sve niti.
 **Napomena**: Razmisliti o tome koliko se elemenata niza prenosi u keš procesora kada se pristupa jednom elementu.
 ]
 .attention[
-**Primer rešenja**: Funkcija `parallel_code_no_false_sharing`, datoteka, pi.c, direktorijum resenja.
+**Primer rešenja**: <br>Funkcija `parallel_code_no_false_sharing`  <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 
 ---
@@ -283,7 +282,7 @@ zauzima na hipu, kome pristupaju sve niti.
 - Doraditi rešenje zadatka 2 tako da se štetno preplitanje ukloni odgovarajućim sinhronizacionim mehanizmom.
 
 .attention[
-  **Primer rešenja**: Funkcija  `parallel_code_synchronization`, datoteka pi.c, direktorijum resenja.
+  **Primer rešenja**: <br>Funkcija  `parallel_code_synchronization` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 
 ---
@@ -496,7 +495,7 @@ reduction(redukcioni_operator : lista_promenljivih)
 - Implementirati paralelno rešenje računanja vrednosti broja pi uz korišćenje `for`  direktive i reduction klauze.
 
 .attention[
-**Primer rešenja**: Funkcija `parallel_code_for_construct`,  datoteka pi.c, direktorijum resenja.
+**Primer rešenja**: <br>Funkcija `parallel_code_for_construct` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 
 ---
@@ -793,7 +792,7 @@ strukturirani-blok
 		printf("%d\n", tmp);
 	}
 ```
-- Koja je inicijalna vrednost privatnih verzija promenljive tmp?
+- Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
 
 ---
 ## Primer 5: Klauze za rad sa podacima
@@ -810,7 +809,7 @@ strukturirani-blok
 - Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
 
 .attention[
-**Odgovor**: Inicijalna vrednost privatnih promenljivih tmp je nepoznata.
+**Odgovor**: Inicijalna vrednost privatnih promenljivih `tmp` je nepoznata.
 ]
 
 .attention[
@@ -844,9 +843,7 @@ strukturirani-blok
 		printf("%d\n", tmp);
 	}
 ```
-- Kojom klauzom je potrebno zameniti private klauzu da bi lokalne
-instance promenljive tmp dobile inicijalnu vrednost globalne
-promenljive `tmp`?
+- Kojom klauzom je potrebno zameniti private klauzu da bi lokalne instance promenljive tmp dobile inicijalnu vrednost globalne promenljive `tmp`?
 
 .attention[
 **Odgovor**: `firstprivate`
@@ -863,7 +860,7 @@ vezanih za korišćenje klauza za rad sa podacima i poneko štetno
 preplitanje. Pronađite i ispravite greške.
 
 .attention[
-**Rešenje**: datoteka `mandelbrot.c`, direktorijum resenja
+**Rešenje**: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ rešenja/`mandelbrot.c`</a>
 ]
 
 ---
@@ -974,7 +971,7 @@ strukturirani-blok
 - Napraviti OpenMP paralelni program korišćenjem `task` konstrukcije.
 
 .attention[
-**Rešenje**: datoteka `linkedlist.c`, direktorijum resenja.
+**Rešenje**: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ rešenja/`linkedlist.c`</a>
 ]
 
 ---
@@ -1017,7 +1014,7 @@ strukturirani-blok
 ```
 ---
 
-## Primer 8: Sinhronizacija zavisnih zadataka
+## Primer 8: Sinhronizacija zavisnih zadataka
 
 ```c
 	#pragma omp parallel
@@ -1049,7 +1046,7 @@ strukturirani-blok
 ---
 
 
-## Zadatak 9*: Množenje matrica - domaći
+## Zadatak 9*: Množenje matrica - domaći
 
 - Implementirati sekvencijalni program za množenje dve nekvadratne
 matrice u C programskom jeziku.
@@ -1085,9 +1082,7 @@ Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
 
 ## Zadatak 11: Transponovanje matrice
 
-- Data je sekvencijalna implementacija transponovanja matrice
-(direktorijum zadaci/`matrix_transpose`). Napraviti OpenMP
-paralelnu verziju algoritma.
+- Data je sekvencijalna implementacija transponovanja matrice <br><a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ zadaci/`Matrix Transpose`</a>. Napraviti OpenMP paralelnu verziju algoritma.
 
 .attention[
     **Napomene**:
@@ -1098,8 +1093,8 @@ paralelnu verziju algoritma.
 
 ## Zadatak 12: Jednostavni genetski algoritam
 
-- Data je sekvencijalna implementacija jednostavnog genetskog algoritma implementiranog u C programskom jeziku (direktorijum zadaci/`genetic_algorithm`).  
-- Pokrenuti sekvencijalni algoritam nad svim datim primerima prema uputstvu u README.md datoteci i analizirati vremena izvršavanja delova genetskog algoritma.
+- Data je sekvencijalna implementacija jednostavnog genetskog algoritma implementiranog u C programskom jeziku <br><a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ zadaci/`Genetic Algorithm`</a>.  
+- Pokrenuti sekvencijalni algoritam nad svim datim primerima prema uputstvu u <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ zadaci/`Genetic Algorithm/ReadMe`</a> i analizirati vremena izvršavanja delova genetskog algoritma.
 - Odrediti kritične delove koda i paralelizovati ih korišćenjem OpenMP.
 
 .attention[
@@ -1110,8 +1105,8 @@ Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
 ---
 ## Zadatak 13*: Traženje korena funkcije nad intervalom - domaći
 
-- Data je sekvencijalna implementacija metode za određivanje korena funkcije nad zadatim intervalom metodom bisekcije (direktorijum zadaci/`bisection`).  
-- Pokrenuti sekvencijalni algoritam nad svim datim primerima prema uputstvu u `README.md` datoteci i pogledati rešenja sva tri zadata primera.
+- Data je sekvencijalna implementacija metode za određivanje korena funkcije nad zadatim intervalom metodom bisekcije <br><a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ zadaci/`Bisection`</a>.  
+- Pokrenuti sekvencijalni algoritam nad svim datim primerima prema uputstvu u <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z2-openMP/#table-of-contents"> ☛ zadaci/`Bisection/ReadMe`</a> i pogledati rešenja sva tri zadata primera.
 - Zatim implementirati OpenMP paralelno rešenje.
 
 .attention[
