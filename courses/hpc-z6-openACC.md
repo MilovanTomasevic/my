@@ -152,23 +152,3 @@ int main() {
 ~~~
 data.c
 {:.figure}
-
-### ptraliasing.c
-
-
-~~~c
-
-
-~~~
-ptraliasing.c
-{:.figure}
-
-### ptraliasing.c
-
-
-~~~c
-
-
-~~~
-ptraliasing.c
-{:.figure}
