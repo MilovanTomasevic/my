@@ -256,10 +256,10 @@ layout: false
 
 ## Materijali
 
-Georg Hager, Gerhard Wellein, "Introduction to High Performance Computing for Scientists and Engineers"
-[MPI 3.1 standard, poglavlje 12.4](https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)
-[OpenMP dokumentacija](https://www.open-mpi.org/doc/)
-[OpenMP SC13 Tutorial: Hybrid MPI and OpenMP Parallel Programming](https://www.openmp.org/press-release/sc13-tutorial-hybrid-mpi-openmp-parallel-programming/)
+- Georg Hager, Gerhard Wellein, "Introduction to High Performance Computing for Scientists and Engineers"
+- [MPI 3.1 standard, poglavlje 12.4](https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)
+- [OpenMP dokumentacija](https://www.open-mpi.org/doc/)
+- [OpenMP SC13 Tutorial: Hybrid MPI and OpenMP Parallel Programming](https://www.openmp.org/press-release/sc13-tutorial-hybrid-mpi-openmp-parallel-programming/)
 
 
 {% endblock %}
