@@ -183,7 +183,7 @@ int main() {
 
 ---
 
-## Primer 2: ptraliasing.c
+## Primer 2: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`ptraliasing.c`</a>
 
 ```c
 void assign(int *a, int *b, int size) {
@@ -245,7 +245,7 @@ Neke od klauzula (parametri nisu navedeni):
 
 ---
 
-## Primer 3: parallel.c
+## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`parallel.c`</a>
 
 ```c
 #include <openacc.h>
@@ -335,7 +335,7 @@ layout: true
 
 ---
 
-## Primer 4: parallelloop.c
+## Primer 4: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`parallelloop.c`</a>
 
 ```c
 int main() {
@@ -425,7 +425,7 @@ structured block
 
 ---
 
-## Primer 5: data.c
+## Primer 5: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`data.c`</a>
 
 ```c
 int main() {
@@ -630,7 +630,7 @@ layout: true
 
 ---
 
-## Primer 6: matrixop.c
+## Primer 6: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`matrixop.c`</a>
 
 ```c
 int main(int argc, char *argv[]) {
@@ -651,7 +651,7 @@ int main(int argc, char *argv[]) {
 
 ---
 
-## Primer 7: matrixop-coalesced.c
+## Primer 7: <br><a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`matrixop-coalesced.c`</a>
 
 ```c
 int main(int argc, char *argv[]) {

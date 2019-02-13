@@ -44,43 +44,291 @@ gcc -o izvrsna_dat izvorna_dat.c -fopenacc
 ./izvrsna_dat
 ```
 
-## Technologies 
-### GIT - Program control system 
-  - [Git](/tech/git.html){:target="_blank"}{:.heading.flip-title} --- Basic level.
-{:.related-posts.faded}
+## Primeri 
+
+### ptraliasing.c
 
 
 ~~~c
-#include <omp.h>
+void assign(int *a, int *b, int size) {
+    #pragma acc kernels
+    {
+        for (int i = 0; i < size - 1; i++)
+            a[i] = b[i + 1];
+    }
+}
+
+int main() {
+    return 0;
+}
+~~~
+ptraliasing.c
+{:.figure}
+
+### parallel.c
+
+~~~c
 #include <stdio.h>
 #include <stdlib.h>
 
-int main (int argc, char *argv[])
-{
+#ifdef _OPENACC
+#include <openacc.h>
+#endif
 
-  //initialize variables
-  int i;
-  double pi = 0;
-  int niter = 100000000;
+int main() {
 
-  // Get timing
-  double start,end;
-  start=omp_get_wtime();
+	float *values = (float *) malloc(sizeof(float) * size);
 
-  // Calculate PI using Leibnitz sum
-  /* Fork a team of threads */
-#pragma omp parallel for reduction(+ : pi)
-  for(i = 0; i < niter; i++)
-  {
-    pi = pi + pow(-1, i) * (4 / (2*((double) i)+1));
-  } /* Reduction operation is done. All threads join master thread and disband */
+	#pragma acc parallel
+	for (int i = 0; i < 1024; i++)
+		values[i] = 1.f;
 
-  // Stop timing
-  end=omp_get_wtime();
+	free(values);
 
-  // Print result
-  printf("Pi estimate: %.20f, obtained in %f seconds\n", pi, end-start);
+	return 0;
 }
 ~~~
-program.c
+parallel.c
+{:.figure}
+
+### parallelloop.c
+
+
+~~~c
+#include <stdlib.h>
+#include <openacc.h>
+
+#define N 1024
+#define M 1024
+
+int main() {
+
+  float *A = (float *) malloc(N * M * sizeof(float));
+
+  #pragma acc parallel loop gang
+  for (int i=0; i<N; i++)
+      #pragma acc loop vector
+      for (int j=0; j<M; j++)
+        A[i * N + j] = 1.f;
+    
+  free(A);
+
+  return 0;
+}
+~~~
+parallelloop.c
+{:.figure}
+
+### data.c
+
+
+~~~c
+#include <stdlib.h>
+
+#define N 1024
+
+int main() {
+
+  float *x = (float *) malloc(sizeof(float) * N);
+  float *y = (float *) malloc(sizeof(float) * N);
+
+  #pragma acc data
+  {
+    #pragma acc parallel loop
+    for (int i=0; i<N; i++) {
+      y[i] = 0.0f;
+      x[i] = (float)(i+1);
+    }
+    #pragma acc parallel loop
+    for (int i=0; i<N; i++) {
+      y[i] = 2.0f * x[i] + y[i];
+    }
+  }
+
+  free(x); free(y);
+
+  return 0;
+}
+~~~
+data.c
+{:.figure}
+
+### matrixop.c
+
+
+~~~c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define MSIZE 64
+//#define PRINT
+
+int main(int argc, char *argv[]) {
+
+    int *randomMatrix = (int *) calloc(MSIZE * MSIZE * sizeof(int));
+
+    clock_t t1, t2;
+    t1 = clock();
+    int i, j;
+    #pragma acc kernels
+    {
+        for(i = 0; i < MSIZE; i++) {
+            for(j = 0; j < MSIZE; j++) {
+                randomMatrix[j * MSIZE + i] = randomMatrix[j * MSIZE + i] + 2;
+              }
+        }
+    }
+    t2 = clock();
+
+#ifdef PRINT
+  for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        printf("matrica[%d,%d] = %d\n", i, j, randomMatrix[i * MSIZE + J);
+      }
+  }
+#endif
+
+    free(randomMatrix);
+    printf("Elapsed Time: %f ms\n",((float)(t2 - t1) / 1000000.0F ) * 1000);
+    return 0;
+}
+
+~~~
+matrixop.c
+{:.figure}
+
+### matrixop-coalesced.c
+
+
+~~~c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define MSIZE 64
+//#define PRINT
+
+int main(int argc, char *argv[]) {
+
+  int *randomMatrix = (int *) calloc(MSIZE * MSIZE * sizeof(int));
+
+  clock_t t1, t2;
+  t1 = clock();
+  int i, j;
+  #pragma acc kernels
+  {
+      for(i = 0; i < MSIZE; i++)
+          for(j = 0; j < MSIZE; j++)
+              randomMatrix[i * MSIZE + j] = randomMatrix[i * MSIZE + j] + 2;
+  }
+  t2 = clock();
+
+#ifdef PRINT
+  for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        printf("matrica[%d,%d] = %d\n", i, j, randomMatrix[i * MSIZE + J);
+      }
+  }
+#endif
+
+  free(randomMatrix);
+  printf("Elapsed Time: %f ms\n",((float)(t2 - t1) / 1000000.0F ) * 1000);
+
+  return 0;
+}
+~~~
+matrixop-coalesced.c
+{:.figure}
+
+### matrixinit.c
+
+
+~~~c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <openacc.h>
+
+#define MSIZE 64
+//#define PRINT
+
+int main(int argc, char *argv[]) {
+
+  int *randomMatrix = (int *) malloc(MSIZE * MSIZE * sizeof(int));
+
+  clock_t t1, t2;
+  t1 = clock();
+  #pragma acc kernels
+  {
+    for(int i = 0; i < MSIZE; i++) {
+        for(int j = 0; j < MSIZE; j++) {
+            randomMatrix[i * MSIZE + j] = (i + j) % 2;
+        }
+      }
+  }
+  t2 = clock();
+
+#ifdef PRINT
+  for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        printf("matrica[%d,%d] = %d\n", i, j, randomMatrix[i * MSIZE + J);
+      }
+  }
+#endif
+
+  free(randomMatrix);
+  printf("Elapsed Time: %f ms\n",((float)(t2 - t1) / 1000000.0F ) * 1000);
+}
+~~~
+matrixinit.c
+{:.figure}
+
+### matrixinitdiv.c
+
+
+~~~c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <openacc.h>
+
+#define MSIZE 64
+//#define PRINT
+
+int main(int argc, char *argv[]) {
+  
+  int *randomMatrix = (int *) malloc(MSIZE * MSIZE * sizeof(int));
+
+  clock_t t1, t2;
+  t1 = clock();
+  #pragma acc kernels
+  {
+    for(int i = 0; i < MSIZE; i++) {
+        for(int j = 0; j < MSIZE; j++) {
+            if ((i + j) % 2) {
+                randomMatrix[i * MSIZE + j] = 1;
+            } else {
+                randomMatrix[i * MSIZE + j] = 0;
+            }
+        }
+      }
+  }
+  t2 = clock();
+
+#ifdef PRINT
+  for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        printf("matrica[%d,%d] = %d\n", i, j, randomMatrix[i * MSIZE + J);
+      }
+  }
+#endif
+
+  free(randomMatrix);
+  printf("Elapsed Time: %f ms\n",((float)(t2 - t1) / 1000000.0F ) * 1000);
+
+  return 0;
+}
+~~~
+matrixinitdiv.c
 {:.figure}
