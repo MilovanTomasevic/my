@@ -208,7 +208,7 @@ strukturirani-blok
 - Šta se dešava sa rezultatom?
 
 .attention[
-**Primer rešenja**: <br>Funkcija `parallel_code_incorrect` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/pi.c</a>
+**Primer rešenja**: <br>Funkcija `parallel_code_incorrect` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 
 ---
@@ -238,7 +238,7 @@ zauzima na hipu, kome pristupaju sve niti.
 - 
 
 .attention[
-**Primer rešenja**: <br>Funkcija `parallel_code` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/pi.c</a>
+**Primer rešenja**: <br>Funkcija `parallel_code` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 
 
@@ -253,7 +253,7 @@ zauzima na hipu, kome pristupaju sve niti.
 **Napomena**: Razmisliti o tome koliko se elemenata niza prenosi u keš procesora kada se pristupa jednom elementu.
 ]
 .attention[
-**Primer rešenja**: <br>Funkcija `parallel_code_no_false_sharing` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/pi.c</a>
+**Primer rešenja**: <br>Funkcija `parallel_code_no_false_sharing` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 
 ---
@@ -283,7 +283,7 @@ zauzima na hipu, kome pristupaju sve niti.
 - Doraditi rešenje zadatka 2 tako da se štetno preplitanje ukloni odgovarajućim sinhronizacionim mehanizmom.
 
 .attention[
-  **Primer rešenja**: <br>Funkcija  `parallel_code_synchronization` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/pi.c</a>
+  **Primer rešenja**: <br>Funkcija  `parallel_code_synchronization` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 
 ---
@@ -497,7 +497,7 @@ reduction(redukcioni_operator : lista_promenljivih)
 korišćenje `for`  direktive i reduction klauze.
 
 .attention[
-**Primer rešenja**: <br>Funkcija `parallel_code_for_construct` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/pi.c</a>
+**Primer rešenja**: <br>Funkcija `parallel_code_for_construct` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 
 ---
@@ -864,7 +864,7 @@ vezanih za korišćenje klauza za rad sa podacima i poneko štetno
 preplitanje. Pronađite i ispravite greške.
 
 .attention[
-**Rešenje**: <br> <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/mandelbrot.c</a>
+**Rešenje**: <br> <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`mandelbrot.c`</a>
 ]
 
 ---
@@ -975,7 +975,7 @@ strukturirani-blok
 - Napraviti OpenMP paralelni program korišćenjem `task` konstrukcije.
 
 .attention[
-**Rešenje**: <br> <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/linkedlist.c</a>
+**Rešenje**: <br> <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`linkedlist.c`</a>
 
 ]
 
