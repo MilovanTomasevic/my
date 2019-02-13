@@ -73,7 +73,7 @@ mpiexec [-np <N>] <izvrsna_datoteka>
 
 ---
 
-## Primer 1: Hello World!
+## Primer 1: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`hello_world.c`</a>
 ```c
 #include <stdio.h>
 #include "mpi.h"
@@ -157,7 +157,7 @@ MPI_COMM_WORLD rank: 0/4 - ncomm rank: 0/2
 ```
 
 .attention[
-**Rešenje**: datoteka `communicators.c`, direktorijum resenja.
+**Rešenje**: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Rešenja/`communicators.c`</a>
 ]
 
 ---
@@ -241,7 +241,7 @@ int MPI_Send(
 
 ---
 
-## Primer 2: Point to Point komunikacija
+## Primer 2: Point to Point komunikacija <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`send_recv.c`</a>
 
 ```c
 // ...
@@ -388,7 +388,7 @@ int MPI_Wait(
 
 ---
 
-## Primer 3: send_recv_nonblocking.c
+## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`send_recv_nonblocking.c`</a>
 
 ```c
 	if (rank == 0) {
@@ -416,7 +416,7 @@ int MPI_Wait(
 ---
 
 
-## Primer 3: send_recv_nonblocking.c
+## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`send_recv_nonblocking.c`</a>
 
 ```c
 	if (rank == 0) /* ... */
@@ -442,10 +442,9 @@ int MPI_Wait(
 ## Zadatak 5: Ping pong - neblokirajući sekvencijalni ispis
 
 - Modifikovati zadatak 4 tako da slanje poruka procesu štampaču bude neblokirajuće. Pri tom se obezbediti da program radi korektno, odnosno da se ne desi da poruka koja nije poslata bude prepisana novom porukom pre nego se stara pošalje.
-Rešenje: datoteka ping_pong_printf_async.c
 
 .attention[
-**Rešenje**: datoteka ping_pong_printf_async.c
+**Rešenje**: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`ping_pong_printf_async.c`</a>
 ]
 
 ---
@@ -525,9 +524,8 @@ MPI_Get_count(
 - Modifikovati zadatak 4 tako da se procesu printeru šalju poruke promenljive dužine. Koristiti funkcije `MPI_Probe` i `MPI_Get_count`. 
 - Procesi mogu da izvrše maksimalno 999 razmena lopticom.
 
-
 .attention[
-**Rešenje**: datoteka ping_pong_printf_variablelen.c
+**Rešenje**: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`ping_pong_printf_variablelen.c`</a>
 ]
 
 ---
@@ -580,7 +578,7 @@ int MPI_Bcast(
 
 ---
 
-## Primer 5: bcast.c
+## Primer 5: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`bcast.c`</a>
 ```c
 int main(int argc, char *argv[]) {
 	int rank, root = 0;
@@ -671,7 +669,7 @@ int MPI_Scatter(
 ---
 
 
-## Primer 6: scatter.c
+## Primer 6: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`scatter.c`</a>
 
 ```c
 int main(int argc, char *argv[]) {
@@ -731,7 +729,7 @@ int MPI_Gather(
 
 ---
 
-## Primer 7: gather.c
+## Primer 7: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`gather.c`</a>
 ```c
 int main(int argc, char *argv[]) {
 
@@ -797,7 +795,7 @@ int MPI_Allgather(
 
 ---
 
-## Primer 8: allgather.c
+## Primer 8: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`allgather.c`</a>
 ```c
 int main(int argc, char *argv[]) {
 
@@ -852,7 +850,7 @@ int MPI_Reduce(
 
 ---
 
-## Primer 9: reduce.c
+## Primer 9: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`reduce.c`</a>
 
 ```c
 int main(int argc, char *argv[]) {
@@ -910,7 +908,7 @@ int MPI_Allreduce(
 
 ---
 
-## Primer 10: allreduce.c
+## Primer 10: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`allreduce.c`</a>
 
 ```c
 int main(int argc, char *argv[]) {
