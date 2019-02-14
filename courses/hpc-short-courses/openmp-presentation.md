@@ -1,15 +1,27 @@
 {% extends "base_slides.md" %}
 {% block slides %}
 
-name: openmp
+name: content
+
+# Content
+
+### Components of OpenMP:
+
+- [Goal](#goal)
+- [Execution model (multithreading)](#openmp)
+- [Library functions](#lib)
+- [OpenMP directives](#dir)
+- [OpenMP worksharing](#work)
+
+---
+name: goal
 class: center, middle
 
-# OpenMP
+# Goal
 
 ---
 layout: true
-
-.section[[OpenMP](#sadrzaj)]
+.section[[Goal](#content)]
 
 ---
 ## The goal is to learn:
@@ -20,24 +32,29 @@ layout: true
 
 ---
 
-## Components of OpenMP
+layout: false
+name: openmp
+class: center, middle
 
-- Execution model (multithreading)
-- Library functions
-- OpenMP directives
-- OpenMP worksharing
+# Execution model (multithreading)
 
 ---
+layout: true
 
-## OpenMP is for *shared memory* parallelization
+.section[[Execution model (multithreading)](#content)]
+
+---
+## OpenMP
+
+- OpenMP is for *shared memory* parallelization
 
 ![:scale 80%](img/openmp.gif)
 
 
-
 ---
+## Execution model
 
-## OpenMP Execution model: multithreading to distribute work
+-  OpenMP Execution model: multithreading to distribute work
 
 ![:scale 80%](img/openmpmodel.png)
 
@@ -53,13 +70,25 @@ layout: true
 	- Make sure threads can execute independently! (dependencies / race conditions)
 
 ---
+## Multithreading
 
-## Multithreaded process is a single process.
-
+- Multithreaded process is a single process.
 - E.g. inspecting an OpenMP program with 4 threads, using ‘top’ command:
 
 ![:scale 85%](img/multi.png)
 
+
+---
+
+layout: false
+name: lib
+class: center, middle
+
+# Library functions
+
+---
+layout: true
+.section[[Library functions](#content)]
 
 ---
 
@@ -113,6 +142,17 @@ icc –qopenmp omp_threadnum.c –o omp_threadnum
 
 ![:scale 70%](img/openmpe4.png)
 
+---
+
+layout: false
+name: dir
+class: center, middle
+
+# OpenMP directives
+
+---
+layout: true
+.section[[OpenMP directives](#content)]
 
 ---
 ## OpenMP directives
@@ -221,6 +261,18 @@ icc –qopenmp omp_hello.c –o omp_hello
 ![:scale 70%](img/openmpe10.png)
 
 ---
+
+layout: false
+name: work
+class: center, middle
+
+# OpenMP Worksharing
+
+---
+layout: true
+.section[[OpenMP Worksharing](#content)]
+
+---
 ## OpenMP Worksharing
 
 - You could use thread IDs to distribute work, but OpenMP offers more convenient mechanisms.
@@ -319,6 +371,8 @@ for(i=0; i<100; i++)
 	- Increasing (only) `OMP_NUM_THREADS`, is that strong or weak scaling?
 
 ---
+layout:false
+
 # OpenMP summary
 
 - OpenMP...
@@ -330,7 +384,7 @@ for(i=0; i<100; i++)
 	- has an excellent cheat sheet!
 
 ---
-layout:false
+
 name: end
 class: center, middle
 
