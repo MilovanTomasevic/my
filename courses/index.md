@@ -75,10 +75,9 @@ I wish you a lot of success during your learning.
 #### HPC Short Courses (C)
 
 
-
-|--------------------------------------------------------------------------------|------------------------------------------------------|
+|:------------------------------------------------------------------------------:|:----------------------------------------------------:|
 | [OpenMP presentation](hpc-short-courses/openmp-presentation){:target="_blank"} | [OpenMP training](openmp-training){:target="_blank"} |
-| [MPI presentation](hpc-short-courses/mpi-presentation){:target="_blank"}       | [MPI training](mpi-training){:target="_blank"}       |
+|    [MPI presentation](hpc-short-courses/mpi-presentation){:target="_blank"}    |    [MPI training](mpi-training){:target="_blank"}    |
 
 
 
