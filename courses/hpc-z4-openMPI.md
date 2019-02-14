@@ -18,28 +18,28 @@ hide_description: true
 
 ### Installation
 
-```consile
+```sh
 apt-get install libopenmpi-dev 
 apt-get install openmpi-bin 
 ```
 
 
 ### Compilation & Running OpenMP
-```consile
+```sh
 gcc -o name name.c -fopenmp
 ./name
 ```
 
 ### Compilation & Running MPI
 
-```consile
+```sh
 mpicc filename.c -o filename 
 mpirun -np 1 ./filename # -lm
 ```
 
 ### Compilation & Running OpenACC
 
-```consile
+```sh
 gcc -o izvrsna_dat izvorna_dat.c -fopenacc
 ./izvrsna_dat
 ```
