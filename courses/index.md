@@ -53,10 +53,12 @@ I wish you a lot of success during your learning.
 
 ### High-performance computing (HPC)
 
-- [Step by step to HPC Rudolf connection](/courses/step-by-step-to-hpc-rudolf-connection){:target="_blank"}
+
+#### First settings
+- [Installation, Compilation & Running OpenMP/MPI/OpenACC and HPC Rudolf connection](/courses/hpc-setup){:target="_blank"}
 
 #### HPC Complete Courses (C)
-
+<br>
 
 
 | HPC |                                 Teroija                                 |                                 Vežbe                                 |                     Zadaci                     |
@@ -73,7 +75,7 @@ I wish you a lot of success during your learning.
 - [Literatura](hpc-literatura){:target="_blank"}
 
 #### HPC Short Courses (C)
-
+<br>
 
 |:------------------------------------------------------------------------------:|:----------------------------------------------------:|
 | [OpenMP presentation](hpc-short-courses/openmp-presentation){:target="_blank"} | [OpenMP training](openmp-training){:target="_blank"} |

@@ -1,11 +1,69 @@
 ---
 layout: page
-title: Step by step to HPC rudolf connection
+title: HPC setup
 description: >
   High-performance computing (HPC)
 hide_description: true
 
 ---
+
+## Table of Contents
+{:.no_toc}
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
+---
+
+
+
+
+## Installation
+
+```sh
+
+## c/c==
+
+apt-get install libopenmpi-dev 
+apt-get install openmpi-bin 
+
+## python
+
+sudo apt-get install python
+sudo apt-get install python-mpi4py
+
+```
+
+
+
+## Compilation & Running OpenMP/MPI/OpenACC & mpi4py
+
+```sh
+
+# c/c++ 
+
+## OpenMP
+gcc -o filename filename.c -fopenmp
+./filename
+OMP_NUM_THREADS=1 ./filename 
+
+## OpenACC
+gcc -o filename filename.c -fopenacc
+./filename
+
+## MPI
+mpicc filename.c -o filename 
+mpirun -np 1 ./filename # -lm
+
+# python
+mpirun -np 4 ./filename
+
+
+```
+
+
+## HPC Rudolf connection
+
+
 
 ```sh
 # First create a source file in /etc/apt/sources.list.d/nordugrid.list
@@ -283,7 +341,7 @@ python vsota.py
 ```
 
 
-# MPI
+# MPI Example for HPC Rudolf
 
 ```sh
 
