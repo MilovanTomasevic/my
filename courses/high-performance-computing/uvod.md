@@ -454,7 +454,7 @@ int main(){
 
 ```sh
 
-[Running] cd "/hpc/" && gcc test.c -o test && "/hpc/"test
+[Running] cd /hpc/ && gcc test.c -o test && /hpc/test
 0x7fca44001000
 0x7fca44001000
 
