@@ -48,7 +48,7 @@ class: center, middle
 
 
 
-.created[14.02.2019 u 13:02]
+.created[15.02.2019 u 02:00]
 
 
 ---
@@ -174,26 +174,22 @@ layout: true
 
 ## Let’s try! Compile & run using
 
-- module load intel/17.0
+- <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_threadnum.c`</a>
 ```console
-icc –qopenmp omp_threadnum.c –o omp_threadnum
+gcc -o omp_threadnum omp_threadnum.c -fopenmp
 ./omp_threadnum
 ```
 
 ![:scale 85%](img/openmpe3.png)
 
----
-
-
-## Let’s try! Compile & run using
-
-- module load intel/18.2
-```console
-icc –qopenmp omp_threadnum.c –o omp_threadnum
-./omp_threadnum
+- Result:
+```sh
+mt@mt:~/OpenMP/exercises$ ./omp_threadnum 
+Hello World from thread = 0
 ```
 
-![:scale 70%](img/openmpe4.png)
+- Only one thread! For now...
+
 
 ---
 
@@ -237,10 +233,9 @@ layout: true
 	}
 ```
 
-- Compile and run:
-
+- Compile and run: <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_hello.c`</a>
 ```console
-icc –qopenmp omp_hello.c –o omp_hello
+gcc -o omp_hello omp_hello.c -fopenmp
 ./omp_hello
 ```
 
@@ -255,8 +250,21 @@ icc –qopenmp omp_hello.c –o omp_hello
 ## Exercise: OpenMP parallel “Hello world”
 
 - Result:
+```sh
+mt@mt:~/OpenMP/solutions$ gcc -o omp_hello omp_hello.c -fopenmp
+mt@mt:~/OpenMP/solutions$ ./omp_hello 
+Hello World from thread = 0
+Hello World from thread = 6
+Hello World from thread = 4
+Hello World from thread = 3
+Hello World from thread = 5
+Hello World from thread = 2
+Hello World from thread = 1
+Hello World from thread = 7
 
-![:scale 70%](img/openmpe6.png)
+```
+
+- Random, order, why?
 
 ---
 ## Private and shared variables
@@ -344,18 +352,24 @@ layout: true
 ---
 ## Exercise: OpenMP Worksharing
 
-- The file omp_vectadd.c contains code that:
+.medium[
+- The file `omp_vectadd.c` contains code that:
 	- Generating two random vectors with 1M elements
 	- Adds the two vectors in a `for-loop`
 - Exercise:
 	- Add the OpenMP `parallel for` directive to parallelize the loop
-	- Compile the program: `icc –qopenmp omp_vectadd.c –o omp_vectadd`
+	- Compile the program:
+	```sh
+gcc -o omp_vectadd omp_vectadd.c -fopenmp
+```
 	- Run the program in serial & parallel:
-		- `OMP_NUM_THREADS=1 ./omp_vectadd`
-		- `OMP_NUM_THREADS=4 ./omp_vectadd`
+	```sh
+		OMP_NUM_THREADS=1 ./omp_vectadd
+		OMP_NUM_THREADS=4 ./omp_vectadd
+	```
 
-- N.B. the `OMP_NUM_THREADS` environment variable controls the max. nr. of
-threads created by OpenMP
+- N.B. the `OMP_NUM_THREADS` environment variable controls the max. nr. of threads created by OpenMP
+]
 
 ---
 ## Exercise: OpenMP Worksharing
@@ -411,17 +425,24 @@ for(i=0; i<100; i++)
 ---
 ## Exercise: Calculate PI
 
+.medium[
 - Exercise: PI can be approximated using Leibnitz sum.
 	- Adept `omp_pi.c` to parallelize the for loop calculating pi
 	- Use the reduction clause `(#pragma omp parallel for reduction(+,pi))`
-	- Compile with ‘icc -qopenmp omp_pi.c -o omp_pi’
-	- Run with
-		- `OMP_NUM_THREADS=1 ./omp_pi`
-		- `OMP_NUM_THREADS=4 ./omp_pi`
-		- `OMP_NUM_THREADS=24 ./omp_pi`
+	- Compile with 
+		```sh
+			gcc -o omp_pi omp_pi.c -fopenmp
+		```
+	- Run with 
+```console
+		OMP_NUM_THREADS=1 ./omp_pi
+		OMP_NUM_THREADS=4 ./omp_pi
+		OMP_NUM_THREADS=24 ./omp_pi
+```
 	- What is different from the vector addition in terms of speed?
 	- How far does the problem scale?
 	- Increasing (only) `OMP_NUM_THREADS`, is that strong or weak scaling?
+]
 
 ---
 layout:false
