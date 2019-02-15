@@ -208,7 +208,6 @@ Hello World from thread = 5
 Hello World from thread = 2
 Hello World from thread = 1
 Hello World from thread = 7
-
 ```
 
 - Random, order, why?
@@ -300,7 +299,7 @@ layout: true
 ## Exercise: OpenMP Worksharing
 
 .medium[
-- The file `omp_vectadd.c` contains code that:
+- The file <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_vectadd.c`</a> contains code that:
 	- Generating two random vectors with 1M elements
 	- Adds the two vectors in a `for-loop`
 - Exercise:
@@ -374,7 +373,7 @@ for(i=0; i<100; i++)
 
 .medium[
 - Exercise: PI can be approximated using Leibnitz sum.
-	- Adept `omp_pi.c` to parallelize the for loop calculating pi
+	- Adept <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_pi.c`</a> to parallelize the for loop calculating pi
 	- Use the reduction clause `(#pragma omp parallel for reduction(+,pi))`
 	- Compile with 
 		```sh

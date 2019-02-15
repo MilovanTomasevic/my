@@ -137,12 +137,9 @@ layout: true
 	- ... many more (try e.g. `mpirun --help`)
 
 ---
-## Exercise: compile & run mpi_hello_world.c
+## Exercise: 
 
-- Load openMPI:
-```console
-module load openmpi/2.1.1-intel
-```
+- Compile & run <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_hello_world.c`</a> 
 
 - Compile:
 ```console
@@ -306,7 +303,7 @@ layout: true
 ## Exercise: point to point
 
 - In this exercise, we try to send the variable ‘10’ from rank 0 to rank 1
-	- Inspect mpi_pnt2pnt.c
+	- Inspect <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pnt2pnt.c`</a> 
 	- Specify the correct destination (XX)
 	- Specify a correct source (YY)
 	- Specify a correct tag (AA, BB). Should the tags be the same, or different?
@@ -337,7 +334,7 @@ layout: true
 ---
 ## Exercise: fix the deadlock
 
-- Fix the deadlock in `mpi_pingpong.c`
+- Fix the deadlock in <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pingpong.c`</a> 
 
 .attention[
 **Hint**: think about the order of `MPI_Send/MPI_Recv` for each rank.
@@ -392,11 +389,11 @@ MPI_Wait(&request, &status)
 ## Exercise: non-blocking communication
 
 - Beginner:
-	- Compile and run `solutions/mpi_pingpong_nonblocking.c`
+	- Compile and run <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ solutions/`mpi_pingpong.c`</a>
 	- Compare the timing with the timing of mpi_pingpong
 	- Which is faster? Can you understand why?
 - Advanced:
-	- Adept `exercises/mpi_pingpong_nonblocking.c` to use `MPI_Isend` and/or `MPI_Irecv`
+	- Adept <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ exercises/`mpi_pingpong.c`</a> to use `MPI_Isend` and/or `MPI_Irecv`
 	- Don’t forget to include an `MPI_Wait`
 	- Compare the timing with the timing of `mpi_pingpong`
 	- Which is faster? Can you understand why?
@@ -490,7 +487,7 @@ layout: true
 ## Communication: collectives
 
 - Exercise:
-	- Compile and run the `mpi_pi.c example`
+	- Compile and run the <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pi.c`</a>
 	- What is the output of the different ranks?
 	- What is the sum of those outputs?
 
@@ -498,18 +495,18 @@ layout: true
 ## Communication: collectives
 
 - Exercise part 2 (beginners):
-- Check the mpi_pi.c file and uncomment the lines needed to ...
+- Check the <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pi.c`</a> file and uncomment the lines needed to ...
 	- Add an MPI_reduce after the loop that calculates pi
 	- Print the aggregated result
 
 - Exercise part 2 (advanced):
-- Open the mpi_pi_advanced.c file and ...
-	- Add an MPI_reduce after the loop that calculates pi
+- Open the <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pi_advanced.c`</a> file and ...
+	- Add an `MPI_reduce` after the loop that calculates pi
 	- Print the aggregated result
 
 - Bonus questions:
-	- Which is faster, omp_pi or mpi_pi?
-	- Are the pi estimates returned by omp_pi and mpi_pi the same? Why (not)?
+	- Which is faster, <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_pi.c`</a> or <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pi.c`</a>?
+	- Are the pi estimates returned by <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_pi.c`</a> and <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pi.c`</a> the same? Why (not)?
   
 ---
 layout:false
