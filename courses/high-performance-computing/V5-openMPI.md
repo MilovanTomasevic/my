@@ -204,7 +204,11 @@ layout: true
 
 - Implementirati čisto OpenMPI i hibridno OpenMP-OpenMPI rešenje za računanje broja π računanjem vrednosti integrala
 
-![:scale 15%](img/integral.png)
+<p>
+
+$$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
+  
+</p>
 
 - Sekvencijalna i OpenMP verzija programa su date u direktorijumu resenja.
 	- Porediti vreme izvršavanja hibridnog rešenja sa vremenom izvršavanja OpenMP ubrzanog rešenja.

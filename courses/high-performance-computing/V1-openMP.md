@@ -200,7 +200,11 @@ strukturirani-blok
 
 - Korišćenjem samo parallel konstrukcije, paralelizovati program koji računa vrednost integrala
 
-![:scale 15%](img/integral.png)
+<p>
+
+$$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
+  
+</p>
 
 
 - Sekvencijalna implementacija programa u C programskom jeziku je data u direktorijumu zadaci. Rezultat integraljenja bi trebalo da bude jednak broju π. Potrebno je dodati parallel konstrukciju bez daljih modifikacija sekvencijalnog programa.
