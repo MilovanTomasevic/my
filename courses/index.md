@@ -63,13 +63,13 @@ I wish you a lot of success during your learning.
 
 | HPC |                                 Teroija                                 |                                 Vežbe                                 |                     Zadaci                     |
 |:---:|:-----------------------------------------------------------------------:|:---------------------------------------------------------------------:|:----------------------------------------------:|
-|  1. |        [Uvod](high-performance-computing/uvod){:target="_blank"}        |  [V1-openMP](high-performance-computing/V1-openMP){:target="_blank"}  |  [Z1-openMP](hpc-z1-openMP){:target="_blank"}  |
-|  2. | [Arhitektura](high-performance-computing/arhitektura){:target="_blank"} |  [V2-openMP](high-performance-computing/V2-openMP){:target="_blank"}  |  [Z2-openMP](hpc-z2-openMP){:target="_blank"}  |
-|  3. | [Upravljanje](high-performance-computing/upravljanje){:target="_blank"} | [V3-openMPI](high-performance-computing/V3-openMPI){:target="_blank"} | [Z3-openMPI](hpc-z3-openMPI){:target="_blank"} |
-|  4. | [Tehnologije](high-performance-computing/tehnologije){:target="_blank"} | [V4-openMPI](high-performance-computing/V4-openMPI){:target="_blank"} | [Z4-openMPI](hpc-z4-openMPI){:target="_blank"} |
-|  5. |    [Problemi](high-performance-computing/problemi){:target="_blank"}    | [V5-openMPI](high-performance-computing/V5-openMPI){:target="_blank"} | [Z5-openMPI](hpc-z5-openMPI){:target="_blank"} |
-|  6. |  [Biblioteke](high-performance-computing/biblioteke){:target="_blank"}  | [V6-openACC](high-performance-computing/V6-openACC){:target="_blank"} | [Z6-openACC](hpc-z6-openACC){:target="_blank"} |
-|  7. |   [Algoritmi](high-performance-computing/algoritmi){:target="_blank"}   | [V7-openACC](high-performance-computing/V7-openACC){:target="_blank"} | [Z7-openACC](hpc-z7-openACC){:target="_blank"} |
+|  1. |        [Uvod](high-performance-computing/uvod.html){:target="_blank"}        |  [V1-openMP](high-performance-computing/V1-openMP.html){:target="_blank"}  |  [Z1-openMP](hpc-z1-openMP){:target="_blank"}  |
+|  2. | [Arhitektura](high-performance-computing/arhitektura.html){:target="_blank"} |  [V2-openMP](high-performance-computing/V2-openMP.html){:target="_blank"}  |  [Z2-openMP](hpc-z2-openMP){:target="_blank"}  |
+|  3. | [Upravljanje](high-performance-computing/upravljanje.html){:target="_blank"} | [V3-openMPI](high-performance-computing/V3-openMPI.html){:target="_blank"} | [Z3-openMPI](hpc-z3-openMPI){:target="_blank"} |
+|  4. | [Tehnologije](high-performance-computing/tehnologije.html){:target="_blank"} | [V4-openMPI](high-performance-computing/V4-openMPI.html){:target="_blank"} | [Z4-openMPI](hpc-z4-openMPI){:target="_blank"} |
+|  5. |    [Problemi](high-performance-computing/problemi.html){:target="_blank"}    | [V5-openMPI](high-performance-computing/V5-openMPI.html){:target="_blank"} | [Z5-openMPI](hpc-z5-openMPI){:target="_blank"} |
+|  6. |  [Biblioteke](high-performance-computing/biblioteke.html){:target="_blank"}  | [V6-openACC](high-performance-computing/V6-openACC.html){:target="_blank"} | [Z6-openACC](hpc-z6-openACC){:target="_blank"} |
+|  7. |   [Algoritmi](high-performance-computing/algoritmi.html){:target="_blank"}   | [V7-openACC](high-performance-computing/V7-openACC.html){:target="_blank"} | [Z7-openACC](hpc-z7-openACC){:target="_blank"} |
 {:.scroll-table}
 
 - [Literatura](hpc-literatura){:target="_blank"}
@@ -78,8 +78,8 @@ I wish you a lot of success during your learning.
 <br>
 
 |:------------------------------------------------------------------------------:|:----------------------------------------------------:|
-| [OpenMP presentation](hpc-short-courses/openmp-presentation){:target="_blank"} | [OpenMP training](openmp-training){:target="_blank"} |
-|    [MPI presentation](hpc-short-courses/mpi-presentation){:target="_blank"}    |    [MPI training](mpi-training){:target="_blank"}    |
+| [OpenMP presentation](hpc-short-courses/openmp-presentation.html){:target="_blank"} | [OpenMP training](openmp-training.html){:target="_blank"} |
+|    [MPI presentation](hpc-short-courses/mpi-presentation.html){:target="_blank"}    |    [MPI training](mpi-training.html){:target="_blank"}    |
 
 
 
