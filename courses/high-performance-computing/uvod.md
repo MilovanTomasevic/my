@@ -51,7 +51,7 @@ layout: true
 
 ## Računarstvo visokih performansi
 
-- U pitanju je prevod—tehnički kalk—engleskog termina 'High Performance Computing' čiju ću skraćenicu (HPC) ja koristiti kao ime kursa u budućnosti.
+- U pitanju je prevod—tehnički kalk—engleskog termina *High Performance Computing* čiju ću skraćenicu (HPC) ja koristiti kao ime kursa u budućnosti.
 - Opšte govoreći, videćete neobično puno engleskih termina u ovim predavanjima.
 - Što?
   - Nekad nema prevoda
