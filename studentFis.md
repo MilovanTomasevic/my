@@ -10,15 +10,28 @@ comments: true
 
 ---
 
+## Sadržaj
+{:.no_toc}
+0. this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
+---
+
+## Prezentacija FIŠa - Fakulteta za informacijske študije
+
 - Prezentacija prikazuje zašto uspešno izvršavamo obaveze svih 10 godina !
 	- [Budi student FIŠ-a](/courses/fis/fis.html){:target="_blank"} --- PC & Mobile view.
   {:.faded}
 
-  - Sva pitanja možete napisati na kraju stranice u obliku komentara
 
 
+## Put do FIŠ-a - Fakulteta za informacijske študije
+
+- Rokovi i prijave za upis, dokumentacija, procedura, viza... _sve na jednom mestu_!
+	- [Put do FIŠ-a](/courses/fis/put_do_fis_a.html){:target="_blank"} --- PC & Mobile view.
+  {:.faded}
 	
-## Konkurs (zahtev za đake iz Srbije)
+## Konkurs (zahtev za studije na FIŠu)
 
 - Ukoliko ste odlučili da studirate na FIŠ-u pratite sledeće korakte:
 	- Ispunite formu u nastavku
@@ -59,7 +72,7 @@ comments: true
   </div>
     <label for="exampleInputEmail1">Kontakt</label>
         <input type="email" name="Mail" class="form-control"  placeholder="mejl@primer.com" required>
-          <input type="text" name="Telefon" class="form-control" placeholder="Unesite broj telefona +381" required>
+          <input type="text" name="Telefon" class="form-control" placeholder="Unesite broj telefona +38" required>
   <div class="col-8">
       <label for="exampleFormControlSelect1">Potvrda za upisom </label>
       <select class="form-control" type="text" name="Potvrda" id="exampleFormControlSelect1">
@@ -81,3 +94,6 @@ comments: true
     <button type="reset" class="btn btn-primary">Resetuj</button>
 </form>
 
+## Komentari / Pitanja
+
+- Sva pitanja možete u nastavku stranice u obliku komentara. U što kracem roku očekujte odgovor. U slučaju da niste dobili odgovor, budite slobodni i posaljite mi mejl. Ovde je korisno da postavite pitanje (ukoliko ga imate) kako bi i drugi studenti/roditelji mogli pročitati (kako pitanja tako i odgovore). Iako smatram da gotovo i više, nego što je potrebno u datom trenutku, informacija dam tokom prezentacije jer sam tada tu sa vama i verujem da je lakše kada pričamo pa odogovore dobijate odmah na nakon postavljenog pitanja!

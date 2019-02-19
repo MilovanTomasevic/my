@@ -1,0 +1,386 @@
+{% extends "base_slides.md" %}
+{% block slides %}
+
+name: sadrzaj
+
+# Sadržaj
+
+- [Uvod](#uvod)
+- [Rokovi](#rokovi)
+- [Prijava](#prijava)
+- [Upis](#upis)
+- [Pogodnosti](#pogodnosti)
+- [Boravak](#boravak)
+- [Posao](#posao)
+- [Pitanja?](#pitanja)
+          
+---
+name: uvod
+class: center, middle
+
+# Uvod
+### bitni faktori
+
+---
+layout: true
+
+.section[[Uvod](#sadrzaj)]
+
+---
+
+## Prva pitanja...
+
+- Jedan od bitnih faktora upisa stranih studenata je:  
+	- način finansiranja studija
+	- zatim upis na `redovno` ili `vanredno` školovanje
+		- `broj` redovnih i vanrednih studenata `koji možemo upisati` u narednoj školskoj godini.
+	- cena studentskog sata
+	- gde će ziveti studenti, kako doći do studentskog doma
+	- koju potrebnu dokumentaciju moraju imati za upis na studije i prijavu u `UE Novo mesto`
+	- ...
+
+---
+
+name: rokovi
+layout: false
+class: center, middle
+
+# Rokovi za prijavu i upis 
+#### osnovne i master studije 
+
+---
+layout: true
+
+.section[[Rokovi](#sadrzaj)]
+
+---
+
+## Osnovne studije
+
+- *Prvi rok za PRIJAVU*
+	- **12. februar 2019. - 18. mart 2019.**
+- *Prvi rok za UPIS*
+	- **26. jul 2019. - 16. avgust 2019.**	 
+
+<br>
+- *Drugi rok za PRIJAVU*
+	- **22. avgust 2019. - 29. avgust 2019.** 
+- *Drugi rok za UPIS*
+	- **25. septembar 2019. - 30. septembar 2019.** 	 
+
+---
+
+## Master studije 
+
+- *Prvi rok za PRIJAVU*
+	- **1. april 2019. - 30. jun 2019.** 
+- *Prvi rok za UPIS*
+	- 	 
+
+<br>
+- *Drugi rok za PRIJAVU*
+	- **1. jul 2019. - 23. spetembar 2019.**
+- *Drugi rok za UPIS*
+	- 
+
+---
+name: prijava
+layout: false
+class: center, middle
+
+# Prijava
+#### <a target="_blank" rel="noopener noreferrer" href="https://portal.evs.gov.si/prijava/"> ☛ eVŠ/`portal`</a> i dokimentacija
+
+---
+layout: true
+
+.section[[Prijava](#sadrzaj)]
+
+---
+
+## Način prijave 
+- Prijava za `upis` i `priznavanje` ispita se podnosi putem eVŠ portala.
+- Za priznavanje obrazovanja potrebni su sljedeći dokumenti:
+	- Originalna diploma,
+	- Prevod diplome na slovenački jezik,
+	- `Overenu` fotokopiju diplome `3.` i `4.` razreda srednje škole `na slovenački` (sudski veštak),
+	- fotokopiju diplome prve i druge godine srednje škole,
+	- kratak hronološki opis obrazovanja (`napise kandidat`)
+
+<br>
+
+- <a target="_blank" rel="noopener noreferrer" href="https://portal.evs.gov.si/prijava/"> ☛ eVŠ/`prijava`</a>
+
+---
+## Već si student?
+####Ko je krenuo prvu godinu osnovne/master
+
+- Prijavite se u već navedenim rokovima i poslati dokumente.
+- Prilozi za master:
+	- originalna diploma - prevod na slovenački jezik,
+	- potvrda o položenim ispitima (originalni i sudski prevod na slovenački jezik).
+ 
+- Ako je kandidat već položio ispit na istom nivou studija i srodnim sadržajima, može se prijaviti za ispit (nakon upisa). 
+- Pored potvrde o položenim ispitima (koji se podnose u vrijeme podnošenja prijave), treba priložiti i nastavni plan i program kursa.
+ 
+
+---
+
+## Već si student?
+####Ko je položio više od jedne godine osnovne/master
+
+- Npr. Završene 3,5 godine (4+1)(čekanje/koraci))
+ 
+- Da bi se upisao u višu godinu našeg programa, uslov da je program u koji je kandidat upisan se odnosi na naš 
+	- što znači da se najmanje polovina obaveza može priznati pri upoređivanju programa u celini (bez obzira na položene ispite). 
+- Pored toga, kandidat mora biti prepoznat kao i one obaveze koje su uslov da se upiše u višu godinu.
+
+
+.attention[
+**Konkretno**: <br> Ovim kandidatima se savetuje da pošalju kompletan studijski program na koji su upisani i potvrdu o položenim ispitima kako bi se proverile mogućnosti i kako bi informisali kandidata o ishodu.
+]
+
+
+
+---
+
+---
+## Slanje dokumenata
+
+- Čim ih dobijete, preporučeno poslati na:
+
+<br>
+
+.medium[
+>Fakulteta za informacijske študije v Novem mestu <br>
+Ljubljanska cesta 31a, p.p. 603 <br>
+8000 Novo mesto <br> 
+Slovenia
+]
+
+---
+
+name: upis
+layout: false
+class: center, middle
+
+# Oko upisa
+#### dokumenti, obaveštenja...
+---
+layout: true
+
+.section[[Upis](#sadrzaj)]
+
+---
+
+## Potrebna dokumentacija za upis + info
+
+- Za upis:
+	- 3 fotografije u veličini 3 * 3,5cm (kao za ličnu kartu),
+	- fotokopiju ličnog dokumenta, pasoša
+	- Potvrda o uplati kotizacije (€ 28.00)
+		- faktura se šalje sa pozivom za upis.
+- Upis će se održati u septembru
+	- kada kandidat dobije odluku o priznavanju obrazovanja, pozivamo ga da se upiše.
+	- Obaveštenje na e-mail.
+- Nakon upisa dobija se potvrda o upisu.
+- Studentska kartica se dobija u novembru.
+
+
+---
+
+name: pogodnosti
+layout: false
+class: center, middle
+
+# Pogodnosti
+#### smeštaj, hrana, jezik, prevoz,
+---
+
+layout: true
+.section[[Pogodnosti](#sadrzaj)]
+
+---
+
+# Pogodnosti 
+
+- <a target="_blank" rel="noopener noreferrer" href="http://www.dijaskidom.org/"> ☛ `Studetski dom`</a>
+- Student ima pravo na subvencionisanu studentsku hranu, uz dodatak od oko 3 € po obroku.
+	- Dijaški u studentskom domu, Hostel Situla, Restoran Opšte bolnice Novo mesto, Picerija Totalka, Picerija Chianti, Restoran Novak, McDonalds.
+- Kurs ćete imati na fakultetu a možete videti i na:
+	- <a target="_blank" rel="noopener noreferrer" href="http://www.drustvospm.si/drustvo-za-razvijanje-prostovoljnega-dela-novo-mesto"> ☛ `DRPD`</a> kao i  <a target="_blank" rel="noopener noreferrer" href="http://www.ric-nm.si/si/"> ☛ `RIC`</a> .ref[*]
+- U Novom mestu postoji gradski prevoz putnika (autobus/voz).
+	- Najbolje: 30 minuta hoda. 🚶‍🚶‍♀️️💪
+
+.footer[
+  .attention[
+\* **Napomena**: Za studente se organizuju besplatni kursevi. 😊😉
+]
+]
+
+---
+
+name: boravak
+layout: false
+class: center, middle
+
+# Boravak
+#### procedura
+
+---
+
+layout: true
+
+.section[[Boravak](#sadrzaj)]
+
+---
+
+## Dobijanje privremenog boravka .ref[*]
+
+- <a target="_blank" rel="noopener noreferrer" href=" http://www.upravneenote.gov.si/novo_mesto/"> ☛ `Upravna enota`</a>
+- Kontakt osobe:
+ 
+>Novo mesto <br> 
+07/39 39 117 <br>
+Sergeja Heric / Irena Fink Ambrožič <br>
+prizemlje  desno 
+
+.footer[
+
+ .attention[
+\* **Napomena**: Za studente u domu, prijavu boravka završava, Studentski dom. 😊😉
+]
+
+
+] 
+
+
+---
+## Dozvola za boravak
+
+- Student prilaže potvrdu o upisu na fakulet
+	- dobija se na dan upisa
+- Potrda o zdravstvenom osiguranju Srbije (SRB/SI3)   
+	- Osiguranje mora biti za hitnu medcinsku i da bude izdato za celu godinu. 
+	- Na latinici i ne sme biti starije  od 3 meseca. 
+	- Ako se ne izda na godinu nego na tri meseca svaka naredna tri meseca donosi se novo na Upravnu enotu.
+	- Potvrdu o osiguranju potrebno je uzeti u dva primerka jedan ide u Zavod za zdravstveno osiguranje (Novo mesto: Prešernov trg,) odeljnju za strance, na osnovu toga se dobije kartica ZZZS v Sloveniji i dobije broj osigurane osobe  u SLO).
+- Zatim se čeka izrada kartice koja može trajati i mesec dana
+
+---
+
+## Imati i:
+
+- Izjavu roditelja, o preživljanju u visini 400 EUR, za vreme boravka u Sloveniji (izjava mora biti overjena, podpisana s strani roditelja i u latinici).
+- Izjava, da roditelji mogu dete finansirati sa 400 evra svakog meseca (formalno se donosi). 
+- Izvod iz matične knjige rodjenih  (matični list), koji nije stariji od 3 meseca i u latinici ili medjunarodni koji vadite u opštini na kojoj živite u Srbiji.
+- Potvrda o nekaznovanosti u svojoj državi – koji nije stariji 3 meseca, u latinici.
+- Fotokopija pasoša (predlažemo, da je to overena fotokopija)
+- 1 fotografija
+
+---
+
+name: posao
+layout: false
+class: center, middle
+
+# Posao
+#### procedura
+
+---
+
+layout: true
+.section[[Posao](#sadrzaj)]
+
+---
+
+## Kada, kako, za koliko i gde?
+
+- Student može raditi preko studentskog servisa. 
+- U Novom mestu je - <a target="_blank" rel="noopener noreferrer" href="https://www.mservis.si/za-posameznike/novice-in-aktualni-dogodki/poslovalnica-ams-v-novem-mestu-na-novi-lokaciji"> ☛ AGENCIJA M SERVIS/`informacije`</a>
+- Za prijavu potrebni sledeci dokumenti:
+	- Lični dokument,
+	- Račun u banci (otvoren u Sloveniji),
+	- Poreski broj (pribavljen u kancelariji za finansije),
+	- Potvrda o upisu.
+ - Ponude za posao su objavljene na sajtu agencije
+ 	- zarada je 4 - 7 € po satu.
+
+---
+
+name: hvala
+layout: false
+class: center, middle
+
+# Hvala na pažnji !
+
+---
+layout: true
+
+.section[[Hvala na pažnji !](#sadrzaj)]
+
+---
+
+name: pitanja
+
+## .center[ *P  I  T  A  NJ  A  ?* .ref[1]]
+
+
+.small[
+
+> Uradite *danas* što drugi *ne žele*, da bi *sutra* mogli da uradite što drugi *ne mogu*. .ref[*]
+
+.lcol.medium[
+
+.center[
+
+<figure>
+  <img src="fis/facebook.png" alt="Trulli" style="width:13%">
+  <figcaption><a href="https://www.facebook.com/referat.fis" target="_blank">referat.fis</a></figcaption>
+</figure>
+
+<figure>
+  <img src="fis/instagram.png" alt="Trulli" style="width:13%">
+  <figcaption><a href="https://www.instagram.com/fis.nm/" target="_blank">fis.nm</a></figcaption>
+</figure>
+
+<figure>
+  <img src="fis/twitter.png" alt="Trulli" style="width:13%">
+  <figcaption><a href="http://twitter.com/fisnm" target="_blank">fisnm</a></figcaption>
+</figure>
+
+]
+
+]
+
+.rcol.medium[
+
+.center[
+
+<figure>
+  <img src="fis/linkedIn.png" alt="Trulli" style="width:13%">
+  <figcaption><a href="https://www.linkedin.com/company/faculty-of-information-studies" target="_blank">Faculty of Information Studies in Novo mesto</a></figcaption>
+</figure>
+
+<figure>
+  <img src="fis/youtube.png" alt="Trulli" style="width:13%">
+  <figcaption><a href="http://www.youtube.com/user/fisnm" target="_blank">fisnm</a></figcaption>
+</figure>
+
+<figure>
+  <img src="fis/google.png" alt="Trulli" style="width:13%">
+  <figcaption><a href="https://plus.google.com/109941849461637164050" target="_blank">Fakulteta za informacijske študije Novo mesto</a></figcaption>
+</figure>
+
+]
+
+]
+
+] 
+
+.footer[
+
+<a target="_blank" rel="noopener noreferrer" href="/budi-student-fis-a/#sadržaj">1. Pitanja pisati u ☛ komentarima</a><br>
+\* <a target="_blank" rel="noopener noreferrer" href="https://www.milovantomasevic.com/">MilovanTomasevic.com</a>]
+
+{% endblock %}
