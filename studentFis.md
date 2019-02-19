@@ -7,7 +7,7 @@ menu: true
 order: 2
 permalink: /budi-student-fis-a/
 comments: true
-
+accent_image: /assets/img/student.jpg
 ---
 
 ## Sadržaj
