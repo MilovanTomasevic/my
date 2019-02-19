@@ -1,4 +1,5 @@
 ---
+layout: welcome
 title: Budi student FIŠ-a
 description: >
   Prezentacija prikazuje zašto uspešno izvršavamo obaveze svih 10 godina !
@@ -18,7 +19,7 @@ accent_color: rgb(100, 182, 98)
 
 ---
 
-## Prezentacija FIŠa - Fakulteta za informacijske študije
+## Prezentacija FIŠ-a - Fakulteta za informacijske študije
 
 - Prezentacija prikazuje zašto uspešno izvršavamo obaveze svih 10 godina !
 	- [Budi student FIŠ-a](/courses/fis/fis.html){:target="_blank"} --- PC & Mobile view.
@@ -28,11 +29,11 @@ accent_color: rgb(100, 182, 98)
 
 ## Put do FIŠ-a - Fakulteta za informacijske študije
 
-- Rokovi i prijave za upis, dokumentacija, procedura, viza... _sve na jednom mestu_!
+- Rokovi i prijave za upis, dokumentacija, procedura, viza...<font color="green"><i> sve na jednom mestu!</i></font>
 	- [Put do FIŠ-a](/courses/fis/put_do_fis_a.html){:target="_blank"} --- PC & Mobile view.
   {:.faded}
 	
-## Konkurs (zahtev za studije na FIŠu)
+## Konkurs (zahtev za studije na FIŠ-u)
 
 - Ukoliko ste odlučili da studirate na FIŠ-u pratite sledeće korakte:
 	- Ispunite formu u nastavku
@@ -98,3 +99,16 @@ accent_color: rgb(100, 182, 98)
 ## Komentari / Pitanja
 
 - Sva pitanja možete u nastavku stranice u obliku komentara. U što kracem roku očekujte odgovor. U slučaju da niste dobili odgovor, budite slobodni i posaljite mi mejl. Ovde je korisno da postavite pitanje (ukoliko ga imate) kako bi i drugi studenti/roditelji mogli pročitati (kako pitanja tako i odgovore). Iako smatram da gotovo i više, nego što je potrebno u datom trenutku, informacija dam tokom prezentacije jer sam tada tu sa vama i verujem da je lakše kada pričamo pa odogovore dobijate odmah na nakon postavljenog pitanja!
+
+- Svakako, toplo preporučujem, ukoliko želite najbrži odgovor to je mejl za našu studentsku službu.
+- Sigurno ćete dobiti temeljan, postupan i sistematičan odgovor.
+  - [Pošalji mejl ☛ studentskoj službi](mailto:marjana.miskovic@fis.unm.si?Subject=Pitanje%20u%20vezi%20sa%20https://milovan.tomasevic.fis.unm.si/budi-student-fis-a/){:target="_blank"}
+
+---
+<!--author-->
+
+<font color="green"><i><b>SREĆNO !!!</b></i></font> <br>
+
+[![Milovan Tomašević - Potpis](/assets/img/MilovanTomasevicPotpis.png){: height="55px" width="45px"}](/resume/)
+
+---
