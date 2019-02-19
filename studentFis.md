@@ -8,6 +8,7 @@ order: 2
 permalink: /budi-student-fis-a/
 comments: true
 accent_image: /assets/img/student.jpg
+accent_color: rgb(0, 204, 102)
 ---
 
 ## Sadržaj
