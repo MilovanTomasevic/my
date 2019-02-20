@@ -390,9 +390,7 @@ name: pitanja
 </figure>
 
 ]
-
 ]
-
 ] 
 
 .footer[

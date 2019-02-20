@@ -19,23 +19,23 @@ accent_color: rgb(100, 182, 98)
 
 ---
 
-## Prezentacija FIŠ-a - Fakulteta za informacijske študije
+## Prezentacija FIS-a
 
-- Prezentacija prikazuje zašto uspešno izvršavamo obaveze svih 10 godina !
+- Prezentacija prikazuje zašto [Fakulteta za informacijske študije](https://www.fis.unm.si/si/){:target="_blank"} uspešno izvršava obaveze svih 10 godina !
 	- [Budi student FIŠ-a](/courses/fis/fis.html){:target="_blank"} --- PC & Mobile view.
   {:.faded}
 
 
 
-## Put do FIŠ-a - Fakulteta za informacijske študije
+## Put do FIS-a
 
-- Rokovi i prijave za upis, dokumentacija, procedura, viza...<font color="green"><i> sve na jednom mestu!</i></font>
+- Rokovi i prijave za upis na [Fakulteta za informacijske študije](https://www.fis.unm.si/si/){:target="_blank"},  kao i dokumentacija, procedura, viza...<font color="green"><i> sve na jednom mestu!</i></font>
 	- [Put do FIŠ-a](/courses/fis/put_do_fis_a.html){:target="_blank"} --- PC & Mobile view.
   {:.faded}
 	
-## Konkurs (zahtev za studije na FIŠ-u)
+## Konkurs (zahtev za studije na FIS-u)
 
-- Ukoliko ste odlučili da studirate na FIŠ-u pratite sledeće korakte:
+- Ukoliko ste odlučili da studirate na FIŠ-u ([Fakulteta za informacijske študije](https://www.fis.unm.si/si/){:target="_blank"} ) pratite sledeće korakte:
 	- Ispunite formu u nastavku
 	- Pre klika na **POŠALJI** proverite još jednom podatke
 	- Za **najkasnije 5 radnih dana** će te dobiti odgovor na Vaš zahtev
