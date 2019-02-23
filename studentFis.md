@@ -2,7 +2,7 @@
 layout: welcome
 title: Budi student FIŠ-a
 description: >
-  Prezentacija prikazuje zašto uspešno izvršavamo obaveze svih 10 godina !
+  Prezentacija FIŠ-a, kako se prijaviti na FIŠ, kada je upis na FIŠ, kako do vize, rokovi, prodecude, sve na jednom mestu...
 hide_description: true
 menu: true
 order: 2
