@@ -224,14 +224,15 @@ layout: true
 - <a target="_blank" rel="noopener noreferrer" href="http://www.dijaskidom.org/"> ☛ `Studetski dom`</a>
 - Student ima pravo na subvencionisanu studentsku hranu, uz dodatak od oko 3 € po obroku.
 	- Dijaški u studentskom domu, Hostel Situla, Restoran Opšte bolnice Novo mesto, Picerija Totalka, Picerija Chianti, Restoran Novak, McDonalds.
-- Kurs ćete imati na fakultetu a možete videti i na:
-	- <a target="_blank" rel="noopener noreferrer" href="http://www.drustvospm.si/drustvo-za-razvijanje-prostovoljnega-dela-novo-mesto"> ☛ `DRPD`</a> kao i  <a target="_blank" rel="noopener noreferrer" href="http://www.ric-nm.si/si/"> ☛ `RIC`</a> .ref[*]
+- Kurs slovenačkog će biti i na fakultetu a može se videti i na:
+	- <a target="_blank" rel="noopener noreferrer" href="http://www.drustvospm.si/drustvo-za-razvijanje-prostovoljnega-dela-novo-mesto"> ☛ `DRPD`</a>.ref[1] kao i  <a target="_blank" rel="noopener noreferrer" href="http://www.ric-nm.si/si/"> ☛ `RIC`</a> .ref[2] a odmah možete na <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=d88m4VGvvug&list=PLdBDRYovqGqltDPD_zcIRzgdXYi2zW2Yx"> ☛ `youtube`</a>
 - U Novom mestu postoji gradski prevoz putnika (autobus/voz).
 	- Najbolje: 30 minuta hoda. 🚶‍🚶‍♀️️💪
 
+
 .footer[
   .attention[
-\* **Napomena**: Za studente se organizuju besplatni kursevi. 😊😉
+\* [1,2] **Napomena**: Za studente se organizuju besplatni kursevi. 😊😉
 ]
 ]
 
