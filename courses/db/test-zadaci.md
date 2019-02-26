@@ -29,7 +29,7 @@ layout: true
 - <a target="_blank" rel="noopener noreferrer" href="../db/sema.html"> ☛ `Šema baze podataka`</a>
 
 ---
-name: Danas 
+name: danas 
 class: center, middle
 layout: false
 
