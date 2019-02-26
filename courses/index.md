@@ -34,6 +34,27 @@ I wish you a lot of success during your learning.
   - [PyhtonPro](/tech/python_napredni.html){:target="_blank"}{:.heading.flip-title} --- Advanced level.
 {:.related-posts.faded}
 
+### DataBase training
+
+|                        **Zadaci**                      |                      **Rešenja**                    |
+|:------------------------------------------------------:|:---------------------------------------------------:|
+|   [ Z1-Zadaci ](db/z1-zadaci.html){:target="_blank"}   |   [ Z1-Rešenja ](db-z1-resenja){:target="_blank"}   |
+|   [ Z2-Zadaci ](db/z2-zadaci.html){:target="_blank"}   |   [ Z2-Rešenja ](db-z2-resenja){:target="_blank"}   |
+|   [ Z3-Zadaci ](db/z3-zadaci.html){:target="_blank"}   |   [ Z3-Rešenja ](db-z3-resenja){:target="_blank"}   |
+|   [ Z4-Zadaci ](db/z4-zadaci.html){:target="_blank"}   |   [ Z4-Rešenja ](db-z4-resenja){:target="_blank"}   |
+|   [ Z5-Zadaci ](db/z5-zadaci.html){:target="_blank"}   |   [ Z5-Rešenja ](db-z5-resenja){:target="_blank"}   |
+|   [ Z6-Zadaci ](db/z6-zadaci.html){:target="_blank"}   |   [ Z6-Rešenja ](db-z6-resenja){:target="_blank"}   |
+|   [ Z7-Zadaci ](db/z7-zadaci.html){:target="_blank"}   |   [ Z7-Rešenja ](db-z7-resenja){:target="_blank"}   |
+|   [ Z8-Zadaci ](db/z8-zadaci.html){:target="_blank"}   |   [ Z8-Rešenja ](db-z8-resenja){:target="_blank"}   |
+|   [ Z9-Zadaci ](db/z9-zadaci.html){:target="_blank"}   |   [ Z9-Rešenja ](db-z9-resenja){:target="_blank"}   |
+|  [ Z10-Zadaci ](db/z10-zadaci.html){:target="_blank"}  |  [ Z10-Rešenja ](db-z10-resenja){:target="_blank"}  |
+|  [ Z11-Zadaci ](db/z11-zadaci.html){:target="_blank"}  |  [ Z11-Rešenja ](db-z11-resenja){:target="_blank"}  |
+|  [ Z12-Zadaci ](db/z12-zadaci.html){:target="_blank"}  |  [ Z12-Rešenja ](db-z12-resenja){:target="_blank"}  |
+| [ Test-Zadaci ](db/test-zadaci.html){:target="_blank"} | [ Test-Rešenja ](db-test-resenja){:target="_blank"} |
+
+- <a target="_blank" rel="noopener noreferrer" href="/courses/db/sema.html"> ☛ `Šema baze podataka`</a>
+- <a target="_blank" rel="noopener noreferrer" href="/courses/db-mySQL.sql/"> ☛ skripta-`mySQL.sql`</a>
+
 ### Domain-Specific Languages (DSLs)
 
 1. [O predmetu](/courses/jsd/upoznavanje.html){:target="_blank"}
