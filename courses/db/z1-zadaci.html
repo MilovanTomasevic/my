@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>[DataBase training](/courses/#table-of-contents)</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../remarkslides.css">
+    
+
+
+    <!-- MathJax™ -->
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127734928-1');
+    </script>
+
+
+    <!-- google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-127734928-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+## [DataBase training](/courses/#table-of-contents)
+### Z1-Zadaci
+
+
+.author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
+
+.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+
+
+
+.created[26.02.2019 u 02:00]
+
+
+---
+
+
+name: sadrzaj
+
+# Sadržaj
+
+- [Uvod](#uvod)
+- [Zadaci za danas](#danas)
+- [Zadaci za vežbu](#vezba)
+
+---
+name: uvod 
+class: center, middle
+
+# Uvod
+
+---
+layout: true
+
+.section[[Uvod](#sadrzaj)]
+
+---
+
+## Uvod 
+
+- <a target="_blank" rel="noopener noreferrer" href="../db/sema.html"> ☛ `Šema baze podataka`</a>
+
+---
+name: danas 
+class: center, middle
+layout: false
+
+# Zadaci za danas
+
+---
+layout: true
+
+.section[[Zadaci za danas](#sadrzaj)]
+
+---
+
+## Prvi deo
+            
+- Primer 1: 
+    - Prikazati šifru i naziv predmeta.
+- Primer 2: 
+    - Prikazati podatke o predmetima koji imaju po 6 kredita.
+- Primer 3: 
+    - Izdvojiti ime i prezime studenta sa indeksom 25/2010.
+- Primer 4: 
+    - Izdvojiti nazive rokova koji su održani posle 2009. godine.
+- Primer 5: 
+    - Izdvojiti indekse studenata koji imaju:
+        - ocenu 10 ili 9
+        - ocenu 10 i 9
+        - samo ocene 10.
+---
+
+## Drugi deo
+
+- Primer 6: 
+    - Pronaći studente koji su rođeni u godini kada je održan neki ispitni rok.
+    - Izdvojiti indeks, godinu rođenja i naziv roka.
+- Primer 7: 
+    - Za svakog studenta izdvojiti predmete koje je polagao. 
+    - Izdvojiti indeks studenta, naziv predmeta i ocenu koju je dobio.
+- Primer 8: 
+    - Izdvojiti indekse studenata koji su polagali sve predmete.
+- Primer 9: 
+    - Izdvojiti parove predmeta koji imaju isti broj kredita. Izdvojiti šifre i nazive predmeta.
+- Primer 10: 
+    - Izdvojiti indekse studenata koji su položili predmet Geometrija.
+
+---
+
+## Treći deo
+
+- Primer 11: 
+    - Izdvojiti podatke o studentima koji su polagali u januarsokm ispitnom roku 2011.
+- Primer 12: 
+    - Izdvojiti podatke o predmetima koje je položio bar jedan student rodjen 1992. godine.
+- Primer 13: 
+    - Izdvojiti podatke o studentima koji nisu polagali ispite u januarskom ispitnom roku.
+- Primer 14: 
+    - Za svaki predmet prikazati njegove podatke i koliko košta njegovo upisivanje za samofinansirajuće studente. Jedan kredit košta 1500 din.
+
+---
+## Četvrti deo
+
+- Primer 15: 
+    - Za svaku godinu izračunati koliko studenata je rođeno te godine.
+- Primer 16 : 
+    - Za svakog studenta i godinu u kojoj su održani ispitni rokovi prikazati koliko predmeta je položio i prosečnu ocenu.
+- Primer 17: 
+    - Pronaći ispitni rok u kome su bar jedan ispit polagali svi studenti.
+- Primer 18: 
+    - Pronaći studente koji su polozili neki predmet od 6 kredita. 
+    - Izdvojiti indeks, ime, prezime i naziv predmeta.
+
+---
+
+layout: false
+
+## Korišćeni materijal
+
+- Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
+
+
+
+
+    </textarea>
+    <script src="../remark-latest.min.js"></script>
+    <script>
+        // https://github.com/gnab/remark/issues/72
+        remark.macros.scale = function (percentage) {
+            var url = this;
+            return '<div class="center"><img src="'
+                 + url + '" style="width: ' + percentage + '" /></div>';
+        };
+        var slideshow = remark.create({
+                    highlightLanguage: 'python',
+                    // highlightStyle: 'obsidian',
+                    highlightStyle: 'github',
+                    highlightLines: true
+                });
+    </script>
+    
+  </body>
+</html>
