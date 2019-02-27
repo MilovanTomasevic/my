@@ -18,7 +18,7 @@ accent_color: rgb(100, 182, 98)
 
 ---
 
-[Prezentacija- BUDI STUDENT FIŠ-a](/../courses/fis/fis.html#1){:target="_blank"} je održana za maturante u srednjim školama u sledećim gradovima:
+[Prezentacija - BUDI STUDENT FIŠ-a](/../courses/fis/fis.html#1){:target="_blank"} je održana za maturante u srednjim školama u sledećim gradovima:
   - Somboru (tri škole), 
   - Kuli (dve škole), 
   - Inđiji (dve škole), 
