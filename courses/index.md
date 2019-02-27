@@ -99,8 +99,8 @@ I wish you a lot of success during your learning.
 <br>
 
 |:------------------------------------------------------------------------------:|:----------------------------------------------------:|
-| [OpenMP presentation](hpc-short-courses/openmp-presentation.html){:target="_blank"} | [OpenMP training](openmp-training.html){:target="_blank"} |
-|    [MPI presentation](hpc-short-courses/mpi-presentation.html){:target="_blank"}    |    [MPI training](mpi-training.html){:target="_blank"}    |
+| [OpenMP presentation](hpc-short-courses/openmp-presentation.html){:target="_blank"} | [OpenMP training](openmp-training){:target="_blank"} |
+|    [MPI presentation](hpc-short-courses/mpi-presentation.html){:target="_blank"}    |    [MPI training](mpi-training){:target="_blank"}    |
 
 
 
