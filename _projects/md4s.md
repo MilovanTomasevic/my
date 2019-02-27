@@ -13,7 +13,8 @@ caption: MD4S, School of Programming, sale&purchase, and service iDevice
 description: >
   Milovan Tomašević worked on the sale and purchase of Apple devices as well as the repair of iDevices ...
 hide_description: true
-
+accent_image: /assets/img/apple.gif
+accent_color: rgb(50,205,50)
 ---
 
 - Milovan Tomašević worked on the sale and purchase of Apple devices as well as the repair of iDevices.

@@ -13,7 +13,8 @@ caption: Ministry of Science, Republic of Serbia
 description: >
   Milovan Tomašević worked as a researcher at the Faculty of Technical Sciences within the project "Development of software for managing the installation ...
 hide_description: true
-
+accent_image: /assets/img/ftn-sc.gif
+accent_color: rgb(255,127,80)
 ---
 
 Milovan Tomašević worked as a researcher at the [_Faculty of Technical Sciences_](http://ftn.uns.ac.rs/n1386094394/faculty-of-technical-sciences) within the project _"Development of software for managing the installation and repair of braking systems for rail vehicles", the Ministry of Science, Republic of Serbia, no. 035 050 for the period 2011-2017th years_.

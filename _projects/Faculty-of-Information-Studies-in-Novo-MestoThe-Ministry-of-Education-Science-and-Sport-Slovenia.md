@@ -13,6 +13,8 @@ caption: Ministry of Education, Science and Sport, Slovenia
 description: >
   Milovan Tomašević works as a researcher at the Faculty of Information Studies in Novo Mesto within the project "HPC RIVER" ...
 hide_description: true
+accent_image: /assets/img/rudolf.gif
+accent_color: rgb(0,191,255)
 
 ---
 

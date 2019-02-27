@@ -13,6 +13,8 @@ caption: ITIL V3
 description: >
   Milovan Tomašević works as a researcher and analyzed DDOR’s clients’ needs and made a specification for the other side that served ...
 hide_description: true
+accent_image: /assets/img/itil3.gif
+accent_color: rgb(138,43,226)
 
 ---
 

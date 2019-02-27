@@ -13,6 +13,8 @@ caption: Smart Home - IoT
 description: >
   Milovan Tomašević worked as an iOS developer at the OBLO Living within the project "Smart Home - IoT ...
 hide_description: true
+accent_image: /assets/img/smarthome.gif
+accent_color: rgb(65,105,225)
 
 ---
 
