@@ -13,10 +13,7 @@ caption: ITIL V3
 description: >
   Milovan Tomašević works as a researcher and analyzed DDOR’s clients’ needs and made a specification for the other side that served ...
 hide_description: true
-accent_color: '#4fb1ba'
-accent_image:
-  background: 'linear-gradient(to bottom,#193747 0%,#233e4c 30%,#3c929e 50%,#d5d5d4 70%,#cdccc8 100%)'
-  overlay:    true
+
 ---
 
  Scientific research in order to improve IT processes. During the research were written research papers.

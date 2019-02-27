@@ -13,10 +13,7 @@ caption: Ministry of Science, Republic of Serbia
 description: >
   Milovan Tomašević worked as a researcher at the Faculty of Technical Sciences within the project "Development of software for managing the installation ...
 hide_description: true
-accent_color: '#4fb1ba'
-accent_image:
-  background: 'linear-gradient(to bottom,#193747 0%,#233e4c 30%,#3c929e 50%,#d5d5d4 70%,#cdccc8 100%)'
-  overlay:    true
+
 ---
 
 Milovan Tomašević worked as a researcher at the [_Faculty of Technical Sciences_](http://ftn.uns.ac.rs/n1386094394/faculty-of-technical-sciences) within the project _"Development of software for managing the installation and repair of braking systems for rail vehicles", the Ministry of Science, Republic of Serbia, no. 035 050 for the period 2011-2017th years_.
@@ -63,7 +60,7 @@ While I teach my students
 
 ## Started and completed his PhD in the project
 {:.no_toc}
-0. this unordered seed list will be replaced by toc as unordered list
+1. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
 I enrolled my doctoral studies in the Department of engineering management, with the thesis _‘Adaptive model for supply chains management in small and medium enterprises’_.
