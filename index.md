@@ -119,7 +119,10 @@ I moved to Slovenia only a month ago and I am currently employed at the [*Facult
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Ja pojeta, ona pojeta, da nijesam kaluđer, eto kneginje Crnoj Gori.</p>&mdash; Milovan Tomašević (@mt_uns) <a href="https://twitter.com/mt_uns/status/807723158581211136">Dec 10, 2016</a></blockquote>
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6501775769000386560" allowfullscreen="" width="504" height="914" frameborder="0"></iframe>
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6501775769000386560" allowfullscreen width="100%;" height="914" frameborder="0"></iframe>
+
+
 
 <br>
 
