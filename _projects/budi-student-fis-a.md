@@ -34,9 +34,6 @@ accent_color: rgb(100, 182, 98)
   - Zrenjaninu prezentacija je održana u po jednoj školi. 
 
 
-
-
-
 ---
 
 ## Sadržaj
@@ -312,4 +309,7 @@ Zajednička fotografija
 {:.figure}
 
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6501775769000386560" allowfullscreen="" width="504" height="914" frameborder="0"></iframe>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6501775769000386560" allowfullscreen width="100%;" height="914" frameborder="0"></iframe>
+
+
+
