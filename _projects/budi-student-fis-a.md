@@ -47,22 +47,16 @@ accent_color: rgb(100, 182, 98)
 ---
 
 
-<style>
-video {
-  width: 30%;
-  height: auto;
-}
-img{
-  width: 75%;
-  height: auto;
-}
-</style>
-
 ## Sombor
 
 ### STS – Sombor
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uJ3Ljg3xSWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uJ3Ljg3xSWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Srednja tehnička škola – Sombor
 {:.figure}
 
@@ -74,7 +68,11 @@ Nagrađeni maturanti
 
 ### Gimnazija Sombor
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/naAv8FeQ4n4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/naAv8FeQ4n4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Gimnazija ”Veljko Petrović” – Sombor
 {:.figure}
 
@@ -85,7 +83,11 @@ Nagrađeni maturanti
 
 ### Srednja skola Sveti Sava Sombor
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uEBmmSuvfIY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uEBmmSuvfIY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Srednja škola ”Sveti Sava” – Sombor
 {:.figure}
 
@@ -99,8 +101,11 @@ Nagrađeni maturanti
 
 ### STS – Kula
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Kthkj8qD9To" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Kthkj8qD9To" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Srednja tehnička škola ”Mihajlo Pupin” – Kula
 {:.figure}
 
@@ -112,7 +117,11 @@ Nagrađeni maturanti
 
 ### Ekonomska Kula
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RyVe8sDVnT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RyVe8sDVnT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Ekonomsko trgovinska škola – Kula
 {:.figure}
 
@@ -125,7 +134,11 @@ Zajednička fotografija
 
 ### STS – Indjija
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XtpucWfbeQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XtpucWfbeQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Tehnička škola “Mihajlo Pupin” – Inđija
 {:.figure}
 
@@ -140,27 +153,44 @@ Nagrađeni maturanti
 
 ### Gimnazija
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5RqrcXLlTsE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5RqrcXLlTsE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Video za vreme prezentacije
 {:.figure}
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M5-8ManOKxc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M5-8ManOKxc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Gimnazija Miloje Dobrašinović Bijelo Polje
 {:.figure}
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qDlf0SyZT2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qDlf0SyZT2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Nakon prezentacije
 {:.figure}
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OYBDb3rUPco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OYBDb3rUPco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Utisak maturanta
 {:.figure}
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ke5H8SPOcaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ke5H8SPOcaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Pozdrav
 {:.figure}
 
@@ -176,7 +206,11 @@ Gimnazija
 
 ### Karlovacka gimnazija
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M0idoww0itY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M0idoww0itY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Karlovačka gimnazija – Sremski Karlovci
 {:.figure}
 
@@ -191,7 +225,11 @@ Zajednička fotografija
 
 ### STS 4juli – Vrbas
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NRdTZ8AfKMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NRdTZ8AfKMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Srednja stručna škola “4. juli” – Vrbas
 {:.figure}
 
@@ -204,7 +242,11 @@ Zajednička fotografija
 
 ### Gimnazija
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NdsdYs6pu4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NdsdYs6pu4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Srednja škola ”Petro Kuzmjak” – Ruski Krstur
 {:.figure}
 
@@ -217,15 +259,27 @@ Zajednička fotografija
 
 ### Elektrotehnicka i gradjevinska skola Nikola Tesla – Zrenjanin
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gJ6Ff8cs4tY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gJ6Ff8cs4tY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Elektrotehnička i građevinska škola “Nikola Tesla” – Zrenjanin
 {:.figure}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KRjFybTom-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KRjFybTom-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Tokom prezentacije
 {:.figure}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vZ1qtbMg6js" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vZ1qtbMg6js" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Tokom prezentacije
 {:.figure}
 
@@ -244,7 +298,11 @@ Zajednička fotografija
 
 ### Poljuprivredna skola Crvenka
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gJOzrK7Hh1k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="max-width:560px;margin:0 auto; padding:5px;">
+  <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gJOzrK7Hh1k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; max-width: 560px; max-height: 315px;"></iframe>
+  </div>
+</div>
 Srednja stručna škola – Crvenka
 {:.figure}
 
@@ -252,5 +310,6 @@ Srednja stručna škola – Crvenka
 
 Zajednička fotografija
 {:.figure}
+
 
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6501775769000386560" allowfullscreen="" width="504" height="914" frameborder="0"></iframe>
