@@ -2,8 +2,8 @@
 layout: project
 title: 'Budi student FIŠ-a'
 date: 1 Oct 2018
-image: /assets/img/budi-student-fis-a/budi-student-fis-a.jpg
-screenshot: /assets/img/budi-student-fis-a/budi-student-fis-a.jpg
+image: /assets/img/budistudentfisa.jpg
+screenshot: /assets/img/budistudentfisa.jpg
 links:
   - title: Budi student FIŠ-a
     url: /budi-student-fis-a/
@@ -28,6 +28,9 @@ accent_color: rgb(100, 182, 98)
   - Ruskom Krsturu, 
   - Sremskim Karlovnica i u 
   - Zrenjaninu prezentacija je održana u po jednoj školi. 
+
+
+
 
 
 ---
@@ -55,10 +58,9 @@ img{
 
 ### STS – Sombor
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-so-sts.mov" class="border" controls unmuted ><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Srednja tehnička škola – Sombor</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uJ3Ljg3xSWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Srednja tehnička škola – Sombor
+{:.figure}
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-so-sts.jpg)
 
@@ -68,10 +70,9 @@ Nagrađeni maturanti
 
 ### Gimnazija Sombor
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-so-gim.mov" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Gimnazija ”Veljko Petrović” – Sombor</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/naAv8FeQ4n4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Gimnazija ”Veljko Petrović” – Sombor
+{:.figure}
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-so-gim.jpg)
 
@@ -80,10 +81,10 @@ Nagrađeni maturanti
 
 ### Srednja skola Sveti Sava Sombor
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-so-ss.MOV" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Srednja škola ”Sveti Sava” – Sombor</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uEBmmSuvfIY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Srednja škola ”Sveti Sava” – Sombor
+{:.figure}
+
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-so-ss.jpg)
 
@@ -94,10 +95,11 @@ Nagrađeni maturanti
 
 ### STS – Kula
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-ku-sts.mov" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Srednja tehnička škola ”Mihajlo Pupin” – Kula</figcaption>
-</figure>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Kthkj8qD9To" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Srednja tehnička škola ”Mihajlo Pupin” – Kula
+{:.figure}
+
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-ku-sts.jpg)
 
@@ -106,10 +108,9 @@ Nagrađeni maturanti
 
 ### Ekonomska Kula
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-ku-ek.mov" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Ekonomsko trgovinska škola – Kula</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RyVe8sDVnT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Ekonomsko trgovinska škola – Kula
+{:.figure}
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-ku-ek.jpg)
 
@@ -120,10 +121,10 @@ Zajednička fotografija
 
 ### STS – Indjija
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-in-sts.mov" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Tehnička škola “Mihajlo Pupin” – Inđija</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XtpucWfbeQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Tehnička škola “Mihajlo Pupin” – Inđija
+{:.figure}
+
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-in-sts.jpg)
 
@@ -135,31 +136,29 @@ Nagrađeni maturanti
 
 ### Gimnazija
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-cgbp-gim.MOV" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Video za vreme prezentacije</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5RqrcXLlTsE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Video za vreme prezentacije
+{:.figure}
 
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-cgbp-gim-ja.MOV" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Gimnazija Miloje Dobrašinović Bijelo Polje</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M5-8ManOKxc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Gimnazija Miloje Dobrašinović Bijelo Polje
+{:.figure}
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-cgbp-gim-ap.MOV" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Nakon prezentacije</figcaption>
-</figure>
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-cgbp-gim-gov.MOV" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Utisak maturanta</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qDlf0SyZT2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Nakon prezentacije
+{:.figure}
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-cgbp-gim-poz.MOV" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Pozdrav</figcaption>
-</figure>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OYBDb3rUPco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Utisak maturanta
+{:.figure}
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ke5H8SPOcaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Pozdrav
+{:.figure}
 
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-cgbp-gim.jpg)
@@ -171,13 +170,12 @@ Gimnazija
 
 ## Sremski karlovci
 
-### Karlovačka gimnazija
+### Karlovacka gimnazija
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M0idoww0itY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Karlovačka gimnazija – Sremski Karlovci
+{:.figure}
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-sk-gim.mov" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Karlovačka gimnazija – Sremski Karlovci</figcaption>
-</figure>
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-sk-gim.png)
 
@@ -189,10 +187,9 @@ Zajednička fotografija
 
 ### STS 4juli – Vrbas
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-vs-sts.mov" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Srednja stručna škola “4. juli” – Vrbas</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NRdTZ8AfKMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Srednja stručna škola “4. juli” – Vrbas
+{:.figure}
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-vs-sts.jpg)
 
@@ -203,10 +200,9 @@ Zajednička fotografija
 
 ### Gimnazija
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-rk-gim.mov" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Srednja škola ”Petro Kuzmjak” – Ruski Krstur</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NdsdYs6pu4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Srednja škola ”Petro Kuzmjak” – Ruski Krstur
+{:.figure}
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-rk-gim.jpg)
 
@@ -215,17 +211,20 @@ Zajednička fotografija
 
 ## Zrenjanin
 
-### Elektrotehnicka i gradjevinska škola Nikola Tesla – Zrenjanin
+### Elektrotehnicka i gradjevinska skola Nikola Tesla – Zrenjanin
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-zr-sts.MOV" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Elektrotehnička i građevinska škola “Nikola Tesla” – Zrenjanin</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gJ6Ff8cs4tY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Elektrotehnička i građevinska škola “Nikola Tesla” – Zrenjanin
+{:.figure}
 
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-zr-sts1.MOV" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Tokom prezentacije</figcaption>
-</figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KRjFybTom-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Tokom prezentacije
+{:.figure}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vZ1qtbMg6js" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Tokom prezentacije
+{:.figure}
+
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-zr-sts.jpg)
 
@@ -241,12 +240,9 @@ Zajednička fotografija
 
 ### Poljuprivredna skola Crvenka
 
-
-<figure>
-  <video src="/assets/img/budi-student-fis-a/budi-student-fis-a-cr-sss.mov" class="border" controls unmuted><img data-ignore alt="Cover page slide animation" src="/assets/img/blog/cover-page.png"/></video>
-  <figcaption>Srednja stručna škola – Crvenka</figcaption>
-</figure>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gJOzrK7Hh1k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Srednja stručna škola – Crvenka
+{:.figure}
 
 ![](/assets/img/budi-student-fis-a/budi-student-fis-a-cr-sss.png)
 
