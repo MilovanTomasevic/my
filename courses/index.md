@@ -14,6 +14,10 @@ In this context are the programming languages as well as methodologies. In addit
 You can read more at the [faculty website](https://www.fis.unm.si/si/){:target="_blank"} or contact me personally if necessary.
 I wish you a lot of success during your learning.
 
+<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/phdmilovantomasevic/" data-format="inline" data-width="400"></script>
+
+
 ---
 
 ## Table of Contents
