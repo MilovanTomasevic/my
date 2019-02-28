@@ -1,0 +1,6 @@
+{
+    "plantuml.includeSearch": "SourceFileDir",
+
+    "plantuml.diagramsRoot": "courses/PlantUml/src",
+    "plantuml.exportOutDir": "/courses/PlantUml/out"
+}
