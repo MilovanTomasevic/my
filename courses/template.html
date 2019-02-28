@@ -7,10 +7,15 @@
     {% block additional_header %}{% endblock %}
 
 
+
     <!-- MathJax™ -->
     <script type="text/javascript" async
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
     </script>
+
+    <!-- mermaid dijagram -->
+    <link rel="stylesheet" href="mermaid.min.css">
+    <script>mermaid.initialize({startOnLoad:true});</script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
@@ -54,7 +59,10 @@
                     highlightLines: true
                 });
     </script>
+
+    <script src="/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
     {% block additional_footer %}{% endblock %}
   </body>
 </html>
-
