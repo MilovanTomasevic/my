@@ -38,6 +38,12 @@ I wish you a lot of success during your learning.
   - [PyhtonPro](/tech/python_napredni.html){:target="_blank"}{:.heading.flip-title} --- Advanced level.
 {:.related-posts.faded}
 
+### Java
+
+#### Java for Complete Beginners
+
+- [Java tutorial for complete beginners](java-for-complete-beginners){:target="_blank"} 
+
 ### DataBase training
 
 |                        **Zadaci**                      |                      **Rešenja**                    |
