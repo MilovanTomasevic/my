@@ -59,10 +59,9 @@ I wish you a lot of success during your learning.
 |--------|------|
 | __Description__ | apply a chain of successive handlers to try and process the data |general methods will call different specialized methods based on construction parameter | continue callback next object method | bundle a command and arguments to call later | traverse a container and access the container's elements |   an object that knows how to connect other objects and act as a proxy  | generate an opaque token that can be used to go back to a previous state| provide a callback for notification of events/changes to data | a source syndicates events/data to 0+ registered listeners |   keep track of all subclasses of a given class  | business rules can be recombined by chaining the business rules together using boolean logic | logic is organized into a discrete number of potential states and the next state that can be transitioned to |  selectable operations over the same data | an object imposes a structure but takes pluggable components |invoke a callback for all items of a collection |
 {:.flip-table}
-structural
 
 
-| __Design for Testability Patterns__ | [constructor_injection](python-design-patterns-constructor_injection){:target="_blank"} |[parameter_injection](python-design-patterns-parameter_injection){:target="_blank"} | [setter_injection](python-design-patterns-setter_injection){:target="_blank"}|
+| __Design for Testability__ <br> __Patterns__ | [constructor_injection](python-design-patterns-constructor_injection){:target="_blank"} |[parameter_injection](python-design-patterns-parameter_injection){:target="_blank"} | [setter_injection](python-design-patterns-setter_injection){:target="_blank"}|
 |--------|------|
 | __Description__ | for those of you who would like to use final fields, wish to avoid numerous setters, or dislike private field injection and would like nothing more than to just use  | with parameter manipulation attacks, the attacker modifies the data sent between the client and Web application. This may be data sent using query strings, form fields, cookies, or in HTTP headers.  |the client provides the depended-on object to the SUT via the setter injection (implementation variant of dependency injection)  |
 {:.flip-table}
