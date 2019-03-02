@@ -81,6 +81,7 @@ I wish you a lot of success during your learning.
 ### Java
 
 - [Java tutorial for Complete Beginners](java-for-complete-beginners){:target="_blank"} 
+- [Java Design Patterns - Example Tutorial](https://github.com/MilovanTomasevic/java-design-patterns){:target="_blank"} 
 
 ### DataBase training
 
