@@ -35,11 +35,23 @@ I wish you a lot of success during your learning.
 ### Pyhton
 
   - [Pyhton](/tech/Python.html){:target="_blank"}{:.heading.flip-title} --- Basic level.
-{:.related-posts.faded}
-
-  
   - [PyhtonPro](/tech/python_napredni.html){:target="_blank"}{:.heading.flip-title} --- Advanced level.
 {:.related-posts.faded}
+
+|                        **Zadaci**                          |                      **Rešenja**                        |
+|:----------------------------------------------------------:|:-------------------------------------------------------:|
+|   [ Z1-Zadaci ](python/z1-zadaci.html){:target="_blank"}   |   [ Z1-Rešenja ](python-z1-resenja){:target="_blank"}   |
+|   [ Z2-Zadaci ](python/z2-zadaci.html){:target="_blank"}   |   [ Z2-Rešenja ](python-z2-resenja){:target="_blank"}   |
+|   [ Z3-Zadaci ](python/z3-zadaci.html){:target="_blank"}   |   [ Z3-Rešenja ](python-z3-resenja){:target="_blank"}   |
+|   [ Z4-Zadaci ](python/z4-zadaci.html){:target="_blank"}   |   [ Z4-Rešenja ](python-z4-resenja){:target="_blank"}   |
+|   [ Z5-Zadaci ](python/z5-zadaci.html){:target="_blank"}   |   [ Z5-Rešenja ](python-z5-resenja){:target="_blank"}   |
+|   [ Z6-Zadaci ](python/z6-zadaci.html){:target="_blank"}   |   [ Z6-Rešenja ](python-z6-resenja){:target="_blank"}   |
+|   [ Z7-Zadaci ](python/z7-zadaci.html){:target="_blank"}   |   [ Z7-Rešenja ](python-z7-resenja){:target="_blank"}   |
+|   [ Z8-Zadaci ](python/z8-zadaci.html){:target="_blank"}   |   [ Z8-Rešenja ](python-z8-resenja){:target="_blank"}   |
+|   [ Z9-Zadaci ](python/z9-zadaci.html){:target="_blank"}   |   [ Z9-Rešenja ](python-z9-resenja){:target="_blank"}   |
+|  [ Z10-Zadaci ](python/z10-zadaci.html){:target="_blank"}  |  [ Z10-Rešenja ](python-z10-resenja){:target="_blank"}  |
+|  [ Z11-Zadaci ](python/z11-zadaci.html){:target="_blank"}  |  [ Z11-Rešenja ](python-z11-resenja){:target="_blank"}  |
+|  [ Z12-Zadaci ](python/z12-zadaci.html){:target="_blank"}  |  [ Z12-Rešenja ](python-z12-resenja){:target="_blank"}  |
 
 #### Python-Design-Patterns
 

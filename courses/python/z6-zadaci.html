@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>[Python training](/courses/#table-of-contents)</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../remarkslides.css">
+    
+
+
+
+    <!-- MathJax™ -->
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+    </script>
+
+    <!-- mermaid dijagram -->
+    <link rel="stylesheet2" href="../mermaid.min.css">
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127734928-1');
+    </script>
+
+
+    <!-- google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-127734928-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+## [Python training](/courses/#table-of-contents)
+### Z6-Zadaci
+
+
+.author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
+
+.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+
+
+
+.created[03.03.2019 u 15:54]
+
+
+---
+
+
+name: zadaci
+name: uvod 
+class: center, middle
+
+# Zadaci
+
+---
+layout: true
+
+.section[[Zadaci](#sadrzaj)]
+
+---
+
+## Uvod 
+
+- Hafmanovo kodovanje se primenjuje kao tehnika za kompresiju podataka i veoma je efikasno, tipične uštede su od 20% do 80% zavisno od karakteristike podataka koji se kompresuju. 
+- U našem primeru podaci su predstavljeni kao ulazni niz karaktera. 
+- Hafmanovo kodovanje umesto kodnih reči fiksne veličine koristi kodne reči promenljive veličine koje se nazivaju Hafmanovi kodovi. 
+- Hafmanovo kodovanje koristi informaciju o tome koliko često se svaki podatak na ulazu pojavljaje (frekvencija pojavljivanja) i na osnovu nje za svaki ulazni podatak bira optimalnu vrednost binarnog stringa.
+
+---
+
+## Uvod
+
+- Odgovarajući kodovani izlaz se dobija prostim spajanjem binarnih vrednosti ulaznih podataka. 
+- Primer je prikazan na slici Više na [https://en.wikipedia.org/wiki/Huffman_coding](https://en.wikipedia.org/wiki/Huffman_coding).
+
+
+![:scale 75%](img/z6/uvod.png)
+
+---
+## Zadatak 1 
+
+- Napisati funkciju `GetHistogram` koja na osnovu niza ulaznih podataka (karakteri) pravi histogram, tj. računa frekvenciju pojavljivanja određenog karaktera. 
+- Podatak modelovati kao objekat koji ima najmanje dva atributa, `value` i `freq`, koji predstavljaju sam karakter i frekvenciju pojavljivanja konkretnog karaktera, respektivno. 
+- Primeri ulaznih podataka dostupan je u `snippets.txt`.
+
+---
+
+## Zadatak 2
+
+- Na osnovu histograma formirati Hafmanovo stablo prema sledećoj proceduri:
+    - Svi elementi (karakteri) su listovi stabla.
+    - Dva elementa sa najmanjom verovatnoćom pojavljivanja formiraju novi čvor čiji su potomci ta konkretna dva elementa. Novi čvor ulazi u histogram umesto ta 2 elementa, sa verovatnoćom jednakom zbiru njihovih verovatnoća.
+    - Postupak se ponavlja dok se ne isprazni histogram, odnosno dok se ne formira kompletno stablo sa samo jednim elementom koji predstavlja koren.
+
+
+.attention[
+**Napomena: ** <br>Obezbediti funkcije `GetMinFreqElem`, `MakeNewElem`, `PutElem` i `RemoveElem`.
+]
+
+---
+
+## Zadatak 3 
+
+- Koristeći formirano Hafman stablo kodovati primere dostupne u snippets.txt. 
+- Hafmanov kod određenog karaktera formira se prostim spajanjem binarnih vrednosti (0 i 1) koje se nalaze na putanji do njegove pozicije u Hafman stablu. 
+- Za svaki primer napraviti posebnu funkciju koja ispisuje ulazni niz podataka i dobijeni kodovani izlaz (ceo ulazni niz podataka i ceo kodovani izlaz).
+Napomena: Obezbediti funkciju GetEncVal koja vraća kodovanu vrednost traženog
+karaktera.
+
+.attention[
+**Napomena: ** <br>Obezbediti funkciju GetEncVal koja vraća kodovanu vrednost traženog karaktera.
+]
+
+---
+
+## Ilustracija formiranja Hafman stabla
+
+![:scale 90%](img/z6/z3.png)
+
+- <a target="_blank" rel="noopener noreferrer" href="../python-z6-resenja"> ☛ `Rešenja`</a>
+
+
+
+
+
+    </textarea>
+    <script src="../remark-latest.min.js"></script>
+    <script>
+        // https://github.com/gnab/remark/issues/72
+        remark.macros.scale = function (percentage) {
+            var url = this;
+            return '<div class="center"><img src="'
+                 + url + '" style="width: ' + percentage + '" /></div>';
+        };
+        var slideshow = remark.create({
+                    highlightLanguage: 'python',
+                    // highlightStyle: 'obsidian',
+                    highlightStyle: 'github',
+                    highlightLines: true
+                });
+    </script>
+
+    <script src="../mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
+    
+  </body>
+</html>

@@ -272,6 +272,7 @@ exclude:
   - courses/high-performance-computing/*.md
   - courses/hpc-short-courses/*.md
   - courses/db/*.md
+  - courses/python/*.md
 include:
   - LICENSE.md
 

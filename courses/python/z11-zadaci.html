@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>[Python training](/courses/#table-of-contents)</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../remarkslides.css">
+    
+
+
+
+    <!-- MathJax™ -->
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+    </script>
+
+    <!-- mermaid dijagram -->
+    <link rel="stylesheet2" href="../mermaid.min.css">
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127734928-1');
+    </script>
+
+
+    <!-- google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-127734928-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+## [Python training](/courses/#table-of-contents)
+### Z11-Zadaci
+
+
+.author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
+
+.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+
+
+
+.created[03.03.2019 u 16:40]
+
+
+---
+
+
+name: zadaci
+name: uvod 
+class: center, middle
+
+# Zadaci
+
+---
+layout: true
+
+.section[[Zadaci](#)]
+
+---
+
+## Zadatak 1 
+
+- Napisati funkciju MakeGraph koja formira graf sa slike i vraća ga kao povratnu vrednost.
+`def MakeGraph() --> returns graph`
+
+![:scale 75%](img/z11/z1.png)
+
+---
+## Zadatak 2
+
+- Napisati funkciju *GetInDegrees* i *GetOutDegrees* koje računaju ulazne i izlazne stepene (rangove) svakog čvora u grafu. 
+- Povratna vrednost obe funkcije je lista stepena čvorova koji su raspoređeni u istom redosledu u kome se nalaze u ulaznom grafu. 
+- `def GetInDegrees(graph) --> returns List`
+- `def GetOutDegrees(graph) --> returns List`
+
+---
+## Zadatak 3
+
+- Napisati funkciju *ShortestPath* koja računa najkraću putanju u datom grafu između dva čvora koja se
+prosleđuju kao parametar. 
+Povratna vrednost je `par vrednosti (najkraća putanja, dužina)`. 
+Koristeći ovu funkciju izračunati najkraću putanju između čvorova A i G sa grafa sa slike iz zadatka (1).<br>
+`def ShortestPath(graph, nodeA, nodeB) --> returns (List, int)`
+
+---
+
+## Zadatak 4
+
+- Napisati funkciju *UpdateEdge* koja dodaje ivicu između dva čvora sa težinom koja se prosleđuje kao ulazni parametar.
+- Ukoliko ivica već postoji između ta dva čvora, ova funkcija menja težinu date ivice.<br>
+`def UpdateEdge(graph, nodeA, nodeB, weight) --> returns None`
+
+---
+## Zadatak 5
+
+- Modifikovati graf napravljen u zadatku (1) koristeći funkciju iz zadatka (4) `dodajući ivicu od čvora B do čvora C sa težinom w(B,C)=-4`
+- Napisati funkciju *NewShortestPath* koja računa najkraću putanju između čvorova A i G u ovom grafu. 
+- (Funkcija nema parametre, koristiti globalnu promenljivu koja predstavlja modifikovan graf dobijen kao deo ovog zadatka)<br>
+`def NewShortestPath() --> returns (List, int)`
+
+- <a target="_blank" rel="noopener noreferrer" href="../python-z11-resenja"> ☛ `Rešenja`</a>
+
+
+
+    </textarea>
+    <script src="../remark-latest.min.js"></script>
+    <script>
+        // https://github.com/gnab/remark/issues/72
+        remark.macros.scale = function (percentage) {
+            var url = this;
+            return '<div class="center"><img src="'
+                 + url + '" style="width: ' + percentage + '" /></div>';
+        };
+        var slideshow = remark.create({
+                    highlightLanguage: 'python',
+                    // highlightStyle: 'obsidian',
+                    highlightStyle: 'github',
+                    highlightLines: true
+                });
+    </script>
+
+    <script src="../mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
+    
+  </body>
+</html>
