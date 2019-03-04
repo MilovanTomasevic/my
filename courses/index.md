@@ -75,7 +75,7 @@ I wish you a lot of success during your learning.
 
 | __Design for Testability__ <br> __Patterns__ | [constructor_injection](python-design-patterns-constructor_injection){:target="_blank"} |[parameter_injection](python-design-patterns-parameter_injection){:target="_blank"} | [setter_injection](python-design-patterns-setter_injection){:target="_blank"}|
 |--------|------|
-| __Description__ | for those of you who would like to use final fields, wish to avoid numerous setters, or dislike private field injection and would like nothing more than to just use  | with parameter manipulation attacks, the attacker modifies the data sent between the client and Web application. This may be data sent using query strings, form fields, cookies, or in HTTP headers.  |the client provides the depended-on object to the SUT via the setter injection (implementation variant of dependency injection)  |
+| __Description__ <br>__Patterns__ | for those of you who would like to use final fields, wish to avoid numerous setters, or dislike private field injection and would like nothing more than to just use  | with parameter manipulation attacks, the attacker modifies the data sent between the client and Web application. This may be data sent using query strings, form fields, cookies, or in HTTP headers.  |the client provides the depended-on object to the SUT via the setter injection (implementation variant of dependency injection)  |
 {:.flip-table}
 
 
