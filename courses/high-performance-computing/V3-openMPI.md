@@ -74,6 +74,12 @@ mpiexec [-np <N>] <izvrsna_datoteka>
 ---
 
 ## Primer 1: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`hello_world.c`</a>
+
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
 ```c
 #include <stdio.h>
 #include "mpi.h"
@@ -92,6 +98,10 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 ```
+]
+]
+
+
 
 ---
 
@@ -149,16 +159,38 @@ int MPI_Comm_dup(MPI_Comm comm, MPI_Comm *newcomm)
 
 ## Zadatak 1: Komunikatori
 
-- Napraviti OpenMPI C program koji korišćenjem funkcije `MPI_Comm_split` na osnovu podrazumevanog pravi dva nova komunikatora. Procese podeliti u dva komunikatora na osnovu parnosti ranka unutar `MPI_COMM_WORLD` komunikatora. Pri tom relativni poredak procesa unutar komunikatora treba da bude isti kao i u podrazumevanom komunikatoru. Svaki proces na standardni izlaz treba da ispiše svoj rank unutar `MPI_COMM_WORLD` i novoformiranog komunikatora.
 
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
+- Napraviti OpenMPI C program koji korišćenjem funkcije `MPI_Comm_split` na osnovu podrazumevanog pravi dva nova komunikatora. Procese podeliti u dva komunikatora na osnovu parnosti ranka unutar `MPI_COMM_WORLD` komunikatora. Pri tom relativni poredak procesa unutar komunikatora treba da bude isti kao i u podrazumevanom komunikatoru. Svaki proces na standardni izlaz treba da ispiše svoj rank unutar `MPI_COMM_WORLD` i novoformiranog komunikatora.
+]
+]
+
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
 - Primer ispisa za jedan proces:
 ```console
 MPI_COMM_WORLD rank: 0/4 - ncomm rank: 0/2
 ```
-
-.attention[
-**Rešenje**: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Rešenja/`communicators.c`</a>
 ]
+]
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Rešenja/`communicators.c`</a>
+]
+]
+
 
 ---
 
@@ -241,7 +273,7 @@ int MPI_Send(
 
 ---
 
-## Primer 2: Point to Point komunikacija <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> ☛ Primeri/`send_recv.c`</a>
+## Primer 2: Point to Point komunikacija <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z3-openMPI/#table-of-contents"> <br>☛ Primeri/`send_recv.c`</a>
 
 ```c
 // ...
@@ -295,34 +327,72 @@ MPI_{I}[S, B, R]Send(...), MPI_{I}Recv(...)
 ---
 
 ## Zadatak 2: Ping pong
-- Napraviti OpenMPI program implementiran u C programskom jeziku koji simulira igranje ping ponga između dva procesa. Lopticu simulirati promenljivom tipa int. Uvećati ovu promenljivu svaki put kada neki od procesa udari lopticu, odnosno, pre nego što neki od procesa pošalje promenljivu drugom procesu i ispisati odgovarajuću poruku.
 
-Format očekivanog ispisa:
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
+- Napraviti OpenMPI program implementiran u C programskom jeziku koji simulira igranje ping ponga između dva procesa. Lopticu simulirati promenljivom tipa int. Uvećati ovu promenljivu svaki put kada neki od procesa udari lopticu, odnosno, pre nego što neki od procesa pošalje promenljivu drugom procesu i ispisati odgovarajuću poruku.
+]
+]
+
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
+- Format očekivanog ispisa:
 ```console
 p0 sent ping_pong_count to p1 and incremented it to 1.
 p1 received ping_pong_count 1 from p0.
 p1 sent ping_pong_count to p0 and incremented it to 2.
 ```
 
-.attention[
-**Napomene**: 
-Pretpostavka je da će program biti pozvan opcijom -np 2 i od ovoga se ne mora štititi.
+]
+]
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Napomene**: 
+Pretpostavka je da će program biti pozvan opcijom `-np 2` i od ovoga se ne mora štititi.
 Ne znači da program nije ispravan ukoliko ispis na ekranu nije u očekivanom redosledu.
+]
 ]
 
 ---
 
 
 ## Zadatak 3: Prsten
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Napisati OpenMPI C program koji prosleđuje žeton između procesa po principu prstena. Žeton je predstavljen brojem -1 i poseduje ga proces ranga 0. Svi procesi osim poslednjeg šalju žeton procesu sa rangom za jedan veći od svog. Poslednji proces (proces sa najvećim rangom u komunikatoru) žeton prosleđuje nazad procesu ranga 0. Nakon što proces ranga 0 primi žeton, program se završava. Ispisati poruku na standardni izlaz svaki put kada neki od procesa primi žeton.
 
-Format očekivanog ispisa:
+]
+]
+
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
+- Format očekivanog ispisa:
 ```console
 Process 1 received token -1 from process 0
 Process 2 received token -1 from process 1
 Process 3 received token -1 from process 2
 Process 0 received token -1 from process 3
 ```
+]
+]
 
 ---
 
@@ -397,36 +467,75 @@ int main(int argc, char *argv[]) {
 ---
 
 ## Zadatak 4: Broadcast
+
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Napisati OpenMPI C implementaciju `MPI_Bcast` funkcije korišćenjem `MPI_Send` i `MPI_Recv` funkcija. Rank procesa koji emituje vrednost žetona se unosi kao argument poziva programa. Vrednost žetona koji se emituje je -1. Nakon što root proces (proces koji emituje vrednost žetona) pošalje žeton ispisati poruku o tome.
 - Nakon što svaki od preostalih procesa primi žeton, ispisati poruku i vrednost primljenog žetona.
 
-Format očekivanog ispisa:
+]
+]
+
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
+- Format očekivanog ispisa:
 ```console
 Proces 0 poslao zeton -1
 Proces 1 primio zeton -1
 Proces 2 primio zeton -1
 Proces 3 primio zeton -1
 ```
+]
+]
 
 ---
 
 
 ## Zadatak 5: Kolektivna komunikacija nad podskupom komunikatora
 
+
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - U kolektivnoj komunikaciji učestvuju svi procesi unutar komunikatora. Međutim, pri prešavanju kompleksnijih problema može se pojaviti potreba da se neki podatak pošalje samo delu procesa komunikatora. Ustanovili smo da korišćenje metoda kolektivne komunikacije može biti efikasnije u odnosu na pojedinačno pozivanje `MPI_Send` i `MPI_Recv` za svaki od procesa u komunikatoru kojima treba proslediti podatak. 
 - Kako biste podatak poslali samo delu procesa u nekom komunikatoru korišćenjem kolektivne komunikacije?
+]
+]
 
 ---
 
 
 ## Zadatak 6: Kolektivna komunikacija nad podskupom komunikatora
 
-- U kolektivnoj komunikaciji učestvuju svi procesi unutar komunikatora. Međutim, pri prešavanju kompleksnijih problema može se pojaviti potreba da se neki podatak pošalje samo delu procesa komunikatora. Ustanovili smo da korišćenje metoda kolektivne komunikacije može biti efikasnije u odnosu na pojedinačno pozivanje `MPI_Send` i `MPI_Recv` za svaki od procesa u komunikatoru kojima treba proslediti podatak.
-- Kako biste podatak poslali samo delu procesa u nekom komunikatoru korišćenjem kolektivne komunikacije?
-
-.attention[
-**Odgovor**: Napraviti novi komunikator za procese kojima treba poslati podataka i koristiti kolektivnu komunikaciju na nivou novonapravljenog komunikatora.
+.message.is-info[
+.message-header[
+Zadatak
 ]
+.message-body[
+- U kolektivnoj komunikaciji učestvuju svi procesi unutar komunikatora. Međutim, pri prešavanju kompleksnijih problema može se pojaviti potreba da se neki podatak pošalje samo delu procesa komunikatora. Ustanovili smo da korišćenje metoda kolektivne komunikacije može biti efikasnije u odnosu na pojedinačno pozivanje `MPI_Send` i `MPI_Recv` za svaki od procesa u komunikatoru kojima treba proslediti podatak. 
+- Kako biste podatak poslali samo delu procesa u nekom komunikatoru korišćenjem kolektivne komunikacije?
+]
+]
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Napraviti novi komunikator za procese kojima treba poslati podataka i koristiti kolektivnu komunikaciju na nivou novonapravljenog komunikatora.
+]
+]
+
 
 ---
 
@@ -549,11 +658,19 @@ int main(int argc, char *argv[]) {
 ---
 
 ## Zadatak 7: Računanje srednje vrednosti
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Napraviti OpenMPI C program koji računa srednju vrednost elemenata niza u više procesa korišćenjem funkcija `MPI_Scatter` i `MPI_Gather`. Program napisati tako da:
 	- Korenski proces inicijalizuje niz dužine n nasumično izgenerisanim celim brojevima. Dužina niza mora biti deljiva brojem pokrenutih procesa.
 	- Razdeliti izgenerisani niz na jednake delove između svih procesa.
 	- Svaki proces treba da izračuna sumu elemenata niza koji su mu prosleđeni.
 	- Nakon što su sve parcijalne sume sračunate, prebacuju se nazad korenskom procesu koji od parcijalnih suma pravi konačnu sumu koju deli ukupnim brojem elemenata i ispisuje srednju vrednost niza.
+]
+]
 
 ---
 
@@ -667,7 +784,14 @@ int main(int argc, char *argv[]) {
 
 ## Zadatak 8: Računanje srednje vrednosti 2
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Modifikovati zadatak koji računa srednju vrednost elemenata niza tako da se u odgovarajućem koraku koristi funkcija `MPI_Reduce`.
+]
+]
 
 ---
 
@@ -724,10 +848,18 @@ int main(int argc, char *argv[]) {
 ---
 
 ## Zadatak 9: Množenje matrice i vektora - domaći
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Napisati OpenMPI C program za množenje kvadratne matrice i vektora. Ulazna matrica i vektor sadrže razlomljene brojeve u jednostrukoj preciznosti i podrazumeva se da će dimenzije matrice i vektora biti odgovarajuće. Ulazni podaci za zadatak su izgenerisani i dati u h5 formatu. Takođe, dat je kostur rešenja sa primerima kako učitati matricu/vektor iz h5 datoteke i ispisati ih na standardni izlaz (direktorijum MatrixVectorMultiplication). Za detalje oko kompajliranja i pokretanja rešenja pogledati README.md datoteku.
 - Implementirati:
   - Sekvencijalni algoritam za množenje matrice i vektora. Meriti vreme izvršavanja i ispisati ga na standardni izlaz.
-  - OpenMPI C algoritam za množenje matrice i vektora. Meriti vreme izvršavanja i ispisati ga na standardni izlaz. Ostaviti mogućnost da se na standardni izlaz ispiše i rezultat računanja.
+  - OpenMPI C algoritam za množenje matrice i vektora. Meriti vreme izvršavanja i ispisati ga na standardni izlaz. Ostaviti mogućnost da se na standardni izlaz ispiše i rezultat računanja
+]
+]
 
 ---
 

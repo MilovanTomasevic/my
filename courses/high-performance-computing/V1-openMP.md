@@ -107,6 +107,12 @@ strukturirani-blok
 
 ## Hello World!
 
+.medium[
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
 ```c
     #include <stdio.h> 
     #include <omp.h>
@@ -135,6 +141,10 @@ strukturirani-blok
     Hello(5) world!(5)
     Hello(6) world!(6)
 ```
+]
+]
+]
+
 
 ---
 
@@ -198,6 +208,11 @@ strukturirani-blok
 
 ## Zadatak 1: Računanje vrednosti broja π
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Korišćenjem samo parallel konstrukcije, paralelizovati program koji računa vrednost integrala
 
 <p>
@@ -210,10 +225,21 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
 - Sekvencijalna implementacija programa u C programskom jeziku je data u direktorijumu zadaci. Rezultat integraljenja bi trebalo da bude jednak broju π. Potrebno je dodati parallel konstrukciju bez daljih modifikacija sekvencijalnog programa.
 
 - Šta se dešava sa rezultatom?
-
-.attention[
-**Primer rešenja**: <br>Funkcija `parallel_code_incorrect` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Funkcija `parallel_code_incorrect` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
+]
+]
+
+
+
 
 ---
 
@@ -238,11 +264,25 @@ zauzima na hipu, kome pristupaju sve niti.
 
 ## Zadatak 2: Računanje vrednosti broja π
 
-- Modifikovati rešenje prethodnog zadatka tako da se ukloni štetno preplitanje.
-- 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 
-.attention[
-**Primer rešenja**: <br>Funkcija `parallel_code` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
+- Modifikovati rešenje prethodnog zadatka tako da se ukloni štetno preplitanje.
+
+]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Funkcija `parallel_code` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
+]
 ]
 
 
@@ -250,15 +290,36 @@ zauzima na hipu, kome pristupaju sve niti.
 
 ## Zadatak 3*: Računanje vrednosti broja π
 
-
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Paralelno rešenje zadatka 2 eliminiše problem štetnog preplitanja, ali uvodi problem lažnog deljenja (eng. *false sharing*) pri pristupu nizovnoj promenljivoj `sum`.
 - Izmeniti rešenje tako se otkloni lažno deljenje.
-.attention[
-**Napomena**: Razmisliti o tome koliko se elemenata niza prenosi u keš procesora kada se pristupa jednom elementu.
 ]
-.attention[
-**Primer rešenja**: <br>Funkcija `parallel_code_no_false_sharing` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- Razmisliti o tome koliko se elemenata niza prenosi u keš procesora kada se pristupa jednom elementu.
+]
+]
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Funkcija `parallel_code_no_false_sharing` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
+]
+]
+
+
+
 
 ---
 
@@ -282,13 +343,28 @@ zauzima na hipu, kome pristupaju sve niti.
 
 ---
 
-## Zadatak 4: Računanje vrednosti broja pi
+## Zadatak 4: Računanje vrednosti broja pi
 
-- Doraditi rešenje zadatka 2 tako da se štetno preplitanje ukloni odgovarajućim sinhronizacionim mehanizmom.
-
-.attention[
-  **Primer rešenja**: <br>Funkcija  `parallel_code_synchronization` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
+.message.is-info[
+.message-header[
+Zadatak
 ]
+.message-body[
+- Doraditi rešenje zadatka 2 tako da se štetno preplitanje ukloni odgovarajućim sinhronizacionim mehanizmom.
+]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Funkcija  `parallel_code_synchronization` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
+]
+]
+
+
 
 ---
 
@@ -344,6 +420,12 @@ layout: true
 
 ## Primer 2: `loop` konstrukcija
 
+
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
 - Primer upotrebe `for` direktive
 ```c
 #pragma omp parallel
@@ -364,6 +446,10 @@ layout: true
             sum += A[i];
     }
 ```
+]
+]
+
+
 ---
 
 ## loop konstrukcija: raspoređivanje
@@ -459,6 +545,11 @@ layout: true
 ---
 ## Redukcije
 
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 1. Za svaku nit u paralelnom regionu napravi po jednu privatnu
 instancu promenljive `sum` i inicijalizuj je na vrednost neutralnu
 za navedeni redukcioni operator (u slučaju sabiranja je to 0).
@@ -467,6 +558,10 @@ za navedeni redukcioni operator (u slučaju sabiranja je to 0).
 
 3. Na kraju petlje, rezultati se kombinuju upotrebom redukcionog
 operatora u deljenu promenljivu `sum.`
+
+]
+]
+
 
 ---
 
@@ -497,12 +592,27 @@ reduction(redukcioni_operator : lista_promenljivih)
 ---
 ## Zadatak 5: Računanje vrednosti broja pi
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Implementirati paralelno rešenje računanja vrednosti broja pi uz
 korišćenje `for`  direktive i reduction klauze.
-
-.attention[
-**Primer rešenja**: <br>Funkcija `parallel_code_for_construct` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Funkcija `parallel_code_for_construct` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
+]
+]
+
+
 
 ---
 
@@ -527,6 +637,11 @@ layout: true
 ---
 ## Implicitna vs. eksplicitna barijera 
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - U kojem delu koda će se niti sinhronizovati?
 ```c
 	#pragma omp parallel
@@ -536,39 +651,49 @@ layout: true
 			/* drugi blok naredbi */
     }
 ```
+]
+]
+
+
 
 ---
 
 ## Implicitna vs. eksplicitna barijera 
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - U kojem delu koda će se niti sinhronizovati?
 ```c
 	#pragma omp parallel
-    {
+	{
 			/* prvi blok naredbi */
 			#pragma omp barrier
 			/* drugi blok naredbi */
     }
 ```
-.attention[
-**Odgovor**: Na barrier direktivi (eksplicitna barijerna sinhronizacija).
 ]
+]
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Na barrier direktivi (eksplicitna barijerna sinhronizacija).
+]
+]
+
 
 ---
 ## Implicitna vs. eksplicitna barijera
 
-- U kojem delu koda će se niti sinhronizovati?
-
-```c
-	#pragma omp parallel for
-	for (i = 0; i < N; i++)
-		/* prvi blok naredbi */
-    /* drugi blok naredbi */
-``` 
-
----
-## Implicitna vs. eksplicitna barijera 
-
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - U kojem delu koda će se niti sinhronizovati?
 ```c
 	#pragma omp parallel for
@@ -576,24 +701,46 @@ layout: true
 		/* prvi blok naredbi */
 	/* drugi blok naredbi */
 ```
-.attention[
-**Odgovor**:  Na kraju prvog bloka naredbi. Sve niti moraju da završe svoje iteracije petlje da bi mogle da nastave sa drugim blokom naredbi, jer podrazumevano `loop` konstrukcija ima ugrađenu implicitnu barijeru.
+]
 ]
 
 ---
 ## Implicitna vs. eksplicitna barijera 
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - U kojem delu koda će se niti sinhronizovati?
-```c 
-	#pragma omp parallel for nowait
+```c
+	#pragma omp parallel for
 	for (i = 0; i < N; i++)
 		/* prvi blok naredbi */
 	/* drugi blok naredbi */
 ```
+]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Na kraju prvog bloka naredbi. Sve niti moraju da završe svoje iteracije petlje da bi mogle da nastave sa drugim blokom naredbi, jer podrazumevano `loop` konstrukcija ima ugrađenu implicitnu barijeru.
+]
+]
+
 
 ---
 ## Implicitna vs. eksplicitna barijera 
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - U kojem delu koda će se niti sinhronizovati?
 ```c
 	#pragma omp parallel for nowait
@@ -601,9 +748,38 @@ layout: true
 		/* prvi blok naredbi */
     /* drugi blok naredbi */
 ``` 
-.attention[
-**Odgovor**: Na kraju paralelnog regiona. Implicitna barijera loop konstrukcije je onemogućena upotrebom `nowait` klauze.
 ]
+]
+
+---
+## Implicitna vs. eksplicitna barijera 
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
+- U kojem delu koda će se niti sinhronizovati?
+```c
+	#pragma omp parallel for nowait
+	for (i = 0; i < N; i++)
+		/* prvi blok naredbi */
+    /* drugi blok naredbi */
+``` 
+]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Na kraju paralelnog regiona. Implicitna barijera loop konstrukcije je onemogućena upotrebom `nowait` klauze.
+]
+]
+
+
 
 ---
 name: ss 
@@ -637,6 +813,11 @@ layout: true
 ---
 ## Primer 3: sections/section konstrukcija
 
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
 ```c
 	#pragma omp parallel
 	{
@@ -651,6 +832,10 @@ layout: true
 		}
 	}
 ```
+]
+]
+
+
 
 ---
 ## single konstrukcija
@@ -751,21 +936,11 @@ strukturirani-blok
 ---
 ## Primer 5: Klauze za rad sa podacima
 
-```c
-	void dummy() {
-		int tmp = 0;
-		#pragma omp parallel for private(tmp)
-		for (int j = 0; j < 5; j++)
-			tmp += j;
-		printf("%d\n", tmp);
-}
-```
-- Koja vrednost će biti ispisana na standardni izlaz?
-
-
----
-## Primer 5: Klauze za rad sa podacima
-
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 ```c
 	void dummy() {
 		int tmp = 0;
@@ -776,33 +951,54 @@ strukturirani-blok
 	}
 ```
 - Koja vrednost će biti ispisana na standardni izlaz?
-
-.attention[
-**Odgovor**: Na standardni izlaz će biti ispisana vrednost 0.
 ]
-
-.attention[
-**Objašnjenje**:  Kako je promenljiva tmp proglašena privatnom, svaka nit će imati svoju instancu ove promenljive. Po završetku petlje, lokalne promenljive će biti uništene, a deljena promenljiva `tmp` će zadržati svoj u inicijalnu vrednost.
 ]
-
 
 ---
 ## Primer 5: Klauze za rad sa podacima
 
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 ```c
 	void dummy() {
 		int tmp = 0;
-		#pragma omp parallel for private(tmp)
-		for (int j = 0; j < 5; j++)
-			tmp += j;
-		printf("%d\n", tmp);
+	#pragma omp parallel for private(tmp)
+	for (int j = 0; j < 5; j++)
+		tmp += j;
+	printf("%d\n", tmp);
 	}
 ```
-- Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
+- Koja vrednost će biti ispisana na standardni izlaz?
+]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+
+- Na standardni izlaz će biti ispisana vrednost 0.
+- **Objašnjenje**:  <br> Kako je promenljiva tmp proglašena privatnom, svaka nit će imati svoju instancu ove promenljive. Po završetku petlje, lokalne promenljive će biti uništene, a deljena promenljiva `tmp` će zadržati svoj u inicijalnu vrednost.
+
+]
+]
+
+
 
 ---
 ## Primer 5: Klauze za rad sa podacima
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 ```c
 	void dummy() {
 		int tmp = 0;
@@ -813,33 +1009,53 @@ strukturirani-blok
 }
 ```
 - Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
-
-.attention[
-**Odgovor**: Inicijalna vrednost privatnih promenljivih tmp je nepoznata.
 ]
-
-.attention[
-**Objašnjenje**:  Klauza private`(tmp)` kaže kompajleru da treba da alocira prostor za promenljivu tmp na steku. Kompajler ne mora inicijalizovati zauzetu lokaciju.
 ]
 
 ---
 ## Primer 5: Klauze za rad sa podacima
 
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 ```c
 	void dummy() {
 		int tmp = 0;
 		#pragma omp parallel for private(tmp)
 		for (int j = 0; j < 5; j++)
 				tmp += j;
-		printf("%d\n", tmp);
-	}
+			printf("%d\n", tmp);
+}
 ```
-- Kojom klauzom je potrebno zameniti private klauzu da bi lokalne  instance promenljive `tmp` dobile inicijalnu vrednost globalne promenljive `tmp`?
+- Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
+]
+]
 
----
 
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- Inicijalna vrednost privatnih promenljivih tmp je nepoznata.
+- **Objašnjenje**:  <br>Klauza private`(tmp)` kaže kompajleru da treba da alocira prostor za promenljivu tmp na steku. Kompajler ne mora inicijalizovati zauzetu lokaciju.
+]
+]
+
+
+
+
+---
 ## Primer 5: Klauze za rad sa podacima
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 ```c
 	void dummy() {
 		int tmp = 0;
@@ -852,23 +1068,66 @@ strukturirani-blok
 - Kojom klauzom je potrebno zameniti private klauzu da bi lokalne
 instance promenljive tmp dobile inicijalnu vrednost globalne
 promenljive `tmp`?
-
-.attention[
-**Odgovor**: `firstprivate`
+]
 ]
 
 ---
 
-## Zadatak 6: Mandelbrotov set
+## Primer 5: Klauze za rad sa podacima
 
-- Data je datoteka `mandelbrot.c.` Datoteka sadrži paralelno OpenMP
-rešenje koje određuje Mandelbrotov set. 
-- Rešenje ima par problema
-vezanih za korišćenje klauza za rad sa podacima i poneko štetno
-preplitanje. Pronađite i ispravite greške.
 
-.attention[
-**Rešenje**: <br> <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`mandelbrot.c`</a>
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
+```c
+	void dummy() {
+		int tmp = 0;
+		#pragma omp parallel for private(tmp)
+		for (int j = 0; j < 5; j++)
+			tmp += j;
+		printf("%d\n", tmp);
+	}
+```
+- Kojom klauzom je potrebno zameniti private klauzu da bi lokalne
+instance promenljive tmp dobile inicijalnu vrednost globalne
+promenljive `tmp`?
+]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- `firstprivate`
+]
+]
+
+---
+
+## Zadatak 6: Mandelbrotov set
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
+- Data je datoteka `mandelbrot.c.` Datoteka sadrži paralelno OpenMP rešenje koje određuje Mandelbrotov set. 
+- Rešenje ima par problema vezanih za korišćenje klauza za rad sa podacima i poneko štetno preplitanje. Pronađite i ispravite greške.
+]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`mandelbrot.c`</a>
+]
 ]
 
 ---
@@ -879,9 +1138,13 @@ preplitanje. Pronađite i ispravite greške.
 probleme za koje se unapred zna broj potrebnih iteracija za njihovo
 rešavanje!
 
-.attention[
-**Problem!**  
-Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj iteracija? Ili u slučaju rekurzije?
+.message.is-danger[
+.message-header[
+Problem
+]
+.message-body[ 
+- Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj iteracija? Ili u slučaju rekurzije?
+]
 ]
 
 ---
@@ -891,14 +1154,26 @@ Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj i
 probleme za koje se unapred zna broj potrebnih iteracija za njihovo
 rešavanje!
 
-.attention[
-**Problem!**  
-Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj iteracija? Ili u slučaju rekurzije?
+.message.is-danger[
+.message-header[
+Problem
+]
+.message-body[ 
+- Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj iteracija? Ili u slučaju rekurzije?
+]
 ]
 
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - Opcije:
 	- Problem transformisati u formu `for` petlje ako je to moguće
 	- Koristiti `task` konstrukciju (od OpenMP 3.0)
+]
+]
+
 
 ---
 ## Primer 6: Paralelizacija obrade čvorova liste
@@ -956,6 +1231,12 @@ strukturirani-blok
 ---
 ## Primer 7: Kreiranje zadataka
 
+
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
 - `task i single` konstrukcije se često koriste zajedno:
 	- jedna nit pravi zadatke koji se uvezuju u red zadataka odakle sve niti mogu da uzimaju zadatke.
 
@@ -971,17 +1252,33 @@ strukturirani-blok
 		}
 	}
 ```
+]
+]
 
 ---
 ## Zadatak 7: Modifikacija liste
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Data je sekvencijalna implementacija liste `(linked.c)` u kojoj svaki element sadrži po jedan Fibonačijev broj dobijen funkcijom `processwork`. 
 - Napraviti OpenMP paralelni program korišćenjem `task` konstrukcije.
-
-.attention[
-**Rešenje**: <br> <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`linkedlist.c`</a>
-
 ]
+]
+
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
+- <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`linkedlist.c`</a>
+]
+]
+
+
 
 ---
 ## Konstrukti za sinhronizaciju izvršavanja zadataka
@@ -1043,47 +1340,85 @@ strukturirani-blok
 
 ## Zadatak 8*: Množenje matrice i vektora
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Implementirati sekvencijalni program za množenje nekvadratne matrice i vektora u C programskom jeziku.
 
 - Nakon što se uverite da program daje očekivane rezultate, implementirani OpenMP paralelni algoritam na osnovu sekvencijalnog programa.
+]
+]
 
-.attention[
-    **Napomene**: Svaka od dimenzija matrice treba da bude makar 1000. Za potrebe testiranja programa dimenzije matrice mogu da budu i manje.
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Napomene**: Svaka od dimenzija matrice treba da bude makar 1000. Za potrebe testiranja programa dimenzije matrice mogu da budu i manje.
     Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
 ]
+]
+
 
 ---
 
+## Zadatak 9*: Množenje matrica - domaći
 
-## Zadatak 9*: Množenje matrica - domaći
-
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Implementirati sekvencijalni program za množenje dve nekvadratne
 matrice u C programskom jeziku.
 
 - Nakon što se uverite da program daje očekivane rezultate,
 implementirati OpenMP paralelni program na osnovu
 sekvencijalnog programa.
+]
+]
 
-.attention[
-    **Napomene**: Korektan sekvencijalni program testirati na velikim matricama (oko 1000 po dimenziji, modifikovati zavisno od karakteristika računara na kojem radite zadatak). 
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Napomene**: Korektan sekvencijalni program testirati na velikim matricama (oko 1000 po dimenziji, modifikovati zavisno od karakteristika računara na kojem radite zadatak). 
     Za potrebe testiranja, dimenzije matrica mogu da budu i manje.
     Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
+]
 ]
 
 ---
 
 ## Zadatak 10*: Akumuliranje vrednosti čvorova stabla
 
+
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Napraviti sekvencijalnu implementaciju stabla u C programskom jeziku. 
 - Svaki čvor stabla sadrži jedan razlomljeni broj u jednostrukoj preciznosti. 
 - Potrebno je implementirati minimalni skup funkcionalnosti (kreiranje stabla, sabiranje vrednosti čvorova stabla i uništavanje stabla).
 
- - Nakon što se uverite da program daje očekivane rezultate implementirati OpenMP paralelni program na osnovu sekvencijalnog programa.
+ - Nakon što se uverite da program daje očekivane rezultate implementirati OpenMP paralelni program na osnovu sekvencijalnog programa
+]
+]
 
-.attention[
-    **Napomene**:
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Napomene**:
 Paralelni program implementirati korišćenjem task konstrukcije.
 Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
+]
 ]
 
 ---

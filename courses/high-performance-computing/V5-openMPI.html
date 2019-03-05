@@ -7,10 +7,15 @@
     
 
 
+
     <!-- MathJax™ -->
     <script type="text/javascript" async
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
     </script>
+
+    <!-- mermaid dijagram -->
+    <link rel="stylesheet2" href="../mermaid.min.css">
+    <script>mermaid.initialize({startOnLoad:true});</script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
@@ -48,7 +53,7 @@ class: center, middle
 
 
 
-.created[16.02.2019 u 12:19]
+.created[05.03.2019 u 15:37]
 
 
 ---
@@ -255,6 +260,11 @@ layout: true
 
 ## Zadatak 1: Računanje broja π
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Implementirati čisto OpenMPI i hibridno OpenMP-OpenMPI rešenje za računanje broja π računanjem vrednosti integrala
 
 <p>
@@ -267,37 +277,60 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
 	- Porediti vreme izvršavanja hibridnog rešenja sa vremenom izvršavanja OpenMP ubrzanog rešenja.
 	- Meriti vreme izvršavanja hibridnog rešenja za različite kombinacije broja OpenMPI procesa i OpenMP niti.
 
-.attention[
-**Preporuka**: Implementirati OpenMPI verziju programa na osnovu sekvencijalnog rešenja, pa je proširiti OpenMP direktivama.
 ]
+]
+
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Preporuka**: Implementirati OpenMPI verziju programa na osnovu sekvencijalnog rešenja, pa je proširiti OpenMP direktivama.
+]
+]
+
 
 
 ---
 
 ## Zadatak 2: Pretraga niza brojeva
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Implementirati sekvencijalno i hibridno OpenMPI-OpenMP rešenje za pretragu niza celih brojeva minimalne dužine milion elemenata.
 - Elemente niza generisati nasumično iz intervala [-100, 100].
 	- Meriti vreme izvršavanja hibridnog rešenja za različite kombinacije broja OpenMPI procesa i OpenMP niti.
 	- Opciono implementirati čisto OpenMPI i čisto OpenMP rešenje i porediti performanse ovih rešenja porediti sa performnsama hibridnog rešenja
+]
+]
 
-.attention[
-**Preporuka**: Implementirati OpenMPI verziju programa na osnovu sekvencijalnog rešenja, pa je proširiti OpenMP direktivama.
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Preporuka**: Implementirati OpenMPI verziju programa na osnovu sekvencijalnog rešenja, pa je proširiti OpenMP direktivama.
+]
 ]
 
 ---
 
 ## Zadatak 3: Množenje matrica - domaći
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Implementirati hibridno OpenMP-OpenMPI rešenje u C programskom jeziku za množenje dve kvadratne matrice na osnovu OpenMPI i OpenMP rešenja zadataka sa prethodnih vežbi.
 - Pretpostaviti da jedan MPI proces distribuira delove matrice preostalim procesima. Kostur rešenja koji je potrebno popuniti se nalazi <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ Zadaci/`MatrixMultiplicationHybrid`</a> .
 	- Rezultujuću matricu sačuvati u h5 formatu u datoteci pod nazivom result<nxn>.h5, gde se <nxn> menja dimenzijama matrice koja predstavlja rešenje.
 	- Meriti vreme izvršavanja hibridnog, OpenMP i OpenMPI rešenja i zabeležiti ih u priloženu datoteku <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ input_data/`statistika.csv`</a>.
-
----
-
-## Zadatak 3: Množenje matrica - domaći
-
 - Meriti vreme izvršavanja hibridnog rešenja za različite kombinacije broja MPI procesa i OpenMP niti. U slučaju da se rešenje isprobava na računaru sa soketom i više jezgara, probati sledeće kombinacije:
 	- Po jedan MPI proces za svako logičko jezgro
 	- Po jedan MPI proces za svako fizičko jezgro i po jedna nit za svako logičko jezgro.
@@ -306,6 +339,8 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
 - Po želji dodati još različitih konfiguracija i rezultate upisati u statistika.csv. Analizirati dobijene rezultate.
 - Pri analizi performansi rešenja može pomoći poglavlje 11 knjige "Introduction to high performance computing for Scientists and Engineers."
 
+]
+]
 
 ---
 
@@ -337,6 +372,10 @@ layout: false
                     highlightLines: true
                 });
     </script>
+
+    <script src="../mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
     
   </body>
 </html>

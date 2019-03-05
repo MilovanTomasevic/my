@@ -5,7 +5,7 @@ name: content
 
 # Content
 
-### MPI topics:
+### MPI topics: 
 
 - [Goal](#goal)
 - [MPI execution model](#mpi)
@@ -139,6 +139,11 @@ layout: true
 ---
 ## Exercise: 
 
+.message.is-info[
+.message-header[
+Exercise
+]
+.message-body[
 - Compile & run <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_hello_world.c`</a> 
 
 - Compile:
@@ -151,6 +156,8 @@ mpicc mpi_hello_world.c –o mpi_hello_world
 mpirun –np 4 mpi_hello_world
 ```
 
+]
+]
 
 ---
 ## Exercise: compile & run mpi_hello_world.c
@@ -165,7 +172,7 @@ Hello world from 0
 ```
 - Why does each process print a different number?
 
-![:scale 75%](img/mpi7.png)
+![:scale 70%](img/mpi7.png)
 
 
 ---
@@ -302,11 +309,19 @@ layout: true
 ---
 ## Exercise: point to point
 
+.message.is-info[
+.message-header[
+Exercise
+]
+.message-body[
 - In this exercise, we try to send the variable ‘10’ from rank 0 to rank 1
 	- Inspect <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pnt2pnt.c`</a> 
 	- Specify the correct destination (XX)
 	- Specify a correct source (YY)
 	- Specify a correct tag (AA, BB). Should the tags be the same, or different?
+]
+]
+
 
 ---
 ## Communication: point to point
@@ -334,23 +349,45 @@ layout: true
 ---
 ## Exercise: fix the deadlock
 
+.message.is-info[
+.message-header[
+Exercise
+]
+.message-body[
+
 - Fix the deadlock in <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ `mpi_pingpong.c`</a> 
 
-.attention[
-**Hint**: think about the order of `MPI_Send/MPI_Recv` for each rank.
+![:scale 80%](img/mpi22.png)
+]
 ]
 
-![:scale 80%](img/mpi22.png)
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Hint**: think about the order of `MPI_Send/MPI_Recv` for each rank.
+]
+]
+
+
  
 ---
 
 ## Exercise: fix the deadlock
 
-.attention[
-**Solution**: reverse `MPI_Send` & `MPI_Recv` for one of the ranks
+
+.message.is-success[
+.message-header[
+Solution
 ]
+.message-body[
+- **Solution**: reverse `MPI_Send` & `MPI_Recv` for one of the ranks
 
 ![:scale 80%](img/mpi23.png)
+]
+]
+
 
 ---
 ## Communication: point to point
@@ -388,23 +425,37 @@ MPI_Wait(&request, &status)
 ---
 ## Exercise: non-blocking communication
 
-- Beginner:
+.message.is-info[
+.message-header[
+Exercise
+]
+.message-body[
+- **Beginner**:
 	- Compile and run <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ solutions/`mpi_pingpong.c`</a>
 	- Compare the timing with the timing of mpi_pingpong
 	- Which is faster? Can you understand why?
-- Advanced:
+- **Advanced**:
 	- Adept <a target="_blank" rel="noopener noreferrer" href="/courses/mpi-training/#table-of-contents"> ☛ exercises/`mpi_pingpong.c`</a> to use `MPI_Isend` and/or `MPI_Irecv`
 	- Don’t forget to include an `MPI_Wait`
 	- Compare the timing with the timing of `mpi_pingpong`
 	- Which is faster? Can you understand why?
+]
+]
 
 ---
 ## Exercise: non-blocking communication
 
-.attention[
-**Answer**:
+.message.is-success[
+.message-header[
+Solution
+]
+.message-body[
+- **Answer**:
 <br>The non-blocking routine is faster. <br>Communication from rank 1 → 0 can already start before communication from rank 0 → 1 is finished.
 ]
+]
+
+
 
 ---
 layout: false
@@ -537,6 +588,7 @@ layout:false
 name: end
 class: center, middle
 
+# That's All 👨🏻‍🎓
 # Thank you for listening!
 
 

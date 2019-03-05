@@ -121,22 +121,28 @@ layout: true
 
 ## Let’s try! Compile & run using
 
+.message.is-info[
+.message-header[
+Exercise
+]
+.message-body[
 - <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_threadnum.c`</a>
 ```console
 gcc -o omp_threadnum omp_threadnum.c -fopenmp
 ./omp_threadnum
 ```
 
-![:scale 85%](img/openmpe3.png)
+![:scale 70%](img/openmpe3.png)
 
 - Result:
 ```sh
 mt@mt:~/OpenMP/exercises$ ./omp_threadnum 
 Hello World from thread = 0
 ```
+]
+]
 
 - Only one thread! For now...
-
 
 ---
 
@@ -159,7 +165,7 @@ layout: true
 	#pragma omp directive-name
 ```
 
-- For example, the ‘parallel’ directive can be used to create threads, and execute the following code section in parallel
+- For example, the `parallel` directive can be used to create threads, and execute the following code section in parallel
 
 ```c
 	#pragma omp parallel
@@ -171,7 +177,12 @@ layout: true
 ---
 ## Exercise: OpenMP parallel “Hello world”
 
-- Edit omp_hello.c to put the ‘printf’ in a parallel section:
+.message.is-info[
+.message-header[
+Exercise
+]
+.message-body[
+- Edit `omp_hello.c` to put the `printf` in a parallel section:
 
 ```c
 #pragma omp parallel
@@ -185,18 +196,24 @@ layout: true
 gcc -o omp_hello omp_hello.c -fopenmp
 ./omp_hello
 ```
+]
+]
+
+
 
 ---
 ## Exercise: OpenMP parallel “Hello world”
 
-- Solution:
 
-![:scale 70%](img/openmpe5.png)
-
----
-## Exercise: OpenMP parallel “Hello world”
+.message.is-success[
+.message-header[
+Solution
+]
+.message-body[
+![:scale 55%](img/openmpe5.png)
 
 - Result:
+.medium[
 ```sh
 mt@mt:~/OpenMP/solutions$ gcc -o omp_hello omp_hello.c -fopenmp
 mt@mt:~/OpenMP/solutions$ ./omp_hello 
@@ -209,8 +226,10 @@ Hello World from thread = 2
 Hello World from thread = 1
 Hello World from thread = 7
 ```
-
+]
 - Random, order, why?
+]
+]
 
 ---
 ## Private and shared variables
@@ -298,7 +317,12 @@ layout: true
 ---
 ## Exercise: OpenMP Worksharing
 
-.medium[
+.message.is-info[
+.message-header[
+Exercise
+]
+.message-body[
+
 - The file <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_vectadd.c`</a> contains code that:
 	- Generating two random vectors with 1M elements
 	- Adds the two vectors in a `for-loop`
@@ -316,15 +340,23 @@ gcc -o omp_vectadd omp_vectadd.c -fopenmp
 
 - N.B. the `OMP_NUM_THREADS` environment variable controls the max. nr. of threads created by OpenMP
 ]
+]
 
 ---
 ## Exercise: OpenMP Worksharing
 
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - Which takes longer?
 	- `OMP_NUM_THREADS=1 ./omp_vectadd`
 	- `OMP_NUM_THREADS=4 ./omp_vectadd`
 - Why?
 - Overhead is significant if the computation `inside` the parallel region is `light`!
+]
+]
 
 ---
 ## Reduction clause
@@ -371,7 +403,11 @@ for(i=0; i<100; i++)
 ---
 ## Exercise: Calculate PI
 
-.medium[
+.message.is-info[
+.message-header[
+Exercise
+]
+.message-body[
 - Exercise: PI can be approximated using Leibnitz sum.
 	- Adept <a target="_blank" rel="noopener noreferrer" href="/courses/openmp-training/#table-of-contents"> ☛ `omp_pi.c`</a> to parallelize the for loop calculating pi
 	- Use the reduction clause `(#pragma omp parallel for reduction(+,pi))`
@@ -388,6 +424,8 @@ for(i=0; i<100; i++)
 	- What is different from the vector addition in terms of speed?
 	- How far does the problem scale?
 	- Increasing (only) `OMP_NUM_THREADS`, is that strong or weak scaling?
+
+]
 ]
 
 ---
@@ -408,6 +446,7 @@ layout:false
 name: end
 class: center, middle
 
+# That's All 👨🏻‍🎓
 # Thank you for listening!
 
 

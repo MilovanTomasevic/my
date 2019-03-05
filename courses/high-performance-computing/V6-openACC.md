@@ -53,7 +53,7 @@ layout: true
 
 ]
 
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br> 
 - U laboratoriji ćemo kao akcelerator koristiti **Nvidia Quadro** grafičke kartice.
 
 ---
@@ -184,6 +184,11 @@ int main() {
 
 ## Primer 2: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z6-openACC/#table-of-contents"> ☛ Primeri/`ptraliasing.c`</a>
 
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
 ```c
 void assign(int *a, int *b, int size) {
 	#pragma acc kernels
@@ -193,9 +198,16 @@ void assign(int *a, int *b, int size) {
 	}
 }
 ``` 
+]
+]
 
-.attention[
-**Pitanje**: Kada se koristi kernels direktiva, kompajler pronalazi delove koda koji su bezbedni za paralelizaciju, odnosno, u kojima nema zavisnosti među podacima. Šta mislite, da li bi OpenACC kompajler preveo ovo u kod za paralelno izvršavanje?
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
+- **Pitanje**: Kada se koristi kernels direktiva, kompajler pronalazi delove koda koji su bezbedni za paralelizaciju, odnosno, u kojima nema zavisnosti među podacima. Šta mislite, da li bi OpenACC kompajler preveo ovo u kod za paralelno izvršavanje?
+]
 ]
 
 ---
@@ -246,6 +258,11 @@ Neke od klauzula (parametri nisu navedeni):
 
 ## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z6-openACC/#table-of-contents"> ☛ Primeri/`parallel.c`</a>
 
+.message.is-dark[
+.message-header[
+Primer
+]
+.message-body[
 ```c
 #include <openacc.h>
 
@@ -260,9 +277,18 @@ int main() {
 	return 0;
 }
 ```
+]
+]
 
-.attention[
-**Pitanje**: Koliko puta će svakom polju value niza biti dodeljena vrednost?
+
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
+- **Pitanje**: Koliko puta će svakom polju value niza biti dodeljena vrednost?
+]
 ]
 
 ---
@@ -482,24 +508,50 @@ layout: true
 
 ## Zadatak 1: Računanje broja π
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Modifikovati dati sekvencijalni program za računanje vrednosti broja π korišćenjem OpenACC direktiva. Koristiti NVIDIA grafičku karticu kao akcelerator (GNU GCC trenutno ne podržava Radeon kartice). 
 - Meriti izvršavanje sekvencijalnog i implementiranog ubrzanog programa.
+]
+]
 
-.attention[
-**Napomena**: Zadatak svakako implementirati i u slučaju da na računaru nemate dostupnu NVIDIA grafičku karticu.
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Napomena**: Zadatak svakako implementirati i u slučaju da na računaru nemate dostupnu NVIDIA grafičku karticu.
+]
 ]
 
 ---
 
 ## Zadatak 2: Računanje Jakobijana
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Modifikovati dati sekvencijalni program za računanje Jakobijana.
 - Osnovnu verziju programa u C++ programskom jeziku skinuti sa
 - Githab naloga OpenACCUserGroup.Koristiti NVIDIA grafičku karticu kao akcelerator (GNU GCC trenutno ne podržava Radeon kartice). 
 - Meriti izvršavanje sekvencijalnog i implementiranog ubrzanog programa.
+]
+]
 
-.attention[
-**Napomena**: Zadatak svakako implementirati i u slučaju da na računaru nemate dostupnu NVIDIA grafičku karticu.
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- **Napomena**: Zadatak svakako implementirati i u slučaju da na računaru nemate dostupnu NVIDIA grafičku karticu.
+]
 ]
 
 ---
