@@ -7,10 +7,15 @@
     
 
 
+
     <!-- MathJax™ -->
     <script type="text/javascript" async
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
     </script>
+
+    <!-- mermaid dijagram -->
+    <link rel="stylesheet2" href="../mermaid.min.css">
+    <script>mermaid.initialize({startOnLoad:true});</script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
@@ -48,7 +53,7 @@ class: center, middle
 
 
 
-.created[26.02.2019 u 16:40]
+.created[05.03.2019 u 12:22]
 
 
 ---
@@ -75,19 +80,37 @@ layout: true
 
 ---
 
-## Uvod 
+## Uvod
 
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - <a target="_blank" rel="noopener noreferrer" href="../db/tabele.sire.nova.zip"> ☛ `Nova šema baze podataka`</a>
 
 
 ![:scale 90%](../db/3.png)
+]
+]
+
+)
 
 ---
 
 ## Uvod 
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - <a target="_blank" rel="noopener noreferrer" href="../db/tabele.sire.nova.zip"> ☛ `Nova šema baze podataka`</a>
   
 ![:scale 90%](../db/4.png)
+]
+]
+
 
 
 ---
@@ -106,7 +129,12 @@ layout: true
 ---
 
 ## Prvi deo
-            
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 1: 
     - Ispisati sva muška imena koja postoje među studentima, prebrojati ih i urediti prema zastupljenosti.
 - Primer 2: 
@@ -115,11 +143,20 @@ layout: true
     -  Pronaći poslednji položeni ispit za svakog studenta. Izdvojiti indeks studenta i datum polaganja poslednjeg ispita.
 - Primer 4: 
     - Za svaki smer na osnovnim akademskim studijama izdvojiti obavezne predmete i, ako imaju, njihove uslovne predmete. Izdvojiti naziv smera, naziv obaveznog predmeta i naziv uslovnog predmeta.
+]
+]
+            
+
 
 ---
 
 ## Drugi deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 5: 
     - Za svaki smer pronaći studenta koj je položio najveći broj bodova na smeru. 
     - Izdvojiti naziv smera, indeks, ime i prezime studenta i broj položenih bodova.
@@ -129,9 +166,19 @@ layout: true
 - Primer 7: 
     - Za svakog studenta smera Informatika na osnovnim akademskim studijama, koji je fakultet upisao 2007. godine, pronaći za koje nepoložene obavezne predmete nije položio uslovne predmete. 
     - Izdvojiti ime i prezime studeta i naziv predmeta.
+]
+]
+
+
 
 ---
 ## Treći deo
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 
 - Primer 8: 
     - Pronaći predmete koji su obavezni za sve studije na nekom nivou. Izdvojiti naziv nivoa kvalifikacija i naziv predmeta
@@ -140,6 +187,9 @@ layout: true
   - Izdvojiti naziv predmeta i procenat studenata koji je položio taj predmet u odnosu na broj koji su ga polagali.
 - Primer 10: 
   -  Izdvojiti parove studenata koji su na istom smeru i rođeni su istog dana. Izdvojiti naziv smera, datum rođenja, indekse, imena i prezimena studenata.
+]
+]
+
 
 ---
 
@@ -168,6 +218,10 @@ layout: false
                     highlightLines: true
                 });
     </script>
+
+    <script src="../mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
     
   </body>
 </html>

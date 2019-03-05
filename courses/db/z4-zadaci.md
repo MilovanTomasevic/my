@@ -15,7 +15,12 @@ layout: true
 ---
 
 ## Prvi deo
-            
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 1: 
     - Za svakog studenta izdvojiti predmete koje je položio. 
     - Prikazati indeks, ime i prezime studenta, naziv predmeta i ocenu.
@@ -26,12 +31,21 @@ layout: true
 - Primer 4: 
     - Prikazati parove predmeta koji imaju isti broj bodova.
 - Primer 5: 
-    - Izdvojiti podatke o predmetima koje je položio neki student sa ocenom 10 u nekom ispitnom roku održanom u toku 2011. godini.
+    - Izdvojiti podatke o predmetima koje je položio neki student sa ocenom 10 u nekom ispitnom roku održanom u toku 2011. godini
+]
+]
+            
+.
 
 ---
 
 ## Drugi deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 6: 
     - Za svaki predmet izdvojiti godinu i oznaku ispitnog roka u kojem je predmet polagao neki student. 
     - Izdvojiti naziv ispitnog roka, godinu i oznaku ispitnog roka.
@@ -42,11 +56,20 @@ layout: true
     - Izdvojiti parove student-ispitni rok takve da je student rođen u godini kada je održan ispitni rok. 
     - Izdvojiti indeks i godinu rođenja studenta, naziv i godinu ispitnog roka. 
     - Prikazati i studente i ispitne rokove koji nemaju odgovarajuće podatke.
+]
+]
+
+
 
 ---
 
 ## Treći deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 9: 
     - Izdvojiti nazive predmeta koje je polagao student sa indeksom 22/2010.
 - Primer 10: 
@@ -55,10 +78,19 @@ layout: true
     - Izdvojiti nazive predmeta koje je položio student sa indeksom 22/2010.
 - Primer 12: 
     - Pronaći naziv predmeta koji su polagali svi studenti.
+]
+]
+
+
 
 ---
 ## Četvrti deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 13: 
     - Izdvojiti indekse studenata koji su polagali sve predmete od 8 bodova.
 - Primer 14: 
@@ -69,6 +101,10 @@ layout: true
     - Izdvojiti sve studente osim najstarijih.
 - Primer 17: 
     - Izdvojiti studente čije prezime sadrži slovo a na 4. poziciji i završava na c i koji imaju ocene 6, 8 ili 10 iz predmeta čija je šifra u intervalu [M105, P103].
+]
+]
+
+
 
 ---
 

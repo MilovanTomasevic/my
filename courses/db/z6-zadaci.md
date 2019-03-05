@@ -24,7 +24,12 @@ layout: true
 ---
 
 ## Prvi deo
-            
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 1: 
     - Izdvojiti ukupan broj studenata.
 - Primer 2: 
@@ -35,11 +40,20 @@ layout: true
     - Izlistati ocene dobijene na ispitima i ako je ocena jednaka 5 ispisati NULL
 - Primer 5: 
     - Koliko ima različitih ocena dobijenih na ispitu a da ocena nije 5.
+]
+]
+            
+
 
 ---
 
 ## Drugi deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 6: 
     - Izdvojiti šifre, nazive i bodove predmeta čiji je broj bodova veći od prosečnog broja bodova svih predmeta.
 - Primer 7: 
@@ -51,6 +65,10 @@ layout: true
   - Izdvojiti godinu roka, naziv predmeta i najveću ocenu.
 - Primer 10: 
   -  Izdvojiti predmete koje je polagalo više od 5 različitih studenata.
+]
+]
+
+
   
 ---
 
@@ -69,17 +87,30 @@ layout: true
 
 ## Prvi deo
 
-
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 11: 
   - Za svakog studenta izdvojiti broj indeksa i mesec u kome je položio više od dva ispita (nije važno koje godine). 
   - Izdvojiti indeks studenta, ime meseca i broj položenih predmeta. 
   - Rezultat urediti prema broju indeksa i mesecu polaganja.
 - Primer 12: 
   - Primer 12: Za svaki rok koji održan 2011. godine i u kome nema neuspešnih polaganja ispita, izdvojiti oznaku roka, broj položenih ispita u tom roku i broj studenata koji su položili ispite u tom roku.
+]
+]
+
+
 
 ---
 ## Drugi deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 13: 
     - Za svaki ispitni rok izdvojiti naziv ispitnog roka, najveću ocenu dobijenu u tom ispitnom roku i ime i prezime studenta koji je dobio tu ocenu. 
     - Ime i prezime studenta napisati u jednoj koloni. Za ispitne rokove u kojima nije bilo ispita, kao ime i prezime studenta ispisati nema, a kao ocenu 0.
@@ -87,6 +118,10 @@ layout: true
     - Prikazati naziv predmeta koji je položio samo student Milos Peric.
 - Primer 15: 
     - Izdvojiti parove studenata čija imena počinju na slovo M i za koje važi da su bar dva ista predmeta položili u istom ispitnom roku.
+]
+]
+
+
 
 ---
 

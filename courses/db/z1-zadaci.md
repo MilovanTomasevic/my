@@ -41,7 +41,12 @@ layout: true
 ---
 
 ## Prvi deo
-            
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 1: 
     - Prikazati šifru i naziv predmeta.
 - Primer 2: 
@@ -55,10 +60,19 @@ layout: true
         - ocenu 10 ili 9
         - ocenu 10 i 9
         - samo ocene 10.
+]
+]
+
+
 ---
 
 ## Drugi deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 6: 
     - Pronaći studente koji su rođeni u godini kada je održan neki ispitni rok.
     - Izdvojiti indeks, godinu rođenja i naziv roka.
@@ -71,10 +85,20 @@ layout: true
     - Izdvojiti parove predmeta koji imaju isti broj kredita. Izdvojiti šifre i nazive predmeta.
 - Primer 10: 
     - Izdvojiti indekse studenata koji su položili predmet Geometrija.
+]
+]
+
+
 
 ---
 
 ## Treći deo
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 
 - Primer 11: 
     - Izdvojiti podatke o studentima koji su polagali u januarsokm ispitnom roku 2011.
@@ -84,10 +108,18 @@ layout: true
     - Izdvojiti podatke o studentima koji nisu polagali ispite u januarskom ispitnom roku.
 - Primer 14: 
     - Za svaki predmet prikazati njegove podatke i koliko košta njegovo upisivanje za samofinansirajuće studente. Jedan kredit košta 1500 din.
+]
+]
+
 
 ---
 ## Četvrti deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 15: 
     - Za svaku godinu izračunati koliko studenata je rođeno te godine.
 - Primer 16 : 
@@ -97,6 +129,10 @@ layout: true
 - Primer 18: 
     - Pronaći studente koji su polozili neki predmet od 6 kredita. 
     - Izdvojiti indeks, ime, prezime i naziv predmeta.
+]
+]
+
+
 
 ---
 

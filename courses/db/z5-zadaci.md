@@ -15,7 +15,12 @@ layout: true
 ---
 
 ## Prvi deo
-            
+
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 1: 
     - Pronaći predmete sa najvećim brojem bodova.
 - Primer 2: 
@@ -26,11 +31,21 @@ layout: true
     - Ispisati trenutnog korisnika.
 - Primer 5: 
     - Izračunati koji je dan u nedelji (njegovo ime) bio 18.11.2010.
+]
+]
+
+            
+
 
 ---
 
 ## Drugi deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 6: 
     - Za današnji datum izračunati
       - koji je dan u godini;
@@ -42,11 +57,21 @@ layout: true
     - Izdvojiti sekunde iz trenutnog vremena.
 - Primer 8: 
     - Izračunati koliko vremena je prošlo između 6.8.2005. i 11.11.2008.
+]
+]
+
+
+
 
 ---
 
 ## Treći deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 9: 
   - Izračunati koji će datum biti za 12 godina, 5 meseci i 25 dana.
 - Primer 10: 
@@ -56,10 +81,20 @@ layout: true
 - Primer 12: 
   - Izdvojiti indeks, ime, prezime, mesto rođenja i inicijale studenata. 
   - Ime i prezime napisati u jednoj koloni, a za studente rođene u Beogradu kao mesto rođenja ispisati Bg.
+]
+]
+
+
+
 
 ---
 ## Četvrti deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 13: 
     - Izdvojiti indeks, ime, prezime i mesto rođenja za svakog studenta. 
     - Ako je mesto rođenja nepoznato, umesto NULL vrednosti ispisati Nepoznato.
@@ -71,11 +106,21 @@ layout: true
 - Primer 15: 
     - Ako je predmetima potrebno uvecati broj bodova za 20%
       - prikazati koliko će svaki predmet imati bodova nakon uvećanja. Uvećani broj bodova prikazati sa dve decimale.
-      - prikazati koliko će bodova imati predmeti koji nakon uvećanja imaju više od 8 bodova. Uvećani broj bodova zaokružiti na veću celobrojnu vrednost.
+      - prikazati koliko će bodova imati predmeti koji nakon uvećanja imaju više od 8 bodova. Uvećani broj bodova zaokružiti na veću celobrojnu vrednost
+]
+]
+
+
+.
 
 ---
 ## Peti deo
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Primer 16 : 
     - Za sve ispite koji su se održali u poslednjih 5 godina izračunati koliko je godina, meseci i dana prošlo od njihovog održavanja. 
     - Izdvojiti indeks, naziv predmeta, ocenu, broj godina, broj meseci i broj dana.
@@ -83,6 +128,11 @@ layout: true
     - Izdvojiti ime i prezime studenata za koga važi da postoji student koji je godinu dana mlađi i koji je rođen u istom mestu.
 - Primer 18: 
     - Izdvojiti naziv predmeta koji su položili svi studenti rodeni u Beogradu.
+]
+]
+
+
+
 
 ---
 
