@@ -1,5 +1,5 @@
 .reveal {
-        font-family: "Liberation Sans", sans-serif;
+  font-family: "Liberation Sans", sans-serif;
 }
 .reveal h2 { font-size: 1.50em; }
 .reveal h3 { font-size: 1.10em; }
@@ -17,8 +17,8 @@ table.centered td, table.centered th { text-align:center; }
 
 /* Uklanjanje bordera za slike */
 .reveal section img {
-  border: none;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+border: none;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Prvi slajd */
@@ -43,16 +43,18 @@ div.side-right, div.side-right-img {text-align: left; position: absolute; left: 
 div.side-right-code {text-align: left; position: absolute; left: 50%; top: 15%; width: 50%;}
 
 div.attention, div.side-right {
-    border: 2px solid;
-    border-radius: 25px;
-    line-height: 100%;
-    margin-top: 20px;
-    padding: 15px;
-    font-size: 70%;
-    background-color: #FFFF99;
+border: 2px solid;
+border-radius: 25px;
+line-height: 100%;
+margin-top: 20px;
+padding: 15px;
+font-size: 70%;
+background-color: #FFFF99;
 }
 
 div.side-right, div.attention {background-color: #FFFF99;}
 
-
+.message-body ul {
+margin-top: 0;
+}
 
