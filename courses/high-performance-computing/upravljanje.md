@@ -13,8 +13,8 @@ name: sadrzaj
 # Sadržaj
 
 - [Zatečeno stanje](#stanje)
-- [Merenje performansi HPC sistema](#merenje)
-- [Tehnike upravljanja HPC sistemima](#tehnike)
+- [Merenje performansi HPC sistema](#merenjeHPC)
+- [Tehnike upravljanja HPC sistemima](#tehnikeHPC)
 - [SLURM](#slurm)
 
 
@@ -98,7 +98,7 @@ layout: true
 ---
 
 layout: false
-name: merenje
+name: merenjeHPC
 class: center, middle
 
 # Merenje performansi HPC sistema
@@ -432,7 +432,7 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 ---
 
 layout: false
-name: merenje
+name: tehnikeHPC
 class: center, middle
 
 
