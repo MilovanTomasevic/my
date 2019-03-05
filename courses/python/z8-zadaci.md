@@ -16,16 +16,30 @@ layout: true
 
 ## Test 
 
-- NAPOMENE
-    - Ne treba proveravati validnost ulaznih parametara za funkcije. 
-    - Smatrati da de ulazni parametar uvek pratiti specifikaciju funkcije.
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- Ne treba proveravati validnost ulaznih parametara za funkcije. 
+- Smatrati da de ulazni parametar uvek pratiti specifikaciju funkcije.
+]
+]
 
-- ZADATAK
-    - Obrnuta poljska notacija (Reverse Polish notation), poznatija i kao postfiksna notacija je matematička notacija izraza u kojoj operatori prate oba operanda. 
-    - Postfiksna notacija se formira tako što se navede: 
-        - 1) ceo podizraz koji predstavlja prvi operand, u postfiksnoj notaciji; 
-        - 2) ceo podizraz koji predstavlja drugi operand, u postfiksnoj notaciji; 
-        - 3) operator.
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
+- Obrnuta poljska notacija (Reverse Polish notation), poznatija i kao postfiksna notacija je matematička notacija izraza u kojoj operatori prate oba operanda. 
+- Postfiksna notacija se formira tako što se navede: 
+  1. ceo podizraz koji predstavlja prvi operand, u postfiksnoj notaciji; 
+  2. ceo podizraz koji predstavlja drugi operand, u postfiksnoj notaciji; 
+  3. operator.
+]
+]
+
+
 
 ---
 ## Test
@@ -101,20 +115,39 @@ MAKE_INFIX RETURNS: ((vel_0 * time) + ((g * time) * (time / 2)))
 ---
 ## Test
 
-- Dodatni zadatak 
-
+.message.is-info[
+.message-header[
+Dodatni zadatak
+]
+.message-body[
 - Proširiti parser tako da podržava i `negativne cele brojeve` kao deo izraza u postfiksnoj notaciji. 
 - Minimalno omoguditi sledede:
     - Razumevanje izraza koji koriste negativne cele brojeve kao elementarne vrednosti u izrazu;
     - Ispis odgovarajude infiksne notacije tako da negativni broj bude odvojen svojom zagradom od ostatka izraza.
-- Primer testnog slučaja:
+]
+]
 
+.message.is-dark[
+.message-header[
+Primer testnog slučaja:
+]
+.message-body[
 ```sh
 INPUT STRING: "-3 -5 – 1 +"
 EVAL_TREE RETURNS: 3
 MAKE_INFIX RETURNS: (((-3) – (-5)) + 1)
 ```
+]
+]
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
 - <a target="_blank" rel="noopener noreferrer" href="../python-z8-resenja"> ☛ `Rešenja`</a>
 
+]
+]
 
 {% endblock %}

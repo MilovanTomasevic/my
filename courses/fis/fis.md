@@ -135,7 +135,11 @@ layout: true
 
 ## Informatika u savremenom društvu
 
-.small[
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - Visokoškolski stručni i univerzitetski studijski program **1. stepena**
 - **Trajanje:** 3 godine (6 semestara), 180 bodova (ECTS)
 - Studijskih aktivnosti se organizuje u popodnevnim časovima.
@@ -147,14 +151,17 @@ layout: true
 		- Vanredne studije – 1900 € godišnje
 - **Stručni naziv**: 
 	- *diplomirani društveni informatičar*
-] 
+]
+]
+
+
 
 .lcol[
-![:scale 85%](fis/predavanja3.png)
+![:scale 61%](fis/predavanja3.png)
 ]
 
 .rcol[
-![:scale 82%](fis/predavanja4.png)
+![:scale 60%](fis/predavanja4.png)
 ]
 
 ---
@@ -186,7 +193,11 @@ layout: true
 
 ## Računarstvo i web tehnologije
 
-.small[
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - Visokoškolski stručni studijski program **1. stepena**
 - **Trajanje:** 3 godine (6 semestara), 180 bodova (ECTS)
 - Studijskih aktivnosti se organizuju dva do tri puta nedeljno u popodnevnim satima.
@@ -196,9 +207,11 @@ layout: true
 
 - **Stručni naziv**: 
 	- diplomirani inženjer računarstva i web tehnologija
+]
+]
 
-![:scale 55%](fis/fis3.jpg)
-] 
+![:scale 40%](fis/fis3.jpg)
+
 
 ---
 
@@ -224,7 +237,11 @@ layout: true
 
 ## Informatika u savremenom društvu
 
-.small[
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - Magistarsi studijski program **2. stepena**
 - **Trajanje:** 2 godine (4 semestra), 120 bodova (ECTS)
 - Studijskih aktivnosti se organizuju najviše četiri puta nedeljno u popodnevnim terminima.
@@ -234,9 +251,12 @@ layout: true
 
 - **Stručni naziv**: 
 	- magistar društvene informatike
+]
+]
 
-![:scale 50%](fis/fis4.jpg)
-] 
+
+![:scale 35%](fis/fis4.jpg)
+
 
 ---
 
@@ -261,7 +281,12 @@ layout: true
 ---
 
 ## Informatičko društvo
-.small[
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - Doktorski studijski program **3. stepena**
 - **Trajanje:** 3 godine (6 semestara), 180 bodova (ECTS)
 - **Cena studija**: 
@@ -269,7 +294,9 @@ layout: true
 
 - **Stručni naziv**: 
 	- doktor nauka na području informatičkog društva
-] 
+]
+]
+
 .lcol[
 ![:scale 90%](fis/fisPhD.jpg)
 ]
@@ -387,7 +414,7 @@ name: pitanja
 
 .small[
 
-> Uradite *danas* što drugi *ne žele*, da bi *sutra* mogli da uradite što drugi *ne mogu*.ref[1].
+> Uradite *danas* što drugi *ne žele*, da bi ste *sutra* uradili što drugi *ne mogu*.ref[1].
 
 .lcol.medium[
 

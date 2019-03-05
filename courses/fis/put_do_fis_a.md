@@ -48,9 +48,15 @@ class: center, middle
 # Rokovi za prijavu i upis 
 #### osnovne i master studije 
 
-.attention[
-**Napomena**: <br> Imajte u vidu da sve važi dok se mesta ne popune, jer su ograničena.<br>
+
+.message.is-danger[
+.message-header[
+Napomena
+]
+.message-body[
+Imajte u vidu da sve važi dok se mesta ne popune, jer su ograničena.<br>
 **Savet**: Fokusirajte se na prve rokove. 
+]
 ]
 
 ---
@@ -62,6 +68,11 @@ layout: true
 
 ## Osnovne studije
 
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - *Prvi rok za PRIJAVU*
 	- **12. februara 2019. - 18. marta 2019.**
 	- odštampanu prijavu `potpisati` i poslati preporučeno na adresu fakulteta
@@ -75,11 +86,20 @@ layout: true
     	- `najkasnije` 03. septembra 2019.
 - *Drugi rok za UPIS*
 	- Septembar 2019 	 
+]
+]
+
+
 
 ---
 
 ## Master studije 
 
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
 - *Prvi rok za PRIJAVU*
 	- **1. aprila 2019. - 30. juna 2019.** 
 	- odštampanu prijavu `potpisati` i sa ostalom dokumentacijom poslati preporučeno na adresu fakulteta.
@@ -93,6 +113,10 @@ layout: true
       - `najkasnije` do 27. septembra 2019.
 - *Drugi rok za UPIS*
 	- Septembar/Oktobar 2019 
+]
+]
+
+
 
 ---
 name: prijava
@@ -102,9 +126,14 @@ class: center, middle
 # Prijava
 #### <a target="_blank" rel="noopener noreferrer" href="https://portal.evs.gov.si/prijava/"> ☛ eVŠ/`portal`</a> i dokimentacija
 
-.attention[
-**Napomena**: <br> Imajte u vidu da sve važi dok se mesta ne popune, jer su ograničena.<br>
+.message.is-danger[
+.message-header[
+Napomena
+]
+.message-body[
+Imajte u vidu da sve važi dok se mesta ne popune, jer su ograničena.<br>
 **Savet**: Fokusirajte se na prve rokove. 
+]
 ]
 
 ---
@@ -156,8 +185,13 @@ layout: true
  
 - Da bi se upisao u višu godinu našeg programa, `uslov je` da je program na koji se kandidat upisuje, sličan našem.
 
-.attention[
-**Konkretno**: <br> Ovim kandidatima se savetuje da pošalju kompletan studijski program na koji su upisani i potvrdu o položenim ispitima kako bi se proverile mogućnosti i kako bi informisali kandidata o ishodu.
+.message.is-dark[
+.message-header[
+Konkretno
+]
+.message-body[
+- Ovim kandidatima se savetuje da pošalju kompletan studijski program na koji su upisani i potvrdu o položenim ispitima kako bi se proverile mogućnosti i kako bi informisali kandidata o ishodu.
+]
 ]
 
 ---
@@ -167,12 +201,20 @@ layout: true
 
 <br>
 
-.medium[
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+
 >Fakulteta za informacijske študije v Novem mestu <br>
 Ljubljanska cesta 31a, p.p. 603 <br>
 8000 Novo mesto <br> 
 Slovenia
+
 ]
+]
+
 
 ---
 
@@ -256,12 +298,21 @@ layout: true
 ## Dobijanje privremenog boravka .ref[*]
 
 - <a target="_blank" rel="noopener noreferrer" href=" http://www.upravneenote.gov.si/novo_mesto/"> ☛ `Upravna enota`</a>
-- Kontakt osobe:
- 
+
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+	- Kontakt osobe:
 >Novo mesto <br> 
 07/39 39 117 <br>
 Sergeja Heric / Irena Fink Ambrožič <br>
 prizemlje  desno 
+]
+]
+
 
 .footer[
 
@@ -316,10 +367,16 @@ prizemlje  desno
 	- Ugovor o najamu stanovanja gde privremeno borave, moze adresa koja je na prijavi trenutnog boravka.
 - Taksa za prijavu privremenog boravka je 12 EUR.
 
-<br>
- .attention[
- **Napomena**: <br>Za studente u domu, prijavu boravka završava, Studentski dom. 😊😉
+
+.message.is-warning[
+.message-header[
+Info
 ]
+.message-body[
+- Za studente u domu, prijavu boravka završava, Studentski dom. 😊😉
+]
+]
+
 
 ---
 
@@ -371,7 +428,7 @@ name: pitanja
 
 .small[
 
-> Uradite *danas* što drugi *ne žele*, da bi *sutra*  uradili što drugi *ne mogu*..ref[*]
+> Uradite *danas* što drugi *ne žele*, da bi ste *sutra*  uradili što drugi *ne mogu*..ref[*]
 
 .lcol.medium[
 

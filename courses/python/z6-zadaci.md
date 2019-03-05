@@ -34,36 +34,67 @@ layout: true
 ---
 ## Zadatak 1 
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Napisati funkciju `GetHistogram` koja na osnovu niza ulaznih podataka (karakteri) pravi histogram, tj. računa frekvenciju pojavljivanja određenog karaktera. 
 - Podatak modelovati kao objekat koji ima najmanje dva atributa, `value` i `freq`, koji predstavljaju sam karakter i frekvenciju pojavljivanja konkretnog karaktera, respektivno. 
 - Primeri ulaznih podataka dostupan je u `snippets.txt`.
+]
+]
+
+
 
 ---
 
 ## Zadatak 2
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Na osnovu histograma formirati Hafmanovo stablo prema sledećoj proceduri:
     - Svi elementi (karakteri) su listovi stabla.
     - Dva elementa sa najmanjom verovatnoćom pojavljivanja formiraju novi čvor čiji su potomci ta konkretna dva elementa. Novi čvor ulazi u histogram umesto ta 2 elementa, sa verovatnoćom jednakom zbiru njihovih verovatnoća.
     - Postupak se ponavlja dok se ne isprazni histogram, odnosno dok se ne formira kompletno stablo sa samo jednim elementom koji predstavlja koren.
+]
+]
 
-
-.attention[
-**Napomena: ** <br>Obezbediti funkcije `GetMinFreqElem`, `MakeNewElem`, `PutElem` i `RemoveElem`.
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- Obezbediti funkcije `GetMinFreqElem`, `MakeNewElem`, `PutElem` i `RemoveElem`.
+]
 ]
 
 ---
 
 ## Zadatak 3 
 
+.message.is-info[
+.message-header[
+Zadatak
+]
+.message-body[
 - Koristeći formirano Hafman stablo kodovati primere dostupne u snippets.txt. 
 - Hafmanov kod određenog karaktera formira se prostim spajanjem binarnih vrednosti (0 i 1) koje se nalaze na putanji do njegove pozicije u Hafman stablu. 
 - Za svaki primer napraviti posebnu funkciju koja ispisuje ulazni niz podataka i dobijeni kodovani izlaz (ceo ulazni niz podataka i ceo kodovani izlaz).
-Napomena: Obezbediti funkciju GetEncVal koja vraća kodovanu vrednost traženog
-karaktera.
+]
+]
 
-.attention[
-**Napomena: ** <br>Obezbediti funkciju GetEncVal koja vraća kodovanu vrednost traženog karaktera.
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- Obezbediti funkciju GetEncVal koja vraća kodovanu vrednost traženog
+karaktera.
+]
 ]
 
 ---
@@ -72,8 +103,15 @@ karaktera.
 
 ![:scale 90%](img/z6/z3.png)
 
+
+.message.is-success[
+.message-header[
+Odgovor
+]
+.message-body[
 - <a target="_blank" rel="noopener noreferrer" href="../python-z6-resenja"> ☛ `Rešenja`</a>
 
-
+]
+]
 
 {% endblock %}
