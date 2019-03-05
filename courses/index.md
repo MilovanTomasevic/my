@@ -139,6 +139,8 @@ I wish you a lot of success during your learning.
 #### First settings
 - [Installation, Compilation & Running OpenMP/MPI/OpenACC and HPC Rudolf connection](/courses/hpc-setup){:target="_blank"}
 
+- [Docker and other tools for reproducible analysis](/courses/docker/docker-and-other-tools-for-reproducible-analysis.html){:target="_blank"}
+  
 #### HPC Complete Courses (C)
 <br>
 

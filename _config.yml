@@ -273,6 +273,7 @@ exclude:
   - courses/hpc-short-courses/*.md
   - courses/db/*.md
   - courses/python/*.md
+  - courses/docker/*.md
 include:
   - LICENSE.md
 
