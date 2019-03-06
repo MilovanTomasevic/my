@@ -6,7 +6,7 @@ name: sadrzaj
 # Sadržaj
 
 - [MPI](#mpi)
-- [Kominikatori](#kominikatori)
+- [Komunikatori](#komunikatori)
 - [Point to Point komunikacija](#p2p)
 - [Kolektivna komunikacija](#kk)
 
