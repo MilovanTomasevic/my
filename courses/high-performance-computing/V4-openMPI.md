@@ -946,7 +946,7 @@ int MPI_Allgather(
 
 .rcol[
 
-![:scale 60%](img/allGather.png)
+![:scale 60%](img/allgather.png)
 
 ]
 
