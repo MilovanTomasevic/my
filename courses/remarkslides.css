@@ -29,11 +29,11 @@ h2 {
 
 blockquote {
     font-style: italic;
-    font-size: 80%;
+    font-size: 110%;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 50px;
-    padding: 1.25em 1.5em;
+    padding: 1em 1em;
     background-color: #f5f5f5;
     border-left: 5px solid #dbdbdb;
 }
@@ -1911,3 +1911,64 @@ p {
     }
 }
 
+
+
+
+
+.label {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 3px 5px 4px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 0.75em;
+    left: 10px;
+    top: -15px;
+    position: relative;
+  }
+  
+  div.box p, div.box ul {
+    position: relative;
+    top: -20px;
+  }
+  
+  .box.moody .label {
+    background-color: #F89406;
+  }
+  
+  .box.happy .label {
+    background-color: #46A546;
+  }
+  
+  .box.angry .label {
+    background-color: #C43C35;
+  }
+  
+  div.box, code {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+  }
+  
+  .angry {
+    background-color: #FFD7D5;
+    border-color: #C43C35;
+  }
+  
+  .happy {
+    background-color: #C0E0C0;
+    border-color: #46a546;
+  }
+  
+  .moody {
+    background-color: #FFECD1;
+    border-color: #F89406;
+  }
+  
