@@ -2,7 +2,7 @@
 {% block slides %}
 
 name: danas 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Zadaci za danas
@@ -33,8 +33,6 @@ Zadatak
     - Izračunati koji je dan u nedelji (njegovo ime) bio 18.11.2010.
 ]
 ]
-
-            
 
 ---
 
@@ -130,5 +128,11 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
+
+---
+
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
 {% endblock %}

@@ -14,7 +14,7 @@ name: sadrzaj
           
 ---
 name: zastoFis
-class: center, middle
+class: center, middle, inverse
 
 # Zašto baš FIŠ? 
 
@@ -81,7 +81,7 @@ layout: true
 ---
 name: novoMesto
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Novo mesto
 
@@ -119,10 +119,10 @@ layout: true
 
 ---
 name: studijskiProgrami
-class: center, middle
+class: center, middle, inverse
 layout: false
 
-## Studijski programi budućnosti
+# Studijski programi budućnosti
 
 ---
 layout: true
@@ -315,7 +315,7 @@ Info
 
 name: privreda
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Saradnja sa privredom
 
@@ -348,7 +348,7 @@ layout: true
 
 name: mogucnostiZaposlenja
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Mogućnosti zaposlenja
 
@@ -387,7 +387,7 @@ layout: true
 
 name: hvala
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Hvala na pažnji !
 
@@ -457,5 +457,11 @@ name: pitanja
 .footer.medium[
     1. <a target="_blank" rel="noopener noreferrer" href="https://www.milovantomasevic.com/">MilovanTomasevic.com</a>]
 ] 
+
+---
+
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
 {% endblock %}

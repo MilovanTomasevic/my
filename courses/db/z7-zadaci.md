@@ -11,7 +11,7 @@ name: sadrzaj
 ---
 
 name: danas 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Zadaci za danas
@@ -45,7 +45,6 @@ Zadatak
 
 ]
 ]
-            
 
 ---
 
@@ -135,7 +134,7 @@ Zadatak
 ---
 
 name: vezba 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Zadaci za vežbu
@@ -235,5 +234,11 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
+
+---
+
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
 {% endblock %}

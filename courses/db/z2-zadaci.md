@@ -12,7 +12,7 @@ name: sadrzaj
 
 ---
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Uvod
 
@@ -30,7 +30,7 @@ layout: true
 
 ---
 name: rel 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Zadaci za danas
@@ -91,7 +91,7 @@ Zadatak
 ---
 
 name: relal 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Zadaci za danas
@@ -148,7 +148,7 @@ Zadatak
 ---
 
 name: relal 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Zadaci za vežbu
@@ -183,5 +183,11 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
+
+---
+
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
 {% endblock %}

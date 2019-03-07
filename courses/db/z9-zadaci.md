@@ -10,7 +10,7 @@ name: sadrzaj
 
 ---
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Uvod
 #### novi model
@@ -55,7 +55,7 @@ Info
 ---
 
 name: danas 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Zadaci za danas
@@ -133,5 +133,11 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
+
+---
+
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
 {% endblock %}

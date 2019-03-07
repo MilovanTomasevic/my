@@ -16,7 +16,7 @@ name: sadrzaj
       
 ---
 name: uvod
-class: center, middle
+class: center, middle, inverse
 
 # UVOD
 
@@ -38,7 +38,7 @@ layout: true
 
 name: problem
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # PREDMET I PROBLEM ISTRAŽIVANJA
 
@@ -59,7 +59,7 @@ layout: true
 
 name: hipoteze
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # ISTRAŽIVAČKE HIPOTEZE
 
@@ -87,7 +87,7 @@ layout: true
 
 name: lanci
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # LANCI SNABDEVANJA
 
@@ -144,7 +144,7 @@ layout: true
 
 name: fazi
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # FAZI SKUPOVI
 
@@ -240,7 +240,7 @@ $$ \chi : X  \rightarrow \big\{0,1\big\} $$
 
 name: model
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # ADAPTIVNI MODEL
 
@@ -630,7 +630,7 @@ layout: true
 
 name: rezultati
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # REZULTATI ISTRAŽIVANJA
 
@@ -658,7 +658,7 @@ layout: true
 ---
 name: zakljucak
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # ZAKLJUČAK
 
@@ -727,5 +727,11 @@ layout: true
 .footer.small[
 Dokutorsku disertaciju u pdf formatu možete detaljno pročitati na sajtu <a target="_blank" rel="noopener noreferrer" href="http://nardus.mpn.gov.rs/handle/123456789/9234">Ministarstva prosvete, nauke i tehnološkog razvoja.</a>
 ] 
+
+---
+
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
 {% endblock %}

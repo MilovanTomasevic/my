@@ -12,7 +12,7 @@ name: content
 
 ---
 name: part1
-class: center, middle
+class: center, middle, inverse
 
 # Docker and Containers
 ![:scale 25%](assets/container.svg)
@@ -37,7 +37,7 @@ layout: true
 > — https://www.docker.com/what-container
 
 .img-half[
-![:scale 45%](assets/container_stack.png)
+![:scale 40%](assets/container_stack.png)
 ]
 
 ---
@@ -92,12 +92,12 @@ layout: true
 ]
 .column[
 
-![:scale 50%](assets/vim.svg)
+![:scale 30%](assets/vim.svg)
 
 ]
 .column[
 
-![:scale 50%](assets/firefox.svg)
+![:scale 30%](assets/firefox.svg)
 
 ]
 .column[
@@ -148,7 +148,7 @@ Distributing and using software as a Docker image gives you:
 ---
 
 name: part2
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Running Containers
@@ -488,7 +488,7 @@ The Docker commands we've covered so far are:
 ---
 
 name: part3
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Making your Own Image
@@ -685,7 +685,7 @@ And while that's running, we'll move onto the next topic...
 ---
 
 name: part4
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Docker on HPC
@@ -750,5 +750,11 @@ layout: false
 
 # That's All 👨🏻‍🎓
 # Thank you for listening!
+
+---
+
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
 {% endblock %}

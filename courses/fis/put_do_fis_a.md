@@ -16,10 +16,10 @@ name: sadrzaj
           
 ---
 name: uvod
-class: center, middle
+class: center, middle, inverse
 
 # Uvod
-### bitni faktori
+#### bitni faktori
 
 ---
 layout: true
@@ -43,7 +43,7 @@ layout: true
 
 name: rokovi
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Rokovi za prijavu i upis 
 #### osnovne i master studije 
@@ -116,7 +116,7 @@ Info
 ---
 name: prijava
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Prijava
 #### <a target="_blank" rel="noopener noreferrer" href="https://portal.evs.gov.si/prijava/"> ☛ eVŠ/`portal`</a> i dokimentacija
@@ -139,6 +139,7 @@ layout: true
 ---
 
 ## Način prijave (osnovne studije)
+
 - Prijava za `upis` i `priznavanje` ispita se podnosi putem eVŠ portala.
   - do 18. marta 2019.
 - Za priznavanje obrazovanja potrebni su sledeći dokumenti:
@@ -149,13 +150,11 @@ layout: true
 	- fotokopiju diplome prve i druge godine srednje škole,
 	- kratak hronološki opis obrazovanja (`napise kandidat`)
 
-<br>
-
 - <a target="_blank" rel="noopener noreferrer" href="https://portal.evs.gov.si/prijava/"> ☛ eVŠ/`prijava`</a>
 
 ---
 ## Način prijave (master studije)
-
+.medium[
 - Prijava za `upis` i `priznavanje` ispita se podnosi putem eVŠ portala.
 - Prilozi za master do:
 - 5. jula 2019. (prvi rok) / 27. septembra 2019. (drugi rok):
@@ -170,6 +169,7 @@ layout: true
   - Pored potvrde o položenim ispitima (koji se podnose u vrijeme podnošenja prijave), treba priložiti i nastavni plan i program kursa.
 
 - <a target="_blank" rel="noopener noreferrer" href="https://portal.evs.gov.si/prijava/"> ☛ eVŠ/`prijava`</a>
+]
 ---
 
 ## Već si student?
@@ -213,7 +213,7 @@ Slovenia
 
 name: upis
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Oko upisa
 #### dokumenti, obaveštenja...
@@ -242,7 +242,7 @@ layout: true
 
 name: pogodnosti
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Pogodnosti
 #### smeštaj, hrana, jezik, prevoz,
@@ -259,7 +259,7 @@ layout: true
 - Student ima pravo na subvencionisanu studentsku hranu, uz dodatak od oko 3 € po obroku.
 	- Dijaški u studentskom domu, Hostel Situla, Restoran Opšte bolnice Novo mesto, Picerija Totalka, Picerija Chianti, Restoran Novak, McDonalds.
 - Kurs slovenačkog će biti i na fakultetu a može se videti i na:
-	- <a target="_blank" rel="noopener noreferrer" href="http://www.drustvospm.si/drustvo-za-razvijanje-prostovoljnega-dela-novo-mesto"> ☛ `DRPD`</a>.ref[1] kao i  <a target="_blank" rel="noopener noreferrer" href="http://www.ric-nm.si/si/"> ☛ `RIC`</a> .ref[2] a odmah možete na <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=d88m4VGvvug&list=PLdBDRYovqGqltDPD_zcIRzgdXYi2zW2Yx"> ☛ `youtube`</a>
+	- <a target="_blank" rel="noopener noreferrer" href="http://www.drustvospm.si/drustvo-za-razvijanje-prostovoljnega-dela-novo-mesto"> ☛ `DRPD`</a>.ref[1] kao i  <a target="_blank" rel="noopener noreferrer" href="http://www.ric-nm.si/si/"> ☛ `RIC`</a>.ref[2] a odmah možete na <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=d88m4VGvvug&list=PLdBDRYovqGqltDPD_zcIRzgdXYi2zW2Yx"> ☛ `youtube`</a>
 - U Novom mestu postoji gradski prevoz putnika (autobus/voz).
 	- Najbolje: 30 minuta hoda. 🚶‍🚶‍♀️️💪
 
@@ -273,7 +273,7 @@ layout: true
 
 name: boravak
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Boravak
 #### procedura
@@ -367,7 +367,7 @@ Info
 
 name: posao
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Posao
 #### procedura
@@ -395,7 +395,7 @@ layout: true
 
 name: hvala
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Hvala na pažnji !
 
@@ -465,5 +465,11 @@ name: pitanja
 <a target="_blank" rel="noopener noreferrer" href="mailto:marjana.miskovic@fis.unm.si?Subject=Pitanje%20u%20vezi%20sa%20https://milovan.tomasevic.fis.unm.si/budi-student-fis-a/">1. Pisati mejl ☛ studentskoj službi</a><br>
 <a target="_blank" rel="noopener noreferrer" href="/budi-student-fis-a/#sadržaj">2. U ☛ komentarima</a><br>
 \* <a target="_blank" rel="noopener noreferrer" href="https://www.milovantomasevic.com/">MilovanTomasevic.com</a>]
+
+---
+
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
 {% endblock %}

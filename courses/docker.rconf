@@ -5,5 +5,5 @@ author = "[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)"
 affiliation = "[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]"
 
 "docker/docker-and-other-tools-for-reproducible-analysis.md" 
-    title = "[Containerised Bioinformatics](/courses/#table-of-contents)"
-    subtitle = "Docker and other tools for reproducible analysis"
+    title = "[Docker and other tools for reproducible analysis](/courses/#table-of-contents)"
+

@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[Containerised Bioinformatics](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[Docker and other tools for reproducible analysis](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
+<body>
+	<textarea id="source">class: center, middle
 
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
+## [Docker and other tools for reproducible analysis](/courses/#table-of-contents)
 
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
-
-## [Containerised Bioinformatics](/courses/#table-of-contents)
-### Docker and other tools for reproducible analysis
 
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[07.03.2019 u 19:59]
 
 
 ---
@@ -70,7 +63,7 @@ name: content
 
 ---
 name: part1
-class: center, middle
+class: center, middle, inverse
 
 # Docker and Containers
 ![:scale 25%](assets/container.svg)
@@ -95,7 +88,7 @@ layout: true
 > — https://www.docker.com/what-container
 
 .img-half[
-![:scale 45%](assets/container_stack.png)
+![:scale 40%](assets/container_stack.png)
 ]
 
 ---
@@ -150,12 +143,12 @@ layout: true
 ]
 .column[
 
-![:scale 50%](assets/vim.svg)
+![:scale 30%](assets/vim.svg)
 
 ]
 .column[
 
-![:scale 50%](assets/firefox.svg)
+![:scale 30%](assets/firefox.svg)
 
 ]
 .column[
@@ -206,7 +199,7 @@ Distributing and using software as a Docker image gives you:
 ---
 
 name: part2
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Running Containers
@@ -545,9 +538,8 @@ The Docker commands we've covered so far are:
 * `docker stop <CONTAINER ID>`, which stops a running container
 ---
 
-
 name: part3
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Making your Own Image
@@ -744,7 +736,7 @@ And while that's running, we'll move onto the next topic...
 ---
 
 name: part4
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Docker on HPC
@@ -807,41 +799,43 @@ name: end
 class: center, middle
 layout: false
 
-
 # That's All 👨🏻‍🎓
 # Thank you for listening!
 
+---
 
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
-
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>
