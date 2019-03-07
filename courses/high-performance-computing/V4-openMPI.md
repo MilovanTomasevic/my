@@ -36,6 +36,10 @@ layout: true
 ## MPI ciljna arhitektura
 
 ![:scale 80%](img/mpi.png)
+--
+class: center, middle, overlay, noselect, con
+
+# aaa
 
 ---
 

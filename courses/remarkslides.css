@@ -1,14 +1,28 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-body { font-family: 'Roboto'; }
-/* */
-h1, h2, h3 {
-  font-family: 'Yanone Kaffeesatz';
-  font-weight: normal;
-  padding: 0
-}
+body {
+    font-family: 'Playfair Display';
+    color: rgb(51, 51, 51)
+  }
+
+  h1 { font-family: "Playfair Display"; font-size: 26px; font-style: normal; font-variant: normal; font-weight: bold; line-height: 28px; } 
+  h2, h3, h4 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0.2em
+  }
+  .remark-slide-content h1 { font-size: 3em; }
+  .remark-slide-content h2 { font-size: 2em; }
+  .remark-slide-content h3 { font-size: 1.6em; }
+
+  .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+  .remark-code-line-highlighted     { background-color: #373832; }
+
 
 h1 {
     color: rgb(96, 96, 96);
@@ -88,8 +102,22 @@ blockquote {
 .rcol-wide2 { width: 74%; float: right; }
 .wide { clear: both; }
 
+.l-col {
+    color: #777;
+    width: 20%;
+    height: 92%;
+    float: left;
+  }
+  .r-col {
+    width: 75%;
+    float: right;
+    padding-top: 1em;
+  }
+
+
+
 code { -moz-border-radius: 5px; -web-border-radius: 5px; border-radius: 5px; background: #e7e8e2;}
-a { color: #2b7aaa; text-decoration: none; }
+a { color: #4598cc; text-decoration: none; }
 em { color: #c63235 }
 .remark-slide-content { font-size: 25px; }
 ul>li, ol>li { margin-top: 5px; }
@@ -108,9 +136,9 @@ ul>li, ol>li { margin-top: 5px; }
 .footer.small { font-size: 50%; }
 .footer, li > p { margin:0; }
 .ref { color:red; vertical-align: super; font-size: 70%; }
-.created { font-size: 40%; margin-bottom: 2em; }
+.created { font-size: 60%; margin-bottom: 5em; font-family: "Playfair Display"; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 22px;}
 .created:before {
-    content: "Kreirano: ";
+    content: "👨🏻‍💻➙ ";
 }
 
 .noselect {
