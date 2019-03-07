@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## state Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/state.py.png)
-
 
 ## Python-Design-Patterns state
 
@@ -38,7 +36,6 @@ Implements state transitions by invoking methods from the pattern's superclass.
 
 from __future__ import print_function
 
-
 class State(object):
 
     """Base state. This is to share functionality"""
@@ -49,7 +46,6 @@ class State(object):
         if self.pos == len(self.stations):
             self.pos = 0
         print(u"Scanning... Station is %s %s" % (self.stations[self.pos], self.name))
-
 
 class AmState(State):
     def __init__(self, radio):
@@ -62,7 +58,6 @@ class AmState(State):
         print(u"Switching to FM")
         self.radio.state = self.radio.fmstate
 
-
 class FmState(State):
     def __init__(self, radio):
         self.radio = radio
@@ -73,7 +68,6 @@ class FmState(State):
     def toggle_amfm(self):
         print(u"Switching to AM")
         self.radio.state = self.radio.amstate
-
 
 class Radio(object):
 
@@ -90,7 +84,6 @@ class Radio(object):
 
     def scan(self):
         self.state.scan()
-
 
 # Test our radio out
 if __name__ == '__main__':
@@ -123,7 +116,6 @@ state.py
 # -*- coding: utf-8 -*-
 import unittest
 from behavioral.state import Radio
-
 
 class RadioTest(unittest.TestCase):
     """

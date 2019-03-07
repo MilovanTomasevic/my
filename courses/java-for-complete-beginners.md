@@ -7,7 +7,6 @@ hide_description: true
 
 ---
 
-
      
 ## Table of Contents
 {:.no_toc}
@@ -16,9 +15,7 @@ hide_description: true
 
 ---
 
-
 ## A Hello World Program
-
 
 ```java
 public class Application {
@@ -1112,8 +1109,6 @@ public class Oak extends Plant {
 world/Oak.java
 {:.figure}
 
-
-
 ```java
 import world.Plant;
  
@@ -1618,7 +1613,6 @@ public class Application {
 demo1/Application.java
 {:.figure}
 
-
 ```java
 package demo2;
  
@@ -1647,7 +1641,6 @@ public class Application {
 ```
 demo2/Application.java
 {:.figure}
-
 
 ```java
 package demo3;
@@ -1764,7 +1757,6 @@ public class Application {
 Application.java
 {:.figure}
 
-
 ## Runtime vs. checked Exceptions
 
 ```java
@@ -1872,7 +1864,6 @@ public class Car extends Machine {
 ```
 Car.java
 {:.figure}
-
 
 ```java
 public class Application {
@@ -2219,7 +2210,6 @@ public class Application {
 Application.java
 {:.figure}
 
-
 ## Enum Types - Basic and Advanced Usage
 
 ```java
@@ -2502,7 +2492,6 @@ public class WriteObjects {
 ```
 WriteObjects.java
 {:.figure}
-
 
 ```java
 import java.io.FileInputStream;
@@ -3243,7 +3232,6 @@ public class Application {
 Application.java
 {:.figure}
 
-
 ## Using Iterators
 
 ```java
@@ -3387,7 +3375,6 @@ UrlIterator.java
 
 ## Deciding Which Collections to use
 
-
 ```java
 import java.util.ArrayList;
 import java.util.Collection;
@@ -3479,7 +3466,6 @@ public class Application {
 Application.java
 {:.figure}
 
-
 ## Complex Data Structures
 
 ```java
@@ -3542,5 +3528,4 @@ public class Application {
 ```
 Application.java
 {:.figure}
-
 

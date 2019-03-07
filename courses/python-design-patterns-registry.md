@@ -14,18 +14,15 @@ hide_description: true
 
 ---
 
-
 ## registry Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/registry.py.png)
-
 
 ## Python-Design-Patterns registry
 
 ```py
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 
 class RegistryHolder(type):
 
@@ -44,7 +41,6 @@ class RegistryHolder(type):
     def get_registry(cls):
         return dict(cls.REGISTRY)
 
-
 class BaseRegisteredClass(object):
     __metaclass__ = RegistryHolder
     """
@@ -53,7 +49,6 @@ class BaseRegisteredClass(object):
         class and the associated value, the class itself.
     """
     pass
-
 
 if __name__ == "__main__":
     print("Before subclassing: ")

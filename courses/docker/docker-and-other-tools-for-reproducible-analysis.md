@@ -487,7 +487,6 @@ The Docker commands we've covered so far are:
 * `docker stop <CONTAINER ID>`, which stops a running container
 ---
 
-
 name: part3
 class: center, middle
 layout: false
@@ -749,9 +748,7 @@ name: end
 class: center, middle
 layout: false
 
-
 # That's All 👨🏻‍🎓
 # Thank you for listening!
-
 
 {% endblock %}

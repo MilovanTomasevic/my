@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## publish_subscribe Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/publish_subscribe.py.png)
-
 
 ## Python-Design-Patterns publish_subscribe
 
@@ -30,7 +28,6 @@ Reference:
 http://www.slideshare.net/ishraqabd/publish-subscribe-model-overview-13368808
 Author: https://github.com/HanWenfang
 """
-
 
 class Provider:
     def __init__(self):
@@ -52,14 +49,12 @@ class Provider:
                 sub.run(msg)
         self.msg_queue = []
 
-
 class Publisher:
     def __init__(self, msg_center):
         self.provider = msg_center
 
     def publish(self, msg):
         self.provider.notify(msg)
-
 
 class Subscriber:
     def __init__(self, name, msg_center):
@@ -74,7 +69,6 @@ class Subscriber:
 
     def run(self, msg):
         print("{} got {}".format(self.name, msg))
-
 
 def main():
     message_center = Provider()
@@ -102,7 +96,6 @@ def main():
 
     message_center.update()
 
-
 if __name__ == "__main__":
     main()
 
@@ -117,7 +110,6 @@ if __name__ == "__main__":
 publish_subscribe.py
 {:.figure}
 
-
 ## publish_subscribe Test
 
 ```py
@@ -130,7 +122,6 @@ try:
     from unittest.mock import patch, call
 except ImportError:
     from mock import patch, call
-
 
 class TestProvider(unittest.TestCase):
     """

@@ -15,7 +15,6 @@ hide_description: true
 ---
 ## Zadatak 1
 
-
 ```py
 import random
 import time
@@ -51,7 +50,6 @@ zadatak1.py
 
 ## Zadatak 2
 
-
 ```py
 import random
 import time
@@ -86,7 +84,6 @@ zadatak2.py
 
 ## Zadatak 3
 
-
 ```py
 import random
 import time
@@ -118,7 +115,6 @@ zadatak3.py
 {:.figure}
 
 ## Zadatak 4
-
 
 ```py
 import random

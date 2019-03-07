@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## chaining_method Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/chaining_method.py.png)
-
 
 ## Python-Design-Patterns chaining_method
 
@@ -28,7 +26,6 @@ hide_description: true
 
 from __future__ import print_function
 
-
 class Person(object):
     def __init__(self, name, action):
         self.name = name
@@ -37,7 +34,6 @@ class Person(object):
     def do_action(self):
         print(self.name, self.action.name, end=' ')
         return self.action
-
 
 class Action(object):
     def __init__(self, name):
@@ -49,7 +45,6 @@ class Action(object):
 
     def stop(self):
         print('then stop')
-
 
 if __name__ == '__main__':
 

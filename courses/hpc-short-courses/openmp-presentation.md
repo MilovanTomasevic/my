@@ -50,7 +50,6 @@ layout: true
 
 ![:scale 80%](img/openmp.gif)
 
-
 ---
 ## Execution model
 
@@ -76,7 +75,6 @@ layout: true
 - E.g. inspecting an OpenMP program with 4 threads, using ‘top’ command:
 
 ![:scale 85%](img/multi.png)
-
 
 ---
 
@@ -107,7 +105,6 @@ layout: true
 - Exercises in this course will be in C/C++, but note that OpenMP also supports Fortran
 
 ---
-
 
 ## C/C++ program structure
 
@@ -199,11 +196,8 @@ gcc -o omp_hello omp_hello.c -fopenmp
 ]
 ]
 
-
-
 ---
 ## Exercise: OpenMP parallel “Hello world”
-
 
 .message.is-success[
 .message-header[
@@ -448,6 +442,5 @@ class: center, middle
 
 # That's All 👨🏻‍🎓
 # Thank you for listening!
-
 
 {% endblock %}

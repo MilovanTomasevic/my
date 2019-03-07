@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## iterator Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/iterator.py.png)
-
 
 ## Python-Design-Patterns iterator
 
@@ -36,13 +34,11 @@ Traverses a container and accesses the container's elements.
 
 from __future__ import print_function
 
-
 def count_to(count):
     """Counts by word numbers, up to a maximum of five"""
     numbers = ["one", "two", "three", "four", "five"]
     for number in numbers[:count]:
         yield number
-
 
 # Test the generator
 count_to_two = lambda: count_to(2)

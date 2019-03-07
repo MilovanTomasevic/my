@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## 3-tier Model
 
 ![](/courses/python-fesign-patterns/structural/viz/3-tier.py.png)
-
 
 ## Python-Design-Patterns 3-tier
 
@@ -30,7 +28,6 @@ hide_description: true
 *TL;DR80
 Separates presentation, application processing, and data management functions.
 """
-
 
 class Data(object):
     """ Data Store Class """
@@ -45,7 +42,6 @@ class Data(object):
         print("(Fetching from Data Store)")
         return {'products': self.products}
 
-
 class BusinessLogic(object):
     """ Business logic holding data store instances """
 
@@ -56,7 +52,6 @@ class BusinessLogic(object):
 
     def product_information(self, product):
         return self.data['products'].get(product, None)
-
 
 class Ui(object):
     """ UI interaction class """
@@ -82,7 +77,6 @@ class Ui(object):
         else:
             print('That product "{0}" does not exist in the records'.format(product))
 
-
 def main():
     ui = Ui()
     ui.get_product_list()
@@ -90,7 +84,6 @@ def main():
     ui.get_product_information('eggs')
     ui.get_product_information('milk')
     ui.get_product_information('arepas')
-
 
 if __name__ == '__main__':
     main()

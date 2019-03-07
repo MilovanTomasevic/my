@@ -44,7 +44,6 @@ Zadatak
 ]
             
 
-
 ---
 
 ## Drugi deo
@@ -67,7 +66,6 @@ Zadatak
   -  Izdvojiti predmete koje je polagalo više od 5 različitih studenata.
 ]
 ]
-
 
   
 ---
@@ -101,8 +99,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Drugi deo
 
@@ -121,8 +117,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 layout: false
@@ -130,6 +124,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

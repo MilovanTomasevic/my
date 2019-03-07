@@ -7,9 +7,7 @@ hide_description: true
 
 ---
 
-
      
-
 
 ![](../db/1.png)
 
@@ -21,13 +19,10 @@ Model baze podataka
 Model baze podataka
 {:.figure}
 
-
-
 ```sql
 
 DROP DATABASE stud2011;
 CREATE DATABASE stud2011;
-
 
 create table dosije (
   indeks      INT      not null,  
@@ -47,8 +42,6 @@ insert into dosije values
 (20100025, 'Predrag', 'Popovic', 1991, 'Kraljevo'),
 (20100026, 'Zorica', 'Miladinovic', 1993, 'Vranje')
 ;
-
-
 
 create table predmet (
   id_predmeta     INT      not null,
@@ -76,7 +69,6 @@ insert into predmet values
 (4002, 'R102', 'Uvod u Veb i Internet tehnologije', 5)
 ;
 
-
 create table ispitni_rok (
   godina_roka     INT     not null,
   oznaka_roka     varchar(20)  not null,
@@ -94,8 +86,6 @@ insert into ispitni_rok values
 (2011, 'okt', 'Oktobar 2011')
 ;
 
-
-
 create table ispit (
   indeks          INT      not null,
   id_predmeta     INT      not null,
@@ -110,7 +100,6 @@ create table ispit (
   foreign key (indeks) references dosije(indeks),
   foreign key (id_predmeta)references predmet(id_predmeta)
 );
-
 
 insert into ispit values 
 (20100021, 1001, 2011, 'jan', 9, '20.01.2011'),

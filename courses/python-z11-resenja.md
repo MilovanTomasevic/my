@@ -16,7 +16,6 @@ hide_description: true
 
 ## Functions
 
-
 ```py
 import sys
 from graph import *
@@ -117,7 +116,6 @@ functions.py
 
 ## Graph
 
-
 ```py
 import sys
 from math import inf
@@ -168,7 +166,6 @@ graph.py
 {:.figure}
 
 ## Zadatak 1
-
 
 ```py
 import sys

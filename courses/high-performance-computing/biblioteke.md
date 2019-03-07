@@ -74,11 +74,9 @@ layout: true
 
 ---
 
-
 ## Nivoi
 
 .lcol[
-
 
 - Sve `BLAS` operacije se mogu podeliti na 3 nivoa po svojoj prirodi:
 	1. Vektor-vektor
@@ -102,7 +100,6 @@ layout: true
 ]
 
 ]
-
 
 ---
 
@@ -222,10 +219,6 @@ layout: true
     $$ 3. \quad  ||x||_{∞}=max(|x_{i}|) $$
 </p>
 
-
-
-
-
 ---
 
 ## `BLAS`, nivo 1, operacije rotacije
@@ -239,12 +232,10 @@ layout: true
 
 ]
 
-
 <p>
     $$ 1. \quad  \left(\begin{array}{c}c  \quad  s\\ -s  \quad c\end{array}\right)\left(\begin{array}{c}a\\ b\end{array}\right)=\left(\begin{array}{c}\sqrt{|a|^{2}+|b|^{2}}\\ 0\end{array}\right) $$
     $$ 2. \quad  x_{i}=cx_{i}+sy_{i} \\  \quad y_{i}=-sx_{i}+cy_{i} $$
 </p>
-
 
 ---
 
@@ -257,7 +248,6 @@ layout: true
 | `rotmg` |  roračuna modifikovanu Givensovu rotacionu matricu. Ako su dati skalirajući faktori `d1` i `d2` i koordinate `(x1, y1)` ulaznog vektora sračunati `2x2` matricu H takvu da .ref[1] |          s,d          |
 |  `rotm` |                                                                     Za vektore `x` i `y` proračuna .ref[2]                                                                        |          s,d          |
 ]
-
 
 <p>
     $$ 1. \quad  \left(\begin{array}{c}x_{1}\\ 0\end{array}\right)=H\left(\begin{array}{c}x_{1}\sqrt{d_{1}}\\ y_{1}\sqrt{d_{2}}\end{array}\right) $$
@@ -278,7 +268,6 @@ layout: true
 |   `rk`  |                           Računa opštu jednačinu .ref[1]                          |
 |  `r2k`  |                           Računa opštu jednačinu .ref[2]                          |
 ]
-
 
 <p>
     $$ 1. \quad  C=\alpha AA^{T}+\beta C $$
@@ -371,7 +360,6 @@ int main()
 
 ---
 
-
 ## Upotreba (2/3)
 
 ```c
@@ -403,8 +391,6 @@ int main()
 ] 
 
 ---
-
-
 
 ## Upotreba (3/3)
 
@@ -519,7 +505,6 @@ int main()
 ---
 ## Upotreba (1/2)
 
-
 ```c
 #include <stdio.h>
 #include <lapacke.h>
@@ -538,7 +523,6 @@ int main (int argc, const char * argv[])
     lda = 3;
     ldb = 1;
 
-
 ```
 .footer.medium[
   [High Performance Computing: Modern Systems and Practices no. 325 ](https://books.google.si/books?id=qOHIBAAAQBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false)
@@ -548,7 +532,6 @@ int main (int argc, const char * argv[])
 ---
 
 ## Upotreba (2/2)
-
 
 ```c
     // Solve the linear system
@@ -575,7 +558,6 @@ int main (int argc, const char * argv[])
   [High Performance Computing: Modern Systems and Practices no. 325 ](https://books.google.si/books?id=qOHIBAAAQBAJ&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false)
 
 ] 
-
 
 ---
 ## Skalabilnost `BLAS/LAPACK`
@@ -626,7 +608,6 @@ int main (int argc, const char * argv[])
 
 ---
 
-
 name: ostalo
 layout: false
 class: center, middle
@@ -638,7 +619,6 @@ class: center, middle
 layout: true
 
 .section[[Ostale primene](#sadrzaj)]
-
 
 ---
 
@@ -690,6 +670,5 @@ layout: true
 ## Vizuelizacija
  
 - O ovome, celo predavanje, ali najbitnija biblioteka u ovoj oblasti jeste *VTK: Visualization Toolkit*.
-
 
 {% endblock %}

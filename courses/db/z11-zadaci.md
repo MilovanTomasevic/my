@@ -32,8 +32,6 @@ Zadatak
 ]
             
 
-
-
 ---
 
 ## Drugi deo
@@ -53,8 +51,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 ## Treći deo
@@ -71,7 +67,6 @@ Zadatak
       - napisati naredbu koja ažurira tabelu predmet_student, tako što predmetima o kojima postoji evidencija ažurira broj studenata koji su ga položili, a za predmete o kojima ne postoji evidencija unosi podatke.
 ]
 ]
-
 
 ---
 ## Četvrti deo
@@ -91,10 +86,6 @@ Zadatak
     - Naredba podatke o studentima koji su se ispisali briše iz tabele, a unosi podatke o studentima koji se nisu ispisali i o njima ne postoje podaci u tabeli student_podaci. Za studente o kojima nema podataka uneti indeks, broj položenih predmeta i prosek.
 ]
 ]
-
-
-
-
 
 ---
 ## Peti deo
@@ -116,8 +107,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 layout: false
@@ -125,6 +114,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

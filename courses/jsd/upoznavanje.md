@@ -91,7 +91,6 @@
 
 .paznja[I pored timskog rada svi bodovi se dobijaju individualno.]
 
-
 ---
 
 # Literatura za predmet
@@ -107,6 +106,5 @@
   on [the author's blog](https://tomassetti.me/), February 2017.
 - Beazley, David M. *Python essential reference*. Addison-Wesley Professional,
   2009.
-
 
 {% endblock %}

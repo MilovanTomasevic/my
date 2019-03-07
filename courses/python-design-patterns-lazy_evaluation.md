@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## lazy_evaluation Model
 
 ![](/courses/python-fesign-patterns/creational/viz/lazy_evaluation.py.png)
-
 
 ## Python-Design-Patterns lazy_evaluation
 
@@ -50,7 +48,6 @@ Delays the eval of an expr until its value is needed and avoids repeated evals.
 from __future__ import print_function
 import functools
 
-
 class lazy_property(object):
     def __init__(self, function):
         self.function = function
@@ -63,7 +60,6 @@ class lazy_property(object):
         obj.__dict__[self.function.__name__] = val
         return val
 
-
 def lazy_property2(fn):
     attr = '_lazy__' + fn.__name__
 
@@ -74,7 +70,6 @@ def lazy_property2(fn):
         return getattr(self, attr)
 
     return _lazy_property
-
 
 class Person(object):
     def __init__(self, name, occupation):
@@ -93,7 +88,6 @@ class Person(object):
         self.call_count2 += 1
         return "Father and mother"
 
-
 def main():
     Jhon = Person('Jhon', 'Coder')
     print(u"Name: {0}    Occupation: {1}".format(Jhon.name, Jhon.occupation))
@@ -106,7 +100,6 @@ def main():
     print(Jhon.__dict__)
     print(Jhon.parents)
     print(Jhon.call_count2)
-
 
 if __name__ == '__main__':
     main()
@@ -126,7 +119,6 @@ if __name__ == '__main__':
 lazy_evaluation.py
 {:.figure}
 
-
 ## lazy_evaluation Test
 
 ```py
@@ -135,7 +127,6 @@ lazy_evaluation.py
 from __future__ import print_function
 import unittest
 from creational.lazy_evaluation import Person
-
 
 class TestDynamicExpanding(unittest.TestCase):
     def setUp(self):

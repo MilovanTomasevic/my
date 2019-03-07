@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## builder Model
 
 ![](/courses/python-fesign-patterns/creational/viz/builder.py.png)
-
 
 ## Python-Design-Patterns builder
 
@@ -59,7 +57,6 @@ https://sourcemaking.com/design_patterns/builder
 Decouples the creation of a complex object and its representation.
 """
 
-
 # Abstract Building
 class Building(object):
     def __init__(self):
@@ -75,7 +72,6 @@ class Building(object):
     def __repr__(self):
         return 'Floor: {0.floor} | Size: {0.size}'.format(self)
 
-
 # Concrete Buildings
 class House(Building):
     def build_floor(self):
@@ -84,7 +80,6 @@ class House(Building):
     def build_size(self):
         self.size = 'Big'
 
-
 class Flat(Building):
     def build_floor(self):
         self.floor = 'More than One'
@@ -92,17 +87,14 @@ class Flat(Building):
     def build_size(self):
         self.size = 'Small'
 
-
 # In some very complex cases, it might be desirable to pull out the building
 # logic into another function (or a method on another class), rather than being
 # in the base class '__init__'. (This leaves you in the strange situation where
 # a concrete class does not have a useful constructor)
 
-
 class ComplexBuilding(object):
     def __repr__(self):
         return 'Floor: {0.floor} | Size: {0.size}'.format(self)
-
 
 class ComplexHouse(ComplexBuilding):
     def build_floor(self):
@@ -111,13 +103,11 @@ class ComplexHouse(ComplexBuilding):
     def build_size(self):
         self.size = 'Big and fancy'
 
-
 def construct_building(cls):
     building = cls()
     building.build_floor()
     building.build_size()
     return building
-
 
 # Client
 if __name__ == "__main__":
@@ -138,7 +128,6 @@ if __name__ == "__main__":
 builder.py
 {:.figure}
 
-
 ## builder Test
 
 ```py
@@ -146,7 +135,6 @@ builder.py
 # -*- coding: utf-8 -*-
 import unittest
 from creational.builder import construct_building, House, Flat, ComplexHouse
-
 
 class TestSimple(unittest.TestCase):
     def test_house(self):
@@ -158,7 +146,6 @@ class TestSimple(unittest.TestCase):
         flat = Flat()
         self.assertEqual(flat.size, 'Small')
         self.assertEqual(flat.floor, 'More than One')
-
 
 class TestComplex(unittest.TestCase):
     def test_house(self):

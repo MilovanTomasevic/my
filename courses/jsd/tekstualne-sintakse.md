@@ -34,7 +34,6 @@ Osnovne klase alata:
 
 ## Parsiranje - sintaksna analiza
 
-
 - Analiza linearnog zapisa niza simbola na osnovu pravila neke formalne
   gramatike jezika.
 - Transformacija ulaznog stringa u *stablo parsiranja* ili neku drugu strukturu
@@ -114,7 +113,6 @@ Osnovne klase alata:
   različitim stablima parsiranja ali je suština izraza ista i može rezultovati
   istim stablom apstraktne sintakse.
 
-
 ---
 name: formalne-gramatike
 class: center, middle
@@ -151,7 +149,6 @@ Formalna gramatika je `G = (N, Σ, P, S)` gde je:
   `(Σ ∪ N)∗ N(Σ ∪ N)∗ → (Σ ∪ N)∗`
 - `S` - neterminal iz skupa N (S ∈ N) koga nazivamo *početnim simbolom*.
 
-
 ---
 
 ## Klasifikacija formalnih gramatika po Čomskom
@@ -164,7 +161,6 @@ Formalne gramatike se mogu klasifikovati prema hijerarhijskoj klasifikaciji
   - *tipa 2 - kontekstno zavisne* - produkcije oblika: `αAβ → αγβ`
   - *tipa 1 - kontekstno slobodne* - produkcije oblika: `A → γ`
   - *tipa 0 - regularne* - produkcije oblika: `A → a, A → aB`
-
 
 .footer[
   1. http://en.wikipedia.org/wiki/Chomsky_hierarchy
@@ -256,7 +252,6 @@ S (startni simbol)
 ```
 ]
 
-
 .footer[
 https://en.wikipedia.org/wiki/Context-free_grammar
 ]
@@ -313,7 +308,6 @@ https://en.wikipedia.org/wiki/Context-free_grammar
 
 ---
 
-
 ## Višeznačne gramatike - primer - *dangling else*
 
 .medium[
@@ -335,7 +329,6 @@ if a then (if b then s else s2)
   izbegava višeznačnost. Na primer, za kod `if-else` klauzule može se dodati
   ključna reč `endif`.
 ]
-
 
 ---
 
@@ -439,8 +432,6 @@ grammar = { rule } ;
 .footer[
 http://en.wikipedia.org/wiki/Extended_Backus-Naur_Form
 ]
-
-
 
 ---
 name: strategije-parsiranja
@@ -724,7 +715,5 @@ http://www.dabeaz.com/ply/ply.html#ply_nn22
   gramatiku*.
 - Brz round-trip. Nema generisanja parsera. Moguća izmena gramatike "u letu".
 - Arpeggio, parglare i textX rade kao interpreteri.
-
-
 
 {% endblock %}

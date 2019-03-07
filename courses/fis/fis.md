@@ -94,7 +94,6 @@ layout: true
 
 ## Organizacija
 
-
 .lcol-narrow.medium[
 
 - U školskom centru je studentski dom, blizu železničke stanice.
@@ -117,7 +116,6 @@ layout: true
 .center[
   <iframe width="380" height="245" allowfullscreen src="https://www.youtube.com/embed/kUvr5JyQVH8"></iframe>
 ]
-
 
 ---
 name: studijskiProgrami
@@ -154,8 +152,6 @@ Info
 ]
 ]
 
-
-
 .lcol[
 ![:scale 61%](fis/predavanja3.png)
 ]
@@ -185,7 +181,6 @@ Info
 |9.| Statistika 1                              |   Statistika 1 | Izborni predmet 1  | Izborni predmet 1  |  .center[**/**]|  Diplomski rad |
 |10.| Statistika 2                              |   Statistika 2  |  Izborni predmet 2 | Izborni predmet 2  | .center[**/**]|.center[**/**] |
 
-
 ]
 ]
 
@@ -211,7 +206,6 @@ Info
 ]
 
 ![:scale 40%](fis/fis3.jpg)
-
 
 ---
 
@@ -254,9 +248,7 @@ Info
 ]
 ]
 
-
 ![:scale 35%](fis/fis4.jpg)
-
 
 ---
 

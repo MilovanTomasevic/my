@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## parameter_injection Model
 
 ![](/courses/python-fesign-patterns//dft/parameter_injection.py.png)
-
 
 ## Python-Design-Patterns parameter_injection
 
@@ -46,7 +44,6 @@ class TimeDisplay(object):
         return current_time_as_html_fragment
 """
 
-
 class TimeDisplay(object):
     def __init__(self):
         pass
@@ -55,7 +52,6 @@ class TimeDisplay(object):
         current_time = time_provider.now()
         current_time_as_html_fragment = "<span class=\"tinyBoldText\">{}</span>".format(current_time)
         return current_time_as_html_fragment
-
 
 class ProductionCodeTimeProvider(object):
     """
@@ -68,7 +64,6 @@ class ProductionCodeTimeProvider(object):
         current_time_formatted = "{}:{}".format(current_time.hour, current_time.minute)
         return current_time_formatted
 
-
 class MidnightTimeProvider(object):
     """
     Class implemented as hard-coded stub (in contrast to configurable stub).
@@ -80,7 +75,6 @@ class MidnightTimeProvider(object):
 ```
 parameter_injection.py
 {:.figure}
-
 
 ## parameter_injection Test
 
@@ -106,7 +100,6 @@ production code (have a look into constructor_injection.py) is used:
         result = class_under_test.get_current_time_as_as_html_fragment()
         self.assertEqual(result, expected_time)
 """
-
 
 class ParameterInjectionTest(unittest.TestCase):
     def test_display_current_time_at_midnight(self):

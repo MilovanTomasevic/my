@@ -73,7 +73,6 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ---
 
-
 ## Implementacije Python-a
 
 - CPython
@@ -84,7 +83,6 @@ Namespaces are one honking great idea -- let's do more of those!
 - ...
 
 ---
-
 
 ## Python konzola
 
@@ -507,7 +505,6 @@ for name in b:
 
 ## Iteracija i petlje (3)
 
-
 - I mape
 
 ```python
@@ -595,7 +592,6 @@ c 89
 
 ## Funkcije (3)
 
-
 - Sve reference unutar funkcije su unutar opsega funkcije (scope)
 - Ako treba da referenciramo globalnu varijablu deklarišemo je sa ključnom
   rečju `global`.
@@ -614,7 +610,6 @@ def foo2():
 ---
 
 ## Generatori
-
 
 Umesto jedne vrednosti funkcija može generisati sekvencu vrednosti.
 
@@ -696,7 +691,6 @@ niti i višenitnog programiranja.
 - Objekat se sastoji od internih podataka i metoda koje operišu nad njima.
 - Metode i atributi objekta se mogu izlistati ugrađenom funkcijom `dir`.
 
-
 Stringovi su objekti.
 
 ```python
@@ -746,7 +740,6 @@ Liste su objekti
 ---
 
 ## Objekti i klase (3)
-
 
 - Specijalne metode su oblika `__xxx__`
 - Ove metode se koriste za implementaciju npr. operatora (npr. +, -, \*, in...)i
@@ -1256,7 +1249,6 @@ False
 
 ---
 
-
 ## *First-Class Objects*
 
 - Svi objekti u Python-u su "prvog reda" (*first-class*)
@@ -1678,7 +1670,6 @@ while True:
 
 ## Raspakivanje elemenata
 
-
 Ukoliko su svim elementi kolekcije sekvence iste dužine moguće je uraditi
 sledeće:
 
@@ -1778,7 +1769,6 @@ layout: true
 
 ## Osnove
 
-
 Definisanje funkcije
 
 ```python
@@ -1870,7 +1860,6 @@ print f(*a)   # n-torka a se "razlaže" i prosleđuje poziciono
 ```
 ]
 
-
 ---
 
 ## Prosleđivanje parametara po nazivu
@@ -1925,7 +1914,6 @@ make_table(items, fgcolor="black", bgcolor="white", border=1,
 
 Mogu se kombinovati pozicioni i imenovani parametri dok god se imenovani (`**`)
 nalaze na kraju
-
 
 Različit broj pozicionih i imenovanih parametara
 
@@ -2030,7 +2018,6 @@ def countdown(start):
 ```
 ]
 
-
 ---
 
 ## Dekoratori
@@ -2073,7 +2060,6 @@ def trace(func):
 ```
 ]]
 
-
 ---
 
 ## Dekoratori (2)
@@ -2094,7 +2080,6 @@ def grok(x):
   pass
 grok = foo(bar(spam(grok)))
 ```
-
 
 ---
 
@@ -2131,7 +2116,6 @@ def eventhandler(event):
   return register_function
 ```
 ]
-
 
 ---
 
@@ -2170,7 +2154,6 @@ for item1 in iterable1:
           if conditionN: s.append(expression)
 ```
 ]]
-
 
 ---
 
@@ -2224,11 +2207,9 @@ koji izračunava vrednosti na zahtev (lenja evaluacija).
 ```
 ]
 
-
 ---
 
 ## Generator izrazi - primer
-
 
 ```python
 f = open("data.txt")
@@ -2238,7 +2219,6 @@ comments = (t for t in lines if t[0] == '#')
 for c in comments:
   print(c)
 
-
 # Uvek se može konvertovati u listu
 clist = list(comments)
 ```
@@ -2246,7 +2226,6 @@ clist = list(comments)
 ---
 
 ## `lambda` iskaz
-
 
 Kreiranje anonimne funkcije.
 
@@ -2390,7 +2369,6 @@ class EvilAccount(Account):
     else:
       return self.balance
 
-
 c = EvilAccount("George", 1000.00)
 c.deposit(10.0)
 available = c.inquiry()
@@ -2480,7 +2458,6 @@ d.deposit_fee()   # DepositCharge.deposit_fee().  Fee je 5.00
 d.withdraw_fee()  # WithdrawCharge.withdraw_fee(). Fee je 5.00 ??
 ```
 ]
-
 
 ---
 
@@ -2609,7 +2586,6 @@ b = d.now()         # Poziva Date.now(Date)
 
 ---
 
-
 ## *Properties*
 
 - Specijalna vrsta atributa koja dinamički izračunava svoju vrednost.
@@ -2687,7 +2663,6 @@ class A(object):
   def bar(self):
     self.__spam()       # Poziva A.__spam()
 
-
 class B(A):
   def __init__(self):
     A.__init__(self)
@@ -2742,12 +2717,9 @@ isinstance(a, A)  # True
 isinstance(b, A)  # True, B nasleđuje A
 isinstance(b, C)  # False, B ne nasleđuje C
 
-
 issubclass(B,A)   # True
 issubclass(C,A)   # False
 ```
-
-
 
 ---
 layout: false
@@ -2764,7 +2736,6 @@ layout: true
 ---
 
 ## Moduli i `import` iskaz
-
 
 - Svaki pajton fajl može da se koristi kao modul.
 - `import` iskaz *uvozi* definicije iz drugog modula u tekući prostor imena
@@ -2795,7 +2766,6 @@ s.grok()
 ...
 ```  
 ]
-
 
 ---
 
@@ -2911,7 +2881,6 @@ else:
 Za više informacija videti [relativni import i ime paketa na SO](http://stackoverflow.com/questions/14132789/relative-imports-for-the-billionth-time)
 ]
 
-
 ---
 layout: false
 name: alati
@@ -2936,17 +2905,14 @@ layout: true
 
 ## IPython mogućnosti
 
-
 - Dopuna sa TAB tasterom
 - Istraživanje objekata sa ?
 - *Autoreload* modula
 - *Magic* funkcije
 
-
 ---
 
 ## Primer sesije
-
 
 ```python
 [igor@sizif]$ ipython2
@@ -2968,7 +2934,6 @@ In [2]:
 ---
 
 ## Dopuna koda
-
 
 Pritisak na taster TAB
 
@@ -3011,7 +2976,6 @@ In [8]:
 
 ## Proširene informacije o objektima
 
-
 Iza naziva reference staviti znak "??"
 
 ```
@@ -3039,7 +3003,6 @@ return normpath(path)
 
 ## *paste* više linija koda
 
-
 - Ponekad je zgodno u cilju testiranja *paste*-ovati blok koda na konzolu
   uz očuvanje indentacije.
 - Za ovu namenu koristi se magična funkcija `%paste`
@@ -3058,7 +3021,6 @@ def napravi_klasu():
 ---
 
 ## Reload modula
-
 
 - Problem kod izmene koda posle import-a.
 - Dva načina:
@@ -3092,11 +3054,9 @@ Upotrebom IPython konzole:
 
 Pomoć: `random` modul
 
-
 ---
 
 ## [PyCharm](http://www.jetbrains.com/pycharm/)
-
 
 ![PyCharm](Python/PyCharm.png)
 
@@ -3118,7 +3078,6 @@ Pomoć: `random` modul
 
 ![PyDev](Python/PyDev.png)
 
-
 ---
 
 ## PyDev - osobine
@@ -3131,7 +3090,6 @@ Pomoć: `random` modul
 - Podrška za Django i Django template
 - Pisan u Javi, radi na svim vodećim OS
 
-
 ---
 
 ## Editori
@@ -3141,8 +3099,6 @@ Pomoć: `random` modul
 - Sublime
 - Atom
 - ...
-
-
 
 ---
 layout: false
@@ -3230,7 +3186,6 @@ $ python setup.py develop
 
 Za deinstalaciju razvojnog paketa koristi se:
 
-
 ```
 $ python setup.py develop --uninstall
 ```
@@ -3283,7 +3238,6 @@ if __name__=="__main__":
 
 .footer[Primer preuzet sa [ove adrese](http://www.pythonforbeginners.com/code-snippets-source-code/google-command-line-script/) i prilagođen kursu]
 
-
 ---
 
 ## Kreiranje distribucija iz `setup.py`
@@ -3305,7 +3259,6 @@ $ python setup.py bdist
 ```
 $ python setup.py bdist_wininst
 ```
-
 
 ---
 
@@ -3335,7 +3288,6 @@ $ python setup.py bdist_wheel
 
 ## `pip` alat
 
-
 Osnovne komande:
 
 .lcol[
@@ -3360,7 +3312,6 @@ Osnovne komande:
 
         pip uninstall ime_paketa
 ]
-
 
 ---
 
@@ -3409,7 +3360,6 @@ rmvirtualenv typhoon
 
 ## Aktivacija virtuelnog okruženja
 
-
 ```bash
 $ source JSD/bin/activate
 (JSD)$
@@ -3431,7 +3381,6 @@ wheel (0.30.0a0)
 ---
 
 ## Instalacija paketa u virtuelno okruženje
-
 
 .medium[
 ```bash

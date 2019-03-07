@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## strategy Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/strategy.py.png)
-
 
 ## Python-Design-Patterns strategy
 
@@ -60,7 +58,6 @@ Enables selecting an algorithm at runtime.
 
 import types
 
-
 class StrategyExample:
     def __init__(self, func=None):
         self.name = 'Strategy Example 0'
@@ -70,14 +67,11 @@ class StrategyExample:
     def execute(self):
         print(self.name)
 
-
 def execute_replacement1(self):
     print(self.name + ' from execute 1')
 
-
 def execute_replacement2(self):
     print(self.name + ' from execute 2')
-
 
 if __name__ == '__main__':
     strat0 = StrategyExample()
@@ -100,7 +94,6 @@ if __name__ == '__main__':
 strategy.py
 {:.figure}
 
-
 ## strategy Test
 
 ```py
@@ -109,7 +102,6 @@ strategy.py
 import os
 import subprocess
 import unittest
-
 
 class StrategyTest(unittest.TestCase):
     def test_print_output(self):

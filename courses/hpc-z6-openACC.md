@@ -23,7 +23,6 @@ apt-get install libopenmpi-dev
 apt-get install openmpi-bin 
 ```
 
-
 ### Compilation & Running OpenMP
 ```sh
 gcc -o name name.c -fopenmp
@@ -47,7 +46,6 @@ gcc -o izvrsna_dat izvorna_dat.c -fopenacc
 ## Primeri 
 
 ### ptraliasing.c
-
 
 ~~~c
 void assign(int *a, int *b, int size) {
@@ -93,7 +91,6 @@ parallel.c
 
 ### parallelloop.c
 
-
 ~~~c
 #include <stdlib.h>
 #include <openacc.h>
@@ -120,7 +117,6 @@ parallelloop.c
 {:.figure}
 
 ### data.c
-
 
 ~~~c
 #include <stdlib.h>

@@ -16,12 +16,10 @@ hide_description: true
 
 ## Zadatak 1
 
-
 ```py
 import sys
 import random
 import time
-
 
 def random_list(values, elements):
     list = [random.choice(values) for _ in range(elements)]
@@ -95,7 +93,6 @@ def test_iterative(i):
     end_time = time.clock() - start_time
 
     print("Elements:", i, "Duration iterative: ", end_time)
-
 
 if __name__ == "__main__":
     X = "BDCABA"

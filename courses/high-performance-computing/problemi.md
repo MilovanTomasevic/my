@@ -172,13 +172,11 @@ $$ F_{i}(t)=-Gm_{i}\sum_{j=0, j\neq i}^{n-1}\frac{m_{j}}{||r_{i}(t)-r_{j}(t)||^{
 
 - Koristeći Njutnov drugi zakon u vektorskoj formulaciji imamo onda:
 
-
 <p>
 
 $$ F_{i}(t)=m_{i}\ddot{r}_{i}(t) \quad za \quad i=0,1,...,n-1 $$
   
 </p>
-
 
 ---
 
@@ -271,7 +269,6 @@ foreach particle j{
 ---
 
 ## Matrica sile
-
 
 <p>
 
@@ -386,8 +383,6 @@ v[i].y += dt*f[i].y/m[i];
 
 ## Particija
 
-
-
 .lcol[
 
 - Particija je podela osnovnog zadatka na pod-zadatke na najprimitivnijem nivou.
@@ -401,11 +396,9 @@ v[i].y += dt*f[i].y/m[i];
 
 ]
 
-
 ---
 
 ## Komunikacija
-
 
 .lcol[
 
@@ -441,7 +434,6 @@ v[i].y += dt*f[i].y/m[i];
 
 ## Mapiranje
 
-
 .lcol[
 
 ![:scale 90%](img/map.png)
@@ -453,8 +445,6 @@ v[i].y += dt*f[i].y/m[i];
 - Mapiranje je takođe podložno ograničenjima, specifično, ograničenjima hardvera/arhitekture.
 
 ]
-
-
 
 ---
 
@@ -476,7 +466,6 @@ $$ F_{i}(t_{k-1}), \quad v_{i}(t_{k}), \quad r_{i}(t_{k}) $$
 $$ Za\quad v_{i}(t_{k})\quad treba \\ v_{i}(t_{k-1}), \quad F_{i}(t_{k-1}), \quad r_{i}(t_{k-1}), \quad v_{j}(t_{k-1}) \\ Za\quad v_{i}(t_{k})\quad treba \\ r_{i}(t_{k-1}), \quad v_{i}(t_{k-1}) $$
   
 </p>
-
 
 ---
 
@@ -539,8 +528,6 @@ $$ Za\quad v_{i}(t_{k})\quad treba \\ v_{i}(t_{k-1}), \quad F_{i}(t_{k-1}), \qua
 
 ## Analiza prve petlje
 
-
-
 .lcol[
 
 ```c
@@ -564,11 +551,9 @@ $$ Za\quad v_{i}(t_{k})\quad treba \\ v_{i}(t_{k-1}), \quad F_{i}(t_{k-1}), \qua
 
 ]
 
-
 ---
 
 ## Analiza druge petlje
-
 
 .lcol[
 
@@ -624,7 +609,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 ---
 
 ## Naivno rešenje
-
 
 ```c
     1:    for each particle i do
@@ -705,7 +689,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
     6:    end for
 ```
 
-
 ---
 
 ## Pregledanje izvornog koda OpenMP implementacije
@@ -761,9 +744,7 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 
 ## Pregledati kod
 
-
 - <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ Predavanja/`mpi_nbody_basic.c`</a>
-
 
 ---
 
@@ -776,7 +757,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 - Ovo je jako kompleksno, ali ako se implementira kako treba je šansa za istinski skalabilan i efikasan proces za računanje proizvoljno velikih n-tela simulacija.
 
 ---
-
 
 ## Prstenska komunikaciona šema
 
@@ -797,7 +777,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 
 ---
 
-
 ## Paralelizacija redukovanog algoritma kroz MPI
 
 - Neka je broj čestica dodeljenih jednom procesu l
@@ -811,7 +790,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 ## Primer prstenskog stila komunikacije za n=4, p=2
 
 .center-table.small[
-
 
 |         **Vreme**        |  **Promenljiva** | **Proces0** | **Proces1** |
 |:------------------------:|:----------------:|:-----------:|:-----------:|
@@ -827,7 +805,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 | Posle prve komunik acije |   lokalna_sila   |    f02,0    |    f13,0    |
 | Posle prve komunik acije |   priv_pozicija  |    s1,s3    |    s0,s2    |
 | Posle prve komunik acije |   priv_sila      |    0,-f13   |    0,-f02   |
-
 
 ]
 
@@ -853,7 +830,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 |   Posle proračuna sila   |     priv_sila    |        0,-f02-f12        |     -f01,-f03-f13-f23     |
 
 ]
-
 
 ---
 
@@ -889,7 +865,5 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 
 - Vrlo dobar pregled problema N tela se može naći u Grop, Lusk, i Skjellum — Using MPI: Portable Parallel Programming with the Message Passing Interface u sekciji 5.2.
 - Više o efikasnoj integraciji diferencijalnih jednačina ima u: William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery. 2007. Numerical Recipes 3rd Edition: The Art of Scientific Computing (3 ed.). Cambridge University Press, New York, NY, USA. i to u poglavlju 17, stranica 899. Naročito obratite pažnju na sekcije 17.0 i 17.1.
-
-
 
 {% endblock %}

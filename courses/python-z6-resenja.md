@@ -16,11 +16,9 @@ hide_description: true
 
 ## Zadatak 1
 
-
 ```py
 import sys
 from math import inf
-
 
 class histogram:
     def __init__(self, value, freq):
@@ -44,7 +42,6 @@ def get_histogram(L):
         res.append(a)
     return res
 
-
 def get_min_freq_elem(H):
     m = histogram('\0', inf)
     for i in H:
@@ -52,14 +49,11 @@ def get_min_freq_elem(H):
             m = i
     return m
 
-
 def remove_elem(el, L):
     L.remove(el)
 
-
 def put_elem(el, L):
     L.append(el)
-
 
 def make_new_elem(el1, el2):
     n = node(el1.freq + el2.freq)
@@ -79,7 +73,6 @@ def get_enc_val(ch, L):
         ch = ch.par
     return res[::-1]
 
-
 def test(s):
     print(s)
     H = get_histogram(s)
@@ -93,7 +86,6 @@ def test(s):
         put_elem(m, H)
     for ch in C:
         print(ch.value, get_enc_val(ch, H))
-
 
 if __name__ == "__main__":
     test_cases = [['a', 'b'], ['a', 'b', 'a', 'b', 'a', 'b', 'a', 'b', 'a', 'b'], ['a', 'a', 'b', 'b', 'b', 'c', 'c', 'c', 'c'], ['a', 'a', 'b', 'b', 'b', 'c', 'c', 'c', 'c', 'd', 'd', 'd', 'd', 'd'], ['a', 'a', 'a', 'b', 'b', 'b', 'b', 'c', 'c', 'c', 'c', 'c', 'd', 'd', 'd', 'd', 'd', 'd', 'e', 'e', 'f']]

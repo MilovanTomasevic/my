@@ -157,7 +157,6 @@ end
 
 ## Instanciranje meta-modela
 
-
 ```python
 from textx import metamodel_from_file
 robot_mm = metamodel_from_file('robot.tx')
@@ -353,7 +352,6 @@ class: center, middle
 
 # Napredne tehnike - [pyFlies](https://github.com/igordejanovic/pyFlies)
 
-
 ---
 class: center, middle
 
@@ -366,10 +364,5 @@ class: center, middle
               
 
           
-
-
-
-
-
 
 {% endblock %}

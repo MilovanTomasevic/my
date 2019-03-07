@@ -28,8 +28,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Zadatak 2
 
@@ -44,8 +42,6 @@ Zadatak
 - `def GetOutDegrees(graph) --> returns List`
 ]
 ]
-
-
 
 ---
 ## Zadatak 3
@@ -63,8 +59,6 @@ prosleđuju kao parametar.
 ]
 ]
 
-
-
 ---
 
 ## Zadatak 4
@@ -80,12 +74,8 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Zadatak 5
-
-
 
 .message.is-info[
 .message-header[

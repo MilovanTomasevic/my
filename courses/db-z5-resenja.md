@@ -39,7 +39,6 @@ where god_rodjenja < any ( select god_rodjenja
 
 ## Primer 3
 
-
 ```sql
 select distinct current_time from dosije; values current time;
 select current_time from sysibm.sysdummy1;
@@ -47,13 +46,11 @@ select current_time from sysibm.sysdummy1;
 
 ## Primer 4
 
-
 ```sql
 values user;
 ```
 
 ## Primer 5
-
 
 ```sql
 values dayname(date('18.11.2010')); 
@@ -62,20 +59,17 @@ values dayname('18.11.2010');
 
 ## Primer 6
 
-
 ```sql
 values (dayofyear(current_date), week(current_date), dayofweek(current_date), dayname(current_date), monthname(current_date));
 ```
 
 ## Primer 7
 
-
 ```sql
 values second(current_time);
 ```
 
 ## Primer 8
-
 
 ```sql
 values date('2008-11-11') - date('2005-08-06');
@@ -87,13 +81,11 @@ values (day(date('2008-11-11') - date('2005-08-06')), month(date('2008-11-11') -
 
 ## Primer 9
 
-
 ```sql
 values current date + 12 years + 5 months + 25 days;
 ```
 
 ## Primer 10
-
 
 ```sql
 select *
@@ -107,7 +99,6 @@ where datum_ispita>'2011-01-28';
 
 ## Primer 11
 
-
 ```sql
 select *
 from ispit
@@ -115,7 +106,6 @@ where current_date-datum_ispita < 800;
 ```
 
 ## Primer 12
-
 
 ```sql
 select indeks, ime || ' ' || prezime "ime i prezime", substr(ime,1,1) || substr(prezime,1,1) inicijali, replace(mesto_rodjenja, 'Beograd', 'Bg') "mesto rodjenja"
@@ -127,7 +117,6 @@ from dosije;
 
 ## Primer 13
 
-
 ```sql
 select indeks, ime, prezime, coalesce(mesto_rodjenja, 'Nepoznato') as "mesto rodjenja" 
 from dosije;
@@ -136,13 +125,11 @@ from dosije;
 
 ## Primer 14
 
-
 ```sql
 values char(current_time, ISO), char(current_time, USA), char(current_time, LOCAL);
 ```
 
 ## Primer 15
-
 
 ```sql
 -- a)
@@ -157,7 +144,6 @@ where ceil(bodovi*1.2)>8;
 
 ## Primer 16
 
-
 ```sql
 select indeks, naziv, ocena, year(current_date-datum_ispita) godina, month(current_date- datum_ispita) meseci, day(current_date-datum_ispita) dana
 from ispit i 
@@ -166,7 +152,6 @@ where year(current_date-datum_ispita)<=5 ;
 ```
 
 ## Primer 17
-
 
 ```sql
 select ime, prezime from dosije d1
@@ -185,7 +170,6 @@ join dosije d2 on d1.god_rodjenja=d2.god_rodjenja-1 and d1.mesto_rodjenja=d2.mes
 ```
 
 ## Primer 18
-
 
 ```sql
 select naziv, id_predmeta from predmet p

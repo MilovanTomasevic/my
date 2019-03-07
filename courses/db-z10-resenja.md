@@ -16,14 +16,11 @@ hide_description: true
 
 ## Primer 1
 
-
-
 ```sql
 create distinct type indeks as integer with comparisons;
 ```
 
 ## Primer 2
-
 
 ```sql
 create table dosije1 (
@@ -39,7 +36,6 @@ primary key (indeks),
 
 ## Primer 3
 
-
 ```sql
 insert into dosije1
 select indeks, id_smera, status, ime, prezime, dat_upisa 
@@ -47,7 +43,6 @@ from dosije;
 ```
 
 ## Primer 4
-
 
 ```sql
 select d1.indeks + d2.indeks
@@ -61,7 +56,6 @@ where d1.indeks=indeks(20060001) and d2.indeks=indeks(20060005);
 
 ## Primer 5
 
-
 ```sql
 create function godinaupisa(indeks indeks) -- drugo je tip, prvo ulazna promenljiva... 
 returns integer
@@ -69,7 +63,6 @@ return integer(indeks)/10000;
 ```
 
 ## Primer 6
-
 
 ```sql
 create function brojindeksa(indeks indeks) 
@@ -82,7 +75,6 @@ from dosije1;
 
 ## Primer 7
 
-
 ```sql
 create function max (indeks) 
 returns indeks
@@ -93,7 +85,6 @@ from dosije1;
 ```
 
 ## Primer 8
-
 
 ```sql
 create distinct type bodovi as smallint with comparisons;
@@ -133,7 +124,6 @@ join polozenobodova pk on pk.indeks=d.indeks; );
 
 ## Primer 9
 
-
 ```sql
 with na_smeru as (
 select d.id_smera, count(distinct d.indeks) n, avg(ocena+0.0) ocena 
@@ -155,7 +145,6 @@ order by ocena;
 ```
 
 ## Primer 10
-
 
 ```sql
 update dosije

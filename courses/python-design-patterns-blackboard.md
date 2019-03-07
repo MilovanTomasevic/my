@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## blackboard Model
 
 ![](/courses/python-fesign-patterns/other/blackboard.py.png)
-
 
 ## Python-Design-Patterns blackboard
 
@@ -40,7 +38,6 @@ https://en.wikipedia.org/wiki/Blackboard_system
 import abc
 import random
 
-
 class Blackboard(object):
     def __init__(self):
         self.experts = []
@@ -54,7 +51,6 @@ class Blackboard(object):
     def add_expert(self, expert):
         self.experts.append(expert)
 
-
 class Controller(object):
     def __init__(self, blackboard):
         self.blackboard = blackboard
@@ -65,7 +61,6 @@ class Controller(object):
                 if expert.is_eager_to_contribute:
                     expert.contribute()
         return self.blackboard.common_state['contributions']
-
 
 class AbstractExpert(object):
 
@@ -82,7 +77,6 @@ class AbstractExpert(object):
     def contribute(self):
         raise NotImplementedError('Must provide implementation in subclass.')
 
-
 class Student(AbstractExpert):
     @property
     def is_eager_to_contribute(self):
@@ -93,7 +87,6 @@ class Student(AbstractExpert):
         self.blackboard.common_state['suggestions'] += random.randint(1, 10)
         self.blackboard.common_state['contributions'] += [self.__class__.__name__]
         self.blackboard.common_state['progress'] += random.randint(1, 2)
-
 
 class Scientist(AbstractExpert):
     @property
@@ -106,7 +99,6 @@ class Scientist(AbstractExpert):
         self.blackboard.common_state['contributions'] += [self.__class__.__name__]
         self.blackboard.common_state['progress'] += random.randint(10, 30)
 
-
 class Professor(AbstractExpert):
     @property
     def is_eager_to_contribute(self):
@@ -117,7 +109,6 @@ class Professor(AbstractExpert):
         self.blackboard.common_state['suggestions'] += random.randint(10, 20)
         self.blackboard.common_state['contributions'] += [self.__class__.__name__]
         self.blackboard.common_state['progress'] += random.randint(10, 100)
-
 
 if __name__ == '__main__':
     blackboard = Blackboard()

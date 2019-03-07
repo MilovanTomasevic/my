@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## specification Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/specification.py.png)
-
 
 ## Python-Design-Patterns specification
 
@@ -35,7 +33,6 @@ Provides recombination business logic by chaining together using boolean logic.
 
 from abc import abstractmethod
 
-
 class Specification(object):
     def and_specification(self, candidate):
         raise NotImplementedError()
@@ -49,7 +46,6 @@ class Specification(object):
     @abstractmethod
     def is_satisfied_by(self, candidate):
         pass
-
 
 class CompositeSpecification(Specification):
     @abstractmethod
@@ -65,7 +61,6 @@ class CompositeSpecification(Specification):
     def not_specification(self):
         return NotSpecification(self)
 
-
 class AndSpecification(CompositeSpecification):
     _one = Specification()
     _other = Specification()
@@ -76,7 +71,6 @@ class AndSpecification(CompositeSpecification):
 
     def is_satisfied_by(self, candidate):
         return bool(self._one.is_satisfied_by(candidate) and self._other.is_satisfied_by(candidate))
-
 
 class OrSpecification(CompositeSpecification):
     _one = Specification()
@@ -89,7 +83,6 @@ class OrSpecification(CompositeSpecification):
     def is_satisfied_by(self, candidate):
         return bool(self._one.is_satisfied_by(candidate) or self._other.is_satisfied_by(candidate))
 
-
 class NotSpecification(CompositeSpecification):
     _wrapped = Specification()
 
@@ -99,21 +92,17 @@ class NotSpecification(CompositeSpecification):
     def is_satisfied_by(self, candidate):
         return bool(not self._wrapped.is_satisfied_by(candidate))
 
-
 class User(object):
     def __init__(self, super_user=False):
         self.super_user = super_user
-
 
 class UserSpecification(CompositeSpecification):
     def is_satisfied_by(self, candidate):
         return isinstance(candidate, User)
 
-
 class SuperUserSpecification(CompositeSpecification):
     def is_satisfied_by(self, candidate):
         return getattr(candidate, 'super_user', False)
-
 
 if __name__ == '__main__':
     print('Specification')
@@ -126,7 +115,6 @@ if __name__ == '__main__':
     print(root_specification.is_satisfied_by(andrey))
     print(root_specification.is_satisfied_by(ivan))
     print(root_specification.is_satisfied_by(vasiliy))
-
 
 ### OUTPUT ###
 # Specification

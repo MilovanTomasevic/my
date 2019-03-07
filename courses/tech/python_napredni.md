@@ -14,7 +14,6 @@ name: sadrzaj
 - [Višestruko nasleđivanje i MRO](#višestruko-nasleđivanje-i-mro)
 - [Metaklase](#metaklase)
 
-
 ---
 name: specijalne-metode
 class: center, middle
@@ -40,7 +39,6 @@ layout: true
   - `__eq__`
   - `...`
 - Implementacija *protokola*
-
 
 ---
 ## Iterabilni objekti
@@ -293,7 +291,6 @@ obj.full_file_name = '/neka/putanja/neko_ime.ext'
 - Objekat čuva atribute `file_path` i `file_name`.
 - Atribut `full_file_name` je izveden.
 
-
 ---
 name: descriptors
 class: center, middle
@@ -354,7 +351,6 @@ except ValueError:
     print "Woops. Not allowed"
 ```
 ]
-
 
 .footer.small[
 Chris Beaumont: [Python Descriptors Demystified](http://nbviewer.jupyter.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb)
@@ -429,7 +425,6 @@ except ValueError:
 Chris Beaumont: [Python Descriptors Demystified](http://nbviewer.jupyter.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb)
 ]
 
-
 ---
 name: decorators
 class: center, middle
@@ -483,7 +478,6 @@ def trace(func):
 ```
 ]
 
-
 ---
 
 ## Dekoratori (2)
@@ -504,7 +498,6 @@ def grok(x):
   pass
 grok = foo(bar(spam(grok)))
 ```
-
 
 ---
 
@@ -541,7 +534,6 @@ def eventhandler(event):
   return register_function
 ```
 ]
-
 
 ---
 layout: false
@@ -699,7 +691,6 @@ Called example function
 ```
 ]
 
-
 ---
 ## `total_ordering`
 
@@ -717,7 +708,6 @@ class Student:
         return ((self.lastname.lower(), self.firstname.lower()) <
                 (other.lastname.lower(), other.firstname.lower()))
 ```
-
 
 .footer.small[
 https://docs.python.org/2/library/functools.html
@@ -911,7 +901,6 @@ def tee(iterable, n=2):
     return tuple(gen(d) for d in deques)
 ```
 
-
 ---
 name: collections
 class: center, middle
@@ -983,7 +972,6 @@ OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 Point(x=11, y=22)
 ```
 
-
 ---
 ## deque
 
@@ -1020,7 +1008,6 @@ deque(['f', 'g', 'h', 'i', 'j'])
 ```
 ]
 
-
 ---
 ## Counter
 
@@ -1051,7 +1038,6 @@ deque(['f', 'g', 'h', 'i', 'j'])
 Counter({'a': 3, 'b': 0, 'c': -3, 'd': -6})
 ```
 
-
 ---
 ## defaultdict
 
@@ -1069,7 +1055,6 @@ Counter({'a': 3, 'b': 0, 'c': -3, 'd': -6})
 >>> sorted(d.items())
 [('blue', [2, 4]), ('red', [1]), ('yellow', [1, 3])]
 ```
-
 
 ---
 name: višestruko-nasleđivanje-i-mro
@@ -1098,7 +1083,6 @@ layout: true
 [Wikipedia: Multiple inheritance](https://en.wikipedia.org/wiki/Multiple_inheritance)
 ]
 
-
 ---
 ## *Method Resolution Order* (MRO)
 
@@ -1116,7 +1100,6 @@ layout: true
 - Dinamički određuje metodu/atribut na osnovu MRO.
 - Klase koje koriste višestruko nasleđivanje treba da se pišu na određeni način.
 - Obavezno koristiti `super` umesto direktnog navođenja klase.
-
 
 ---
 ## `super`
@@ -1145,7 +1128,6 @@ class LoggingOD(LoggingDict, collections.OrderedDict):
 .footer.small[
 [Raymond Hettinger:  Python’s super() considered super!](https://rhettinger.wordpress.com/2011/05/26/super-considered-super/)
 ]
-
 
 ---
 ## Parametri metoda
@@ -1178,7 +1160,6 @@ cs = ColoredShape(color='red', shapename='circle')
 - Kod primera sa konstruktorom `__init__` metoda postoji i u `object` korenskoj
   klasi. Izuzetak se može pojaviti ukoliko nismo iscrpeli sve parametre u
   `**kwds` što je svakako greška.
-
 
 ---
 ## Pretraga metoda
@@ -1285,8 +1266,6 @@ layout: true
   kreiranje?
 - Klase imaju svoje "klase" koje nazivamo metaklasama.
 
-
-
 ---
 ## Metaklase
 
@@ -1300,7 +1279,6 @@ layout: true
   poziva metaklasu.
 - Pojednostavljeno gledano `class` iskaz možemo smatrati lepšom sintaksom
   (*Syntactic sugar*) za poziv `type` ili neke druge metaklase.
-
 
 ---
 ## `type`
@@ -1347,7 +1325,6 @@ True
 
 ---
 ## Korisnička metaklasa
-
 
 ```python
 >>> class Meta(type):
@@ -1399,9 +1376,5 @@ True
 ## Metaklase - više detalja
 
 - [Ionel Cristian Mărieș: Understanding Python metaclasses](https://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/)
-
-
-
-
 
 {%endblock %}

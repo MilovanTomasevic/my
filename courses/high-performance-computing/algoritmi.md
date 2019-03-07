@@ -11,7 +11,6 @@ layout: true
 
 .section[[Paralelni algoritmi](#sadrzaj)]
 
-
 ---
 
 ## Objedinjenje
@@ -99,7 +98,6 @@ layout: true
 
 ## Fork/join
 
-
 ![:scale 75%](img/fork-join-thread.png)
 
 ---
@@ -153,7 +151,6 @@ layout: true
 
 ![:scale 60%](img/quicksort.png)
 
-
 ---
 
 ## Quicksort
@@ -192,7 +189,6 @@ private void SmartSort(List<int> list, int lo, int hi){
 ```
 ]
 
-
 ---
 
 ## Paralelizacija Quicksort algoritma
@@ -202,7 +198,6 @@ private void SmartSort(List<int> list, int lo, int hi){
 - Nema izazova, pokrenemo rekurzivne komponente u paraleli i gotovi smo.
 - Problem je u distribuiranim arhitekturama gde to što je neophodno da se podaci prebacuju sa mesta na mesto dramatično smanjuje efikasnost.
 - Rešenje? Quicksort modifikacija bazirana na uzorkovanju.
-
 
 ---
 
@@ -324,7 +319,6 @@ $$ \frac{\partial f}{\partial t}=-v\frac{\partial f}{\partial x} $$
   
 </p>
 
-
 ---
 
 ## Advekcija
@@ -332,7 +326,6 @@ $$ \frac{\partial f}{\partial t}=-v\frac{\partial f}{\partial x} $$
 - Numerički, možemo da rešimo pređašnju jednačinu kroz metod konačnih razlika.
 - Prvo, diskretizujemo i vreme (`n+1`) i prostor(`i`), vreme u korake simulacije `dt`, a prostor u uniformni meš.
 - Onda se situacija svodi na rešavanje jednačine
-
 
 <p>
 
@@ -395,7 +388,6 @@ $$ f_{i}^{n+1}=f_{i}^{n}-v\frac{dt}{dx}(\frac{f_{i}^{n+1}-f_{i}^{n}}{dx}) $$
 ## Kanonov algoritam
 
 ![:scale 75%](img/k2.png)
-
 
 ---
 
@@ -474,7 +466,5 @@ $$ C_{11}=A_{10}B_{01}+A_{11}B_{11}+A_{12}B_{21}+A_{13}B_{31} \\ korak\quad 3:A_
 	- `Breakthrough wanted`: Imati softverske alate koji paralelizuju umesto nas bi bilo zgodno.
 
 - Takođe se još više koristi za grafove usled prirodnog homomorfizma između njega i domena problema. 
-
-
 
 {% endblock %}

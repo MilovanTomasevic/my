@@ -34,7 +34,6 @@ Info
 ]
 ]
 
-
 ---
 name: danas 
 class: center, middle
@@ -69,8 +68,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 ## Drugi deo
@@ -90,8 +87,6 @@ Zadatak
     - Izdvojiti nazive predmeta i njihovu cenu za samofinansirajuće studente izraženu u dinarima. Jedan bod košta 1500 dinara. Između kolone naziv i kolone cena dodati kolonu u kojoj će za svaku vrstu biti ispisanoCena u dinarima.
 ]
 ]
-
-
 
 ---
 
@@ -119,7 +114,6 @@ Zadatak
 ]
 ]
 
-
 ---
 ## Četvrti deo
 
@@ -140,7 +134,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 ## Peti deo
@@ -159,8 +152,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 layout: false
@@ -168,6 +159,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

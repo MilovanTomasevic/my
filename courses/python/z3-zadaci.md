@@ -27,8 +27,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Zadatak 2
 
@@ -43,13 +41,9 @@ Zadatak
 ]
 ]
 
-
-
-
 ---
 
 ## Napomene:
-
 
 .message.is-warning[
 .message-header[

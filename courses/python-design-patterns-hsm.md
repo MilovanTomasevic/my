@@ -14,7 +14,6 @@ hide_description: true
 
 ---
 
-
 ## hsm Model
 
 ![](/courses/python-fesign-patterns/other/hsm/classes_hsm.png)
@@ -38,18 +37,14 @@ in Python
 - message type considered, messages (comment) not considered to avoid complexity
 """
 
-
 class UnsupportedMessageType(BaseException):
     pass
-
 
 class UnsupportedState(BaseException):
     pass
 
-
 class UnsupportedTransition(BaseException):
     pass
-
 
 class HierachicalStateMachine(object):
     def __init__(self):
@@ -114,7 +109,6 @@ class HierachicalStateMachine(object):
         else:
             raise UnsupportedMessageType
 
-
 class Unit(object):
     def __init__(self, HierachicalStateMachine):
         self.hsm = HierachicalStateMachine
@@ -134,7 +128,6 @@ class Unit(object):
     def on_operator_inservice(self):
         raise UnsupportedTransition
 
-
 class Inservice(Unit):
     def __init__(self, HierachicalStateMachine):
         self._hsm = HierachicalStateMachine
@@ -149,7 +142,6 @@ class Inservice(Unit):
         self._hsm._check_mate_status()
         self._hsm._send_switchover_response()
 
-
 class Active(Inservice):
     def __init__(self, HierachicalStateMachine):
         self._hsm = HierachicalStateMachine
@@ -162,7 +154,6 @@ class Active(Inservice):
         self._hsm.on_switchover()  # message ignored
         self._hsm.next_state('standby')
 
-
 class Standby(Inservice):
     def __init__(self, HierachicalStateMachine):
         self._hsm = HierachicalStateMachine
@@ -170,7 +161,6 @@ class Standby(Inservice):
     def on_switchover(self):
         super(Standby, self).on_switchover()  # message ignored
         self._hsm._next_state('active')
-
 
 class OutOfService(Unit):
     def __init__(self, HierachicalStateMachine):
@@ -180,7 +170,6 @@ class OutOfService(Unit):
         self._hsm.on_switchover()  # message ignored
         self._hsm.send_operator_inservice_response()
         self._hsm.next_state('suspect')
-
 
 class Suspect(OutOfService):
     def __init__(self, HierachicalStateMachine):
@@ -199,7 +188,6 @@ class Suspect(OutOfService):
         super(Suspect, self).abort_diagnostics()
         super(Suspect, self).on_operator_inservice()  # message ignored
 
-
 class Failed(OutOfService):
     """No need to override any method."""
 
@@ -208,7 +196,6 @@ class Failed(OutOfService):
 ```
 hsm.py
 {:.figure}
-
 
 ## hsm Test
 
@@ -230,7 +217,6 @@ try:
     from unittest.mock import patch
 except ImportError:
     from mock import patch
-
 
 class HsmMethodTest(unittest.TestCase):
     @classmethod
@@ -260,7 +246,6 @@ class HsmMethodTest(unittest.TestCase):
         return_value = cls.hsm._perform_switchover()
         expected_return_value = 'perform switchover'
         cls.assertEqual(return_value, expected_return_value)
-
 
 class StandbyStateTest(unittest.TestCase):
     """ Exemplary 2nd level state test class (here: Standby state). Add missing

@@ -14,7 +14,6 @@ hide_description: true
 
 ---
 
-
 ## Setup
 
 ### Installation
@@ -23,7 +22,6 @@ hide_description: true
 apt-get install libopenmpi-dev 
 apt-get install openmpi-bin 
 ```
-
 
 ### Compilation & Running OpenMP
 ```sh
@@ -40,9 +38,7 @@ mpirun -np 1 ./filename # -lm
 
 ## Exercises
 
-
 ### omp_threadnum.c
-
 
 ```c 
 #include <omp.h>
@@ -57,7 +53,6 @@ omp_threadnum.c - exercises
 {:.figure}
 
 ### omp_hello.c
-
 
 ```c 
 #include <omp.h>
@@ -75,7 +70,6 @@ omp_hello.c - exercises
 {:.figure}
 
 ### omp_private.c
-
 
 ```c 
 #include <omp.h>
@@ -99,7 +93,6 @@ omp_private.c - exercises
 {:.figure}
 
 ### omp_vectadd.c
-
 
 ```c 
 #include <omp.h>
@@ -137,9 +130,7 @@ printf("Summed vectors a and b in %g seconds\n", end-start);
 omp_vectadd.c - exercises
 {:.figure}
 
-
 ### omp_pi.c
-
 
 ```c 
 #include <omp.h>
@@ -179,7 +170,6 @@ omp_pi.c - exercises
 
 ### omp_threadnum.c
 
-
 ```c 
 #include <omp.h>
 #include <stdio.h>
@@ -193,7 +183,6 @@ omp_threadnum.c - solutions
 {:.figure}
 
 ### omp_hello.c
-
 
 ```c 
 #include <omp.h>
@@ -212,7 +201,6 @@ omp_hello.c - solutions
 {:.figure}
 
 ### omp_private.c
-
 
 ```c 
 #include <omp.h>
@@ -235,9 +223,7 @@ int tid, nthreads;
 omp_private.c - solutions
 {:.figure}
 
-
 ### omp_vectadd.c
-
 
 ```c 
 #include <omp.h>
@@ -277,7 +263,6 @@ omp_vectadd.c - solutions
 {:.figure}
 
 ### omp_pi.c
-
 
 ```c 
 #include <omp.h>

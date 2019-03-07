@@ -63,7 +63,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 ## Drugi deo
@@ -88,8 +87,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 ## Treći deo
@@ -111,7 +108,6 @@ Zadatak
 ]
 ]
 
-
 ---
 ## Četvrti deo
 
@@ -132,8 +128,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 layout: false
@@ -141,6 +135,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

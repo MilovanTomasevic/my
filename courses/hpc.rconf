@@ -4,7 +4,6 @@ template = "template.html"
 author = "[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)"
 affiliation = "[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]"
 
-
 "high-performance-computing/uvod.md" 
     title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
     subtitle = "Uvod"
@@ -33,9 +32,6 @@ affiliation = "[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https:
     title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
     subtitle = "Algoritmi" 
 
-
-
-
 "high-performance-computing/V1-openMP.md" 
     title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
     subtitle = "V1-openMP"
@@ -63,5 +59,4 @@ affiliation = "[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https:
 "high-performance-computing/V7-openACC.md"
     title = "[High-performance computing (HPC)](/courses/#table-of-contents)"
     subtitle = "V7-openACC" 
-
 

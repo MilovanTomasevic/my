@@ -65,7 +65,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 ## Drugi deo
@@ -88,7 +87,6 @@ Zadatak
 
 ]
 ]
-
 
 ---
 
@@ -128,7 +126,6 @@ Zadatak
 ]
 ]
 
-
 ---
 ## Četvrti deo
 
@@ -147,8 +144,6 @@ Zadatak
         - nije položio sve predmete od 6 kredita.
 ]
 ]
-
-
 
 ---
 
@@ -181,7 +176,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 layout: false
@@ -189,6 +183,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

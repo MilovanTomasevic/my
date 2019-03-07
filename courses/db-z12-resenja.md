@@ -16,8 +16,6 @@ hide_description: true
 
 ## Primer 1
 
-
-
 ```sql
 with uslovni(id_predmeta, id_uslovnog) as (
 select id_predmeta, id_uslovnog
@@ -35,7 +33,6 @@ join predmet p2 on p2.id_predmeta=u.id_uslovnog;
 
 ## Primer 2
 
-
 ```sql
 with uslovni(nivo, id_predmeta, id_uslovnog) as (
 select 0, id_predmeta, id_uslovnog
@@ -52,7 +49,6 @@ join predmet p2 on p2.id_predmeta=u.id_uslovnog where nivo>0;
 ```
 
 ## Primer 3
-
 
 ```sql
 with sp as (
@@ -91,7 +87,6 @@ order by procuk;
 
 ## Primer 4
 
-
 ```sql
 with prolaznost as (
 select ir.naziv naziv_roka, p.id_predmeta,
@@ -114,7 +109,6 @@ order by rang;
 ```
 
 ## Primer 5
-
 
 ```sql
 with polozeno as (
@@ -149,7 +143,6 @@ order by nepolozeno_obaveznih;
 
 ## Primer 6
 
-
 ```sql
 update upis_godine ug
 set upisano_bodova=(select sum(p.bodovi)
@@ -180,7 +173,6 @@ and upisano_bodova is not null;
 
 ## Primer 7
 
-
 ```sql
 --create trigger unos_ispita
 
@@ -201,7 +193,6 @@ end@
 ```
 
 ## Primer 8
-
 
 ```sql
 create type rsd as float;

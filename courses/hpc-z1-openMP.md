@@ -14,7 +14,6 @@ hide_description: true
 
 ---
 
-
 ```c
 #include <stdio.h>
 
@@ -40,8 +39,6 @@ int main() {
 hello_world.c
 {:.figure}
 
-
-
 ## Setup
 
 ### Installation
@@ -50,7 +47,6 @@ hello_world.c
 apt-get install libopenmpi-dev 
 apt-get install openmpi-bin 
 ```
-
 
 ### Compilation & Running OpenMP
 ```sh
@@ -75,7 +71,6 @@ gcc -o izvrsna_dat izvorna_dat.c -fopenacc
 ## Zadaci
 
 ### Pi.c
-
 
 ```c 
 #include <stdio.h>
@@ -114,7 +109,6 @@ void serial_code() {
 ```
 Pi.c - zadatak
 {:.figure}
-
 
 ### mandelbrot.c
 
@@ -187,7 +181,6 @@ void testpoint(void){
 ```
 mandelbrot.c - zadatak 
 {:.figure}
-
 
 ### linkedlist.c
 
@@ -296,12 +289,9 @@ int main(int argc, char *argv[]) {
 linkedlist.c - zadatak 
 {:.figure}
 
-
-
 ## Rešenja
 
 ### Pi.c
-
 
 ```c 
 /**
@@ -443,7 +433,6 @@ void parallel_code() {
         // napravljeno i aktivirano.
         nthrds = omp_get_num_threads();
 
-
         // Kako je neophodno sabrati sve parcijalne rezultate izvan paralelog regiona
         // (dovoljno je da) jedna od niti sacuva informaciju o broju aktivnih niti
         // unutar paralelnog regiona. Kada se paralelni region zavrsi, sve niti koje 
@@ -569,7 +558,6 @@ void parallel_code_for_construct() {
 Pi.c - rešenje
 {:.figure}
 
-
 ### mandelbrot.c
 
 ```c
@@ -643,7 +631,6 @@ void testpoint(struct d_complex c){
 ```
 mandelbrot.c - rešenje 
 {:.figure}
-
 
 ### linkedlist.c
 

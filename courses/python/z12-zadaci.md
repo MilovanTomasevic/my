@@ -46,8 +46,6 @@ Zadatak
 ---
 ## Zadatak 3
 
-
-
 .message.is-info[
 .message-header[
 Zadatak

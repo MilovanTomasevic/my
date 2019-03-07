@@ -73,7 +73,6 @@ select ime, prezime from dosije where god_rodjenja in (1989, 1992, 1998);
 
 Izdvojiti imena i prezimena studenata koji nisu rođeni 1989, 1992 ili 1988 godine.
 
-
 ```sql
 select ime, prezime from dosije where god_rodjenja not in (1989, 1992, 1998);
 

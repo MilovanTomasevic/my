@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="../remarkslides.css">
     
 
-
-
     <!-- MathJax™ -->
     <script type="text/javascript" async
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
@@ -27,7 +25,6 @@
       gtag('config', 'UA-127734928-1');
     </script>
 
-
     <!-- google analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -45,19 +42,13 @@ class: center, middle
 
 ## [Uvod u JSD](/courses/#table-of-contents)
 
-
-
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
 .small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
-
-
 .created[06.03.2019 u 14:51]
 
-
 ---
-
 
 name: sadrzaj
 
@@ -226,13 +217,11 @@ public class Course {
 
 ![:scale 70%](uvod/ChessNotation.png)
 
-
 ---
 
 ## pa čak i...
 
 ![:scale 50%](uvod/saobracajni-znaci.jpg)
-
 
 ---
 
@@ -249,7 +238,6 @@ public class Course {
 - Čest je slučaj da jezik nastane kao JSD ali se vremenom proširi do te mere da
   ga možemo smatrati JON.
 
-
 ---
 name: prednosti
 layout: false
@@ -263,7 +251,6 @@ layout: true
 .section[[Prednosti](#sadrzaj)]
 
 ---
-
 
 ## Uticaj na produktivnost
 
@@ -299,7 +286,6 @@ MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
 
 ---
 
-
 ## Zašto JSD?
 
 - JSD su koncizniji od jezika opšte namene što omogućava korisnicima da jasnije
@@ -332,7 +318,6 @@ MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
 - Prevođenje koda na ciljnu platformu (kompajliranje) će rezultovati
   konzistentnim kodom.
 
-
 ---
 
 ## Uticaj na evoluciju aplikacije
@@ -363,11 +348,9 @@ layout: true
 
 ---
 
-
 ## Arhitektura bazirana na interpreterima
 
 ![](uvod/Arhitektura-interpreter.svg)
-
 
 ---
 name: gradivni
@@ -391,7 +374,6 @@ Kao i svaki softverski jezik i JSD se sastoji od:
 - Semantike
 
 ---
-
 
 ## Apstraktna sintaksa
 
@@ -477,7 +459,6 @@ Primer istog iskaza upotrebom dve različite konkretne sintakse
   jezik. Definisan u hardveru računara (procesoru).
   
 
-
 ---
 name: klasifikacija
 layout: false
@@ -503,7 +484,6 @@ layout: true
 
 ---
 
-
 ## Tekstualne sintakse - prednosti i mane
 
 - Programeri se osećaju "kod kuće".
@@ -515,7 +495,6 @@ layout: true
   (grafovi, tabele itd.).
   
 ---
-
 
 ## Grafičke sintakse - prednosti
 
@@ -571,7 +550,6 @@ layout: true
 - Svaka namenska biblioteka može se smatrati internim JSD (API bazirani)...
 - ... ali konkretna sintaksa takvog jezika nije prilagođena domenu.
 
-
 ---
 
 ## Eksterni JSD
@@ -593,9 +571,7 @@ layout: true
 - **Window Builder**: GUI baziran, domen - izgradnja interfejsa
 - **R**: tekstualni, domen - statistička obrada podataka
 
-
 ---
-
 
 ## Primer: Interni JSD za definisanje email-a (*JavaMail API*)
 
@@ -615,7 +591,6 @@ Transport.send(message);
 
 ---
 
-
 ## Primer: Hipotetički eksterni JSD za definisanje email-a
 
 ```
@@ -631,7 +606,6 @@ SEND myMail
 ```
 
 ---
-
 
 ## Primer
 
@@ -661,7 +635,6 @@ public DSLKurs() {
 
 ---
 
-
 ## Primer
 
 Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
@@ -669,7 +642,6 @@ Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
 ![:scale 70%](uvod/GUIDSL-External.png)
 
 ---
-
 
 ## Primer
 
@@ -685,7 +657,6 @@ def calc():       return OneOrMore(expression), EOF
 ```
 
 ---
-
 
 ## Primer
 
@@ -725,7 +696,6 @@ layout: true
 
 ---
 
-
 ## Primer internog JSD (*Ruby Sinatra*)
 
 ```ruby
@@ -749,7 +719,6 @@ end
 ```
 
 ---
-
 
 ## Primer internog JSD (Groovy Gradle)
 
@@ -775,7 +744,6 @@ layout: false
 class: center, middle
 
 # Eksterni JSD omogućavaju potpuno prilagođavanje domenu.
-
 
 ---
 layout: true
@@ -832,7 +800,6 @@ ekspertima.
         http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
 ]
 
-
 ---
 name: radionice
 layout: false
@@ -846,7 +813,6 @@ layout: true
 .section[[Jezičke radionice](#sadrzaj)]
 
 ---
-
 
 ## Jezičke radionice (*Language Workbenches*)
 
@@ -865,7 +831,6 @@ layout: true
    languages*, Online
    http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
 ]
-
 
 ---
 
@@ -977,7 +942,6 @@ http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
 
 ---
 
-
 ## Xtext - *Little tortoise* gramatika
 
 .center[
@@ -1047,8 +1011,6 @@ Za dokumentaciju sa primerom izgradnje 7 različitih jezika pogledati http://www
   [Prilog metodama brzog razvoja softvera na bazi proširivih jezičkih specifikacija](http://doiserbia.nb.rs/phd/fulltext/NS20110103DEJANOVIC.pdf).
   PhD thesis, Faculty of Technical Sciences, University of Novi Sad, January
   2012
-
-
 
     </textarea>
     <script src="../remark-latest.min.js"></script>

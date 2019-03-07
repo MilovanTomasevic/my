@@ -61,7 +61,6 @@ Zadatak
 
 ## Treći deo
 
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -104,6 +103,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

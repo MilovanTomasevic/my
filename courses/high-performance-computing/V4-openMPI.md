@@ -10,7 +10,6 @@ name: sadrzaj
 - [Point to Point komunikacija](#p2p)
 - [Kolektivna komunikacija](#kk)
 
-
 ---
 name: mpi
 class: center, middle
@@ -36,13 +35,8 @@ layout: true
 ## MPI ciljna arhitektura
 
 ![:scale 80%](img/mpi.png)
---
-class: center, middle, overlay, noselect, con
-
-# aaa
 
 ---
-
 
 ## Format OpenMPI programa
 
@@ -127,7 +121,6 @@ layout: true
 
 ---
 
-
 ## Komunikatori
 
 - Logički gledano, **komunikator** predstavlja grupu procesa unutar koje
@@ -138,7 +131,6 @@ svaki proces ima svoj **rank** (odnosno identifikator).
 - `MPI_COMM_SELF, MPI_COMM_NULL`
 
 ---
-
 
 ## Komunikatori
 - Tokom izvršavanja MPI istovremeno može da postoji više komunikatora.
@@ -261,14 +253,11 @@ int MPI_Send(
 ]
 ![:scale 45%](img/p2p.gif)
 
-
-
 .footer.medium[
    <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Recv.3.php">1. OpenMPI 2.0 MPI_Recv docs</a><br>
    <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Send.3.php">2. OpenMPI 2.0 MPI_Send docs</a>
 
 ] 
-
 
 ---
 
@@ -300,7 +289,6 @@ if (rank == 0) {
 
 ---
 
-
 ## Režimi Point-to-Point komunikacije
 
 - P2P komunikacioni režimi slanja poruke:
@@ -317,7 +305,6 @@ if (rank == 0) {
 - Da `comm` parametar oba procesa ima istu vrednost,
 - Da parametar `dest` procesa 1 ima istu vrednost kao i parametar source procesa 2 ili da je vrednost parametra procesa 2 postavljena na `MPI_ANY_SOURCE`,
 - Da parametar `tag` ima istu vrednost za oba procesa ili da je vrednost parametra tag `MPI_ANY_TAG`
-
 
 .message.is-dark[
 .message-header[
@@ -344,7 +331,6 @@ MPI_{I}[S, B, R]Send(...), MPI_{I}Recv(...)
 ---
 
 ## Zadatak 2: Ping pong
-
 
 .message.is-info[
 .message-header[
@@ -384,7 +370,6 @@ Ne znači da program nije ispravan ukoliko ispis na ekranu nije u očekivanom re
 ---
 
 ## Zadatak 3: Ping pong - sekvencijalni ispis
-
 
 .message.is-info[
 .message-header[
@@ -439,9 +424,6 @@ Process 0 received token -1 from process 3
 ]
 ]
 
-
-
-
 ---
 
 ## P2P: Neblokirajuća komunikacija
@@ -472,7 +454,6 @@ int MPI_Wait(
 - Testira da li je zahtev izvršen i završava se kada se zahtev izvrši.
 - Funkcija je blokirajuća..ref[2]
 ]
-
 
 .footer.medium[
 <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Test.3.php">1. MPI_Test docs</a><br>
@@ -508,7 +489,6 @@ int MPI_Wait(
 ```
 
 ---
-
 
 ## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`send_recv_nonblocking.c`</a>
 
@@ -553,16 +533,12 @@ Odgovor
 ]
 ]
 
-
-
 ---
-
 
 ## P2P: dinamička komunikacija
 
 - Nekada poruke koje procesi razmenjuju nisu fiksne dužine. 
 - Tada je prvo potrebno očitati dužinu poruke, alocirati bafer za poruku, pa tek onda započeti njeno primanje.
-
 
 .lcol[
 
@@ -589,16 +565,13 @@ MPI_Get_count(
 - Očitava broj primljenih podataka tipa datatype na osnovu status polja..ref[2]
 ]
 
-
 .footer.medium[
 <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Probe.3.php">1. MPI_Probe docs</a><br>
 <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Get_count.3.php">2. MPI_Get_count docs</a>
 
 ] 
 
-
 ---
-
 
 ## Primer 4: dynamic_communication.c
 
@@ -648,9 +621,6 @@ Odgovor
 -  <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`ping_pong_printf_variablelen.c`</a>
 ]
 ]
-
-
-
 
 ---
 
@@ -753,7 +723,6 @@ Proces 3 primio zeton -1
 
 ---
 
-
 ## Zadatak 8: Kolektivna komunikacija nad podskupom komunikatora
 
 .message.is-info[
@@ -766,10 +735,7 @@ Zadatak
 ]
 ]
 
-
-
 ---
-
 
 ## Zadatak 8: Kolektivna komunikacija nad podskupom komunikatora
 
@@ -827,7 +793,6 @@ int MPI_Scatter(
 ] 
 
 ---
-
 
 ## Primer 6: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`scatter.c`</a>
 
@@ -927,8 +892,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 ## Kolektivna komunikacija: AllGather
@@ -961,7 +924,6 @@ int MPI_Allgather(
 .footer.medium[
     1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Allgather.3.php">MPI_Allgather docs</a>
 ] 
-
 
 ---
 
@@ -1017,7 +979,6 @@ int MPI_Reduce(
     1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Reduce.3.php">MPI_Reduce docs</a>
 ] 
 
-
 ---
 
 ## Primer 9: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`reduce.c`</a>
@@ -1050,10 +1011,7 @@ Zadatak
 ]
 ]
 
-
-
 ---
-
 
 ## Kolektivna komunikacija: AllReduce
 
@@ -1121,7 +1079,6 @@ Zadatak
 ]
 ]
 
-
 ---
 ## Zadatak 12: Množenje matrica - domaći
 
@@ -1140,8 +1097,6 @@ Zadatak
 	- OpenMPI C algoritam za množenje dve kvadratne matrice. Meriti vreme izvršavanja i ispisati ga na standardni izlaz. Ostaviti mogućnost ispisa rezultata. U simulacijama na jednom računaru OpenMPI rešenje ne mora biti brže od sekvencijalnog.
 ]
 ]
-
-
 
 ---
 

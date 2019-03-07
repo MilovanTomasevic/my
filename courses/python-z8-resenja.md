@@ -16,7 +16,6 @@ hide_description: true
 
 ## Zadatak 1
 
-
 ```py
 class Node:
     def __init__(self, val):

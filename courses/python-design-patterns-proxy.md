@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## proxy Model
 
 ![](/courses/python-fesign-patterns/structural/viz/proxy.py.png)
-
 
 ## Python-Design-Patterns proxy
 
@@ -34,11 +32,9 @@ Provides an interface to resource that is expensive to duplicate.
 from __future__ import print_function
 import time
 
-
 class SalesManager:
     def talk(self):
         print("Sales Manager ready to talk")
-
 
 class Proxy:
     def __init__(self):
@@ -55,13 +51,11 @@ class Proxy:
             time.sleep(0.1)
             print("Sales Manager is busy")
 
-
 class NoTalkProxy(Proxy):
     def talk(self):
         print("Proxy checking for Sales Manager availability")
         time.sleep(0.1)
         print("This Sales Manager will not talk to you", "whether he/she is busy or not")
-
 
 if __name__ == '__main__':
     p = Proxy()
@@ -86,7 +80,6 @@ if __name__ == '__main__':
 proxy.py
 {:.figure}
 
-
 ## proxy Test
 
 ```py
@@ -101,7 +94,6 @@ if sys.version_info[0] == 2:
     from StringIO import StringIO
 else:
     from io import StringIO
-
 
 class ProxyTest(unittest.TestCase):
     @classmethod
@@ -145,7 +137,6 @@ Sales Manager is busy\n'
         cls.assertEqual(print_output, expected_print_output)
         expected_execution_time = 1
         cls.assertEqual(int(execution_time * 10), expected_execution_time)
-
 
 class NoTalkProxyTest(unittest.TestCase):
     @classmethod

@@ -39,8 +39,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Test
 

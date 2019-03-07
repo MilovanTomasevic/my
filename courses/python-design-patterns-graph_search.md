@@ -18,8 +18,6 @@ hide_description: true
 
 ![](/courses/python-fesign-patterns/other/graph_search.py.png)
 
-
-
 ## Python-Design-Patterns graph_search
 
 ```py
@@ -27,7 +25,6 @@ hide_description: true
 # -*- coding: utf-8 -*-
 
 ""
-
 
 class GraphSearch:
 
@@ -76,13 +73,11 @@ class GraphSearch:
                         shortest = newpath
         return shortest
 
-
 # example of graph usage
 graph = {'A': ['B', 'C'], 'B': ['C', 'D'], 'C': ['D'], 'D': ['C'], 'E': ['F'], 'F': ['C']}
 
 # initialization of new graph search object
 graph1 = GraphSearch(graph)
-
 
 print(graph1.find_path('A', 'D'))
 print(graph1.find_all_path('A', 'D'))

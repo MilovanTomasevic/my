@@ -50,7 +50,6 @@ hide_description: true
 - Uslov koji se nalazi u `HAVING` klauzuli može sadržati i agregatne funkcije (u `WHERE` ne može!). 
 - Ova klauzula sledi iza `GROUP` klauzule (i to samo kada `GROUP` klauzula postoji).
 
-
 ## Primer 1
 
 Izdvojiti ukupan broj studenata.

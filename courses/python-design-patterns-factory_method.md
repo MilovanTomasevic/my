@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## factory_method Model
 
 ![](/courses/python-fesign-patterns/creational/viz/factory_method.py.png)
-
 
 ## Python-Design-Patterns factory_method
 
@@ -57,7 +55,6 @@ https://sourcemaking.com/design_patterns/factory_method
 Creates objects without having to specify the exact class.
 """
 
-
 class GreekGetter(object):
 
     """A simple localizer a la gettext"""
@@ -69,7 +66,6 @@ class GreekGetter(object):
         """We'll punt if we don't have a translation"""
         return self.trans.get(msgid, str(msgid))
 
-
 class EnglishGetter(object):
 
     """Simply echoes the msg ids"""
@@ -77,12 +73,10 @@ class EnglishGetter(object):
     def get(self, msgid):
         return str(msgid)
 
-
 def get_localizer(language="English"):
     """The factory method"""
     languages = dict(English=EnglishGetter, Greek=GreekGetter)
     return languages[language]()
-
 
 if __name__ == '__main__':
     # Create our localizers
@@ -100,7 +94,6 @@ if __name__ == '__main__':
 factory_method.py
 {:.figure}
 
-
 ## factory_method Test
 
 ```py
@@ -108,7 +101,6 @@ factory_method.py
 # -*- coding: utf-8 -*-
 import unittest
 from creational.factory_method import get_localizer
-
 
 class TestLocalizer(unittest.TestCase):
     def setUp(self):

@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## flyweight Model
 
 ![](/courses/python-fesign-patterns/structural/viz/flyweight.py.png)
-
 
 ## Python-Design-Patterns flyweight
 
@@ -50,7 +48,6 @@ Minimizes memory usage by sharing data with other similar objects.
 """
 
 import weakref
-
 
 class FlyweightMeta(type):
     def __new__(mcs, name, parents, dct):
@@ -87,7 +84,6 @@ class FlyweightMeta(type):
             pool[key] = instance
         return instance
 
-
 class Card(object):
 
     """The object pool. Has builtin reference counting"""
@@ -111,17 +107,14 @@ class Card(object):
     def __repr__(self):
         return "<Card: %s%s>" % (self.value, self.suit)
 
-
 def with_metaclass(meta, *bases):
     """ Provide python cross-version metaclass compatibility. """
     return meta("NewBase", bases, {})
-
 
 class Card2(with_metaclass(FlyweightMeta)):
     def __init__(self, *args, **kwargs):
         # print('Init {}: {}'.format(self.__class__, (args, kwargs)))
         pass
-
 
 if __name__ == '__main__':
     # comment __new__ and uncomment __init__ to see the difference
@@ -167,7 +160,6 @@ if __name__ == '__main__':
 flyweight.py
 {:.figure}
 
-
 ## flyweight Test
 
 ```py
@@ -175,7 +167,6 @@ flyweight.py
 # -*- coding: utf-8 -*-
 import unittest
 from structural.flyweight import Card
-
 
 class TestCard(unittest.TestCase):
     def test_instances_shall_reference_same_object(self):

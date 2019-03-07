@@ -48,7 +48,6 @@ class: center, middle
 # Rokovi za prijavu i upis 
 #### osnovne i master studije 
 
-
 .message.is-danger[
 .message-header[
 Napomena
@@ -89,8 +88,6 @@ Info
 ]
 ]
 
-
-
 ---
 
 ## Master studije 
@@ -116,8 +113,6 @@ Info
 ]
 ]
 
-
-
 ---
 name: prijava
 layout: false
@@ -140,7 +135,6 @@ Imajte u vidu da sve važi dok se mesta ne popune, jer su ograničena.<br>
 layout: true
 
 .section[[Prijava](#sadrzaj)]
-
 
 ---
 
@@ -215,7 +209,6 @@ Slovenia
 ]
 ]
 
-
 ---
 
 name: upis
@@ -245,7 +238,6 @@ layout: true
 - Nakon upisa dobija se potvrda o upisu.
 - Studentska kartica se dobija u novembru.
 
-
 ---
 
 name: pogodnosti
@@ -270,7 +262,6 @@ layout: true
 	- <a target="_blank" rel="noopener noreferrer" href="http://www.drustvospm.si/drustvo-za-razvijanje-prostovoljnega-dela-novo-mesto"> ☛ `DRPD`</a>.ref[1] kao i  <a target="_blank" rel="noopener noreferrer" href="http://www.ric-nm.si/si/"> ☛ `RIC`</a> .ref[2] a odmah možete na <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=d88m4VGvvug&list=PLdBDRYovqGqltDPD_zcIRzgdXYi2zW2Yx"> ☛ `youtube`</a>
 - U Novom mestu postoji gradski prevoz putnika (autobus/voz).
 	- Najbolje: 30 minuta hoda. 🚶‍🚶‍♀️️💪
-
 
 .footer[
   .attention[
@@ -299,7 +290,6 @@ layout: true
 
 - <a target="_blank" rel="noopener noreferrer" href=" http://www.upravneenote.gov.si/novo_mesto/"> ☛ `Upravna enota`</a>
 
-
 .message.is-warning[
 .message-header[
 Info
@@ -313,16 +303,13 @@ prizemlje  desno
 ]
 ]
 
-
 .footer[
 
  .attention[
 \* **Napomena**: Za studente u domu, prijavu boravka završava, Studentski dom. 😊😉
 ]
 
-
 ] 
-
 
 ---
 ## Dozvola za boravak (1/3)
@@ -367,7 +354,6 @@ prizemlje  desno
 	- Ugovor o najamu stanovanja gde privremeno borave, moze adresa koja je na prijavi trenutnog boravka.
 - Taksa za prijavu privremenog boravka je 12 EUR.
 
-
 .message.is-warning[
 .message-header[
 Info
@@ -376,7 +362,6 @@ Info
 - Za studente u domu, prijavu boravka završava, Studentski dom. 😊😉
 ]
 ]
-
 
 ---
 
@@ -424,7 +409,6 @@ layout: true
 name: pitanja
 
 ## .center[ *P  I  T  A  NJ  A  ?* .ref[1,2]]
-
 
 .small[
 

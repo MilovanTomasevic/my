@@ -34,8 +34,6 @@ Zadatak
     - Izdvojiti podatke o predmetima koje je položio neki student sa ocenom 10 u nekom ispitnom roku održanom u toku 2011. godini
 ]
 ]
-            
-.
 
 ---
 
@@ -59,8 +57,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 ## Treći deo
@@ -80,8 +76,6 @@ Zadatak
     - Pronaći naziv predmeta koji su polagali svi studenti.
 ]
 ]
-
-
 
 ---
 ## Četvrti deo
@@ -104,8 +98,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 layout: false
@@ -113,6 +105,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

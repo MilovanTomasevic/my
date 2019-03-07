@@ -23,7 +23,6 @@ apt-get install libopenmpi-dev
 apt-get install openmpi-bin 
 ```
 
-
 ### Compilation & Running OpenMP
 ```sh
 gcc -o name name.c -fopenmp
@@ -169,8 +168,6 @@ int main(int argc, char *argv[]) {
 ~~~
 send_recv_nonblocking.c - primer
 {:.figure}
-
-
 
 ### ping_pong_printf_async.c
 
@@ -403,9 +400,7 @@ int main (int argc, char **argv)
 ping_pong_printf_async.c - primer
 {:.figure}
 
-
 ### ping_pong_printf_variablelen.c
-
 
 #### MPI_Probe
 ~~~c
@@ -445,7 +440,6 @@ int MPI_Get_count(
   - [in] datatype of each receive buffer element (handle)
 - count
   - [out] number of received elements (integer)
-
 
 #### MPI_Probe sample code
 
@@ -550,7 +544,6 @@ int main(int argc, char **argv)
 ~~~
 MPI_Probe.c - primer
 {:.figure}
-
 
 #### MPI_Get_count sample code
 
@@ -660,7 +653,6 @@ int main( int argc, char *argv[] )
 MPI_Get_count.c - primer
 {:.figure}
 
-
 ### bcast.c
 
 ~~~c
@@ -690,7 +682,6 @@ int main(int argc, char *argv[]) {
 ~~~
 bcast.c - primer
 {:.figure}
-
 
 ### scatter.c
 
@@ -838,8 +829,6 @@ int main(int argc, char *argv[]) {
 gather.c - primer
 {:.figure}
 
-
-
 ### allgather.c
 
 ~~~c
@@ -952,13 +941,11 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-
 ~~~
 reduce.c - primer
 {:.figure}
 
 ### allreduce.c
-
 
 ~~~c
 /**
@@ -1054,7 +1041,6 @@ modifikujete izvorni kod tako da na neki drugi način obezbedite učitavanje ula
 Pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka i pokrenuti ``mpiexec -np <N> ./a.out``, ili drugi 
 naziv ukoliko je drugačije specificirano tokom kompajliranja. ``<N>`` zameniti konkretnim brojem koji predstavlja broj 
 procesa koje hoćete da stvorite.
-
 
 #### main.c
 
@@ -1174,7 +1160,6 @@ CMakeLists.txt - zadatak
 h5defs.h - zadatak
 {:.figure}
 
-
 ##### h5_matrix_utils.h
 
 ~~~c
@@ -1220,7 +1205,6 @@ h5_matrix_utils.h - zadatak
 ~~~c
 #include <time.h>
 #include "h5_matrix_utils.h"
-
 
 void h5_save_matrix(const char *filename, unsigned int rows, unsigned int cols) {
 
@@ -1321,12 +1305,10 @@ void print_float_vector(float *vector, unsigned long long len) {
 h5_matrix_utils.c - zadatak
 {:.figure}
 
-
 ##### gch files
 
 - [h5defs.h.gch](../high-performance-computing/v3/utils/h5defs.h.gch){:target="_blank"}
 - [h5_matrix_utils.h.gch](../high-performance-computing/v3/utils/h5_matrix_utils.h.gch){:target="_blank"}
-
 
 #### input_data
 
@@ -1334,8 +1316,6 @@ h5_matrix_utils.c - zadatak
 - [m3x3.h5](../high-performance-computing/v3/input_data/m3x3.h5){:target="_blank"} 
 - [v5x1.h5](../high-performance-computing/v3/input_data/v5x1.h5){:target="_blank"} 
 - [m5x5.h5](../high-performance-computing/v3/input_data/m5x5.h5){:target="_blank"} 
-
-
 
 ## MatrixMultiplication
 
@@ -1392,9 +1372,6 @@ modifikujete izvorni kod tako da na neki drugi način obezbedite učitavanje ula
 Pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka i pokrenuti ``mpiexec -np <N> ./a.out``, ili drugi 
 naziv ukoliko je drugačije specificirano tokom kompajliranja. ``<N>`` zameniti konkretnim brojem koji predstavlja broj 
 procesa koje hoćete da stvorite.
-
-
-
 
 #### main.c
 
@@ -1521,7 +1498,6 @@ CMakeLists.txt - zadatak
 h5defs.h - zadatak
 {:.figure}
 
-
 ##### h5_matrix_utils.h
 
 ~~~c
@@ -1567,7 +1543,6 @@ h5_matrix_utils.h - zadatak
 ~~~c
 #include <time.h>
 #include "h5_matrix_utils.h"
-
 
 void h5_save_matrix(const char *filename, unsigned int rows, unsigned int cols) {
 
@@ -1668,13 +1643,10 @@ void print_float_vector(float *vector, unsigned long long len) {
 h5_matrix_utils.c - zadatak
 {:.figure}
 
-
-
 #### input_data
 
 - [m3x3.h5](../high-performance-computing/v4/input_data/m3x3.h5){:target="_blank"} 
 - [m5x5.h5](../high-performance-computing/v4/input_data/m5x5.h5){:target="_blank"} 
-
 
 ## Rešenja
 
@@ -1710,7 +1682,6 @@ int main(int argc, char *argv[]) {
 ~~~
 communicators.c - rešenje
 {:.figure}
-
 
 ### ping_pong.c
 
@@ -1990,6 +1961,4 @@ int main(int argc, char** argv) {
 ~~~
 avg.c - rešenje
 {:.figure}
-
-
 

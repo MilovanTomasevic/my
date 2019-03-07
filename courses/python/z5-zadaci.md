@@ -27,10 +27,6 @@ Zadatak
 ]
 ]
 
-
-
-
-
 ---
 ## Zadatak 2 
 
@@ -45,10 +41,6 @@ Zadatak
 ![:scale 75%](img/z5/z2.png)
 ]
 ]
-
-
-
-
 
 ---
 
@@ -66,10 +58,6 @@ Zadatak
 ]
 ]
 
-
-
-
-
 ---
 
 ## Zadatak 4
@@ -85,9 +73,6 @@ Zadatak
 ![:scale 75%](img/z5/z4.png)
 ]
 ]
-
-
-
 
 ---
 
@@ -105,10 +90,6 @@ Zadatak
 ]
 ]
 
-
-
-
-
 ---
 
 ## Zadatak 6
@@ -124,7 +105,6 @@ Zadatak
 - Za sortiranje se preporučuje upotreba funkcionalno proverenog algoritma.
 ]
 ]
-
 
 .message.is-warning[
 .message-header[
@@ -145,7 +125,5 @@ Odgovor
 
 ]
 ]
-
-
 
 {% endblock %}

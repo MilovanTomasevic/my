@@ -36,7 +36,6 @@ Zadatak
 
             
 
-
 ---
 
 ## Drugi deo
@@ -60,9 +59,6 @@ Zadatak
 ]
 ]
 
-
-
-
 ---
 
 ## Treći deo
@@ -83,9 +79,6 @@ Zadatak
   - Ime i prezime napisati u jednoj koloni, a za studente rođene u Beogradu kao mesto rođenja ispisati Bg.
 ]
 ]
-
-
-
 
 ---
 ## Četvrti deo
@@ -110,7 +103,6 @@ Zadatak
 ]
 ]
 
-
 .
 
 ---
@@ -131,9 +123,6 @@ Zadatak
 ]
 ]
 
-
-
-
 ---
 
 layout: false
@@ -141,6 +130,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

@@ -17,7 +17,6 @@ name: sadrzaj
 - [Tehnike upravljanja HPC sistemima](#tehnikeHPC)
 - [SLURM](#slurm)
 
-
 ---
 name: stanje
 class: center, middle
@@ -237,7 +236,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 
 ---
 
-
 ## Parametri HPL-a
 
 .medium[
@@ -256,7 +254,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 ]
 
 ---
-
 
 ##Rezultati HPL-a
 
@@ -291,7 +288,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 - Kao rezultat moguće je formulisati beskonačno mnogo samerljivosti što nas ostavlja sa ogromnim koordinacionim problemom.
     
 ---
-
 
 ## HPC Challenge
 
@@ -370,7 +366,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 
 ---
 
-
 ### NPB Skraćenica
 
 .center-table.small[
@@ -434,7 +429,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 layout: false
 name: tehnikeHPC
 class: center, middle
-
 
 # Tehnike upravljanja HPC sistemima
 
@@ -551,12 +545,9 @@ layout: true
 
 ---
 
-
-
 layout: false
 name: slurm
 class: center, middle
-
 
 # SLURM
 #### uvod
@@ -953,7 +944,6 @@ mt@mt:~/HPC$ kill -l
 
 ## Namena signala
 
-
 .center-table.small[
 
 | **Ime signala** | **Broj signala** | **Reakcija** |                                 **Svrha**                                |
@@ -1016,7 +1006,6 @@ mt@mt:~/HPC$ kill -l
 ]
 
 ---
-
 
 ## Slanje signala
 
@@ -1266,12 +1255,10 @@ tophat /n/informatics/databases/Mus_musculus/UCSC/mm10/Sequence/BowtieIndex \
 ../trans${SLURM_ARRAY_TASK_ID}.fq
 ```
 
-
 .footer.medium[
   [Detaljnije](https://www.rc.fas.harvard.edu/resources/documentation/submitting-large-numbers-of-jobs-to-odyssey/)
 
 ] 
-
 
 ---
 
@@ -1343,6 +1330,5 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
     - Prikazuje agregirane statističke podatke o radu klastera.
 - `sinfo`
     - Prikazuje podatke o konfiguraciji klastera
-
 
 {% endblock %}

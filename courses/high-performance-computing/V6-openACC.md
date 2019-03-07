@@ -13,7 +13,6 @@ name: sadrzaj
 - [data direktiva](#dd)
 - [Zadaci](#zad)
 
-
 ---
 name: acc
 class: center, middle
@@ -157,9 +156,7 @@ structured block
 - ...
 ]
 
-
 ---
-
 
 ## Primer 1: kernel.c
 
@@ -252,8 +249,6 @@ Neke od klauzula (parametri nisu navedeni):
 - ...
 ]
 
-
-
 ---
 
 ## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z6-openACC/#table-of-contents"> ☛ Primeri/`parallel.c`</a>
@@ -279,8 +274,6 @@ int main() {
 ```
 ]
 ]
-
-
 
 .message.is-info[
 .message-header[
@@ -357,7 +350,6 @@ layout: true
 	- independent - Signalizira kompajleru da nema zavisnosti podataka između iteracija petlje.
 	- ...
 
-
 ---
 
 ## Primer 4: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z6-openACC/#table-of-contents"> ☛ Primeri/`parallelloop.c`</a>
@@ -409,7 +401,6 @@ layout: true
 .footer.medium[
 	Izvor: [OpenACC Programming and Best Practices Guide](https://www.openacc.org/sites/default/files/inline-files/OpenACC_Programming_Guide_0.pdf)
 ] 
-
 
 ---
 
@@ -491,7 +482,6 @@ int main() {
 	- `GOPMP_OPENACC_DIM` (gcc)
 	- `GOMP_DEBUG` (gcc)
 
-
 ---
 
 layout: false
@@ -518,7 +508,6 @@ Zadatak
 ]
 ]
 
-
 .message.is-warning[
 .message-header[
 Info
@@ -543,7 +532,6 @@ Zadatak
 - Meriti izvršavanje sekvencijalnog i implementiranog ubrzanog programa.
 ]
 ]
-
 
 .message.is-warning[
 .message-header[

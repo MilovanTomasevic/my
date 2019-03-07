@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## mvc Model
 
 ![](/courses/python-fesign-patterns/structural/viz/mvc.py.png)
-
 
 ## Python-Design-Patterns mvc
 
@@ -30,7 +28,6 @@ hide_description: true
 *TL;DR80
 Separates data in GUIs from the ways it is presented, and accepted.
 """
-
 
 class Model(object):
     def __iter__(self):
@@ -44,7 +41,6 @@ class Model(object):
     @property
     def item_type(self):
         raise NotImplementedError
-
 
 class ProductModel(Model):
     class Price(float):
@@ -72,7 +68,6 @@ class ProductModel(Model):
         except KeyError as e:
             raise KeyError((str(e) + " not in the model's item list."))
 
-
 class View(object):
     def show_item_list(self, item_type, item_list):
         raise NotImplementedError
@@ -84,7 +79,6 @@ class View(object):
 
     def item_not_found(self, item_type, item_name):
         raise NotImplementedError
-
 
 class ConsoleView(View):
     def show_item_list(self, item_type, item_list):
@@ -108,7 +102,6 @@ class ConsoleView(View):
     def item_not_found(self, item_type, item_name):
         print('That %s "%s" does not exist in the records' % (item_type, item_name))
 
-
 class Controller(object):
     def __init__(self, model, view):
         self.model = model
@@ -129,7 +122,6 @@ class Controller(object):
             item_type = self.model.item_type
             self.view.show_item_information(item_type, item_name, item_info)
 
-
 if __name__ == '__main__':
 
     model = ProductModel()
@@ -140,7 +132,6 @@ if __name__ == '__main__':
     controller.show_item_information('eggs')
     controller.show_item_information('milk')
     controller.show_item_information('arepas')
-
 
 ### OUTPUT ###
 # PRODUCT LIST:

@@ -31,7 +31,6 @@ Info
 .message-body[
 - <a target="_blank" rel="noopener noreferrer" href="../db/tabele.sire.nova.zip"> ☛ `Nova šema baze podataka`</a>
 
-
 ![:scale 90%](../db/3.png)
 ]
 ]
@@ -52,8 +51,6 @@ Info
 ![:scale 90%](../db/4.png)
 ]
 ]
-
-
 
 ---
 
@@ -89,7 +86,6 @@ Zadatak
 ]
             
 
-
 ---
 
 ## Drugi deo
@@ -111,8 +107,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Treći deo
 
@@ -132,7 +126,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 layout: false
@@ -140,6 +133,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

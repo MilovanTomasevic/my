@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## template Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/template.py.png)
-
 
 ## Python-Design-Patterns template
 
@@ -34,27 +32,21 @@ Defines the skeleton of a base algorithm, deferring definition of exact
 steps to subclasses.
 """
 
-
 def get_text():
     return "plain-text"
-
 
 def get_pdf():
     return "pdf"
 
-
 def get_csv():
     return "csv"
-
 
 def convert_to_text(data):
     print("[CONVERT]")
     return "{} as text".format(data)
 
-
 def saver():
     print("[SAVE]")
-
 
 def template_function(getter, converter=False, to_save=False):
     data = getter()
@@ -69,7 +61,6 @@ def template_function(getter, converter=False, to_save=False):
         saver()
 
     print("`{}` was processed".format(data))
-
 
 if __name__ == "__main__":
     template_function(get_text, to_save=True)

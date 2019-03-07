@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## front_controller Model
 
 ![](/courses/python-fesign-patterns/structural/viz/front_controller.py.png)
-
 
 ## Python-Design-Patterns front_controller
 
@@ -33,16 +31,13 @@ hide_description: true
 Provides a centralized entry point that controls and manages request handling.
 """
 
-
 class MobileView(object):
     def show_index_page(self):
         print('Displaying mobile index page')
 
-
 class TabletView(object):
     def show_index_page(self):
         print('Displaying tablet index page')
-
 
 class Dispatcher(object):
     def __init__(self):
@@ -57,7 +52,6 @@ class Dispatcher(object):
         else:
             print('cant dispatch the request')
 
-
 class RequestController(object):
     """ front controller """
 
@@ -69,7 +63,6 @@ class RequestController(object):
             self.dispatcher.dispatch(request)
         else:
             print('request must be a Request object')
-
 
 class Request(object):
     """ request """
@@ -85,7 +78,6 @@ class Request(object):
         elif request == self.tablet_type:
             self.type = self.tablet_type
 
-
 if __name__ == '__main__':
     front_controller = RequestController()
     front_controller.dispatch_request(Request('mobile'))
@@ -93,7 +85,6 @@ if __name__ == '__main__':
 
     front_controller.dispatch_request(Request('desktop'))
     front_controller.dispatch_request('mobile')
-
 
 ### OUTPUT ###
 # Displaying mobile index page

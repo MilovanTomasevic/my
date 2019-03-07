@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## visitor Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/visitor.py.png)
-
 
 ## Python-Design-Patterns visitor
 
@@ -33,22 +31,17 @@ http://peter-hoffmann.com/2010/extrinsic-visitor-pattern-python-inheritance.html
 Separates an algorithm from an object structure on which it operates.
 """
 
-
 class Node(object):
     pass
-
 
 class A(Node):
     pass
 
-
 class B(Node):
     pass
 
-
 class C(A, B):
     pass
-
 
 class Visitor(object):
     def visit(self, node, *args, **kwargs):
@@ -68,7 +61,6 @@ class Visitor(object):
 
     def visit_B(self, node, *args, **kwargs):
         print('visit_B ' + node.__class__.__name__)
-
 
 a = A()
 b = B()

@@ -16,7 +16,6 @@ hide_description: true
 
 ## Functions 
 
-
 ```py
 def inorder_tree_walk(x):
     if x != None:
@@ -105,7 +104,6 @@ functions.py
 
 ## Node
 
-
 ```py
 class Node:
     """
@@ -136,7 +134,6 @@ node.py
 {:.figure}
 
 ## Tree
-
 
 ```py
 from functions import *
@@ -177,7 +174,6 @@ tree.py
 {:.figure}
 
 ## Zadatak 1
-
 
 ```py
 import sys

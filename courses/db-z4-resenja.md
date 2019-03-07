@@ -156,7 +156,6 @@ where exists (select *
     from ispit
     where ispit.id_predmeta=predmet.id_predmeta and ocena>5 and indeks=20100022);
 
-
 select naziv
 from predmet
 where id_predmeta in (select id_predmeta

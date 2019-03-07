@@ -463,7 +463,6 @@ layout: true
 ---
 ## Primer
 
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -506,6 +505,5 @@ Odgovor
 - <a target="_blank" rel="noopener noreferrer" href="../python-z1-resenja"> ☛ `Rešenja`</a>
 ]
 ]
-
 
 {% endblock %}

@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## delegation_pattern Model
 
 ![](/courses/python-fesign-patterns/fundamental/viz/delegation_pattern.py.png)
-
 
 ## Python-Design-Patterns delegation_pattern
 
@@ -33,7 +31,6 @@ Author: https://github.com/IuryAlves
 *TL;DR80
 Allows object composition to achieve the same code reuse as inheritance.
 """
-
 
 class Delegator(object):
     """
@@ -65,14 +62,12 @@ class Delegator(object):
             return attr(*args, **kwargs)
         return wrapper
 
-
 class Delegate(object):
     def __init__(self):
         self.p1 = 123
 
     def do_something(self, something):
         return "Doing %s" % something
-
 
 if __name__ == '__main__':
     import doctest

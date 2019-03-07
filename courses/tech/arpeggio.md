@@ -98,7 +98,6 @@ Hello, World! -> ['Hello', ',', 'World', '!']
 
 ---
 
-
 ## Primer
 
 ```python
@@ -146,7 +145,6 @@ layout: true
 ![](arpeggio/Arpeggio.svg)
 
 ---
-
 
 ## PEG pravila
 
@@ -266,7 +264,6 @@ from arpeggio import ParserPython
 parser = ParserPython(robot, debug=True)
 ```
 
-
 ---
 
 ## Stablo parsiranja
@@ -298,7 +295,6 @@ parse_tree = parser.parse(prog_src)
   string predstavu pozivom `str` funkcije.
 - Trenutno postoje dve `Match` naslednice: `StrMatch` i `RegExMatch`.
 
-
 ---
 
 ## Ne-terminali (*Non-terminal nodes*)
@@ -314,7 +310,6 @@ itd.
 
 ![](arpeggio/calc_parse_tree.dot.svg)
 
-
 ---
 
 ## Informacije sadržane u čvorovima stabla parsiranja
@@ -325,7 +320,6 @@ Svaki čvor stabla je objekat koji poseduje sledeće atribute:
   pravilo koje je prepoznalo ovaj element u ulaznom stringu,
 - `rule_name` - ime pravila
 - `position` - apsolutna pozicija unutar ulaznog stringa od početka.
-
 
 Red i kolona se može dobiti preko parsera na sledeći način:
 
@@ -386,7 +380,6 @@ assert result.bar[0].position == 2
 assert result.bar[1].position == 14
 ```
 ]
-
 
 ---
 name: konfiguracija-parsera
@@ -479,7 +472,6 @@ def comment():          return [_("//.*"), _("/\*.*\*/")]
 parser = ParserPython(simpleLanguage, comment)
 ```
 
-
 ---
 
 ## Redukcija stabala parsiranja
@@ -514,7 +506,6 @@ a"""
 parser = ParserPython(grammar)
 result = parser.parse(input)
 ```
-
 
 ---
 name: debagovanje
@@ -569,8 +560,6 @@ $ dot -Tpng -O calc_parser_model.dot
 ]
 ![:scale 30%](arpeggio/calc_parser_model.dot.svg)
 
-
-
 ---
 
 ## Obrada grešaka pri parsiranju
@@ -595,7 +584,6 @@ arpeggio.NoMatch: Expected '+' or '-' or 'number' or
   - `position` - apsolutna pozicija od početka fajla
   - `line`, `col` - red i kolona 
   - `parser` - referenca na parser objekat
-
 
 ---
 name: analiza
@@ -720,7 +708,6 @@ def visit_bar(self, node, children):
             
 - http://igordejanovic.net/Arpeggio/
 
-
 ---
 class: center, middle
 layout: false
@@ -728,10 +715,5 @@ layout: false
 # Veče džeza i slobodnih formi - improvizacije
 
             
-
-
-
-
-
 
 {% endblock %}

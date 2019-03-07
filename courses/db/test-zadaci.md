@@ -52,7 +52,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 ## Zadatak 3
@@ -67,10 +66,6 @@ Zadatak
 ]
 ]
 
-
-
-
-
 ---
 name: vezba 
 class: center, middle
@@ -83,9 +78,7 @@ layout: true
 
 .section[[Zadaci za vežbu](#sadrzaj)]
 
-
 ---
-
 
 ## Zadatak 1
 
@@ -112,7 +105,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 ## Zadatak 3
@@ -134,13 +126,11 @@ Zadatak
 ]
 ]
 
-
 ---
 layout: false
 
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

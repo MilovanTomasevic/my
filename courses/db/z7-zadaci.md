@@ -47,7 +47,6 @@ Zadatak
 ]
             
 
-
 ---
 
 ## Drugi deo
@@ -72,7 +71,6 @@ Zadatak
 ]
 ]
 
-
   
 ---
 ## Treći deo
@@ -93,8 +91,6 @@ Zadatak
   -  Studenti su polagali u junskom ispitnom roku i svi dobili ocenu 9.
 ]
 ]
-
-
 
 ---
 
@@ -118,7 +114,6 @@ Zadatak
 ]
 ]
 
-
 ---
 ## Peti deo
 
@@ -136,8 +131,6 @@ Zadatak
     - Za svakog studenta koji je položio izmedu 15 i 25 bodova i čije ime sadrži slovo o ili a izdvojiti indeks, ime, prezime, broj predmeta koje je polagao, broj predmeta koje je položio i prosečnu ocenu. Rezultat urediti prema indeksu.
 ]
 ]
-
-
 
 ---
 
@@ -175,7 +168,6 @@ Zadatak
 ]
             
 
-
 ---
 
 ## Drugi deo
@@ -197,9 +189,6 @@ Zadatak
   -  Izdvojiti id predmeta koji su polagani i u januaru 2011 i u februaru 2011.
 ]
 ]
-
-
-
 
 ---
 ## Treći deo
@@ -239,7 +228,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 layout: false
@@ -247,6 +235,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

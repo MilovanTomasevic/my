@@ -28,9 +28,6 @@ Zadatak
 ]
 ]
 
-
-
-
 ---
 ## Zadatak 1
 
@@ -58,8 +55,6 @@ $$ h(k)= floor(m(kA\quad mod\quad 1))\\ A\sim\frac{(\sqrt{5}-1)}{2}=0.6180339887
 ]
 ]
 
-
-
 ---
 ## Zadatak 1
 
@@ -69,7 +64,6 @@ Zadatak
 ]
 .message-body[
 - Univerzalno heširanje (*Universal hashing*)
-
 
 $$ h_{ab}(k)=((ak+b)mod \quad p)mod \quad m  $$
   
@@ -87,8 +81,6 @@ $$ a \in {Z_{p}}^\star \quad b \in {Z_{p}} \\ {Z_{p}}=\left\{0,1,2,...,p-1\right
 ]
 ]
 
-
-
 ---
 
 ## Zadatak 1
@@ -103,8 +95,6 @@ Zadatak
 ![:scale 80%](img/z7/z1.png)
 ]
 ]
-
-
 
 ---
 ## Zadatak 1
@@ -154,8 +144,6 @@ $$ h(k, i) = (h’(k) + i) mod \quad m $$
 ]
 ]
 
-
-
 ---
 
 ## Zadatak 2
@@ -174,8 +162,6 @@ $$ h(k, i) = (h_1 (k) + h_2 (k)) mod \quad m $$
 $$ h_1 \quad i \quad h_2 – pomocne \quad hash \quad funkcije $$
 ]
 ]
-
-
 
 ---
 
@@ -197,11 +183,9 @@ Zadatak
 ]
 ]
 
-
 ---
 
 ## Zadatak 2
-
 
 .message.is-warning[
 .message-header[
@@ -210,11 +194,9 @@ Info
 .message-body[
 - Prilikom formiranja `hash` tabele voditi računa o tome da se već postojeći podaci u tabeli ažuriraju, odnosno pre ubacivanja podatka sa ključem `key` treba proveriti da li taj ključ već postoji u `hash` tabeli.
 
-
 ![:scale 70%](img/z7/z2.png)
 ]
 ]
-
 
 .message.is-success[
 .message-header[

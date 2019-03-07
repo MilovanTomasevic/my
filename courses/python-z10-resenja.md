@@ -16,7 +16,6 @@ hide_description: true
 
 ## Functions
 
-
 ```py
 import sys
 from graph import *
@@ -106,9 +105,7 @@ def generate_graph(n, m, edge):
 functions.py
 {:.figure}
 
-
 ## Graph
-
 
 ```py
 import sys
@@ -153,9 +150,7 @@ class Graph:
 graph.py
 {:.figure}
 
-
 ## Zadatak 1
-
 
 ```py
 import sys

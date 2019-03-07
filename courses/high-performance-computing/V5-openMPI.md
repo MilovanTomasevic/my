@@ -43,7 +43,6 @@ layout: true
 
 ---
 
-
 ## Kompajliranje hibridnih OpenMP-OpenMPI programa
 
 - Pozicionirati se u direktorijum u kojem se nalazi izvorni kod hibridnog programa i pokrenuti:
@@ -74,7 +73,6 @@ layout: true
 .section[[Primer](#sadrzaj)]
 
 ---
-
 
 ## Primer 1: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ Primeri/`hello-world.c`</a>
 
@@ -115,7 +113,6 @@ layout: true
 
 ---
 
-
 ## MPI taksonimija interoperabilnosti niti
 
 Nemaju sve MPI implementacije isti nivo podrške za rad sa više niti. `MPI_init_thread`.ref[2] umesto `MPI_Init`..ref[1]
@@ -143,7 +140,6 @@ provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MP
 <br><br><br><br>
 > "Consider going hybrid only if pure MPI scalability is not satisfactory." .ref[*]
 
-
   
 .footer[
 \* Preuzeto iz knjige "Introduction to High Performance Computing for Scientists and Engineers" 
@@ -160,7 +156,6 @@ provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MP
 
 ## Prednosti i mane hibridnih rešenja
 
-
 .lcol[
 
 - Bolje iskorišćenje keša.
@@ -175,7 +170,6 @@ provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MP
 - Često je nemoguće inkrementalno napraviti hibridno rešenje od nehibridnog rešenja - zahteva pisanje rešenja od početka.
 - ...
 ]
-
 
 ---
 
@@ -222,7 +216,6 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
 ]
 ]
 
-
 .message.is-warning[
 .message-header[
 Info
@@ -231,8 +224,6 @@ Info
 - **Preporuka**: Implementirati OpenMPI verziju programa na osnovu sekvencijalnog rešenja, pa je proširiti OpenMP direktivama.
 ]
 ]
-
-
 
 ---
 
@@ -249,7 +240,6 @@ Zadatak
 	- Opciono implementirati čisto OpenMPI i čisto OpenMP rešenje i porediti performanse ovih rešenja porediti sa performnsama hibridnog rešenja
 ]
 ]
-
 
 .message.is-warning[
 .message-header[
@@ -294,6 +284,5 @@ layout: false
 - [MPI 3.1 standard, poglavlje 12.4](https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)
 - [OpenMP dokumentacija](https://www.open-mpi.org/doc/)
 - [OpenMP SC13 Tutorial: Hybrid MPI and OpenMP Parallel Programming](https://www.openmp.org/press-release/sc13-tutorial-hybrid-mpi-openmp-parallel-programming/)
-
 
 {% endblock %}

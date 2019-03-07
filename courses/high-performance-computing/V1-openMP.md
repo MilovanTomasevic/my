@@ -12,9 +12,6 @@ name: sadrzaj
 - [Implicitna vs. eksplicitna barijera](#vs)
 - [sections/section konstrukcija](#ss)
 
-
-
-
 ---
 name: uvod 
 class: center, middle
@@ -63,7 +60,6 @@ layout: true
 
 .section[[OpenMP](#sadrzaj)]
 
-
 ---
 
 ## OpenMP
@@ -76,7 +72,6 @@ layout: true
 
 ## Fork-join model
 
-
   ![:scale 70%](img/Fork_join.png)
   .medium[
 - Paralelni region (eng. *Parallel region*) - deo programa koji izvršava tim niti
@@ -86,8 +81,6 @@ layout: true
   ]
 
 ---
-
-
 
 ## Fork-join model
 
@@ -103,7 +96,6 @@ strukturirani-blok
   - (*Single Process Multiple Data* (SPMD)).
   
 ---
-
 
 ## Hello World!
 
@@ -145,7 +137,6 @@ Primer
 ]
 ]
 
-
 ---
 
 ## Hello World!
@@ -153,13 +144,11 @@ Primer
 - Jedan primer izvršavanja:
   
 
-
 - Iako nigde u primeru broj niti nije zadat, OpenMP radno okruženje (eng. *execution environment*) je odlučilo da napravi 8 niti.
 - Tipično, OpenMP radno okruženje pravi onoliko niti koliko ima jezgara (fizičkih ili logičkih). 
 - Npr. ovaj ispis je dobijen izvršavanjem na Intelovom procesoru Intel® Core™ i7-8550U (8 logičkih jezgara).
 
 ---
-
 
 ## Hello World!
 
@@ -192,7 +181,6 @@ Primer
 
 ## Kompajliranje i pokretanje
 
-
 - Kako pokrenuti iskompajlirano rešenje? 
   - Otvoriti terminal, pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka (izvrsnad) i uneti:
   .center[
@@ -202,7 +190,6 @@ Primer
   ]
 - U slučaju da pri kompajliranju nije navedeno ime izvršne datoteke, ona će se podrazumevano zvati a.out.
  
-
 
 ---
 
@@ -221,13 +208,11 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
   
 </p>
 
-
 - Sekvencijalna implementacija programa u C programskom jeziku je data u direktorijumu zadaci. Rezultat integraljenja bi trebalo da bude jednak broju π. Potrebno je dodati parallel konstrukciju bez daljih modifikacija sekvencijalnog programa.
 
 - Šta se dešava sa rezultatom?
 ]
 ]
-
 
 .message.is-success[
 .message-header[
@@ -237,9 +222,6 @@ Odgovor
 - Funkcija `parallel_code_incorrect` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 ]
-
-
-
 
 ---
 
@@ -261,7 +243,6 @@ zauzima na hipu, kome pristupaju sve niti.
 
 ---
 
-
 ## Zadatak 2: Računanje vrednosti broja π
 
 .message.is-info[
@@ -275,7 +256,6 @@ Zadatak
 ]
 ]
 
-
 .message.is-success[
 .message-header[
 Odgovor
@@ -284,7 +264,6 @@ Odgovor
 - Funkcija `parallel_code` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 ]
-
 
 ---
 
@@ -317,9 +296,6 @@ Odgovor
 - Funkcija `parallel_code_no_false_sharing` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 ]
-
-
-
 
 ---
 
@@ -354,7 +330,6 @@ Zadatak
 ]
 ]
 
-
 .message.is-success[
 .message-header[
 Odgovor
@@ -363,8 +338,6 @@ Odgovor
 - Funkcija  `parallel_code_synchronization` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 ]
-
-
 
 ---
 
@@ -400,7 +373,6 @@ layout: true
 
 .section[[loop konstrukcija](#sadrzaj)]
 
-
 ---
 
 ## loop konstrukcija
@@ -419,7 +391,6 @@ layout: true
 ---
 
 ## Primer 2: `loop` konstrukcija
-
 
 .message.is-dark[
 .message-header[
@@ -449,7 +420,6 @@ Primer
 ]
 ]
 
-
 ---
 
 ## loop konstrukcija: raspoređivanje
@@ -477,7 +447,6 @@ Primer
 
 ---
 
-
 name: redukcije 
 class: center, middle
 layout: false
@@ -488,7 +457,6 @@ layout: false
 layout: true
 
 .section[[Redukcije](#sadrzaj)]
-
 
 ---
 
@@ -562,7 +530,6 @@ operatora u deljenu promenljivu `sum.`
 ]
 ]
 
-
 ---
 
 ## Redukcije
@@ -602,7 +569,6 @@ korišćenje `for`  direktive i reduction klauze.
 ]
 ]
 
-
 .message.is-success[
 .message-header[
 Odgovor
@@ -611,8 +577,6 @@ Odgovor
 - Funkcija `parallel_code_for_construct` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 ]
-
-
 
 ---
 
@@ -626,7 +590,6 @@ layout: false
 layout: true
 
 .section[[Implicitna vs. eksplicitna barijera](#sadrzaj)]
-
 
 ---
 ## Implicitna vs. eksplicitna barijera 
@@ -653,8 +616,6 @@ Zadatak
 ```
 ]
 ]
-
-
 
 ---
 
@@ -684,7 +645,6 @@ Odgovor
 - Na barrier direktivi (eksplicitna barijerna sinhronizacija).
 ]
 ]
-
 
 ---
 ## Implicitna vs. eksplicitna barijera
@@ -722,7 +682,6 @@ Zadatak
 ]
 ]
 
-
 .message.is-success[
 .message-header[
 Odgovor
@@ -732,7 +691,6 @@ Odgovor
 ]
 ]
 
-
 ---
 ## Implicitna vs. eksplicitna barijera 
 
@@ -768,7 +726,6 @@ Zadatak
 ``` 
 ]
 ]
-
 
 .message.is-success[
 .message-header[
@@ -778,8 +735,6 @@ Odgovor
 - Na kraju paralelnog regiona. Implicitna barijera loop konstrukcije je onemogućena upotrebom `nowait` klauze.
 ]
 ]
-
-
 
 ---
 name: ss 
@@ -834,8 +789,6 @@ Primer
 ```
 ]
 ]
-
-
 
 ---
 ## single konstrukcija
@@ -957,7 +910,6 @@ Zadatak
 ---
 ## Primer 5: Klauze za rad sa podacima
 
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -976,7 +928,6 @@ Zadatak
 ]
 ]
 
-
 .message.is-success[
 .message-header[
 Odgovor
@@ -989,8 +940,6 @@ Odgovor
 ]
 ]
 
-
-
 ---
 ## Primer 5: Klauze za rad sa podacima
 
@@ -1015,7 +964,6 @@ Zadatak
 ---
 ## Primer 5: Klauze za rad sa podacima
 
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -1033,7 +981,6 @@ Zadatak
 - Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
 ]
 ]
-
 
 .message.is-success[
 .message-header[
@@ -1044,9 +991,6 @@ Odgovor
 - **Objašnjenje**:  <br>Klauza private`(tmp)` kaže kompajleru da treba da alocira prostor za promenljivu tmp na steku. Kompajler ne mora inicijalizovati zauzetu lokaciju.
 ]
 ]
-
-
-
 
 ---
 ## Primer 5: Klauze za rad sa podacima
@@ -1075,7 +1019,6 @@ promenljive `tmp`?
 
 ## Primer 5: Klauze za rad sa podacima
 
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -1095,7 +1038,6 @@ instance promenljive tmp dobile inicijalnu vrednost globalne
 promenljive `tmp`?
 ]
 ]
-
 
 .message.is-success[
 .message-header[
@@ -1119,7 +1061,6 @@ Zadatak
 - Rešenje ima par problema vezanih za korišćenje klauza za rad sa podacima i poneko štetno preplitanje. Pronađite i ispravite greške.
 ]
 ]
-
 
 .message.is-success[
 .message-header[
@@ -1174,10 +1115,8 @@ Info
 ]
 ]
 
-
 ---
 ## Primer 6: Paralelizacija obrade čvorova liste
-
 
 .lcol[
 ```c
@@ -1231,7 +1170,6 @@ strukturirani-blok
 ---
 ## Primer 7: Kreiranje zadataka
 
-
 .message.is-dark[
 .message-header[
 Primer
@@ -1268,7 +1206,6 @@ Zadatak
 ]
 ]
 
-
 .message.is-success[
 .message-header[
 Odgovor
@@ -1277,8 +1214,6 @@ Odgovor
 - <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`linkedlist.c`</a>
 ]
 ]
-
-
 
 ---
 ## Konstrukti za sinhronizaciju izvršavanja zadataka
@@ -1361,7 +1296,6 @@ Info
 ]
 ]
 
-
 ---
 
 ## Zadatak 9*: Množenje matrica - domaći
@@ -1394,8 +1328,6 @@ Info
 ---
 
 ## Zadatak 10*: Akumuliranje vrednosti čvorova stabla
-
-
 
 .message.is-info[
 .message-header[
@@ -1436,7 +1368,5 @@ layout: false
 - `"Introduction to OpenMP", Tim Mattson`, dostupno na [ovom linku](https://www.youtube.com/playlist?list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG)
 - [`"Introduction to OpenMP"`, prateća prezentacija](https://www.openmp.org/wp-content/uploads/Intro_To_OpenMP_Mattson.pdf)
 - `"Parallel Computing Book"`, Victor Eijkhout, elektronska verzija knjige je dostupna na [ovom linku](http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-basics.html)
-
-
 
 {% endblock %}

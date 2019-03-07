@@ -52,7 +52,6 @@ layout: true
 
 ![:scale 70%](img/mpi.gif)
 
-
 ---
 ## MPI
 
@@ -174,7 +173,6 @@ Hello world from 0
 
 ![:scale 70%](img/mpi7.png)
 
-
 ---
 ## Exercise: compile & run mpi_hello_world.c
 
@@ -189,7 +187,6 @@ Hello world from 0
 - Why does each process print a different number?
 
 ![:scale 70%](img/mpi8.png)
-
 
 ---
 ## Exercise: compile & run mpi_hello_world.c
@@ -277,7 +274,6 @@ layout: true
 
 ![:scale 80%](img/mpi14.png)
 
-
 ---
 ## Communication: point to point
 
@@ -322,7 +318,6 @@ Exercise
 ]
 ]
 
-
 ---
 ## Communication: point to point
 
@@ -337,7 +332,6 @@ Exercise
 - What is *wrong* with the following code?
 
 ![:scale 80%](img/mpi20.png)
-
 
 ---
 ## Deadlock
@@ -370,12 +364,10 @@ Info
 ]
 ]
 
-
  
 ---
 
 ## Exercise: fix the deadlock
-
 
 .message.is-success[
 .message-header[
@@ -387,7 +379,6 @@ Solution
 ![:scale 80%](img/mpi23.png)
 ]
 ]
-
 
 ---
 ## Communication: point to point
@@ -455,8 +446,6 @@ Solution
 ]
 ]
 
-
-
 ---
 layout: false
 name: cc
@@ -492,7 +481,6 @@ layout: true
 
 ![:scale 80%](img/mpi27.png)
 
-
 ---
 ## Communication: collectives
 
@@ -515,7 +503,6 @@ layout: true
 - MPI Collectives for collective computation
 
 ![:scale 80%](img/mpi29.png)
-
 
 ---
 ## Communication: collectives
@@ -590,6 +577,5 @@ class: center, middle
 
 # That's All 👨🏻‍🎓
 # Thank you for listening!
-
 
 {% endblock %}

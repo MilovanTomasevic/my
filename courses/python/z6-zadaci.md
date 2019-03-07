@@ -28,7 +28,6 @@ layout: true
 - Odgovarajući kodovani izlaz se dobija prostim spajanjem binarnih vrednosti ulaznih podataka. 
 - Primer je prikazan na slici Više na [https://en.wikipedia.org/wiki/Huffman_coding](https://en.wikipedia.org/wiki/Huffman_coding).
 
-
 ![:scale 75%](img/z6/uvod.png)
 
 ---
@@ -44,8 +43,6 @@ Zadatak
 - Primeri ulaznih podataka dostupan je u `snippets.txt`.
 ]
 ]
-
-
 
 ---
 
@@ -102,7 +99,6 @@ karaktera.
 ## Ilustracija formiranja Hafman stabla
 
 ![:scale 90%](img/z6/z3.png)
-
 
 .message.is-success[
 .message-header[

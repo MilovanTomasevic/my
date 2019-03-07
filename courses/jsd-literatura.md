@@ -7,8 +7,6 @@ hide_description: true
 
 ---
 
-
-
 > - [Prof. dr. Igor Dejanović](http://www.igordejanovic.net){:target="_blank"}
 - M. Völter, [*DSL Engineering: Designing, Implementing and Using
   Domain-Specific Languages*](http://dslbook.org/). 2013.

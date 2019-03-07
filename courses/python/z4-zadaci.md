@@ -27,7 +27,6 @@ Zadatak
 ]
 ]
 
-
 ---
 ## Zadatak 2
 
@@ -42,12 +41,8 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Zadatak 3
-
-
 
 .message.is-info[
 .message-header[
@@ -74,7 +69,6 @@ Info
 ]
 ]
 
-
 .message.is-success[
 .message-header[
 Odgovor
@@ -85,6 +79,5 @@ Odgovor
 
 ]
 ]
-
 
 {% endblock %}

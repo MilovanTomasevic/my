@@ -28,8 +28,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Zadatak 2
 
@@ -44,8 +42,6 @@ Zadatak
 ![:scale 72%](img/z9/z2.png)
 ]
 ]
-
-
 
 ---
 ## Zadatak 3
@@ -62,11 +58,8 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Zadatak 4 <a target="_blank" rel="noopener noreferrer" href="../python-z9-resenja"> ☛ `Rešenja`</a>
-
 
 .message.is-info[
 .message-header[
@@ -91,8 +84,5 @@ Odgovor
 - <a target="_blank" rel="noopener noreferrer" href="../python-z9-resenja"> ☛ `Rešenja`</a>
 ]
 ]
-
-
-
 
 {% endblock %}

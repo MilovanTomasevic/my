@@ -3,7 +3,6 @@ template = "template.html"
 author = "[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)"
 affiliation = "[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]"
 
-
 "tech/Python.md"
   title = "[Programski jezik Python](/courses/#table-of-contents)"
 
@@ -12,5 +11,4 @@ affiliation = "[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https:
 
 "tech/python_napredni.md"
   title = "[Napredni Python](/courses/#table-of-contents)"
-
 

@@ -14,9 +14,6 @@ hide_description: true
 
 ---
 
-
-
-
 ## Installation
 
 ```sh
@@ -32,8 +29,6 @@ sudo apt-get install python
 sudo apt-get install python-mpi4py
 
 ```
-
-
 
 ## Compilation & Running OpenMP/MPI/OpenACC & mpi4py
 
@@ -57,13 +52,9 @@ mpirun -np 1 ./filename # -lm
 # python
 mpirun -np 4 ./filename
 
-
 ```
 
-
 ## HPC Rudolf connection
-
-
 
 ```sh
 # First create a source file in /etc/apt/sources.list.d/nordugrid.list
@@ -89,8 +80,6 @@ deb-src http://download.nordugrid.org/repos/15.03/ubuntu/ zesty-updates main
 # Import the apt-key:
 wget -q -O - http://download.nordugrid.org/DEB-GPG-KEY-nordugrid.asc \
  | sudo apt-key add -
-
-
 
 wget -q -O - http://download.nordugrid.org/DEB-GPG-KEY-nordugrid.asc \
  | sudo apt-key add -
@@ -135,7 +124,6 @@ sudo apt-get update
 sudo apt-get install ca-policy-egi-core fetch-crl
 ```
 
-
 ```sh
 # Now you need to transform the certiciate and key in .pem format, make sure the key is only readable # by you and move both files in your ~/.arc  directory:
 
@@ -177,7 +165,6 @@ arcproxy -C .arc/cert.pem -K .arc/key.pem -s .arc/vomsdir -V .arc/vomses
 
 arcproxy -C ~/.arc/usercert.pem -K ~/.arc/userkey.pem -s ~/.arc/vomsdir -V ~/.arc/vomses
 
-
 ```
 
 ```sh
@@ -209,7 +196,6 @@ Exit Code: 0
 
 Status of 1 jobs was queried, 1 jobs returned information
 
-
  arcstat --all
 
 # When it's finished
@@ -225,7 +211,6 @@ log  test.log
 ```
 
 # MPI Example for HPC Rudolf
-
 
 ```sh
 # Example of a task in C:
@@ -284,7 +269,6 @@ int main()
 
 ```
 
-
 ```sh
 
 # prime-number.sh
@@ -296,7 +280,6 @@ gcc prime-number.c -o primenumber
 date
 
 ```
-
 
 ```sh
 
@@ -333,7 +316,6 @@ print sum
 
 ```
 
-
 ```sh
 
 # vsota.sh
@@ -342,8 +324,6 @@ print sum
 python vsota.py
 
 ```
-
-
 
 ```sh
 
@@ -366,13 +346,11 @@ python vsota.py
 
 ```
 
-
 ```c
 
 /* C Example */
 #include <stdio.h>
 #include <mpi.h> 
-
 
 int main (argc, argv)
      int argc;

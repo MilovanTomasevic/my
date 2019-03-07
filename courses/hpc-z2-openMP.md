@@ -14,8 +14,6 @@ hide_description: true
 
 ---
 
-
-
 ## Setup
 
 ### Installation
@@ -24,7 +22,6 @@ hide_description: true
 apt-get install libopenmpi-dev 
 apt-get install openmpi-bin 
 ```
-
 
 ### Compilation & Running OpenMP
 ```sh
@@ -49,7 +46,6 @@ gcc -o izvrsna_dat izvorna_dat.c -fopenacc
 ## Zadaci
 
 ### Pi.c
-
 
 ```c 
 #include <stdio.h>
@@ -88,7 +84,6 @@ void serial_code() {
 ```
 Pi.c - zadatak
 {:.figure}
-
 
 ### mandelbrot.c
 
@@ -161,7 +156,6 @@ void testpoint(void){
 ```
 mandelbrot.c - zadatak 
 {:.figure}
-
 
 ### linkedlist.c
 
@@ -322,8 +316,6 @@ modifikujete izvorni kod tako da na neki drugi način obezbedite učitavanje ula
 Pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka i pokrenuti ``./a.out``, ili drugi naziv ukoliko 
 je drugačije specificirano tokom kompajliranja.
 
-
-
 #### main.c
 
 ```c
@@ -404,7 +396,6 @@ main.c - zadatak
 {:.figure}
 
 #### CMakeLists.txt
-
 
 ```sh
 cmake_minimum_required(VERSION 3.5)
@@ -506,7 +497,6 @@ h5_matrix_utils.h - zadatak
 #include <time.h>
 #include "h5_matrix_utils.h"
 
-
 void h5_save_matrix(const char *filename, unsigned int rows, unsigned int cols) {
 
     hid_t file_id, dataspace_id, dataset_id;
@@ -601,8 +591,6 @@ void print_float_matrix(float *matrix, unsigned long long rows, unsigned long lo
 h5_matrix_utils.h - zadatak 
 {:.figure}
 
-
-
 ### Genetic Algorithm
 
 #### ReadMe
@@ -644,8 +632,6 @@ make -j4
 ##### Pokretanje programa
 Pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka i pokrenuti ``./a.out``, ili drugi naziv ukoliko 
 je drugačije specificirano tokom kompajliranja.
-
-
 
 #### main.c
 
@@ -693,7 +679,6 @@ typedef struct Individual individual_t;
  */
 static individual_t *population;
 static unsigned long int total_fitness;
-
 
 /** Funkcije za rad sa populacijom. */
 
@@ -943,9 +928,6 @@ main.c - zadatak
 
 #### CMakeLists.txt
 
-
-
-
 ```sh
 cmake_minimum_required(VERSION 3.5)
 project(GeneticAlgorithm)
@@ -962,8 +944,6 @@ add_executable(GeneticAlgorithm ${SOURCE_FILES})
 ```
 CMakeLists.txt - zadatak 
 {:.figure}
-
-
 
 ### Bisection
 
@@ -1008,8 +988,6 @@ make -j4
 Pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka i pokrenuti ``./a.out``, ili drugi naziv ukoliko 
 je drugačije specificirano tokom kompajliranja.
 
-
-
 #### main.c
 
 ```c
@@ -1020,7 +998,6 @@ je drugačije specificirano tokom kompajliranja.
 #define MAX_ITERS 1000
 #define TOLERANCE 0.0000000001
 #define STEP 1
-
 
 #ifdef FX
     static double lower_bound = -5.f;
@@ -1048,7 +1025,6 @@ double f(double x) {
     return sin(x);
 #endif
 }
-
 
 /**
  * Funkcija koja metodom bisekcije racuna koren zadate funkcije. Pretpostavka je da je funkcija
@@ -1152,9 +1128,6 @@ int main() {
 main.c - zadatak
 {:.figure}
 
-
-
-
 #### CMakeLists.txt
 
 ```sh
@@ -1175,17 +1148,9 @@ target_link_libraries(BisectionMethod -lm)
 CMakeLists.txt - zadatak
 {:.figure}
 
-
-
-
-
-
-
-
 ## Rešenja
 
 ### Pi.c
-
 
 ```c 
 /**
@@ -1327,7 +1292,6 @@ void parallel_code() {
         // napravljeno i aktivirano.
         nthrds = omp_get_num_threads();
 
-
         // Kako je neophodno sabrati sve parcijalne rezultate izvan paralelog regiona
         // (dovoljno je da) jedna od niti sacuva informaciju o broju aktivnih niti
         // unutar paralelnog regiona. Kada se paralelni region zavrsi, sve niti koje 
@@ -1453,7 +1417,6 @@ void parallel_code_for_construct() {
 Pi.c - rešenje
 {:.figure}
 
-
 ### mandelbrot.c
 
 ```c
@@ -1527,7 +1490,6 @@ void testpoint(struct d_complex c){
 ```
 mandelbrot.c - rešenje 
 {:.figure}
-
 
 ### linkedlist.c
 

@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## memento Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/memento.py.png)
-
 
 ## Python-Design-Patterns memento
 
@@ -36,7 +34,6 @@ Provides the ability to restore an object to its previous state.
 from copy import copy
 from copy import deepcopy
 
-
 def memento(obj, deep=False):
     state = deepcopy(obj.__dict__) if deep else copy(obj.__dict__)
 
@@ -45,7 +42,6 @@ def memento(obj, deep=False):
         obj.__dict__.update(state)
 
     return restore
-
 
 class Transaction(object):
     """A transaction guard.
@@ -68,7 +64,6 @@ class Transaction(object):
         for a_state in self.states:
             a_state()
 
-
 class Transactional(object):
     """Adds transactional semantics to methods. Methods decorated  with
 
@@ -89,7 +84,6 @@ class Transactional(object):
 
         return transaction
 
-
 class NumObj(object):
     def __init__(self, value):
         self.value = value
@@ -104,7 +98,6 @@ class NumObj(object):
     def do_stuff(self):
         self.value = '1111'  # <- invalid value
         self.increment()  # <- will fail and rollback
-
 
 if __name__ == '__main__':
     num_obj = NumObj(-1)
@@ -138,7 +131,6 @@ if __name__ == '__main__':
 
         traceback.print_exc(file=sys.stdout)
     print(num_obj)
-
 
 ### OUTPUT ###
 # <NumObj: -1>

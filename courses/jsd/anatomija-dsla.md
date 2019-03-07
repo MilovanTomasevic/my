@@ -171,8 +171,6 @@ layout: true
 
 ![:scale 80%](anatomija-dsla/django-validatori.png)
 
-
-
 ---
 name: mobl
 class: center, middle
@@ -191,7 +189,6 @@ layout: true
 
 TODO
 
-
 ---
 name: pyflies
 class: center, middle
@@ -207,8 +204,5 @@ layout: true
 ---
 
 ## pyFlies
-
-
-
 
 {% endblock %}

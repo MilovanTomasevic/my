@@ -16,7 +16,6 @@ hide_description: true
 
 ## Primer 1
 
-
 ```py
 import sys
 
@@ -33,9 +32,7 @@ if __name__ == "__main__":
 primer1.py
 {:.figure}
 
-
 ## Zadatak 1
-
 
 ```py
 def zbir(n):
@@ -52,7 +49,6 @@ zadatak1.py
 {:.figure}
 
 ## Zadatak 2
-
 
 ```py
 import sys
@@ -75,7 +71,6 @@ zadatak2.py
 
 ## Zadatak 3
 
-
 ```py
 if __name__ == "__main__":
     str1 = input()
@@ -88,7 +83,6 @@ zadatak3.py
 
 ## Zadatak 4
 
-
 ```py
 if __name__ == "__main__":
     l = [i + 1 for i in range(100)]
@@ -98,7 +92,6 @@ zadatak4.py
 {:.figure}
 
 ## Zadatak 5
-
 
 ```py
 if __name__ == "__main__":
@@ -120,7 +113,6 @@ zadatak5.py
 
 ## Zadatak 6
 
-
 ```py
 if __name__ == "__main__":
     l = []
@@ -136,7 +128,6 @@ zadatak6.py
 {:.figure}
 
 ## Zadatak 7
-
 
 ```py
 if __name__ == "__main__":

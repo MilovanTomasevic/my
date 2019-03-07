@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## abstract_factory Model
 
 ![](/courses/python-fesign-patterns/creational/viz/abstract_factory.py.png)
-
 
 ## Python-Design-Patterns abstract_factory
 
@@ -60,7 +58,6 @@ Provides a way to encapsulate a group of individual factories.
 
 import random
 
-
 class PetShop(object):
 
     """A pet shop"""
@@ -77,14 +74,12 @@ class PetShop(object):
         print("We have a lovely {}".format(pet))
         print("It says {}".format(pet.speak()))
 
-
 class Dog(object):
     def speak(self):
         return "woof"
 
     def __str__(self):
         return "Dog"
-
 
 class Cat(object):
     def speak(self):
@@ -93,14 +88,12 @@ class Cat(object):
     def __str__(self):
         return "Cat"
 
-
 # Additional factories:
 
 # Create a random animal
 def random_animal():
     """Let's be dynamic!"""
     return random.choice([Dog, Cat])()
-
 
 # Show pets with various factories
 if __name__ == "__main__":
@@ -133,7 +126,6 @@ if __name__ == "__main__":
 abstract_factory.py
 {:.figure}
 
-
 ## abstract_factory Test
 
 ```py
@@ -146,7 +138,6 @@ try:
     from unittest.mock import patch
 except ImportError:
     from mock import patch
-
 
 class TestPetShop(unittest.TestCase):
     def test_dog_pet_shop_shall_show_dog_instance(self):

@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## borg Model
 
 ![](/courses/python-fesign-patterns/creational/viz/borg.py.png)
-
 
 ## Python-Design-Patterns borg
 
@@ -65,7 +63,6 @@ https://fkromer.github.io/python-pattern-references/design/#singleton
 Provides singleton-like behavior sharing state between instances.
 """
 
-
 class Borg(object):
     __shared_state = {}
 
@@ -76,10 +73,8 @@ class Borg(object):
     def __str__(self):
         return self.state
 
-
 class YourBorg(Borg):
     pass
-
 
 if __name__ == '__main__':
     rm1 = Borg()
@@ -119,7 +114,6 @@ if __name__ == '__main__':
 borg.py
 {:.figure}
 
-
 ## borg Test
 
 ```py
@@ -127,7 +121,6 @@ borg.py
 # -*- coding: utf-8 -*-
 import unittest
 from creational.borg import Borg, YourBorg
-
 
 class BorgTest(unittest.TestCase):
     def setUp(self):

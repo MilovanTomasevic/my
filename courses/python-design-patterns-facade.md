@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## facade Model
 
 ![](/courses/python-fesign-patterns/structural/viz/facade.py.png)
-
 
 ## Python-Design-Patterns facade
 
@@ -69,7 +67,6 @@ import time
 
 SLEEP = 0.1
 
-
 # Complex Parts
 class TC1:
     def run(self):
@@ -83,7 +80,6 @@ class TC1:
         time.sleep(SLEEP)
         print(u"Test Finished\n")
 
-
 class TC2:
     def run(self):
         print(u"###### In Test 2 ######")
@@ -95,7 +91,6 @@ class TC2:
         print(u"Tearing down")
         time.sleep(SLEEP)
         print(u"Test Finished\n")
-
 
 class TC3:
     def run(self):
@@ -109,7 +104,6 @@ class TC3:
         time.sleep(SLEEP)
         print(u"Test Finished\n")
 
-
 # Facade
 class TestRunner:
     def __init__(self):
@@ -120,7 +114,6 @@ class TestRunner:
 
     def runAll(self):
         [i.run() for i in self.tests]
-
 
 # Client
 if __name__ == '__main__':
@@ -150,7 +143,6 @@ if __name__ == '__main__':
 facade.py
 {:.figure}
 
-
 ## facade Test
 
 ```py
@@ -164,7 +156,6 @@ try:
 except ImportError:
     from StringIO import StringIO
 from structural.facade import TestRunner, TC1, TC2, TC3
-
 
 class TestRunnerFacilities(unittest.TestCase):
     def setUp(self):

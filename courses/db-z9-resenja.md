@@ -16,8 +16,6 @@ hide_description: true
 
 ## Primer 1
 
-
-
 ```sql
 select ime, count(*)n 
 from dosije
@@ -27,7 +25,6 @@ order by n;
 ```
 
 ## Primer 2
-
 
 ```sql
 select i.indeks, rtrim(d.ime) || ' ' || rtrim(d.prezime), sum(p.bodovi) polozeno 
@@ -50,7 +47,6 @@ order by 3;
 
 ## Primer 3
 
-
 ```sql
 select indeks, max(coalesce(datum_usmenog, datum_pismenog)) poslednji 
 from ispit
@@ -59,7 +55,6 @@ group by indeks;
 ```
 
 ## Primer 4
-
 
 ```sql
 select s.naziv smer, p1.naziv obavezan_predmet, p2.naziv uslovni_predmet 
@@ -74,7 +69,6 @@ order by smer, obavezan_predmet;
 ```
 
 ## Primer 5
-
 
 ```sql
 with indeksbodova as (select indeks, sum(p.bodovi) polbodovi 
@@ -95,7 +89,6 @@ where polbodovi = maxb;
 
 ## Primer 6
 
-
 ```sql
 select d.indeks, d.ime, d.prezime, p.naziv
 from dosije d 
@@ -110,7 +103,6 @@ where i.indeks=d.indeks and i.id_predmeta=op.id_predmeta and ocena>5 and status_
 ```
 
 ## Primer 7
-
 
 ```sql
 with nepolozeni as (select d.indeks, d.ime, d.prezime,p.id_predmeta, p.naziv 
@@ -130,7 +122,6 @@ where up.id_uslovnog not in ( select id_predmeta from ispit i
 ```
 
 ## Primer 8
-
 
 ```sql
 with a as (select id_nivoa, id_predmeta, count(*) n
@@ -161,7 +152,6 @@ where not exists( select *
 
 ## Primer 9
 
-
 ```sql
 with a as (select id_predmeta id, sum(case when ocena>5 then 1 else 0 end) brP, count(distinct indeks) uk 
 from ispit
@@ -175,7 +165,6 @@ order by prolaznost desc;
 ```
 
 ## Primer 10
-
 
 ```sql
 select s.naziv, d1.dat_rodjenja, d1.dat_rodjenja, d1.indeks, d1.ime, d1.prezime, d2.indeks, d2.ime, d2.prezime 

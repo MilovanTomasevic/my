@@ -23,7 +23,6 @@ apt-get install libopenmpi-dev
 apt-get install openmpi-bin 
 ```
 
-
 ### Compilation & Running OpenMP
 ```sh
 gcc -o name name.c -fopenmp
@@ -135,7 +134,6 @@ Pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka i pokrenuti
 naziv ukoliko je drugačije specificirano tokom kompajliranja. ``<Nmpi>`` zameniti konkretnim brojem koji predstavlja broj 
 MPI procesa. ``<Nomp>`` zameniti konkretnim brojem koji predstavlja broj niti po
 procesu.
-
 
 #### main.c
 
@@ -278,7 +276,6 @@ CMakeLists.txt - zadatak
 h5defs.h - zadatak
 {:.figure}
 
-
 ##### h5_matrix_utils.h
 
 ~~~c
@@ -335,7 +332,6 @@ h5_matrix_utils.h - zadatak
 ~~~c
 #include <time.h>
 #include "h5_matrix_utils.h"
-
 
 void h5_generate_matrix(const char *filename, unsigned int rows, unsigned int cols) {
     float *data = generate_float_matrix(rows, cols);
@@ -439,15 +435,11 @@ void print_float_vector(float *vector, unsigned long long len) {
 h5_matrix_utils.c - zadatak
 {:.figure}
 
-
-
 #### input_data
 
 - [m3x3.h5](../high-performance-computing/v5/input_data/m3x3.h5){:target="_blank"} 
 - [m5x5.h5](../high-performance-computing/v5/input_data/m5x5.h5){:target="_blank"} <br>
 - [statistika.csv](../high-performance-computing/v5/statistika.csv){:target="_blank"}
-
-
 
 ~~~c
 // Hello World iz hibridnog OpenMPI + OpenMP programa.
@@ -568,7 +560,6 @@ pi_sekvencijalni.c
 ## Predavanja 
 
 ### nbody_basic.c
-
 
 ~~~c
 /* File:     nbody_basic.c
@@ -722,7 +713,6 @@ int main(int argc, char* argv[]) {
    return 0;
 }  /* main */
 
-
 /*---------------------------------------------------------------------
  * Function: Usage
  * Purpose:  Print instructions for command-line and exit
@@ -739,7 +729,6 @@ void Usage(char* prog_name) {
     
    exit(0);
 }  /* Usage */
-
 
 /*---------------------------------------------------------------------
  * Function:  Get_args
@@ -777,7 +766,6 @@ void Get_args(int argc, char* argv[], int* n_p, int* n_steps_p,
    printf("g_i = %c\n", *g_i_p);
 #  endif
 }  /* Get_args */
-
 
 /*---------------------------------------------------------------------
  * Function:  Get_init_cond
@@ -841,7 +829,6 @@ void Gen_init_cond(struct particle_s curr[], int n) {
    }
 }  /* Gen_init_cond */
 
-
 /*---------------------------------------------------------------------
  * Function:  Output_state
  * Purpose:   Print the current state of the system
@@ -862,7 +849,6 @@ void Output_state(double time, struct particle_s curr[], int n) {
    }
    printf("\n");
 }  /* Output_state */
-
 
 /*---------------------------------------------------------------------
  * Function:  Compute_force
@@ -921,7 +907,6 @@ void Compute_force(int part, vect_t forces[], struct particle_s curr[],
    }
 }  /* Compute_force */
 
-
 /*---------------------------------------------------------------------
  * Function:  Update_part
  * Purpose:   Update the velocity and position for particle part
@@ -959,7 +944,6 @@ void Update_part(int part, vect_t forces[], struct particle_s curr[],
 // curr[part].s[X] += delta_t * curr[part].v[X];
 // curr[part].s[Y] += delta_t * curr[part].v[Y];
 }  /* Update_part */
-
 
 /*---------------------------------------------------------------------
  * Function:  Compute_energy
@@ -1003,7 +987,6 @@ nbody_basic.c
 {:.figure}
 
 ### nbody_red.c
-
 
 ~~~c
 /* File:     nbody_red.c
@@ -1167,7 +1150,6 @@ int main(int argc, char* argv[]) {
    return 0;
 }  /* main */
 
-
 /*---------------------------------------------------------------------
  * Function: Usage
  * Purpose:  Print instructions for command-line and exit
@@ -1184,7 +1166,6 @@ void Usage(char* prog_name) {
     
    exit(0);
 }  /* Usage */
-
 
 /*---------------------------------------------------------------------
  * Function:  Get_args
@@ -1222,7 +1203,6 @@ void Get_args(int argc, char* argv[], int* n_p, int* n_steps_p,
    printf("g_i = %c\n", *g_i_p);
 #  endif
 }  /* Get_args */
-
 
 /*---------------------------------------------------------------------
  * Function:  Get_init_cond
@@ -1286,7 +1266,6 @@ void Gen_init_cond(struct particle_s curr[], int n) {
    }
 }  /* Gen_init_cond */
 
-
 /*---------------------------------------------------------------------
  * Function:  Output_state
  * Purpose:   Print the current state of the system
@@ -1307,7 +1286,6 @@ void Output_state(double time, struct particle_s curr[], int n) {
    }
    printf("\n");
 }  /* Output_state */
-
 
 /*---------------------------------------------------------------------
  * Function:  Compute_force
@@ -1365,7 +1343,6 @@ void Compute_force(int part, vect_t forces[], struct particle_s curr[],
    }
 }  /* Compute_force */
 
-
 /*---------------------------------------------------------------------
  * Function:  Update_part
  * Purpose:   Update the velocity and position for particle part
@@ -1403,7 +1380,6 @@ void Update_part(int part, vect_t forces[], struct particle_s curr[],
 // curr[part].s[X] += delta_t * curr[part].v[X];
 // curr[part].s[Y] += delta_t * curr[part].v[Y];
 }  /* Update_part */
-
 
 /*---------------------------------------------------------------------
  * Function:  Compute_energy
@@ -1592,7 +1568,6 @@ int main(int argc, char* argv[]) {
    return 0;
 }  /* main */
 
-
 /*---------------------------------------------------------------------
  * Function: Usage
  * Purpose:  Print instructions for command-line and exit
@@ -1609,7 +1584,6 @@ void Usage(char* prog_name) {
     
    exit(0);
 }  /* Usage */
-
 
 /*---------------------------------------------------------------------
  * Function:  Get_args
@@ -1651,7 +1625,6 @@ void Get_args(int argc, char* argv[], int* thread_count_p, int* n_p,
    printf("g_i = %c\n", *g_i_p);
 #  endif
 }  /* Get_args */
-
 
 /*---------------------------------------------------------------------
  * Function:  Get_init_cond
@@ -1715,7 +1688,6 @@ void Gen_init_cond(struct particle_s curr[], int n) {
    }
 }  /* Gen_init_cond */
 
-
 /*---------------------------------------------------------------------
  * Function:  Output_state
  * Purpose:   Print the current state of the system
@@ -1736,7 +1708,6 @@ void Output_state(double time, struct particle_s curr[], int n) {
    }
    printf("\n");
 }  /* Output_state */
-
 
 /*---------------------------------------------------------------------
  * Function:  Compute_force
@@ -1792,7 +1763,6 @@ void Compute_force(int part, vect_t forces[], struct particle_s curr[],
    }
 }  /* Compute_force */
 
-
 /*---------------------------------------------------------------------
  * Function:  Update_part
  * Purpose:   Update the velocity and position for particle part
@@ -1830,7 +1800,6 @@ void Update_part(int part, vect_t forces[], struct particle_s curr[],
 // curr[part].s[X] += delta_t * curr[part].v[X];
 // curr[part].s[Y] += delta_t * curr[part].v[Y];
 }  /* Update_part */
-
 
 /*---------------------------------------------------------------------
  * Function:  Compute_energy
@@ -2061,7 +2030,6 @@ void Usage(char* prog_name) {
    exit(0);
 }  /* Usage */
 
-
 /*---------------------------------------------------------------------
  * Function:  Get_args
  * Purpose:   Get command line args
@@ -2187,7 +2155,6 @@ void Output_state(double time, struct particle_s curr[], int n) {
    printf("\n");
 }  /* Output_state */
 
-
 /*---------------------------------------------------------------------
  * Function:  Compute_force
  * Purpose:   Compute the total force on particle part.  Exploit
@@ -2243,7 +2210,6 @@ void Compute_force(int part, vect_t forces[], struct particle_s curr[],
       forces[k][Y] -= f_part_k[Y];
    }
 }  /* Compute_force */
-
 
 /*---------------------------------------------------------------------
  * Function:  Update_part
@@ -2464,7 +2430,6 @@ int main(int argc, char* argv[]) {
    return 0;
 }  /* main */
 
-
 /*---------------------------------------------------------------------
  * Function: Usage
  * Purpose:  Print instructions for command-line and exit
@@ -2482,7 +2447,6 @@ void Usage(char* prog_name) {
     
    exit(0);
 }  /* Usage */
-
 
 /*---------------------------------------------------------------------
  * Function:  Get_args
@@ -2536,7 +2500,6 @@ void Get_args(int argc, char* argv[], int* n_p, int* n_steps_p,
    }
 #  endif
 }  /* Get_args */
-
 
 /*---------------------------------------------------------------------
  * Function:   Get_init_cond
@@ -2624,7 +2587,6 @@ void Gen_init_cond(double masses[], vect_t pos[],
          loc_vel, loc_n, vect_mpi_t, 0, comm);
 }  /* Gen_init_cond */
 
-
 /*---------------------------------------------------------------------
  * Function:   Output_state
  * Purpose:    Print the current state of the system
@@ -2654,7 +2616,6 @@ void Output_state(double time, double masses[], vect_t pos[],
       printf("\n");
    }
 }  /* Output_state */
-
 
 /*---------------------------------------------------------------------
  * Function:       Compute_force
@@ -2716,7 +2677,6 @@ void Compute_force(int loc_part, double masses[], vect_t loc_forces[],
       }
    }
 }  /* Compute_force */
-
 
 /*---------------------------------------------------------------------
  * Function:  Update_part
@@ -2969,7 +2929,6 @@ int main(int argc, char* argv[]) {
    return 0;
 }  /* main */
 
-
 /*---------------------------------------------------------------------
  * Function: Usage
  * Purpose:  Print instructions for command-line and exit
@@ -2986,7 +2945,6 @@ void Usage(char* prog_name) {
    fprintf(stderr, "   'i': program should get init conds from stdin\n");
     
 }  /* Usage */
-
 
 /*---------------------------------------------------------------------
  * Function:  Get_args
@@ -3068,7 +3026,6 @@ void Build_cyclic_mpi_type(int loc_n) {
 
 }  /* Build_cyclic_mpi_type */
 
-
 /*---------------------------------------------------------------------
  * Function:   Get_init_cond
  * Purpose:    Read in initial conditions:  mass, position and velocity
@@ -3108,7 +3065,6 @@ void Get_init_cond(double masses[], vect_t loc_pos[],
    MPI_Scatter(vel, 1, cyclic_mpi_t, 
          loc_vel, loc_n, vect_mpi_t, 0, comm);
 }  /* Get_init_cond */
-
 
 /*---------------------------------------------------------------------
  * Function:  Gen_init_cond
@@ -3163,7 +3119,6 @@ void Gen_init_cond(double masses[], vect_t loc_pos[],
          loc_vel, loc_n, vect_mpi_t, 0, comm);
 }  /* Gen_init_cond */
 
-
 /*---------------------------------------------------------------------
  * Function:   Output_state
  * Purpose:    Print the current state of the system
@@ -3198,7 +3153,6 @@ void Output_state(double time, double masses[], vect_t loc_pos[],
       printf("\n");
    }
 }  /* Output_state */
-
 
 /*---------------------------------------------------------------------
  * Function:       Compute_forces
@@ -3251,7 +3205,6 @@ void Compute_forces(double masses[], vect_t tmp_data[],
    }
 
 }  /* Compute_forces */
-
 
 /*---------------------------------------------------------------------
  * Function:       Compute_proc_forces
@@ -3354,7 +3307,6 @@ int Global_to_local(int gbl_part, int proc_rk, int proc_count) {
    return (gbl_part - proc_rk)/proc_count;
 }  /* Global_to_local */
 
-
 /*---------------------------------------------------------------------
  * Function:           First_index
  * Purpose:            Given a global index glb1 assigned to process
@@ -3378,7 +3330,6 @@ int First_index(int gbl1, int rk1, int rk2, int proc_count) {
    else 
       return gbl1 + (rk2 - rk1) + proc_count;
 }  /* First_index */
-
 
 /*---------------------------------------------------------------------
  * Function:           Compute_force_pair

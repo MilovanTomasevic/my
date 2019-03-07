@@ -44,7 +44,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 ## Treći deo
@@ -63,7 +62,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 ## Četvrti deo
@@ -77,9 +75,6 @@ Zadatak
     - Izveštaj urediti u rastućem redosledu po ukupnom broju bodova još uvek nepoloženih obaveznih predmeta.
 ]
 ]
-
-
-
 
 ---
 ## Četvrti deo
@@ -95,7 +90,6 @@ Zadatak
       - studentima osnovnih akademskih studija koji su upisali 2008/2009. školsku godinu ažurira broj overenih kredita na broj kredita koji su položili u toj školskoj godini, a datum overe je 5. septembar 2009.
 ]
 ]
-
 
 ---
 ## Peti deo
@@ -117,7 +111,6 @@ Zadatak
 ]
 ]
 
-
 ---
 ## Šesti deo
 .message.is-info[
@@ -135,9 +128,6 @@ Zadatak
 ]
 ]
 
-
-
-
 ---
 
 layout: false
@@ -145,6 +135,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}

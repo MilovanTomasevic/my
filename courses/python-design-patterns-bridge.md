@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## bridge Model
 
 ![](/courses/python-fesign-patterns/structural/viz/bridge.py.png)
-
 
 ## Python-Design-Patterns bridge
 
@@ -34,18 +32,15 @@ http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Bridge_Pattern#Pyt
 Decouples an abstraction from its implementation.
 """
 
-
 # ConcreteImplementor 1/2
 class DrawingAPI1(object):
     def draw_circle(self, x, y, radius):
         print('API1.circle at {}:{} radius {}'.format(x, y, radius))
 
-
 # ConcreteImplementor 2/2
 class DrawingAPI2(object):
     def draw_circle(self, x, y, radius):
         print('API2.circle at {}:{} radius {}'.format(x, y, radius))
-
 
 # Refined Abstraction
 class CircleShape(object):
@@ -63,14 +58,12 @@ class CircleShape(object):
     def scale(self, pct):
         self._radius *= pct
 
-
 def main():
     shapes = (CircleShape(1, 2, 3, DrawingAPI1()), CircleShape(5, 7, 11, DrawingAPI2()))
 
     for shape in shapes:
         shape.scale(2.5)
         shape.draw()
-
 
 if __name__ == '__main__':
     main()
@@ -81,7 +74,6 @@ if __name__ == '__main__':
 ```
 bridge.py
 {:.figure}
-
 
 ## bridge Test
 
@@ -95,7 +87,6 @@ try:
     from unittest.mock import patch
 except ImportError:
     from mock import patch
-
 
 class BridgeTest(unittest.TestCase):
     def test_bridge_shall_draw_with_concrete_api_implementation(cls):

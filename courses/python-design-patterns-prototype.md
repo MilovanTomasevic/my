@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## prototype Model
 
 ![](/courses/python-fesign-patterns/creational/viz/prototype.py.png)
-
 
 ## Python-Design-Patterns prototype
 
@@ -49,7 +47,6 @@ copies of the prototype: 'default', 'objecta' and 'objectb'.
 Creates new object instances by cloning prototype.
 """
 
-
 class Prototype(object):
 
     value = 'default'
@@ -60,7 +57,6 @@ class Prototype(object):
         obj = self.__class__()
         obj.__dict__.update(attrs)
         return obj
-
 
 class PrototypeDispatcher(object):
     def __init__(self):
@@ -78,7 +74,6 @@ class PrototypeDispatcher(object):
         """Unregister an object"""
         del self._objects[name]
 
-
 def main():
     dispatcher = PrototypeDispatcher()
     prototype = Prototype()
@@ -91,7 +86,6 @@ def main():
     dispatcher.register_object('default', d)
     print([{n: p.value} for n, p in dispatcher.get_objects().items()])
 
-
 if __name__ == '__main__':
     main()
 
@@ -101,7 +95,6 @@ if __name__ == '__main__':
 prototype.py
 {:.figure}
 
-
 ## prototype Test
 
 ```py
@@ -109,7 +102,6 @@ prototype.py
 # -*- coding: utf-8 -*-
 import unittest
 from creational.prototype import Prototype, PrototypeDispatcher
-
 
 class TestPrototypeFeatures(unittest.TestCase):
     def setUp(self):
@@ -130,7 +122,6 @@ class TestPrototypeFeatures(unittest.TestCase):
         sample_object_1 = self.prototype.clone()
         sample_object_2 = self.prototype.clone(value='re-assigned')
         self.assertNotEqual(sample_object_1.value, sample_object_2.value)
-
 
 class TestDispatcherFeatures(unittest.TestCase):
     def setUp(self):

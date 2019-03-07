@@ -41,7 +41,6 @@ layout: true
 - Obično se za strukturalne aspekte sistema koristi generisanje koda dok se
   interpreteri koriste kod aspekata ponašanja.
 
-
 ---
 name: generisanje-koda
 class: center, middle
@@ -310,7 +309,6 @@ http://guides.rubyonrails.org/layouts_and_rendering.html
 ---
 ## Primer - Xtend
 
-
 ```xtend
 def compile(Entity e) ''' 
 	«IF e.eContainer.fullyQualifiedName != null»
@@ -459,7 +457,6 @@ Generisani kôd nasleđuje apstraktne klase ili implementira interfejse (ručno
 pisane). Ručno pisani kod poziva generisani preko interfejsa ili apstraktnih
 klasa.
 
-
 ![:scale 60%](generisanje-programskog-koda/integracija_3.svg)
 
 .footer.small[
@@ -483,7 +480,6 @@ M. Völter and T. Stahl, *Model-Driven Software Development : Technology, Engine
 Generisani kôd nasleđuje i poziva ručno pisani. Na primer, implementacija
 apstraktnih metoda u kojoj se koriste pozivi konkretnih metoda.
 
-
 ![:scale 80%](generisanje-programskog-koda/integracija_5.svg)
 
 .footer.small[
@@ -497,7 +493,6 @@ Generisani kôd nasleđuje ručno pisani i definiše apstraktne metode. Ručno p
 kôd poziva konkretne metode kao i apstraktne metode koje definiše generisani
 kod. Implementacija *Template Method* dizajn šablona.
 
-
 ![:scale 80%](generisanje-programskog-koda/integracija_6.svg)
 
 .footer.small[
@@ -508,7 +503,6 @@ M. Völter and T. Stahl, *Model-Driven Software Development : Technology, Engine
 ## Integracija upotrebom VCS
 
 ![:scale 70%](generisanje-programskog-koda/vcs-integracija.png)
-
 
 ---
 name: interpretiranje
@@ -544,7 +538,6 @@ layout: true
 - Parser se ne generiše već se arpeggio konfiguriše gramatikom jezika i posle
   toga je spreman da parsira proizvoljne iskaze na definisanom jeziku.
 
-
 ---
 name: finalne-napomene
 class: center, middle
@@ -577,9 +570,6 @@ layout: true
 - Zavisi od jezika, domena, zahteva u razvoju kao i zahtevanih nefunkcioanlnih
   osobina.
 - Često se u praksi ova dva pristupa kombinuju.
-
-
-
 
 {% endraw %}
 {%endblock %}

@@ -168,13 +168,11 @@ public class Course {
 
 ![:scale 70%](uvod/ChessNotation.png)
 
-
 ---
 
 ## pa čak i...
 
 ![:scale 50%](uvod/saobracajni-znaci.jpg)
-
 
 ---
 
@@ -191,7 +189,6 @@ public class Course {
 - Čest je slučaj da jezik nastane kao JSD ali se vremenom proširi do te mere da
   ga možemo smatrati JON.
 
-
 ---
 name: prednosti
 layout: false
@@ -205,7 +202,6 @@ layout: true
 .section[[Prednosti](#sadrzaj)]
 
 ---
-
 
 ## Uticaj na produktivnost
 
@@ -241,7 +237,6 @@ MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
 
 ---
 
-
 ## Zašto JSD?
 
 - JSD su koncizniji od jezika opšte namene što omogućava korisnicima da jasnije
@@ -274,7 +269,6 @@ MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
 - Prevođenje koda na ciljnu platformu (kompajliranje) će rezultovati
   konzistentnim kodom.
 
-
 ---
 
 ## Uticaj na evoluciju aplikacije
@@ -305,11 +299,9 @@ layout: true
 
 ---
 
-
 ## Arhitektura bazirana na interpreterima
 
 ![](uvod/Arhitektura-interpreter.svg)
-
 
 ---
 name: gradivni
@@ -333,7 +325,6 @@ Kao i svaki softverski jezik i JSD se sastoji od:
 - Semantike
 
 ---
-
 
 ## Apstraktna sintaksa
 
@@ -419,7 +410,6 @@ Primer istog iskaza upotrebom dve različite konkretne sintakse
   jezik. Definisan u hardveru računara (procesoru).
   
 
-
 ---
 name: klasifikacija
 layout: false
@@ -445,7 +435,6 @@ layout: true
 
 ---
 
-
 ## Tekstualne sintakse - prednosti i mane
 
 - Programeri se osećaju "kod kuće".
@@ -457,7 +446,6 @@ layout: true
   (grafovi, tabele itd.).
   
 ---
-
 
 ## Grafičke sintakse - prednosti
 
@@ -513,7 +501,6 @@ layout: true
 - Svaka namenska biblioteka može se smatrati internim JSD (API bazirani)...
 - ... ali konkretna sintaksa takvog jezika nije prilagođena domenu.
 
-
 ---
 
 ## Eksterni JSD
@@ -535,9 +522,7 @@ layout: true
 - **Window Builder**: GUI baziran, domen - izgradnja interfejsa
 - **R**: tekstualni, domen - statistička obrada podataka
 
-
 ---
-
 
 ## Primer: Interni JSD za definisanje email-a (*JavaMail API*)
 
@@ -557,7 +542,6 @@ Transport.send(message);
 
 ---
 
-
 ## Primer: Hipotetički eksterni JSD za definisanje email-a
 
 ```
@@ -573,7 +557,6 @@ SEND myMail
 ```
 
 ---
-
 
 ## Primer
 
@@ -603,7 +586,6 @@ public DSLKurs() {
 
 ---
 
-
 ## Primer
 
 Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
@@ -611,7 +593,6 @@ Eksterni JSD za definisanje grafički korisničkih interfejsa (*WindowBuilder*)
 ![:scale 70%](uvod/GUIDSL-External.png)
 
 ---
-
 
 ## Primer
 
@@ -627,7 +608,6 @@ def calc():       return OneOrMore(expression), EOF
 ```
 
 ---
-
 
 ## Primer
 
@@ -667,7 +647,6 @@ layout: true
 
 ---
 
-
 ## Primer internog JSD (*Ruby Sinatra*)
 
 ```ruby
@@ -691,7 +670,6 @@ end
 ```
 
 ---
-
 
 ## Primer internog JSD (Groovy Gradle)
 
@@ -717,7 +695,6 @@ layout: false
 class: center, middle
 
 # Eksterni JSD omogućavaju potpuno prilagođavanje domenu.
-
 
 ---
 layout: true
@@ -774,7 +751,6 @@ ekspertima.
         http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
 ]
 
-
 ---
 name: radionice
 layout: false
@@ -788,7 +764,6 @@ layout: true
 .section[[Jezičke radionice](#sadrzaj)]
 
 ---
-
 
 ## Jezičke radionice (*Language Workbenches*)
 
@@ -807,7 +782,6 @@ layout: true
    languages*, Online
    http://www.martinfowler.com/articles/languageWorkbench.html, 2005.
 ]
-
 
 ---
 
@@ -918,7 +892,6 @@ http://www.eclipse.org/Xtext/7languagesDoc.html#tortoise
 ]
 
 ---
-
 
 ## Xtext - *Little tortoise* gramatika
 

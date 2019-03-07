@@ -16,8 +16,6 @@ hide_description: true
 
 ## Primer 1
 
-
-
 ```sql
 create table polozeni_predmeti (
 indeks integer not null,
@@ -30,14 +28,12 @@ primary key(indeks, id_predmeta, godina_roka, oznaka_roka),
 foreign key (indeks, id_predmeta, godina_roka, oznaka_roka) references ispit, constraint vrednost_ocene check (ocena between 6 and 10)
 );
 
-
 insert into polozeni_predmeti select *
 from ispit
 where ocena>5;
 ```
 
 ## Primer 2
-
 
 ```sql
 alter table polozeni_predmeti 
@@ -53,13 +49,11 @@ alter table polozeni_predmeti
 
 ## Primer 3
 
-
 ```sql
 drop table polozeni_predmeti;
 ```
 
 ## Primer 4
-
 
 ```sql
 create table student_ispiti (
@@ -72,7 +66,6 @@ create table student_ispiti (
 
 ## Primer 5
 
-
 ```sql
 alter table student_ispiti
     add broj_ispita smallint
@@ -80,7 +73,6 @@ alter table student_ispiti
 ```
 
 ## Primer 6
-
 
 ```sql
 insert into student_ispiti
@@ -92,13 +84,11 @@ group by indeks;
 
 ## Primer 7
 
-
 ```sql
 create index student_prosek on student_ispiti (indeks, prosek);
 ```
 
 ## Primer 8
-
 
 ```sql
 create view ispitnirok_predmeti (ispitni_rok, predmet, broj_ispita) as 
@@ -110,7 +100,6 @@ group by ir.naziv, p.naziv;
 ```
 
 ## Primer 9
-
 
 ```sql
 select indeks,
@@ -126,7 +115,6 @@ order by broj_ispita;
 ```
 
 ## Primer 10
-
 
 ```sql
 select d.indeks, ime, prezime, 
@@ -144,7 +132,6 @@ order by d.indeks;
 
 ## Primer 11
 
-
 ```sql
 select d.indeks, ime, prezime, max(datum_ispita) poslednji_ispit 
 from dosije d 
@@ -156,7 +143,6 @@ order by 4;
 ```
 
 ## Primer 12
-
 
 ```sql
 with student_bodovi (indeks, polozeni_bodovi) as (
@@ -171,7 +157,6 @@ join dosije d on d.indeks=sb.indeks
 where polozeni_bodovi=(select max(polozeni_bodovi) 
 from student_bodovi);
 
-
 select d.indeks, ime, prezime, sum(bodovi)
 from ispit i join dosije d on i.indeks=d.indeks
 join predmet p on p.id_predmeta=i.id_predmeta 
@@ -185,7 +170,6 @@ having sum(bodovi)>= all(select sum(bodovi)
 ```
 
 ## Primer 13
-
 
 ```sql
 select ceil(sum(bodovi)/60.0)

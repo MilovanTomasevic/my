@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## chain Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/chain.py.png)
-
 
 ## Python-Design-Patterns chain
 
@@ -48,7 +46,6 @@ Allow a request to pass down a chain of receivers until it is handled.
 
 import abc
 
-
 class Handler(object):
     __metaclass__ = abc.ABCMeta
 
@@ -71,7 +68,6 @@ class Handler(object):
     def check_range(self, request):
         """Compare passed value to predefined interval"""
 
-
 class ConcreteHandler0(Handler):
     """Each handler can be different.
     Be simple and static...
@@ -83,7 +79,6 @@ class ConcreteHandler0(Handler):
             print("request {} handled in handler 0".format(request))
             return True
 
-
 class ConcreteHandler1(Handler):
     """... With it's own internal state"""
 
@@ -93,7 +88,6 @@ class ConcreteHandler1(Handler):
         if self.start <= request < self.end:
             print("request {} handled in handler 1".format(request))
             return True
-
 
 class ConcreteHandler2(Handler):
     """... With helper methods."""
@@ -108,13 +102,11 @@ class ConcreteHandler2(Handler):
     def get_interval_from_db():
         return (20, 30)
 
-
 class FallbackHandler(Handler):
     @staticmethod
     def check_range(request):
         print("end of chain, no handler for {}".format(request))
         return False
-
 
 if __name__ == "__main__":
     h0 = ConcreteHandler0()

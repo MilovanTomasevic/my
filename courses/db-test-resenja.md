@@ -16,8 +16,6 @@ hide_description: true
 
 ## Zadatak 1
 
-
-
 ```sql
 -- a)
 with polozeno as (select i.id_predmeta, i.semestar, count(*) brpol 
@@ -78,7 +76,6 @@ join predmet p2 on p2.id_predmeta=up.id_uslovnog and not exists ( select *
 
 ## Zadatak 2
 
-
 ```sql
 create distinct type rsd as float with comparisons;
 create function iznosskolarine(bodovi integer) 
@@ -118,7 +115,6 @@ on d.indeks=s.indeks where not exists ( select *
 
 ## Zadatak 3
 
-
 ```sql
 with uslovni(id_koren, id_predmet, id_uslovni) as (
 select up.id_predmeta, up.id_predmeta, id_uslovnog
@@ -138,7 +134,6 @@ order by 1;
 ```
 
 ## Dodatni upit
-
 
 ```sql
 with polozeno as (

@@ -27,8 +27,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Zadaci 2, 3, 4
 
@@ -42,7 +40,6 @@ Zadatak
 - Implementirati algoritam za binarnu pretragu brojeva. Ulazni podaci su niz (lista) brojeva i tražena vrednost. Izlaz je pozicija na kojoj se nalazi tražena vrednost.
 ]
 ]
-
 
 ---
 
@@ -69,9 +66,5 @@ Odgovor
 
 ]
 ]
-
-
-
-
 
 {% endblock %}

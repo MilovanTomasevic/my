@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## decorator Model
 
 ![](/courses/python-fesign-patterns/structural/viz/decorator.py.png)
-
 
 ## Python-Design-Patterns decorator
 
@@ -54,7 +52,6 @@ Adds behaviour to object without affecting its class.
 
 from __future__ import print_function
 
-
 class TextTag(object):
     """Represents a base text tag"""
 
@@ -63,7 +60,6 @@ class TextTag(object):
 
     def render(self):
         return self._text
-
 
 class BoldWrapper(TextTag):
     """Wraps a tag in <b>"""
@@ -74,7 +70,6 @@ class BoldWrapper(TextTag):
     def render(self):
         return "<b>{}</b>".format(self._wrapped.render())
 
-
 class ItalicWrapper(TextTag):
     """Wraps a tag in <i>"""
 
@@ -83,7 +78,6 @@ class ItalicWrapper(TextTag):
 
     def render(self):
         return "<i>{}</i>".format(self._wrapped.render())
-
 
 if __name__ == '__main__':
     simple_hello = TextTag("hello, world!")
@@ -98,7 +92,6 @@ if __name__ == '__main__':
 decorator.py
 {:.figure}
 
-
 ## decorator Test
 
 ```py
@@ -106,7 +99,6 @@ decorator.py
 # -*- coding: utf-8 -*-
 import unittest
 from structural.decorator import TextTag, BoldWrapper, ItalicWrapper
-
 
 class TestTextWrapping(unittest.TestCase):
     def setUp(self):

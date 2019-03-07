@@ -139,7 +139,6 @@ $$I_{p}=k_{b}i_{a}+\sum_m(k_{d}(\widehat{L}_{m}\cdot\widehat{N})i_{m,d}+k_{s}(\w
 
 ---
 
-
 ## SIMD
 
 ```java
@@ -271,7 +270,6 @@ $$ Speedup_{parallel}(f,n)=\frac{1}{(1-f)+(\frac{f}{n})} \\ Speedup_{enhanced}(f
 ]
 
 ![:scale 60%](img/AmdahlsLaw.svg)
-
 
 ---
 

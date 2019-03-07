@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## composite Model
 
 ![](/courses/python-fesign-patterns/structural/viz/composite.py.png)
-
 
 ## Python-Design-Patterns composite
 
@@ -54,11 +52,9 @@ https://infinitescript.com/2014/10/the-23-gang-of-three-design-patterns/
 Describes a group of objects that is treated as a single instance.
 """
 
-
 class Graphic:
     def render(self):
         raise NotImplementedError("You should implement this.")
-
 
 class CompositeGraphic(Graphic):
     def __init__(self):
@@ -74,14 +70,12 @@ class CompositeGraphic(Graphic):
     def remove(self, graphic):
         self.graphics.remove(graphic)
 
-
 class Ellipse(Graphic):
     def __init__(self, name):
         self.name = name
 
     def render(self):
         print("Ellipse: {}".format(self.name))
-
 
 if __name__ == '__main__':
     ellipse1 = Ellipse("1")

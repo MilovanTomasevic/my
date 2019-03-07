@@ -30,8 +30,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Zadatak 2
 
@@ -46,8 +44,6 @@ Zadatak
 ![:scale 80%](img/z10/z2a.png)
 ]
 ]
-
-
 
 ---
 ## Zadatak 2
@@ -66,8 +62,6 @@ Zadatak
 
 ---
 ## Zadatak 3
-
-
 
 .message.is-info[
 .message-header[

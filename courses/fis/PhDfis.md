@@ -29,7 +29,6 @@ layout: true
 
 ## Uvod
 
-
 - Oduvek je bilo od izuzetnog značaja za kompanije da ostanu međusobno povezane jer konkurencija nije više među samim organizacijama ‒ njeno težište pomerilo se na lance snabdevanja.<br><br>
 - Danas preduzeća moraju da budu sposobna da efikasno odgovore na izazove koje im nameću promene u eri četvrte industrijske revolucije. <br><br>
 - Kvalitet, vreme i cena su ključni zahtevi na koje preduzeće mora odgovoriti da bi opstalo na konkurentskom tržištu.<br><br>
@@ -51,7 +50,6 @@ layout: true
 ---
 
 ## Predmet i problem istraživanja
-
 
 - Predmet istraživanja u okviru ove doktorske disertacije su modeli, metode i alati za upravljanje lancima snabdevanja i merenje kvaliteta usluge u njima.<br><br>
 - Problem koji razmatra ova disertacija je poboljšanje usluga koje pružaju kompanije i ostvarivanje bolje komunikacije učesnika u lancu snabdevanja.<br><br>
@@ -131,7 +129,6 @@ layout: true
 ---
 ## Koncepti
 
-
 .medium[
 .center-table.small[
 |                Svojstvo                | QR<br> Brzi odgovor (Quick Response) | CRP<br> Kontinualno popunjavanja zaliha (Continuous Replenishment) |                                Napredni CRP                               | VMI<br> Upravljanje zalihama od strane prodavca (Vendor Managed Inventory) |
@@ -175,8 +172,6 @@ $$ \chi : X  \rightarrow \big\{0,1\big\} $$
 	$$   \mu_{a}  : X  \rightarrow [0,1] $$ 
 </p>
 
-
-
 <ul>
 	<li>
   		<p>Funkcija pripadanja \( \mu_{a}\) određuje stepen pripadanja elemanta \(x\) fazi skupa \(A\).
@@ -184,8 +179,6 @@ $$ \chi : X  \rightarrow \big\{0,1\big\} $$
 		</p>
   	</li>
 </ul> 
-
-
 
 ]
 
@@ -226,7 +219,6 @@ $$ \chi : X  \rightarrow \big\{0,1\big\} $$
 </p>
 
 ]
-
 
 <br><br><br><br><br><br><br><br><br><br>
 .small[
@@ -272,7 +264,6 @@ layout: true
 ![:scale 90%](phd/model.png)
 ]
 
-
 ---
 ### Nivo 1 – analiza i definisanje aktivnosti
 
@@ -303,8 +294,6 @@ layout: true
 
 ]
 
-
-
 ---
 ### Nivo 2 – model za upravljanje lancima snabdevanja
 
@@ -333,7 +322,6 @@ layout: true
 ![:scale 90%](phd/modelIntermehanika.jpg)
 
 ]
-
 
 ---
 ### Nivo 3 – prilagođavanje modela korisniku
@@ -428,10 +416,8 @@ layout: true
 
 ]
 
-
 ---
 ### Nivo 7 – ocenjivanje kvaliteta usluge
-
 
 #### šestokoračni i lsp metod
 .medium[
@@ -489,13 +475,9 @@ layout: true
 </p>
 ]
 
-
 ---
 ### Nivo 7 – ocenjivanje kvaliteta usluge
 #### verifikacija FAM4QS - grupisanje i ocenjivanje
-
-
-
 
 .lcol.small[
 
@@ -579,7 +561,6 @@ layout: true
 
 ]
 
-
 ---
 ### Nivo 7 – ocenjivanje kvaliteta usluge
 
@@ -589,7 +570,6 @@ layout: true
 	 $$   LCL = [ \color{red} 0\color{red}.\color{red}6\color{red}9\color{red}3  \; \; 0.772] \; \; UCL = [ 0.765 \; \; \color{red}0\color{red}.\color{red}8\color{red}1\color{red}1  ]  $$
 	 $$   \Downarrow  $$  
 </p>
-
 
 .center-table.small[
 | ProducdID -ServiceCode |    TD   | C(H/M/L) | DP | DT |    BD    | FAM4QS rezultat | RANG |
@@ -620,7 +600,6 @@ layout: true
 </p>
 ]
 
-
 ---
 ### Nivo 7 – ocenjivanje kvaliteta usluge
 ###### verifikacija FAM4QS - analiza
@@ -629,14 +608,12 @@ layout: true
 .lcol[
 ![:scale 90%](phd/dijLevo.png)
 
-
 - Ukoliko se izvrši analiza lošije uspešnosti lanca snabdevanja 14 (SCM14) dolazi se do zaključka da su razlozi zato sledeći:
 	- Analiza i specifikacija zahteva su urađene loše i nisu bile potpune.
 	- Nedostupnost biznis korisnika programerima.
 	- Nedovoljna bliskost timu koji razvija aplikaciju – programera i povremena odsutnost iz tima.
 	- Nepostojanje povratne sprege između specifikacje zahteva i krajnjih korisnika (uticaj korisnika na specifikaciju zahteva je minimalan). 
 ]
-
 
 .rcol[
 ![:scale 90%](phd/dijDesno.png)
@@ -678,7 +655,6 @@ layout: true
 - FAM4QS  je primenjen na 17 lanaca snabdevanja sa teritorije Republike Srbije. U zavisnosti od prirode parametara tim stručnjaka vrši izbor stepena r, odnosno određuje konjuktivnost (disjunktivnost) forme funkcje agregacije i daje dovoljno dobru procenu kvaliteta servisa. Time su hipoteze H3 i H4 potvrđene. <br><br>
 - Ocena kvaliteta usluge tj. izračunavanje vrednosti funkcije agregacije je vršeno i za slučajeve kada su procene težinskih koeficijenata bile i realni i fazi-brojevi, a ocene parametara fazi-brojevi, na osnovu čega su verifikovane pomoćne hipoteze H4a i H4b. 
 
-
 ---
 name: zakljucak
 layout: false
@@ -709,8 +685,6 @@ layout: true
 	- Primena neuralnih mreža. <br><br> 
 	- Razvoj veb platforme otvrenog tipa koja bi omogućila kreiranje novih lanaca snabdevanja.<br><br> 
 	- Primena adaptivnog modela u internom poslovanju učesnika lanca snabdevanja.
-
-
 
 ---
 ## .center[ *HVALA NA PAŽNJI* ]
@@ -749,7 +723,6 @@ layout: true
 - [Prof. dr. Nebojša Ralević](http://www.ftn.uns.ac.rs/n1319398891/nebojsa-ralevic)
 	- .medium[Teorijska i primenjena matematika]
 ]
-
 
 .footer.small[
 Dokutorsku disertaciju u pdf formatu možete detaljno pročitati na sajtu <a target="_blank" rel="noopener noreferrer" href="http://nardus.mpn.gov.rs/handle/123456789/9234">Ministarstva prosvete, nauke i tehnološkog razvoja.</a>

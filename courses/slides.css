@@ -35,7 +35,6 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 .reveal pre { font-size:50% }
 .reveal li { font-size: 90%; }
 
-
 div.side-left {text-align: center; position: left: 0%; width: 65%;}
 div.side-left-code  {text-align: center; position: left: 0%; width: 50%;}
 div.side-right h2, div.attention h2 {text-align: center; font-size:120%; font-style: bold;}

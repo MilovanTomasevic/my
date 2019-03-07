@@ -16,8 +16,6 @@ hide_description: true
 
 ## Primer 1
 
-
-
 ```sql
 select d.indeks, ime, prezime, naziv, ocena
 case when i.id_predmeta in (select id_predmeta
@@ -31,7 +29,6 @@ where ocena>5 and status_prijave='o' and ime like 'P%' and month(dat_rodjenja) b
 ```
 
 ## Primer 2
-
 
 ```sql
 create trigger brisanje_studenta 
@@ -52,7 +49,6 @@ where indeks=20090206@
 ```
 
 ## Primer 3
-
 
 ```sql
 create trigger promena_bodova before update of bodovi on predmet referencing old as staro new as nova
@@ -96,7 +92,6 @@ drop trigger promena_bodova@
 
 ## Primer 4
 
-
 ```sql
 insert into broj_predmeta select count(*) from predmet@
 
@@ -125,7 +120,6 @@ from broj_predmeta@
 
 ## Primer 5
 
-
 ```sql
 create table predmet_student 
 ( id_predmeta integer, studenti smallint );
@@ -146,7 +140,6 @@ values (p.id_predmeta, p.n);
 ```
 
 ## Primer 6
-
 
 ```sql
 create table student_podaci (
@@ -180,7 +173,6 @@ else ignore;
 
 ## Primer 7
 
-
 ```sql
 create distinct type prosek as float with comparisons;
 
@@ -211,7 +203,6 @@ where indeks not in ( select indeks
 
 delete from ispit
 where indeks=20070208 and id_predmeta=635;
-
 
 create trigger unos_ispita after insert on ispit referencing new as dodati for each row
 begin

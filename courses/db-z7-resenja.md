@@ -17,8 +17,6 @@ hide_description: true
 ## Zadaci za danas
 ### Primer 1
 
-
-
 ```sql
 --a
 select indeks
@@ -50,7 +48,6 @@ order by indeks desc;
 
 ### Primer 2
 
-
 ```sql
 select d.indeks, count(*) br_ispita
 from dosije d join ispit i on d.indeks=i.indeks group by d.indeks
@@ -63,7 +60,6 @@ where not exists ( select *
 ```
 
 ### Primer 3
-
 
 ```sql
 select indeks, id_predmeta, ocena, case
@@ -91,7 +87,6 @@ from ispit;
 
 ### Primer 4
 
-
 ```sql
 select naziv, case
     when bodovi>7 then 'I kat' 
@@ -102,7 +97,6 @@ from predmet;
 ```
 
 ### Primer 5
-
 
 ```sql
 select kategorija, count(*) from (select naziv, case
@@ -129,7 +123,6 @@ group by kategorija;
 
 ### Primer 6
 
-
 ```sql
 with student_bodovi as (
 select indeks, sum(bodovi) pol_bodovi
@@ -142,7 +135,6 @@ where pol_bodovi>10;
 ```
 
 ### Primer 7
-
 
 ```sql
 with student_ocene as (
@@ -188,7 +180,6 @@ group by indeks;
 
 ### Primer 8
 
-
 ```sql
 insert into dosije (indeks, ime, prezime, god_rodjenja, mesto_rodjenja) 
 values (20100028, 'Marko', 'Markovic', 1990, 'Kragujevac');
@@ -196,14 +187,12 @@ values (20100028, 'Marko', 'Markovic', 1990, 'Kragujevac');
 
 ### Primer 9
 
-
 ```sql
 insert into predmet
 values (2005, 'P112', 'Uvod u arhitekturu racunara', 6), (2006, 'P116', 'Razvoj softvera', 6);
 ```
 
 ### Primer 10
-
 
 ```sql
 insert into ispit (indeks, id_predmeta, godina_roka, oznaka_roka, ocena) 
@@ -215,14 +204,12 @@ where god_rodjenja=1991 and naziv='Programiranje 2';
 
 ### Primer 11
 
-
 ```sql
 delete from dosije
 where god_rodjenja=1990;
 ```
 
 ### Primer 12
-
 
 ```sql
 delete from ispit
@@ -233,7 +220,6 @@ where id_predmeta in ( select id_predmeta
 
 ### Primer 13
 
-
 ```sql
 update predmet
 set bodovi=bodovi*1.2 
@@ -241,7 +227,6 @@ where sifra like 'P%';
 ```
 
 ### Primer 14
-
 
 ```sql
 update ispit
@@ -253,7 +238,6 @@ where id_predmeta in (select id_predmeta
 ```
 
 ### Primer 15
-
 
 ```sql
 update predmet
@@ -267,7 +251,6 @@ where exists ( select *
 ```
 
 ### Primer 16
-
 
 ```sql
 select distinct coalesce(ir.naziv, ‘nema odgovarajuceg‘), coalesce(p.naziv, ‘nema odgovarajuceg‘)
@@ -433,7 +416,6 @@ where id_predmeta = i.id_predmeta and oznaka_roka=‘feb‘ and godina_roka=2011
 ### Primer 11
 
 Izdvojiti sve identifikatore za predmete koje položio student sa brojem indeksa 20100021, a nije položio student sa indeksom 20100025, sortirane u opadajućem poretku.
-
 
 ```sql
 select i.id_predmeta

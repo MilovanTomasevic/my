@@ -16,7 +16,6 @@ hide_description: true
 
 ## Zadatak 1
 
-
 ```py
 import math
 import random
@@ -71,7 +70,6 @@ def random_list(min, max, elements):
     list = random.sample(range(min, max), elements)
     return list
 
-
 def test(n, p, m):
     l = random_list(1, n + 1, n)
     start_time = time.clock()
@@ -83,7 +81,6 @@ def test(n, p, m):
         L.insert(x)
 
     end_time = time.clock() - start_time
-
 
     print("n:", n, "m:", m, "p:", p, "duration:", end_time)
 
@@ -99,19 +96,16 @@ zadatak1.py
 
 ## Zadatak 2
 
-
 ```py
 import math
 import random
 import time
 from math import floor
 
-
 class Data:
     def __init__(self, key=None):
         self.key = key
         self.literal = str(key)
-
 
 class HashTable:
     def __init__(self, m=10000, c1=1/2, c2=1/2):
@@ -167,11 +161,9 @@ class HashTable:
     def hash(self, k, i):
         return self.hash1(k, i)
 
-
 def random_list(min, max, elements):
     list = random.sample(range(min, max), elements)
     return list
-
 
 def test(n, m):
     l = random_list(1, n + 1, n)
@@ -185,7 +177,6 @@ def test(n, m):
     end_time = time.clock() - start_time
 
     print("n:", n, "m:", m, "duration:", end_time)
-
 
 if __name__ == "__main__":
     for n in [10000, 50000, 100000]:

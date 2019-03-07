@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## pool Model
 
 ![](/courses/python-fesign-patterns/creational/viz/pool.py.png)
-
 
 ## Python-Design-Patterns pool
 
@@ -56,7 +54,6 @@ https://sourcemaking.com/design_patterns/object_pool
 Stores a set of initialized objects kept ready to use.
 """
 
-
 class ObjectPool(object):
     def __init__(self, queue, auto_get=False):
         self._queue = queue
@@ -76,7 +73,6 @@ class ObjectPool(object):
         if self.item is not None:
             self._queue.put(self.item)
             self.item = None
-
 
 def main():
     try:
@@ -102,7 +98,6 @@ def main():
     if not sample_queue.empty():
         print(sample_queue.get())
 
-
 if __name__ == '__main__':
     main()
 
@@ -114,7 +109,6 @@ if __name__ == '__main__':
 ```
 pool.py
 {:.figure}
-
 
 ## pool Test
 
@@ -128,7 +122,6 @@ try:
 except ImportError:  # python 2.x compatibility
     import Queue as queue
 from creational.pool import ObjectPool
-
 
 class TestPool(unittest.TestCase):
     def setUp(self):
@@ -152,7 +145,6 @@ class TestPool(unittest.TestCase):
         self.assertFalse(self.sample_queue.empty())
         self.assertTrue(self.sample_queue.get() == 'first')
         self.assertTrue(self.sample_queue.empty())
-
 
 class TestNaitivePool(unittest.TestCase):
 

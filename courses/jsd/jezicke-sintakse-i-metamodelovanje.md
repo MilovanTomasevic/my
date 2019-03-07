@@ -95,7 +95,6 @@ layout: true
 
 ![](jezicke-sintakse-i-metamodelovanje/StateMachine.svg)
 
-
 ---
 
 ## Primer - apstraktna sintaksa jezika za jednostavne algebarske izraze
@@ -132,7 +131,6 @@ layout: true
   parsiranja ali je suština izraza ista i može rezultovati istim stablom
   apstraktne sintakse.
 
-
 ---
 name: sekundarna-sintaksa
 class: center, middle
@@ -148,7 +146,6 @@ layout: true
 ---
 
 ## Sekundarna sintaksa
-
 
 - Iako konkretna sintaksa nameće svoja pravila, gotovo uvek postoji određena
   sloboda koja se ostavlja korisniku i koja omogućava da se mogram koji je isti
@@ -239,8 +236,6 @@ def inner_from_python(expression):
 .small[Eye icon designed by Freepik. Hand icon by Yannick Lung.]
 ]
 
-
-
 ---
 name: meta-modelovanje
 class: center, middle
@@ -318,7 +313,6 @@ layout: true
 - Apstraktna sintaksa datog jezika u svetu modelovanja je takođe predstavljena
   kao model. Ovakav model nazivamo meta-modelom.
 - Meta-model sadrži koncepte domena, njihove međusobne veze i ograničenja.
-
 
 .footer[
 \* J. Bézivin and O. Gerbé, *Towards a precise definition of the OMG/MDA
@@ -398,7 +392,6 @@ Marijn Haverbeke, *Eloquent JavaScript*, http://eloquentjavascript.net/
   generalizuju posmatrani skup koncepata, odnosno posmatrani skup koncepata se
   nasleđuje iz generalizovanog koncepta.
   
-
 
 ---
 name: meta-metamodeli
@@ -505,8 +498,6 @@ layout: true
 
 ]
 
-
-
 ---
 name: stek-za-metamodelovanje
 class: center, middle
@@ -530,7 +521,5 @@ layout: true
 ## Primer - Mogram, jezik, meta-jezik
 
 ![](jezicke-sintakse-i-metamodelovanje/Kapija-StateMachine-MoRP.svg)
-
-
 
 {% endblock %}

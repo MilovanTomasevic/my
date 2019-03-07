@@ -14,7 +14,6 @@ hide_description: true
 
 ---
 
-
 ## Setup
 
 ### Installation
@@ -23,7 +22,6 @@ hide_description: true
 apt-get install libopenmpi-dev 
 apt-get install openmpi-bin 
 ```
-
 
 ### Compilation & Running OpenMP
 ```sh
@@ -38,11 +36,9 @@ mpicc filename.c -o filename
 mpirun -np 1 ./filename # -lm
 ```
 
-
 ## Exercises
 
 ### mpi_hello_world.c
-
 
 ```c 
 #include <mpi.h>
@@ -60,9 +56,7 @@ void main(int argc, char* argv[])
 mpi_hello_world.c - exercises
 {:.figure}
 
-
 ### mpi_pnt2pnt.c
-
 
 ```c 
 #include <mpi.h>
@@ -81,7 +75,6 @@ mpi_pnt2pnt.c - exercises
 {:.figure}
 
 ### mpi_pingpong.c
-
 
 ```c 
 #include <mpi.h>
@@ -136,9 +129,7 @@ int main(int argc, char* argv[])
 mpi_pingpong.c - exercises
 {:.figure}
 
-
 ### mpi_pingpong_nonblocking.c
-
 
 ```c 
 #include <mpi.h>
@@ -193,9 +184,7 @@ int main(int argc, char* argv[])
 mpi_pingpong_nonblocking.c - exercises
 {:.figure}
 
-
 ### mpi_pi.c
-
 
 ```c 
 #include <mpi.h>
@@ -252,9 +241,7 @@ int main (int argc, char *argv[])
 mpi_pi.c - exercises
 {:.figure}
 
-
 ### mpi_pi_advanced.c
-
 
 ```c 
 #include <mpi.h>
@@ -300,12 +287,9 @@ int main (int argc, char *argv[])
 mpi_pi_advanced.c - exercises
 {:.figure}
 
-
-
 ## Solutions
 
 ### mpi_hello_world.c
-
 
 ```c 
 #include <mpi.h>
@@ -326,7 +310,6 @@ mpi_hello_world.c - solutions
 
 ### mpi_pnt2pnt.c
 
-
 ```c 
 #include <mpi.h>
 #include <stdio.h>
@@ -345,7 +328,6 @@ mpi_pnt2pnt.c - solutions
 {:.figure}
 
 ### mpi_pingpong.c
-
 
 ```c 
 #include <mpi.h>
@@ -401,7 +383,6 @@ mpi_pingpong.c - solutions
 {:.figure}
 
 ### mpi_pingpong_nonblocking.c
-
 
 ```c 
 #include <mpi.h>
@@ -460,9 +441,7 @@ int main(int argc, char* argv[])
 mpi_pingpong_nonblocking.c - solutions
 {:.figure}
 
-
 ### mpi_pi.c
-
 
 ```c 
 #include <mpi.h>
@@ -519,9 +498,7 @@ int main (int argc, char *argv[])
 mpi_pi.c - solutions
 {:.figure}
 
-
 ### mpi_pi_v2.c
-
 
 ```c 
 #include <mpi.h>

@@ -17,7 +17,6 @@ I wish you a lot of success during your learning.
 <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/phdmilovantomasevic/" data-format="inline" data-width="400"></script>
 
-
 ---
 
 ## Table of Contents
@@ -55,7 +54,6 @@ I wish you a lot of success during your learning.
 
 #### Python-Design-Patterns
 
-
 | __Creational Patterns__ | [abstract_factory](python-design-patterns-abstract_factory){:target="_blank"} | [borg](python-design-patterns-borg){:target="_blank"} | [builder](python-design-patterns-builder){:target="_blank"}| [factory_method](python-design-patterns-factory_method){:target="_blank"} | [lazy_evaluation](python-design-patterns-lazy_evaluation){:target="_blank"} | [pool](python-design-patterns-pool){:target="_blank"} |[prototype](python-design-patterns-prototype){:target="_blank"} |
 |-----------------|--------------|--------------|-----------------|--------------|--------------|--------------|
 | __Description__ | use a generic function with specific factories  |   a singleton with shared-state among instances   | instead of using multiple constructors, builder object receives parameters and returns constructed objects  | delegate a specialized function/method to create instances   |   lazily-evaluated property pattern in Python    |   preinstantiate and maintain a group of instances of the same type  | use a factory and clones of a prototype for new instances (if instantiation is expensive)
@@ -66,18 +64,15 @@ I wish you a lot of success during your learning.
  __Description__ | data<->business logic<->presentation separation (strict relationships) |  adapt one interface to another using a white-list  | a client-provider middleman to soften interface changes  | lets clients treat individual objects and compositions uniformly   |   wrap functionality with other functionality in order to affect outputs    |   use one class as an API to a number of others  | transparently reuse existing instances of objects with similar/identical state | single handler requests coming to the application | model<->view<->controller (non-strict relationships) | an object funnels operations to something else |
 {:.flip-table}
 
-
 | __Behavioral Patterns__ | [chain](python-design-patterns-chain){:target="_blank"} | [catalog](python-design-patterns-catalog){:target="_blank"} | [chaining_method](python-design-patterns-chaining_method){:target="_blank"} |[command](python-design-patterns-command){:target="_blank"} | [iterator](python-design-patterns-iterator){:target="_blank"}| [mediator](python-design-patterns-mediator){:target="_blank"} | [memento](python-design-patterns-memento){:target="_blank"} | [observer](python-design-patterns-observer){:target="_blank"} |[publish_subscribe](python-design-patterns-publish_subscribe){:target="_blank"} | [registry](python-design-patterns-registry){:target="_blank"} | [specification](python-design-patterns-specification){:target="_blank"} | [state](python-design-patterns-state){:target="_blank"}| [strategy](python-design-patterns-strategy){:target="_blank"} | [template](python-design-patterns-template){:target="_blank"} | [visitor](python-design-patterns-visitor){:target="_blank"} | 
 |--------|------|
 | __Description__ | apply a chain of successive handlers to try and process the data |general methods will call different specialized methods based on construction parameter | continue callback next object method | bundle a command and arguments to call later | traverse a container and access the container's elements |   an object that knows how to connect other objects and act as a proxy  | generate an opaque token that can be used to go back to a previous state| provide a callback for notification of events/changes to data | a source syndicates events/data to 0+ registered listeners |   keep track of all subclasses of a given class  | business rules can be recombined by chaining the business rules together using boolean logic | logic is organized into a discrete number of potential states and the next state that can be transitioned to |  selectable operations over the same data | an object imposes a structure but takes pluggable components |invoke a callback for all items of a collection |
 {:.flip-table}
 
-
 | __Design for Testability__ <br> __Patterns__ | [constructor_injection](python-design-patterns-constructor_injection){:target="_blank"} |[parameter_injection](python-design-patterns-parameter_injection){:target="_blank"} | [setter_injection](python-design-patterns-setter_injection){:target="_blank"}|
 |--------|------|
 | __Description__ <br>__Patterns__ | for those of you who would like to use final fields, wish to avoid numerous setters, or dislike private field injection and would like nothing more than to just use  | with parameter manipulation attacks, the attacker modifies the data sent between the client and Web application. This may be data sent using query strings, form fields, cookies, or in HTTP headers.  |the client provides the depended-on object to the SUT via the setter injection (implementation variant of dependency injection)  |
 {:.flip-table}
-
 
 | __Fundamental Patterns__ | [delegation_pattern](python-design-patterns-delegation_pattern){:target="_blank"} |
 |--------|------|
@@ -88,7 +83,6 @@ I wish you a lot of success during your learning.
 |--------|------|
 |   __Description__  | architectural model, assemble different sub-system knowledge to build a solution, AI approach - non gang of four pattern  | graphing algorithms - non gang of four pattern  | hierarchical state machine - non gang of four pattern  |
 {:.flip-table}
-
 
 ### Java
 
@@ -135,7 +129,6 @@ I wish you a lot of success during your learning.
 
 ### High-performance computing (HPC)
 
-
 #### First settings
 - [Installation, Compilation & Running OpenMP/MPI/OpenACC and HPC Rudolf connection](/courses/hpc-setup){:target="_blank"}
 
@@ -143,7 +136,6 @@ I wish you a lot of success during your learning.
   
 #### HPC Complete Courses (C)
 <br>
-
 
 | HPC |                                 Teroija                                 |                                 Vežbe                                 |                     Zadaci                     |
 |:---:|:-----------------------------------------------------------------------:|:---------------------------------------------------------------------:|:----------------------------------------------:|
@@ -165,8 +157,6 @@ I wish you a lot of success during your learning.
 | [OpenMP presentation](hpc-short-courses/openmp-presentation.html){:target="_blank"} | [OpenMP training](openmp-training){:target="_blank"} |
 |    [MPI presentation](hpc-short-courses/mpi-presentation.html){:target="_blank"}    |    [MPI training](mpi-training){:target="_blank"}    |
 
-
-
 ### Markdown-it 
 
   - [Api documentation](https://milovantomasevic.github.io/markdown-it/){:target="_blank"}{:.heading.flip-title} --- GitHub.
@@ -187,7 +177,6 @@ I wish you a lot of success during your learning.
 ## Delavnice
 ### PhD Presentation (in Serbian)
 
-
 - [Presentation at FIS](/courses/fis/PhDfis.html){:target="_blank"}{:.heading.flip-title} --- PC & Mobile view.
 - [Defense at FTS](/courses/PhD-MT/index.html){:target="_blank"}{:.heading.flip-title} --- PC view.
 {:.related-posts.faded}
@@ -197,8 +186,6 @@ I wish you a lot of success during your learning.
 - Prezentacija prikazuje zašto uspešno izvršavamo obaveze svih 10 godina !
 	- [Budi student FIŠ-a](/courses/fis/fis.html){:target="_blank"}{:.heading.flip-title} --- PC & Mobile view.
 {:.related-posts.faded}
-
-
 
 {% comment %} 
 

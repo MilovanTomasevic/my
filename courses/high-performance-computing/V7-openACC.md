@@ -14,7 +14,6 @@ name: sadrzaj
 - [Zadaci](#zad)
 - [OpenACC i CUDA](#cuda)
 
-
 ---
 name: acc
 class: center, middle
@@ -158,9 +157,7 @@ structured block
 - ...
 ]
 
-
 ---
-
 
 ## Primer 1: kernel.c
 
@@ -253,12 +250,9 @@ Neke od klauzula (parametri nisu navedeni):
 - ...
 ]
 
-
-
 ---
 
 ## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`parallel.c`</a>
-
 
 .message.is-dark[
 .message-header[
@@ -281,8 +275,6 @@ int main() {
 ```
 ]
 ]
-
-
 
 .message.is-info[
 .message-header[
@@ -359,7 +351,6 @@ layout: true
 	- independent - Signalizira kompajleru da nema zavisnosti podataka između iteracija petlje.
 	- ...
 
-
 ---
 
 ## Primer 4: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`parallelloop.c`</a>
@@ -411,7 +402,6 @@ layout: true
 .footer.medium[
 	Izvor: [OpenACC Programming and Best Practices Guide](https://www.openacc.org/sites/default/files/inline-files/OpenACC_Programming_Guide_0.pdf)
 ] 
-
 
 ---
 
@@ -493,7 +483,6 @@ int main() {
 	- `GOPMP_OPENACC_DIM` (gcc)
 	- `GOMP_DEBUG` (gcc)
 
-
 ---
 
 layout: false
@@ -520,7 +509,6 @@ Zadatak
 ]
 ]
 
-
 .message.is-warning[
 .message-header[
 Info
@@ -545,7 +533,6 @@ Zadatak
 - Meriti izvršavanje sekvencijalnog i implementiranog ubrzanog programa.
 ]
 ]
-
 
 .message.is-warning[
 .message-header[
@@ -588,15 +575,11 @@ layout: true
 - `CUDA` (eng. *Compute Unified Device Architecture*) - platrofma za paralelno programiranje na NVIDIA grafičkim karticama.
 - Mapiranje OpenACC na CUDA termine:
 
-
-
 |            **OpenACC**           |           **CUDA**          |
 |:--------------------------------:|:---------------------------:|
 |       Domaćin (eng. *Host*)      |    Domaćin (eng. *Host*)    |
 | Akcelerator (eng. *Accelerator*) |    Uređaj (eng. *Device*)   |
 |   Paralelni ili računski region  | Jedan ili više CUDA kernela |
-
-
 
 - U OpenACC kod je na višem nivou abstrakcije u odnosu na CUDA kod i može se prevesti za izvršavanje na GPU.
 
@@ -606,7 +589,6 @@ layout: true
 
 - Streaming Multiprocessors (SM) & Kuda jezgra
 - Veliki broj hardverskih niti čini grafičke kartice pogodnim za probleme za izraženim SIMD paralelizmom.
-
 
 .lcol[
 
@@ -632,7 +614,6 @@ layout: true
 ---
 
 ## CUDA model izvršavanja
-
 
 .lcol[
 
@@ -685,7 +666,6 @@ Info
 - **Preporučeno čitanje**: Programming Massively Parallel Processors: A Hands-on Approach, David B. Kirk and Wen-mei W. Hwu, poglavlje 6 Performance Considerations
 ]
 ]
-
 
 ---
 
@@ -749,7 +729,6 @@ int main(int argc, char *argv[]) {
 
 ## matrixop.c Visual Profiler
 
-
 ![:scale 75%](img/vp.png)
 ---
 
@@ -775,7 +754,6 @@ Info
 
 ---
 
-
 ## Neki radovi na temu OpenACC, CUDA i OpenCL
 
 - [A Comprehensive Performance Comparison of CUDA and OpenCL](https://ieeexplore.ieee.org/document/6047190)
@@ -796,7 +774,6 @@ Zadatak
 - Kao ulazne matrice koristiti matrice u hdf5 formatu sa prethodnih vežbi.
 ]
 ]
-
 
 .message.is-warning[
 .message-header[
@@ -836,8 +813,6 @@ gcc -fopenacc -foffload=nvptx-none <izvorna_datoteka>
 ]
 ]
 
-
-
 ---
 
 ## Zadatak 3: Množenje matrica - kompajliranje i pokretanje zadatka
@@ -861,7 +836,6 @@ pgcc -acc -ta=tesla -Minfo <izvorna_datoteka>.
 - Svi programi koji se izvršavaju na NVIDIA GPU kartici se mogu pratiti pozivom alata nvidia-smi -l 1, što će osvežavati listu procesa koji koriste GPU na svaku sekundu.
 ]
 ]
-
 
 ---
 ## Literatura

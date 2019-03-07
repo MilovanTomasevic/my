@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## command Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/command.py.png)
-
 
 ## Python-Design-Patterns command
 
@@ -35,7 +33,6 @@ from __future__ import print_function
 import os
 from os.path import lexists
 
-
 class MoveFileCommand(object):
     def __init__(self, src, dest):
         self.src = src
@@ -50,7 +47,6 @@ class MoveFileCommand(object):
     def rename(self, src, dest):
         print(u"renaming %s to %s" % (src, dest))
         os.rename(src, dest)
-
 
 def main():
     command_stack = []
@@ -77,7 +73,6 @@ def main():
     finally:
         os.unlink("foo.txt")
 
-
 if __name__ == "__main__":
     main()
 
@@ -90,7 +85,6 @@ if __name__ == "__main__":
 command.py
 {:.figure}
 
-
 ## command Test
 
 ```py
@@ -100,7 +94,6 @@ import os
 import shutil
 import unittest
 from behavioral.command import MoveFileCommand
-
 
 class CommandTest(unittest.TestCase):
     @classmethod

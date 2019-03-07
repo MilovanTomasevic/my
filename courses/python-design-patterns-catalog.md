@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## catalog Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/catalog.py.png)
-
 
 ## Python-Design-Patterns catalog
 
@@ -30,7 +28,6 @@ hide_description: true
 A class that uses different static function depending of a parameter passed in
 init. Note the use of a single dictionary instead of multiple conditions
 """
-
 
 class Catalog(object):
     """catalog of multiple static methods that are executed depending on an init
@@ -66,7 +63,6 @@ class Catalog(object):
         """
         self._static_method_choices[self.param]()
 
-
 # Alternative implementation for different levels of methods
 class CatalogInstance(object):
 
@@ -98,7 +94,6 @@ class CatalogInstance(object):
         depending on self.param value
         """
         self._instance_method_choices[self.param].__get__(self)()
-
 
 class CatalogClass(object):
 
@@ -134,7 +129,6 @@ class CatalogClass(object):
         """
         self._class_method_choices[self.param].__get__(None, self.__class__)()
 
-
 class CatalogStatic(object):
 
     """catalog of multiple static methods that are executed depending on an init
@@ -166,7 +160,6 @@ class CatalogStatic(object):
         """
         self._static_method_choices[self.param].__get__(None, self.__class__)()
 
-
 def main():
     """
     >>> c = Catalog('param_value_1').main_method()
@@ -187,7 +180,6 @@ def main():
     test = CatalogStatic('param_value_1')
     test.main_method()
 
-
 if __name__ == "__main__":
 
     main()
@@ -200,6 +192,4 @@ if __name__ == "__main__":
 ```
 catalog.py
 {:.figure}
-
-
 

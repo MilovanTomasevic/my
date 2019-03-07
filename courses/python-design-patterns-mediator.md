@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## mediator Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/mediator.py.png)
-
 
 ## Python-Design-Patterns mediator
 
@@ -35,7 +33,6 @@ Encapsulates how a set of objects interact.
 
 import random
 import time
-
 
 class TC:
     def __init__(self):
@@ -68,7 +65,6 @@ class TC:
     def setProblem(self, value):
         self._bProblem = value
 
-
 class Reporter:
     def __init__(self):
         self._tm = None
@@ -83,7 +79,6 @@ class Reporter:
 
     def setTM(self, tm):
         self._tm = tm
-
 
 class DB:
     def __init__(self):
@@ -102,7 +97,6 @@ class DB:
 
     def setTM(self, tm):
         self._tm = tm
-
 
 class TestManager:
     def __init__(self):
@@ -128,7 +122,6 @@ class TestManager:
 
     def setTC(self, tc):
         self._tc = tc
-
 
 if __name__ == '__main__':
     reporter = Reporter()

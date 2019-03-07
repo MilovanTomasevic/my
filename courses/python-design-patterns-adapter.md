@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## adapter Model
 
 ![](/courses/python-fesign-patterns/structural/viz/adapter.py.png)
-
 
 ## Python-Design-Patterns adapter
 
@@ -56,14 +54,12 @@ http://python-3-patterns-idioms-test.readthedocs.io/en/latest/ChangeInterface.ht
 Allows the interface of an existing class to be used as another interface.
 """
 
-
 class Dog(object):
     def __init__(self):
         self.name = "Dog"
 
     def bark(self):
         return "woof!"
-
 
 class Cat(object):
     def __init__(self):
@@ -72,7 +68,6 @@ class Cat(object):
     def meow(self):
         return "meow!"
 
-
 class Human(object):
     def __init__(self):
         self.name = "Human"
@@ -80,14 +75,12 @@ class Human(object):
     def speak(self):
         return "'hello'"
 
-
 class Car(object):
     def __init__(self):
         self.name = "Car"
 
     def make_noise(self, octane_level):
         return "vroom{0}".format("!" * octane_level)
-
 
 class Adapter(object):
     """
@@ -132,7 +125,6 @@ class Adapter(object):
         """Print original object dict"""
         return self.obj.__dict__
 
-
 def main():
 
     objects = []
@@ -151,7 +143,6 @@ def main():
     for obj in objects:
         print("A {0} goes {1}".format(obj.name, obj.make_noise()))
 
-
 if __name__ == "__main__":
     main()
 
@@ -167,7 +158,6 @@ if __name__ == "__main__":
 adapter.py
 {:.figure}
 
-
 ## adapter Test
 
 ```py
@@ -175,7 +165,6 @@ adapter.py
 # -*- coding: utf-8 -*-
 import unittest
 from structural.adapter import Dog, Cat, Human, Car, Adapter
-
 
 class ClassTest(unittest.TestCase):
     def setUp(self):
@@ -208,7 +197,6 @@ class ClassTest(unittest.TestCase):
         noise = self.car.make_noise(10)
         expected_noise = "vroom!!!!!!!!!!"
         self.assertEqual(noise, expected_noise)
-
 
 class AdapterTest(unittest.TestCase):
     def test_dog_adapter_shall_make_noise(self):

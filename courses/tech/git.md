@@ -113,7 +113,6 @@ Informacije o promenama se izračunavaju po potrebi.
 - Repozitorijum se nalazi u **.git** direktorijumu unutar direktorijuma gde je
     izvršena inicijalizacija sa `git init` komandom (videti u nastavku).
 
-
 ---
 
 # Git repozitorijum sa objektima i referencama
@@ -263,7 +262,6 @@ The key fingerprint is:
   [GitHub: Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/)
 ]
 
-
 ---
 
 # Konfigurisanje diff/merge alata
@@ -296,7 +294,6 @@ $ git config --global core.ignorecase true
 Na taj način će git tretirati fajlove različitog *case*-a kao identične i
 ukoliko se kreira fajl istog naziva kao postojeći u repozitorijum ali
 različitog *case*-a on će biti ignorisan.
-
 
 ---
 
@@ -365,7 +362,6 @@ Initialized empty Git repository in
 ```
 
 Ovim je kreiran prazan repozitorijum. Sledeći korak je dodavanje sadržaja.
-
 
 ---
 
@@ -450,7 +446,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 # Priprema index-a
 
-
 Priprema sadržaja za *commit* se obavlja operacijama `add`, `rm` i sl.
 ```
 # Dodavanje sadržaja
@@ -478,7 +473,6 @@ Promene se beleže u index-u.
 
 # Napomena za inicijalni *commit*
 
-
 Pri inicijalnom *commit*-u repozitorijum je prazan pa `HEAD`
 pokazivač ne postoji. Zbog toga nije moguće poništiti indeks
 komandom `git reset HEAD` pa se u tom slučaju radi:
@@ -486,7 +480,6 @@ komandom `git reset HEAD` pa se u tom slučaju radi:
 ```
 $ git rm –r --cached .
 ```
-
 
 .attention.medium[
   **Napomena**: ovo se radi samo kod inicijalnog *commit*-a. Nemojte ovo raditi
@@ -548,7 +541,6 @@ $ git rm –r --cached .
   Koja pre commit-a smešta u indeks sve modifikovane/obrisane
   fajlove. Novi fajlovi ne ulaze u indeks.
 
-
 ---
 
 # Pregled istorije
@@ -571,7 +563,6 @@ $ git rm –r --cached .
   $ gitk --all
   ```
   za sve grane.
-
 
 ---
 
@@ -642,7 +633,6 @@ usput u izvesnoj meri promenjenog sadržaja.
   Za detalje videti http://schacon.github.com/git/gitrevisions.html
 ]
 
-
 ---
 name: grane
 layout: false
@@ -704,7 +694,6 @@ layout: true
 .footer[
    http://stackoverflow.com/questions/25786808/how-many-types-of-branches-exist-in-git
 ]
-
 
 ---
 
@@ -853,7 +842,6 @@ podešen.
 
 # push.default - TODO
 
-
 ---
 
 # Podešavanje veze sa udaljenim repozitorijumom
@@ -927,8 +915,6 @@ $ git diff master...integration | kompare -
 
 Poređenje možemo obaviti između bilo koja dva *commit*-a (po *hash* *id*-u).
 ]
-
-
 
 ---
 name: merging
@@ -1111,7 +1097,6 @@ layout: true
   **Napomena:** Sa ovom komandom `push` operacija nije moguća
   ka repozitorijumima koji nisu *bare*.
 
-
 ---
 
 # Razmena promena
@@ -1144,7 +1129,6 @@ Ili upotrebom fajlova (mejlom, na prenosnom disku i sl.).
   ```
   $ git am *.patch
   ```
-
 
 ---
 name: greske
@@ -1362,7 +1346,6 @@ git rebase --onto new_base old_base target_ref
 ![:scale 60%](git/reflog.png)
 ]
 
-
 ---
 name: odrzavanje
 layout: false
@@ -1413,7 +1396,6 @@ layout: true
 
 # Modeli grananja (*branching models*)
 
-
 - Konvenciju imenovanja grana i proces koji opisuje način njihovog korišćenja.
 - Trivijalan model grananja koristi samo `master` granu.
 - Nešto složeniji koristi granu za razvoj (`develop`) i `master` granu na koju se
@@ -1450,13 +1432,11 @@ layout: true
   http://nvie.com/posts/a-successful-git-branching-model/
 ]
 
-
 ---
 
 # Modifikovani *GitFlow* model
 
 ![GitFlow reloaded](git/GitFlow-Reloaded.svg)
-
 
 ---
 name: praksa
@@ -1479,7 +1459,6 @@ layout: true
   *undo*-a).
 - Kasnije spajanje na javnu granu (npr. `master` ili `develop`) uz integraciju
   *commit*-a (*squash*).
-
 
 .footer[
   [Benjamin Sandofsky, Understanding the Git Workflow](http://sandofsky.com/blog/git-workflow.html)
@@ -1530,7 +1509,6 @@ $ git commit -v
 .footer[
   [Benjamin Sandofsky, Understanding the Git Workflow](http://sandofsky.com/blog/git-workflow.html)
 ]
-
 
 ---
 
@@ -1602,7 +1580,6 @@ $ git branch --set-upstream mojagrana remotes/mojagrana
 $ git svn dcommit
 ```
 
-
 ---
 name: implementacija
 class: center, middle
@@ -1639,7 +1616,6 @@ Repozitorijum je objektna baza gde postoje tri vrste objekata:
 - **Commit:** "Pokazivač" na stablo koje opisuje kako je projekat izgledao u
   trenutku *commit*-a. Osim toga sadrži niz meta-informacija kao što su autor,
   vreme nastanka, pokazivače na prethodne *commit*-e i dr.
-
 
 ---
 
@@ -1690,7 +1666,6 @@ class MainClass {
 ![:scale 30%](git/tree.svg)
 ]
 
-
 ---
 
 # *Commit*
@@ -1711,11 +1686,9 @@ Prvi commit.
 ![:scale 20%](git/commit.svg)
 ]
 
-
 ---
 
 # Prvi *commit*
-
 
 .center[![:scale 35%](git/prvi-commit.svg)]
 
@@ -1746,7 +1719,6 @@ Prvi commit.
 .center[![:scale 100%](git/git-repo.svg)]
 
 ---
-
 
 # Literatura
 

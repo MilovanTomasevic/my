@@ -14,11 +14,9 @@ hide_description: true
 
 ---
 
-
 ## observer Model
 
 ![](/courses/python-fesign-patterns/behavioral/viz/observer.py.png)
-
 
 ## Python-Design-Patterns observer
 
@@ -34,7 +32,6 @@ Maintains a list of dependents and notifies them of any state changes.
 """
 
 from __future__ import print_function
-
 
 class Subject(object):
     def __init__(self):
@@ -55,7 +52,6 @@ class Subject(object):
             if modifier != observer:
                 observer.update(self)
 
-
 # Example usage
 class Data(Subject):
     def __init__(self, name=''):
@@ -72,16 +68,13 @@ class Data(Subject):
         self._data = value
         self.notify()
 
-
 class HexViewer:
     def update(self, subject):
         print(u'HexViewer: Subject %s has data 0x%x' % (subject.name, subject.data))
 
-
 class DecimalViewer:
     def update(self, subject):
         print(u'DecimalViewer: Subject %s has data %d' % (subject.name, subject.data))
-
 
 # Example usage...
 def main():
@@ -110,7 +103,6 @@ def main():
     print(u"Setting Data 2 = 15")
     data2.data = 15
 
-
 if __name__ == '__main__':
     main()
 
@@ -136,7 +128,6 @@ if __name__ == '__main__':
 observer.py
 {:.figure}
 
-
 ## observer Test
 
 ```py
@@ -149,7 +140,6 @@ try:
     from unittest.mock import patch
 except ImportError:
     from mock import patch
-
 
 class TestSubject(unittest.TestCase):
     @classmethod
@@ -176,7 +166,6 @@ class TestSubject(unittest.TestCase):
         cls.assertEqual(len(cls.s._observers), 1)
         cls.s.detach(cls.hex_obs)
         cls.assertEqual(len(cls.s._observers), 0)
-
 
 class TestData(unittest.TestCase):
     @classmethod

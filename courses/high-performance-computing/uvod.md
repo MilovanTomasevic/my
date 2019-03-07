@@ -10,7 +10,6 @@ name: sadrzaj
 - [HPC uvod](#hpcuvod)
 - [Kratka istorija](#kratkaistorija)
 
-
 ---
 name: opredmetu 
 class: center, middle
@@ -32,9 +31,7 @@ layout: true
 - Poseban dogovor kroz javljanje elektronskom poštom je uvek, uvek preporučeni metod za konsultacije.
 - Dogovor je baš to—dogovor. 
 - Ne mogu da vam obećam bilo koji termin, ali mogu da vam obećam da ću vam izaći u susret ako ikako mogu.
-  
-
-            
+        
 ---
 
 ## Kako me kontaktirati?
@@ -118,7 +115,6 @@ layout: true
   - Prepisivanje se neće nikako, ikako, nikada tolerisati.
  
 
-
 ---
 
 ## Infrastruktura
@@ -195,7 +191,6 @@ layout: true
   - IBM Summit. 200 *petaflops*. 
   - Čudo šta 13MW može da uradi.
 
-
 ---
 
 ## Šta su performanse?
@@ -205,7 +200,6 @@ layout: true
 - Praktične performanse su, efektivno, koliko vremena treba da se dođe do rešenja.
 - Mnogo su realističnije (pošto nas baš to zanima) ali dobiti ih je jako jako teško.
 - Tipično se procenjuju na osnovu kalibracionog programa— Benchmark-a.
-
 
 ---
 
@@ -218,7 +212,6 @@ layout: true
 - Ako hoću brži program, opcije su mi:
   - Manje instrukcija. 
   - Kraće vreme izvrsavanja.
-
 
 ---
 
@@ -242,7 +235,6 @@ layout: true
 - Takođe takođe, mehanizmi u računaru operišu na kompletno različitim vremenskim skalama.
 - Takođe takođe...
      
-
 
 ---
 
@@ -269,7 +261,6 @@ layout: true
 
 ]
 
-
 ---
 
 ## Šta su glavne komplikacije na jednom računaru?
@@ -279,7 +270,6 @@ layout: true
 - Drugo, instrukcije mogu da traju različiti broj ciklusa.
 - Dalje ima paralelizam na nivou instrukcija (eng. Instruction Level Paralelism)
 - Memorija ima striktnu hijerarhiju
-
 
 ---
 
@@ -311,7 +301,6 @@ layout: true
 - Brzina obrade je povecana usloznjavanjem procesora na hardverskom nivou.
 
 ]
-
 
 ---
 
@@ -447,7 +436,6 @@ int main(){
 
 ```
 
-
 ---
 
 ## Rezultat eksperimenta
@@ -533,7 +521,6 @@ layout: true
 - Dakle, treba da napravimo mašinu koja ima jako efektan dijapazon procesora koji brzo komuniciraju i imaju šta im treba da ostvare blizu svom teoretskom maksimumu.
 - Sa druge strane treba da upravljamo tom mašinom i podelimo algoritme na takav način da se adekvatni delovi algoritma izvršavaju na pravom mestu radi brzine.
 
-
 ---
 
 ## Anatomija jednog superračunara
@@ -544,13 +531,11 @@ layout: true
 - Svaki čvor je jako moćan i sadrži više procesora (2) sa više jezgara (21) gde svako jezgro podržava 4 nezavisna izvršavanja i više izuzetno moćnih GPU-ova (6).
 - Takođe ima oko 1600GB memorije po čvoru.
 
-
 ---
 
 ## Jedno jezgro
 
 ![:scale 70%](img/IBMSummit.png)
-
 
 ---
 
@@ -606,7 +591,6 @@ layout: true
   - Waiting
       - Čim ima više niti izvršavanja može doći do problema nadmetanja ("contention") oko deljenih resursa. Ovo se rešava čekanjem. In a stunning turn of events, waiting turns out to be bad for performance. Who knew?
 ]
-
 
 ---
 name: kratkaistorija
@@ -814,7 +798,5 @@ layout: true
 - 3D čipovi i sintetički dijamant
 - Neuroprocesori i domain specific arhitekture
 - Kvantni računari
-
-
 
 {% endblock %}

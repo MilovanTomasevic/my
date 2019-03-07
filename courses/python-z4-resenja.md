@@ -16,7 +16,6 @@ hide_description: true
 
 ## Zadatak 1
 
-
 ```py
 import sys
 import random
@@ -79,7 +78,6 @@ zadatak1.py
 
 ## Zadatak 2
 
-
 ```py
 import sys
 import random
@@ -122,7 +120,6 @@ zadatak2.py
 {:.figure}
 
 ## Zadatak 3
-
 
 ```py
 import sys

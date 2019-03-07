@@ -1,12 +1,10 @@
 {% extends "base_slides.md" %}
 {% block slides %}
 
-
 class: center, middle
 
 # Tehnologije Paralelnog Programiranja
 #### šta je na raspolaganju ?
-
 
 ---
 
@@ -18,7 +16,6 @@ name: sadrzaj
 - [OpenMPI](#openmpi)
 - [Koncept akceleratora i akceleratorske arhitekture](#kaaa)
 - [OpenACC](#openacc)
-
 
 ---
 name: openmp
@@ -158,7 +155,6 @@ layout: true
 
 ---
 
-
 ## Bibliotečke rutine
 
 - OpenMP se sastoji od: sistemskog okruženja izvršavanja, biblioteka, i direktiva.
@@ -195,7 +191,6 @@ int k = omp_get_thread_num();
 
 .lcol[
 
-
 ```c
 #include <pthread.h>
 #include <stdio.h>
@@ -224,7 +219,6 @@ void *inc_x(void *x_void_ptr)
 
 ]
 
-
 .footer.medium[
   [Detaljnije](https://timmurphy.org/2010/05/04/pthreads-in-c-a-minimal-working-example/)
 ] 
@@ -234,8 +228,6 @@ void *inc_x(void *x_void_ptr)
 ## Pthreads
 
 .lcol.small[
-
-
 
 ```c
 int main()
@@ -282,7 +274,6 @@ int main()
 
 - Primetite da za sve koristimo niti koje identifikuje `pthread_t` tip. Ovo je zato što novu paradigmu programiranja moramo da "proteramo" kroz kod koji za to nije namenjen.
 
-
 ```console
 # This code will print something like:
 
@@ -293,7 +284,6 @@ x: 100, y: 100
 ```
 
 ]
-
 
 ---
 
@@ -382,8 +372,6 @@ int main() {
 
 ## Napomena: Pragme nisu, u stvari, magične.
 
-
-
 ```c
     #pragma omp parallel
     {
@@ -391,7 +379,6 @@ int main() {
     }
             ⬆
 ```
-
 
 ```c
                            ⬇
@@ -754,10 +741,7 @@ int main () {
     return 0;
 }
 
-
 ```
-
-
 
 .footer.medium[
 [Detaljnije](https://www3.nd.edu/~zxu2/acms60212-40212/Lec-12-OpenMP.pdf)
@@ -840,7 +824,6 @@ layout: true
 
 .section[[OpenMPI](#sadrzaj)]
 
-
 ---
 
 ## Ako imamo OpenMP…
@@ -878,10 +861,7 @@ layout: true
 
 ## Osnovna implementacija
 
-
 .lcol[
-
-
 
 ```c
 #include <stdio.h>
@@ -911,7 +891,6 @@ int main(int argc, char *argv[]) {
 - `MPI_Finalize` mora biti zadnja mpi komanda
 
 ]
-
 
 ---
 
@@ -1084,7 +1063,6 @@ MPI_Recv(void *message, int count, MPI_Datatype datatype, int source, int tag, M
 
 ]
 
-
 ---
 
 ## Korisnički tipovi podataka
@@ -1159,9 +1137,7 @@ int main(int argc, char **argv){
 ```
 ]
 
-
 ---
-
 
 ## Primer
 
@@ -1171,7 +1147,6 @@ We have 4 processes.
 Process 1 reporting for duty.
 Process 2 reporting for duty.
 Process 3 reporting for duty.
-
 
 ```
 
@@ -1350,8 +1325,6 @@ int MPI_Allreduce(const void *send_data, void *put_data, int send_number, MPI_Da
 
 ]
 
-
-
 ---
 
 ## Svi/svi komunikaciona šema
@@ -1398,9 +1371,6 @@ layout: false
 layout: true
 
 .section[[Koncept akceleratora i akceleratorske arhitekture](#sadrzaj)]
-
-
-
 
 ---
 
@@ -1481,7 +1451,6 @@ layout: true
 
 ## Istorijski primer koprocesora— Intel 8087
 
-
 ![:scale 75%](img/kop.png)
 
 ---
@@ -1561,8 +1530,6 @@ layout: true
 ---
 
 ## ClearSpeed Advance X620
-
-
 
 ![:scale 65%](img/misc_20cpu.jpg)
 
@@ -1917,7 +1884,6 @@ mt@mt:~/OpenACC$ ./acc
 ---
 
 ## OpenACC sistemske promenljive
-
 
 .center-table.small[
 

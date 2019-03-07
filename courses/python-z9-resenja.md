@@ -16,7 +16,6 @@ hide_description: true
 
 ## Functions
 
-
 ```py
 import sys
 from math import inf
@@ -83,9 +82,7 @@ def topological_sort(G):
 functions.py
 {:.figure}
 
-
 ## Vertex
-
 
 ```py
 import sys
@@ -113,7 +110,6 @@ vertex.py
 {:.figure}
 
 ## Zadatak 1
-
 
 ```py
 import sys

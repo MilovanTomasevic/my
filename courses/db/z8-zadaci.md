@@ -41,8 +41,6 @@ Zadatak
 ]
             
 
-
-
 ---
 
 ## Drugi deo
@@ -66,8 +64,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 ## Treći deo
 
@@ -86,9 +82,6 @@ Zadatak
   - Rezultat urediti prema broju ispita.
 ]
 ]
-
-
-
 
 ---
 
@@ -109,9 +102,6 @@ Zadatak
 ]
 ]
 
-
-
-
 ---
 
 ## Peti deo
@@ -131,7 +121,6 @@ Zadatak
 
 ]
 ]
-
 
 ---
 
@@ -167,8 +156,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 ## Drugi deo
@@ -186,10 +173,6 @@ Zadatak
     - Izdvojiti nazive predmeta, datume kada su položeni i ocene koje je student dobio iz tih predmeta.
 ]
 ]
-
-
-
-
 
 ---
 ## Treći deo
@@ -213,10 +196,6 @@ Zadatak
 ]
 ]
 
-
-
-
-
 ---
 ## Četvrti deo
 
@@ -236,7 +215,6 @@ Zadatak
 ]
 ]
 
-
 ---
 
 layout: false
@@ -244,6 +222,5 @@ layout: false
 ## Korišćeni materijal
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
-
 
 {% endblock %}
