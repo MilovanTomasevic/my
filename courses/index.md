@@ -117,9 +117,9 @@ I wish you a lot of success during your learning.
 1. [Uvod u jezike specifične za domen](/courses/jsd/uvod.html){:target="_blank"}
 1. [Jezičke sintakse i metamodelovanje](/courses/jsd/jezicke-sintakse-i-metamodelovanje.html){:target="_blank"}
 1. [Tekstualne sintakse](/courses/jsd/tekstualne-sintakse.html){:target="_blank"}
-1. [Arpeggio](/courses/tech/arpeggio.html){:target="_blank"}
+1. [Arpeggio](/courses/jsd/arpeggio.html){:target="_blank"}
 1. parglare - u pripremi
-1. [textX](/courses/tech/textx.html){:target="_blank"}
+1. [textX](/courses/jsd/textx.html){:target="_blank"}
 1. [Xtext](/courses/jsd/06-Xtext.html){:target="_blank"}
 1. [Generisanje programskog koda](/courses/jsd/generisanje-programskog-koda.html){:target="_blank"}
 1. [Anatomija jednog DSL-a](/courses/jsd/anatomija-dsla.html){:target="_blank"}
