@@ -15,7 +15,7 @@ name: sadrzaj
 
 ---
 name: motivacija
-class: center, middle
+class: center, middle, inverse
 
 # Problem i motivacija
 
@@ -87,7 +87,7 @@ layout: true
 ---
 name: primeri
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Primeri
 
@@ -192,7 +192,7 @@ public class Course {
 ---
 name: prednosti
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Prednosti
 
@@ -282,7 +282,7 @@ MetaCase, *Nokia case study*, tech. rep., MetaCase, 2007
 ---
 name: arhitekture
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Arhitekture
 
@@ -306,7 +306,7 @@ layout: true
 ---
 name: gradivni
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Gradivni elementi
 
@@ -413,7 +413,7 @@ Primer istog iskaza upotrebom dve različite konkretne sintakse
 ---
 name: klasifikacija
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Klasifikacija
 
@@ -624,11 +624,11 @@ calc = expression+ EOF
 
 ---
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Konkretna sintaksa je važna!!!
 
-## Neki jezici su pogodniji za kreiranje internih JSD
+#### Neki jezici su pogodniji za kreiranje internih JSD
 
 ---
 layout: true
@@ -692,7 +692,7 @@ dependencies {
 
 ---
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Eksterni JSD omogućavaju potpuno prilagođavanje domenu.
 
@@ -754,7 +754,7 @@ ekspertima.
 ---
 name: radionice
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Jezičke radionice
 
@@ -962,5 +962,11 @@ Za dokumentaciju sa primerom izgradnje 7 različitih jezika pogledati http://www
   [Prilog metodama brzog razvoja softvera na bazi proširivih jezičkih specifikacija](http://doiserbia.nb.rs/phd/fulltext/NS20110103DEJANOVIC.pdf).
   PhD thesis, Faculty of Technical Sciences, University of Novi Sad, January
   2012
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

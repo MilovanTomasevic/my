@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [High-performance computing (HPC)](/courses/#table-of-contents)
 ### V7-openACC
@@ -49,11 +42,11 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[08.03.2019 u 17:57]
 
 
 ---
@@ -72,10 +65,9 @@ name: sadrzaj
 - [Zadaci](#zad)
 - [OpenACC i CUDA](#cuda)
 
-
 ---
 name: acc
-class: center, middle
+class: center, middle, inverse
 
 # OpenACC
 
@@ -183,7 +175,7 @@ structured block
 ---
 layout: false
 name: kd
-class: center, middle
+class: center, middle, inverse
 
 # kernels direktiva
 
@@ -216,9 +208,7 @@ structured block
 - ...
 ]
 
-
 ---
-
 
 ## Primer 1: kernel.c
 
@@ -260,6 +250,7 @@ void assign(int *a, int *b, int size) {
 ]
 ]
 
+--
 .message.is-info[
 .message-header[
 Zadatak
@@ -273,7 +264,7 @@ Zadatak
 
 layout: false
 name: pd
-class: center, middle
+class: center, middle, inverse
 
 # parallel direktiva
 
@@ -311,12 +302,9 @@ Neke od klauzula (parametri nisu navedeni):
 - ...
 ]
 
-
-
 ---
 
 ## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`parallel.c`</a>
-
 
 .message.is-dark[
 .message-header[
@@ -340,8 +328,7 @@ int main() {
 ]
 ]
 
-
-
+--
 .message.is-info[
 .message-header[
 Zadatak
@@ -367,7 +354,7 @@ Zadatak
 
 layout: false
 name: ld
-class: center, middle
+class: center, middle, inverse
 
 # loop direktiva
 
@@ -417,7 +404,6 @@ layout: true
 	- independent - Signalizira kompajleru da nema zavisnosti podataka između iteracija petlje.
 	- ...
 
-
 ---
 
 ## Primer 4: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z7-openACC/#table-of-contents"> ☛ Primeri/`parallelloop.c`</a>
@@ -440,7 +426,7 @@ int main() {
 ---
 layout: false
 name: model
-class: center, middle
+class: center, middle, inverse
 
 # Model
 
@@ -470,7 +456,6 @@ layout: true
 	Izvor: [OpenACC Programming and Best Practices Guide](https://www.openacc.org/sites/default/files/inline-files/OpenACC_Programming_Guide_0.pdf)
 ] 
 
-
 ---
 
 ## Upravljanje podacima
@@ -485,7 +470,7 @@ layout: true
 
 layout: false
 name: dd
-class: center, middle
+class: center, middle, inverse
 
 # data direktiva
 
@@ -551,12 +536,11 @@ int main() {
 	- `GOPMP_OPENACC_DIM` (gcc)
 	- `GOMP_DEBUG` (gcc)
 
-
 ---
 
 layout: false
 name: zad
-class: center, middle
+class: center, middle, inverse
 
 # Zadaci
 
@@ -578,7 +562,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-warning[
 .message-header[
 Info
@@ -604,7 +588,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-warning[
 .message-header[
 Info
@@ -632,7 +616,7 @@ Izvor: [OpenACC Programming and Best Practices Guide](https://www.openacc.org/si
 
 layout: false
 name: cuda
-class: center, middle
+class: center, middle, inverse
 
 # OpenACC i CUDA
 
@@ -646,15 +630,11 @@ layout: true
 - `CUDA` (eng. *Compute Unified Device Architecture*) - platrofma za paralelno programiranje na NVIDIA grafičkim karticama.
 - Mapiranje OpenACC na CUDA termine:
 
-
-
 |            **OpenACC**           |           **CUDA**          |
 |:--------------------------------:|:---------------------------:|
 |       Domaćin (eng. *Host*)      |    Domaćin (eng. *Host*)    |
 | Akcelerator (eng. *Accelerator*) |    Uređaj (eng. *Device*)   |
 |   Paralelni ili računski region  | Jedan ili više CUDA kernela |
-
-
 
 - U OpenACC kod je na višem nivou abstrakcije u odnosu na CUDA kod i može se prevesti za izvršavanje na GPU.
 
@@ -664,7 +644,6 @@ layout: true
 
 - Streaming Multiprocessors (SM) & Kuda jezgra
 - Veliki broj hardverskih niti čini grafičke kartice pogodnim za probleme za izraženim SIMD paralelizmom.
-
 
 .lcol[
 
@@ -690,7 +669,6 @@ layout: true
 ---
 
 ## CUDA model izvršavanja
-
 
 .lcol[
 
@@ -735,6 +713,8 @@ layout: true
 	- Optimizovati prenos podataka u/iz globalne memorije grafičke kartice (`data direktiva`).
 	- ... 
 
+--
+
 .message.is-warning[
 .message-header[
 Info
@@ -743,7 +723,6 @@ Info
 - **Preporučeno čitanje**: Programming Massively Parallel Processors: A Hands-on Approach, David B. Kirk and Wen-mei W. Hwu, poglavlje 6 Performance Considerations
 ]
 ]
-
 
 ---
 
@@ -807,7 +786,6 @@ int main(int argc, char *argv[]) {
 
 ## matrixop.c Visual Profiler
 
-
 ![:scale 75%](img/vp.png)
 ---
 
@@ -822,6 +800,8 @@ int main(int argc, char *argv[]) {
 - Ukoliko različite niti unutar iste osnove imaju različite tragove izvršavanja, izvršavanje grupa niti sa različitim tragovima unutar osnove se sekvencijalizuje.
 - Do divergencije u izvršavanju mogu dovesti naredbe za kontrolu toka izvršavanja `if-else, switch, do, for, while`.
 
+--
+
 .message.is-warning[
 .message-header[
 Info
@@ -832,7 +812,6 @@ Info
 ]
 
 ---
-
 
 ## Neki radovi na temu OpenACC, CUDA i OpenCL
 
@@ -855,7 +834,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-warning[
 .message-header[
 Info
@@ -894,8 +873,6 @@ gcc -fopenacc -foffload=nvptx-none <izvorna_datoteka>
 ]
 ]
 
-
-
 ---
 
 ## Zadatak 3: Množenje matrica - kompajliranje i pokretanje zadatka
@@ -920,7 +897,6 @@ pgcc -acc -ta=tesla -Minfo <izvorna_datoteka>.
 ]
 ]
 
-
 ---
 ## Literatura
 
@@ -934,36 +910,40 @@ pgcc -acc -ta=tesla -Minfo <izvorna_datoteka>.
 	- [Introduction to Parallel Programming with OpenACC](https://www.youtube.com/playlist?list=PLx_s9Cz7_T429SF7gBGJ51iiZoEWYVvkq)
 	- [Advanced OpenACC](http://videolectures.net/ihpcss2016_urbanic_advanced_openACC/)
 
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

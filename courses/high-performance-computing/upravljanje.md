@@ -2,7 +2,7 @@
 {% block slides %}
 
 name: start
-class: center, middle
+class: center, middle, inverse
 
 # Upravljanje HPC sistemima
 #### zatečeno stanje, performanse i upravljanja
@@ -19,7 +19,7 @@ name: sadrzaj
 
 ---
 name: stanje
-class: center, middle
+class: center, middle, inverse
 
 # Zatečeno stanje
 #### šta imamo?
@@ -98,7 +98,7 @@ layout: true
 
 layout: false
 name: merenjeHPC
-class: center, middle
+class: center, middle, inverse
 
 # Merenje performansi HPC sistema
 #### koliko je brzo `brzo`?
@@ -158,8 +158,7 @@ layout: true
 
 - Najuticajniji benchmark u upotrebi se pojavio 1979 i baziran je na bibliotekama za linearnu algebru poznate kao Linpack (danas zamenjene sa Lapack/BLAS paketom softvera). 
 - Linpack meri performanse floating-point operacija, i baziran je na rešenju problma oblika:
-
-                𝐴𝑥 = 𝑏
+$$ 𝐴𝑥 = 𝑏 $$
 - Ograničenje: 
     - `A` mora da ima nimalo ili jako malo elemenata koji su 0. 
     - `A` je `nxn` matrica
@@ -335,8 +334,7 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 ## HPCG
 
 - I HPCG meri performanse floating-point operacija, i baziran je na rešenju problma oblika:
-
-                    𝐴𝑥 = 𝑏
+$$ 𝐴𝑥 = 𝑏 $$
 - Ograničenje: 
     - A mora da ima većinu elemenata koji su jednaki 0.
     - A je nxn matrica
@@ -428,7 +426,7 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 
 layout: false
 name: tehnikeHPC
-class: center, middle
+class: center, middle, inverse
 
 # Tehnike upravljanja HPC sistemima
 
@@ -547,7 +545,7 @@ layout: true
 
 layout: false
 name: slurm
-class: center, middle
+class: center, middle, inverse
 
 # SLURM
 #### uvod
@@ -1330,5 +1328,11 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
     - Prikazuje agregirane statističke podatke o radu klastera.
 - `sinfo`
     - Prikazuje podatke o konfiguraciji klastera
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

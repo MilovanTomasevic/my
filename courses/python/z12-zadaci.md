@@ -3,7 +3,7 @@
 
 name: zadaci
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Zadaci
 
@@ -57,6 +57,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -65,5 +66,11 @@ Odgovor
 - <a target="_blank" rel="noopener noreferrer" href="../python-z12-resenja"> ☛ `Rešenja`</a>
 ]
 ]
+
+---
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

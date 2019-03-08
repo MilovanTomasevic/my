@@ -15,7 +15,7 @@ name: sadrzaj
 
 ---
 name: hp
-class: center, middle
+class: center, middle, inverse
 
 # Hibridno programiranje
 
@@ -63,7 +63,7 @@ OMP_NUM_THREADS=<Nmp> \ mpiexec [-np <Nmpi>] <izvrsna_datoteka>
 ---
 layout: false
 name: primer
-class: center, middle
+class: center, middle, inverse
 
 # Primer
 
@@ -183,7 +183,7 @@ provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MP
 
 layout: false
 name: zadaci
-class: center, middle
+class: center, middle, inverse
 
 # Zadaci
 
@@ -216,6 +216,7 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -241,6 +242,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -284,5 +286,11 @@ layout: false
 - [MPI 3.1 standard, poglavlje 12.4](https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)
 - [OpenMP dokumentacija](https://www.open-mpi.org/doc/)
 - [OpenMP SC13 Tutorial: Hybrid MPI and OpenMP Parallel Programming](https://www.openmp.org/press-release/sc13-tutorial-hybrid-mpi-openmp-parallel-programming/)
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

@@ -16,7 +16,7 @@ name: sadrzaj
 
 ---
 name: acc
-class: center, middle
+class: center, middle, inverse
 
 # OpenACC
 
@@ -124,7 +124,7 @@ structured block
 ---
 layout: false
 name: kd
-class: center, middle
+class: center, middle, inverse
 
 # kernels direktiva
 
@@ -199,6 +199,7 @@ void assign(int *a, int *b, int size) {
 ]
 ]
 
+--
 .message.is-info[
 .message-header[
 Zadatak
@@ -212,7 +213,7 @@ Zadatak
 
 layout: false
 name: pd
-class: center, middle
+class: center, middle, inverse
 
 # parallel direktiva
 
@@ -276,6 +277,7 @@ int main() {
 ]
 ]
 
+--
 .message.is-info[
 .message-header[
 Zadatak
@@ -301,7 +303,7 @@ Zadatak
 
 layout: false
 name: ld
-class: center, middle
+class: center, middle, inverse
 
 # loop direktiva
 
@@ -373,7 +375,7 @@ int main() {
 ---
 layout: false
 name: model
-class: center, middle
+class: center, middle, inverse
 
 # Model
 
@@ -417,7 +419,7 @@ layout: true
 
 layout: false
 name: dd
-class: center, middle
+class: center, middle, inverse
 
 # data direktiva
 
@@ -487,7 +489,7 @@ int main() {
 
 layout: false
 name: zad
-class: center, middle
+class: center, middle, inverse
 
 # Zadaci
 
@@ -509,6 +511,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -534,6 +537,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -561,7 +565,7 @@ Izvor: [OpenACC Programming and Best Practices Guide](https://www.openacc.org/si
 
 layout: false
 name: cuda
-class: center, middle
+class: center, middle, inverse
 
 # OpenACC i CUDA
 
@@ -658,6 +662,8 @@ layout: true
 	- Optimizovati prenos podataka u/iz globalne memorije grafičke kartice (`data direktiva`).
 	- ... 
 
+--
+
 .message.is-warning[
 .message-header[
 Info
@@ -743,6 +749,8 @@ int main(int argc, char *argv[]) {
 - Ukoliko različite niti unutar iste osnove imaju različite tragove izvršavanja, izvršavanje grupa niti sa različitim tragovima unutar osnove se sekvencijalizuje.
 - Do divergencije u izvršavanju mogu dovesti naredbe za kontrolu toka izvršavanja `if-else, switch, do, for, while`.
 
+--
+
 .message.is-warning[
 .message-header[
 Info
@@ -775,6 +783,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -849,5 +858,11 @@ pgcc -acc -ta=tesla -Minfo <izvorna_datoteka>.
 - Video tutorijali:
 	- [Introduction to Parallel Programming with OpenACC](https://www.youtube.com/playlist?list=PLx_s9Cz7_T429SF7gBGJ51iiZoEWYVvkq)
 	- [Advanced OpenACC](http://videolectures.net/ihpcss2016_urbanic_advanced_openACC/)
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "base_slides.md" %}
 {% block slides %}
 
-class: center, middle
+class: center, middle, inverse
 
 # Zašto koristimo `HPC`? 
 
@@ -865,5 +865,11 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 
 - Vrlo dobar pregled problema N tela se može naći u Grop, Lusk, i Skjellum — Using MPI: Portable Parallel Programming with the Message Passing Interface u sekciji 5.2.
 - Više o efikasnoj integraciji diferencijalnih jednačina ima u: William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery. 2007. Numerical Recipes 3rd Edition: The Art of Scientific Computing (3 ed.). Cambridge University Press, New York, NY, USA. i to u poglavlju 17, stranica 899. Naročito obratite pažnju na sekcije 17.0 i 17.1.
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

@@ -20,7 +20,7 @@ name: sadrzaj
           
 ---
 name: uvod
-class: center, middle
+class: center, middle, inverse
 
 # Uvod u Git
 
@@ -31,7 +31,7 @@ layout: true
 
 ---
 
-# Šta je Git?
+## Šta je Git?
             
 - Distribuirani sistem za kontrolu verzija (*Distributed Version Control System -
   DVCS*).
@@ -41,7 +41,7 @@ layout: true
             
 ---
 
-# Git - osobine
+## Git - osobine
             
 - Izuzetno brz i skalabilan.
 - Jednostavan dizajn.
@@ -55,7 +55,7 @@ layout: true
             
 ---
 
-# Osnovni workflow
+## Osnovni workflow
 
 - Ako ne postoji klon repozitorijuma na lokalnom računaru vrši se kloniranje
   udaljenog repozitorijuma (ovo se generalno radi jednom).
@@ -66,7 +66,7 @@ layout: true
 ---
 name: repozitorijum
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Git repozitorijum
 
@@ -77,7 +77,7 @@ layout: true
 
 ---
 
-# Praćenje sadržaja
+## Praćenje sadržaja
 
 Osnova git repozitorijuma je praćenje sadržaja a ne fajlova i promena nad njima.
 Informacije o promenama se izračunavaju po potrebi.
@@ -93,17 +93,17 @@ Informacije o promenama se izračunavaju po potrebi.
 
 ---
 
-# Veza radnog stabla, indeksa i repozitorijuma
+## Veza radnog stabla, indeksa i repozitorijuma
 ![:scale 80%](git/Workflow.svg)
 
 ---
 
-# Životni ciklus fajla u git repozitorijumu
+## Životni ciklus fajla u git repozitorijumu
 ![:scale 80%](git/FileLifecycle.svg)
 
 ---
 
-# Git repozitorijum
+## Git repozitorijum
 
 - **Objektna baza**: Jednostavan model repozitorijuma baziran na mapama (parovi
   ključ-vrednost).
@@ -115,13 +115,13 @@ Informacije o promenama se izračunavaju po potrebi.
 
 ---
 
-# Git repozitorijum sa objektima i referencama
+## Git repozitorijum sa objektima i referencama
 
 ![Git repozitorijum sa objektima i referencama](git/git-repo.svg)
 
 ---
 
-# Prikaz popularnih hosting rešenja
+## Prikaz popularnih hosting rešenja
 
 - https://github.com/
 - https://gitlab.com/
@@ -129,7 +129,7 @@ Informacije o promenama se izračunavaju po potrebi.
 ---
 name: konfiguracija
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Instalacija i konfiguracija
 
@@ -140,7 +140,7 @@ layout: true
 
 ---
 
-# Vrste klijenata
+## Vrste klijenata
 
 - GUI
   - FLOSS: EGit (Eclipse plugin), git-cola, TortoiseGit, Git Extensions...
@@ -150,7 +150,7 @@ layout: true
 
 ---
 
-# Pomoć - help
+## Pomoć - help
 
 Spisak osnovnih komandi git-a se može dobiti sa:
 
@@ -174,7 +174,7 @@ $ git help <ime komande>
  
 ---
 
-# Konfiguracija
+## Konfiguracija
 
 - Konfiguracija se čuva u tekstualnim fajlovima koji imaju strukturu *.ini
   fajlova*.
@@ -188,7 +188,7 @@ $ git help <ime komande>
   
 ---
 
-# Osnovna konfiguracija
+## Osnovna konfiguracija
 
 .medium[
 Konfigurisanje imena i email-a:
@@ -217,7 +217,7 @@ $ git config --global core.editor
 
 ---
 
-# Konfiguracija za SSL i proxy
+## Konfiguracija za SSL i proxy
 
 Za pristup serverima sa nevalidnim sertifikatom (npr. samopotpisan sertifikat)
 potrebno je podesiti sledeće za sertifikat koji smo preuzeli sa servera:
@@ -240,7 +240,7 @@ $ git config --global http.proxy 192.168.77.100:8080
 
 ---
 
-# Povezivanje sa serverom upotrebom SSH ključeva
+## Povezivanje sa serverom upotrebom SSH ključeva
 
             
 - Ključevi se nalaze u `~/.ssh/` direktorijumu.
@@ -264,7 +264,7 @@ The key fingerprint is:
 
 ---
 
-# Konfigurisanje diff/merge alata
+## Konfigurisanje diff/merge alata
 
 ```
 $ git config --global merge.tool meld
@@ -278,7 +278,7 @@ $ git config --global merge.tool "'C:\ Program Files\...'"
 
 ---
 
-# Konfiguracija veličine slova u nazivima fajlova
+## Konfiguracija veličine slova u nazivima fajlova
 
 Unix fajl sistemi su uglavnom *case-sensitive* dok kod *windows*-a to
 nije slučaj. Stoga je na unix file sistemima sasvim legalno da
@@ -297,7 +297,7 @@ različitog *case*-a on će biti ignorisan.
 
 ---
 
-# Konfiguracija završetaka linija (<i>line endings</i>)
+## Konfiguracija završetaka linija (<i>line endings</i>)
 
 .medium[
 Unix na kraju reda kod tekstualnih fajlova koristi LF bajt. Windows koristi dva
@@ -314,16 +314,22 @@ podešavanje. Sadržaj `.gitattributes` fajla:
   *.jpg binary
   *.exe binary
 ```
-
-.attention[
-**Napomena**: Za dodatnu konfiguraciju pogledati konfiguracione
-parametre `core.eol`, `core.autocrlf` i `core.safecrlf`.]
+]
+--
+.message.is-warning[
+.message-header[
+Zadatak
+]
+.message-body[
+**Napomena**: 
+- Za dodatnu konfiguraciju pogledati konfiguracione parametre `core.eol`, `core.autocrlf` i `core.safecrlf`.]
 
 ]
 
+
 ---
 
-# Normalizacija krajeva linija u repozitorijumu
+## Normalizacija krajeva linija u repozitorijumu
 
 Ako se u git repozitorijumu već nalaze fajlovi sa CRLF tada je potrebno izvršiti
 normalizaciju svih tekstualnih fajlova na LF
@@ -333,7 +339,7 @@ pratite
 ---
 name: operacije
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Osnovne operacije
 
@@ -344,7 +350,7 @@ layout: true
 
 ---
 
-# Inicijalizacija repozitorijuma
+## Inicijalizacija repozitorijuma
 
 Repozitorijum je skup metapodataka koji se nalaze u skrivenom folderu .git
 unutar korenskog foldera projekta.
@@ -365,7 +371,7 @@ Ovim je kreiran prazan repozitorijum. Sledeći korak je dodavanje sadržaja.
 
 ---
 
-# Kloniranje repozitorijuma
+## Kloniranje repozitorijuma
 
 Repozitorijum možemo kreirati kloniranjem udaljenog
 repozitorijuma.
@@ -385,7 +391,7 @@ gde je 192.168... IP adresa računara na kojem je daemon pokrenut
 
 ---
 
-# Ignorisanje fajlova
+## Ignorisanje fajlova
 
 Obavlja se putem fajla `.gitignore` koji se nalazi u korenskom
 folderu projekta. Sadržaj je sledećeg oblika:
@@ -408,7 +414,7 @@ važi samo za dati poddirektorijum.
 
 ---
 
-# Status repozitorijuma
+## Status repozitorijuma
 
 Status predstavlja informacije kao što su:
 - Grana na kojoj se nalazi radno stablo.
@@ -417,7 +423,7 @@ Status predstavlja informacije kao što su:
 
 ---
 
-# Status repozitorijuma
+## Status repozitorijuma
 
 Na primer, za repo. koji ima lokalnih promena
 
@@ -444,7 +450,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ---
 
-# Priprema index-a
+## Priprema index-a
 
 Priprema sadržaja za *commit* se obavlja operacijama `add`, `rm` i sl.
 ```
@@ -471,7 +477,7 @@ Promene se beleže u index-u.
 
 ---
 
-# Napomena za inicijalni *commit*
+## Napomena za inicijalni *commit*
 
 Pri inicijalnom *commit*-u repozitorijum je prazan pa `HEAD`
 pokazivač ne postoji. Zbog toga nije moguće poništiti indeks
@@ -481,15 +487,20 @@ komandom `git reset HEAD` pa se u tom slučaju radi:
 $ git rm –r --cached .
 ```
 
-.attention.medium[
-  **Napomena**: ovo se radi samo kod inicijalnog *commit*-a. Nemojte ovo raditi
-  kasnije! Ova komanda registruje promenu koja će obrisati sve fajlove (rekurzivno
-  – flag –r) u sledećoj verziji.
+--
+.message.is-warning[
+.message-header[
+**Napomena**
+]
+.message-body[
+- Ovo se radi samo kod inicijalnog *commit*-a. Nemojte ovo raditi kasnije! 
+- Ova komanda registruje promenu koja će obrisati sve fajlove (rekurzivno – flag –r) u sledećoj verziji.
+]
 ]
 
 ---
 
-# Odustajanje od praćenja fajla
+## Odustajanje od praćenja fajla
 
 .medium[
 - U komandama tipa `git add -A` i `git commit -a` git automatski dodaje promene
@@ -520,7 +531,7 @@ $ git rm –r --cached .
 
 ---
 
-# Trajno beleženje - *commit*
+## Trajno beleženje - *commit*
 
 - Promena se trajno beleži sa:
 
@@ -543,7 +554,7 @@ $ git rm –r --cached .
 
 ---
 
-# Pregled istorije
+## Pregled istorije
 
 - Istorija se može pregledati sa komandom:
 
@@ -566,7 +577,7 @@ $ git rm –r --cached .
 
 ---
 
-# Premeštanje fajlova, promena imena
+## Premeštanje fajlova, promena imena
 
 Premeštanje fajlova i promena imena može da se obavi na
 sledeći način
@@ -589,7 +600,7 @@ usput u izvesnoj meri promenjenog sadržaja.
 
 ---
 
-# Privremeno “sklanjanje” lokalnih izmena
+## Privremeno “sklanjanje” lokalnih izmena
 
 - U sred ste rada i stiže zahtev da se nešto mora hitno uraditi.
 - Dva načina na koji se može odgovoriti na ovaj zahtev:
@@ -610,7 +621,7 @@ usput u izvesnoj meri promenjenog sadržaja.
            
 ---
 
-# Revizije
+## Revizije
 
 .medium[
 - Revizije imenuju *commit* objekat.
@@ -636,7 +647,7 @@ usput u izvesnoj meri promenjenog sadržaja.
 ---
 name: grane
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Grane (*Branches*)
 
@@ -647,7 +658,7 @@ layout: true
 
 ---
 
-# Grane – Branches
+## Grane – Branches
 
 - Grane su alternativni tokovi razvoja.
 - Kreiranje grana kod Git-a je jednostavno i brzo tako da se ohrabruje njihovo
@@ -655,10 +666,9 @@ layout: true
 - Osnovna grana se naziva *master*. Ona obično uvek postoji (osim kod praznog
   repozitorijuma).
   
-  
 ---
 
-# Vrste grana
+## Vrste grana
 
 - Grane u git repozitorijumu mogu biti:
   - **lokalne**: Nastale u lokalnom repozitorijumu i ne prate druge grane.
@@ -666,7 +676,6 @@ layout: true
     *upstream* grana). Najčešće prate *remote tracking grane*.
   - **remote tracking**: Grane nastale u udaljenom repozitorijumu koje se
     kloniraju u lokalni.
-    
     
 ---
 
@@ -687,7 +696,7 @@ layout: true
 
 ---
 
-# Grane i operacije
+## Grane i operacije
 
 ![Grane i operacije](git/branches-SO.png)
 
@@ -697,7 +706,7 @@ layout: true
 
 ---
 
-# Kreiranje grane
+## Kreiranje grane
 
 Kreiranje nezavisne lokalne grane
 ```
@@ -721,7 +730,7 @@ $ git branch mojagrana -t origin/udaljenagrana
 
 ---
 
-# Informacije o granama
+## Informacije o granama
 
 Spisak lokalnih grana, sa `*` označena tekuća
 ```
@@ -747,7 +756,7 @@ $ git branch -vv
 
 ---
 
-# Prelazak između grana
+## Prelazak između grana
 
 .medium[
 - Promena grane podrazumeva izmenu radnog stabla tako da
@@ -776,7 +785,7 @@ $ git branch -vv
 
 ---
 
-# Brisanje lokalnih grana
+## Brisanje lokalnih grana
 
 Brisanje lokalne grane:
 ```
@@ -795,7 +804,7 @@ $ git branch -D grana_za_brisanje
 
 ---
 
-# Slanje promena u drugi repozitorijum
+## Slanje promena u drugi repozitorijum
 
 .medium[
 Slanje promena na *upstream* granu se radi sa:
@@ -825,7 +834,7 @@ $ git push origin '*:*'
 
 ---
 
-# Slanje promena u drugi repozitorijum
+## Slanje promena u drugi repozitorijum
 
 .medium[
 A ako želimo da lokalne grane ujedno postanu tracking za
@@ -840,11 +849,11 @@ podešen.
 
 ---
 
-# push.default - TODO
+## push.default - TODO
 
 ---
 
-# Podešavanje veze sa udaljenim repozitorijumom
+## Podešavanje veze sa udaljenim repozitorijumom
 
 .medium[
 Prethodne komande su podrazumevale da je udaljeni repozitorijum sa imenom `origin`
@@ -871,7 +880,7 @@ $ git remote show origin
 
 ---
 
-# Brisanje udaljenih grana
+## Brisanje udaljenih grana
 
 Brisanje grane u udaljenom repozitorijumu se može uraditi na sledeći način:
 
@@ -886,7 +895,7 @@ $ git push origin --delete udaljena_grana
 
 ---
 
-# Poređenje grana (*commit*-a)
+## Poređenje grana (*commit*-a)
 
 .medium[
 Da bi videli koji fajlovi su promenjeni između dve grane uz ignorisanje
@@ -919,7 +928,7 @@ Poređenje možemo obaviti između bilo koja dva *commit*-a (po *hash* *id*-u).
 ---
 name: merging
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Spajanje grana (*merging*)
 
@@ -930,7 +939,7 @@ layout: true
 
 ---
 
-# Spajanje grana – *merge*
+## Spajanje grana – *merge*
 
 - Komanda `pull` automatski radi spajanje grane sa udaljenog repozitorijuma.
   ```
@@ -951,7 +960,7 @@ layout: true
   
 ---
 
-# Spajanje grana – strategije
+## Spajanje grana – strategije
 
 - Prilikom operacije spajanja moguće je zadati odgovarajuću `merge` strategiju
   navođenjem parametra iza `-X`.
@@ -984,14 +993,21 @@ način.
 
 ---
 
-# Spajanje grana – *rebase*
+## Spajanje grana – *rebase*
 
 Drugi mehanizam spajanja promena sa druge grane je *rebase*.
 
-![:scale 90%](git/Merge-rebase.svg)
+![:scale 80%](git/Merge-rebase.svg)
 
-.attention[
-  **Važno**: *rebase* menja istoriju. Ne raditi na udaljenim deljenim granama.
+--
+
+.message.is-danger[
+.message-header[
+Važno
+]
+.message-body[
+- `rebase` menja istoriju. Ne raditi na udaljenim deljenim granama.
+]
 ]
 
 ---
@@ -1026,7 +1042,7 @@ Primeri:
 
 ---
 
-# Razrešavanje konflikta
+## Razrešavanje konflikta
 
 - Konflikti će biti označeni odgovarajućim markerima unutar tekstualnih fajlova.
   ```
@@ -1045,7 +1061,7 @@ Primeri:
   
 ---
 
-# Razrešavanje konflikta
+## Razrešavanje konflikta
 
 - Kod konflikta komanda git diff će prikazivati *three-way-diff* između zajedničkog
   pretka, tekuće verzije i verzije sa druge grane. Razrešenje preuzimanjem naše ili
@@ -1064,7 +1080,7 @@ Primeri:
 ---
 name: razmena
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Razmena promena
 
@@ -1075,7 +1091,7 @@ layout: true
 
 ---
 
-# Razmena promena
+## Razmena promena
 
 - Može se obavljati putem deljenog repozitorijuma:
   ```
@@ -1099,7 +1115,7 @@ layout: true
 
 ---
 
-# Razmena promena
+## Razmena promena
 
 Ili upotrebom fajlova (mejlom, na prenosnom disku i sl.).
 
@@ -1111,7 +1127,7 @@ Ili upotrebom fajlova (mejlom, na prenosnom disku i sl.).
   
 ---
 
-# Razmena promena
+## Razmena promena
 
 - Putem zakrpa (*patches*). U ovoj varijanti promena može da se prenosi između repozitorijuma sa različitom istorijom.
 
@@ -1133,7 +1149,7 @@ Ili upotrebom fajlova (mejlom, na prenosnom disku i sl.).
 ---
 name: greske
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Ispravke grešaka
 
@@ -1144,7 +1160,7 @@ layout: true
 
 ---
 
-# Ispravke grešaka
+## Ispravke grešaka
 
 Imamo sledeće situacije:
 
@@ -1156,14 +1172,17 @@ Imamo sledeće situacije:
   repozitorijum neispravana.
 - Izmena koja nije poslednja je neispravna ali još uvek nije poslata u udaljeni
   repozitorijum.
-  
-.attention[
-   **Važna napomena**
-   
-   Obratite pažnju da se istorija koja je objavljena (promene poslate u udaljeni
-   repozitorijum) ne sme menjati! Može se samo kreirati nova promena koja
-   poništava staru.
 
+--
+
+.message.is-danger[
+.message-header[
+**Važna napomena**
+]
+.message-body[
+- Obratite pažnju da se istorija koja je objavljena (promene poslate u udaljeni repozitorijum) ne sme menjati! 
+- Može se samo kreirati nova promena koja poništava staru.
+]
 ]
 
 ---
@@ -1199,9 +1218,15 @@ ponašanje (`--mixed` može da se izostavi).
 $ git reset --mixed HEAD
 ```
 
-.attention[
-  **Napomena**: Pomeranjem `HEAD`-a git pamti prethodni u `ORIG_HEAD` tako da možemo uvek da
-  poništimo efekat `reset` komande.
+--
+
+.message.is-danger[
+.message-header[
+**Napomena**
+]
+.message-body[
+- Pomeranjem `HEAD`-a git pamti prethodni u `ORIG_HEAD` tako da možemo uvek da poništimo efekat `reset` komande.
+]
 ]
 
 ---
@@ -1222,7 +1247,7 @@ Ukoliko želimo da odustanemo od promene proizvoljnog fajla radimo sledeće:
   
 ---
 
-# Izmena poslednjeg *commit*-a
+## Izmena poslednjeg *commit*-a
 
 Ukoliko smo uradili commit a zatim primetili da smo nešto zaboravili, ili smo
 upisali pogrešnu log poruku možemo uraditi sledeće:
@@ -1246,7 +1271,7 @@ $ git commit -c ORIG_HEAD
 
 ---
 
-# Poništavanje proizvoljne promene
+## Poništavanje proizvoljne promene
 
 Ukoliko želimo da poništimo efekat neke od promena iz istorije koristimo komandu
 revert:
@@ -1260,12 +1285,15 @@ $ git commit
 
 ---
 
-# Izmena istorije
+## Izmena istorije
 
-.attention.small[
-   **Napomena**: Ovo se radi samo sa lokalnim granama, izmenama na
-   tracking granama koje još nisu poslate na udaljeni repozitorijum, ili u
-   dogovoru sa ostatkom tima!!!
+.message.is-danger[
+.message-header[
+**Napomena**
+]
+.message-body[
+- Ovo se radi samo sa lokalnim granama, izmenama na tracking granama koje još nisu poslate na udaljeni repozitorijum, ili u dogovoru sa ostatkom tima!!!
+]
 ]
 
 .medium[
@@ -1297,7 +1325,7 @@ pick a5f4a0d added cat-file
 
 ---
 
-# Izmena istorije
+## Izmena istorije
 
 Menjamo `pick` komande sa `edit` i `squash`. Na primer:
 
@@ -1316,7 +1344,7 @@ $ git rebase ––continue
 ```
 
 ---
-# Izmena istorije sa *git rebase --onto*
+## Izmena istorije sa *git rebase --onto*
 
 Ukoliko želimo da deo grane preselimo na drugu granu koristimo
 *git rebase --onto*.
@@ -1349,7 +1377,7 @@ git rebase --onto new_base old_base target_ref
 ---
 name: odrzavanje
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Održavanje repozitorijuma
 
@@ -1360,7 +1388,7 @@ layout: true
 
 ---
 
-# Održavanje repozitorijuma
+## Održavanje repozitorijuma
 
 - Git ima jednostavne mehanizme skladištenja istorije bazirane na *snap-shot*
   modelu. Čuvaju se celi fajlovi u obliku *BLOB* objekata.
@@ -1383,7 +1411,7 @@ layout: true
 ---
 name: modeli
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Modeli grananja
 
@@ -1394,7 +1422,7 @@ layout: true
 
 ---
 
-# Modeli grananja (*branching models*)
+## Modeli grananja (*branching models*)
 
 - Konvenciju imenovanja grana i proces koji opisuje način njihovog korišćenja.
 - Trivijalan model grananja koristi samo `master` granu.
@@ -1410,7 +1438,7 @@ layout: true
 
 ---
 
-# *Feature branches*
+## *Feature branches*
 
 - Način razvoja softvera gde se za svaku funkcionalnost softvera (*feature*)
   kreira nova grana.
@@ -1424,7 +1452,7 @@ layout: true
 
 ---
 
-# *GitFlow* model
+## *GitFlow* model
 
 ![GitFlow](git/GitFlow.svg)
 
@@ -1434,14 +1462,14 @@ layout: true
 
 ---
 
-# Modifikovani *GitFlow* model
+## Modifikovani *GitFlow* model
 
 ![GitFlow reloaded](git/GitFlow-Reloaded.svg)
 
 ---
 name: praksa
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Preporučena praksa
 
@@ -1466,7 +1494,7 @@ layout: true
 
 ---
 
-# Kratkotrajne grane
+## Kratkotrajne grane
 
 Kreiramo i prelazimo na novu granu:
 ```
@@ -1489,7 +1517,7 @@ $ git commit -am "WIP"
 
 ---
 
-# Kratkotrajne grane
+## Kratkotrajne grane
 
 Kada završimo sa izmenama, prelazimo na master granu:
 ```
@@ -1512,7 +1540,7 @@ $ git commit -v
 
 ---
 
-# Dugotrajne grane
+## Dugotrajne grane
 
 .medium[
 
@@ -1563,7 +1591,7 @@ $ git svn dcommit
 
 ---
 
-# *Subversion* i lokalne grane
+## *Subversion* i lokalne grane
 
 Moguće je kreirati i grane na svn repozitorijumu i povezati ih sa
 lokalnim
@@ -1582,7 +1610,7 @@ $ git svn dcommit
 
 ---
 name: implementacija
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Implementacija
@@ -1594,7 +1622,7 @@ layout: true
 
 ---
 
-# Git repozitorijum
+## Git repozitorijum
 
 - **Objektna baza**: Jednostavan model repozitorijuma baziran na mapama (parovi
   ključ-vrednost).
@@ -1606,7 +1634,7 @@ layout: true
 
 ---
 
-# Vrste git objekata
+## Vrste git objekata
 
 Repozitorijum je objektna baza gde postoje tri vrste objekata:
 
@@ -1619,7 +1647,7 @@ Repozitorijum je objektna baza gde postoje tri vrste objekata:
 
 ---
 
-# Vrste git objekata
+## Vrste git objekata
 
 - Svi objekti su smešteni na isti način u `.git/objects` direktorijumu. Prva dva
   karaktera *SHA1* heša čine naziv poddirektorijuma dok preostalih 38 čini ime
@@ -1631,7 +1659,7 @@ Repozitorijum je objektna baza gde postoje tri vrste objekata:
   
 ---
 
-# BLOB
+## BLOB
 
 Niz bajtova bez semantike i metapodataka. Najčešće služi za
 opis sadržaja fajla.
@@ -1650,7 +1678,7 @@ class MainClass {
 
 ---
 
-# *Tree*
+## *Tree*
 
 - Čuva niz referenci na blobove i druga podstabla zajedno sa meta-podacima kao
   što su: naziv fajla, mod i sl.
@@ -1668,7 +1696,7 @@ class MainClass {
 
 ---
 
-# *Commit*
+## *Commit*
 
 - Sadrži informacije o trajnoj zabelešci (*commit*): referenca na stablo
   (*tree*), autor, osobu koja je kreirala zabelešku (*commiter*), datum i vreme
@@ -1688,19 +1716,19 @@ Prvi commit.
 
 ---
 
-# Prvi *commit*
+## Prvi *commit*
 
 .center[![:scale 35%](git/prvi-commit.svg)]
 
 ---
 
-# Drugi *commit*
+## Drugi *commit*
 
 .center[![:scale 65%](git/drugi-commit.svg)]
 
 ---
 
-# Reference
+## Reference
 
 - Pokazivači na objekte u git repozitorijumu (najčešće *commit*-e).
 - Smeštene u `.git/refs` direktorijumu.
@@ -1714,16 +1742,22 @@ Prvi commit.
 
 ---
 
-# Git repozitorijum sa objektima i referencama
+## Git repozitorijum sa objektima i referencama
 
 .center[![:scale 100%](git/git-repo.svg)]
 
 ---
 
-# Literatura
+## Literatura
 
 - Scott Chacon, Ben Straub: *Pro Git*, Apress, 2014.
   Dostupna na: https://git-scm.com/book/en/v2
 - Git dokumentacija - https://git-scm.com/doc
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

@@ -14,7 +14,7 @@ name: sadrzaj
 
 ---
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Uvod
 
@@ -50,7 +50,7 @@ layout: true
 
 ---
 name: openmp 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # OpenMP
@@ -214,6 +214,7 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -256,6 +257,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -279,6 +281,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -288,6 +291,7 @@ Info
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -301,10 +305,8 @@ Odgovor
 
 ## Sinhronizacioni konstrukti
 - Sinhronizacija visokog nivoa apstrakcije:
-    - barrier construct - definiše tačku u kodu do koje sve aktivne niti moraju da se zaustave dok do te tačke ne stigne i poslednja nit, nakon čega sve niti mogu nastaviti dalje izvršavanje.
-```c
-#pragma omp barrier
-```
+    - barrier construct - definiše tačku u kodu do koje sve aktivne niti moraju da se zaustave dok do te tačke ne stigne i poslednja nit, nakon čega sve niti mogu nastaviti dalje izvršavanje. `#pragma omp barrier`
+
 
 - `critical construct` - samo jedna nit može u jednom trenutku biti u kritičnoj sekciji.
 ```c
@@ -312,10 +314,8 @@ Odgovor
 		strukturirani-blok
 ```
 
-- `atomic construct` - hardverski podržan isključiv pristup ažuriranju vrednosti proste promenljive. Ukoliko nema hardverske podrške, ova konstrukcija se ponaša kao i `critical`.
-```c
-#pragma omp atomic
-```
+- `atomic construct` - hardverski podržan isključiv pristup ažuriranju vrednosti proste promenljive. Ukoliko nema hardverske podrške, ova konstrukcija se ponaša kao i `critical`. `#pragma omp atomic`
+
 
 ---
 
@@ -330,6 +330,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -363,7 +364,7 @@ Odgovor
 ---
 
 name: loop 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # loop konstrukcija
@@ -448,7 +449,7 @@ Primer
 ---
 
 name: redukcije 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Redukcije
@@ -569,6 +570,7 @@ korišćenje `for`  direktive i reduction klauze.
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -581,7 +583,7 @@ Odgovor
 ---
 
 name: vs 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Implicitna vs. eksplicitna barijera
@@ -617,26 +619,7 @@ Zadatak
 ]
 ]
 
----
-
-## Implicitna vs. eksplicitna barijera 
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-- U kojem delu koda će se niti sinhronizovati?
-```c
-	#pragma omp parallel
-	{
-			/* prvi blok naredbi */
-			#pragma omp barrier
-			/* drugi blok naredbi */
-    }
-```
-]
-]
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -664,24 +647,7 @@ Zadatak
 ]
 ]
 
----
-## Implicitna vs. eksplicitna barijera 
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-- U kojem delu koda će se niti sinhronizovati?
-```c
-	#pragma omp parallel for
-	for (i = 0; i < N; i++)
-		/* prvi blok naredbi */
-	/* drugi blok naredbi */
-```
-]
-]
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -727,6 +693,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -738,7 +705,7 @@ Odgovor
 
 ---
 name: ss 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # sections/section konstrukcija
@@ -907,27 +874,7 @@ Zadatak
 ]
 ]
 
----
-## Primer 5: Klauze za rad sa podacima
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-```c
-	void dummy() {
-		int tmp = 0;
-	#pragma omp parallel for private(tmp)
-	for (int j = 0; j < 5; j++)
-		tmp += j;
-	printf("%d\n", tmp);
-	}
-```
-- Koja vrednost će biti ispisana na standardni izlaz?
-]
-]
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -961,27 +908,7 @@ Zadatak
 ]
 ]
 
----
-## Primer 5: Klauze za rad sa podacima
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-```c
-	void dummy() {
-		int tmp = 0;
-		#pragma omp parallel for private(tmp)
-		for (int j = 0; j < 5; j++)
-				tmp += j;
-			printf("%d\n", tmp);
-}
-```
-- Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
-]
-]
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1015,30 +942,7 @@ promenljive `tmp`?
 ]
 ]
 
----
-
-## Primer 5: Klauze za rad sa podacima
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-```c
-	void dummy() {
-		int tmp = 0;
-		#pragma omp parallel for private(tmp)
-		for (int j = 0; j < 5; j++)
-			tmp += j;
-		printf("%d\n", tmp);
-	}
-```
-- Kojom klauzom je potrebno zameniti private klauzu da bi lokalne
-instance promenljive tmp dobile inicijalnu vrednost globalne
-promenljive `tmp`?
-]
-]
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1062,6 +966,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1078,6 +983,8 @@ Odgovor
 - Inicijalno, OpenMP je zamišljen tako da je moguće paralelizovati
 probleme za koje se unapred zna broj potrebnih iteracija za njihovo
 rešavanje!
+
+--
 
 .message.is-danger[
 .message-header[
@@ -1206,6 +1113,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1286,6 +1194,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1314,6 +1223,7 @@ sekvencijalnog programa.
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1342,6 +1252,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1356,7 +1267,7 @@ Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
 ---
 
 name: end 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Nastaviće se...
@@ -1368,5 +1279,11 @@ layout: false
 - `"Introduction to OpenMP", Tim Mattson`, dostupno na [ovom linku](https://www.youtube.com/playlist?list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG)
 - [`"Introduction to OpenMP"`, prateća prezentacija](https://www.openmp.org/wp-content/uploads/Intro_To_OpenMP_Mattson.pdf)
 - `"Parallel Computing Book"`, Victor Eijkhout, elektronska verzija knjige je dostupna na [ovom linku](http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-basics.html)
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

@@ -13,7 +13,7 @@ name: sadrzaj
 ---
 
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Uvod
 
@@ -50,7 +50,7 @@ layout: true
 
 ---
 name: osnove 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Osnove Python jezika
@@ -388,15 +388,19 @@ def print_info(name, surname, age = 35):
 ```
 ]
 
-.footer.medium[
-.attention[
-**Napomene:**
-<br>1.Za sve sekvence koji se mogu menjati (*mutable*) prosleđuje se *referenca*
-<br>2. Za sve sekvence koji se ne mogu menjati (*immutable*) pravi se nova *kopija*
-<br>3. Jednostavan način da se sekvence pošalje preko vrednosti je foo(*s[:]*)
+--
+.message.is-warning[
+.message-header[
+Info
 ]
+.message-body[
+**Napomene:**
+1. Za sve sekvence koji se mogu menjati (*mutable*) prosleđuje se *referenca*
+2. Za sve sekvence koji se ne mogu menjati (*immutable*) pravi se nova *kopija*
+3. Jednostavan način da se sekvence pošalje preko vrednosti je foo(*s[:]*)
 
-] 
+]
+]
 
 ---
 ## Prosleđivanje argumenata komandne linije
@@ -450,7 +454,7 @@ fout.close()
 ---
 
 name: zadaci 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Zadaci
@@ -497,6 +501,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -505,5 +510,11 @@ Odgovor
 - <a target="_blank" rel="noopener noreferrer" href="../python-z1-resenja"> ☛ `Rešenja`</a>
 ]
 ]
+
+---
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

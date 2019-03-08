@@ -1,9 +1,9 @@
 {% extends "base_slides.md" %}
 {% block slides %}
 
-class: center, middle
+class: center, middle, inverse
 
-## Paralelni algoritmi
+# Paralelni algoritmi
 #### temelji paralelnog programiranja
 
 ---
@@ -466,5 +466,11 @@ $$ C_{11}=A_{10}B_{01}+A_{11}B_{11}+A_{12}B_{21}+A_{13}B_{31} \\ korak\quad 3:A_
 	- `Breakthrough wanted`: Imati softverske alate koji paralelizuju umesto nas bi bilo zgodno.
 
 - Takođe se još više koristi za grafove usled prirodnog homomorfizma između njega i domena problema. 
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

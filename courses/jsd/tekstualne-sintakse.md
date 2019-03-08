@@ -10,7 +10,7 @@ name: sadrzaj
 
 ---
 name: pregled
-class: center, middle
+class: center, middle, inverse
 
 # Parsiranje
 
@@ -115,7 +115,7 @@ Osnovne klase alata:
 
 ---
 name: formalne-gramatike
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Formalne gramatike
@@ -435,7 +435,7 @@ http://en.wikipedia.org/wiki/Extended_Backus-Naur_Form
 
 ---
 name: strategije-parsiranja
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Strategije parsiranja
@@ -715,5 +715,11 @@ http://www.dabeaz.com/ply/ply.html#ply_nn22
   gramatiku*.
 - Brz round-trip. Nema generisanja parsera. Moguća izmena gramatike "u letu".
 - Arpeggio, parglare i textX rade kao interpreteri.
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

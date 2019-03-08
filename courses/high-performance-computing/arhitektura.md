@@ -1,7 +1,7 @@
 {% extends "base_slides.md" %}
 {% block slides %}
 
-class: center, middle
+class: center, middle, inverse
 
 # Arhitektura superračunara
 
@@ -361,5 +361,11 @@ $$ Speedup_{parallel}(f,n)=\frac{1}{(1-f)+(\frac{f}{n})} \\ Speedup_{enhanced}(f
 	- Coarse-grained pipeline
 	- Deljena memorija
 - Na jedan način, moglo bi se reći da će OpenMP sa kojim se suočavate večeras primer MISD arhitekture.
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

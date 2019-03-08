@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [High-performance computing (HPC)](/courses/#table-of-contents)
 ### V5-openMPI
@@ -49,11 +42,11 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[08.03.2019 u 17:50]
 
 
 ---
@@ -73,7 +66,7 @@ name: sadrzaj
 
 ---
 name: hp
-class: center, middle
+class: center, middle, inverse
 
 # Hibridno programiranje
 
@@ -101,7 +94,6 @@ layout: true
 
 ---
 
-
 ## Kompajliranje hibridnih OpenMP-OpenMPI programa
 
 - Pozicionirati se u direktorijum u kojem se nalazi izvorni kod hibridnog programa i pokrenuti:
@@ -122,7 +114,7 @@ OMP_NUM_THREADS=<Nmp> \ mpiexec [-np <Nmpi>] <izvrsna_datoteka>
 ---
 layout: false
 name: primer
-class: center, middle
+class: center, middle, inverse
 
 # Primer
 
@@ -132,7 +124,6 @@ layout: true
 .section[[Primer](#sadrzaj)]
 
 ---
-
 
 ## Primer 1: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ Primeri/`hello-world.c`</a>
 
@@ -173,7 +164,6 @@ layout: true
 
 ---
 
-
 ## MPI taksonimija interoperabilnosti niti
 
 Nemaju sve MPI implementacije isti nivo podrške za rad sa više niti. `MPI_init_thread`.ref[2] umesto `MPI_Init`..ref[1]
@@ -201,7 +191,6 @@ provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MP
 <br><br><br><br>
 > "Consider going hybrid only if pure MPI scalability is not satisfactory." .ref[*]
 
-
   
 .footer[
 \* Preuzeto iz knjige "Introduction to High Performance Computing for Scientists and Engineers" 
@@ -218,7 +207,6 @@ provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MP
 
 ## Prednosti i mane hibridnih rešenja
 
-
 .lcol[
 
 - Bolje iskorišćenje keša.
@@ -234,7 +222,6 @@ provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MP
 - ...
 ]
 
-
 ---
 
 ## Alternativne tehnologije
@@ -247,7 +234,7 @@ provided := MPI_THREAD_SINGLE | MPI_THREAD_FUNNELED | MPI_THREAD_SERIALIZED | MP
 
 layout: false
 name: zadaci
-class: center, middle
+class: center, middle, inverse
 
 # Zadaci
 
@@ -280,7 +267,7 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
 ]
 ]
 
-
+--
 .message.is-warning[
 .message-header[
 Info
@@ -289,8 +276,6 @@ Info
 - **Preporuka**: Implementirati OpenMPI verziju programa na osnovu sekvencijalnog rešenja, pa je proširiti OpenMP direktivama.
 ]
 ]
-
-
 
 ---
 
@@ -308,7 +293,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-warning[
 .message-header[
 Info
@@ -353,37 +338,40 @@ layout: false
 - [OpenMP dokumentacija](https://www.open-mpi.org/doc/)
 - [OpenMP SC13 Tutorial: Hybrid MPI and OpenMP Parallel Programming](https://www.openmp.org/press-release/sc13-tutorial-hybrid-mpi-openmp-parallel-programming/)
 
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
-
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

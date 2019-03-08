@@ -1,63 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>[Arpeggio parser](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
-
-
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
-
-## [Arpeggio parser](/courses/#table-of-contents)
-
-
-
-.author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
-
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
-
-
-
-.created[06.03.2019 u 14:51]
-
-
----
-
+{% extends "base_slides.md" %}
+{% block slides %}
 name: sadrzaj
 
 # Sadržaj
@@ -70,7 +12,7 @@ name: sadrzaj
 
 ---
 name: pregled
-class: center, middle
+class: center, middle, inverse
 
 # PyParsing
 
@@ -156,7 +98,6 @@ Hello, World! -> ['Hello', ',', 'World', '!']
 
 ---
 
-
 ## Primer
 
 ```python
@@ -175,7 +116,7 @@ def p_species(p):
 
 ---
 name: arpeggio
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Arpeggio
@@ -204,7 +145,6 @@ layout: true
 ![](arpeggio/Arpeggio.svg)
 
 ---
-
 
 ## PEG pravila
 
@@ -324,7 +264,6 @@ from arpeggio import ParserPython
 parser = ParserPython(robot, debug=True)
 ```
 
-
 ---
 
 ## Stablo parsiranja
@@ -356,7 +295,6 @@ parse_tree = parser.parse(prog_src)
   string predstavu pozivom `str` funkcije.
 - Trenutno postoje dve `Match` naslednice: `StrMatch` i `RegExMatch`.
 
-
 ---
 
 ## Ne-terminali (*Non-terminal nodes*)
@@ -372,7 +310,6 @@ itd.
 
 ![](arpeggio/calc_parse_tree.dot.svg)
 
-
 ---
 
 ## Informacije sadržane u čvorovima stabla parsiranja
@@ -383,7 +320,6 @@ Svaki čvor stabla je objekat koji poseduje sledeće atribute:
   pravilo koje je prepoznalo ovaj element u ulaznom stringu,
 - `rule_name` - ime pravila
 - `position` - apsolutna pozicija unutar ulaznog stringa od početka.
-
 
 Red i kolona se može dobiti preko parsera na sledeći način:
 
@@ -445,10 +381,9 @@ assert result.bar[1].position == 14
 ```
 ]
 
-
 ---
 name: konfiguracija-parsera
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Konfiguracija parsera
@@ -537,7 +472,6 @@ def comment():          return [_("//.*"), _("/\*.*\*/")]
 parser = ParserPython(simpleLanguage, comment)
 ```
 
-
 ---
 
 ## Redukcija stabala parsiranja
@@ -573,10 +507,9 @@ parser = ParserPython(grammar)
 result = parser.parse(input)
 ```
 
-
 ---
 name: debagovanje
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Debagovanje i vizualizacija
@@ -627,8 +560,6 @@ $ dot -Tpng -O calc_parser_model.dot
 ]
 ![:scale 30%](arpeggio/calc_parser_model.dot.svg)
 
-
-
 ---
 
 ## Obrada grešaka pri parsiranju
@@ -654,10 +585,9 @@ arpeggio.NoMatch: Expected '+' or '-' or 'number' or
   - `line`, `col` - red i kolona 
   - `parser` - referenca na parser objekat
 
-
 ---
 name: analiza
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Analiza stabala parsiranja
@@ -742,6 +672,7 @@ def visit_bar(self, node, children):
 
 ## Podrazumevane semantičke akcije
 
+.medium[
 - Ako nije definisana metoda `visit_<rule_name>` Arpeggio će primeniti
   podrazumevanu akciju čija logika je sledeća:
   - Ako je čvor kreiran `StrMatch` pravilom (string literal) vraća se `None`
@@ -763,6 +694,7 @@ def visit_bar(self, node, children):
     else:
       return super(MyVisitor, self).visit__default__(node, children)
   ```
+]
 
 ---
 
@@ -778,50 +710,16 @@ def visit_bar(self, node, children):
             
 - http://igordejanovic.net/Arpeggio/
 
-
 ---
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Veče džeza i slobodnih formi - improvizacije
 
-            
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
-
-
-
-
-
-
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
-
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
-</html>
+{% endblock %}

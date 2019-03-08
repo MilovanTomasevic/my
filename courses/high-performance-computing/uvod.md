@@ -12,10 +12,10 @@ name: sadrzaj
 
 ---
 name: opredmetu 
-class: center, middle
+class: center, middle, inverse
 
 # O predmetu
-### motivacija i organizacija
+#### motivacija i organizacija
 
 ---
 layout: true
@@ -168,10 +168,10 @@ layout: true
 ---
 name: problemperformansi
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Problem performansi
-### brzo o brzini i optimizaciji
+#### brzo o brzini i optimizaciji
 
 ---
 layout: true
@@ -479,10 +479,10 @@ int main(){
 ---
 name: hpcuvod
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # HPC uvod
-### šta kada procesor jednostavno nije dovoljno brz
+#### šta kada procesor jednostavno nije dovoljno brz
 
 ---
 layout: true
@@ -595,7 +595,7 @@ layout: true
 ---
 name: kratkaistorija
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Kratka istorija
 
@@ -798,5 +798,11 @@ layout: true
 - 3D čipovi i sintetički dijamant
 - Neuroprocesori i domain specific arhitekture
 - Kvantni računari
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

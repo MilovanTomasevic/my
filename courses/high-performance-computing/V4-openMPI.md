@@ -12,7 +12,7 @@ name: sadrzaj
 
 ---
 name: mpi
-class: center, middle
+class: center, middle, inverse
 
 # MPI
 
@@ -110,7 +110,7 @@ int main(int argc, char *argv[]) {
 ---
 layout: false
 name: komunikatori
-class: center, middle
+class: center, middle, inverse
 
 # Komunikatori
 
@@ -162,6 +162,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -174,6 +175,7 @@ MPI_COMM_WORLD rank: 0/4 - ncomm rank: 0/2
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -211,7 +213,7 @@ Odgovor
 ---
 layout: false
 name: p2p
-class: center, middle
+class: center, middle, inverse
 
 # Point to Point komunikacija
 
@@ -306,6 +308,8 @@ if (rank == 0) {
 - Da parametar `dest` procesa 1 ima istu vrednost kao i parametar source procesa 2 ili da je vrednost parametra procesa 2 postavljena na `MPI_ANY_SOURCE`,
 - Da parametar `tag` ima istu vrednost za oba procesa ili da je vrednost parametra tag `MPI_ANY_TAG`
 
+--
+
 .message.is-dark[
 .message-header[
 Primer
@@ -341,6 +345,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -356,6 +361,7 @@ p1 sent ping_pong_count to p0 and incremented it to 2.
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -382,6 +388,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -409,6 +416,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -524,6 +532,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -612,6 +621,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -626,7 +636,7 @@ Odgovor
 
 layout: false
 name: kk
-class: center, middle
+class: center, middle, inverse
 
 # Kolektivna komunikacija
 
@@ -706,6 +716,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -735,20 +746,7 @@ Zadatak
 ]
 ]
 
----
-
-## Zadatak 8: Kolektivna komunikacija nad podskupom komunikatora
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-- U kolektivnoj komunikaciji učestvuju svi procesi unutar komunikatora. Međutim, pri prešavanju kompleksnijih problema može se pojaviti potreba da se neki podatak pošalje samo delu procesa komunikatora. Ustanovili smo da korišćenje metoda kolektivne komunikacije može biti efikasnije u odnosu na pojedinačno pozivanje `MPI_Send` i `MPI_Recv` za svaki od procesa u komunikatoru kojima treba proslediti podatak. 
-- `Kako biste podatak poslali samo delu procesa u nekom komunikatoru korišćenjem kolektivne komunikacije?`
-]
-]
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1107,5 +1105,11 @@ Zadatak
 - Peter S. Pacheco "Parallel Programming with MPI"
 - Victor Eijkhout "Parallel Computing" (besplatna onlajn verzija knjige)
 - [MPI tutorijal](http://mpitutorial.com/)
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

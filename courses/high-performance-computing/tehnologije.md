@@ -1,7 +1,7 @@
 {% extends "base_slides.md" %}
 {% block slides %}
 
-class: center, middle
+class: center, middle, inverse
 
 # Tehnologije Paralelnog Programiranja
 #### šta je na raspolaganju ?
@@ -19,7 +19,7 @@ name: sadrzaj
 
 ---
 name: openmp
-class: center, middle
+class: center, middle, inverse
 
 # OpenMP
 #### model deljenje memorije
@@ -36,6 +36,8 @@ layout: true
 - Ovo bi sve trebali da već znate.
 - No, dovoljno je bitno da pređemo ponovo.
 - OpenMP je `Open MultiProcessing`
+
+--
 - Centralna ideja je deljena memorija i više niti izvršavanja
 - Nekada davno, svo paralelno programiranje je bilo ovako.
 - Ovo je i dalje stil programiranja koji je najčešći u korisničkim aplikacijama zato što se izvršavaju na jednoj mašini, bez obzira koliko procesora ima.
@@ -813,7 +815,7 @@ F(n + k)= F (n + 1) ⋅ F(k) + F(n) ⋅ F(k − 1) $$
 
 ---
 name: openmpi
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # OpenMPI
@@ -1312,8 +1314,6 @@ int MPI_Allreduce(const void *send_data, void *put_data, int send_number, MPI_Da
 
 ## Svi/svi komunikaciona šema
 
-⮕
-
 .lcol[
 
 ![:scale 65%](img/l.png) 
@@ -1360,7 +1360,7 @@ int MPI_Irecv(void *message, int count, MPI_Datatype datatype, int source, int t
 ---
 
 name: kaaa
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Koncept akceleratora i akceleratorske arhitekture
@@ -1757,7 +1757,7 @@ layout: true
 
 name: openacc
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # OpenACC
 #### uniformna tehnologija pristupa akceleratorskom hardveru
@@ -1980,6 +1980,7 @@ mt@mt:~/OpenACC$ ./acc
 
 ## Ručno upravljanje memorijom— klauzule
 
+.medium[
 - `copy(variable-list)`
     - `Copy` klauzula specificira koji podaci trebaju datom paralelnom regionu. Promenljive koje nisu kopirane se kopiraju, a promenljive koje jesu se anotiraju sa povećanim brojem reference.
 - `copyin(variable-list)`
@@ -1989,6 +1990,7 @@ mt@mt:~/OpenACC$ ./acc
 - `create(variable-list)`
     - Kao copy, ali niti prenosi podatke na karticu, niti ih vraća nazad.
     - Esencijalno alocira pomoćnu memoriju na kartici.
+]
 
 ---
 
@@ -2093,5 +2095,11 @@ mt@mt:~/OpenACC$ ./acc
     - Garantovano i čitanje i pisanje, ali samo u fiksnim formama koje koriste readmodify-write sekvencu kao što je prefix i postfix inkrement i dekrement kao i svi operatori forme op=
 - `capture`
     - Poseban slučaj kada hoćemo da zaštitimo update-tip operacije sa desne strane znaka jednako, a sa leve vrednost koja hvata vrednost modifikovane promenljive ili pre ili posle modifikacije tj. a = i++;
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

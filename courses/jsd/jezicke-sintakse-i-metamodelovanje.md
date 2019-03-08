@@ -12,7 +12,7 @@ name: sadrzaj
 
 ---
 name: pregled
-class: center, middle
+class: center, middle, inverse
 
 # Sintakse
 
@@ -133,7 +133,7 @@ layout: true
 
 ---
 name: sekundarna-sintaksa
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Sekundarna sintaksa
@@ -238,7 +238,7 @@ def inner_from_python(expression):
 
 ---
 name: meta-modelovanje
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Meta-modelovanje
@@ -395,7 +395,7 @@ Marijn Haverbeke, *Eloquent JavaScript*, http://eloquentjavascript.net/
 
 ---
 name: meta-metamodeli
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Meta-metamodeli
@@ -500,7 +500,7 @@ layout: true
 
 ---
 name: stek-za-metamodelovanje
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Stek za metamodelovanje
@@ -521,5 +521,11 @@ layout: true
 ## Primer - Mogram, jezik, meta-jezik
 
 ![](jezicke-sintakse-i-metamodelovanje/Kapija-StateMachine-MoRP.svg)
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

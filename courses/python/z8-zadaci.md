@@ -3,7 +3,7 @@
 
 name: test
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Test
 
@@ -16,16 +16,6 @@ layout: true
 
 ## Test 
 
-.message.is-warning[
-.message-header[
-Info
-]
-.message-body[
-- Ne treba proveravati validnost ulaznih parametara za funkcije. 
-- Smatrati da de ulazni parametar uvek pratiti specifikaciju funkcije.
-]
-]
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -36,6 +26,17 @@ Zadatak
   1. ceo podizraz koji predstavlja prvi operand, u postfiksnoj notaciji; 
   2. ceo podizraz koji predstavlja drugi operand, u postfiksnoj notaciji; 
   3. operator.
+]
+]
+
+--
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- Ne treba proveravati validnost ulaznih parametara za funkcije. 
+- Smatrati da de ulazni parametar uvek pratiti specifikaciju funkcije.
 ]
 ]
 
@@ -125,6 +126,7 @@ Dodatni zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer testnog slučaja:
@@ -138,6 +140,7 @@ MAKE_INFIX RETURNS: (((-3) – (-5)) + 1)
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -147,5 +150,11 @@ Odgovor
 
 ]
 ]
+
+---
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

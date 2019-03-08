@@ -3,7 +3,7 @@
 
 name: zadaci
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Zadaci
 
@@ -69,6 +69,7 @@ Info
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -79,5 +80,11 @@ Odgovor
 
 ]
 ]
+
+---
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

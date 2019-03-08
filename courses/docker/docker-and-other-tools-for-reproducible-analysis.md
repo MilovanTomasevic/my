@@ -751,10 +751,10 @@ layout: false
 # That's All 👨🏻‍🎓
 # Thank you for listening!
 
----
+--
 
-class: center, middle, theend
+class: center, middle, theend, hide-text
 layout: false
-background-image: url(/../theend.gif)
+background-image: url(../theend.gif)
 
 {% endblock %}

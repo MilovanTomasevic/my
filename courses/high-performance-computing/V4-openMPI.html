@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [High-performance computing (HPC)](/courses/#table-of-contents)
 ### V4-openMPI
@@ -49,11 +42,11 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[08.03.2019 u 17:43]
 
 
 ---
@@ -64,14 +57,13 @@ name: sadrzaj
 # Sadržaj
 
 - [MPI](#mpi)
-- [Kominikatori](#kominikatori)
+- [Komunikatori](#komunikatori)
 - [Point to Point komunikacija](#p2p)
 - [Kolektivna komunikacija](#kk)
 
-
 ---
 name: mpi
-class: center, middle
+class: center, middle, inverse
 
 # MPI
 
@@ -96,7 +88,6 @@ layout: true
 ![:scale 80%](img/mpi.png)
 
 ---
-
 
 ## Format OpenMPI programa
 
@@ -170,7 +161,7 @@ int main(int argc, char *argv[]) {
 ---
 layout: false
 name: komunikatori
-class: center, middle
+class: center, middle, inverse
 
 # Komunikatori
 
@@ -180,7 +171,6 @@ layout: true
 .section[[Komunikatori](#sadrzaj)]
 
 ---
-
 
 ## Komunikatori
 
@@ -192,7 +182,6 @@ svaki proces ima svoj **rank** (odnosno identifikator).
 - `MPI_COMM_SELF, MPI_COMM_NULL`
 
 ---
-
 
 ## Komunikatori
 - Tokom izvršavanja MPI istovremeno može da postoji više komunikatora.
@@ -224,6 +213,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -236,6 +226,7 @@ MPI_COMM_WORLD rank: 0/4 - ncomm rank: 0/2
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -273,7 +264,7 @@ Odgovor
 ---
 layout: false
 name: p2p
-class: center, middle
+class: center, middle, inverse
 
 # Point to Point komunikacija
 
@@ -315,14 +306,11 @@ int MPI_Send(
 ]
 ![:scale 45%](img/p2p.gif)
 
-
-
 .footer.medium[
    <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Recv.3.php">1. OpenMPI 2.0 MPI_Recv docs</a><br>
    <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Send.3.php">2. OpenMPI 2.0 MPI_Send docs</a>
 
 ] 
-
 
 ---
 
@@ -354,7 +342,6 @@ if (rank == 0) {
 
 ---
 
-
 ## Režimi Point-to-Point komunikacije
 
 - P2P komunikacioni režimi slanja poruke:
@@ -372,6 +359,7 @@ if (rank == 0) {
 - Da parametar `dest` procesa 1 ima istu vrednost kao i parametar source procesa 2 ili da je vrednost parametra procesa 2 postavljena na `MPI_ANY_SOURCE`,
 - Da parametar `tag` ima istu vrednost za oba procesa ili da je vrednost parametra tag `MPI_ANY_TAG`
 
+--
 
 .message.is-dark[
 .message-header[
@@ -399,7 +387,6 @@ MPI_{I}[S, B, R]Send(...), MPI_{I}Recv(...)
 
 ## Zadatak 2: Ping pong
 
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -409,6 +396,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -424,6 +412,7 @@ p1 sent ping_pong_count to p0 and incremented it to 2.
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -439,7 +428,6 @@ Ne znači da program nije ispravan ukoliko ispis na ekranu nije u očekivanom re
 
 ## Zadatak 3: Ping pong - sekvencijalni ispis
 
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -451,6 +439,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -478,6 +467,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -492,9 +482,6 @@ Process 0 received token -1 from process 3
 ```
 ]
 ]
-
-
-
 
 ---
 
@@ -526,7 +513,6 @@ int MPI_Wait(
 - Testira da li je zahtev izvršen i završava se kada se zahtev izvrši.
 - Funkcija je blokirajuća..ref[2]
 ]
-
 
 .footer.medium[
 <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Test.3.php">1. MPI_Test docs</a><br>
@@ -563,7 +549,6 @@ int MPI_Wait(
 
 ---
 
-
 ## Primer 3: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`send_recv_nonblocking.c`</a>
 
 ```c
@@ -598,6 +583,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -607,16 +593,12 @@ Odgovor
 ]
 ]
 
-
-
 ---
-
 
 ## P2P: dinamička komunikacija
 
 - Nekada poruke koje procesi razmenjuju nisu fiksne dužine. 
 - Tada je prvo potrebno očitati dužinu poruke, alocirati bafer za poruku, pa tek onda započeti njeno primanje.
-
 
 .lcol[
 
@@ -643,16 +625,13 @@ MPI_Get_count(
 - Očitava broj primljenih podataka tipa datatype na osnovu status polja..ref[2]
 ]
 
-
 .footer.medium[
 <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Probe.3.php">1. MPI_Probe docs</a><br>
 <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Get_count.3.php">2. MPI_Get_count docs</a>
 
 ] 
 
-
 ---
-
 
 ## Primer 4: dynamic_communication.c
 
@@ -693,6 +672,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -703,14 +683,11 @@ Odgovor
 ]
 ]
 
-
-
-
 ---
 
 layout: false
 name: kk
-class: center, middle
+class: center, middle, inverse
 
 # Kolektivna komunikacija
 
@@ -790,6 +767,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -807,7 +785,6 @@ Proces 3 primio zeton -1
 
 ---
 
-
 ## Zadatak 8: Kolektivna komunikacija nad podskupom komunikatora
 
 .message.is-info[
@@ -820,23 +797,7 @@ Zadatak
 ]
 ]
 
-
-
----
-
-
-## Zadatak 8: Kolektivna komunikacija nad podskupom komunikatora
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-- U kolektivnoj komunikaciji učestvuju svi procesi unutar komunikatora. Međutim, pri prešavanju kompleksnijih problema može se pojaviti potreba da se neki podatak pošalje samo delu procesa komunikatora. Ustanovili smo da korišćenje metoda kolektivne komunikacije može biti efikasnije u odnosu na pojedinačno pozivanje `MPI_Send` i `MPI_Recv` za svaki od procesa u komunikatoru kojima treba proslediti podatak. 
-- `Kako biste podatak poslali samo delu procesa u nekom komunikatoru korišćenjem kolektivne komunikacije?`
-]
-]
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -881,7 +842,6 @@ int MPI_Scatter(
 ] 
 
 ---
-
 
 ## Primer 6: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`scatter.c`</a>
 
@@ -981,8 +941,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 ## Kolektivna komunikacija: AllGather
@@ -1004,7 +962,7 @@ int MPI_Allgather(
 
 .rcol[
 
-![:scale 60%](img/allGather.png)
+![:scale 60%](img/allgather.png)
 
 ]
 
@@ -1015,7 +973,6 @@ int MPI_Allgather(
 .footer.medium[
     1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Allgather.3.php">MPI_Allgather docs</a>
 ] 
-
 
 ---
 
@@ -1071,7 +1028,6 @@ int MPI_Reduce(
     1. <a target="_blank" rel="noopener noreferrer" href="https://www.open-mpi.org/doc/v2.0/man3/MPI_Reduce.3.php">MPI_Reduce docs</a>
 ] 
 
-
 ---
 
 ## Primer 9: <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z4-openMPI/#table-of-contents"> ☛ Primeri/`reduce.c`</a>
@@ -1104,10 +1060,7 @@ Zadatak
 ]
 ]
 
-
-
 ---
-
 
 ## Kolektivna komunikacija: AllReduce
 
@@ -1175,7 +1128,6 @@ Zadatak
 ]
 ]
 
-
 ---
 ## Zadatak 12: Množenje matrica - domaći
 
@@ -1195,8 +1147,6 @@ Zadatak
 ]
 ]
 
-
-
 ---
 
 ## Korisni materijali
@@ -1207,36 +1157,40 @@ Zadatak
 - Victor Eijkhout "Parallel Computing" (besplatna onlajn verzija knjige)
 - [MPI tutorijal](http://mpitutorial.com/)
 
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

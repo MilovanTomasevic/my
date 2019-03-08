@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [High-performance computing (HPC)](/courses/#table-of-contents)
 ### Tehnologije
@@ -49,22 +42,20 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[08.03.2019 u 16:49]
 
 
 ---
 
 
-
-class: center, middle
+class: center, middle, inverse
 
 # Tehnologije Paralelnog Programiranja
 #### šta je na raspolaganju ?
-
 
 ---
 
@@ -77,10 +68,9 @@ name: sadrzaj
 - [Koncept akceleratora i akceleratorske arhitekture](#kaaa)
 - [OpenACC](#openacc)
 
-
 ---
 name: openmp
-class: center, middle
+class: center, middle, inverse
 
 # OpenMP
 #### model deljenje memorije
@@ -97,6 +87,8 @@ layout: true
 - Ovo bi sve trebali da već znate.
 - No, dovoljno je bitno da pređemo ponovo.
 - OpenMP je `Open MultiProcessing`
+
+--
 - Centralna ideja je deljena memorija i više niti izvršavanja
 - Nekada davno, svo paralelno programiranje je bilo ovako.
 - Ovo je i dalje stil programiranja koji je najčešći u korisničkim aplikacijama zato što se izvršavaju na jednoj mašini, bez obzira koliko procesora ima.
@@ -216,7 +208,6 @@ layout: true
 
 ---
 
-
 ## Bibliotečke rutine
 
 - OpenMP se sastoji od: sistemskog okruženja izvršavanja, biblioteka, i direktiva.
@@ -253,7 +244,6 @@ int k = omp_get_thread_num();
 
 .lcol[
 
-
 ```c
 #include <pthread.h>
 #include <stdio.h>
@@ -282,7 +272,6 @@ void *inc_x(void *x_void_ptr)
 
 ]
 
-
 .footer.medium[
   [Detaljnije](https://timmurphy.org/2010/05/04/pthreads-in-c-a-minimal-working-example/)
 ] 
@@ -292,8 +281,6 @@ void *inc_x(void *x_void_ptr)
 ## Pthreads
 
 .lcol.small[
-
-
 
 ```c
 int main()
@@ -340,7 +327,6 @@ int main()
 
 - Primetite da za sve koristimo niti koje identifikuje `pthread_t` tip. Ovo je zato što novu paradigmu programiranja moramo da "proteramo" kroz kod koji za to nije namenjen.
 
-
 ```console
 # This code will print something like:
 
@@ -351,7 +337,6 @@ x: 100, y: 100
 ```
 
 ]
-
 
 ---
 
@@ -440,8 +425,6 @@ int main() {
 
 ## Napomena: Pragme nisu, u stvari, magične.
 
-
-
 ```c
     #pragma omp parallel
     {
@@ -449,7 +432,6 @@ int main() {
     }
             ⬆
 ```
-
 
 ```c
                            ⬇
@@ -812,10 +794,7 @@ int main () {
     return 0;
 }
 
-
 ```
-
-
 
 .footer.medium[
 [Detaljnije](https://www3.nd.edu/~zxu2/acms60212-40212/Lec-12-OpenMP.pdf)
@@ -887,7 +866,7 @@ F(n + k)= F (n + 1) ⋅ F(k) + F(n) ⋅ F(k − 1) $$
 
 ---
 name: openmpi
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # OpenMPI
@@ -897,7 +876,6 @@ layout: false
 layout: true
 
 .section[[OpenMPI](#sadrzaj)]
-
 
 ---
 
@@ -936,10 +914,7 @@ layout: true
 
 ## Osnovna implementacija
 
-
 .lcol[
-
-
 
 ```c
 #include <stdio.h>
@@ -969,7 +944,6 @@ int main(int argc, char *argv[]) {
 - `MPI_Finalize` mora biti zadnja mpi komanda
 
 ]
-
 
 ---
 
@@ -1142,7 +1116,6 @@ MPI_Recv(void *message, int count, MPI_Datatype datatype, int source, int tag, M
 
 ]
 
-
 ---
 
 ## Korisnički tipovi podataka
@@ -1217,9 +1190,7 @@ int main(int argc, char **argv){
 ```
 ]
 
-
 ---
-
 
 ## Primer
 
@@ -1229,7 +1200,6 @@ We have 4 processes.
 Process 1 reporting for duty.
 Process 2 reporting for duty.
 Process 3 reporting for duty.
-
 
 ```
 
@@ -1395,8 +1365,6 @@ int MPI_Allreduce(const void *send_data, void *put_data, int send_number, MPI_Da
 
 ## Svi/svi komunikaciona šema
 
-⮕
-
 .lcol[
 
 ![:scale 65%](img/l.png) 
@@ -1407,8 +1375,6 @@ int MPI_Allreduce(const void *send_data, void *put_data, int send_number, MPI_Da
 ![:scale 65%](img/r.png)
 
 ]
-
-
 
 ---
 
@@ -1445,7 +1411,7 @@ int MPI_Irecv(void *message, int count, MPI_Datatype datatype, int source, int t
 ---
 
 name: kaaa
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Koncept akceleratora i akceleratorske arhitekture
@@ -1456,9 +1422,6 @@ layout: false
 layout: true
 
 .section[[Koncept akceleratora i akceleratorske arhitekture](#sadrzaj)]
-
-
-
 
 ---
 
@@ -1539,7 +1502,6 @@ layout: true
 
 ## Istorijski primer koprocesora— Intel 8087
 
-
 ![:scale 75%](img/kop.png)
 
 ---
@@ -1619,8 +1581,6 @@ layout: true
 ---
 
 ## ClearSpeed Advance X620
-
-
 
 ![:scale 65%](img/misc_20cpu.jpg)
 
@@ -1848,7 +1808,7 @@ layout: true
 
 name: openacc
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # OpenACC
 #### uniformna tehnologija pristupa akceleratorskom hardveru
@@ -1976,7 +1936,6 @@ mt@mt:~/OpenACC$ ./acc
 
 ## OpenACC sistemske promenljive
 
-
 .center-table.small[
 
 | **Promenljiva** |                                    **Namena**                                    |
@@ -2072,6 +2031,7 @@ mt@mt:~/OpenACC$ ./acc
 
 ## Ručno upravljanje memorijom— klauzule
 
+.medium[
 - `copy(variable-list)`
     - `Copy` klauzula specificira koji podaci trebaju datom paralelnom regionu. Promenljive koje nisu kopirane se kopiraju, a promenljive koje jesu se anotiraju sa povećanim brojem reference.
 - `copyin(variable-list)`
@@ -2081,6 +2041,7 @@ mt@mt:~/OpenACC$ ./acc
 - `create(variable-list)`
     - Kao copy, ali niti prenosi podatke na karticu, niti ih vraća nazad.
     - Esencijalno alocira pomoćnu memoriju na kartici.
+]
 
 ---
 
@@ -2186,36 +2147,40 @@ mt@mt:~/OpenACC$ ./acc
 - `capture`
     - Poseban slučaj kada hoćemo da zaštitimo update-tip operacije sa desne strane znaka jednako, a sa leve vrednost koja hvata vrednost modifikovane promenljive ili pre ili posle modifikacije tj. a = i++;
 
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

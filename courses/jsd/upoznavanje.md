@@ -79,7 +79,7 @@
 
 # Projekat - raspodela bodova
 
-.center-table[
+.center-table.medium[
 | Aktivnost             | bodovi |
 |-----------------------|--------|
 | Dizajn jezika         |     20 |
@@ -88,8 +88,17 @@
 | GitHub aktivnost      |     10 |
 | **Ukupno**            |     60 |
 ]
+<br>
+--
 
-.paznja[I pored timskog rada svi bodovi se dobijaju individualno.]
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+- I pored timskog rada svi bodovi se dobijaju individualno.
+]
+]
 
 ---
 
@@ -106,5 +115,11 @@
   on [the author's blog](https://tomassetti.me/), February 2017.
 - Beazley, David M. *Python essential reference*. Addison-Wesley Professional,
   2009.
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

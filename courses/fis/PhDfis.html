@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[Adaptivni model za upravljanje lancima snabdevanja u malim i srednjim preduzećima](http://nardus.mpn.gov.rs/handle/123456789/9234)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[Adaptivni model za upravljanje lancima snabdevanja u malim i srednjim preduzećima](http://nardus.mpn.gov.rs/handle/123456789/9234)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [Adaptivni model za upravljanje lancima snabdevanja u malim i srednjim preduzećima](http://nardus.mpn.gov.rs/handle/123456789/9234)
 
@@ -49,11 +42,11 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](fis.png) .small[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:51]
+.created[08.03.2019 u 19:54]
 
 
 ---
@@ -74,7 +67,7 @@ name: sadrzaj
       
 ---
 name: uvod
-class: center, middle
+class: center, middle, inverse
 
 # UVOD
 
@@ -87,7 +80,6 @@ layout: true
 
 ## Uvod
 
-
 - Oduvek je bilo od izuzetnog značaja za kompanije da ostanu međusobno povezane jer konkurencija nije više među samim organizacijama ‒ njeno težište pomerilo se na lance snabdevanja.<br><br>
 - Danas preduzeća moraju da budu sposobna da efikasno odgovore na izazove koje im nameću promene u eri četvrte industrijske revolucije. <br><br>
 - Kvalitet, vreme i cena su ključni zahtevi na koje preduzeće mora odgovoriti da bi opstalo na konkurentskom tržištu.<br><br>
@@ -97,7 +89,7 @@ layout: true
 
 name: problem
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # PREDMET I PROBLEM ISTRAŽIVANJA
 
@@ -110,7 +102,6 @@ layout: true
 
 ## Predmet i problem istraživanja
 
-
 - Predmet istraživanja u okviru ove doktorske disertacije su modeli, metode i alati za upravljanje lancima snabdevanja i merenje kvaliteta usluge u njima.<br><br>
 - Problem koji razmatra ova disertacija je poboljšanje usluga koje pružaju kompanije i ostvarivanje bolje komunikacije učesnika u lancu snabdevanja.<br><br>
 - Takođe, problem istraživanja je kvalitetna procena usluge lanca snabdevanja, gde tu uslugu karakterišu grupe parametara, koje često nisu adekvatno procenjene vrednosti kao ni njihova važnost za procenu sistema. Ta nepreciznost je često posledica nesigurnosti ocenjivača, promenljivosti uslova, itd.
@@ -119,7 +110,7 @@ layout: true
 
 name: hipoteze
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # ISTRAŽIVAČKE HIPOTEZE
 
@@ -147,7 +138,7 @@ layout: true
 
 name: lanci
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # LANCI SNABDEVANJA
 
@@ -189,7 +180,6 @@ layout: true
 ---
 ## Koncepti
 
-
 .medium[
 .center-table.small[
 |                Svojstvo                | QR<br> Brzi odgovor (Quick Response) | CRP<br> Kontinualno popunjavanja zaliha (Continuous Replenishment) |                                Napredni CRP                               | VMI<br> Upravljanje zalihama od strane prodavca (Vendor Managed Inventory) |
@@ -205,7 +195,7 @@ layout: true
 
 name: fazi
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # FAZI SKUPOVI
 
@@ -233,8 +223,6 @@ $$ \chi : X  \rightarrow \big\{0,1\big\} $$
 	$$   \mu_{a}  : X  \rightarrow [0,1] $$ 
 </p>
 
-
-
 <ul>
 	<li>
   		<p>Funkcija pripadanja \( \mu_{a}\) određuje stepen pripadanja elemanta \(x\) fazi skupa \(A\).
@@ -242,8 +230,6 @@ $$ \chi : X  \rightarrow \big\{0,1\big\} $$
 		</p>
   	</li>
 </ul> 
-
-
 
 ]
 
@@ -285,7 +271,6 @@ $$ \chi : X  \rightarrow \big\{0,1\big\} $$
 
 ]
 
-
 <br><br><br><br><br><br><br><br><br><br>
 .small[
 
@@ -306,7 +291,7 @@ $$ \chi : X  \rightarrow \big\{0,1\big\} $$
 
 name: model
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # ADAPTIVNI MODEL
 
@@ -329,7 +314,6 @@ layout: true
 .rcol[
 ![:scale 90%](phd/model.png)
 ]
-
 
 ---
 ### Nivo 1 – analiza i definisanje aktivnosti
@@ -361,8 +345,6 @@ layout: true
 
 ]
 
-
-
 ---
 ### Nivo 2 – model za upravljanje lancima snabdevanja
 
@@ -391,7 +373,6 @@ layout: true
 ![:scale 90%](phd/modelIntermehanika.jpg)
 
 ]
-
 
 ---
 ### Nivo 3 – prilagođavanje modela korisniku
@@ -486,10 +467,8 @@ layout: true
 
 ]
 
-
 ---
 ### Nivo 7 – ocenjivanje kvaliteta usluge
-
 
 #### šestokoračni i lsp metod
 .medium[
@@ -547,13 +526,9 @@ layout: true
 </p>
 ]
 
-
 ---
 ### Nivo 7 – ocenjivanje kvaliteta usluge
 #### verifikacija FAM4QS - grupisanje i ocenjivanje
-
-
-
 
 .lcol.small[
 
@@ -637,7 +612,6 @@ layout: true
 
 ]
 
-
 ---
 ### Nivo 7 – ocenjivanje kvaliteta usluge
 
@@ -647,7 +621,6 @@ layout: true
 	 $$   LCL = [ \color{red} 0\color{red}.\color{red}6\color{red}9\color{red}3  \; \; 0.772] \; \; UCL = [ 0.765 \; \; \color{red}0\color{red}.\color{red}8\color{red}1\color{red}1  ]  $$
 	 $$   \Downarrow  $$  
 </p>
-
 
 .center-table.small[
 | ProducdID -ServiceCode |    TD   | C(H/M/L) | DP | DT |    BD    | FAM4QS rezultat | RANG |
@@ -678,7 +651,6 @@ layout: true
 </p>
 ]
 
-
 ---
 ### Nivo 7 – ocenjivanje kvaliteta usluge
 ###### verifikacija FAM4QS - analiza
@@ -687,14 +659,12 @@ layout: true
 .lcol[
 ![:scale 90%](phd/dijLevo.png)
 
-
 - Ukoliko se izvrši analiza lošije uspešnosti lanca snabdevanja 14 (SCM14) dolazi se do zaključka da su razlozi zato sledeći:
 	- Analiza i specifikacija zahteva su urađene loše i nisu bile potpune.
 	- Nedostupnost biznis korisnika programerima.
 	- Nedovoljna bliskost timu koji razvija aplikaciju – programera i povremena odsutnost iz tima.
 	- Nepostojanje povratne sprege između specifikacje zahteva i krajnjih korisnika (uticaj korisnika na specifikaciju zahteva je minimalan). 
 ]
-
 
 .rcol[
 ![:scale 90%](phd/dijDesno.png)
@@ -711,7 +681,7 @@ layout: true
 
 name: rezultati
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # REZULTATI ISTRAŽIVANJA
 
@@ -736,11 +706,10 @@ layout: true
 - FAM4QS  je primenjen na 17 lanaca snabdevanja sa teritorije Republike Srbije. U zavisnosti od prirode parametara tim stručnjaka vrši izbor stepena r, odnosno određuje konjuktivnost (disjunktivnost) forme funkcje agregacije i daje dovoljno dobru procenu kvaliteta servisa. Time su hipoteze H3 i H4 potvrđene. <br><br>
 - Ocena kvaliteta usluge tj. izračunavanje vrednosti funkcije agregacije je vršeno i za slučajeve kada su procene težinskih koeficijenata bile i realni i fazi-brojevi, a ocene parametara fazi-brojevi, na osnovu čega su verifikovane pomoćne hipoteze H4a i H4b. 
 
-
 ---
 name: zakljucak
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # ZAKLJUČAK
 
@@ -767,8 +736,6 @@ layout: true
 	- Primena neuralnih mreža. <br><br> 
 	- Razvoj veb platforme otvrenog tipa koja bi omogućila kreiranje novih lanaca snabdevanja.<br><br> 
 	- Primena adaptivnog modela u internom poslovanju učesnika lanca snabdevanja.
-
-
 
 ---
 ## .center[ *HVALA NA PAŽNJI* ]
@@ -808,41 +775,44 @@ layout: true
 	- .medium[Teorijska i primenjena matematika]
 ]
 
-
 .footer.small[
 Dokutorsku disertaciju u pdf formatu možete detaljno pročitati na sajtu <a target="_blank" rel="noopener noreferrer" href="http://nardus.mpn.gov.rs/handle/123456789/9234">Ministarstva prosvete, nauke i tehnološkog razvoja.</a>
 ] 
 
+---
 
+class: center, middle, theend
+layout: false
+background-image: url(/../theend.gif)
 
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

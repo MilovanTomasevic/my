@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [High-performance computing (HPC)](/courses/#table-of-contents)
 ### Upravljanje
@@ -49,18 +42,18 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[08.03.2019 u 16:17]
 
 
 ---
 
 
 name: start
-class: center, middle
+class: center, middle, inverse
 
 # Upravljanje HPC sistemima
 #### zatečeno stanje, performanse i upravljanja
@@ -75,10 +68,9 @@ name: sadrzaj
 - [Tehnike upravljanja HPC sistemima](#tehnikeHPC)
 - [SLURM](#slurm)
 
-
 ---
 name: stanje
-class: center, middle
+class: center, middle, inverse
 
 # Zatečeno stanje
 #### šta imamo?
@@ -157,7 +149,7 @@ layout: true
 
 layout: false
 name: merenjeHPC
-class: center, middle
+class: center, middle, inverse
 
 # Merenje performansi HPC sistema
 #### koliko je brzo `brzo`?
@@ -217,8 +209,7 @@ layout: true
 
 - Najuticajniji benchmark u upotrebi se pojavio 1979 i baziran je na bibliotekama za linearnu algebru poznate kao Linpack (danas zamenjene sa Lapack/BLAS paketom softvera). 
 - Linpack meri performanse floating-point operacija, i baziran je na rešenju problma oblika:
-
-                𝐴𝑥 = 𝑏
+$$ 𝐴𝑥 = 𝑏 $$
 - Ograničenje: 
     - `A` mora da ima nimalo ili jako malo elemenata koji su 0. 
     - `A` je `nxn` matrica
@@ -295,7 +286,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 
 ---
 
-
 ## Parametri HPL-a
 
 .medium[
@@ -314,7 +304,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 ]
 
 ---
-
 
 ##Rezultati HPL-a
 
@@ -349,7 +338,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 - Kao rezultat moguće je formulisati beskonačno mnogo samerljivosti što nas ostavlja sa ogromnim koordinacionim problemom.
     
 ---
-
 
 ## HPC Challenge
 
@@ -397,8 +385,7 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 ## HPCG
 
 - I HPCG meri performanse floating-point operacija, i baziran je na rešenju problma oblika:
-
-                    𝐴𝑥 = 𝑏
+$$ 𝐴𝑥 = 𝑏 $$
 - Ograničenje: 
     - A mora da ima većinu elemenata koji su jednaki 0.
     - A je nxn matrica
@@ -427,7 +414,6 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 - Specifično predstavlja 8 tipičnih problema koji su poznati pod svojim dvoslovnim skraćenicama.
 
 ---
-
 
 ### NPB Skraćenica
 
@@ -491,8 +477,7 @@ $$ C_{11}=A_{11}B_{11}+A_{12}B_{21} \\ C_{12}=A_{11}B_{12}+A_{12}B_{22} \\ C_{21
 
 layout: false
 name: tehnikeHPC
-class: center, middle
-
+class: center, middle, inverse
 
 # Tehnike upravljanja HPC sistemima
 
@@ -609,12 +594,9 @@ layout: true
 
 ---
 
-
-
 layout: false
 name: slurm
-class: center, middle
-
+class: center, middle, inverse
 
 # SLURM
 #### uvod
@@ -1011,7 +993,6 @@ mt@mt:~/HPC$ kill -l
 
 ## Namena signala
 
-
 .center-table.small[
 
 | **Ime signala** | **Broj signala** | **Reakcija** |                                 **Svrha**                                |
@@ -1074,7 +1055,6 @@ mt@mt:~/HPC$ kill -l
 ]
 
 ---
-
 
 ## Slanje signala
 
@@ -1324,12 +1304,10 @@ tophat /n/informatics/databases/Mus_musculus/UCSC/mm10/Sequence/BowtieIndex \
 ../trans${SLURM_ARRAY_TASK_ID}.fq
 ```
 
-
 .footer.medium[
   [Detaljnije](https://www.rc.fas.harvard.edu/resources/documentation/submitting-large-numbers-of-jobs-to-odyssey/)
 
 ] 
-
 
 ---
 
@@ -1402,37 +1380,40 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 - `sinfo`
     - Prikazuje podatke o konfiguraciji klastera
 
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
-
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

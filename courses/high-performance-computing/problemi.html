@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [High-performance computing (HPC)](/courses/#table-of-contents)
 ### Problemi
@@ -49,17 +42,17 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[08.03.2019 u 15:48]
 
 
 ---
 
 
-class: center, middle
+class: center, middle, inverse
 
 # Zašto koristimo `HPC`? 
 
@@ -230,13 +223,11 @@ $$ F_{i}(t)=-Gm_{i}\sum_{j=0, j\neq i}^{n-1}\frac{m_{j}}{||r_{i}(t)-r_{j}(t)||^{
 
 - Koristeći Njutnov drugi zakon u vektorskoj formulaciji imamo onda:
 
-
 <p>
 
 $$ F_{i}(t)=m_{i}\ddot{r}_{i}(t) \quad za \quad i=0,1,...,n-1 $$
   
 </p>
-
 
 ---
 
@@ -329,7 +320,6 @@ foreach particle j{
 ---
 
 ## Matrica sile
-
 
 <p>
 
@@ -444,8 +434,6 @@ v[i].y += dt*f[i].y/m[i];
 
 ## Particija
 
-
-
 .lcol[
 
 - Particija je podela osnovnog zadatka na pod-zadatke na najprimitivnijem nivou.
@@ -459,11 +447,9 @@ v[i].y += dt*f[i].y/m[i];
 
 ]
 
-
 ---
 
 ## Komunikacija
-
 
 .lcol[
 
@@ -499,7 +485,6 @@ v[i].y += dt*f[i].y/m[i];
 
 ## Mapiranje
 
-
 .lcol[
 
 ![:scale 90%](img/map.png)
@@ -511,8 +496,6 @@ v[i].y += dt*f[i].y/m[i];
 - Mapiranje je takođe podložno ograničenjima, specifično, ograničenjima hardvera/arhitekture.
 
 ]
-
-
 
 ---
 
@@ -534,7 +517,6 @@ $$ F_{i}(t_{k-1}), \quad v_{i}(t_{k}), \quad r_{i}(t_{k}) $$
 $$ Za\quad v_{i}(t_{k})\quad treba \\ v_{i}(t_{k-1}), \quad F_{i}(t_{k-1}), \quad r_{i}(t_{k-1}), \quad v_{j}(t_{k-1}) \\ Za\quad v_{i}(t_{k})\quad treba \\ r_{i}(t_{k-1}), \quad v_{i}(t_{k-1}) $$
   
 </p>
-
 
 ---
 
@@ -597,8 +579,6 @@ $$ Za\quad v_{i}(t_{k})\quad treba \\ v_{i}(t_{k-1}), \quad F_{i}(t_{k-1}), \qua
 
 ## Analiza prve petlje
 
-
-
 .lcol[
 
 ```c
@@ -622,11 +602,9 @@ $$ Za\quad v_{i}(t_{k})\quad treba \\ v_{i}(t_{k-1}), \quad F_{i}(t_{k-1}), \qua
 
 ]
 
-
 ---
 
 ## Analiza druge petlje
-
 
 .lcol[
 
@@ -682,7 +660,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 ---
 
 ## Naivno rešenje
-
 
 ```c
     1:    for each particle i do
@@ -763,7 +740,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
     6:    end for
 ```
 
-
 ---
 
 ## Pregledanje izvornog koda OpenMP implementacije
@@ -819,9 +795,7 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 
 ## Pregledati kod
 
-
 - <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z5-openMPI/#table-of-contents"> ☛ Predavanja/`mpi_nbody_basic.c`</a>
-
 
 ---
 
@@ -834,7 +808,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 - Ovo je jako kompleksno, ali ako se implementira kako treba je šansa za istinski skalabilan i efikasan proces za računanje proizvoljno velikih n-tela simulacija.
 
 ---
-
 
 ## Prstenska komunikaciona šema
 
@@ -855,7 +828,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 
 ---
 
-
 ## Paralelizacija redukovanog algoritma kroz MPI
 
 - Neka je broj čestica dodeljenih jednom procesu l
@@ -869,7 +841,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 ## Primer prstenskog stila komunikacije za n=4, p=2
 
 .center-table.small[
-
 
 |         **Vreme**        |  **Promenljiva** | **Proces0** | **Proces1** |
 |:------------------------:|:----------------:|:-----------:|:-----------:|
@@ -885,7 +856,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 | Posle prve komunik acije |   lokalna_sila   |    f02,0    |    f13,0    |
 | Posle prve komunik acije |   priv_pozicija  |    s1,s3    |    s0,s2    |
 | Posle prve komunik acije |   priv_sila      |    0,-f13   |    0,-f02   |
-
 
 ]
 
@@ -911,7 +881,6 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 |   Posle proračuna sila   |     priv_sila    |        0,-f02-f12        |     -f01,-f03-f13-f23     |
 
 ]
-
 
 ---
 
@@ -948,38 +917,40 @@ $$ F_{3}=f_{0,3}-f_{1,3}-f_{2,3} $$
 - Vrlo dobar pregled problema N tela se može naći u Grop, Lusk, i Skjellum — Using MPI: Portable Parallel Programming with the Message Passing Interface u sekciji 5.2.
 - Više o efikasnoj integraciji diferencijalnih jednačina ima u: William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery. 2007. Numerical Recipes 3rd Edition: The Art of Scientific Computing (3 ed.). Cambridge University Press, New York, NY, USA. i to u poglavlju 17, stranica 899. Naročito obratite pažnju na sekcije 17.0 i 17.1.
 
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
-
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

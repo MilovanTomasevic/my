@@ -106,10 +106,10 @@ layout: false
 
 - Katedra za računarstvo i informatiku, Matematički fakultet, Univerzitet u Beogradu
 
----
+--
 
-class: center, middle, theend
+class: center, middle, theend, hide-text
 layout: false
-background-image: url(/../theend.gif)
+background-image: url(../theend.gif)
 
 {% endblock %}

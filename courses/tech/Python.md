@@ -18,7 +18,7 @@ name: sadrzaj
 
 ---
 name: pregled
-class: center, middle
+class: center, middle, inverse
 
 # Kratak pregled Python-a
 
@@ -963,7 +963,7 @@ I moduli su objekti
 ---
 layout: false
 name: sintaksa
-class: center, middle
+class: center, middle, inverse
 
 # Leksičke konvencije i sintaksa
 
@@ -1049,7 +1049,7 @@ a = [ 1,
 ---
 layout: false
 name: tipovi
-class: center, middle
+class: center, middle, inverse
 
 # Tipovi i objekti
 
@@ -1579,7 +1579,7 @@ b(10)                 # = 5
 ---
 layout: false
 name: operatori
-class: center, middle
+class: center, middle, inverse
 
 # Operatori i izrazi (TODO)
 
@@ -1591,7 +1591,7 @@ layout: true
 ---
 layout: false
 name: kontrola 
-class: center, middle
+class: center, middle, inverse
 
 # Struktura programa i kontrola toka
 
@@ -1756,7 +1756,7 @@ for line in open("foo.txt"):
 ---
 layout: false
 name: funkcionalno
-class: center, middle
+class: center, middle, inverse
 
 # Funkcije i funkcionalno programiranje
 
@@ -2252,7 +2252,7 @@ names.sort(key=lambda n: n.lower())
 ---
 layout: false
 name: objektno
-class: center, middle
+class: center, middle, inverse
 
 # Klase i objektno-orijentisano programiranje
 
@@ -2724,7 +2724,7 @@ issubclass(C,A)   # False
 ---
 layout: false
 name: moduli
-class: center, middle
+class: center, middle, inverse
 
 # Moduli i paketi
 
@@ -2884,7 +2884,7 @@ Za više informacija videti [relativni import i ime paketa na SO](http://stackov
 ---
 layout: false
 name: alati
-class: center, middle
+class: center, middle, inverse
 
 # Alati i okruženja
 
@@ -3103,7 +3103,7 @@ Pomoć: `random` modul
 ---
 layout: false
 name: pakovanje
-class: center, middle
+class: center, middle, inverse
 
 # Pakovanje i distribucija aplikacija
 
@@ -3429,7 +3429,6 @@ import arpeggio
 
 - Ukoliko `arpeggio` nije na putanji PyDev će označiti grešku da modul ne
   postoji.
-              
 
 ---
 
@@ -3439,5 +3438,11 @@ import arpeggio
 - [Python dokumentacija](https://docs.python.org/3/)
 - [virtualenv dokumentacija](http://virtualenv.readthedocs.org/en/latest/virtualenv.html)
 - [pip dokumentacija](https://pip.readthedocs.org/en/latest/)</a>
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

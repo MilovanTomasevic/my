@@ -348,21 +348,24 @@ Robot position is -5, 4.
 - https://ppci.readthedocs.io/en/latest/howto/toy.html
 
 ---
-class: center, middle
+class: center, middle, inverse
 
 # Napredne tehnike - [pyFlies](https://github.com/igordejanovic/pyFlies)
 
 ---
-class: center, middle
+class: center, middle, inverse
 
 # IDE za textX - [textX-ninja](https://github.com/igordejanovic/textX-ninja)
 
 ---
-class: center, middle
+class: center, middle, inverse
 
 # Veče džeza i slobodnih formi - improvizacije
               
+--
 
-          
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

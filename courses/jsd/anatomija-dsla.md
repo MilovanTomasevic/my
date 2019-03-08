@@ -10,7 +10,7 @@ name: sadrzaj
 
 ---
 name: dommlite
-class: center, middle
+class: center, middle, inverse
 
 # DOMMLite
 
@@ -152,7 +152,7 @@ layout: true
 
 ![:scale 60%](anatomija-dsla/Services.png)
 
-![](anatomija-dsla/finder.png)
+![:scale 80%](anatomija-dsla/finder.png)
 
 ---
 ## Dopuna koda
@@ -173,7 +173,7 @@ layout: true
 
 ---
 name: mobl
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # mobl
@@ -191,7 +191,7 @@ TODO
 
 ---
 name: pyflies
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # pyFlies
@@ -204,5 +204,11 @@ layout: true
 ---
 
 ## pyFlies
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

@@ -11,7 +11,7 @@ name: sadrzaj
 
 ---
 name: bib
-class: center, middle
+class: center, middle, inverse
 
 ## Posebne biblioteke
 #### potporni softver za performantne naučno računarstvo
@@ -53,7 +53,7 @@ layout: true
 ---
 name: alg
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Linearna algebra
 
@@ -610,7 +610,7 @@ int main (int argc, const char * argv[])
 
 name: ostalo
 layout: false
-class: center, middle
+class: center, middle, inverse
 
 # Ostale primene
 
@@ -670,5 +670,11 @@ layout: true
 ## Vizuelizacija
  
 - O ovome, celo predavanje, ali najbitnija biblioteka u ovoj oblasti jeste *VTK: Visualization Toolkit*.
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

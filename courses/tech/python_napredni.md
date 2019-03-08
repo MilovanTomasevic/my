@@ -16,7 +16,7 @@ name: sadrzaj
 
 ---
 name: specijalne-metode
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Specijalne metode
@@ -244,7 +244,7 @@ if __name__ == '__main__':
 
 ---
 name: properties
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # *Properties*
@@ -293,7 +293,7 @@ obj.full_file_name = '/neka/putanja/neko_ime.ext'
 
 ---
 name: descriptors
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Deskriptori
@@ -357,7 +357,7 @@ Chris Beaumont: [Python Descriptors Demystified](http://nbviewer.jupyter.org/url
 ]
 
 ---
-# Rešenje upotrebom deskriptora (1)
+## Rešenje upotrebom deskriptora (1)
 
 ```python
 from weakref import WeakKeyDictionary
@@ -388,7 +388,7 @@ Chris Beaumont: [Python Descriptors Demystified](http://nbviewer.jupyter.org/url
 ]
 
 ---
-# Rešenje upotrebom deskriptora (2)
+## Rešenje upotrebom deskriptora (2)
 
 .medium[
 ```python
@@ -427,7 +427,7 @@ Chris Beaumont: [Python Descriptors Demystified](http://nbviewer.jupyter.org/url
 
 ---
 name: decorators
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Dekoratori(*Decorators*)
@@ -538,7 +538,7 @@ def eventhandler(event):
 ---
 layout: false
 name: functools
-class: center, middle
+class: center, middle, inverse
 
 # `functools` modul
 ## Podrška za funkcije višeg reda.
@@ -715,11 +715,11 @@ https://docs.python.org/2/library/functools.html
 
 ---
 name: itertools
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # `itertools` modul
-## Pomoćne funkcije za iteraciju
+#### Pomoćne funkcije za iteraciju
 
 ---
 layout: true
@@ -903,11 +903,11 @@ def tee(iterable, n=2):
 
 ---
 name: collections
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # collections
-## High-performance container datatypes
+#### High-performance container datatypes
 
 ---
 layout: true
@@ -1058,7 +1058,7 @@ Counter({'a': 3, 'b': 0, 'c': -3, 'd': -6})
 
 ---
 name: višestruko-nasleđivanje-i-mro
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Višestruko nasleđivanje i MRO
@@ -1247,7 +1247,7 @@ MovableColoredShape(color='red', shapename='triangle',
 
 ---
 name: metaklase
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Metaklase
@@ -1377,4 +1377,10 @@ True
 
 - [Ionel Cristian Mărieș: Understanding Python metaclasses](https://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/)
 
-{%endblock %}
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
+
+{% endblock %}

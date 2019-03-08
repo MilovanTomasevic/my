@@ -15,7 +15,7 @@ name: content
 
 ---
 name: goal
-class: center, middle
+class: center, middle, inverse
 
 # Goal
 
@@ -34,7 +34,7 @@ layout: true
 
 layout: false
 name: openmp
-class: center, middle
+class: center, middle, inverse
 
 # Execution model (multithreading)
 
@@ -80,7 +80,7 @@ layout: true
 
 layout: false
 name: lib
-class: center, middle
+class: center, middle, inverse
 
 # Library functions
 
@@ -110,7 +110,11 @@ layout: true
 
 ![:scale 85%](img/openmpe.png)
 
+--
+
 ![:scale 85%](img/openmpe1.png)
+
+--
 
 ![:scale 85%](img/openmpe2.png)
 
@@ -145,7 +149,7 @@ Hello World from thread = 0
 
 layout: false
 name: dir
-class: center, middle
+class: center, middle, inverse
 
 # OpenMP directives
 
@@ -284,7 +288,7 @@ Hello World from thread = 7
 
 layout: false
 name: work
-class: center, middle
+class: center, middle, inverse
 
 # OpenMP Worksharing
 
@@ -442,5 +446,11 @@ class: center, middle
 
 # That's All 👨🏻‍🎓
 # Thank you for listening!
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

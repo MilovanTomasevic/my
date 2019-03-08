@@ -3,7 +3,7 @@
 
 name: zadaci
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Zadaci
 
@@ -84,5 +84,11 @@ Odgovor
 - <a target="_blank" rel="noopener noreferrer" href="../python-z9-resenja"> ☛ `Rešenja`</a>
 ]
 ]
+
+---
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

@@ -3,7 +3,7 @@
 
 name: zadaci
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Zadaci
 
@@ -112,6 +112,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -198,6 +199,7 @@ Info
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -206,5 +208,11 @@ Odgovor
 - <a target="_blank" rel="noopener noreferrer" href="../python-z7-resenja"> ☛ `Rešenja`</a>
 ]
 ]
+
+---
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

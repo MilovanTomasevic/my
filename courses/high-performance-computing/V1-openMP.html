@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [High-performance computing (HPC)](/courses/#table-of-contents)
 ### V1-openMP
@@ -49,11 +42,11 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[08.03.2019 u 17:09]
 
 
 ---
@@ -70,12 +63,9 @@ name: sadrzaj
 - [Implicitna vs. eksplicitna barijera](#vs)
 - [sections/section konstrukcija](#ss)
 
-
-
-
 ---
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Uvod
 
@@ -111,7 +101,7 @@ layout: true
 
 ---
 name: openmp 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # OpenMP
@@ -120,7 +110,6 @@ layout: false
 layout: true
 
 .section[[OpenMP](#sadrzaj)]
-
 
 ---
 
@@ -134,7 +123,6 @@ layout: true
 
 ## Fork-join model
 
-
   ![:scale 70%](img/Fork_join.png)
   .medium[
 - Paralelni region (eng. *Parallel region*) - deo programa koji izvršava tim niti
@@ -144,8 +132,6 @@ layout: true
   ]
 
 ---
-
-
 
 ## Fork-join model
 
@@ -161,7 +147,6 @@ strukturirani-blok
   - (*Single Process Multiple Data* (SPMD)).
   
 ---
-
 
 ## Hello World!
 
@@ -203,7 +188,6 @@ Primer
 ]
 ]
 
-
 ---
 
 ## Hello World!
@@ -211,13 +195,11 @@ Primer
 - Jedan primer izvršavanja:
   
 
-
 - Iako nigde u primeru broj niti nije zadat, OpenMP radno okruženje (eng. *execution environment*) je odlučilo da napravi 8 niti.
 - Tipično, OpenMP radno okruženje pravi onoliko niti koliko ima jezgara (fizičkih ili logičkih). 
 - Npr. ovaj ispis je dobijen izvršavanjem na Intelovom procesoru Intel® Core™ i7-8550U (8 logičkih jezgara).
 
 ---
-
 
 ## Hello World!
 
@@ -250,7 +232,6 @@ Primer
 
 ## Kompajliranje i pokretanje
 
-
 - Kako pokrenuti iskompajlirano rešenje? 
   - Otvoriti terminal, pozicionirati se u direktorijum u kojem se nalazi izvršna datoteka (izvrsnad) i uneti:
   .center[
@@ -260,7 +241,6 @@ Primer
   ]
 - U slučaju da pri kompajliranju nije navedeno ime izvršne datoteke, ona će se podrazumevano zvati a.out.
  
-
 
 ---
 
@@ -279,14 +259,13 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
   
 </p>
 
-
 - Sekvencijalna implementacija programa u C programskom jeziku je data u direktorijumu zadaci. Rezultat integraljenja bi trebalo da bude jednak broju π. Potrebno je dodati parallel konstrukciju bez daljih modifikacija sekvencijalnog programa.
 
 - Šta se dešava sa rezultatom?
 ]
 ]
 
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -295,9 +274,6 @@ Odgovor
 - Funkcija `parallel_code_incorrect` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 ]
-
-
-
 
 ---
 
@@ -319,7 +295,6 @@ zauzima na hipu, kome pristupaju sve niti.
 
 ---
 
-
 ## Zadatak 2: Računanje vrednosti broja π
 
 .message.is-info[
@@ -333,7 +308,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -342,7 +317,6 @@ Odgovor
 - Funkcija `parallel_code` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 ]
-
 
 ---
 
@@ -358,6 +332,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -367,6 +342,7 @@ Info
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -376,17 +352,12 @@ Odgovor
 ]
 ]
 
-
-
-
 ---
 
 ## Sinhronizacioni konstrukti
 - Sinhronizacija visokog nivoa apstrakcije:
-    - barrier construct - definiše tačku u kodu do koje sve aktivne niti moraju da se zaustave dok do te tačke ne stigne i poslednja nit, nakon čega sve niti mogu nastaviti dalje izvršavanje.
-```c
-#pragma omp barrier
-```
+    - barrier construct - definiše tačku u kodu do koje sve aktivne niti moraju da se zaustave dok do te tačke ne stigne i poslednja nit, nakon čega sve niti mogu nastaviti dalje izvršavanje. `#pragma omp barrier`
+
 
 - `critical construct` - samo jedna nit može u jednom trenutku biti u kritičnoj sekciji.
 ```c
@@ -394,10 +365,8 @@ Odgovor
 		strukturirani-blok
 ```
 
-- `atomic construct` - hardverski podržan isključiv pristup ažuriranju vrednosti proste promenljive. Ukoliko nema hardverske podrške, ova konstrukcija se ponaša kao i `critical`.
-```c
-#pragma omp atomic
-```
+- `atomic construct` - hardverski podržan isključiv pristup ažuriranju vrednosti proste promenljive. Ukoliko nema hardverske podrške, ova konstrukcija se ponaša kao i `critical`. `#pragma omp atomic`
+
 
 ---
 
@@ -412,7 +381,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -421,8 +390,6 @@ Odgovor
 - Funkcija  `parallel_code_synchronization` <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`pi.c`</a>
 ]
 ]
-
-
 
 ---
 
@@ -449,7 +416,7 @@ Odgovor
 ---
 
 name: loop 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # loop konstrukcija
@@ -458,7 +425,6 @@ layout: false
 layout: true
 
 .section[[loop konstrukcija](#sadrzaj)]
-
 
 ---
 
@@ -478,7 +444,6 @@ layout: true
 ---
 
 ## Primer 2: `loop` konstrukcija
-
 
 .message.is-dark[
 .message-header[
@@ -507,7 +472,6 @@ Primer
 ```
 ]
 ]
-
 
 ---
 
@@ -538,9 +502,8 @@ Primer
 
 ---
 
-
 name: redukcije 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Redukcije
@@ -549,7 +512,6 @@ layout: false
 layout: true
 
 .section[[Redukcije](#sadrzaj)]
-
 
 ---
 
@@ -627,7 +589,6 @@ operatora u deljenu promenljivu `sum.`
 ]
 ]
 
-
 ---
 
 
@@ -669,7 +630,7 @@ korišćenje `for`  direktive i reduction klauze.
 ]
 ]
 
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -679,12 +640,10 @@ Odgovor
 ]
 ]
 
-
-
 ---
 
 name: vs 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Implicitna vs. eksplicitna barijera
@@ -693,7 +652,6 @@ layout: false
 layout: true
 
 .section[[Implicitna vs. eksplicitna barijera](#sadrzaj)]
-
 
 ---
 ## Implicitna vs. eksplicitna barijera 
@@ -721,28 +679,7 @@ Zadatak
 ]
 ]
 
-
-
----
-
-## Implicitna vs. eksplicitna barijera 
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-- U kojem delu koda će se niti sinhronizovati?
-```c
-	#pragma omp parallel
-	{
-			/* prvi blok naredbi */
-			#pragma omp barrier
-			/* drugi blok naredbi */
-    }
-```
-]
-]
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -751,7 +688,6 @@ Odgovor
 - Na barrier direktivi (eksplicitna barijerna sinhronizacija).
 ]
 ]
-
 
 ---
 ## Implicitna vs. eksplicitna barijera
@@ -771,25 +707,7 @@ Zadatak
 ]
 ]
 
----
-## Implicitna vs. eksplicitna barijera 
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-- U kojem delu koda će se niti sinhronizovati?
-```c
-	#pragma omp parallel for
-	for (i = 0; i < N; i++)
-		/* prvi blok naredbi */
-	/* drugi blok naredbi */
-```
-]
-]
-
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -799,7 +717,6 @@ Odgovor
 ]
 ]
 
-
 ---
 ## Implicitna vs. eksplicitna barijera 
 
@@ -836,7 +753,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -846,11 +763,9 @@ Odgovor
 ]
 ]
 
-
-
 ---
 name: ss 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # sections/section konstrukcija
@@ -901,8 +816,6 @@ Primer
 ```
 ]
 ]
-
-
 
 ---
 ## single konstrukcija
@@ -1022,30 +935,7 @@ Zadatak
 ]
 ]
 
----
-
-## Primer 5: Klauze za rad sa podacima
-
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-```c
-	void dummy() {
-		int tmp = 0;
-	#pragma omp parallel for private(tmp)
-	for (int j = 0; j < 5; j++)
-		tmp += j;
-	printf("%d\n", tmp);
-	}
-```
-- Koja vrednost će biti ispisana na standardni izlaz?
-]
-]
-
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1058,8 +948,6 @@ Odgovor
 ]
 ]
 
-
-
 ---
 
 ## Primer 5: Klauze za rad sa podacima
@@ -1082,30 +970,7 @@ Zadatak
 ]
 ]
 
----
-
-## Primer 5: Klauze za rad sa podacima
-
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-```c
-	void dummy() {
-		int tmp = 0;
-		#pragma omp parallel for private(tmp)
-		for (int j = 0; j < 5; j++)
-				tmp += j;
-			printf("%d\n", tmp);
-}
-```
-- Koja je inicijalna vrednost privatnih verzija promenljive `tmp`?
-]
-]
-
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1116,9 +981,6 @@ Odgovor
 ]
 ]
 
-
-
-
 ---
 
 ## Primer 5: Klauze za rad sa podacima
@@ -1143,32 +1005,7 @@ promenljive `tmp`?
 ]
 ]
 
----
-
-## Primer 5: Klauze za rad sa podacima
-
-
-.message.is-info[
-.message-header[
-Zadatak
-]
-.message-body[
-```c
-	void dummy() {
-		int tmp = 0;
-		#pragma omp parallel for private(tmp)
-		for (int j = 0; j < 5; j++)
-			tmp += j;
-		printf("%d\n", tmp);
-	}
-```
-- Kojom klauzom je potrebno zameniti private klauzu da bi lokalne
-instance promenljive tmp dobile inicijalnu vrednost globalne
-promenljive `tmp`?
-]
-]
-
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1193,7 +1030,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1210,6 +1047,8 @@ Odgovor
 - Inicijalno, OpenMP je zamišljen tako da je moguće paralelizovati
 probleme za koje se unapred zna broj potrebnih iteracija za njihovo
 rešavanje!
+
+--
 
 .message.is-danger[
 .message-header[
@@ -1247,10 +1086,8 @@ Info
 ]
 ]
 
-
 ---
 ## Primer 6: Paralelizacija obrade čvorova liste
-
 
 .lcol[
 ```c
@@ -1304,7 +1141,6 @@ strukturirani-blok
 ---
 ## Primer 7: Kreiranje zadataka
 
-
 .message.is-dark[
 .message-header[
 Primer
@@ -1341,7 +1177,7 @@ Zadatak
 ]
 ]
 
-
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1350,8 +1186,6 @@ Odgovor
 - <a target="_blank" rel="noopener noreferrer" href="/courses/hpc-z1-openMP/#table-of-contents"> ☛ rešenja/`linkedlist.c`</a>
 ]
 ]
-
-
 
 ---
 
@@ -1426,6 +1260,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1435,7 +1270,6 @@ Info
     Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
 ]
 ]
-
 
 ---
 
@@ -1455,6 +1289,7 @@ sekvencijalnog programa.
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1470,8 +1305,6 @@ Info
 
 ## Zadatak 10*: Akumuliranje vrednosti čvorova stabla
 
-
-
 .message.is-info[
 .message-header[
 Zadatak
@@ -1485,6 +1318,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1499,7 +1333,7 @@ Meriti izvršavanje programa funkcijom `omp_get_wtime()`.
 ---
 
 name: end 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Nastaviće se...
@@ -1512,38 +1346,40 @@ layout: false
 - [`"Introduction to OpenMP"`, prateća prezentacija](https://www.openmp.org/wp-content/uploads/Intro_To_OpenMP_Mattson.pdf)
 - `"Parallel Computing Book"`, Victor Eijkhout, elektronska verzija knjige je dostupna na [ovom linku](http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-basics.html)
 
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
-
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

@@ -15,7 +15,7 @@ name: content
 
 ---
 name: goal
-class: center, middle
+class: center, middle, inverse
 
 # Goal
 
@@ -36,7 +36,7 @@ layout: true
 
 layout: false
 name: mpi
-class: center, middle
+class: center, middle, inverse
 
 # MPI execution model
 
@@ -86,6 +86,8 @@ layout: true
 - OpenMP: 1 process, 4 threads
   
 ![:scale 70%](img/mpi4.png)
+
+--
  
 - MPI: 4 processes, 1 thread
 
@@ -97,7 +99,7 @@ layout: true
 
 layout: false
 name: cr
-class: center, middle
+class: center, middle, inverse
 
 # Compiling & running an MPI program
 
@@ -206,7 +208,7 @@ Hello world from 0
 ---
 layout: false
 name: p2p
-class: center, middle
+class: center, middle, inverse
 
 # Point to point communication
 
@@ -355,6 +357,7 @@ Exercise
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -402,8 +405,17 @@ MPI_Isend(&send_val, 1, MPI_INT, 1, 10, MPI_COMM_WORLD, &request)
 MPI_Wait(&request, &status)
 ```
 
-.attention[
-**WARNING**: non-blocking routines can lead to race conditions if synchronization is not taken care of! E.g. variables can be `read` before they are received.
+--
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+**WARNING**:
+- Non-blocking routines can lead to race conditions if synchronization is not taken care of! 
+- E.g. variables can be `read` before they are received.k.
+]
 ]
 
 ---
@@ -433,9 +445,7 @@ Exercise
 ]
 ]
 
----
-## Exercise: non-blocking communication
-
+--
 .message.is-success[
 .message-header[
 Solution
@@ -449,7 +459,7 @@ Solution
 ---
 layout: false
 name: cc
-class: center, middle
+class: center, middle, inverse
 
 # Collective communication
 
@@ -577,5 +587,11 @@ class: center, middle
 
 # That's All 👨🏻‍🎓
 # Thank you for listening!
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

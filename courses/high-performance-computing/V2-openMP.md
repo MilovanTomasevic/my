@@ -14,7 +14,7 @@ name: sadrzaj
 
 ---
 name: uvod 
-class: center, middle
+class: center, middle, inverse
 
 # Uvod
 
@@ -30,10 +30,7 @@ layout: true
 - OpenMP 
 - OpenMPI 
 - OpenACC
- 
-  
-
-            
+        
 ---
 
 ## Softver
@@ -50,7 +47,7 @@ layout: true
 
 ---
 name: openmp 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # OpenMP
@@ -214,6 +211,7 @@ $$ \int_{0}^{1} \frac{4}{(1+x^{2})} $$
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -256,6 +254,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -279,6 +278,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -288,6 +288,7 @@ Info
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -301,10 +302,8 @@ Odgovor
 
 ## Sinhronizacioni konstrukti
 - Sinhronizacija visokog nivoa apstrakcije:
-    - barrier construct - definiše tačku u kodu do koje sve aktivne niti moraju da se zaustave dok do te tačke ne stigne i poslednja nit, nakon čega sve niti mogu nastaviti dalje izvršavanje.
-```c
-#pragma omp barrier
-```
+    - barrier construct - definiše tačku u kodu do koje sve aktivne niti moraju da se zaustave dok do te tačke ne stigne i poslednja nit, nakon čega sve niti mogu nastaviti dalje izvršavanje. `#pragma omp barrier`
+
 
 - `critical construct` - samo jedna nit može u jednom trenutku biti u kritičnoj sekciji.
 ```c
@@ -312,10 +311,7 @@ Odgovor
 		strukturirani-blok
 ```
 
-- `atomic construct` - hardverski podržan isključiv pristup ažuriranju vrednosti proste promenljive. Ukoliko nema hardverske podrške, ova konstrukcija se ponaša kao i `critical`.
-```c
-#pragma omp atomic
-```
+- `atomic construct` - hardverski podržan isključiv pristup ažuriranju vrednosti proste promenljive. Ukoliko nema hardverske podrške, ova konstrukcija se ponaša kao i `critical` - `#pragma omp atomic`
 
 ---
 
@@ -330,6 +326,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -363,7 +360,7 @@ Odgovor
 ---
 
 name: loop 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # loop konstrukcija
@@ -448,7 +445,7 @@ Primer
 ---
 
 name: redukcije 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Redukcije
@@ -510,8 +507,7 @@ layout: true
 ```
 - Šta zapravo znači `reduction(+:sum)?`
 
----
-## Redukcije
+--
 
 .message.is-warning[
 .message-header[
@@ -569,6 +565,7 @@ korišćenje `for`  direktive i reduction klauze.
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -581,7 +578,7 @@ Odgovor
 ---
 
 name: vs 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # Implicitna vs. eksplicitna barijera
@@ -738,7 +735,7 @@ Odgovor
 
 ---
 name: ss 
-class: center, middle
+class: center, middle, inverse
 layout: false
 
 # sections/section konstrukcija
@@ -830,6 +827,7 @@ strukturirani-blok
 				do_many_other_things();
 	}
 ```
+
 - Nema implicitne sinhronizacije.
 
 ---
@@ -1062,6 +1060,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1079,17 +1078,7 @@ Odgovor
 probleme za koje se unapred zna broj potrebnih iteracija za njihovo
 rešavanje!
 
-.message.is-danger[
-.message-header[
-Problem
-]
-.message-body[ 
-- Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj iteracija? Ili u slučaju rekurzije?
-]
-]
-
----
-## Kako paralelizovati `while` i rekurziju?
+--
 
 .message.is-danger[
 .message-header[
@@ -1099,6 +1088,8 @@ Problem
 - Kako primeniti OpenMP u drugim tipovima petlji u kojima se ne zna unapred broj iteracija? Ili u slučaju rekurzije?
 ]
 ]
+
+--
 
 .message.is-warning[
 .message-header[
@@ -1195,6 +1186,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -1275,6 +1267,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1303,6 +1296,7 @@ sekvencijalnog programa.
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1331,6 +1325,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1355,6 +1350,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1379,6 +1375,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1402,6 +1399,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -1418,5 +1416,11 @@ Info
 - `"Introduction to OpenMP", Tim Mattson`, dostupno na [ovom linku](https://www.youtube.com/playlist?list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG)
 - [`"Introduction to OpenMP"`, prateća prezentacija](https://www.openmp.org/wp-content/uploads/Intro_To_OpenMP_Mattson.pdf)
 - `"Parallel Computing Book"`, Victor Eijkhout, elektronska verzija knjige je dostupna na [ovom linku](http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-basics.html)
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}

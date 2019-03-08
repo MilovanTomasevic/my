@@ -44,7 +44,7 @@ layout: true
 .rcol[
 
 ![:scale 60%](fis/eu.jpg)
-![:scale 70%](fis/razmena.jpeg)
+![:scale 65%](fis/razmena.jpeg)
 
 ]
 
@@ -71,11 +71,11 @@ layout: true
 - 100 TB 
 
 .lcol[
-![:scale 86%](fis/hpc.jpg)
+![:scale 90%](fis/hpc.jpg)
 ]
 
 .rcol[
-![:scale 90%](fis/hpc2.jpg)
+![:scale 87%](fis/hpc2.jpg)
 ]
 
 ---
@@ -114,7 +114,7 @@ layout: true
 ]
 
 .center[
-  <iframe width="380" height="245" allowfullscreen src="https://www.youtube.com/embed/kUvr5JyQVH8"></iframe>
+  <iframe width="350" height="220" allowfullscreen src="https://www.youtube.com/embed/kUvr5JyQVH8"></iframe>
 ]
 
 ---
@@ -153,18 +153,18 @@ Info
 ]
 
 .lcol[
-![:scale 61%](fis/predavanja3.png)
+![:scale 50%](fis/predavanja3.png)
 ]
 
 .rcol[
-![:scale 60%](fis/predavanja4.png)
+![:scale 50%](fis/predavanja4.png)
 ]
 
 ---
 
 ## Predmeti
 
-.medium[
+.small[
 
 .center-table.small[
 |Br.|VISOKOŠKOLSKE STUDIJE   | UNIVERZITETSKE STUDIJE    |VISOKOŠKOLSKE STUDIJE   |UNIVERZITETSKE STUDIJE    |VISOKOŠKOLSKE STUDIJE   | UNIVERZITETSKE STUDIJE   |
@@ -460,8 +460,8 @@ name: pitanja
 
 ---
 
-class: center, middle, theend
+class: center, middle, theend, hide-text
 layout: false
-background-image: url(/../theend.gif)
+background-image: url(../theend.gif)
 
 {% endblock %}

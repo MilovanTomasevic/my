@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../remarkslides.css">
-    
 
+<head>
+	<title>[High-performance computing (HPC)](/courses/#table-of-contents)</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../remarkslides.css">
+	<!-- MathJax™ -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+	</script>
+	<!-- mermaid dijagram -->
+	<link rel="stylesheet2" href="../mermaid.min.css">
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		
+		      gtag('config', 'UA-127734928-1');
+	</script>
+	<!-- google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		      ga('create', 'UA-127734928-1', 'auto');
+		      ga('send', 'pageview');
+	</script>
+</head>
 
-
-    <!-- MathJax™ -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-
-    <!-- mermaid dijagram -->
-    <link rel="stylesheet2" href="../mermaid.min.css">
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127734928-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127734928-1');
-    </script>
-
-
-    <!-- google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-127734928-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <textarea id="source">
-
-class: center, middle
+<body>
+	<textarea id="source">class: center, middle
 
 ## [High-performance computing (HPC)](/courses/#table-of-contents)
 ### MPI
@@ -49,11 +42,11 @@ class: center, middle
 
 .author[[dr. Milovan Tomašević](https://www.milovantomasevic.com/resume/)]
 
-.small[.medium[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)]</br>![:scale 10%](../fis/fis.png) .medium[ [wwww: milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [mail: milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
+.small[[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https://www.fis.unm.si/en/)</br>![:scale 10%](../fis/fis.png) .small[ [🌐➙ milovan.tomasevic.fis.unm.si](http://milovan.tomasevic.fis.unm.si)</br> [📧➙ milovan.tomasevic@fis.unm.si](mailto:milovan.tomasevic@fis.unm.si)]]
 
 
 
-.created[06.03.2019 u 14:50]
+.created[08.03.2019 u 18:10]
 
 
 ---
@@ -73,7 +66,7 @@ name: content
 
 ---
 name: goal
-class: center, middle
+class: center, middle, inverse
 
 # Goal
 
@@ -94,7 +87,7 @@ layout: true
 
 layout: false
 name: mpi
-class: center, middle
+class: center, middle, inverse
 
 # MPI execution model
 
@@ -109,7 +102,6 @@ layout: true
 - MPI is for *distributed memory* parallelization
 
 ![:scale 70%](img/mpi.gif)
-
 
 ---
 ## MPI
@@ -145,6 +137,8 @@ layout: true
 - OpenMP: 1 process, 4 threads
   
 ![:scale 70%](img/mpi4.png)
+
+--
  
 - MPI: 4 processes, 1 thread
 
@@ -156,7 +150,7 @@ layout: true
 
 layout: false
 name: cr
-class: center, middle
+class: center, middle, inverse
 
 # Compiling & running an MPI program
 
@@ -232,7 +226,6 @@ Hello world from 0
 
 ![:scale 70%](img/mpi7.png)
 
-
 ---
 ## Exercise: compile & run mpi_hello_world.c
 
@@ -247,7 +240,6 @@ Hello world from 0
 - Why does each process print a different number?
 
 ![:scale 70%](img/mpi8.png)
-
 
 ---
 ## Exercise: compile & run mpi_hello_world.c
@@ -267,7 +259,7 @@ Hello world from 0
 ---
 layout: false
 name: p2p
-class: center, middle
+class: center, middle, inverse
 
 # Point to point communication
 
@@ -335,7 +327,6 @@ layout: true
 
 ![:scale 80%](img/mpi14.png)
 
-
 ---
 ## Communication: point to point
 
@@ -380,7 +371,6 @@ Exercise
 ]
 ]
 
-
 ---
 ## Communication: point to point
 
@@ -395,7 +385,6 @@ Exercise
 - What is *wrong* with the following code?
 
 ![:scale 80%](img/mpi20.png)
-
 
 ---
 ## Deadlock
@@ -419,6 +408,7 @@ Exercise
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -428,12 +418,10 @@ Info
 ]
 ]
 
-
  
 ---
 
 ## Exercise: fix the deadlock
-
 
 .message.is-success[
 .message-header[
@@ -445,7 +433,6 @@ Solution
 ![:scale 80%](img/mpi23.png)
 ]
 ]
-
 
 ---
 ## Communication: point to point
@@ -469,8 +456,17 @@ MPI_Isend(&send_val, 1, MPI_INT, 1, 10, MPI_COMM_WORLD, &request)
 MPI_Wait(&request, &status)
 ```
 
-.attention[
-**WARNING**: non-blocking routines can lead to race conditions if synchronization is not taken care of! E.g. variables can be `read` before they are received.
+--
+
+.message.is-warning[
+.message-header[
+Info
+]
+.message-body[
+**WARNING**:
+- Non-blocking routines can lead to race conditions if synchronization is not taken care of! 
+- E.g. variables can be `read` before they are received.k.
+]
 ]
 
 ---
@@ -500,9 +496,7 @@ Exercise
 ]
 ]
 
----
-## Exercise: non-blocking communication
-
+--
 .message.is-success[
 .message-header[
 Solution
@@ -513,12 +507,10 @@ Solution
 ]
 ]
 
-
-
 ---
 layout: false
 name: cc
-class: center, middle
+class: center, middle, inverse
 
 # Collective communication
 
@@ -550,7 +542,6 @@ layout: true
 
 ![:scale 80%](img/mpi27.png)
 
-
 ---
 ## Communication: collectives
 
@@ -573,7 +564,6 @@ layout: true
 - MPI Collectives for collective computation
 
 ![:scale 80%](img/mpi29.png)
-
 
 ---
 ## Communication: collectives
@@ -649,37 +639,40 @@ class: center, middle
 # That's All 👨🏻‍🎓
 # Thank you for listening!
 
+--
 
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
+</textarea>
+	<script src="../remark-latest.min.js"></script>
+	<script>
+		// https://github.com/gnab/remark/issues/72
+		        remark.macros.scale = function (percentage) {
+		            var url = this;
+		            return '<div class="center"><img src="'
+		                 + url + '" style="width: ' + percentage + '" /></div>';
+		        };
+		        var slideshow = remark.create({
+		                    highlightLanguage: 'python',
+		                    // highlightStyle: 'obsidian',
+		                    highlightStyle: 'github',
+		                    highlightLines: true,
+		                    countIncrementalSlides: false,
+		                    navigation: {
+		                      // Enable or disable navigating using scroll
+		                      // Default: true
+		                      // Alternatives: false
+		                      scroll: false,
+		
+		                      //click: true,
+		                    }
+		                });
+	</script>
+	<script src="../mermaid.min.js"></script>
+	<script>
+		mermaid.initialize({startOnLoad:true});
+	</script></body>
 
-    </textarea>
-    <script src="../remark-latest.min.js"></script>
-    <script>
-        // https://github.com/gnab/remark/issues/72
-        remark.macros.scale = function (percentage) {
-            var url = this;
-            return '<div class="center"><img src="'
-                 + url + '" style="width: ' + percentage + '" /></div>';
-        };
-        var slideshow = remark.create({
-                    highlightLanguage: 'python',
-                    // highlightStyle: 'obsidian',
-                    highlightStyle: 'github',
-                    highlightLines: true,
-                    navigation: {
-                      // Enable or disable navigating using scroll
-                      // Default: true
-                      // Alternatives: false
-                      scroll: false,
-
-                      //click: true,
-                    }
-                });
-    </script>
-
-    <script src="../mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
-
-    
-  </body>
 </html>

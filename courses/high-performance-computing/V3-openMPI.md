@@ -12,7 +12,7 @@ name: sadrzaj
 
 ---
 name: mpi
-class: center, middle
+class: center, middle, inverse
 
 # MPI
 
@@ -110,7 +110,7 @@ int main(int argc, char *argv[]) {
 ---
 layout: false
 name: komunikatori
-class: center, middle
+class: center, middle, inverse
 
 # Komunikatori
 
@@ -162,6 +162,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -174,6 +175,7 @@ MPI_COMM_WORLD rank: 0/4 - ncomm rank: 0/2
 ]
 ]
 
+--
 .message.is-success[
 .message-header[
 Odgovor
@@ -211,7 +213,7 @@ Odgovor
 ---
 layout: false
 name: p2p
-class: center, middle
+class: center, middle, inverse
 
 # Point to Point komunikacija
 
@@ -324,6 +326,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -339,6 +342,7 @@ p1 sent ping_pong_count to p0 and incremented it to 2.
 ]
 ]
 
+--
 .message.is-warning[
 .message-header[
 Info
@@ -364,6 +368,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -383,7 +388,7 @@ Process 0 received token -1 from process 3
 
 layout: false
 name: kk
-class: center, middle
+class: center, middle, inverse
 
 # Kolektivna komunikacija
 
@@ -464,6 +469,7 @@ Zadatak
 ]
 ]
 
+--
 .message.is-dark[
 .message-header[
 Primer
@@ -845,5 +851,11 @@ Zadatak
 - Peter S. Pacheco "Parallel Programming with MPI"
 - Victor Eijkhout "Parallel Computing" (besplatna onlajn verzija knjige)
 - [MPI tutorijal](http://mpitutorial.com/)
+
+--
+
+class: center, middle, theend, hide-text
+layout: false
+background-image: url(../theend.gif)
 
 {% endblock %}
