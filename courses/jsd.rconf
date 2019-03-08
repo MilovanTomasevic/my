@@ -24,8 +24,8 @@ affiliation = "[Fakulteta za informacijske študije v Novem mestu (FIŠ)](https:
 "jsd/generisanje-programskog-koda.md"
     title = "[Generisanje programskog koda](/courses/#table-of-contents)" 
 
-"tech/arpeggio.md"
+"jsd/arpeggio.md"
   title = "[Arpeggio parser](/courses/#table-of-contents)"
 
-"tech/textx.md≈"
+"jsd/textx.md"
   title = "[textX](/courses/#table-of-contents)"
