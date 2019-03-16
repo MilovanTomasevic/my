@@ -2,8 +2,8 @@
 layout: project
 title: 'IoT Home Automation'
 date: 1 Mar 2017
-image: /assets/img/projects/oblo.jpeg
-screenshot: /assets/img/projects/oblo.jpeg
+image: /assets/img/projects/iotsmarthome.png
+screenshot: /assets/img/projects/iotsmarthome.png
 links:
   - title: Website
     url: http://www.obloliving.com/
@@ -13,7 +13,7 @@ caption: Smart Home - IoT
 description: >
   Milovan Tomašević worked as an iOS developer at the OBLO Living within the project "Smart Home - IoT ...
 hide_description: true
-accent_image: /assets/img/smarthome.gif
+accent_image: /assets/img//projects/smarthome.jpg
 accent_color: rgb(65,105,225)
 
 ---
@@ -77,10 +77,6 @@ Work time
 }
 ~~~
 objC Examples Login
-{:.figure}
-
-![](/assets/img/projects/coder.PNG)
-Coding
 {:.figure}
 
 ~~~swift

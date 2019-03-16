@@ -2,8 +2,8 @@
 layout: project
 title: 'ITIL'
 date: 1 Jan 2013
-image: /assets/img/projects/DDOR.jpg
-screenshot: /assets/img/projects/itil.jpg
+image: /assets/img/projects/itil3.jpg
+screenshot: /assets/img/projects/itil.png
 links:
   - title: Website
     url: https://www.ddor.rs/
@@ -13,8 +13,8 @@ caption: ITIL V3
 description: >
   Milovan Tomašević works as a researcher and analyzed DDOR’s clients’ needs and made a specification for the other side that served ...
 hide_description: true
-accent_image: /assets/img/itil3.gif
-accent_color: rgb(138,43,226)
+accent_image: /assets/img/projects/itilpractis.jpg
+accent_color: rgb(255,165,0)
 
 ---
 
