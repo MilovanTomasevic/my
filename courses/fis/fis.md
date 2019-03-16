@@ -289,13 +289,9 @@ Info
 ]
 ]
 
-.lcol[
-![:scale 90%](fis/fisPhD.jpg)
-]
 
-.rcol[
-![:scale 70%](fis/predavanja2.jpg)
-]
+![:scale 50%](fis/fisPhD.jpg)
+
 
 ---
 
@@ -376,11 +372,11 @@ layout: true
 ] 
 
 .lcol[
-![:scale 90%](fis/diplomci2.jpg)
+![:scale 80%](fis/diplomci2.jpg)
 ]
 
 .rcol[
-![:scale 77%](fis/diplomci.jpg)
+![:scale 69%](fis/diplomci.jpg)
 ]
 
 ---
@@ -398,15 +394,15 @@ layout: true
 
 ---
 
+---
+
 name: pitanja
 
-## .center[ *P  I  T  A  NJ  A  ?* ]
-
-<br>
+## .center[ *P  I  T  A  NJ  A  ?* .ref[1,2]]
 
 .small[
 
-> Uradite *danas* što drugi *ne žele*, da bi ste *sutra* uradili što drugi *ne mogu*.ref[1].
+> Uradite *danas* što drugi *ne žele*, da bi ste *sutra*  uradili što drugi *ne mogu*..ref[*]
 
 .lcol.medium[
 
@@ -451,12 +447,14 @@ name: pitanja
 </figure>
 
 ]
-
 ]
-
-.footer.medium[
-    1. <a target="_blank" rel="noopener noreferrer" href="https://www.milovantomasevic.com/">MilovanTomasevic.com</a>]
 ] 
+
+.footer[
+
+<a target="_blank" rel="noopener noreferrer" href="mailto:marjana.miskovic@fis.unm.si?Subject=Pitanje%20u%20vezi%20sa%20https://milovan.tomasevic.fis.unm.si/budi-student-fis-a/">1. Pisati mejl ☛ studentskoj službi</a><br>
+<a target="_blank" rel="noopener noreferrer" href="/budi-student-fis-a/#sadržaj">2. U ☛ komentarima</a><br>
+\* <a target="_blank" rel="noopener noreferrer" href="https://www.milovantomasevic.com/">MilovanTomasevic.com</a>]
 
 ---
 
