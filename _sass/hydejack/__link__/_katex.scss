@@ -7,7 +7,7 @@
 // During development you can run `npm run watch:css`
 // to continuosly rebuild this file.
 
-// Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+// Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -27,11 +27,16 @@ article {
   .katex-display, div.MathJax_Preview {
     @extend .pre-base;
     padding: 2rem;
-    text-align: left;
+    & > .katex {
+      text-align: left;
+    }
+  }
+
+  .MathJax_Preview {
+    font-family: var(--code-font-family);
   }
 
   div.MathJax_Preview {
-    font-family: var(--code-font-family);
     font-size: .75em;
     line-height: 1.45;
     white-space: pre;
@@ -39,7 +44,6 @@ article {
   }
 
   span.MathJax_Preview {
-    font-family: var(--code-font-family);
     padding: .25em .5em;
     font-size: .85em;
     background-color: var(--code-bg);

@@ -1,5 +1,5 @@
 // # src / cookies-banner.js
-// Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+// Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 
 import { importTemplate } from "../common";
 

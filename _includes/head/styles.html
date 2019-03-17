@@ -1,5 +1,5 @@
 <!--[if gt IE 8]><!---->
-{% capture style_url %}{% link assets/css/hydejack-8.1.1.css %}{% endcapture %}
+{% capture style_url %}{% link assets/css/hydejack-8.3.0.css %}{% endcapture %}
 {% capture icons_url %}{% link assets/icomoon/style.css %}{% endcapture %}
 {% capture fonts_url %}https://fonts.googleapis.com/css?family={{ google_fonts }}{% endcapture %}
 
@@ -7,7 +7,7 @@
 {% assign font         = site.font         | default:"Noto Sans, Helvetica, Arial, sans-serif" %}
 
 {% if site.hydejack.no_inline_css or jekyll.environment == 'development' %}
-  <link rel="stylesheet" href="/assets/css/strelica.css">
+<link rel="stylesheet" href="/assets/css/strelica.css">
   <link rel="stylesheet" href="{{ style_url | relative_url }}">
   <link rel="stylesheet" href="{{ icons_url | relative_url }}">
   {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
@@ -45,8 +45,6 @@
     <script>setRel('_fontsPreload');</script>
   {% endunless %}
 
-
-
   <noscript>
     <link rel="stylesheet" href="{{ style_url | relative_url }}">
     <link rel="stylesheet" href="{{ icons_url | relative_url }}">
@@ -59,5 +57,7 @@
     {% endunless %}
   </noscript>
 {% endif %}
-{% include head/page-style.html %}
+{% unless site.hydejack.no_page_style %}
+  {% include head/page-style.html %}
+{% endunless %}
 <!--<![endif]-->

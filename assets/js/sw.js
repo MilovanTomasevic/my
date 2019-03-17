@@ -1,6 +1,6 @@
 ---
 ---
-// Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+// Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
 // The shell cache keeps "landmark" resources, like CSS and JS, web fonts, etc.
 // which won't change between content updates.
 // {% assign cv = site.hydejack.offline.cache_version | default:"1" %}
-const SHELL_CACHE = "shell-8.1.1--v{{ cv }}--sw{{ '/' | relative_url }}";
+const SHELL_CACHE = "shell-8.3.0--v{{ cv }}--sw{{ '/' | relative_url }}";
 
 // A separate assets cache that won't be invalidated when there's a newer version of Hydejack.
 // NOTE: Whenever you make changes to any of the files in yor `assets` folder,
@@ -52,8 +52,8 @@ const GOOGLE_FONTS = "https://fonts.googleapis.com/css?family={{ google_fonts | 
 
 const SHELL_FILES = [
   "{{ '/assets/bower_components/fontfaceobserver/fontfaceobserver.standalone.js' | relative_url }}",
-  "{{ '/assets/js/hydejack-8.1.1.js' | relative_url }}",
-  "{{ '/assets/css/hydejack-8.1.1.css' | relative_url }}",
+  "{{ '/assets/js/hydejack-8.3.0.js' | relative_url }}",
+  "{{ '/assets/css/hydejack-8.3.0.css' | relative_url }}",
   "{{ '/assets/img/swipe.svg' | relative_url }}",
   ICON_FONT,
   /*{% if gf %}*/ GOOGLE_FONTS /*{% endif %}*/,

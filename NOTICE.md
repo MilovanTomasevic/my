@@ -1,6 +1,6 @@
 # NOTICE
 
-Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@ This software also uses portions of the
 `qwtel/hy-drawer`
 project, which is GPL-3.0 licensed with the following copyright:
 
-> Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+> Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 
 A copy of the [GPL-3.0] license is provided as part of this distribution.
 
@@ -50,7 +50,7 @@ This software also uses portions of the
 `qwtel/hy-push-state`
 project, which is GPL-3.0 licensed with the following copyright:
 
-> Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+> Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 
 A copy of the [GPL-3.0] license is provided as part of this distribution.
 
@@ -59,7 +59,7 @@ This software also uses portions of the
 `qwtel/hy-img`
 project, which is GPL-3.0 licensed with the following copyright:
 
-> Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+> Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 
 A copy of the [GPL-3.0] license is provided as part of this distribution.
 
@@ -68,7 +68,7 @@ This software also uses portions of the
 `qwtel/hy-component`
 project, which is MIT licensed with the following copyright:
 
-> Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+> Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 
 A copy of the [MIT] license is provided as part of this distribution.
 

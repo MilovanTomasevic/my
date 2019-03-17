@@ -454,7 +454,7 @@ name: pitanja
 
 <a target="_blank" rel="noopener noreferrer" href="mailto:marjana.miskovic@fis.unm.si?Subject=Pitanje%20u%20vezi%20sa%20https://milovan.tomasevic.fis.unm.si/budi-student-fis-a/">1. Pisati mejl ☛ studentskoj službi</a><br>
 <a target="_blank" rel="noopener noreferrer" href="/budi-student-fis-a/#sadržaj">2. U ☛ komentarima</a><br>
-\* <a target="_blank" rel="noopener noreferrer" href="https://www.milovantomasevic.com/">MilovanTomasevic.com</a>]
+\* <a target="_blank" rel="noopener noreferrer" href="https://milovantomasevic.com/">MilovanTomasevic.com</a>]
 
 ---
 

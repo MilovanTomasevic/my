@@ -1,4 +1,4 @@
-// Copyright (c) 2018 Milovan Tomašević <https://www.milovantomasevic.com/>
+// Copyright (c) 2018 Milovan Tomašević <https://milovantomasevic.com/>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -129,4 +129,10 @@ $theme-color: {{ site.theme_color | default:'#193747' }};
     font-family: $font-family;
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: $font-family-heading; }
   }
+
+  {% if site.hydejack.no_page_style %}
+    {% assign color       = site.accent_color | default:'#4fb1ba' %}
+    {% assign theme_color = site.theme_color  | default:'#193747' %}
+    {% include styles/page-style.scss color=color theme_color=theme_color %}
+  {% endif %}
 {% endunless %}

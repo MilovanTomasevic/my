@@ -123,7 +123,7 @@ layout: true
 - Ova definicija ukazuje na neraskidivu vezu lanca snabdevanja i upravljanja njime, s toga je istraživački problem ove disertacije *razvoj modela za upravljanje lancima snabdevanja*.
 
 .footer.small[
-*1. <a target="_blank" rel="noopener noreferrer" href="https://www.milovantomasevic.com/">Autor</a>*
+*1. <a target="_blank" rel="noopener noreferrer" href="https://milovantomasevic.com/">Autor</a>*
 ] 
 
 ---

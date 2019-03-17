@@ -8,5 +8,5 @@
  *  \ V  V /   |  __/ | | | (__  | (_) | | | | | | | |  __/   | |_  | (_) |   | |  | |   | |  
  *  \_/\_/     \___| |_|  \___|  \___/  |_| |_| |_|  \___|    \__|  \___/    |_|  |_|   |_| 
  *
- * Powered by Milovan Tomašević <https://www.milovantomasevic.com/>
+ * Powered by Milovan Tomašević <https://milovantomasevic.com/>
  */

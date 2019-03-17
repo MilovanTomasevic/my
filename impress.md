@@ -13,7 +13,7 @@ hide_description: true
  **Address**
 : Ljubljanska cesta 31A
 : 8000 Novo mesto
-: Slovenija
+: Slovenia
 
  **Email**
 : milovan.tomasevic@fis.unm.si
