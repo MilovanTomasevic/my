@@ -48,7 +48,7 @@ accent_color: rgb(100, 182, 98)
 
 ## Sombor
 
-### STS – Sombor
+### Srednja tehnička škola
 
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
@@ -65,7 +65,7 @@ Nagrađeni maturanti
 {:.figure}
 
 
-### Gimnazija Sombor
+### Gimnazija ”Veljko Petrović”
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -80,7 +80,7 @@ Gimnazija ”Veljko Petrović” – Sombor
 Nagrađeni maturanti
 {:.figure}
 
-### Srednja skola Sveti Sava Sombor
+### Srednja škola ”Sveti Sava”
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -98,7 +98,7 @@ Nagrađeni maturanti
 
 ## Kula
 
-### STS – Kula
+### Srednja tehnička škola ”Mihajlo Pupin”
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -114,7 +114,7 @@ Srednja tehnička škola ”Mihajlo Pupin” – Kula
 Nagrađeni maturanti
 {:.figure}
 
-### Ekonomska Kula
+### Ekonomsko trgovinska škola
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -131,7 +131,7 @@ Zajednička fotografija
 
 ## Indjija
 
-### STS – Indjija
+### Tehnička škola “Mihajlo Pupin”
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -150,7 +150,7 @@ Nagrađeni maturanti
 
 ## Bijelo Polje
 
-### Gimnazija
+### Gimnazija Miloje Dobrašinović
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -203,7 +203,7 @@ Gimnazija
 
 ## Sremski karlovci
 
-### Karlovacka gimnazija
+### Karlovačka gimnazija
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -222,7 +222,7 @@ Zajednička fotografija
 
 ## Vrbas
 
-### STS 4juli – Vrbas
+### Srednja stručna škola “4. juli”
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -239,7 +239,7 @@ Zajednička fotografija
 
 ## Ruski Krstur 
 
-### Gimnazija
+### Srednja škola ”Petro Kuzmjak”
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -256,7 +256,7 @@ Zajednička fotografija
 
 ## Zrenjanin
 
-### Elektrotehnicka i gradjevinska skola Nikola Tesla – Zrenjanin
+### Elektrotehnička i građevinska škola “Nikola Tesla”
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -295,7 +295,7 @@ Zajednička fotografija
 
 ## Crvenka
 
-### Poljuprivredna skola Crvenka
+### Srednja stručna škola
 
 <div style="max-width:560px;margin:0 auto; padding:5px;">
   <div style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden;">
