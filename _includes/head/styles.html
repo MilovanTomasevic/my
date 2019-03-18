@@ -7,7 +7,6 @@
 {% assign font         = site.font         | default:"Noto Sans, Helvetica, Arial, sans-serif" %}
 
 {% if site.hydejack.no_inline_css or jekyll.environment == 'development' %}
-<link rel="stylesheet" href="/assets/css/strelica.css">
   <link rel="stylesheet" href="{{ style_url | relative_url }}">
   <link rel="stylesheet" href="{{ icons_url | relative_url }}">
   {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
@@ -61,3 +60,34 @@
   {% include head/page-style.html %}
 {% endunless %}
 <!--<![endif]-->
+<style class="cp-pen-styles">#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color: rgba(25,55,71, 0.4);
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color:rgb(79,177,186);
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}</style>
+
