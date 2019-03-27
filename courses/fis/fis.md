@@ -394,8 +394,6 @@ layout: true
 
 ---
 
----
-
 name: pitanja
 
 ## .center[ *P  I  T  A  NJ  A  ?* .ref[1,2]]
