@@ -140,7 +140,7 @@ layout: true
 
 ## Način prijave (osnovne studije)
 
-- Prijava za `upis` i `priznavanje` ispita se podnosi putem eVŠ portala.
+- Prijava za `upis` i `priznavanje` obrazovanja se podnosi putem eVŠ portala.
   - do 18. marta 2019.
 - Za priznavanje obrazovanja potrebni su sledeći dokumenti:
       -  do 9. avgusta 2019.
@@ -155,7 +155,7 @@ layout: true
 ---
 ## Način prijave (master studije)
 .medium[
-- Prijava za `upis` i `priznavanje` ispita se podnosi putem eVŠ portala.
+- Prijava za `upis` i `priznavanje` obrazovanja se podnosi putem eVŠ portala.
 - Prilozi za master do:
 - 5. jula 2019. (prvi rok) / 27. septembra 2019. (drugi rok):
 	- originalna diploma + prevod na slovenački jezik (sudski veštak),
