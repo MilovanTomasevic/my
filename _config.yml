@@ -154,7 +154,7 @@ google_tag_manager:    GTM-5BM3DDT
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-disqus:                milovantomasevic
+disqus:                https-www-milovan-tomasevic-fis-unm-si
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 tinyletter:            milovantomasevic
