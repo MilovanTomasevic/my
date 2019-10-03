@@ -327,13 +327,21 @@ prizemlje  desno
 
 ## Dozvola za boravak (2/3)
 
-- Izjavu roditelja, o preživljanju u visini 400 EUR, za vreme boravka u Sloveniji 
+- Izjavu roditelja, o preživljanju u visini od 450€.ref[*], za vreme boravka u Sloveniji 
 	- Staradtelj daje izjavu (formalno) kod notara da ce masečnom nivou uplaćivati na račun studenta
 	- izjava se odmah i overi kod notara, podpisana od strane roditelja - u latinici. 
 - Izvod iz matične knjige rodjenih  (matični list), koji nije stariji od 3 meseca i u latinici ili `medjunarodni` koji vadite u opštini na kojoj živite u Srbiji.
 - Potvrda da niste osuđivani – koji nije stariji 3 meseca, u latinici.
 - Fotokopija pasoša (predlaže se, da je to overena fotokopija)
 - 1 fotografija
+
+.footer[
+
+ .attention[
+\* **Napomena**: Prema poslednjem pravilniku minimalno je 402,8€.
+]
+
+]
 
 ---
 
